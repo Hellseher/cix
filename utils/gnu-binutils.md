@@ -2,7 +2,7 @@
 File          : gnu-binutils.md
 
 Created       : Mon 02 Nov 2015 22:18:23
-Last Modified : Mon 02 Nov 2015 22:57:11
+Last Modified : Sat 07 Nov 2015 23:07:21
 Maintainer    : sharlatan
 -->
 
@@ -15,12 +15,15 @@ _ReadHat, CentOS, Fedora_
 *   [Binutils on RedHat](http://sources.redhat.com/binutils)
 
     
-    $: yum install binutils
+    $: sudo yum install binutils
 
 ## deb ##
 
-    $: apt-get search binutils
+    $: sudo apt-get search binutils
     $: sudo apt-get install binutils-<what_you_need>
+
+## src ##
+Check the lates update on https://ftp.gnu.org/gnu/binutils/
 
 ---
 
