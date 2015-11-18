@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Tue 17 Nov 2015 23:03:47
+Last Modified : Wed 18 Nov 2015 20:58:40
 Maintainer    : sharlatan
 -->
 
@@ -31,6 +31,6 @@ Aim of this repo to collect short examples of command usage, to be helpful for
     +   [psmisc](utils/psmisc.md)                           -
     +   [unix-side](utils/unix-side.md)                     -  common Unix commands
     +   [util-linux](utils/util-linux.md)                   -  is a standard package of the Linux operating system
-*   +_Routines__
+*   __Routines__
     -   [Security check](routines/security_check.md)
     -   [VPS to Web server](routines/vps_to_webserver.md) -  
