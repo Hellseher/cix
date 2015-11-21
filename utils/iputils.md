@@ -2,13 +2,13 @@
 File          : iputils.md
 
 Created       : Mon 16 Nov 2015 00:31:15
-Last Modified : Sat 21 Nov 2015 21:15:03
+Last Modified : Sat 21 Nov 2015 21:19:09
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
-IPutils [↷](http://wiki.netkit.org/index.php/Main_Page)
--------------------------------------------------------
+IPutils [↷](http://www.skbuff.net/iputils/)
+-------------------------------------------
 
 _Alexey Kuznetsov > YOSHIFUJI Hideaki_
 [![](icons/github.png)](https://github.com/iputils/iputils)
