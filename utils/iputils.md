@@ -2,12 +2,16 @@
 File          : iputils.md
 
 Created       : Mon 16 Nov 2015 00:31:15
-Last Modified : Sat 21 Nov 2015 20:41:51
+Last Modified : Sat 21 Nov 2015 21:15:03
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
-# IPutils 
+IPutils [↷](http://wiki.netkit.org/index.php/Main_Page)
+-------------------------------------------------------
+
+_Alexey Kuznetsov > YOSHIFUJI Hideaki_
+[![](icons/github.png)](https://github.com/iputils/iputils)
 
     clockdiff (8)        - measure clock difference between hosts
     ipg
