@@ -2,7 +2,7 @@
 File          : gnu-findutils.md
 
 Created       : Tue 17 Nov 2015 22:54:30
-Last Modified : Sat 21 Nov 2015 23:11:17
+Last Modified : Sat 21 Nov 2015 23:13:56
 Maintainer    : sharlatan
 -->
 
@@ -28,23 +28,23 @@ capabilities to other commands.
     find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
 
 
-*   copy all found *jpg files to Home/Picture directory
+copy all found *jpg files to Home/Picture directory
     
     $: find . -type f -name *jpg -exec cp {} ~/Picture \;   
 
-*   find only in current directory (universal) 
+find only in current directory (universal) 
     
     $: find . \( ! -name . -prune \) \( -type -f -o -type l \) 
     $: find ./ -maxdepth 1
 
-*   find and show only unique files attribute from bunch of files 
+find and show only unique files attribute from bunch of files 
     
     $: find  ./ -type f -printf "%Td_%TB_%TY\n" | sort -u 
 
-*   show all files in current directory except hidden
+show all files in current directory except hidden
     
     $: find ./ -maxdepth 1 -type f -not '.*' 
 
-*   find specified "string" in list of files 
+find specified "string" in list of files 
     
     $: find ./ -type f -exec grep "<string>" {} /dev/null \;
