@@ -2,10 +2,11 @@
 File          : gnu-binutils.md
 
 Created       : Mon 02 Nov 2015 22:18:23
-Last Modified : Sat 07 Nov 2015 23:07:21
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # GNU Binutils [↷](https://www.gnu.org/software/binutils/) #
 The GNU Binutils are a collection of binary tools.
 

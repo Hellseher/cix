@@ -2,10 +2,11 @@
 File          : netkit.md
 
 Created       : Mon 16 Nov 2015 00:06:08
-Last Modified : Mon 16 Nov 2015 00:15:01
+Last Modified : Sat 21 Nov 2015 20:42:29
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # Netkit [↷](http://wiki.netkit.org/index.php/Main_Page) #
 _environment for setting up and performing networking experiments_
 
@@ -47,5 +48,3 @@ _environment for setting up and performing networking experiments_
        timed          - Time daemon
        writed         - Daemon for receiving write messages from other hosts
        write          - Program for quick messages to other people (net-aware) 
-
-

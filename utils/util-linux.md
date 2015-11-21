@@ -2,10 +2,11 @@
 File          : util-linux.md
 
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Fri 06 Nov 2015 21:00:23
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # util-linux #
 It is a standard package of the Linux operating system.
 [![](../icons/github.png)](https://github.com/karelzak/util-linux)

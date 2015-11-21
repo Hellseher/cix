@@ -1,0 +1,37 @@
+<!--
+File          : gnu-inetutils.md
+
+Created       : Wed 18 Nov 2015 21:20:07
+Last Modified : Sat 21 Nov 2015 20:41:51
+Maintainer    : sharlatan
+-->
+
+[[≣](../README.md#Index "Index")]
+GNU Inetutils
+-------------
+
+     dnsdomainname - show DNS domain name
+     hostname      - show or set system host name.
+     logger        - send messages to system log
+     ping          - packets to network hosts
+     ping6         - packets to IPv6 network hosts
+     traceroute    - trace the route to a host
+     whois         - user interface to WHOIS data bases.
+     ftp           - fTP client
+     rcp           - copy files between machines
+     rexec         - a remote execution program
+     rlogin        - remote login
+     rsh           - remote shell
+     talk          - a communication program
+     telnet        - user interface to TELNET
+     tftp          - TFTP client
+     inetd         - internet super-server
+     syslogd       - System service logging faclity
+     ftpd          - FTP daemon
+     rexecd        - server for rexec
+     rlogind       - remote login server
+     rshd          - remote shell server
+     talkd         - a server for communication between users
+     telnetd       - telnet server
+     tftpd         - TFTP server
+     uucpd         - unix to Unix Copy relay daemon.

@@ -2,10 +2,12 @@
 File          : gnu-core-utilities.md
 
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Mon 02 Nov 2015 23:08:04
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
-# Coreutils - GNU core utilities [↷](https://www.gnu.org/software/coreutils/coreutils.html) #
+Coreutils - GNU core utilities [↷](https://www.gnu.org/software/coreutils/coreutils.html)
+[[≣](../README.md#Index "Index")]
+-----------------------------------------------------------------------------------------
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the GNU operating system.  These are the core utilities which are
 expected to exist on every operating system. 

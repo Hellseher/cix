@@ -2,10 +2,11 @@
 File          : iputils.md
 
 Created       : Mon 16 Nov 2015 00:31:15
-Last Modified : Mon 16 Nov 2015 00:35:46
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # IPutils 
 
     clockdiff (8)        - measure clock difference between hosts

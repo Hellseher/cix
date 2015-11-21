@@ -2,10 +2,11 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Sat 07 Nov 2015 22:07:23
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # GNU Bash builtin [↷](https://www.gnu.org/software/bash/) #
 Type `help name' to find out more about the function `name'.
 

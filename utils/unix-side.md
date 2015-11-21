@@ -2,10 +2,11 @@
 File          : unix-side.md
 
 Created       : Wed 04 Nov 2015 22:21:55
-Last Modified : Wed 04 Nov 2015 23:55:18
+Last Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 
+[[≣](../README.md#Index "Index")]
 # UNIX side #
 This is a list of Unix commands as specified by
 [IEEE Std 1003.1-2008](https://standards.ieee.org/findstds/standard/1003.1-2008.html)
