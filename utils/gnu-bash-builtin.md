@@ -2,13 +2,19 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Sat 21 Nov 2015 20:41:51
+Last Modified : Sun 06 Dec 2015 20:46:16
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
 # GNU Bash builtin [↷](https://www.gnu.org/software/bash/) #
-Type `help name' to find out more about the function `name'.
+Type 
+
+    $: help <command_name>
+    
+to find out more about the function name.
+
+* * *
 
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
