@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sat 21 Nov 2015 20:32:14
+Last Modified : Sun 06 Dec 2015 20:43:42
 Maintainer    : sharlatan
 -->
 
@@ -15,14 +15,14 @@ Aim of this repo to collect short examples of command usage, to be helpful for
 
 ## Index ##
 *   __Utillities__
-    +   [gnu-bash-builtin](utils/gnu-bash-builtin.md) - 
-        GNU Bash shell built in commands
     +   [gnu-binutils](utils/gnu-binutils.md) - 
         collection of binary tools
     +   [gnu-core-utilities](utils/gnu-core-utilities.md) - 
         basic file, shell and text manipulation utilities
     +   [gnu-inetutils](utils/gnu-inetutils.md) - 
         A collection of common network programs
+    +   [Findutils](utils/gnu-findutils.md)
+        The GNU versions of find utilities (find and xargs)
     +   [IPutils](utils/iputils.md) - 
         set of small useful utilities for Linux networking
     +   [Linux Netkit](utils/netkit.md)
@@ -39,6 +39,18 @@ Aim of this repo to collect short examples of command usage, to be helpful for
         common Unix commands
     +   [util-linux](utils/util-linux.md) - 
         is a standard package of the Linux operating system
+*   __Packet managment__
+    +   [Package managers utils](utils/pm_managers.md) - 
+        PM comparison table and tricks. 
+    +   [shadow-utils](utils/shadow-utils.md) - 
+        RPM packages
+*   __Shell builtins__
+    +   [gnu-bash-builtin](utils/gnu-bash-builtin.md) - 
+        GNU Bash shell built in commands
+    +   [fish](http://address)
+    +   [zsh]()
+    +   [zsh]()
+    +   [zsh]()
 *   __Routines__
     -   [VPS security](routines/vps_security.md)
     -   [VPS Web server](routines/vps_to_webserver.md) -  
