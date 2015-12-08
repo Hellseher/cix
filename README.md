@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun 06 Dec 2015 20:43:42
+Last Modified : Tue 08 Dec 2015 23:42:58
 Maintainer    : sharlatan
 -->
 
@@ -11,7 +11,19 @@ _Collection of utilities for Unix like operating systems._
 
 ## Intro ##
 Aim of this repo to collect short examples of command usage, to be helpful for
-*nix beginners and interesting place for advanced users.
+*nix beginners and interesting place for advanced users. All information
+containing here can be reach in man pages. Man pages have the common sections.
+
+1. General commands
+2. Systems calls
+3. C library functions
+4. Special files
+5. File formats and conventions
+6. Games and Screen savers
+7. Miscellanea
+8. System administration commands and daemons
+
+
 
 ## Index ##
 *   __Utillities__
