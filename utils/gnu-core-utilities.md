@@ -2,7 +2,7 @@
 File          : gnu-core-utilities.md
 
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Tue 08 Dec 2015 23:56:03
+Last Modified : Tue 08 Dec 2015 23:59:24
 Maintainer    : sharlatan
 -->
 
@@ -13,12 +13,12 @@ The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the GNU operating system.  These are the core utilities which are
 expected to exist on every operating system. 
 
-## rpm ##
+### rpm ###
 _RedHat, CentOS, Fedora_
 
     $: sudo yum install coreutils
 
-## deb ##
+### deb ###
 _Debian, Ubuntu, Linux Mint_
 
     $: sudo apt-get install coreutils
@@ -32,7 +32,8 @@ _Debian, Ubuntu, Linux Mint_
     id (1)        - print real and effective user and group IDs
     ln (1)        - make links between files
 *   [ls](gnu-core-utilities.md#ls) (1)        - list directory contents
- 
+
+    
     mv (1)        - move (rename) files
     nl (1)        - number lines of files
     od (1)        - dump files in octal and other formats
@@ -141,6 +142,7 @@ _Debian, Ubuntu, Linux Mint_
 ## ls ##
 
     ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
+
 
     $: ls -Rotti
     $: ls -Ham
