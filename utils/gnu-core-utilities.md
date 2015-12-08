@@ -2,7 +2,7 @@
 File          : gnu-core-utilities.md
 
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat 21 Nov 2015 21:04:51
+Last Modified : Tue 08 Dec 2015 23:56:03
 Maintainer    : sharlatan
 -->
 
@@ -31,7 +31,8 @@ _Debian, Ubuntu, Linux Mint_
     du (1)        - estimate file space usage
     id (1)        - print real and effective user and group IDs
     ln (1)        - make links between files
-    ls (1)        - list directory contents
+*   [ls](gnu-core-utilities.md#ls) (1)        - list directory contents
+ 
     mv (1)        - move (rename) files
     nl (1)        - number lines of files
     od (1)        - dump files in octal and other formats
@@ -135,3 +136,12 @@ _Debian, Ubuntu, Linux Mint_
     sha256sum (1) - compute and check SHA256 message digest
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
+
+
+## ls ##
+
+    ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
+
+    $: ls -Rotti
+    $: ls -Ham
+    $: ls -and
