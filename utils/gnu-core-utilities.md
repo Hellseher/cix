@@ -2,7 +2,7 @@
 File          : gnu-core-utilities.md
 
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat 12 Dec 2015 23:52:39
+Last Modified : Sat 12 Dec 2015 23:56:15
 Maintainer    : sharlatan
 -->
 
@@ -32,7 +32,7 @@ _Debian, Ubuntu, Linux Mint_
     id (1)        - print real and effective user and group IDs
     ln (1)        - make links between files
 
-*   [ls](gnu-core-utilities.md#ls) (1) - list directory contents
+[ls](gnu-core-utilities.md#ls) (1) - list directory contents
 .
 
     mv (1)        - move (rename) files
