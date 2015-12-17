@@ -2,7 +2,7 @@
 File          : util-linux.md
 
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Thu 17 Dec 2015 00:32:43
+Last Modified : Thu 17 Dec 2015 00:34:04
 Maintainer    : sharlatan
 -->
 
@@ -81,7 +81,7 @@ It is a standard package of the Linux operating system.
         cfdisk (8)           - display or manipulate disk partition table
         colcrt (1)           - filter nroff output for CRT previewing
 
-[column](utils/util-linux.md#column) (1)           - columnate lists
+[column](util-linux.md#column) (1)           - columnate lists
 
         findfs (8)           - find a filesystem by label or UUID
         getopt (1)           - parse command options (enhanced)
