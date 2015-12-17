@@ -2,7 +2,7 @@
 File          : util-linux.md
 
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Sat 21 Nov 2015 20:41:51
+Last Modified : Thu 17 Dec 2015 00:32:43
 Maintainer    : sharlatan
 -->
 
@@ -80,7 +80,9 @@ It is a standard package of the Linux operating system.
         agetty (8)           - alternative Linux getty
         cfdisk (8)           - display or manipulate disk partition table
         colcrt (1)           - filter nroff output for CRT previewing
-        column (1)           - columnate lists
+
+[column](utils/util-linux.md#column) (1)           - columnate lists
+
         findfs (8)           - find a filesystem by label or UUID
         getopt (1)           - parse command options (enhanced)
         getopt (3)           - Parse command-line options
@@ -153,3 +155,11 @@ It is a standard package of the Linux operating system.
 
         readprofile (8)      - read kernel profiling information
         switch_root (8)      - switch to another filesystem as the root of the mount tree
+* * *
+
+
+## column ##
+
+    column [-ctsoxh] file
+    
+
