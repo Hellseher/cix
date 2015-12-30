@@ -2,7 +2,7 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Sun 06 Dec 2015 20:46:16
+Last Modified : Wed 30 Dec 2015 16:27:35
 Maintainer    : sharlatan
 -->
 
@@ -11,16 +11,17 @@ Maintainer    : sharlatan
 Type 
 
     $: help <command_name>
-    
+
 to find out more about the function name.
 
 * * *
+## Built-in functions
 
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
     [[ ... ]] - Execute conditional command.
     { ... }   - Group commands as a unit.
-
+    
     bg        - Move jobs to the background.
     cd        - Change the shell working directory.
     fc        - Display or execute commands from the history list.
@@ -98,3 +99,85 @@ to find out more about the function name.
     readarray - Read lines from a file into an array variable.
     readarray - Read lines from a file into an array variable.
     variables - Common shell variable names and usage.
+
+* * *
+
+    BASH
+    BASH_ALIASES
+    BASH_ARGC
+    BASH_ARGV
+    BASH_CMDS
+    BASH_COMMAND
+    BASH_COMPAT
+    BASH_ENV
+    BASH_EXECUTION_STRING
+    BASH_LINENO
+    BASHOPTS
+    BASHPID
+    BASH_REMATCH
+    BASH_SOURCE
+    BASH_SUBSHELL
+    BASH_VERSINFO
+    BASH_VERSION
+    BASH_XTRACEFD
+    CHILD_MAX
+    COLUMNS
+    COMP_CWORD
+    COMP_KEY
+    COMP_LINE
+    COMP_POINT
+    COMPREPLY
+    COMP_TYPE
+    COMP_WORDBREAKS
+    COMP_WORDS
+    COPROC
+    DIRSTACK
+    EMACS
+    ENV
+    EUID
+    FCEDIT
+    FIGNORE
+    FUNCNAME
+    FUNCNEST
+    GLOBIGNORE
+    GROUPS
+    HISTCMD
+    HISTCONTROL
+    HISTFILE
+    HISTFILESIZE
+    HISTIGNORE
+    HISTSIZE
+    HISTTIMEFORMAT
+    HOSTFILE
+    HOSTNAME
+    HOSTTYPE
+    IGNOREEOF
+    INPUTRC
+    LANG
+    LINENO
+    LINES
+    MACHTYPE
+    MAILCHECK
+    MAPFILE
+    OLDPWD
+    OPTERR
+    OSTYPE
+    PIPESTATUS
+    POSIXLY_CORRECT
+    PPID
+    PROMPT_COMMAND
+    PROMPT_DIRTRIM
+    PWD
+    RANDOM
+    READLINE_LINE
+    READLINE_POINT
+    REPLY
+    SECONDS
+    SHELL
+    SHELLOPTS
+    SHLVL
+    TIMEFORMAT
+    TMOUT
+    TMPDIR
+    UID
+
