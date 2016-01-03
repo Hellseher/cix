@@ -2,7 +2,7 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Wed 30 Dec 2015 16:27:35
+Last Modified : Sun 03 Jan 2016 17:00:01
 Maintainer    : sharlatan
 -->
 
@@ -73,12 +73,16 @@ to find out more about the function name.
     logout    - Exit a login shell.
     printf    - Formats and prints ARGUMENTS under control of the FORMAT.
     return    - Return from a shell function.
-    select    - Select words from a list and execute commands.
+
+[select](gnu-bash-builtin.md#select)    - Select words from a list and execute commands.  
+
     source    - Execute commands from a file in the current shell.
     ulimit    - Modify shell resource limits.
 
     builtin   - Execute shell builtins.
-    command   - Execute a simple command or display information about commands.
+
+[command](gnu-bash-builtin.md#command)   - Execute a simple command or display information about commands.  
+
     compgen   - Display possible completions depending on the options.
     compopt   - Modify or display completion options.
     declare   - Set variable values and attributes.
@@ -181,3 +185,13 @@ to find out more about the function name.
     TMPDIR
     UID
 
+
+## select ##
+
+    select NAME [in WORDS ... ;] do COMMANDS; done
+
+
+## command ##
+
+    $ command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not
+    installed.  Aborting."; exit 1; }
