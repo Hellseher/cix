@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Tue 08 Dec 2015 23:42:58
+Last Modified : Mon 25 Jan 2016 22:23:28
 Maintainer    : sharlatan
 -->
 
@@ -10,9 +10,11 @@ Maintainer    : sharlatan
 _Collection of utilities for Unix like operating systems._
 
 ## Intro ##
-Aim of this repo to collect short examples of command usage, to be helpful for
-*nix beginners and interesting place for advanced users. All information
-containing here can be reach in man pages. Man pages have the common sections.
+The aim of this is repo to collect short examples of command usage, to be
+helpful for *nix beginners and interesting place for advanced users. All
+information containing here can be reach in man pages.
+
+Man pages have the common sections.
 
 1. General commands
 2. Systems calls
@@ -23,9 +25,8 @@ containing here can be reach in man pages. Man pages have the common sections.
 7. Miscellanea
 8. System administration commands and daemons
 
-
-
 ## Index ##
+
 *   __Utillities__
     +   [gnu-binutils](utils/gnu-binutils.md) - 
         collection of binary tools
@@ -51,18 +52,20 @@ containing here can be reach in man pages. Man pages have the common sections.
         common Unix commands
     +   [util-linux](utils/util-linux.md) - 
         is a standard package of the Linux operating system
+    +   [Linux DiskQuota](utils/linux_diskquota.md)
+
 *   __Packet managment__
     +   [Package managers utils](utils/pm_managers.md) - 
         PM comparison table and tricks. 
     +   [shadow-utils](utils/shadow-utils.md) - 
         RPM packages
+
 *   __Shell builtins__
     +   [gnu-bash-builtin](utils/gnu-bash-builtin.md) - 
         GNU Bash shell built in commands
-    +   [fish](http://address)
-    +   [zsh]()
-    +   [zsh]()
-    +   [zsh]()
+    +   [fish](http://fishshell.com/)
+    +   [zsh](http://www.zsh.org/)
+
 *   __Routines__
     -   [VPS security](routines/vps_security.md)
-    -   [VPS Web server](routines/vps_to_webserver.md) -  
+    -   [VPS Web server](routines/vps_to_webserver.md)
