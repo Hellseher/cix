@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Mon 25 Jan 2016 22:23:28
+Last Modified : Wed 27 Jan 2016 00:07:39
 Maintainer    : sharlatan
 -->
 
@@ -36,9 +36,8 @@ Man pages have the common sections.
         A collection of common network programs
     +   [Findutils](utils/gnu-findutils.md)
         The GNU versions of find utilities (find and xargs)
-    +   [IPutils](utils/iputils.md) - 
-        set of small useful utilities for Linux networking
-    +   [Linux Netkit](utils/netkit.md)
+    +   [iputils](utils/iputils.md) - 
+        Network monitoring tools including ping
     +   [net-tools](utils/net-utils.md) - 
         collection of base networking utilities
     +   [pm-utils](utils/pm-utils.md) - 
@@ -46,14 +45,20 @@ Man pages have the common sections.
     +   [procps-ng](utils/procps-ng.md) - 
         utilities for monitoring your system and its processes
     +   [psmisc](utils/psmisc.md) - 
+        This PSmisc package is a set of some small useful utilities that use
+        the proc filesystem. 
     +   [pciutils](utils/pciutils.md) - 
         PCI bus related utilities
     +   [unix-side](utils/unix-side.md) - 
         common Unix commands
     +   [util-linux](utils/util-linux.md) - 
         is a standard package of the Linux operating system
-    +   [Linux DiskQuota](utils/linux_diskquota.md)
-
+    +   [quota](utils/linux_diskquota.md) - 
+        Linux DiskQuota - System administration tools for monitoring users'
+        disk usage
+*   __Reserche__
+    +   [Linux Netkit](utils/netkit.md) - 
+        Utilities for managing processes on your system
 *   __Packet managment__
     +   [Package managers utils](utils/pm_managers.md) - 
         PM comparison table and tricks. 
