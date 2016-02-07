@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Wed 27 Jan 2016 00:07:39
+Last Modified : Sun 07 Feb 2016 03:14:35
 Maintainer    : sharlatan
 -->
 
@@ -56,9 +56,11 @@ Man pages have the common sections.
     +   [quota](utils/linux_diskquota.md) - 
         Linux DiskQuota - System administration tools for monitoring users'
         disk usage
+
 *   __Reserche__
     +   [Linux Netkit](utils/netkit.md) - 
         Utilities for managing processes on your system
+
 *   __Packet managment__
     +   [Package managers utils](utils/pm_managers.md) - 
         PM comparison table and tricks. 
@@ -70,6 +72,8 @@ Man pages have the common sections.
         GNU Bash shell built in commands
     +   [fish](http://fishshell.com/)
     +   [zsh](http://www.zsh.org/)
+
+*   __*nix deamons__
 
 *   __Routines__
     -   [VPS security](routines/vps_security.md)
