@@ -2,7 +2,7 @@
 File          : README.md
 
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun 07 Feb 2016 03:14:35
+Last Modified : Mon 15 Feb 2016 20:11:25
 Maintainer    : sharlatan
 -->
 
@@ -27,19 +27,41 @@ Man pages have the common sections.
 
 ## Index ##
 
+    <package-name><link><description>
+
+*   __Legacy__ *Keep the history*
+    +   [unix-side](utils/unix-side.md) - 
+        Common Unix commands
+    +   [hole of fame]()
+
+*   __Core__ *Usually it contains on the most distributions*
+    +   [gnu-core-utilities](utils/gnu-core-utilities.md) - 
+        basic file, shell and text manipulation utilities
+    +   [util-linux](utils/util-linux.md) - 
+        is a standard package of the Linux operating system
+
+*   __File System__ *Partition file system craft and check*
+    +   [quota](utils/linux_diskquota.md) - 
+        Linux DiskQuota - System tools for monitoring users disk usage
+
+*   __Networking__ *We all live in the some one's subnet in*
+    +   [net-tools](utils/net-utils.md) - 
+        collection of base networking utilities
+    +   [iputils](utils/iputils.md) - 
+        Network monitoring tools including ping
+    +   [iproute2]()
+    +   [nmap]()
+    +   [netcat]()
+    +   [OpenSSH]()
+    +   [tcpdump]()
+
 *   __Utillities__
     +   [gnu-binutils](utils/gnu-binutils.md) - 
         collection of binary tools
-    +   [gnu-core-utilities](utils/gnu-core-utilities.md) - 
-        basic file, shell and text manipulation utilities
     +   [gnu-inetutils](utils/gnu-inetutils.md) - 
         A collection of common network programs
     +   [Findutils](utils/gnu-findutils.md)
         The GNU versions of find utilities (find and xargs)
-    +   [iputils](utils/iputils.md) - 
-        Network monitoring tools including ping
-    +   [net-tools](utils/net-utils.md) - 
-        collection of base networking utilities
     +   [pm-utils](utils/pm-utils.md) - 
         suspend and powerstate setting framework
     +   [procps-ng](utils/procps-ng.md) - 
@@ -49,13 +71,6 @@ Man pages have the common sections.
         the proc filesystem. 
     +   [pciutils](utils/pciutils.md) - 
         PCI bus related utilities
-    +   [unix-side](utils/unix-side.md) - 
-        common Unix commands
-    +   [util-linux](utils/util-linux.md) - 
-        is a standard package of the Linux operating system
-    +   [quota](utils/linux_diskquota.md) - 
-        Linux DiskQuota - System administration tools for monitoring users'
-        disk usage
 
 *   __Reserche__
     +   [Linux Netkit](utils/netkit.md) - 
@@ -74,6 +89,7 @@ Man pages have the common sections.
     +   [zsh](http://www.zsh.org/)
 
 *   __*nix deamons__
+    +   [samba]()
 
 *   __Routines__
     -   [VPS security](routines/vps_security.md)
