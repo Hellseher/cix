@@ -2,7 +2,7 @@
 File          : util-linux.md
 
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Sun 21 Feb 2016 02:40:19
+Last Modified : Sun 21 Feb 2016 02:42:21
 Maintainer    : sharlatan
 -->
 
@@ -12,8 +12,8 @@ It is a standard package of the Linux operating system.
 [![](../icons/github.png)](https://github.com/karelzak/util-linux)
 
 * * *
-|    |    |
-| -- | -- |
+|     |     |
+| --- | --- |
 | __Author__ | Karel Zak |
 | __Maintainers__ | Ruediger Meier, Sami Kerola, Stanislav Brabec |
 |  | Filipe Brandenburger, Igor Gnatenko, Anna Jonna Ármannsdóttir |
