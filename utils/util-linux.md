@@ -2,7 +2,7 @@
 File          : util-linux.md
 
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Thu 17 Dec 2015 00:34:04
+Last Modified : Sun 21 Feb 2016 02:40:19
 Maintainer    : sharlatan
 -->
 
@@ -12,6 +12,16 @@ It is a standard package of the Linux operating system.
 [![](../icons/github.png)](https://github.com/karelzak/util-linux)
 
 * * *
+|    |    |
+| -- | -- |
+| __Author__ | Karel Zak |
+| __Maintainers__ | Ruediger Meier, Sami Kerola, Stanislav Brabec |
+|  | Filipe Brandenburger, Igor Gnatenko, Anna Jonna Ármannsdóttir |
+|  | J William Piggott, Lada Trimasova, Wayne R. Roth |
+|  | Werner Fink, Yuriy M. Kaminskiy |
+| __Realised__ | 2007 |
+| __Source__ | [util-linux](https://git.kernel.org/cgit/utils/util-linux/util-linux.git/) |
+
 
         su (1)               - run a command with substitute user and group ID
         ul (1)               - do underlining
