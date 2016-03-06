@@ -1,7 +1,7 @@
 <!--
 File          : e2fsprogs.md
 Created       : Sun 06 Mar 2016 00:25:13
-Last Modified : Sun 06 Mar 2016 00:59:31 sharlatan
+Last Modified : Sun 06 Mar 2016 01:09:53 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -11,11 +11,11 @@ E2fsprogs [↷](http://e2fsprogs.sourceforge.net/)
 ---------
 |     |     |
 | --- | --- |
-| Author | Theodore Ts'o |
-| Maintainers | Darrick J. Wong, |
+| _Author_ | Theodore Ts'o |
+| _Maintainers_ | Darrick J. Wong, |
 | | Andreas Dilger |
-| Realised | 2000 |
-| Source | [kernel.org](http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/) |
+| _Realised_ | 1997 |
+| _Source_ | [kernel.org](http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/) |
 
 * * *
 
