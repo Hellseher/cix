@@ -1,9 +1,8 @@
 <!--
 File          : README.md
-
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Thu 03 Mar 2016 03:32:01 sharlatan
-Maintainer    : sharlatan
+Last Modified : Sun 06 Mar 2016 00:37:27 sharlatan
+Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
 # cix #
@@ -45,6 +44,8 @@ Man pages common sections.
 *   __File System__ *Partition file system craft and check*
     +   [quota](utils/linux_diskquota.md) -
         Linux DiskQuota - System tools for monitoring users disk usage
+    +   [E2fsprogs](utils/e2fsprogs.md) -
+        Filesystem utilities for use with Ext2/3/4.
 
 *   __Networking__ *We all live in the someone's subnet in*
     +   [net-tools](utils/net-utils.md) -
