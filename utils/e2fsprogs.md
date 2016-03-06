@@ -1,7 +1,7 @@
 <!--
 File          : e2fsprogs.md
 Created       : Sun 06 Mar 2016 00:25:13
-Last Modified : Sun 06 Mar 2016 00:56:09 sharlatan
+Last Modified : Sun 06 Mar 2016 00:59:31 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -9,20 +9,20 @@ Maintainer    : sharlatan <sharlatanus@gmail.com>
 [[≣](../README.md#Index "Index")]
 E2fsprogs [↷](http://e2fsprogs.sourceforge.net/)
 ---------
-
- | --- | --- |
- | Author | Theodore Ts'o |
- | Maintainers | Darrick J. Wong, |
- | | Andreas Dilger |
- | Created | 2000 |
- | Source | [kernel.org](http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/) |
+|     |     |
+| --- | --- |
+| Author | Theodore Ts'o |
+| Maintainers | Darrick J. Wong, |
+| | Andreas Dilger |
+| Realised | 2000 |
+| Source | [kernel.org](http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/) |
 
 * * *
 
     e2fsck (8)           - check a Linux ext2/ext3/ext4 file system
     mke2fs (8)           - create an ext2/ext3/ext4 filesystem
     resize2fs (8)        - ext2/ext3/ext4 file system resizer
-    tune2fs (8)          - adjust tunable filesystem parameters on ext2/ext3/ext4 filesystems
+    tune2fs (8)          - adjust tunable filesystem parameters
     dumpe2fs (8)         - dump ext2/ext3/ext4 filesystem information
     debugfs (8)          - ext2/ext3/ext4 file system debugger
     filefrag (8)         - report on file fragmentation
