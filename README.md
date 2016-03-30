@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Tue Mar 29 2016 22:03:28 sharlatan
+Last Modified : Wed Mar 30 2016 06:55:35 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -108,3 +108,7 @@ Man pages common sections.
     +   [VPS security](routines/vps_security.md)
     +   [VPS Web server](routines/vps_to_webserver.md)
     +   [Server load](routines/server_load.md)
+
+## Referance ##
+1. GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
+2. Bioinformatics one-liners https://github.com/stephenturner/oneliners
