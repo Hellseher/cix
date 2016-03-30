@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun 06 Mar 2016 00:37:27 sharlatan
+Last Modified : Tue Mar 29 2016 22:03:28 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -21,7 +21,7 @@ Man pages common sections.
 4. Special files
 5. File formats and conventions
 6. Games and Screen savers
-7. Miscellanea
+7. Miscellaneous
 8. System administration commands and daemons
 
 ## Index ##
@@ -31,7 +31,7 @@ Man pages common sections.
 *   __Legacy__ *Keep the history*
     +   [unix-side](utils/unix-side.md) -
         Common Unix commands
-    +   [hole of fame]()
+    +   [hall of fame]()
 
 *   __Core__ *Usually it contains on the most distributions*
     +   [gnu-core-utilities](utils/gnu-core-utilities.md) -
@@ -42,10 +42,15 @@ Man pages common sections.
         combines many common UNIX utilities into a single small executable.
 
 *   __File System__ *Partition file system craft and check*
+    +   [nfs-utils]()
+    +   [curlftpfs]()
+    +   [samba]()
     +   [quota](utils/linux_diskquota.md) -
         Linux DiskQuota - System tools for monitoring users disk usage
     +   [E2fsprogs](utils/e2fsprogs.md) -
         Filesystem utilities for use with Ext2/3/4.
+    +   [btrfs-progs](utils/btrfs-progs.md)
+        Userspace programs for btrfs.
 
 *   __Networking__ *We all live in the someone's subnet in*
     +   [net-tools](utils/net-utils.md) -
@@ -54,7 +59,12 @@ Man pages common sections.
         Network monitoring tools including ping
     +   [iproute2](utils/iproute2.md)
         routing commands and utilities
-    +   [tcpdump]()
+    +   [gnu-inetutils](utils/gnu-inetutils.md) -
+        A collection of common network programs
+    +   [iptables](utils/iptables.md) -
+        userspace command line program used to configure packet filtering ruleset.
+    +   [tcpdump](utils/tcpdump.md) -
+        dump traffic on a network
     +   [nmap]()
     +   [netcat]()
     +   [OpenSSH]()
@@ -62,8 +72,6 @@ Man pages common sections.
 *   __Utillities__
     +   [gnu-binutils](utils/gnu-binutils.md) -
         collection of binary tools
-    +   [gnu-inetutils](utils/gnu-inetutils.md) -
-        A collection of common network programs
     +   [Findutils](utils/gnu-findutils.md)
         The GNU versions of find utilities (find and xargs)
     +   [pm-utils](utils/pm-utils.md) -
@@ -71,8 +79,7 @@ Man pages common sections.
     +   [procps-ng](utils/procps-ng.md) -
         utilities for monitoring your system and its processes
     +   [psmisc](utils/psmisc.md) -
-        This PSmisc package is a set of some small useful utilities that use
-        the proc filesystem.
+        This PSmisc is a set of small utilities that use the proc filesystem.
     +   [pciutils](utils/pciutils.md) -
         PCI bus related utilities
     +   [lvm2]()
@@ -98,5 +105,6 @@ Man pages common sections.
     +   [nfs]()
 
 *   __Routines__
-    -   [VPS security](routines/vps_security.md)
-    -   [VPS Web server](routines/vps_to_webserver.md)
+    +   [VPS security](routines/vps_security.md)
+    +   [VPS Web server](routines/vps_to_webserver.md)
+    +   [Server load](routines/server_load.md)
