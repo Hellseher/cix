@@ -1,24 +1,33 @@
 <!--
 File          : gnu-core-utilities.md
-
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Wed Mar 30 2016 06:13:03 sharlatan
+Last Modified : Wed Mar 30 2016 06:41:00 sharlatan
 Maintainer    : sharlatan
 -->
 
-[[Б┴ё](../README.md#Index "Index")]
-Coreutils - GNU core utilities [Б├╥](https://www.gnu.org/software/coreutils/coreutils.html)
+[[≣](../README.md#Index "Index")]]
+[[↷](https://www.gnu.org/software/coreutils/coreutils.html)]
+coreutils - GNU core utilities
 ------------------------------
+|     |     |
+| --- | --- |
+| __Author__ | |
+| __Maintainers__ | |
+| __Realised__ | |
+| __Source__ | [coreutils](https://github.com/coreutils/coreutils) |
+| __Info__ | [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html) |
+
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the GNU operating system.  These are the core utilities which are
-expected to exist on every operating system. 
+expected to exist on every operating system.
+This package is the union of the GNU fileutils, sh-utils, and textutils packages.
 
-### rpm ###
-_RedHat, CentOS, Fedora_
+## rpm ##
+_RedHat, CentOS, Fedora, Sceintific Linux_
 
     $: sudo yum install coreutils
 
-### deb ###
+## deb ##
 _Debian, Ubuntu, Linux Mint_
 
     $: sudo apt-get install coreutils
@@ -33,7 +42,6 @@ _Debian, Ubuntu, Linux Mint_
     ln (1)        - make links between files
 
 [ls](gnu-core-utilities.md#ls) (1) - list directory contents
-.
 
     mv (1)        - move (rename) files
     nl (1)        - number lines of files
