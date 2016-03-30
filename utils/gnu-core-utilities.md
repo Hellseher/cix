@@ -2,13 +2,13 @@
 File          : gnu-core-utilities.md
 
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat 12 Dec 2015 23:56:15
+Last Modified : Wed Mar 30 2016 06:13:03 sharlatan
 Maintainer    : sharlatan
 -->
 
-[[≣](../README.md#Index "Index")]
-Coreutils - GNU core utilities [↷](https://www.gnu.org/software/coreutils/coreutils.html)
------------------------------------------------------------------------------------------
+[[Б┴ё](../README.md#Index "Index")]
+Coreutils - GNU core utilities [Б├╥](https://www.gnu.org/software/coreutils/coreutils.html)
+------------------------------
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the GNU operating system.  These are the core utilities which are
 expected to exist on every operating system. 
@@ -40,7 +40,9 @@ _Debian, Ubuntu, Linux Mint_
     od (1)        - dump files in octal and other formats
     pr (1)        - convert text files for printing
     rm (1)        - remove files or directories
-    tr (1)        - translate or delete characters
+
+[tr](gnu-core-utilities.md#tr)(1) - translate or delete characters
+
     wc (1)        - print newline, word, and byte counts for each file
 
     cat (1)       - concatenate files and print on the standard output
@@ -139,7 +141,7 @@ _Debian, Ubuntu, Linux Mint_
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
 
-
+[↑](#top)
 ## ls ##
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
@@ -149,3 +151,29 @@ Sweet examples of using __ls__.
     $: ls -Ham
     $: ls -and
     $: ls -alSh
+
+List only: Dir, files, links; hidden dirs, hidden files hidden links, exec
+files. Actively
+using -F key to classify  */=>@|
+
+    $: ls -F | grep '/' | cut -d/ -f1
+    $: ls -p | grep -v /
+    $: ls -F | grep '[@]' | cut -d@ -f1
+
+Aliases best practice.
+
+    alias ls="ls -1p --color=auto"
+    alias l="ls -lhGgo"
+    alias ll="ls -lh"
+    alias la="ls -lhGgoA"
+    alias lt="ls -lhGgotr"
+    alias lS="ls -lhGgoSr"
+    alias l.="ls -lhGgod .*"
+    alias lhead="ls -lhGgo | head"
+    alias ltail="ls -lhGgo | tail"
+    alias lmore='ls -lhGgo | more'
+
+
+## tr ##
+_tr [-cdstdts]... SET1 [SET2]_
+
