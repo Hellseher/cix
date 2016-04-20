@@ -1,7 +1,7 @@
 <!--
 File          : gnu-core-utilities.md
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Wed Mar 30 2016 06:41:00 sharlatan
+Last Modified : Wed Apr 20 2016 23:48:57 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -35,7 +35,7 @@ _Debian, Ubuntu, Linux Mint_
 ---
 
     cp (1)        - copy files and directories
-    dd (1)        - convert and copy a file
+[dd](gnu-core-utilities.md#dd)(1)  - convert and copy a file
     df (1)        - report file system disk space usage
     du (1)        - estimate file space usage
     id (1)        - print real and effective user and group IDs
@@ -150,6 +150,17 @@ _Debian, Ubuntu, Linux Mint_
     sha512sum (1) - compute and check SHA512 message digest
 
 [↑](#top)
+## dd ##
+
+Test NFS/LAN speed
+
+    $: time dd if=/dev/zer of=/<mount_of_your_nfs_dir>/testfile bs=16k count=16384
+
+After createing 256Mb file on your remote server, read it back
+
+    $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
+
+[↑](#top)
 ## ls ##
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
@@ -182,6 +193,12 @@ Aliases best practice.
     alias lmore='ls -lhGgo | more'
 
 
+[↑](#top)
 ## tr ##
 _tr [-cdstdts]... SET1 [SET2]_
+
+convert Mac ASCII file to UNIX
+
+    $: tr '\015' '\012' < file.mac > file.UNIX
+
 
