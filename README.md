@@ -1,14 +1,14 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Wed Mar 30 2016 06:55:35 sharlatan
+Last Modified : Tue May 03 2016 00:12:05 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
-# cix #
+# cix
 _Collection of utilities for Unix like operating systems._
 
-## Intro ##
+## Intro
 The aim of this is repo to collect short examples of command usage, to be
 helpful for *nix beginners and interesting place for advanced users.
 All information containing here can be reach in man pages.
@@ -24,7 +24,7 @@ Man pages common sections.
 7. Miscellaneous
 8. System administration commands and daemons
 
-## Index ##
+## Index
 
     <package-name><link><description>
 
@@ -32,6 +32,8 @@ Man pages common sections.
     +   [unix-side](utils/unix-side.md) -
         Common Unix commands
     +   [hall of fame]()
+    + help, man, info:w
+
 
 *   __Core__ *Usually it contains on the most distributions*
     +   [gnu-core-utilities](utils/gnu-core-utilities.md) -
@@ -40,6 +42,12 @@ Man pages common sections.
         is a standard package of the Linux operating system
     +   [busybox]()
         combines many common UNIX utilities into a single small executable.
+*   __Text processing__
+    + grep
+    + awk
+    + sed/ed
+    + vim
+    + emacs
 
 *   __File System__ *Partition file system craft and check*
     +   [nfs-utils]()
@@ -82,6 +90,8 @@ Man pages common sections.
         This PSmisc is a set of small utilities that use the proc filesystem.
     +   [pciutils](utils/pciutils.md) -
         PCI bus related utilities
+    +   [shadow-utils]()
+        Utilities for managing accounts and shadow password files
     +   [lvm2]()
 
 *   __Reserche__
@@ -100,7 +110,7 @@ Man pages common sections.
     +   [fish](http://fishshell.com/)
     +   [zsh](http://www.zsh.org/)
 
-*   __*nix deamons__
+*   __*nix deamons/services__
     +   [samba]()
     +   [nfs]()
 
@@ -109,6 +119,6 @@ Man pages common sections.
     +   [VPS Web server](routines/vps_to_webserver.md)
     +   [Server load](routines/server_load.md)
 
-## Referance ##
+## Reference ##
 1. GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 2. Bioinformatics one-liners https://github.com/stephenturner/oneliners
