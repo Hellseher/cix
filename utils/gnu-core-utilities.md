@@ -1,7 +1,7 @@
 <!--
 File          : gnu-core-utilities.md
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat May 07 2016 01:49:17 sharlatan
+Last Modified : Sat May 07 2016 02:00:45 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -151,7 +151,7 @@ _Debian, Ubuntu, Linux Mint_
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
 
-## [[↑](#top)] dd
+## [[⬆]](#top) dd
 
 Test NFS/LAN speed
 
@@ -162,7 +162,7 @@ After createing 256Mb file on your remote server, read it back
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 
 
-## [[↑](#top)] ls
+## [[⬆]](#top) ls
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
 Sweet examples of using __ls__.
@@ -195,14 +195,23 @@ Aliases best practice.
 
 
 
-## [[↑](#top)] tr
+## [[⬆]](#top) tr
 _tr [-cdstdts]... SET1 [SET2]_
 
 "convert" Mac ASCII file to UNIX.
 
-    $: tr '\015' '\012' < file.mac > file.UNIX
+    tr '\015' '\012' < file.mac > file.UNIX
+
+Change uppercase to lowercase in a file:
+
+    cat file | tr 'A-Z' 'a-z'
+
+Turn spaces into newlines:
+
+    tr ' ' '\012' < file
+
 
 ***
-# Referance
+# [[⬆]](#top) Referance
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides. *UNIX Power Tools*. O'reilly
 - Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins. *Linux In a Nutshell*. O'reilly
