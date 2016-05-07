@@ -1,7 +1,7 @@
 <!--
 File          : gnu-core-utilities.md
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat May 07 2016 02:00:45 sharlatan
+Last Modified : Sat May 07 2016 02:18:11 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -151,7 +151,8 @@ _Debian, Ubuntu, Linux Mint_
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
 
-## [[⬆]](#top) dd
+[[⬆]](#top)
+##  dd
 
 Test NFS/LAN speed
 
@@ -161,8 +162,8 @@ After createing 256Mb file on your remote server, read it back
 
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 
-
-## [[⬆]](#top) ls
+[[⬆]](#top)
+##  ls
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
 Sweet examples of using __ls__.
@@ -194,8 +195,8 @@ Aliases best practice.
     alias lmore='ls -lhGgo | more'
 
 
-
-## [[⬆]](#top) tr
+[[⬆]](#top)
+## tr
 _tr [-cdstdts]... SET1 [SET2]_
 
 "convert" Mac ASCII file to UNIX.
