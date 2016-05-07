@@ -1,7 +1,7 @@
 <!--
 File          : gnu-core-utilities.md
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Thu Apr 21 2016 00:00:17 sharlatan
+Last Modified : Sat May 07 2016 01:49:17 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -22,12 +22,12 @@ utilities of the GNU operating system.  These are the core utilities which are
 expected to exist on every operating system.
 This package is the union of the GNU fileutils, sh-utils, and textutils packages.
 
-## rpm ##
+## rpm
 _RedHat, CentOS, Fedora, Sceintific Linux_
 
     $: sudo yum install coreutils
 
-## deb ##
+## deb
 _Debian, Ubuntu, Linux Mint_
 
     $: sudo apt-get install coreutils
@@ -35,7 +35,9 @@ _Debian, Ubuntu, Linux Mint_
 ---
 
     cp (1)        - copy files and directories
+
 [dd](gnu-core-utilities.md#dd) (1)  - convert and copy a file
+
     df (1)        - report file system disk space usage
     du (1)        - estimate file space usage
     id (1)        - print real and effective user and group IDs
@@ -149,8 +151,7 @@ _Debian, Ubuntu, Linux Mint_
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
 
-[[↑](#top)]
-## dd ##
+## [[↑](#top)] dd
 
 Test NFS/LAN speed
 
@@ -160,8 +161,8 @@ After createing 256Mb file on your remote server, read it back
 
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 
-[[↑](#top)]
-## ls ##
+
+## [[↑](#top)] ls
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
 Sweet examples of using __ls__.
@@ -193,15 +194,15 @@ Aliases best practice.
     alias lmore='ls -lhGgo | more'
 
 
-[[↑](#top)]
-## tr ##
+
+## [[↑](#top)] tr
 _tr [-cdstdts]... SET1 [SET2]_
 
-convert Mac ASCII file to UNIX
+"convert" Mac ASCII file to UNIX.
 
     $: tr '\015' '\012' < file.mac > file.UNIX
 
 ***
 # Referance
-
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides. *UNIX Power Tools*. O'reilly
+- Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins. *Linux In a Nutshell*. O'reilly
