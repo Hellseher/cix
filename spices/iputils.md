@@ -2,17 +2,21 @@
 File          : iputils.md
 
 Created       : Mon 16 Nov 2015 00:31:15
-Last Modified : Sun 14 Feb 2016 02:43:31
+Last Modified : Tue Jun 07 2016 23:28:59 sharlatan
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
+[[↷](http://www.skbuff.net/iputils/)]
 
-IPutils [↷](http://www.skbuff.net/iputils/)
--------------------------------------------
-2006 - 
-_Alexey Kuznetsov > YOSHIFUJI Hideaki_
-[![](../icons/github.png)](https://github.com/iputils/iputils)
+IPutils
+-------
+|     |     |
+| --- | --- |
+| __Author__ | Alexey Kuznetsov |
+| __Maintainers__ | |
+| __Realised__ | 2006 |
+| __Source__ | [iputils](https://github.com/iputils/iputils) |
 ***
 
     arping               -
@@ -27,3 +31,5 @@ _Alexey Kuznetsov > YOSHIFUJI Hideaki_
     tracepath6 (8)       - traces path to a network host discovering MTU along
     traceroute6 (8)      - print the route packets trace to network host
 
+# Referance
+- Linuxfoundation: iputils http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils
