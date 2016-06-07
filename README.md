@@ -1,17 +1,17 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun May 08 2016 09:30:04 sharlatan
+Last Modified : Tue Jun 07 2016 23:02:04 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
 # cix
-_Collectlion of UNIX utilities tips__
+_Collectlion of UNIX utilities tips_
 
 ## Intro
-The aim of this is repo to collect short examples of command usage, to be
+The aim of this repo is to collect short examples of command usage, to be
 helpful for *nix beginners and interesting place for advanced users.
-All information containing here can be reach in man pages.
+More detailed information containing here can be reach in man pages.
 
 Man pages common sections.
 
@@ -29,21 +29,21 @@ Man pages common sections.
     <package-name><link><description>
 
 *   __Legacy__ *Keep the history*
-    +   [unix-side](utils/unix-side.md) -
+    +   [unix-side](spices/unix-side.md) -
         Common Unix commands
     +   [hall of fame]()
 
 
 *   __Core__ *Usually it contains on the most distributions*
-    +   [gnu-core-utilities](utils/gnu-core-utilities.md) -
+    +   [gnu-core-utilities](spices/gnu-core-utilities.md) -
         basic file, shell and text manipulation utilities
-    +   [util-linux](utils/util-linux.md) -
+    +   [util-linux](spices/util-linux.md) -
         is a standard package of the Linux operating system
     +   [busybox]()
         combines many common UNIX utilities into a single small executable.
     +   [get help]() -
         You don't have know everything you must know how to use: help, man, info
-*   __Text processing__
+*   __Text processing__ *Everything is a file*
     + grep
     + awk
     + sed/ed
@@ -54,59 +54,59 @@ Man pages common sections.
     +   [nfs-utils]()
     +   [curlftpfs]()
     +   [samba]()
-    +   [quota](utils/linux_diskquota.md) -
+    +   [quota](spices/linux_diskquota.md) -
         Linux DiskQuota - System tools for monitoring users disk usage
-    +   [E2fsprogs](utils/e2fsprogs.md) -
+    +   [E2fsprogs](spices/e2fsprogs.md) -
         Filesystem utilities for use with Ext2/3/4.
-    +   [btrfs-progs](utils/btrfs-progs.md)
+    +   [btrfs-progs](spices/btrfs-progs.md)
         Userspace programs for btrfs.
 
 *   __Networking__ *We all live in the someone's subnet in*
-    +   [net-tools](utils/net-utils.md) -
+    +   [net-tools](spices/net-utils.md) -
         collection of base networking utilities
-    +   [iputils](utils/iputils.md) -
+    +   [iputils](spices/iputils.md) -
         Network monitoring tools including ping
-    +   [iproute2](utils/iproute2.md)
+    +   [iproute2](spices/iproute2.md)
         routing commands and utilities
-    +   [gnu-inetutils](utils/gnu-inetutils.md) -
+    +   [gnu-inetutils](spices/gnu-inetutils.md) -
         A collection of common network programs
-    +   [iptables](utils/iptables.md) -
+    +   [iptables](spices/iptables.md) -
         userspace command line program used to configure packet filtering ruleset.
-    +   [tcpdump](utils/tcpdump.md) -
+    +   [tcpdump](spices/tcpdump.md) -
         dump traffic on a network
     +   [nmap]()
     +   [netcat]()
     +   [OpenSSH]()
 
-*   __Utillities__
-    +   [gnu-binutils](utils/gnu-binutils.md) -
+*   __Utillities__ *Be silent and help ppls*
+    +   [gnu-binutils](spices/gnu-binutils.md) -
         collection of binary tools
-    +   [Findutils](utils/gnu-findutils.md)
+    +   [Findutils](spices/gnu-findutils.md)
         The GNU versions of find utilities (find and xargs)
-    +   [pm-utils](utils/pm-utils.md) -
+    +   [pm-utils](spices/pm-utils.md) -
         suspend and powerstate setting framework
-    +   [procps-ng](utils/procps-ng.md) -
+    +   [procps-ng](spices/procps-ng.md) -
         utilities for monitoring your system and its processes
-    +   [psmisc](utils/psmisc.md) -
+    +   [psmisc](spices/psmisc.md) -
         This PSmisc is a set of small utilities that use the proc filesystem.
-    +   [pciutils](utils/pciutils.md) -
+    +   [pciutils](spices/pciutils.md) -
         PCI bus related utilities
     +   [shadow-utils]()
         Utilities for managing accounts and shadow password files
     +   [lvm2]()
 
 *   __Reserche__
-    +   [Linux Netkit](utils/netkit.md) -
+    +   [Linux Netkit](spices/netkit.md) -
         Utilities for managing processes on your system
 
 *   __Packet managment__
-    +   [Package managers utils](utils/pm_managers.md) -
+    +   [Package managers utils](spices/pm_managers.md) -
         PM comparison table and tricks.
-    +   [shadow-utils](utils/shadow-utils.md) -
+    +   [shadow-utils](spices/shadow-utils.md) -
         RPM packages
 
 *   __Shell builtins__
-    +   [gnu-bash-builtin](utils/gnu-bash-builtin.md) -
+    +   [gnu-bash-builtin](spices/gnu-bash-builtin.md) -
         GNU Bash shell built in commands
     +   [fish](http://fishshell.com/)
     +   [zsh](http://www.zsh.org/)
@@ -115,11 +115,11 @@ Man pages common sections.
     +   [samba]()
     +   [nfs]()
 
-*   __Routines__
+## Routines
     +   [VPS security](routines/vps_security.md)
     +   [VPS Web server](routines/vps_to_webserver.md)
     +   [Server load](routines/server_load.md)
 
-## Reference ##
+## Reference
 1. GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 2. Bioinformatics one-liners https://github.com/stephenturner/oneliners
