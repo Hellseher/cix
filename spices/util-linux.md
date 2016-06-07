@@ -1,27 +1,27 @@
 <!--
 File          : util-linux.md
-
 Created       : Wed 14 Oct 2015 23:08:36
-Last Modified : Sun 21 Feb 2016 02:42:21
+Last Modified : Wed Mar 30 2016 06:35:48 sharlatan
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
-# util-linux #
-It is a standard package of the Linux operating system.
 [![](../icons/github.png)](https://github.com/karelzak/util-linux)
-
-* * *
+til-linux
+---------
 |     |     |
 | --- | --- |
 | __Author__ | Karel Zak |
 | __Maintainers__ | Ruediger Meier, Sami Kerola, Stanislav Brabec |
-|  | Filipe Brandenburger, Igor Gnatenko, Anna Jonna Ármannsdóttir |
+|  | Filipe Brandenburger, Igor Gnatenko, Anna Jonna ц│rmannsdцЁttir |
 |  | J William Piggott, Lada Trimasova, Wayne R. Roth |
 |  | Werner Fink, Yuriy M. Kaminskiy |
 | __Realised__ | 2007 |
 | __Source__ | [util-linux](https://git.kernel.org/cgit/utils/util-linux/util-linux.git/) |
 
+It is a standard package of the Linux operating system.
+
+---
 
         su (1)               - run a command with substitute user and group ID
         ul (1)               - do underlining

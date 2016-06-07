@@ -2,12 +2,10 @@
 File          : procps-ng.md
 
 Created       : Mon 02 Nov 2015 01:14:54
-Last Modified : Sat 21 Nov 2015 20:41:51
+Last Modified : Sat 21 Nov 2015 21:04:42
 Maintainer    : sharlatan
 -->
 
-[[≣](../README.md#Index "Index")]
-[[≣](../README.md#Index "Index")]
 [[≣](../README.md#Index "Index")]
 procps-ng
 ---------

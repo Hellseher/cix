@@ -2,26 +2,27 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Sun 03 Jan 2016 17:00:01
+Last Modified : Tue May 03 2016 00:12:04 sharlatan
 Maintainer    : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
-# GNU Bash builtin [↷](https://www.gnu.org/software/bash/) #
-Type 
+# GNU Bash builtin [↷](https://www.gnu.org/software/bash/)
+Type
 
     $: help <command_name>
 
 to find out more about the function name.
 
 * * *
-## Built-in functions
+## Built-in functions ##
 
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
     [[ ... ]] - Execute conditional command.
     { ... }   - Group commands as a unit.
-    
+    ( ... )   - 
+
     bg        - Move jobs to the background.
     cd        - Change the shell working directory.
     fc        - Display or execute commands from the history list.
@@ -105,7 +106,7 @@ to find out more about the function name.
     variables - Common shell variable names and usage.
 
 * * *
-
+## Built in variables ##
     BASH
     BASH_ALIASES
     BASH_ARGC
@@ -185,13 +186,12 @@ to find out more about the function name.
     TMPDIR
     UID
 
-
-## select ##
-
-    select NAME [in WORDS ... ;] do COMMANDS; done
+### select
+_select NAME [in WORDS ... ;] do COMMANDS; done_
 
 
-## command ##
+### command
+_
 
     $ command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not
     installed.  Aborting."; exit 1; }

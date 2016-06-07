@@ -1,12 +1,12 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Tue May 03 2016 00:12:05 sharlatan
+Last Modified : Sun May 08 2016 09:30:04 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
 # cix
-_Collection of utilities for Unix like operating systems._
+_Collectlion of UNIX utilities tips__
 
 ## Intro
 The aim of this is repo to collect short examples of command usage, to be
@@ -32,7 +32,6 @@ Man pages common sections.
     +   [unix-side](utils/unix-side.md) -
         Common Unix commands
     +   [hall of fame]()
-    + help, man, info:w
 
 
 *   __Core__ *Usually it contains on the most distributions*
@@ -42,6 +41,8 @@ Man pages common sections.
         is a standard package of the Linux operating system
     +   [busybox]()
         combines many common UNIX utilities into a single small executable.
+    +   [get help]() -
+        You don't have know everything you must know how to use: help, man, info
 *   __Text processing__
     + grep
     + awk
