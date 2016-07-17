@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Tue Jun 07 2016 23:02:04 sharlatan
+Last Modified : Sun 17 Jul 2016 22:31:00 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -79,6 +79,8 @@ Man pages common sections.
     +   [OpenSSH]()
 
 *   __Utillities__ *Be silent and help ppls*
+    +   [moreutils](spices/moreutils.md) -
+        collection of the UNIX tools that nobody thought to write long ago when unix was young.
     +   [gnu-binutils](spices/gnu-binutils.md) -
         collection of binary tools
     +   [Findutils](spices/gnu-findutils.md)
