@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun 17 Jul 2016 22:31:00 sharlatan
+Last Modified : Mon 25 Jul 2016 23:52:35 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -51,6 +51,8 @@ Man pages common sections.
     + emacs
 
 *   __File System__ *Partition file system craft and check*
+    +   [lvm2](spices/lvm2.md)
+        Userland logical volume management tools
     +   [nfs-utils]()
     +   [curlftpfs]()
     +   [samba]()
@@ -79,6 +81,8 @@ Man pages common sections.
     +   [OpenSSH]()
 
 *   __Utillities__ *Be silent and help ppls*
+    +   [kmod](spices/kmod.md)
+        Linux kernel module management utilities
     +   [moreutils](spices/moreutils.md) -
         collection of the UNIX tools that nobody thought to write long ago when unix was young.
     +   [gnu-binutils](spices/gnu-binutils.md) -
@@ -95,7 +99,6 @@ Man pages common sections.
         PCI bus related utilities
     +   [shadow-utils]()
         Utilities for managing accounts and shadow password files
-    +   [lvm2]()
 
 *   __Reserche__
     +   [Linux Netkit](spices/netkit.md) -
