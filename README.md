@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Mon 25 Jul 2016 23:52:35 sharlatan
+Last Modified : Sun 31 Jul 2016 13:29:10 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -23,6 +23,13 @@ Man pages common sections.
 6. Games and Screen savers
 7. Miscellaneous
 8. System administration commands and daemons
+
+
+To check what packaged command belongs to run:
+
+    $ rpm -qf $(which <CMD>)
+    $ dpkg-query -S $(wich <CMD>)
+
 
 ## Index
 

@@ -2,7 +2,7 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Tue May 03 2016 00:12:04 sharlatan
+Last Modified : Thu 04 Aug 2016 22:52:30 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -21,7 +21,7 @@ to find out more about the function name.
     [ ... ]   - Evaluate conditional expression (synonym "test").
     [[ ... ]] - Execute conditional command.
     { ... }   - Group commands as a unit.
-    ( ... )   - 
+    ( ... )   -
 
     bg        - Move jobs to the background.
     cd        - Change the shell working directory.
@@ -75,14 +75,14 @@ to find out more about the function name.
     printf    - Formats and prints ARGUMENTS under control of the FORMAT.
     return    - Return from a shell function.
 
-[select](gnu-bash-builtin.md#select)    - Select words from a list and execute commands.  
+[select](gnu-bash-builtin.md#select)    - Select words from a list and execute commands.
 
     source    - Execute commands from a file in the current shell.
     ulimit    - Modify shell resource limits.
 
     builtin   - Execute shell builtins.
 
-[command](gnu-bash-builtin.md#command)   - Execute a simple command or display information about commands.  
+[command](gnu-bash-builtin.md#command)   - Execute a simple command or display information about commands.
 
     compgen   - Display possible completions depending on the options.
     compopt   - Modify or display completion options.
@@ -142,7 +142,9 @@ to find out more about the function name.
     EUID
     FCEDIT
     FIGNORE
-    FUNCNAME
+
+[FUNCNAME](gnu-bash-builtin.md#FUNCNAME)  
+
     FUNCNEST
     GLOBIGNORE
     GROUPS
@@ -186,6 +188,9 @@ to find out more about the function name.
     TMPDIR
     UID
 
+* * *
+## Commands receipts
+
 ### select
 _select NAME [in WORDS ... ;] do COMMANDS; done_
 
@@ -193,5 +198,28 @@ _select NAME [in WORDS ... ;] do COMMANDS; done_
 ### command
 _
 
+Test wheather command "foo" installed/exists on the system.
+
     $ command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not
     installed.  Aborting."; exit 1; }
+
+### ulimit
+_ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]_
+
+
+* * *
+## Variable receipts
+
+### FUNCNAME
+
+Its a global internal variable maintained by any linux
+shell.  Its of type array and consists the name of the current
+function from where we are trying to read its value.  FUNCNAME[0] is
+the current function name and FUNCNAME[1] is the previous function
+name and so on ... Its a stack-trace of functions executed by a shell
+script.  Value of FUNCNAME gets cleared every-time we execute a new
+shell script.
+
+* * *
+## Referance
+- Bash Variables https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html

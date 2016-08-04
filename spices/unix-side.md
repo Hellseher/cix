@@ -2,7 +2,7 @@
 File          : unix-side.md
 
 Created       : Wed 04 Nov 2015 22:21:55
-Last Modified : Sat 21 Nov 2015 20:41:51
+Last Modified : Mon 01 Aug 2016 23:15:25 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -136,6 +136,7 @@ Unix operating systems and most Unix-like operating systems.
     rmdir      - remove directories
     sleep      - suspend execution for an interval
     split      - split files into pieces
+    spawn      - fork and exec process, not part of POSIX standart
     strip      - remove unnecessary information from executable files (DEVELOPMENT)
     touch      - change file access and modification times
     tsort      - topological sort
