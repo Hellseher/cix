@@ -2,7 +2,7 @@
 File          : bash-builtin.md
 
 Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Thu 04 Aug 2016 22:52:30 sharlatan
+Last Modified : Tue 09 Aug 2016 21:33:49 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -223,3 +223,4 @@ shell script.
 * * *
 ## Referance
 - Bash Variables https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
+- Bash wiki http://wiki.bash-hackers.org
