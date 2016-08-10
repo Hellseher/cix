@@ -1,13 +1,33 @@
 <!--
 File          : shadow-utils.md
 Created       : Tue May 03 2016 00:09:23
-Last Modified : Tue May 03 2016 00:12:01 sharlatan
+Last Modified : Thu 11 Aug 2016 00:02:01 sharlatan
 Author        : sharlatan <sharlatanus@gmail.com>
 Maintainer(s) - : sharlatan
 -->
 
 [[≣](../README.md#Index "Index")]
-# Shadow utils
+[[↷](http://pkg-shadow.alioth.debian.org/)]
+# Sadow utils
+
+|     |     |
+| --- | --- |
+| __Author__ |  |
+| __Maintainers__ |Tomasz Kłoczko, Nicolas François |
+| | |
+| __Realised__ | 2005  |
+| __Source__ | [pkg-shadow](https://anonscm.debian.org/git/pkg-shadow/shadow.git) |
+
+The  shadow-utils   package  includes   the  necessary   programs  for
+converting UNIX  password files  to the  shadow password  format, plus
+programs  for managing  user and  group accounts.  The pwconv  command
+converts passwords to the shadow password format. The pwunconv command
+unconverts shadow  passwords and generates  a passwd file  (a standard
+UNIX  password  file).   The  pwck command  checks  the  integrity  of
+password and  shadow files.  The  lastlog command prints out  the last
+login times for all users.  The useradd, userdel, and usermod commands
+are  used for  managing  user accounts.  The  groupadd, groupdel,  and
+groupmod commands are used for managing group accounts.
 
     chage (1)      -	change user password expiry information
     chfn (1)       -	change real user name and information
