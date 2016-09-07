@@ -1,34 +1,40 @@
 <!--
 File          : gnu-core-utilities.md
 Created       : Wed 14 Oct 2015 23:07:41
-Last Modified : Sat May 07 2016 02:18:11 sharlatan
+Last Modified : Wed 07 Sep 2016 23:32:00 sharlatan
 Maintainer    : sharlatan
 -->
 
-[[≣](../README.md#Index "Index")]]
+[[≣](../README.md#Index "Index")]
 [[↷](https://www.gnu.org/software/coreutils/coreutils.html)]
-coreutils - GNU core utilities
-------------------------------
+
+GNU core utilities
+------------------
 |     |     |
 | --- | --- |
 | __Author__ | |
 | __Maintainers__ | |
 | __Realised__ | |
-| __Source__ | [coreutils](https://github.com/coreutils/coreutils) |
+| __Source__ | [coreutils.git](http://git.savannah.gnu.org/cgit/coreutils.git) |
 | __Info__ | [GNU Coreutils](http://www.gnu.org/software/coreutils/manual/coreutils.html) |
 
 The GNU Core Utilities are the basic file, shell and text manipulation
-utilities of the GNU operating system.  These are the core utilities which are
-expected to exist on every operating system.
-This package is the union of the GNU fileutils, sh-utils, and textutils packages.
+utilities of the  GNU operating system.  These are  the core utilities
+which are expected  to exist on every operating  system.  This package
+is the union of the GNU fileutils, sh-utils, and textutils packages.
 
-## rpm
-_RedHat, CentOS, Fedora, Sceintific Linux_
+## Installation ##
 
+This package is installed on most  of Linux distributions but in case
+of missing you can install it manually
+
+### On Linux ###
+__rpm__ _RedHat, CentOS, Fedora, Scientific Linux_
+
+    $: yum [dnf] search coreutils
     $: sudo yum install coreutils
 
-## deb
-_Debian, Ubuntu, Linux Mint_
+__deb__ _Debian, Ubuntu, Linux Mint_
 
     $: sudo apt-get install coreutils
 
@@ -152,18 +158,18 @@ _Debian, Ubuntu, Linux Mint_
     sha512sum (1) - compute and check SHA512 message digest
 
 [[⬆]](#top)
-##  dd
+### dd ###
 
 Test NFS/LAN speed
 
     $: time dd if=/dev/zer of=/<mount_of_your_nfs_dir>/testfile bs=16k count=16384
 
-After createing 256Mb file on your remote server, read it back
+After creating 256Mb file on your remote server, read it back
 
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 
 [[⬆]](#top)
-##  ls
+### ls ###
 _ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]_
 
 Sweet examples of using __ls__.
@@ -173,9 +179,8 @@ Sweet examples of using __ls__.
     $: ls -and
     $: ls -alSh
 
-List only: Dir, files, links; hidden dirs, hidden files hidden links, exec
-files. Actively
-using -F key to classify  */=>@|
+List only: Dir, files, links;  hidden dirs, hidden files hidden links,
+exec files. Actively using -F key to classify */=>@|
 
     $: ls -F | grep '/' | cut -d/ -f1
     $: ls -p | grep -v /
@@ -196,7 +201,7 @@ Aliases best practice.
 
 
 [[⬆]](#top)
-## tr
+### tr ###
 _tr [-cdstdts]... SET1 [SET2]_
 
 "convert" Mac ASCII file to UNIX.
@@ -213,6 +218,7 @@ Turn spaces into newlines:
 
 
 ***
-# [[⬆]](#top) Referance
+[[⬆]](#top)
+## Reference ##
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides. *UNIX Power Tools*. O'reilly
 - Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins. *Linux In a Nutshell*. O'reilly
