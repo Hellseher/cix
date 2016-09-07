@@ -1,17 +1,20 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Sun 31 Jul 2016 13:29:10 sharlatan
+Last Modified : Wed 07 Sep 2016 23:39:49 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
-# cix
+cix
+---
 _Collectlion of UNIX utilities tips_
 
-## Intro
-The aim of this repo is to collect short examples of command usage, to be
-helpful for *nix beginners and interesting place for advanced users.
-More detailed information containing here can be reach in man pages.
+## Intro ##
+
+The aim of this repo is to collect short examples of command usage, to
+be  helpful for  *nix  beginners and  interesting  place for  advanced
+users.  More detailed information containing  here can be reach in man
+pages.
 
 Man pages common sections.
 
@@ -31,15 +34,15 @@ To check what packaged command belongs to run:
     $ dpkg-query -S $(wich <CMD>)
 
 
-## Index
+## Index ##
 
     <package-name><link><description>
 
 *   __Legacy__ *Keep the history*
-    +   [unix-side](spices/unix-side.md) -
-        Common Unix commands
+    +   [UNIX Land](spices/unix_land.md) -
+        Common UNIX commands.
     +   [hall of fame]()
-
+        Who made it posible!
 
 *   __Core__ *Usually it contains on the most distributions*
     +   [gnu-core-utilities](spices/gnu-core-utilities.md) -
@@ -50,6 +53,7 @@ To check what packaged command belongs to run:
         combines many common UNIX utilities into a single small executable.
     +   [get help]() -
         You don't have know everything you must know how to use: help, man, info
+
 *   __Text processing__ *Everything is a file*
     + grep
     + awk
@@ -62,7 +66,6 @@ To check what packaged command belongs to run:
         Userland logical volume management tools
     +   [nfs-utils]()
     +   [curlftpfs]()
-    +   [samba]()
     +   [quota](spices/linux_diskquota.md) -
         Linux DiskQuota - System tools for monitoring users disk usage
     +   [E2fsprogs](spices/e2fsprogs.md) -
@@ -94,7 +97,7 @@ To check what packaged command belongs to run:
         collection of the UNIX tools that nobody thought to write long ago when unix was young.
     +   [gnu-binutils](spices/gnu-binutils.md) -
         collection of binary tools
-    +   [Findutils](spices/gnu-findutils.md)
+    +   [gnu-findutils](spices/gnu-findutils.md)
         The GNU versions of find utilities (find and xargs)
     +   [pm-utils](spices/pm-utils.md) -
         suspend and powerstate setting framework
@@ -107,31 +110,31 @@ To check what packaged command belongs to run:
     +   [shadow-utils]()
         Utilities for managing accounts and shadow password files
 
-*   __Reserche__
+*   __Researcher__ *I've goe a clue!*
     +   [Linux Netkit](spices/netkit.md) -
         Utilities for managing processes on your system
 
-*   __Packet managment__
+*   __Package management__ *Pack me up, pack me down*
     +   [Package managers utils](spices/pm_managers.md) -
         PM comparison table and tricks.
     +   [shadow-utils](spices/shadow-utils.md) -
         RPM packages
 
-*   __Shell builtins__
+*   __Shell__ *Not just sand...*
     +   [gnu-bash-builtin](spices/gnu-bash-builtin.md) -
         GNU Bash shell built in commands
     +   [fish](http://fishshell.com/)
     +   [zsh](http://www.zsh.org/)
 
-*   __*nix deamons/services__
+*   __Deamons__
     +   [samba]()
     +   [nfs]()
 
-## Routines
-    +   [VPS security](routines/vps_security.md)
-    +   [VPS Web server](routines/vps_to_webserver.md)
-    +   [Server load](routines/server_load.md)
+## Routines ##
++   [VPS security](routines/vps_security.md)
++   [VPS Web server](routines/vps_to_webserver.md)
++   [Server load](routines/server_load.md)
 
-## Reference
+## Reference ##
 1. GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 2. Bioinformatics one-liners https://github.com/stephenturner/oneliners
