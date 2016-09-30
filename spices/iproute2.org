@@ -1,6 +1,6 @@
 # File          : iproute2.md
 # Created       : Wed 17 Feb 2016 02:44:12
-# Last Modified : Sat 01 Oct 2016 00:37:52 sharlatan
+# Last Modified : Sat 01 Oct 2016 00:41:19 sharlatan
 # Maintainer    : sharlatan
 
 #+TITLE: iproute2
@@ -11,7 +11,7 @@
 |-------------+----------------------------------------------------|
 | *Maintainers* | Nikolay Aleksandrov, Daniel Borkmann, Roopa Prabhu |
 |             | Gustavo Zacarias, Nicolas Dichtel, Paolo Abeni     |
-|             | Stephen Hemminger, Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period%3Dq&ofs%3D-1][(all..)]]             |
+|             | Stephen Hemminger, Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]             |
 | *Realised*    | 2007                                               |
 | *Source*      | [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/][iproute2]]                                           |
 |-------------+----------------------------------------------------|
