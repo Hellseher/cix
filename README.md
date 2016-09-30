@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Wed 07 Sep 2016 23:39:49 sharlatan
+Last Modified : Fri 30 Sep 2016 23:43:38 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -27,7 +27,7 @@ Man pages common sections.
 7. Miscellaneous
 8. System administration commands and daemons
 
-
+__Linux__
 To check what packaged command belongs to run:
 
     $ rpm -qf $(which <CMD>)
@@ -78,7 +78,7 @@ To check what packaged command belongs to run:
         collection of base networking utilities
     +   [iputils](spices/iputils.md) -
         Network monitoring tools including ping
-    +   [iproute2](spices/iproute2.md)
+    +   [iproute2](spices/iproute2.org)
         routing commands and utilities
     +   [gnu-inetutils](spices/gnu-inetutils.md) -
         A collection of common network programs
@@ -86,6 +86,8 @@ To check what packaged command belongs to run:
         userspace command line program used to configure packet filtering ruleset.
     +   [tcpdump](spices/tcpdump.md) -
         dump traffic on a network
+    +   [bridge-utils](spices/bridge_utils.org) -
+        Utilities for configuring the linux ethernet bridge
     +   [nmap]()
     +   [netcat]()
     +   [OpenSSH]()
