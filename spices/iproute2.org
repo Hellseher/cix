@@ -1,6 +1,6 @@
 # File          : iproute2.md
 # Created       : Wed 17 Feb 2016 02:44:12
-# Last Modified : Sat 01 Oct 2016 00:41:19 sharlatan
+# Last Modified : Sat 01 Oct 2016 01:21:59 sharlatan
 # Maintainer    : sharlatan
 
 #+TITLE: iproute2
@@ -32,5 +32,29 @@ routel (8) - list routes with pretty output format
 rtstat (8) - unified linux network statistics
 #+END_EXAMPLE
 
+* [[file:net-tools.md][net-tools]] vs iproute2
+
+| Description         | net-tools                          | iproute2                       |
+|---------------------+------------------------------------+--------------------------------|
+| Bring ${IF} UP/DOWN | ifconfig ${IF} up/down             | ip link set ${IF} up/down      |
+| Add ${IP} to ${IF}  | ifcofnig ${IF} ${IP} netmask ${NM} | ip addr add ${IP}/24 dev ${IF} |
+|                     |                                    |                                |
+
+#+NAME: var-names
+#+BEGIN_EXAMPLE
+${if} - interface
+${IP} - IPv4/IPv6 address
+${NM} - netmask
+#+END_EXAMPLE
+
+* ip
+
+Watch trafic statistics on interface *enp2s0*
+#+BEGIN_SRC sh
+watch ip -s link show enp2s0 
+#+END_SRC
+
 * Referance
 - http://baturin.org/docs/iproute2/
+- https://wiki.linuxfoundation.org/networking/iproute2
+- http://lartc.org/lartc.html
