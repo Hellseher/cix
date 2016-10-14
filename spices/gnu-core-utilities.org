@@ -1,9 +1,10 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : Fri 14 Oct 2016 22:00:18 sharlatan
+# Last Modified : Fri 14 Oct 2016 22:03:30 sharlatan
 # Maintainer    : sharlatan
 
-[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]<<top>>
+[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+- <<⬆>>
 
 #+TITLE: GNU core utilities
 
@@ -159,7 +160,7 @@ Debian, Ubuntu, Linux Mint
 #+END_EXAMPLE
 -----
 
-[[top][⬆]]
+[[⬆]]
 ** dd
 
 Test NFS/LAN speed
