@@ -1,20 +1,20 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : Fri 14 Oct 2016 21:47:56 sharlatan
+# Last Modified : Fri 14 Oct 2016 22:00:18 sharlatan
 # Maintainer    : sharlatan
 
-[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]<<top>>
 
 #+TITLE: GNU core utilities
 
-|-----------------+---------------|
-| __Author__      |               |
-|-----------------+---------------|
-| __Maintainers__ |               |
-| __Realised__    |               |
-| __Source__      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
-| __Info__        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
-|-----------------+---------------|
+|-------------+---------------|
+| *Author*      |               |
+|-------------+---------------|
+| *Maintainers* |               |
+| *Realised*    |               |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
+| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
+|-------------+---------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the  GNU operating system.  These are  the core utilities
@@ -157,10 +157,9 @@ Debian, Ubuntu, Linux Mint
     sha384sum (1) - compute and check SHA384 message digest
     sha512sum (1) - compute and check SHA512 message digest
 #+END_EXAMPLE
-
 -----
 
-[[⬆]](#top)
+[[top][⬆]]
 ** dd
 
 Test NFS/LAN speed

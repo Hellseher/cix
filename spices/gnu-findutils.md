@@ -1,8 +1,7 @@
 <!--
 File          : gnu-findutils.md
-
 Created       : Tue 17 Nov 2015 22:54:30
-Last Modified : Thu 01 Sep 2016 21:25:49 sharlatan
+Last Modified : Tue 06 Sep 2016 23:36:50 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -28,26 +27,26 @@ GNU Findutils
 || Dmitry V. Levin |
 || Bas van Gompel |
 || Eric Blake <ebb9@byu.net> |
-| __Realised__ |2016|
+| __Realised__ |2000|
 | __Source__ |[findutils git](http://git.savannah.gnu.org/cgit/findutils.git)|
 | __Info__ |[GNU findutils](https://www.gnu.org/software/findutils/)|
 
-The GNU Find Utilities are the basic directory searching utilities of the GNU
-operating system. These programs are typically used in conjunction with other
-programs to provide modular and powerful directory search and file locating
-capabilities to other commands.
+The GNU Find Utilities are  the basic directory searching utilities of
+the  GNU  operating  system.  These programs  are  typically  used  in
+conjunction  with  other  programs  to provide  modular  and  powerful
+directory search and file locating capabilities to other commands.
 
 * * *
 
 [find](gnu-findutils.md#find) : search for files in a directory hierarchy
 
-    locate                        : list files in databases that match a pattern
-    updatedb                      : update a file name database
-    xargs                         : build and execute command lines from standard input
+    locate   : list files in databases that match a pattern
+    updatedb : update a file name database
+    xargs    : build and execute command lines from standard input
 
 * * *
 
-## find
+### find ###
 
     find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
 
@@ -77,3 +76,10 @@ ignoring case, and accommodating abbreviations such as confg, cnfg,
 and cnfig using the following command:
 
     $: find / -regex '^[/a-z_]*[cC]+[Oo]*[nN]+[fF]+[iI]*[gF]+$'
+
+find all files root directory with 777 permissions and chmod to 644;
+
+    #: find / -type f -perm 0777 -print -exec chmod 644 {} \;
+
+## Reference ##
+1. A collection of Unix/Linux find command examples http://alvinalexander.com/unix/edu/examples/find.shtml

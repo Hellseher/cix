@@ -1,8 +1,9 @@
 # File          : iproute2.md
 # Created       : Wed 17 Feb 2016 02:44:12
-# Last Modified : Sat 01 Oct 2016 01:21:59 sharlatan
+# Last Modified : Sat 01 Oct 2016 01:42:12 sharlatan
 # Maintainer    : sharlatan
 
+#+OPTIONS: toc:nil num:nil
 #+TITLE: iproute2
 [[file:~/Projects/my-GitHub/cix/README.md][|≣|]][[https://www.gnu.org/software/binutils/%0A][↷|]]
 
@@ -42,19 +43,37 @@ rtstat (8) - unified linux network statistics
 
 #+NAME: var-names
 #+BEGIN_EXAMPLE
-${if} - interface
+${IF} - interface
 ${IP} - IPv4/IPv6 address
 ${NM} - netmask
 #+END_EXAMPLE
+-----
 
 * ip
 
+
+| Command | Valid abbreviations          |
+|---------+------------------------------|
+| address | a ad add addr addres address |
+|         |                              |
+
 Watch trafic statistics on interface *enp2s0*
 #+BEGIN_SRC sh
-watch ip -s link show enp2s0 
+:$ watch ip -s link show enp2s0
+
+Every 2.0s: ip -s link show enp2s0                                                        Sat Oct  1 01:24:39 2016
+
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
+    link/ether bc:5f:f2:be:3d:b1 brd ff:ff:ff:ff:ff:ff
+    RX: bytes  packets  errors  dropped overrun mcast
+    9120807587 9045163  0       0       0       25825
+    TX: bytes  packets  errors  dropped carrier collsns
+    1056981088 7578760  0       20      0       0
 #+END_SRC
+-----
 
 * Referance
 - http://baturin.org/docs/iproute2/
 - https://wiki.linuxfoundation.org/networking/iproute2
 - http://lartc.org/lartc.html
+- IPROUTE2 Utility Suite Howto http://www.policyrouting.org/iproute2-toc.html
