@@ -1,7 +1,7 @@
 <!--
 File          : README.md
 Created       : Sat 07 Nov 2015 22:58:38
-Last Modified : Fri 30 Sep 2016 23:43:38 sharlatan
+Last Modified : Fri 14 Oct 2016 21:53:03 sharlatan
 Maintainer    : sharlatan <sharlatanus@gmail.com>
 -->
 
@@ -45,7 +45,7 @@ To check what packaged command belongs to run:
         Who made it posible!
 
 *   __Core__ *Usually it contains on the most distributions*
-    +   [gnu-core-utilities](spices/gnu-core-utilities.md) -
+    +   [gnu-core-utilities](spices/gnu-core-utilities.org) -
         basic file, shell and text manipulation utilities
     +   [util-linux](spices/util-linux.md) -
         is a standard package of the Linux operating system
@@ -74,7 +74,7 @@ To check what packaged command belongs to run:
         Userspace programs for btrfs.
 
 *   __Networking__ *We all live in the someone's subnet in*
-    +   [net-tools](spices/net-utils.md) -
+    +   [net-tools](spices/net-tools.md) -
         collection of base networking utilities
     +   [iputils](spices/iputils.md) -
         Network monitoring tools including ping
