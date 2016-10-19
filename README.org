@@ -1,0 +1,110 @@
+# File          : README.md
+# Created       : Sat 07 Nov 2015 22:58:38
+# Last Modified : Wed 19 Oct 2016 21:23:35 sharlatan
+# Maintainer    : sharlatan <sharlatanus@gmail.com>
+# Short         :
+
+* cix
+/Collectlion of UNIX utilities tips/
+
+** Intro
+
+The aim of this repo is to collect short examples of command usage, to
+be  helpful for  *nix  beginners and  interesting  place for  advanced
+users.  More detailed information containing  here can be reach in man
+pages.
+
+Man pages common sections.
+
+1. General commands
+2. Systems calls
+3. C library functions
+4. Special files
+5. File formats and conventions
+6. Games and Screen savers
+7. Miscellaneous
+8. System administration commands and daemons
+
+*** Linux
+To check what packaged command belongs to run:
+
+#+BEGIN_EXAMPLE
+    $: rpm -qf $(which <CMD>)      # ReadHat, Fedora, CentOS
+    $: dpkg-query -S $(wich <CMD>) # Debian, Ubuntu, LinuxMint
+#+END_EXAMPLE
+
+** Index
+: <package-name><link><description>
+
+- *Legacy* /Keep the history/
+  + [[spices/unix_land.md][UNIX Land]] :: Common UNIX commands.
+  + [[spices/hall-of-fame.org][hall of fame]] :: Who made it posible!
+
+- *Core* /Usually it contains on the most distributions/
+  + [[spices/gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation
+       utilities
+  + [[spices/util-linux.md][util-linux]] :: is a standard package of the Linux operating system
+  + [[spaces/busybox.org][busybox]] ::  combines many common UNIX utilities into a single
+                small executable.
+  + [[spices/get:: elp.org][get help]] :: You don't have know everything you must know how to
+                use: help, man, info
+
+- *Text processing* /Everything is a file/
+  + grep
+  + awk
+  + sed/ed
+  + vim
+  + emacs
+
+- *File System* /Partition file system craft and check/
+  + [[spices/lvm2.md][lvm2]] :: Userland logical volume management tools
+  + [nfs-utils]()
+  + [curlftpfs]()
+  + [[spices/linux_diskquota.md][quota]] :: System tools for monitoring users disk usage
+  + [[spices/e2fsprogs.md][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
+  + [[spices/btrfs:: rogs.md][btrfs-progs]] :: Userspace programs for btrfs.
+
+- *Networking* /We all live in the someone's subnet in/
+  + [[spices/net-tools.md][net-tools]] :: collection of base networking utilities
+  + [[spices/iputils.md][iputils]] :: Network monitoring tools including ping
+  + [[spices/iproute2.org][iproute2]] :: routing commands and utilities
+  + [[spices/gnu-inetutils.md][gnu-inetutie]]:: A collection of common network programs
+  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure
+                packet filtering ruleset.
+  + [[spices/tcpdump.md][tcpdump]] :: dump traffic on a network
+  + [[spices/bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
+  + [[spices/bind-utils.org][bind-utils]] :: utilities for querying DNS name server
+  + [nmap]()
+  + [netcat]()
+  + [OpenSSH]()
+
+- *Utillities* /Be silent and help ppls/
+  + [[spices/kmod.md][kmod]] :: Linux kernel module management utilities
+  + [[spices/moreutils.md][moreutils]] :: collection of the UNIX tools that nobody thought
+                 to write long ago when unix was young.
+  + [[spices/gnu:: inutils.md][gnu-binutils]] :: collection of binary tools
+  + [[spices/gnu-findutils.md][gnu-findutils]] :: The GNU versions of find utilities (find and
+                     xargs)
+  + [[spices/pm-utils.md][pm-utils]] :: suspend and powerstate setting framework
+  + [[spices/procps-ng.md][procps-ng]] :: utilities for monitoring your system and its
+                 processes
+  + [[spices/psmisc.md][psmisc]] :: This PSmisc is a set of small utilities that use the
+              proc filesystem.
+  + [[spices/pciutils.md][pciutils]] :: PCI bus related utilities
+  + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow
+                    password files
+
+- *Researcher* /I've got a clue!/
+  + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
+
+- *Package management* /Pack me up, pack me down/
+  + [[spices/pm_managers.md][Package managers utils]] :: PM comparison table and tricks.
+
+- *Shell* /Not just sand.../
+  + [[spices/gnu-bash-builtin.md][gnu-bash-builtin]] :: GNU Bash shell built in commands
+  + [[http://fishshell.com/][fish]] ::
+  + [[http://www.zsh.org/][zsh]] ::
+
+** Reference
+- GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
+- Bioinformatics one-liners https://github.com/stephenturner/oneliners
