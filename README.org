@@ -1,6 +1,6 @@
 # File          : README.md
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : Wed 19 Oct 2016 21:23:35 sharlatan
+# Last Modified : Sat 29 Oct 2016 00:10:02 sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -8,6 +8,8 @@
 /Collectlion of UNIX utilities tips/
 
 ** Intro
+
+/Everything is a file/
 
 The aim of this repo is to collect short examples of command usage, to
 be  helpful for  *nix  beginners and  interesting  place for  advanced
@@ -30,9 +32,13 @@ To check what packaged command belongs to run:
 
 #+BEGIN_EXAMPLE
     $: rpm -qf $(which <CMD>)      # ReadHat, Fedora, CentOS
-    $: dpkg-query -S $(wich <CMD>) # Debian, Ubuntu, LinuxMint
+    $: dpkg-query -S $(which <CMD>) # Debian, Ubuntu, LinuxMint
 #+END_EXAMPLE
 
+*** BSD
+#+BEGIN_EXAMPLE
+    $: pkg which $(which <CMD>)
+#+END_EXAMPLE
 ** Index
 : <package-name><link><description>
 
@@ -49,50 +55,67 @@ To check what packaged command belongs to run:
   + [[spices/get:: elp.org][get help]] :: You don't have know everything you must know how to
                 use: help, man, info
 
-- *Text processing* /Everything is a file/
-  + grep
-  + awk
-  + sed/ed
-  + vim
-  + emacs
+- *File and Text Processing* /Everything is a file/
+  + [[][awk]] ::
+  + [[][sed/ed]] ::
+  + [[][vim]] ::
+  + [[][micro]] ::
+  + [[][nano]] ::
+  + [[][emacs]] ::
 
 - *File System* /Partition file system craft and check/
   + [[spices/lvm2.md][lvm2]] :: Userland logical volume management tools
-  + [nfs-utils]()
-  + [curlftpfs]()
+  + [[spaces/nfs-utils.org][nfs-utils]] :: NFS utilities and supporting clients and daemons for the kernel
+                 NFS server
+  + [[spaces/curlftpfs.org][CurlFtpFS]] :: is a filesystem for accessing FTP hosts based on FUSE and
+                 libcurl
   + [[spices/linux_diskquota.md][quota]] :: System tools for monitoring users disk usage
   + [[spices/e2fsprogs.md][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
   + [[spices/btrfs:: rogs.md][btrfs-progs]] :: Userspace programs for btrfs.
+
+- *Archiving and Commpresion* /I'm a pac man/
+  + [[][gzip]] :: The GNU data compression program
+  + [[][gnu-tar]] :: A GNU file archiving program
+  + [[][cpio]] :: A GNU archiving program
+  + [[][lrzip]] :: Compression program optimized for large files
+  + [[][bzip2]] :: A file compression utility
+  + [[][xz]] :: LZMA compression utilities
+  + [[][pax]] :: POSIX File System Archiver
+
+- *Cryptograpy* /Who break Enigma code?/
+  + [[][gpg]] ::
 
 - *Networking* /We all live in the someone's subnet in/
   + [[spices/net-tools.md][net-tools]] :: collection of base networking utilities
   + [[spices/iputils.md][iputils]] :: Network monitoring tools including ping
   + [[spices/iproute2.org][iproute2]] :: routing commands and utilities
   + [[spices/gnu-inetutils.md][gnu-inetutie]]:: A collection of common network programs
-  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure
-                packet filtering ruleset.
+  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure packet
+                filtering ruleset.
   + [[spices/tcpdump.md][tcpdump]] :: dump traffic on a network
   + [[spices/bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
   + [[spices/bind-utils.org][bind-utils]] :: utilities for querying DNS name server
-  + [nmap]()
-  + [netcat]()
-  + [OpenSSH]()
+  + [[][nmap]] ::
+  + [[][netcat]] ::
+  + [[spaces/openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
 
 - *Utillities* /Be silent and help ppls/
   + [[spices/kmod.md][kmod]] :: Linux kernel module management utilities
-  + [[spices/moreutils.md][moreutils]] :: collection of the UNIX tools that nobody thought
-                 to write long ago when unix was young.
+  + [[spices/moreutils.md][moreutils]] :: collection of the UNIX tools that nobody thought to write long
+                 ago when unix was young.
   + [[spices/gnu:: inutils.md][gnu-binutils]] :: collection of binary tools
-  + [[spices/gnu-findutils.md][gnu-findutils]] :: The GNU versions of find utilities (find and
-                     xargs)
   + [[spices/pm-utils.md][pm-utils]] :: suspend and powerstate setting framework
-  + [[spices/procps-ng.md][procps-ng]] :: utilities for monitoring your system and its
-                 processes
-  + [[spices/psmisc.md][psmisc]] :: This PSmisc is a set of small utilities that use the
-              proc filesystem.
+  + [[spices/procps-ng.md][procps-ng]] :: utilities for monitoring your system and its processes
+  + [[spices/psmisc.md][psmisc]] :: This PSmisc is a set of small utilities that use the proc
+              filesystem.
   + [[spices/pciutils.md][pciutils]] :: PCI bus related utilities
-  + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow
-                    password files
+  + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
+
+- *Searching* /Loosing my religion/
+  + [[./spices/gnu-grep.org][gnu-grep]] :: Pattern matching utilities
+  + [[spices/gnu-findutils.md][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
+  + [[][ag]] :: Super-fast text searching tool - Silversearcher
+  + [[][ack]] ::
 
 - *Researcher* /I've got a clue!/
   + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
@@ -108,3 +131,4 @@ To check what packaged command belongs to run:
 ** Reference
 - GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 - Bioinformatics one-liners https://github.com/stephenturner/oneliners
+- Basics of the Unix Philosophy http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
