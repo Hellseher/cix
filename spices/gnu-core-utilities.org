@@ -1,11 +1,13 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : Fri 14 Oct 2016 22:03:30 sharlatan
+# Last Modified : Sat 29 Oct 2016 10:30:41 sharlatan
 # Maintainer    : sharlatan
 
-[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
-- <<⬆>>
+#+OPTIONS: num:nil
 
+[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+
+<<top>>
 #+TITLE: GNU core utilities
 
 |-------------+---------------|
@@ -22,12 +24,12 @@ utilities of the  GNU operating system.  These are  the core utilities
 which are expected  to exist on every operating  system.  This package
 is the union of the GNU fileutils, sh-utils, and textutils packages.
 
-* Installation
+* Installation [[top][⬆]]
 
 This package is installed on most  of Linux distributions but in case
 of missing you can install it manually
 
-** Linux
+** Linux [[top][⬆]]
 *** rpm
 RedHat, CentOS, Fedora, Scientific Linux
 
@@ -45,7 +47,7 @@ Debian, Ubuntu, Linux Mint
 
 -----
 
-* Commands
+* Commands [[top][⬆]]
 #+BEGIN_EXAMPLE
     cp (1)        - copy files and directories
     dd (1)        - convert and copy a file
@@ -160,8 +162,7 @@ Debian, Ubuntu, Linux Mint
 #+END_EXAMPLE
 -----
 
-[[⬆]]
-** dd
+** dd [[top][⬆]]
 
 Test NFS/LAN speed
 
@@ -171,8 +172,8 @@ After creating 256Mb file on your remote server, read it back
 
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 
-[[⬆]](#top)
-** ls
+** ls [[top][⬆]]
+
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
 
 Sweet examples of using *ls*
@@ -205,25 +206,7 @@ Aliases best practice.
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
 
-[[⬆]](#top)
-** tr
-: tr [-cdstdts]... SET1 [SET2]
 
-"convert" Mac ASCII file to UNIX.
-
-    tr '\015' '\012' < file.mac > file.UNIX
-
-Change uppercase to lowercase in a file:
-
-    cat file | tr 'A-Z' 'a-z'
-
-Turn spaces into newlines:
-
-    tr ' ' '\012' < file
-
-
-------
-[[⬆]](#top)
-* Reference
+* Reference [[top][⬆]]
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides. *UNIX Power Tools*. O'reilly
 - Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins. *Linux In a Nutshell*. O'reilly
