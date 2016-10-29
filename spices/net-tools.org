@@ -1,0 +1,39 @@
+# File          : net-utils.md
+# Created       : Mon 16 Nov 2015 20:51:24
+# Last Modified : Sat 29 Oct 2016 10:52:13 sharlatan
+# Maintainer    : sharlatan
+
+#+OPTIONS: num:nil
+[[../README.md#Index "Index"][|≣|]][[http://net-tools.sourceforge.net][↷|]]
+
+#+TITLE: net-tools
+
+
+|-------------+-----------------------------------|
+| *Author*      | Bernd Eckenfels, Phil Blundell    |
+| *Maintainers* |                                   |
+| *Realised*    | 2006                              |
+| *Source*      | [[https://sourceforge.net/projects/net-tools/][net-tools]]                         |
+| *NOTES*       | marked as depricated see [[spices/iproute2.org][iproute2]] |
+|-------------+-----------------------------------|
+
+A collection of programs that form the base set of the NET-3 networking
+distribution for the Linux operating system.
+
+#+BEGIN_EXAMPLE
+    arp (8)        - manipulate the system ARP cache
+    hostname (1)   - show or set the system's host name
+    ipmaddr (8)    - adds, deletes, and displays multicast addresses
+    iptunnel (8)   - creates, deletes, and displays configured tunnels
+    ifconfig (8)   - configure a network interface
+    mii-tool (8)   - view, manipulate media-independent interface status
+    nameif (8)     - name network interfaces based on MAC addresses
+    netstat (8)    - Print network connections, routing tables, interface statistics, masquerade connections, and multicas...
+    plipconfig (8) - fine tune PLIP device parameters
+    rarp (8)       - manipulate the system RARP table
+    route (8)      - show / manipulate the IP routing table
+    slattach (8)   - attach a network interface to a serial line
+#+END_EXAMPLE
+
+** Referance
+- Linuxfoundation: net-tools http://www.linuxfoundation.org/collaborate/workgroups/networking/net-tools
