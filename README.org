@@ -108,7 +108,7 @@ on *GNU/Linux*
   + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
 
 - *Hardware* /Hard as a Rock!/
-  + [[./spices/kdb.org][kdb]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
+  + [[./spices/kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
 
 - *Searching* /Loosing my religion/
   + [[./spices/gnu-grep.org][gnu-grep]] :: Pattern matching utilities
