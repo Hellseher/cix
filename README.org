@@ -1,20 +1,22 @@
 # File          : README.md
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : Sat 29 Oct 2016 00:10:02 sharlatan
+# Last Modified : Sun 30 Oct 2016 17:49:18 sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
-* cix
-/Collectlion of UNIX utilities tips/
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+
+#+TITLE: CIX
+/Collectlion of unIX utilities tips/
 
 ** Intro
 
 /Everything is a file/
 
-The aim of this repo is to collect short examples of command usage, to
-be  helpful for  *nix  beginners and  interesting  place for  advanced
-users.  More detailed information containing  here can be reach in man
-pages.
+The  aim of  this repo  is to  collect short  examples of  command usage,  to be
+helpful  for *nix  beginners and  interesting  place for  advanced users.   More
+detailed information containing here can be reach in man pages.
 
 Man pages common sections.
 
@@ -27,19 +29,40 @@ Man pages common sections.
 7. Miscellaneous
 8. System administration commands and daemons
 
-*** Linux
-To check what packaged command belongs to run:
+*** Basic
+For example, you know the command but not sure about package where it goes from
 
+/To check what package command belongs to run/:
+
+on *GNU/Linux*
 #+BEGIN_EXAMPLE
-    $: rpm -qf $(which <CMD>)      # ReadHat, Fedora, CentOS
-    $: dpkg-query -S $(which <CMD>) # Debian, Ubuntu, LinuxMint
+
+    $: CMD="ls"
+    $: rpm -qf $(which "$CMD")       # ReadHat, Fedora, CentOS
+
+    $: dpkg-query -S $(which "$CMD") # Debian, Ubuntu, LinuxMint
 #+END_EXAMPLE
 
-*** BSD
+on *BSD*
 #+BEGIN_EXAMPLE
-    $: pkg which $(which <CMD>)
+    $: pkg which $(which "$CMD")
 #+END_EXAMPLE
+
+And oposite situation, you want to find out what commands are in the package
+
+/get list of commands/
+
+on *GNU/Linux*
+#+BEGIN_EXAMPLE
+    $: PACK="coreutils"
+    $: rpm -ql "$PACK" | grep -oP "(?<=\/usr\/bin\/).+" | less
+#+END_EXAMPLE
+
+on *GNU/Linux*
+
 ** Index
+/Make each program do one thing well/
+
 : <package-name><link><description>
 
 - *Legacy* /Keep the history/
@@ -47,13 +70,12 @@ To check what packaged command belongs to run:
   + [[spices/hall-of-fame.org][hall of fame]] :: Who made it posible!
 
 - *Core* /Usually it contains on the most distributions/
-  + [[spices/gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation
-       utilities
+  + [[spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities
   + [[spices/util-linux.md][util-linux]] :: is a standard package of the Linux operating system
-  + [[spaces/busybox.org][busybox]] ::  combines many common UNIX utilities into a single
-                small executable.
-  + [[spices/get:: elp.org][get help]] :: You don't have know everything you must know how to
-                use: help, man, info
+  + [[spaces/busybox.org][busybox]] ::  combines many common UNIX utilities into a single small
+                executable.
+  + [[spices/get:: elp.org][get help]] :: You don't have know everything you must know how to use: help,
+                man, info
 
 - *File and Text Processing* /Everything is a file/
   + [[][awk]] ::
@@ -73,32 +95,6 @@ To check what packaged command belongs to run:
   + [[spices/e2fsprogs.md][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
   + [[spices/btrfs:: rogs.md][btrfs-progs]] :: Userspace programs for btrfs.
 
-- *Archiving and Commpresion* /I'm a pac man/
-  + [[][gzip]] :: The GNU data compression program
-  + [[][gnu-tar]] :: A GNU file archiving program
-  + [[][cpio]] :: A GNU archiving program
-  + [[][lrzip]] :: Compression program optimized for large files
-  + [[][bzip2]] :: A file compression utility
-  + [[][xz]] :: LZMA compression utilities
-  + [[][pax]] :: POSIX File System Archiver
-
-- *Cryptograpy* /Who break Enigma code?/
-  + [[][gpg]] ::
-
-- *Networking* /We all live in the someone's subnet in/
-  + [[spices/net-tools.md][net-tools]] :: collection of base networking utilities
-  + [[spices/iputils.md][iputils]] :: Network monitoring tools including ping
-  + [[spices/iproute2.org][iproute2]] :: routing commands and utilities
-  + [[spices/gnu-inetutils.md][gnu-inetutie]]:: A collection of common network programs
-  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure packet
-                filtering ruleset.
-  + [[spices/tcpdump.md][tcpdump]] :: dump traffic on a network
-  + [[spices/bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
-  + [[spices/bind-utils.org][bind-utils]] :: utilities for querying DNS name server
-  + [[][nmap]] ::
-  + [[][netcat]] ::
-  + [[spaces/openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
-
 - *Utillities* /Be silent and help ppls/
   + [[spices/kmod.md][kmod]] :: Linux kernel module management utilities
   + [[spices/moreutils.md][moreutils]] :: collection of the UNIX tools that nobody thought to write long
@@ -111,14 +107,38 @@ To check what packaged command belongs to run:
   + [[spices/pciutils.md][pciutils]] :: PCI bus related utilities
   + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
 
+- *Hardware* /Hard as a Rock!/
+  + [[./spices/kdb.org][kdb]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
+
 - *Searching* /Loosing my religion/
   + [[./spices/gnu-grep.org][gnu-grep]] :: Pattern matching utilities
   + [[spices/gnu-findutils.md][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
   + [[][ag]] :: Super-fast text searching tool - Silversearcher
   + [[][ack]] ::
 
-- *Researcher* /I've got a clue!/
-  + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
+- *Archiving and Commpresion* /I'm a pac man/
+  + [[][gzip]] :: The GNU data compression program
+  + [[][gnu-tar]] :: A GNU file archiving program
+  + [[][cpio]] :: A GNU archiving program
+  + [[][lrzip]] :: Compression program optimized for large files
+  + [[][bzip2]] :: A file compression utility
+  + [[][xz]] :: LZMA compression utilities
+  + [[][pax]] :: POSIX File System Archiver
+
+- *Networking* /We all live in the someone's subnet in/
+  + [[./spices/net-tools.org][net-tools]] :: collection of base networking utilities
+  + [[spices/iputils.md][iputils]] :: Network monitoring tools including ping
+  + [[spices/iproute2.org][iproute2]] :: routing commands and utilities
+  + [[spices/gnu-inetutils.md][gnu-inetutils]] :: A collection of common network programs
+  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure packet
+                filtering ruleset.
+  + [[spices/tcpdump.md][tcpdump]] :: dump traffic on a network
+  + [[spices/bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
+  + [[spices/bind-utils.org][bind-utils]] :: utilities for querying DNS name server
+  + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
+  + [[][netcat]] ::
+  + [[spaces/openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
+  + [[][net-snmp]] :: A collection of SNMP protocol tools and libraries
 
 - *Package management* /Pack me up, pack me down/
   + [[spices/pm_managers.md][Package managers utils]] :: PM comparison table and tricks.
@@ -126,7 +146,15 @@ To check what packaged command belongs to run:
 - *Shell* /Not just sand.../
   + [[spices/gnu-bash-builtin.md][gnu-bash-builtin]] :: GNU Bash shell built in commands
   + [[http://fishshell.com/][fish]] ::
+  + screen ::
+  + tmux ::
   + [[http://www.zsh.org/][zsh]] ::
+
+- *Researcher* /I've got a clue!/
+  + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
+
+- *Cryptograpy* /Who break Enigma code?/
+  + [[][gpg]] ::
 
 ** Reference
 - GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
