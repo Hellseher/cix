@@ -1,11 +1,11 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : Sat 29 Oct 2016 10:51:59 sharlatan
+# Last Modified : Sat 29 Oct 2016 10:55:39 sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
 
-[[../README.md#Index "Index"][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+[[../README.md][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
 
 <<top>>
 #+TITLE: GNU core utilities
@@ -162,14 +162,47 @@ Debian, Ubuntu, Linux Mint
 #+END_EXAMPLE
 -----
 *** dd [[top][⬆]]
+/convert and copy a file/
 
-Test NFS/LAN speed
+**** dd: options
 
+|              |   |
+|--------------+---|
+| bs=BYTES     |   |
+| cbs=BYTES    |   |
+| conv=CONVS   |   |
+| count=N      |   |
+| ibs=BYTES    |   |
+| if=FILE      |   |
+| iflag=FLAGS  |   |
+| obs=BYTES    |   |
+| of=FILE      |   |
+| oflag=FLAGS  |   |
+| seek=N       |   |
+| skip=N       |   |
+| status=LEVEL |   |
+
+
+**** dd: examples
+/Test NFS/LAN speed/
+#+BEGIN_EXAMPLE
+    $: echo "NFS write speed"
     $: time dd if=/dev/zer of=/<mount_of_your_nfs_dir>/testfile bs=16k count=16384
-
-After creating 256Mb file on your remote server, read it back
-
+    $: echo "NFS read speed"
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
+#+END_EXAMPLE
+
+/Copy and restore MBR of block device (HDD/SSD)/
+#+BEGIN_EXAMPLE
+    $: cp_blk="/dev/sda"
+    $: rs_blk="/dev/sdb"
+    $: mbr="$HOME"/mbr.img
+    $: echo "Copy MBR data from $cp_blk"
+    $: dd if="$cp_blk" of="$mbr" bs=512 count=1
+    $: echo "Restore MBR data to $rs_blk"
+    #: dd if="$mbr" of="$rs_blk"
+#+END_EXAMPLE
+
 
 *** ls [[top][⬆]]
 

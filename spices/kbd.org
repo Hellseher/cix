@@ -1,0 +1,41 @@
+# File          : net-utils.md
+# Created       : Sat 29 Oct 2016 11:04:59
+# Last Modified : Sat 29 Oct 2016 11:17:36 sharlatan
+# Maintainer    : sharlatan
+
+#+OPTIONS: num:nil
+
+[[../README.md#Index "Index"][|≣|]][[http://net-tools.sourceforge.net][↷|]]
+
+#+TITLE: KBD
+** Commands
+#+BEGIN_EXAMPLE
+chvt (1)             - change foreground virtual terminal
+deallocvt (1)        - deallocate unused virtual consoles
+fgconsole (1)        - print the number of the active VT.
+getkeycodes (8)      - print kernel scancode-to-keycode mapping table
+kbdinfo (1)          - obtain information about the status of a console
+kbdrate (8)          - reset the keyboard repeat rate and delay time
+loadunimap (8)       - load the kernel unicode-to-font mapping table
+mapscrn (8)          - load screen output mapping table
+open (1)             - start a program on a new virtual terminal (VT).
+open (2)             - open and possibly create a file
+open (3p)            - open file relative to directory file descriptor
+open (n)             - Open a file-based or command pipeline channel
+open (3pm)           - perl pragma to set default PerlIO layers for input and output
+openvt (1)           - start a program on a new virtual terminal (VT).
+psfaddtable (1)      - add a Unicode character table to a console font
+psfgettable (1)      - extract the embedded Unicode character table from a console font
+psfstriptable (1)    - remove the embedded Unicode character table from a console font
+psfxtable (1)        - handle Unicode character tables for console fonts
+resizecons (8)       - change kernel idea of the console size
+setkeycodes (8)      - load kernel scancode-to-keycode mapping table entries
+setleds (1)          - set the keyboard leds
+setmetamode (1)      - define the keyboard meta key handling
+setvtrgb (8)         - set the virtual terminal RGB colors
+showconsolefont (8)  - Show the current EGA/VGA console screen font
+showkey (1)          - examine the codes sent by the keyboard
+vlock (1)            - Virtual Console lock program
+#+END_EXAMPLE
+
+** References
