@@ -1,0 +1,7 @@
+# File          : gnu-core-utilities.md
+# Created       : <2016-10-30 Sun 21:06:58 GMT>
+# Last Modified : <2016-10-31 Mon 22:34:08 GMT> sharlatan
+# Author        : sharlatan
+# Maintainer    :
+
+#+OPTIONS: num:nil

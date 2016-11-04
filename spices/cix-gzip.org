@@ -1,0 +1,36 @@
+# File          : gnu-core-utilities.md
+# Created       : <2016-11-03 Thu 23:13:44 GMT>
+# Last Modified : <2016-11-03 Thu 23:43:35 GMT> sharlatan
+# Author        : sharlatan
+# Maintainer    :
+
+#+OPTIONS: num:nil
+[[../README.md][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+
+#+TITLE: Gzip
+|-------------+------------------------------|
+| *Author*      | Jean-loup Gailly, Mark Adler |
+|-------------+------------------------------|
+| *Maintainers* | Jim Meyering, Paul Eggert    |
+| *Realised*    |                              |
+| *Source*      |                              |
+| *Info*        | [[https://www.gnu.org/software/gzip/manual/gzip.html][GNU Gzip]]                     |
+|-------------+------------------------------|
+
+
+
+#+BEGIN_EXAMPLE
+    gunzip (1) - compress or expand files
+    gzexe (1)  - compress executable files in place
+    gzip (1)   - compress or expand files
+    zcat (1)   - compress or expand files
+    zcat (1p)  - expand and concatenate data
+    zcmp (1)   - compare compressed files
+    zdiff (1)  - compare compressed files
+    zforce (1) - force a '.gz' extension on all gzip files
+    zgrep (1)  - search possibly compressed files for a regular expression
+    zless (1)  - file perusal filter for crt viewing of compressed text
+    zmore (1)  - file perusal filter for crt viewing of compressed text
+    znew (1)   - recompress .Z files to .gz files
+    zegrep (1) -
+#+END_EXAMPLE
