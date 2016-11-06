@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-06 Sun 00:36:03 GMT> sharlatan
+# Last Modified : <2016-11-06 Sun 00:55:02 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -29,7 +29,9 @@ Man pages common sections.
 |     7 |       5 |     5 |   7 | Miscellaneous                              |
 |     8 |      1m |    1m |   8 | System administration commands and daemons |
 |     9 |       9 |     - |   - | Oscure kernel specs and interfaces         |
+|       |         |       |     |                                            |
 |     - |       - |     9 |   - | HP-UX general information                  |
+|-------+---------+-------+-----+--------------------------------------------|
 
 *** Basic
 For example, you know the command but not sure about package where it goes from
@@ -38,26 +40,26 @@ For example, you know the command but not sure about package where it goes from
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
-
     $: CMD="ls"
     $: rpm -qf $(which "$CMD")       # ReadHat, Fedora, CentOS
-
     $: dpkg-query -S $(which "$CMD") # Debian, Ubuntu, LinuxMint
 #+END_EXAMPLE
 
 on *BSD*
 #+BEGIN_EXAMPLE
+    $: CMD="ls"
     $: pkg which $(which "$CMD")
 #+END_EXAMPLE
 
 And oposite situation, you want to find out what commands are in the package
 
-/get list of commands/
+/get list of commands belong/
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
     $: PACK="coreutils"
-    $: rpm -ql "$PACK" | grep -oP "(?<=\/usr\/bin\/).+" | less
+    $: whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
+    $: rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
 #+END_EXAMPLE
 
 ** Index
