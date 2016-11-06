@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-04 Fri 22:59:50 GMT> sharlatan
+# Last Modified : <2016-11-06 Sun 00:36:03 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -18,14 +18,18 @@ detailed information containing here can be reach in man pages.
 
 Man pages common sections.
 
-1. General commands
-2. Systems calls
-3. C library functions
-4. Special files
-5. File formats and conventions
-6. Games and Screen savers
-7. Miscellaneous
-8. System administration commands and daemons
+| Linux | Solaris | HP-UX | AIX |                                            |
+|-------+---------+-------+-----+--------------------------------------------|
+|     1 |       1 |     1 |   1 | General commands                           |
+|     2 |       2 |     2 |   2 | Systems calls                              |
+|     3 |       3 |     3 |   3 | C library functions                        |
+|     4 |       7 |     7 |   4 | Special files                              |
+|     5 |       4 |     4 |   5 | File formats and conventions               |
+|     6 |       6 |     - |   6 | Games and Screen savers                    |
+|     7 |       5 |     5 |   7 | Miscellaneous                              |
+|     8 |      1m |    1m |   8 | System administration commands and daemons |
+|     9 |       9 |     - |   - | Oscure kernel specs and interfaces         |
+|     - |       - |     9 |   - | HP-UX general information                  |
 
 *** Basic
 For example, you know the command but not sure about package where it goes from
@@ -56,14 +60,13 @@ on *GNU/Linux*
     $: rpm -ql "$PACK" | grep -oP "(?<=\/usr\/bin\/).+" | less
 #+END_EXAMPLE
 
-
 ** Index
 /Make each program do one thing well/
 
 : <package-name><link><description>
 
 - *Legacy* /Keep the history/
-  + [[spices/unix_land.md][UNIX Land]] :: Common UNIX commands.
+  + [[./spices/unix_land.md][UNIX Land]] :: Common UNIX commands.
   + [[spices/hall-of-fame.org][hall of fame]] :: Who made it posible!
 
 - *Core* /Usually it contains on the most distributions/
@@ -71,8 +74,7 @@ on *GNU/Linux*
   + [[spices/util-linux.md][util-linux]] :: is a standard package of the Linux operating system
   + [[spaces/busybox.org][busybox]] ::  combines many common UNIX utilities into a single small
                 executable.
-  + [[spices/get:: elp.org][get help]] :: You don't have know everything you must know how to use: help,
-                man, info
+  + [[./spices/cix-man-db.org][mand-db]] :: Tools for searching and reading man pages
 
 - *File-text Processing* /Everything is a file/!
   + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
@@ -81,6 +83,7 @@ on *GNU/Linux*
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: A small text editor
   + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
+  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
 
 - *File System* /Partition file system craft and check/
   + [[spices/lvm2.md][lvm2]] :: Userland logical volume management tools
@@ -147,6 +150,9 @@ on *GNU/Linux*
   + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
   + [[http://www.zsh.org/][zsh]] ::  Powerful interactive shell
 
+- *Development* /In the fields of observation chance favors only the prepared mind./
+  + [[][glibc-common]] ::
+
 - *Researcher* /I've got a clue!/
   + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
 
@@ -155,13 +161,17 @@ on *GNU/Linux*
 
 ** Reference
 *** Books
-- Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbins
-  *LINUX in a nutshell 6th Edition*
+- Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbinsp
+  *LINUX in a nutshell 6th Edition;*
   O'reilly 2009
+- Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley;
+  *UNIX and LINUX System Administration Handbook 4th edition*;
+  Prentice Hall 2013
 *** Links
 - GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 - Basics of the Unix Philosophy http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
 - http://www.commandlinefu.com/commands/browse/sort-by-votes
+- http://everythingsysadmin.com/
 
 *** Hubs
 - Bioinformatics one-liners https://github.com/stephenturner/oneliners
