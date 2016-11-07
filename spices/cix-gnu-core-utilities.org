@@ -1,10 +1,11 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : Sat 29 Oct 2016 10:55:39 sharlatan
+# Last Modified : <2016-11-07 Mon 23:21:47 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
-[[../README.md][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
+
+[[../README.org::*Index][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][|↷|]]
 
 * GNU core utilities
 
@@ -45,7 +46,7 @@ Debian, Ubuntu, Linux Mint
 
 -----
 [[GNU core utilities][⬆]]
-** Commands
+** Index
 #+BEGIN_EXAMPLE
     cp (1)        - copy files and directories
     dd (1)        - convert and copy a file
@@ -180,9 +181,8 @@ Debian, Ubuntu, Linux Mint
 | skip=N       |   |
 | status=LEVEL |   |
 
-
 **** dd: examples
-/Test NFS/LAN speed/
+- dd-161107231653 :: Test NFS/LAN speed
 #+BEGIN_EXAMPLE
     $: echo "NFS write speed"
     $: time dd if=/dev/zer of=/<mount_of_your_nfs_dir>/testfile bs=16k count=16384
@@ -190,7 +190,7 @@ Debian, Ubuntu, Linux Mint
     $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
 #+END_EXAMPLE
 
-/Copy and restore MBR of block device (HDD/SSD)/
+- dd-161107231715 :: Copy and restore MBR of block device (HDD/SSD).
 #+BEGIN_EXAMPLE
     $: cp_blk="/dev/sda"
     $: rs_blk="/dev/sdb"
@@ -200,13 +200,15 @@ Debian, Ubuntu, Linux Mint
     $: echo "Restore MBR data to $rs_blk"
     #: dd if="$mbr" of="$rs_blk"
 #+END_EXAMPLE
-
+**** dd: see-also
 
 *** ls [[GNU core utilities][⬆]]
+**** ls: opetions
 
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
 
-Sweet examples of using *ls*
+**** ls: exmaples
+- ls-161107232103 :: Sweet examples of using *ls*
 #+BEGIN_EXAMPLE
     $: ls -Rotti
     $: ls -Ham
@@ -214,15 +216,15 @@ Sweet examples of using *ls*
     $: ls -alSh
 #+END_EXAMPLE
 
-List only: Dir, files, links;  hidden dirs, hidden files hidden links,
-exec files. Actively using -F key to classify */=>@|
+- ls-161107232114 :: List only: Dir, files, links; hidden dirs, hidden files
+     hidden links,exec files. Actively using -F key to classify */=>@|
 #+BEGIN_EXAMPLE
     $: ls -F | grep '/' | cut -d/ -f1
     $: ls -p | grep -v /
     $: ls -F | grep '[@]' | cut -d@ -f1
 #+END_EXAMPLE
 
-Aliases best practice.
+- ls-151114230741 :: Aliases best practice.
 #+BEGIN_EXAMPLE
     alias ls="ls -1p --color=auto"
     alias l="ls -lhGgo"
@@ -236,6 +238,8 @@ Aliases best practice.
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
 
+** References
+- GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
 ** Reference
 *** Books
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
