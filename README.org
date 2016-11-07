@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-06 Sun 00:55:02 GMT> sharlatan
+# Last Modified : <2016-11-07 Mon 23:12:46 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -12,8 +12,8 @@
 
 ** Intro
 
-The  aim of  this repo  is to  collect short  examples of  command usage,  to be
-helpful  for *nix  beginners and  interesting  place for  advanced users.   More
+The aim of this repo is to collect short examples of command usage, to be
+helpful for *nix beginners and interesting place for advanced users.  More
 detailed information containing here can be reach in man pages.
 
 Man pages common sections.
@@ -36,7 +36,7 @@ Man pages common sections.
 *** Basic
 For example, you know the command but not sure about package where it goes from
 
-/To check what package command belongs to run/:
+/what package $CMD belongs to/
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
@@ -53,7 +53,7 @@ on *BSD*
 
 And oposite situation, you want to find out what commands are in the package
 
-/get list of commands belong/
+/get list of commands belong to a $PACK/
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
@@ -68,54 +68,50 @@ on *GNU/Linux*
 : <package-name><link><description>
 
 - *Legacy* /Keep the history/
-  + [[./spices/unix_land.md][UNIX Land]] :: Common UNIX commands.
-  + [[spices/hall-of-fame.org][hall of fame]] :: Who made it posible!
+  + [[./spices/cix-hall_of_fame.org][Hall of Fame]] :: Who made it posible!
+  + [[./spices/cix-unix_land.org][UNIX Land]] :: Common UNIX commands.
 
 - *Core* /Usually it contains on the most distributions/
-  + [[spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities
-  + [[spices/util-linux.md][util-linux]] :: is a standard package of the Linux operating system
-  + [[spaces/busybox.org][busybox]] ::  combines many common UNIX utilities into a single small
-                executable.
-  + [[./spices/cix-man-db.org][mand-db]] :: Tools for searching and reading man pages
+  + [[./spices/cix-busybox.org][busybox]] :: The Swiss Army Knife of Embedded Linux
+  + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities
+  + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages
+  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system
 
 - *File-text Processing* /Everything is a file/!
+  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
   + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
-  + [[./spices/cix-sed.org][sed/ed]] :: A GNU stream text editor
-  + [[./spices/cix-vim.org][vim-enchanced]] :: A version of the VIM editor which includes recent enhancements
+  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: A small text editor
-  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
-  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
+  + [[./spices/cix-sed.org][sed/ed]] :: A GNU stream text editor
+  + [[./spices/cix-vim.org][vim-enchanced]] :: A version of the VIM editor which includes recent enhancements
 
-- *File System* /Partition file system craft and check/
-  + [[spices/lvm2.md][lvm2]] :: Userland logical volume management tools
-  + [[spaces/nfs-utils.org][nfs-utils]] :: NFS utilities and supporting clients and daemons for the kernel
-                 NFS server
-  + [[spaces/curlftpfs.org][CurlFtpFS]] :: is a filesystem for accessing FTP hosts based on FUSE and
-                 libcurl
-  + [[./spices/linux_diskquota.md][quota]] :: System tools for monitoring users disk usage
-  + [[spices/e2fsprogs.md][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
-  + [[spices/btrfs:: rogs.md][btrfs-progs]] :: Userspace programs for btrfs.
+- *Filesystem* /Partition file system craft and check/
+  + [[./spices/cix-acl.org][acl]] :: Access control list utilities
+  + [[./spices/cix-btrfs-progs.org][btrfs-progs]] :: Userspace programs for btrfs.
+  + [[./spices/cix-curlftpfs.org][CurlFtpFS]] :: is a fs for accessing FTP hosts based on FUSE and libcurl
+  + [[./spices/cix-e2fsprogs.org][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
+  + [[./spices/cix-lvm2.org][lvm2]] :: Userland logical volume management tools
+  + [[./spices/cix-nfs-utils.org][nfs-utils]] :: supporting clients and daemons for the kernel NFS server
+  + [[./spices/cix-linux_diskquota.org][quota]] :: System tools for monitoring users disk usage
 
 - *Utillities* /Be silent and help ppls/
-  + [[spices/kmod.md][kmod]] :: Linux kernel module management utilities
-  + [[spices/moreutils.md][moreutils]] :: collection of the UNIX tools that nobody thought to write long
-                 ago when unix was young.
-  + [[spices/gnu:: inutils.md][gnu-binutils]] :: collection of binary tools
-  + [[spices/pm-utils.md][pm-utils]] :: suspend and powerstate setting framework
-  + [[spices/procps-ng.md][procps-ng]] :: utilities for monitoring your system and its processes
-  + [[spices/psmisc.md][psmisc]] :: This PSmisc is a set of small utilities that use the proc
-              filesystem.
-  + [[spices/pciutils.md][pciutils]] :: PCI bus related utilities
-  + [[spaces/shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
+  + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
+  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
+  + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when UNIX was young.
+  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
+  + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
+  + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
+  + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
+  + [[./spices/cix-shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
 
-- *Hardware* /Hard as a Rock!/
-  + [[./spices/kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
+- *Hardware* /cix-Hard as a Rock!/
+  + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
   + [[./spices/cix-smartmontools.org][smartmontools]] :: Tools for monitoring SMART capable hard disks
 
 - *Searching* /Loosing my religion/
-  + [[./spices/gnu-grep.org][gnu-grep]] :: Pattern matching utilities
-  + [[spices/gnu-findutils.md][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
+  + [[./spices/cix-gnu-grep.org][gnu-grep]] :: Pattern matching utilities
+  + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
   + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
   + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
 
@@ -129,34 +125,33 @@ on *GNU/Linux*
   + [[./spices/cix-pax.org][pax]] :: POSIX File System Archiver
 
 - *Networking* /We all live in the someone's subnet in/
-  + [[./spices/net-tools.org][net-tools]] :: collection of base networking utilities
-  + [[spices/iputils.md][iputils]] :: Network monitoring tools including ping
-  + [[spices/iproute2.org][iproute2]] :: routing commands and utilities
-  + [[spices/gnu-inetutils.md][gnu-inetutils]] :: A collection of common network programs
-  + [[spices/iptables.md][iptables]] :: userspace command line program used to configure packet
-                filtering ruleset.
-  + [[spices/tcpdump.md][tcpdump]] :: dump traffic on a network
-  + [[spices/bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
-  + [[spices/bind-utils.org][bind-utils]] :: utilities for querying DNS name server
+  + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
+  + [[./spices/cix-iputils.org][iputils]] :: Network monitoring tools including ping
+  + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
+  + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: A collection of common network programs
+  + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities
+  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network
+  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
+  + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying DNS name server
   + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
-  + [[spaces/openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
+  + [[./spices/cix-openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
   + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
 
 - *Package management* /Pack me up, pack me down/
-  + [[spices/pm_managers.md][Package managers utils]] :: PM comparison table and tricks.
+  + [[./spices/pm_managers.org][Package managers utils]] :: PM comparison table and tricks.
 
 - *Shell* /Not just sand.../
-  + [[spices/gnu-bash-builtin.md][gnu-bash-builtin]] :: GNU Bash shell built in commands
-  + [[http://fishshell.com/][fish]] ::  A friendly interactive shell
+  + [[./spices/cix-gnu-bash-builtin.org][gnu-bash-builtin]] :: GNU Bash shell built in commands
+  + [[./spices/cix-fish.org][fish]] ::  A friendly interactive shell
   + [[./spices/cix-screen.org][screen]] :: A screen manager that supports multiple logins on one terminal
   + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
-  + [[http://www.zsh.org/][zsh]] ::  Powerful interactive shell
+  + [[./spices/cix-zsh.org/][zsh]] ::  Powerful interactive shell
 
 - *Development* /In the fields of observation chance favors only the prepared mind./
-  + [[][glibc-common]] ::
+  + [[./spices/cix-glibc-common.org][glibc-common]] ::
 
 - *Researcher* /I've got a clue!/
-  + [[spices/netkit.md][Linux Netkit]] :: Utilities for managing processes on your system
+  + [[./spices/netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
 
 - *Cryptograpy* /Who break Enigma code?/
   + [[./spices/cix-gpg.org][gnupg]] :: A GNU utility for secure communication and data storage
