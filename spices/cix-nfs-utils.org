@@ -1,0 +1,15 @@
+# File           : cix-nfs-utils.org
+# Created        : <2016-11-07 Mon 22:11:39 GMT>
+# Last Modified  : <2016-11-07 Mon 22:15:29 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+http://linux-nfs.org/wiki/index.php/Main_Page
+#+TITLE: NFS utils
+
+** References
+*** Links
+- Linux NFS-HOWTO http://nfs.sourceforge.net/nfs-howto/

@@ -1,0 +1,18 @@
+# File           : cix-acl.org
+# Created        : <2016-11-07 Mon 19:54:33 GMT>
+# Last Modified  : <2016-11-07 Mon 21:47:35 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s   :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: acl
+/Access Control List/
+
+** Index
+#+BEGIN_EXAMPLE
+    chacl (1)            - change the access control list of a file or directory
+    getfacl (1)          - get file access control lists
+    setfacl (1)          - set file access control lists
+#+END_EXAMPLE

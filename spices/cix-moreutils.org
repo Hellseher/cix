@@ -1,0 +1,32 @@
+# File           : cix-moreutils.org
+# Created        : <2016-11-07 Mon 22:33:39 GMT>
+# Last Modified  : <2016-11-07 Mon 22:34:07 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Moreutils
+
+** Index
+#+BEGIN_EXAMPLE
+    chronic (1)          - runs a command quietly unless it fails
+    combine (1)          - combine sets of lines from two files using boolean operations
+    Errno (3pm)          - System errno constants
+    errno (3)            - number of last error
+    errno (3p)           - error return value
+    errno (1)            - look up errno names and descriptions
+    ifdata (1)           - get network interface info without parsing ifconfig output
+    ifne (1)             - Run command if the standard input is not empty
+    isutf8 (1)           - check whether files are valid UTF-8
+    lckdo (1)            - run a program with a lock held
+    mispipe (1)          - pipe two commands, returning the exit status of the first
+    pee (1)              - tee standard input to pipes
+    sponge (1)           - soak up standard input and write to a file
+    ts (1ssl)            - Time Stamping Authority tool (client/server)
+    ts (1)               - timestamp input
+    vidir (1)            - edit directory
+    vipe (1)             - edit pipe
+    zrun (1)             - automatically uncompress arguments to command
+#+END_EXAMPLE

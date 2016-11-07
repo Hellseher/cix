@@ -1,0 +1,24 @@
+# File           : cix-man-db.org
+# Created        : <2016-11-05 Sat 00:08:04 GMT>
+# Last Modified  : <2016-11-07 Mon 21:32:15 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s   :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Man-db
+
+#+BEGIN_EXAMPLE
+    apropos (1)          - search the manual page names and descriptions
+    catman (8)           - create or update the pre-formatted manual pages
+    lexgrog (1)          - parse header information in man pages
+    man (7)              - macros to format man pages
+    man (1)              - an interface to the on-line reference manuals
+    man (1p)             - display system documentation
+    mandb (8)            - create or update the manual page index caches
+    manpath (1)          - determine search path for manual pages
+    manpath (5)          - format of the /etc/man_db.conf file
+    whatis (1)           - display one-line manual page descriptions
+    accessdb (8)         - dumps the content of a man-db database in a human readable format
+#+END_EXAMPLE

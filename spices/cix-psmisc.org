@@ -1,0 +1,20 @@
+# File           : cix-psmisc.org
+# Created        : <2016-01-25 Mon 22:28:37 GMT>
+# Last Modified  : <2016-11-07 Mon 22:44:03 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: PSmisc
+
+** Index
+#+BEGIN_EXAMPLE
+    killall (1)          - kill processes by name
+    peekfd (1)           - peek at file descriptors of running processes
+    prtstat (1)          - print statistics of a process
+    pstree (1)           - display a tree of processes
+    fuser (1)            - identify processes using files or sockets
+    fuser (1p)           - list process IDs of all processes that have one or more files open
+#+END_EXAMPLE

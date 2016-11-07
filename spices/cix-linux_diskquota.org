@@ -1,0 +1,28 @@
+# File           : cix-linux_diskquota.org
+# Created        : <2015-12-13 Sun 20:46:43 GMT>
+# Last Modified  : <2016-11-07 Mon 22:50:28 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+[↷](http://sourceforge.net/projects/linuxquota/)
+#+TITLE: Linux DiskQuota
+
+Tools and patches for the Linux Diskquota system as part of the Linux kernel
+
+#+BEGIN_EXAMPLE
+    convertquota (8) - convert quota from old file format to new one
+    edquota (8)      - edit user quotas
+    quota (1)        - display disk usage and limits
+    quotacheck (8)   - scan a filesystem for disk usage, create, check and repair quota files
+    quotaon (8)      - turn filesystem quotas on and off
+    quotastats (8)   - Program to query quota statistics
+    quotasync (1)    - synchronize in-kernel file system usage and limits to disk format
+    quot (8)         - summarize filesystem ownership
+    repquota (8)     - summarize quotas for a filesystem
+    setquota (8)     - set disk quotas
+    xqmstats (8)     - Display XFS quota manager statistics from /proc
+#+END_EXAMPLE

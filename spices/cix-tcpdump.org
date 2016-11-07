@@ -1,0 +1,16 @@
+# File           : cix-tcpdump.org
+# Created        : <2016-11-07 Mon 23:06:06 GMT>
+# Last Modified  : <2016-11-07 Mon 23:06:50 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: TCPDUMP
+
+** Index
+#+BEGIN_EXAMPLE
+    tcpdump (8)          - dump traffic on a network
+    tcpslice (8)         - extract pieces of and/or merge together tcpdump files
+#+END_EXAMPLE

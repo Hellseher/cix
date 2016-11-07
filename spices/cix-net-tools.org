@@ -1,13 +1,12 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Last Modified : Sat 29 Oct 2016 10:52:13 sharlatan
+# Last Modified : <2016-11-07 Mon 23:12:52 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
-[[../README.md#Index "Index"][|≣|]][[http://net-tools.sourceforge.net][↷|]]
 
+[[file:../README.md::*Index][|≣|]][[http://net-tools.sourceforge.net][|↷|]]
 #+TITLE: net-tools
-
 
 |-------------+-----------------------------------|
 | *Author*      | Bernd Eckenfels, Phil Blundell    |
@@ -28,7 +27,7 @@ distribution for the Linux operating system.
     ifconfig (8)   - configure a network interface
     mii-tool (8)   - view, manipulate media-independent interface status
     nameif (8)     - name network interfaces based on MAC addresses
-    netstat (8)    - Print network connections, routing tables, interface statistics, masquerade connections, and multicas...
+    netstat (8)    - Print network connections, routing tables, interface statistics...
     plipconfig (8) - fine tune PLIP device parameters
     rarp (8)       - manipulate the system RARP table
     route (8)      - show / manipulate the IP routing table

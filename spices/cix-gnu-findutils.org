@@ -1,7 +1,7 @@
 <!--
 File          : gnu-findutils.md
 Created       : Tue 17 Nov 2015 22:54:30
-Last Modified : Tue 06 Sep 2016 23:36:50 sharlatan
+Last Modified : Wed 26 Oct 2016 19:11:46 sharlatan
 Maintainer    : sharlatan
 -->
 
@@ -69,7 +69,7 @@ show all files in current directory except hidden:
 
 find specified "string" in list of files:
 
-    $: find ./ -type f -exec grep "<string>" {} /dev/null \;
+    $: find ./ -type f -exec grep "<string>" {} /dev/null \;и
 
 Find all the files on the file system that are called configuration,
 ignoring case, and accommodating abbreviations such as confg, cnfg,

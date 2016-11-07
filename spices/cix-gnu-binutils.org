@@ -1,0 +1,36 @@
+# File           : cix-gnu-binutils.org
+# Created        : <2015-11-02 Mon 22:18:23 GMT>
+# Last Modified  : <2016-11-07 Mon 22:42:02 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: GNU Bin Utils
+
+** Index
+
+#+BEGIN_EXAMPLE
+    addr2line (1) - convert addresses into file names and line numbers.
+    ar (1)        - create, modify, and extract from archives
+    ar (1p)       - create and maintain library archives
+    as (1)        - the portable GNU assembler.
+    c++filt (1)   - Demangle C++ and Java symbols.
+    elfedit (1)   - Update the ELF header of ELF files.
+    gprof (1)     - display call graph profile data
+    ld (1)        - The GNU linker
+    nm (1)        - list symbols from object files
+    nm (1p)       - write the name list of an object file (DEVELOPMENT)
+    objcopy (1)   - copy and translate object files
+    objdump (1)   - display information from object files.
+    ranlib (1)    - generate index to archive.
+    readelf (1)   - Displays information about ELF files.
+    size (1)      - list section sizes and total size.
+    strings (1)   - print the strings of printable characters in files.
+    strings (1p)  - find printable strings in files
+    strip (1)     - Discard symbols from object files.
+    strip (1p)    - remove unnecessary information from strippable files (DEVELOPMENT)
+#+END_EXAMPLE
+

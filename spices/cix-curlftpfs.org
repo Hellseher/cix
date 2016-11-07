@@ -1,0 +1,8 @@
+# File           : cix-curlftpfs.org
+# Created        : <2016-11-07 Mon 21:53:06 GMT>
+# Last Modified  : <2016-11-07 Mon 21:53:09 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil

@@ -1,0 +1,21 @@
+# File           : cix-iptables.org
+# Created        : <2016-11-07 Mon 23:05:04 GMT>
+# Last Modified  : <2016-11-07 Mon 23:05:52 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: IP talbes
+
+** Index
+#+BEGIN_EXAMPLE
+    iptables-xml (1)     - Convert iptables-save format to XML
+    ip6tables (8)        - administration tool for IPv4/IPv6 packet filtering and NAT
+    ip6tables-restore (8) - Restore IPv6 Tables
+    ip6tables-save (8)   - dump iptables rules to stdout
+    iptables (8)         - administration tool for IPv4/IPv6 packet filtering and NAT
+    iptables-restore (8) - Restore IP Tables
+    iptables-save (8)    - dump iptables rules to stdout
+#+END_EXAMPLE

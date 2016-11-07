@@ -1,22 +1,21 @@
-<!--
-File          : bash-builtin.md
+# File           : cix-gnu-bash-builtin.org
+# Created        : <2015-11-07 Mon 00:07:40 GMT>
+# Last Modified  : <2016-11-07 Mon 23:12:27 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
 
-Created       : Sat 07 Nov 2015 00:07:40
-Last Modified : Tue 09 Aug 2016 21:33:49 sharlatan
-Maintainer    : sharlatan
--->
+#+OPTIONS: num:nil
 
 [[≣](../README.md#Index "Index")]
-# GNU Bash builtin [↷](https://www.gnu.org/software/bash/)
-Type
+[↷](https://www.gnu.org/software/bash/)
+#+TITLE: GNU Bash builtin 
 
-    $: help <command_name>
+-----
+** Index
 
-to find out more about the function name.
-
-* * *
-## Built-in functions ##
-
+*** Commands
+#+BEGIN_EXAMPLE
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
     [[ ... ]] - Execute conditional command.
@@ -104,9 +103,9 @@ to find out more about the function name.
     readarray - Read lines from a file into an array variable.
     readarray - Read lines from a file into an array variable.
     variables - Common shell variable names and usage.
-
-* * *
-## Built in variables ##
+#+END_EXAMPLE
+*** Vars
+#+BEGIN_EXAMPLE
     BASH
     BASH_ALIASES
     BASH_ARGC
@@ -187,40 +186,35 @@ to find out more about the function name.
     TMOUT
     TMPDIR
     UID
+#+END_EXAMPLE
 
-* * *
-## Commands receipts
 
-### select
+** Commands receipts
+
+*** select
 _select NAME [in WORDS ... ;] do COMMANDS; done_
 
 
-### command
-_
-
+*** command
 Test wheather command "foo" installed/exists on the system.
 
     $ command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not
     installed.  Aborting."; exit 1; }
 
-### ulimit
+*** ulimit
 _ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]_
 
+** Variable receipts
 
-* * *
-## Variable receipts
+*** FUNCNAME
 
-### FUNCNAME
-
-Its a global internal variable maintained by any linux
-shell.  Its of type array and consists the name of the current
-function from where we are trying to read its value.  FUNCNAME[0] is
-the current function name and FUNCNAME[1] is the previous function
-name and so on ... Its a stack-trace of functions executed by a shell
-script.  Value of FUNCNAME gets cleared every-time we execute a new
+Its a global internal variable maintained by any linux shell.  Its of type array
+and consists the name of the current function from where we are trying to read
+its value.  FUNCNAME is the current function name and FUNCNAME is the
+previous function name and so on ... Its a stack-trace of functions executed by
+a shell script.  Value of FUNCNAME gets cleared every-time we execute a new
 shell script.
 
-* * *
-## Referance
+** Referance
 - Bash Variables https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
 - Bash wiki http://wiki.bash-hackers.org

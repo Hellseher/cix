@@ -1,0 +1,17 @@
+# File           : cix-hall_of_fame.org
+# Created        : <2016-11-06 Sun 22:27:11 GMT>
+# Last Modified  : <2016-11-07 Mon 23:12:58 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s   :
+# Short          :
+
+#+OPTIONS: num:nil
+
+
+#+TITLE: Hall of Fame
+
+- (1928-1977, 48) Joe Ossanna  ::
+- (1932) Douglas McIlroy  ::
+- (1941-2011, 70) Dennis Ritchie  ::
+- (1942) Brian Kernighan  ::
+- (1943) Thompson Ken  ::

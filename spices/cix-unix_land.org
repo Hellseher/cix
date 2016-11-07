@@ -23,6 +23,7 @@ Unix operating systems and most Unix-like operating systems.
     dd         - convert and copy a file
     df         - report free disk space
     du         - estimate file space usage
+    ff         - lists the file names and statistics for a file system
     ed         - edit text
     ex         - text editor
     fc         - process the command history list
