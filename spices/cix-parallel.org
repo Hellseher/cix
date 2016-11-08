@@ -1,0 +1,8 @@
+# File           : cix-parallel.org
+# Created        : <2016-11-08 Tue 22:50:08 GMT>
+# Last Modified  : <2016-11-08 Tue 22:50:10 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil

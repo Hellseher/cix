@@ -1,0 +1,19 @@
+# File           : cix-pciutils.org
+# Created        : <2016-11-08 Tue 23:15:13 GMT>
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+
+#+TITLE: PCI Utils
+
+-----
+** Index
+#+BEGIN_EXAMPLE
+    lspci (8)            - list all PCI devices
+    setpci (8)           - configure PCI devices
+    update-pciids (8)    - download new version of the PCI ID list
+#+END_EXAMPLE
