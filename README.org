@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-07 Mon 23:12:46 GMT> sharlatan
+# Last Modified : <2016-11-08 Tue 23:47:20 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -99,14 +99,15 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
   + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when UNIX was young.
-  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
+  + [[file:./spices/cix-parallel.org][parallel]] :: Shell tool for executing jobs in parallel.
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
 
-- *Hardware* /cix-Hard as a Rock!/
+- *Hardware* /Hard as a Rock!/
   + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
+  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
   + [[./spices/cix-smartmontools.org][smartmontools]] :: Tools for monitoring SMART capable hard disks
 
 - *Searching* /Loosing my religion/
@@ -138,7 +139,7 @@ on *GNU/Linux*
   + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
 
 - *Package management* /Pack me up, pack me down/
-  + [[./spices/pm_managers.org][Package managers utils]] :: PM comparison table and tricks.
+  + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks.
 
 - *Shell* /Not just sand.../
   + [[./spices/cix-gnu-bash-builtin.org][gnu-bash-builtin]] :: GNU Bash shell built in commands
@@ -151,7 +152,7 @@ on *GNU/Linux*
   + [[./spices/cix-glibc-common.org][glibc-common]] ::
 
 - *Researcher* /I've got a clue!/
-  + [[./spices/netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
+  + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
 
 - *Cryptograpy* /Who break Enigma code?/
   + [[./spices/cix-gpg.org][gnupg]] :: A GNU utility for secure communication and data storage
@@ -164,6 +165,7 @@ on *GNU/Linux*
 - Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley;
   *UNIX and LINUX System Administration Handbook 4th edition*;
   Prentice Hall 2013
+
 *** Links
 - GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 - Basics of the Unix Philosophy http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
@@ -172,4 +174,10 @@ on *GNU/Linux*
 
 *** Hubs
 - Bioinformatics one-liners https://github.com/stephenturner/oneliners
+- Awesome Shell https://github.com/alebcay/awesome-shell
+- Awesome Bash https://github.com/awesome-lists/awesome-bash
+
+*** IRC
+- irc.freenode.org ::
+  - #linux was created on 2001-02-09 23:16:24
 # End of README.org

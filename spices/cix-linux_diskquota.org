@@ -1,18 +1,17 @@
 # File           : cix-linux_diskquota.org
 # Created        : <2015-12-13 Sun 20:46:43 GMT>
-# Last Modified  : <2016-11-07 Mon 22:50:28 GMT> sharlatan
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-[[file:../README.org*Index][|≣|]]
-[↷](http://sourceforge.net/projects/linuxquota/)
+[[file:../README.org*Index][|≣|]][[http://sourceforge.net/projects/linuxquota/][|↷|]]
 #+TITLE: Linux DiskQuota
+/Tools and patches for the Linux Diskquota system as part of the Linux kernel/
 
-Tools and patches for the Linux Diskquota system as part of the Linux kernel
-
+** Index
 #+BEGIN_EXAMPLE
     convertquota (8) - convert quota from old file format to new one
     edquota (8)      - edit user quotas

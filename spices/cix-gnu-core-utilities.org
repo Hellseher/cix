@@ -1,22 +1,22 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-07 Mon 23:21:47 GMT> sharlatan
+# Last Modified : <2016-11-08 Tue 23:18:47 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
 
 [[../README.org::*Index][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][|↷|]]
 
-* GNU core utilities
+#+TITLE: GNU Core Utilities
 
-|-------------+---------------|
-| *Author*      |               |
-|-------------+---------------|
-| *Maintainers* |               |
-| *Realised*    |               |
-| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
-| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
-|-------------+---------------|
+|-------------+----------------|
+| *Author*      |                |
+|-------------+----------------|
+| *Maintainers* |                |
+| *Realised*    |                |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][git: coreutils]] |
+| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]]  |
+|-------------+----------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the  GNU operating system.  These are  the core utilities
@@ -238,8 +238,6 @@ Debian, Ubuntu, Linux Mint
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
 
-** References
-- GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
 ** Reference
 *** Books
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
@@ -248,3 +246,5 @@ Debian, Ubuntu, Linux Mint
 - Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins.
   *Linux In a Nutshell*.
   O'reilly
+*** Links
+- GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html

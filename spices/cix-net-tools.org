@@ -1,11 +1,11 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Last Modified : <2016-11-07 Mon 23:12:52 GMT> sharlatan
+# Last Modified : <2016-11-08 Tue 23:47:20 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
 
-[[file:../README.md::*Index][|≣|]][[http://net-tools.sourceforge.net][|↷|]]
+[[file:../README.org::*Index][|≣|]][[http://net-tools.sourceforge.net][|↷|]]
 #+TITLE: net-tools
 
 |-------------+-----------------------------------|

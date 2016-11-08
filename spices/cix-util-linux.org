@@ -1,6 +1,6 @@
 # File           : cix-util-linux.org
 # Created        : <2016-10-14 Wed 23:08:36 GMT>
-# Last Modified  : <2016-11-07 Mon 23:13:00 GMT> sharlatan
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -9,6 +9,7 @@
 
 [[file:../README.org::*Index][|≣|]][[https://github.com/karelzak/util-linux][|↷|]]
 #+TITLE: Util Linux
+/it is a standard package of the Linux operating system./
 
 |-------------+--------------------------------------------------|
 | *Author*      | Karel Zak                                        |
@@ -20,9 +21,13 @@
 | *Source*      | [[https://git.kernel.org/cgit/utils/util-linux/util-linux.git/][gutil-linux]]                                      |
 |-------------+--------------------------------------------------|
 
-It is a standard package of the Linux operating system.
 
+The util-linux package contains a large variety of low-level system utilities
+that are necessary for a Linux system to function. Among others, Util-linux
+contains the fdisk configuration tool and the login program.
 ------
+
+** Index
 #+BEGIN_EXAMPLE
      su (1)          - run a command with substitute user and group ID
      ul (1)          - do underlining

@@ -1,31 +1,40 @@
-<!--
-File          : lvm2.md
+# File           : cix-lvm2.org
+# Created        : <2016-02-21 Mon 02:02:27 GMT>
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
 
-Created       : Sun 21 Feb 2016 02:02:27
-Last Modified : Tue 26 Jul 2016 23:00:59 sharlatan
-Maintainer    : sharlatan
--->
+#+OPTIONS: num:nil
 
-[[≣](../README.md#Index "Index")]
-lvm2
-----
-|     |     |
-| --- | --- |
-| __Author__ | Heinz Mauelshagen |
-| __Maintainers__ | Zdenek Kabelac, Peter Rajnoha |
-|| David Teigland, Alasdair G Kergon |
-| __Realised__ | 1998  |
-| __Source__ | [LVM2](https://www.sourceware.org/lvm2/) |
+[[file:../README.org::*Index][|≣|]]
+#+TITLE: lvm2
+/Userland logical volume management tools/
 
-* * *
+|-------------+------------------------------------------|
+| *Author*      | Heinz Mauelshagen                        |
+| *Maintainers* | Zdenek Kabelac, Peter Rajnoha            |
+|             | David Teigland, Alasdair G Kergon        |
+| *Realised*    | 1998                                     |
+| *Source*      | [LVM2](https://www.sourceware.org/lvm2/) |
+|-------------+------------------------------------------|
 
+
+LVM2 includes all of the support for handling read/write operations on physical
+volumes (hard disks, RAID-Systems, magneto optical, etc., multiple devices (MD),
+see mdadd(8) or even loop devices, see losetup(8)), creating volume groups (kind
+of virtual disks) from one or more physical volumes and creating one or more
+logical volumes (kind of logical partitions) in volume groups.
+-----
+
+** Index
+
+#+BEGIN_EXAMPLE
     lvm (8)       - LVM2 tools
     lvs (8)       - report information about logical volumes
     pvs (8)       - report information about physical volume
     vgs (8)       - report information about volume groups
-
     vgscan (8)    - scan all disks for volume groups and rebuild caches
-
     lvcreate (8)  - create a logical volume in an existing volume group
     lvextend (8)  - extend the size of a logical volume
     lvreduce (8)  - reduce the size of a logical volume
@@ -33,12 +42,12 @@ lvm2
     vgcreate (8)  - create a volume group
     vgextend (8)  - add physical volumes to a volume group
     vgreduce (8)  - reduce a volume group
-
     vgchange  (8) - change attributes of a volume group
     lvdisplay (8) - display attributes of a logical volume
     pvdisplay (8) - display attributes of a physical volume
     vgdisplay (8) - display attributes of volume groups
+#+END_EXAMPLE
 
-## Reference
-* https://wiki.debian.org/LVM
-*
+** Reference
+*** Links
+- https://wiki.debian.org/LVM

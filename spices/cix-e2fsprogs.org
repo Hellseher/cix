@@ -1,11 +1,11 @@
 # File           : cix-e2fsprogs.org
 # Created        : <2016-03-06 Sun 00:25:13 GMT>
-# Last Modified  : <2016-11-07 Mon 22:47:38 GMT> sharlatan
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
-[[file:../README.org::*Index][|≣]][[http://e2fsprogs.sourceforge.net/][|↷|]]
+[[file:../README.org::*Index][|≣|]][[http://e2fsprogs.sourceforge.net/][|↷|]]
 #+TITLE: E2fsprogs
 
 |-------------+------------------|

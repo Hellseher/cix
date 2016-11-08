@@ -1,4 +1,13 @@
-<!--
+# File           : cix-gnu-findutils.org
+# Created        : <2016-11-07 Mon 23:34:20 GMT>
+# Last Modified  : <2016-11-08 Tue 23:18:47 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+
 File          : gnu-findutils.md
 Created       : Tue 17 Nov 2015 22:54:30
 Last Modified : Wed 26 Oct 2016 19:11:46 sharlatan
@@ -11,25 +20,25 @@ Maintainer    : sharlatan
 GNU Findutils
 -------------
 
-|     |     |
-| --- | --- |
-| __Author__ |Kevin Dalley <kevind@rahul.net>|
-| __Maintainers__ ||
-|| Eric B. Decker |
-|| Michael Rendell |
-|| David J. MacKenzie |
-|| Jim Meyering |
-|| Tim Wood |
-|| Paul Eggert <eggert@cs.ucla.edu> |
-|| James Youngman <jay@gnu.org> |
-|| Jay Plett |
-|| Paul Sheer |
-|| Dmitry V. Levin |
-|| Bas van Gompel |
-|| Eric Blake <ebb9@byu.net> |
-| __Realised__ |2000|
-| __Source__ |[findutils git](http://git.savannah.gnu.org/cgit/findutils.git)|
-| __Info__ |[GNU findutils](https://www.gnu.org/software/findutils/)|
+|                 |                                                                 |
+| ---             | ---                                                             |
+| __Author__      | Kevin Dalley <kevind@rahul.net>                                 |
+| __Maintainers__ |                                                                 |
+|                 | Eric B. Decker                                                  |
+|                 | Michael Rendell                                                 |
+|                 | David J. MacKenzie                                              |
+|                 | Jim Meyering                                                    |
+|                 | Tim Wood                                                        |
+|                 | Paul Eggert <eggert@cs.ucla.edu>                                |
+|                 | James Youngman <jay@gnu.org>                                    |
+|                 | Jay Plett                                                       |
+|                 | Paul Sheer                                                      |
+|                 | Dmitry V. Levin                                                 |
+|                 | Bas van Gompel                                                  |
+|                 | Eric Blake <ebb9@byu.net>                                       |
+| __Realised__    | 2000                                                            |
+| __Source__      | [findutils git](http://git.savannah.gnu.org/cgit/findutils.git) |
+| __Info__        | [GNU findutils](https://www.gnu.org/software/findutils/)        |
 
 The GNU Find Utilities are  the basic directory searching utilities of
 the  GNU  operating  system.  These programs  are  typically  used  in

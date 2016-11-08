@@ -18,22 +18,22 @@
 |-------------+----------------------------------------------------|
 
 #+BEGIN_EXAMPLE
-ip (8)     - show / manipulate routing, devices, policy routing and tunnels
-ss (8)     - another utility to investigate sockets
-tc (8)     - show / manipulate traffic control settings
-arpd (8)   - userspace arp daemon.
-nstat (8)  - network statistics tools.
-bridge (8) - show / manipulate bridge addresses and devices
-rtacct (8) - network statistics tools.
-rtmon (8)  - listens to and monitors RTnetlink
-ctstat (8) - unified linux network statistics
-lnstat (8) - unified linux network statistics
-routef (8) - flush routes
-routel (8) - list routes with pretty output format
-rtstat (8) - unified linux network statistics
+    ip (8)     - show / manipulate routing, devices, policy routing and tunnels
+    ss (8)     - another utility to investigate sockets
+    tc (8)     - show / manipulate traffic control settings
+    arpd (8)   - userspace arp daemon.
+    nstat (8)  - network statistics tools.
+    bridge (8) - show / manipulate bridge addresses and devices
+    rtacct (8) - network statistics tools.
+    rtmon (8)  - listens to and monitors RTnetlink
+    ctstat (8) - unified linux network statistics
+    lnstat (8) - unified linux network statistics
+    routef (8) - flush routes
+    routel (8) - list routes with pretty output format
+    rtstat (8) - unified linux network statistics
 #+END_EXAMPLE
 
-* [[file:net-tools.md][net-tools]] vs iproute2
+** [[file:cix-net-tools.org][net-tools]] vs iproute2
 
 | Description         | net-tools                          | iproute2                       |
 |---------------------+------------------------------------+--------------------------------|
@@ -49,30 +49,25 @@ ${NM} - netmask
 #+END_EXAMPLE
 -----
 
-* ip
-
+** ip
 
 | Command | Valid abbreviations          |
 |---------+------------------------------|
 | address | a ad add addr addres address |
 |         |                              |
 
-Watch trafic statistics on interface *enp2s0*
+*** ip: examples
+
+- ip-161108233852 :: Watch trafic statistics on interface *enp2s0*
 #+BEGIN_SRC sh
-:$ watch ip -s link show enp2s0
-
-Every 2.0s: ip -s link show enp2s0                                                        Sat Oct  1 01:24:39 2016
-
-2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
-    link/ether bc:5f:f2:be:3d:b1 brd ff:ff:ff:ff:ff:ff
-    RX: bytes  packets  errors  dropped overrun mcast
-    9120807587 9045163  0       0       0       25825
-    TX: bytes  packets  errors  dropped carrier collsns
-    1056981088 7578760  0       20      0       0
+    $: watch ip -s link show enp2s0
 #+END_SRC
------
+*** ip: files
 
-* Referance
+*** ip: see-also
+-----
+** Referance
+*** Links
 - http://baturin.org/docs/iproute2/
 - https://wiki.linuxfoundation.org/networking/iproute2
 - http://lartc.org/lartc.html

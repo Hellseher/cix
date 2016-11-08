@@ -1,15 +1,14 @@
 # File           : cix-kmod.org
 # Created        : <2016-06-19 Tue 23:54:09 GMT>
-# Last Modified  : <2016-11-07 Mon 22:30:35 GMT> sharlatan
+# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-[[file:../README.org*Index][|≣|]]
-[[↷]()]
-
+[[file:../README.org::*Index][|≣|]]
+[[↷])]
 #+TITLE: kmod
 
 #+BEGIN_EXAMPLE
