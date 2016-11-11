@@ -1,6 +1,6 @@
 # File           : cix-lsof.org
 # Created        : <2016-11-05 Sat 23:22:08 GMT>
-# Last Modified  : <2016-11-06 Sun 01:03:40 GMT> sharlatan
+# Last Modified  : <2016-11-11 Fri 23:33:01 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -8,6 +8,8 @@
 #+OPTIONS: num:nil
 
 #+TITLE: lsof
+/LiSt of Open Files/
+
 |-------------+-----------|
 | *Author*      | Vic Abell |
 |-------------+-----------|
@@ -17,22 +19,56 @@
 | *Info*        | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ][FAQ]]       |
 |-------------+-----------|
 
-*** lsof: options
-*** lsof: examples
+Lists information about files that are open by the processes running on a UNIX
+system.
+-----
+** Receipts
+*** lsof                                                                        :cmd:
+**** lsof::options
+- COMMAND ::
+- PID ::
+- TID ::
+- USER ::
+- FD :: FileDiscriptor
+  + *[0-9]+[rwu-]*
+    - r for read access;
+    - w for write access;
+    - u for read and write access;
+    - space if mode unknown and no lock character follows;
+    - '-' if mode unknown and lock character follows.
+  + colord
+  + cwd - CurentWorkingDirectory;
+  + dbus
+   + DEL -
+  + gdm
+  + mem - MEmoryMapped file;
+  + mem-r
+  + mmap - MemoryMapped device;
+  + NOFD
+  + pd - ParentDirectory;
+  + polkitd
+  + rtd - RooTDirectory;
+  + rtkit
+  + txt - TeXT;
+  + USER
+- TYPE ::
+  + VDIR
+  + VREG
+- DEVICE ::
+- SIZE/OFF ::
+- NODE NAME ::
+**** lsof::examples
 - lsoff-161105232800 :: If there are a lot of files you are trying to search in,
      *lsof* helps to watch a directory which *find* working on.
-#+BEGIN_SRC sh
-    #: lsof -Fn -a -c find -d cwd +r 10
-#+END_SRC
+:   ~ # lsof -Fn -a -c find -d cwd +r 10
+
 
 - lsoff-161106001559 :: List of open port/connections, main option *-i*
-#+BEGIN_SRC sh
-    #: lsoff -i -P -n       # All open connections
-    #: lsoff -i -a -p 1234  # All connections with PID=1234
-    #: lsoff -i tcp:80      # Process licenning port 80
-#+END_SRC
+:    ~ # lsoff -i -P -n       # All open connections
+:    ~ # lsoff -i -a -p 1234  # All connections with PID=1234
+:    ~ # lsoff -i tcp:80      # Process licenning port 80
 
-*** lsof: files
+**** lsof::files
 #+BEGIN_EXAMPLE
     /dev/kmem         kernel virtual memory device
     /dev/mem          physical memory device
@@ -40,11 +76,14 @@
     .lsof_hostname    lsof's device cache file
 #+END_EXAMPLE
 
-*** lsof: see-also
-    access(2) awk(1) crash(1) fattach(3C) ff(1) fstat(8) fuser(1) gethostname(2)
-    isprint(3) kill(1) localtime(3) lstat(2) modload(8) mount(8) netstat(1)
-    ofiles(8L) perl(1) ps(1) readlink(2) setlocale(3) stat(2) strftime(3)
-    time(2) uname(1)
+**** lsof::see-also
+     access(2) awk(1) crash(1) fattach(3C) ff(1) fstat(8) fuser(1) gethostname(2)
+     isprint(3) kill(1) localtime(3) lstat(2) modload(8) mount(8) netstat(1)
+     ofiles(8L) perl(1) ps(1) readlink(2) setlocale(3) stat(2) strftime(3)
+     time(2) uname(1)
+
 
 ** References
+*** Links
 - Vic Abell's Home Page https://people.freebsd.org/~abe/
+- Finding open files with lsof http://www.ibm.com/developerworks/aix/library/au-lsof.html
