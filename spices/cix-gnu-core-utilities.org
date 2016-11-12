@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-08 Tue 23:18:47 GMT> sharlatan
+# Last Modified : <2016-11-12 Sat 11:00:01 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -9,43 +9,21 @@
 
 #+TITLE: GNU Core Utilities
 
-|-------------+----------------|
-| *Author*      |                |
-|-------------+----------------|
-| *Maintainers* |                |
-| *Realised*    |                |
-| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][git: coreutils]] |
-| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]]  |
-|-------------+----------------|
+|-------------+---------------|
+| *Author*      |               |
+|-------------+---------------|
+| *Maintainers* |               |
+| *Realised*    |               |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][git:coreutils]] |
+| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
+|-------------+---------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation
 utilities of the  GNU operating system.  These are  the core utilities
 which are expected  to exist on every operating  system.  This package
 is the union of the GNU fileutils, sh-utils, and textutils packages.
-
-** Installation
-
-This package is installed on most  of Linux distributions but in case
-of missing you can install it manually
-
-*** Linux
-**** rpm
-RedHat, CentOS, Fedora, Scientific Linux
-
-#+BEGIN_EXAMPLE
-    $: yum [dnf] search coreutils
-    $: sudo yum install coreutils
-#+END_EXAMPLE
-
-**** deb
-Debian, Ubuntu, Linux Mint
-
-#+BEGIN_EXAMPLE
-    $: sudo apt-get install coreutils
-#+END_EXAMPLE
-
 -----
-[[GNU core utilities][⬆]]
+
 ** Index
 #+BEGIN_EXAMPLE
     cp (1)        - copy files and directories
@@ -160,10 +138,15 @@ Debian, Ubuntu, Linux Mint
     sha512sum (1) - compute and check SHA512 message digest
 #+END_EXAMPLE
 -----
-*** dd [[GNU core utilities][⬆]]
-/convert and copy a file/
 
-**** dd: options
+** Receipts
+
+[[GNU core utilities][⬆]]
+*** dd                                                                          :cmd:
+/convert and copy a file/
+/Written by Paul Rubin, David MacKenzie, and Stuart Kemp./
+
+**** dd::options
 
 |              |   |
 |--------------+---|
@@ -181,33 +164,65 @@ Debian, Ubuntu, Linux Mint
 | skip=N       |   |
 | status=LEVEL |   |
 
-**** dd: examples
-- dd-161107231653 :: Test NFS/LAN speed
-#+BEGIN_EXAMPLE
-    $: echo "NFS write speed"
-    $: time dd if=/dev/zer of=/<mount_of_your_nfs_dir>/testfile bs=16k count=16384
-    $: echo "NFS read speed"
-    $: time dd if=/<mount_of_your_nfs_dir>/tesfile of=/dev/null bs=16k
-#+END_EXAMPLE
+**** dd::examples
+- dd-161110001239 :: Test NFS, LAN and I/O speed
+#+BEGIN_SRC sh
+  NFS_PATH="/mount/point/of/nfs/dir"
+  echo "Write speed"
+  time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
 
-- dd-161107231715 :: Copy and restore MBR of block device (HDD/SSD).
-#+BEGIN_EXAMPLE
-    $: cp_blk="/dev/sda"
-    $: rs_blk="/dev/sdb"
-    $: mbr="$HOME"/mbr.img
-    $: echo "Copy MBR data from $cp_blk"
-    $: dd if="$cp_blk" of="$mbr" bs=512 count=1
-    $: echo "Restore MBR data to $rs_blk"
-    #: dd if="$mbr" of="$rs_blk"
-#+END_EXAMPLE
-**** dd: see-also
+  echo "Read speed"
+  time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
+#+END_SRC
 
-*** ls [[GNU core utilities][⬆]]
-**** ls: opetions
+- dd-161112002652 :: Copy and restore MBR of block device (HDD/SSD).
+#+BEGIN_SRC sh
+  BLK_CP="/dev/sda"
+  BLK_RS="/dev/sdb"
+  MBR="$HOME"/mbr.img
+
+  echo "Copy MBR data from $BLK_CP"
+  dd if="$BLK_CP" of="$MBR" bs=512 count=1
+  echo "Restore MBR data to $BLK_RS"
+  dd if="$MBR" of="$BLK_RS"
+#+END_SRC
+
+- dd-161112105950 :: Stress test of BLOCK device with random size files to a random sector number.
+     WARRNING: IT COULD DAMAGE YOUR DEVICE!
+#+BEGIN_SRC sh
+  MNT_PATH="/mnt/lv_test"
+  DEV_NAME="sdc"
+  DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
+  MBR=512
+
+  while true; do
+      SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
+      LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
+
+      # write to DEV
+      dd if=/dev/urandom \
+         of="$MNT_PATH"/file_name \
+         seek="$SECTOR" \
+         count="$LENGTH"b 1>/dev/null
+
+      # read from DEV
+      dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
+
+      # clean up and loop
+      rm "$MNT_PATH"/file_name
+  done
+#+END_SRC
+shuf, rm, while, cat
+
+**** dd::files
+**** dd::see-also
+
+[[GNU core utilities][⬆]]
+*** ls                                                                          :cmd:
+**** ls::options
 
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
-
-**** ls: exmaples
+**** ls::examples
 - ls-161107232103 :: Sweet examples of using *ls*
 #+BEGIN_EXAMPLE
     $: ls -Rotti
