@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-12 Sat 11:00:01 GMT> sharlatan
+# Last Modified : <2016-11-13 Sun 00:35:45 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -140,15 +140,102 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 -----
 
 ** Receipts
-
-[[GNU core utilities][⬆]]
+*** arch                                                                        :cmd:
+[[Index][⬆]]
+**** arch::options
+**** arch::examples
+**** arch::files
+**** arch::see-also
+*** base64                                                                      :cmd:
+[[Index][⬆]]
+**** base64::options
+**** base64::examples
+**** base64::files
+**** base64::see-also
+*** basename                                                                    :cmd:
+[[Index][⬆]]
+**** basename::options
+**** basename::examples
+**** basename::files
+**** basename::see-also
+*** cat                                                                         :cmd:
+[[Index][⬆]]
+**** cat::options
+**** cat::examples
+**** cat::files
+**** cat::see-also
+*** chcon                                                                       :cmd:
+[[Index][⬆]]
+**** chcon::options
+**** chcon::examples
+**** chcon::files
+**** chcon::see-also
+*** chgrp                                                                       :cmd:
+[[Index][⬆]]
+**** chgrp::options
+**** chgrp::examples
+**** chgrp::files
+**** chgrp::see-also
+*** chmod                                                                       :cmd:
+[[Index][⬆]]
+**** chmod::options
+**** chmod::examples
+**** chmod::files
+**** chmod::see-also
+*** chown                                                                       :cmd:
+[[Index][⬆]]
+**** chown::options
+**** chown::examples
+**** chown::files
+**** chown::see-also
+*** chroot                                                                      :cmd:
+[[Index][⬆]]
+**** chroot::options
+**** chroot::examples
+**** chroot::files
+**** chroot::see-also
+*** cksum                                                                       :cmd:
+[[Index][⬆]]
+**** cksum::options
+**** cksum::examples
+**** cksum::files
+**** cksum::see-also
+*** comm                                                                        :cmd:
+[[Index][⬆]]
+**** comm::options
+**** comm::examples
+**** comm::files
+**** comm::see-also
+*** cp                                                                          :cmd:
+[[Index][⬆]]
+**** cp::options
+**** cp::examples
+**** cp::files
+**** cp::see-also
+*** csplit                                                                      :cmd:
+[[Index][⬆]]
+**** csplit::options
+**** csplit::examples
+**** csplit::files
+**** csplit::see-also
+*** cut                                                                         :cmd:
+[[Index][⬆]]
+**** cut::options
+**** cut::examples
+**** cut::files
+**** cut::see-also
+*** date                                                                        :cmd:
+[[Index][⬆]]
+**** date::options
+**** date::examples
+**** date::files
+**** date::see-also
 *** dd                                                                          :cmd:
-/convert and copy a file/
+[[Index][⬆]] /convert and copy a file/
 /Written by Paul Rubin, David MacKenzie, and Stuart Kemp./
 
 **** dd::options
 
-|              |   |
 |--------------+---|
 | bs=BYTES     |   |
 | cbs=BYTES    |   |
@@ -174,6 +261,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
   echo "Read speed"
   time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
 #+END_SRC
+echo
 
 - dd-161112002652 :: Copy and restore MBR of block device (HDD/SSD).
 #+BEGIN_SRC sh
@@ -186,6 +274,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
   echo "Restore MBR data to $BLK_RS"
   dd if="$MBR" of="$BLK_RS"
 #+END_SRC
+echo
 
 - dd-161112105950 :: Stress test of BLOCK device with random size files to a random sector number.
      WARRNING: IT COULD DAMAGE YOUR DEVICE!
@@ -212,13 +301,147 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
       rm "$MNT_PATH"/file_name
   done
 #+END_SRC
-shuf, rm, while, cat
+[[./cix-gnu-core-utilities.org::*shuf][shuf]],
+[[file:./cix-gnu-core-utilities.org::*rm][rm]],
+while,
+[[./cix-gnu-core-utilities.org::*cat][cat]]
 
 **** dd::files
 **** dd::see-also
-
-[[GNU core utilities][⬆]]
+*** df                                                                          :cmd:
+[[Index][⬆]]
+**** df::options
+**** df::examples
+**** df::files
+**** df::see-also
+*** dir                                                                         :cmd:
+[[Index][⬆]]
+**** dir::options
+**** dir::examples
+**** dir::files
+**** dir::see-also
+*** dircolors                                                                   :cmd:
+[[Index][⬆]]
+**** dircolors::options
+**** dircolors::examples
+**** dircolors::files
+**** dircolors::see-also
+*** dirname                                                                     :cmd:
+[[Index][⬆]]
+**** dirname::options
+**** dirname::examples
+**** dirname::files
+**** dirname::see-also
+*** du                                                                          :cmd:
+[[Index][⬆]]
+**** du::options
+**** du::examples
+**** du::files
+**** du::see-also
+*** echo                                                                        :cmd:
+[[Index][⬆]]
+**** echo::options
+**** echo::examples
+**** echo::files
+**** echo::see-also
+*** env                                                                         :cmd:
+[[Index][⬆]]
+**** env::options
+**** env::examples
+**** env::files
+**** env::see-also
+*** expand                                                                      :cmd:
+[[Index][⬆]]
+**** expand::options
+**** expand::examples
+**** expand::files
+**** expand::see-also
+*** expr                                                                        :cmd:
+[[Index][⬆]]
+**** expr::options
+**** expr::examples
+**** expr::files
+**** expr::see-also
+*** factor                                                                      :cmd:
+[[Index][⬆]]
+**** factor::options
+**** factor::examples
+**** factor::files
+**** factor::see-also
+*** false                                                                       :cmd:
+[[Index][⬆]]
+**** false::options
+**** false::examples
+**** false::files
+**** false::see-also
+*** fmt                                                                         :cmd:
+[[Index][⬆]]
+**** fmt::options
+**** fmt::examples
+**** fmt::files
+**** fmt::see-also
+*** fold                                                                        :cmd:
+[[Index][⬆]]
+**** fold::options
+**** fold::examples
+**** fold::files
+**** fold::see-also
+*** groups                                                                      :cmd:
+[[Index][⬆]]
+**** groups::options
+**** groups::examples
+**** groups::files
+**** groups::see-also
+*** head                                                                        :cmd:
+[[Index][⬆]]
+**** head::options
+**** head::examples
+**** head::files
+**** head::see-also
+*** hostid                                                                      :cmd:
+[[Index][⬆]]
+**** hostid::options
+**** hostid::examples
+**** hostid::files
+**** hostid::see-also
+*** id                                                                          :cmd:
+[[Index][⬆]]
+**** id::options
+**** id::examples
+**** id::files
+**** id::see-also
+*** install                                                                     :cmd:
+[[Index][⬆]]
+**** install::options
+**** install::examples
+**** install::files
+**** install::see-also
+*** join                                                                        :cmd:
+[[Index][⬆]]
+**** join::options
+**** join::examples
+**** join::files
+**** join::see-also
+*** link                                                                        :cmd:
+[[Index][⬆]]
+**** link::options
+**** link::examples
+**** link::files
+**** link::see-also
+*** ln                                                                          :cmd:
+[[Index][⬆]]
+**** ln::options
+**** ln::examples
+**** ln::files
+**** ln::see-also
+*** logname                                                                     :cmd:
+[[Index][⬆]]
+**** logname::options
+**** logname::examples
+**** logname::files
+**** logname::see-also
 *** ls                                                                          :cmd:
+[[Index][⬆]]
 **** ls::options
 
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
@@ -252,7 +475,395 @@ shuf, rm, while, cat
     alias ltail="ls -lhGgo | tail"
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
+*** md5sum                                                                      :cmd:
+[[Index][⬆]]
+**** md5sum::options
+**** md5sum::examples
+**** md5sum::files
+**** md5sum::see-also
+*** mkdir                                                                       :cmd:
+[[Index][⬆]]
+**** mkdir::options
+**** mkdir::examples
+**** mkdir::files
+**** mkdir::see-also
+*** mkfifo                                                                      :cmd:
+[[Index][⬆]]
+**** mkfifo::options
+**** mkfifo::examples
+**** mkfifo::files
+**** mkfifo::see-also
+*** mknod                                                                       :cmd:
+[[Index][⬆]]
+**** mknod::options
+**** mknod::examples
+**** mknod::files
+**** mknod::see-also
+*** mktemp                                                                      :cmd:
+[[Index][⬆]]
+**** mktemp::options
+**** mktemp::examples
+**** mktemp::files
+**** mktemp::see-also
+*** mv                                                                          :cmd:
+[[Index][⬆]]
+**** mv::options
+**** mv::examples
+**** mv::files
+**** mv::see-also
+*** nice                                                                        :cmd:
+[[Index][⬆]]
+**** nice::options
+**** nice::examples
+**** nice::files
+**** nice::see-also
+*** nl                                                                          :cmd:
+[[Index][⬆]]
+**** nl::options
+**** nl::examples
+**** nl::files
+**** nl::see-also
+*** nohup                                                                       :cmd:
+[[Index][⬆]]
+**** nohup::options
+**** nohup::examples
+**** nohup::files
+**** nohup::see-also
+*** nproc                                                                       :cmd:
+[[Index][⬆]]
+**** nproc::options
+**** nproc::examples
+**** nproc::files
+**** nproc::see-also
+*** numfmt                                                                      :cmd:
+[[Index][⬆]]
+**** numfmt::options
+**** numfmt::examples
+**** numfmt::files
+**** numfmt::see-also
+*** od                                                                          :cmd:
+[[Index][⬆]]
+**** od::options
+**** od::examples
+**** od::files
+**** od::see-also
+*** paste                                                                       :cmd:
+[[Index][⬆]]
+**** paste::options
+**** paste::examples
+**** paste::files
+**** paste::see-also
+*** pathchk                                                                     :cmd:
+[[Index][⬆]]
+**** pathchk::options
+**** pathchk::examples
+**** pathchk::files
+**** pathchk::see-also
+*** pinky                                                                       :cmd:
+[[Index][⬆]]
+**** pinky::options
+**** pinky::examples
+**** pinky::files
+**** pinky::see-also
+*** pr                                                                          :cmd:
+[[Index][⬆]]
+**** pr::options
+**** pr::examples
+**** pr::files
+**** pr::see-also
+*** printenv                                                                    :cmd:
+[[Index][⬆]]
+**** printenv::options
+**** printenv::examples
+**** printenv::files
+**** printenv::see-also
+*** printf                                                                      :cmd:
+[[Index][⬆]]
+**** printf::options
+**** printf::examples
+**** printf::files
+**** printf::see-also
+*** ptx                                                                         :cmd:
+[[Index][⬆]]
+**** ptx::options
+**** ptx::examples
+**** ptx::files
+**** ptx::see-also
+*** pwd                                                                         :cmd:
+[[Index][⬆]]
+**** pwd::options
+**** pwd::examples
+**** pwd::files
+**** pwd::see-also
+*** readlink                                                                    :cmd:
+[[Index][⬆]]
+**** readlink::options
+**** readlink::examples
+**** readlink::files
+**** readlink::see-also
+*** realpath                                                                    :cmd:
+[[Index][⬆]]
+**** realpath::options
+**** realpath::examples
+**** realpath::files
+**** realpath::see-also
+*** realpath                                                                    :cmd:
+[[Index][⬆]]
+**** realpath::options
+**** realpath::examples
+**** realpath::files
+**** realpath::see-also
+*** rm                                                                          :cmd:
+[[Index][⬆]]
+**** rm::options
+**** rm::examples
+**** rm::files
+**** rm::see-also
+*** rmdir                                                                       :cmd:
+[[Index][⬆]]
+**** rmdir::options
+**** rmdir::examples
+**** rmdir::files
+**** rmdir::see-also
+*** runcon                                                                      :cmd:
+[[Index][⬆]]
+**** runcon::options
+**** runcon::examples
+**** runcon::files
+**** runcon::see-also
+*** seq                                                                         :cmd:
+[[Index][⬆]]
+**** seq::options
+**** seq::examples
+**** seq::files
+**** seq::see-also
+*** sha1sum                                                                     :cmd:
+[[Index][⬆]]
+**** sha1sum::options
+**** sha1sum::examples
+**** sha1sum::files
+**** sha1sum::see-also
+*** sha224sum                                                                   :cmd:
+[[Index][⬆]]
+**** sha224sum::options
+**** sha224sum::examples
+**** sha224sum::files
+**** sha224sum::see-also
+*** sha256sum                                                                   :cmd:
+[[Index][⬆]]
+**** sha256sum::options
+**** sha256sum::examples
+**** sha256sum::files
+**** sha256sum::see-also
+*** sha384sum                                                                   :cmd:
+[[Index][⬆]]
+**** sha384sum::options
+**** sha384sum::examples
+**** sha384sum::files
+**** sha384sum::see-also
+*** sha512sum                                                                   :cmd:
+[[Index][⬆]]
+**** sha512sum::options
+**** sha512sum::examples
+**** sha512sum::files
+**** sha512sum::see-also
 
+*** shred                                                                       :cmd:
+[[Index][⬆]]
+**** shred::options
+**** shred::examples
+**** shred::files
+**** shred::see-also
+*** shuf                                                                        :cmd:
+[[Index][⬆]]
+**** shuf::options
+**** shuf::examples
+**** shuf::files
+**** shuf::see-also
+*** sleep                                                                       :cmd:
+[[Index][⬆]]
+**** sleep::options
+**** sleep::examples
+**** sleep::files
+**** sleep::see-also
+*** sort                                                                        :cmd:
+[[Index][⬆]]
+**** sort::options
+**** sort::examples
+**** sort::files
+**** sort::see-also
+*** split                                                                       :cmd:
+[[Index][⬆]]
+**** split::options
+**** split::examples
+**** split::files
+**** split::see-also
+*** stat                                                                        :cmd:
+[[Index][⬆]]
+**** stat::options
+**** stat::examples
+**** stat::files
+**** stat::see-also
+*** stdbuf                                                                      :cmd:
+[[Index][⬆]]
+**** stdbuf::options
+**** stdbuf::examples
+**** stdbuf::files
+**** stdbuf::see-also
+*** stty                                                                        :cmd:
+[[Index][⬆]]
+**** stty::options
+**** stty::examples
+**** stty::files
+**** stty::see-also
+*** sum                                                                         :cmd:
+[[Index][⬆]]
+**** sum::options
+**** sum::examples
+**** sum::files
+**** sum::see-also
+*** sync                                                                        :cmd:
+[[Index][⬆]]
+**** sync::options
+**** sync::examples
+**** sync::files
+**** sync::see-also
+*** tac                                                                         :cmd:
+[[Index][⬆]]
+**** tac::options
+**** tac::examples
+**** tac::files
+**** tac::see-also
+*** tail                                                                        :cmd:
+[[Index][⬆]]
+**** tail::options
+**** tail::examples
+**** tail::files
+**** tail::see-also
+*** tee                                                                         :cmd:
+[[Index][⬆]]
+**** tee::options
+**** tee::examples
+**** tee::files
+**** tee::see-also
+*** test                                                                        :cmd:
+[[Index][⬆]]
+**** test::options
+**** test::examples
+**** test::files
+**** test::see-also
+*** timeout                                                                     :cmd:
+[[Index][⬆]]
+**** timeout::options
+**** timeout::examples
+**** timeout::files
+**** timeout::see-also
+*** touch                                                                       :cmd:
+[[Index][⬆]]
+**** touch::options
+**** touch::examples
+**** touch::files
+**** touch::see-also
+*** tr                                                                          :cmd:
+[[Index][⬆]]
+**** tr::options
+**** tr::examples
+**** tr::files
+**** tr::see-also
+*** true                                                                        :cmd:
+[[Index][⬆]]
+**** true::options
+**** true::examples
+**** true::files
+**** true::see-also
+*** truncate                                                                    :cmd:
+[[Index][⬆]]
+**** truncate::options
+**** truncate::examples
+**** truncate::files
+**** truncate::see-also
+*** tsort                                                                       :cmd:
+[[Index][⬆]]
+**** tsort::options
+**** tsort::examples
+**** tsort::files
+**** tsort::see-also
+*** tty                                                                         :cmd:
+[[Index][⬆]]
+**** tty::options
+**** tty::examples
+**** tty::files
+**** tty::see-also
+*** uname                                                                       :cmd:
+[[Index][⬆]]
+**** uname::options
+**** uname::examples
+**** uname::files
+**** uname::see-also
+*** unexpand                                                                    :cmd:
+[[Index][⬆]]
+**** unexpand::options
+**** unexpand::examples
+**** unexpand::files
+**** unexpand::see-also
+*** uniq                                                                        :cmd:
+[[Index][⬆]]
+**** uniq::options
+**** uniq::examples
+**** uniq::files
+**** uniq::see-also
+*** unlink                                                                      :cmd:
+[[Index][⬆]]
+**** unlink::options
+**** unlink::examples
+**** unlink::files
+**** unlink::see-also
+*** uptime                                                                      :cmd:
+[[Index][⬆]]
+**** uptime::options
+**** uptime::examples
+**** uptime::files
+**** uptime::see-also
+*** users                                                                       :cmd:
+[[Index][⬆]]
+**** users::options
+**** users::examples
+**** users::files
+**** users::see-also
+*** vdir                                                                        :cmd:
+[[Index][⬆]]
+**** vdir::options
+**** vdir::examples
+**** vdir::files
+**** vdir::see-also
+*** wc                                                                          :cmd:
+[[Index][⬆]]
+**** wc::options
+**** wc::examples
+**** wc::files
+**** wc::see-also
+*** who                                                                         :cmd:
+[[Index][⬆]]
+**** who::options
+**** who::examples
+**** who::files
+**** who::see-also
+*** whoami                                                                      :cmd:
+[[Index][⬆]]
+**** whoami::options
+**** whoami::examples
+**** whoami::files
+**** whoami::see-also
+[[Index][⬆]]
+*** yes                                                                         :cmd:
+[[Index][⬆]]
+**** yes::options
+**** yes::examples
+**** yes::files
+**** yes::see-also
+[[Index][⬆]]
+[[Index][⬆]]
+[[Index][⬆]]
 ** Reference
 *** Books
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
