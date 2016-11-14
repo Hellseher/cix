@@ -1,0 +1,17 @@
+# File           : cix-usbutils.org
+# Created        : <2016-11-13 Sun 20:16:58 GMT>
+# Last Modified  : <2016-11-13 Sun 20:17:40 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: USB utilities
+
+** Index
+#+BEGIN_EXAMPLE
+   lsusb (8)            - list USB devices
+   usb-devices (1)      - print USB device details
+   usbhid-dump (8)      - dump USB HID device report descriptors and streams
+#+END_EXAMPLE

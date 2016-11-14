@@ -1,0 +1,21 @@
+# File           : cix-parted.org
+# Created        : <2016-11-12 Sat 10:01:15 GMT>
+# Last Modified  : <2016-11-12 Sat 11:00:08 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org::*Index][|≣|]]
+#+TITLE: Parted
+
+** Index
+#+BEGIN_EXAMPLE
+    parted (8)    - a partition manipulation program
+    partprobe (8) - inform the OS of partition table changes
+#+END_EXAMPLE
+
+** References
+*** Links
+- Linux on 4 KB sector disks: Practical advice https://www.ibm.com/developerworks/library/l-linux-on-4kb-sector-disks/

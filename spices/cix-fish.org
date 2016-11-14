@@ -1,0 +1,92 @@
+# File           : cix-fish.org
+# Created        : <2016-11-12 Sat 23:00:43 GMT>
+# Last Modified  : <2016-11-12 Sat 23:03:53 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Fish shell
+
+** Index
+#+BEGIN_EXAMPLE
+    abbr
+    alias
+    and
+    begin
+    bg
+    bind
+    block
+    break
+    breakpoint
+    builtin
+    case
+    cd
+    command
+    commandline
+    complete
+    contains
+    continue
+    count
+    dirh
+    dirs
+    echo
+    else
+    emit
+    end
+    eval
+    exec
+    exit
+    false
+    fg
+    fish
+    fish_config
+    fish_indent
+    fish_key_reader
+    fish_prompt
+    fish_realpath
+    fish_right_prompt
+    fish_update_completions
+    fish_vi_mode
+    for
+    funced
+    funcsave
+    function
+    functions
+    help
+    history
+    if
+    isatty
+    jobs
+    math
+    nextd
+    not
+    open
+    or
+    popd
+    prevd
+    printf
+    prompt_pwd
+    psub
+    pushd
+    pwd
+    random
+    read
+    return
+    set
+    set_color
+    source
+    status
+    string
+    suspend
+    switch
+    test
+    trap
+    true
+    type
+    ulimit
+    umask
+    vared
+    while
+#+END_EXAMPLE

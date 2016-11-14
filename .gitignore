@@ -2,3 +2,7 @@
 *.html
 /spices/#cix-ag#
 /spices/.#cix-ag
+*md
+*pd
+*pdf
+*tex

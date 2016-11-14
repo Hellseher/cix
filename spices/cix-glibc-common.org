@@ -1,0 +1,37 @@
+# File           : cix-glibc-common.org
+# Created        : <2016-11-14 Mon 21:40:36 GMT>
+# Last Modified  : <2016-11-14 Mon 22:13:37 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Glibc Common
+
+The glibc-common package includes common binaries for the GNU libc libraries, as
+well as national language (locale) support
+-----
+** Index
+#+BEGIN_EXAMPLE
+    zic (8)        - timezone compiler
+    ldd (1)        - print shared library dependencies
+    pldd (1)       - display dynamic shared objects linked into a process
+    sprof (1)      - read and display shared object profiling data
+    encat (1p)     - generate a formatted message catalog
+    zdump (8)      - timezone dumper
+    iconv (3)      - perform character set conversion
+    iconv (1)      - convert text from one character encoding to another
+    iconv (3p)     - codeset conversion function
+    iconv (1p)     - codeset conversion
+    getent (1)     - get entries from Name Service Switch libraries
+    locale (3pm)   - Perl pragma to use or avoid POSIX locales for built-in operations
+    locale (7)     - description of multilanguage support
+    locale (1)     - get locale-specific information
+    locale (5)     - describes a locale definition file
+    locale (1p)    - get locale-specific information
+    getconf (1p)   - get configuration values
+    tzselect (8)   - select a timezone
+    localedef (1)  - compile locale definition files
+    localedef (1p) - define locale environment
+#+END_EXAMPLE
