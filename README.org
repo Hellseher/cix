@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-08 Tue 23:47:20 GMT> sharlatan
+# Last Modified : <2016-11-14 Mon 22:20:09 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -61,7 +61,15 @@ on *GNU/Linux*
     $: whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
     $: rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
 #+END_EXAMPLE
+*** Examples code-styling
+Variables
+: ALL_CAPS="string"
+: ALL_CAPS="/long/path/to/file"
+: ALL_CAPS=1234
+: ALL_CAPS=$(find ./ -type f)
 
+Pathes
+: <SUFIX>_PATH
 ** Index
 /Make each program do one thing well/
 
@@ -77,7 +85,7 @@ on *GNU/Linux*
   + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages
   + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system
 
-- *File-text Processing* /Everything is a file/!
+- *File* /Everything is a file/!
   + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
   + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
   + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
@@ -97,18 +105,24 @@ on *GNU/Linux*
 
 - *Utillities* /Be silent and help ppls/
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
-  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when UNIX was young.
   + [[file:./spices/cix-parallel.org][parallel]] :: Shell tool for executing jobs in parallel.
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
+  + [[file:./spices/cix-parted.org][parted]]  :: The GNU disk partition manipulation program
 
 - *Hardware* /Hard as a Rock!/
   + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
   + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
   + [[./spices/cix-smartmontools.org][smartmontools]] :: Tools for monitoring SMART capable hard disks
+  + [[./spices/cix-dmidecode.org][dmidecode]] :: Tool to analyse BIOS DMI data
+  + [[./spices/cix-usbutils.org][usbutils]] :: Linux USB utilities
+
+- *Scheduling* /World spinning around/
+  + [[./spices/cix-at.org][at]] :: Job spooling tools
+  + [[./spices/cix-cronie.org][cronie]]  :: Cron daemon for executing programs at set times
 
 - *Searching* /Loosing my religion/
   + [[./spices/cix-gnu-grep.org][gnu-grep]] :: Pattern matching utilities
@@ -116,7 +130,7 @@ on *GNU/Linux*
   + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
   + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
 
-- *Archiving and Commpresion* /I'm a pac man/
+ - *Compress-Archive* /I'm a pac man/
   + [[./spices/cix-gzip.org][gzip]] :: The GNU data compression program
   + [[./spices/cix-gnu-tar.org][gnu-tar]] :: A GNU file archiving program
   + [[./spices/cix-cpio.org][cpio]] :: A GNU archiving program
@@ -126,19 +140,19 @@ on *GNU/Linux*
   + [[./spices/cix-pax.org][pax]] :: POSIX File System Archiver
 
 - *Networking* /We all live in the someone's subnet in/
-  + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
-  + [[./spices/cix-iputils.org][iputils]] :: Network monitoring tools including ping
-  + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
-  + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: A collection of common network programs
-  + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities
-  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network
-  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying DNS name server
+  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
+  + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: A collection of common network programs
+  + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
+  + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities
+  + [[./spices/cix-iputils.org][iputils]] :: Network monitoring tools including ping
+  + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
+  + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
   + [[./spices/cix-openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
-  + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
+  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network
 
-- *Package management* /Pack me up, pack me down/
+- *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks.
 
 - *Shell* /Not just sand.../
@@ -149,28 +163,51 @@ on *GNU/Linux*
   + [[./spices/cix-zsh.org/][zsh]] ::  Powerful interactive shell
 
 - *Development* /In the fields of observation chance favors only the prepared mind./
-  + [[./spices/cix-glibc-common.org][glibc-common]] ::
+  + [[./spices/cix-glibc-common.org][glibc-common]] :: Common binaries and locale data for glibc
 
-- *Researcher* /I've got a clue!/
+- *Research* /I've got a clue!/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
+
+- *Kernel* /Got to basic/
+  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
 
 - *Cryptograpy* /Who break Enigma code?/
   + [[./spices/cix-gpg.org][gnupg]] :: A GNU utility for secure communication and data storage
 
-** Reference
+- *GUI* /Pleas your eyes/
+  + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
+
+- *Security* /It's never be save/
+-----
+** Glosary
+- DMI ::
+- GUI ::
+- MBR ::
+** References
 *** Books
 - Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbinsp
   *LINUX in a nutshell 6th Edition;*
-  O'reilly 2009
+  O'reilly media, 2009;
 - Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley;
   *UNIX and LINUX System Administration Handbook 4th edition*;
-  Prentice Hall 2013
+  Prentice Hall, 2013;
+- Arnold Robbins;
+  *UNIX in a Nutshell*;
+  O'reilly, 2008;
 
 *** Links
 - GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
 - Basics of the Unix Philosophy http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
+- Filenames and Pathnames in Shell: How to do it Correctly http://www.dwheeler.com/essays/filenames-in-shell.html
 - http://www.commandlinefu.com/commands/browse/sort-by-votes
 - http://everythingsysadmin.com/
+
+*** Wikis
+- http://wiki.bash-hackers.org/
+- https://emacswiki.org/
+- https://wiki.archlinux.org/
+- https://wiki.freebsd.org/
+- https://wiki.ubuntu.com/
 
 *** Hubs
 - Bioinformatics one-liners https://github.com/stephenturner/oneliners
