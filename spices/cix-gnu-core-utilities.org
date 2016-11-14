@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-13 Sun 00:35:45 GMT> sharlatan
+# Last Modified : <2016-11-14 Mon 22:47:24 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -252,8 +252,10 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 | status=LEVEL |   |
 
 **** dd::examples
-- dd-161110001239 :: Test NFS, LAN and I/O speed
+- dd-161113185213 :: Test NFS, LAN and I/O speed
 #+BEGIN_SRC sh
+  #!/usr/bin/bash
+
   NFS_PATH="/mount/point/of/nfs/dir"
   echo "Write speed"
   time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
@@ -261,10 +263,12 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
   echo "Read speed"
   time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
 #+END_SRC
-echo
+[[./cix-gnu-bash-builtin.org::echo][echo]]
 
-- dd-161112002652 :: Copy and restore MBR of block device (HDD/SSD).
+- dd-161113185234 :: Copy and restore MBR of block device (HDD/SSD).
 #+BEGIN_SRC sh
+  #!/usr/bin/bash
+
   BLK_CP="/dev/sda"
   BLK_RS="/dev/sdb"
   MBR="$HOME"/mbr.img
@@ -274,11 +278,13 @@ echo
   echo "Restore MBR data to $BLK_RS"
   dd if="$MBR" of="$BLK_RS"
 #+END_SRC
-echo
+[[./cix-gnu-bash-builtin.org::echo][echo]]
 
-- dd-161112105950 :: Stress test of BLOCK device with random size files to a random sector number.
+- dd-161113185337 :: Stress test of BLOCK device with random size files to a random sector number.
      WARRNING: IT COULD DAMAGE YOUR DEVICE!
 #+BEGIN_SRC sh
+  #!/usr/bin/bash
+
   MNT_PATH="/mnt/lv_test"
   DEV_NAME="sdc"
   DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
@@ -301,10 +307,10 @@ echo
       rm "$MNT_PATH"/file_name
   done
 #+END_SRC
-[[./cix-gnu-core-utilities.org::*shuf][shuf]],
-[[file:./cix-gnu-core-utilities.org::*rm][rm]],
-while,
-[[./cix-gnu-core-utilities.org::*cat][cat]]
+[[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],
+[[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
+[[./cix-gnu-core-utilities.org::*cat][cat (1)]]
+[[./cix-gnu-bash-builtin.org::*while][while]],
 
 **** dd::files
 **** dd::see-also
@@ -861,9 +867,7 @@ while,
 **** yes::examples
 **** yes::files
 **** yes::see-also
-[[Index][⬆]]
-[[Index][⬆]]
-[[Index][⬆]]
+
 ** Reference
 *** Books
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
@@ -874,3 +878,4 @@ while,
   O'reilly
 *** Links
 - GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
+- http://wiki.linuxquestions.org/
