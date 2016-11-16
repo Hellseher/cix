@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2016-11-16 Wed 01:09:56 GMT> sharlatan
+# Last Modified  : <2016-11-16 Wed 23:07:12 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,8 +12,9 @@ Internet for the "Answer". It a consolidated experience of using *nix OSes
 
 Contribution welcome!
 
-** Examples code-styling
+[[./cix-main.org][cix-main]]
 
+** Examples code-styling
 I'm using org-mode format all example files. It's very powerfull and flexible
 but takes time to master it.
 
