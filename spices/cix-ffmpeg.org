@@ -1,0 +1,42 @@
+# File           : cix-ffmpeg.org
+# Created        : <2016-11-16 Wed 23:24:34 GMT>
+# Last Modified  : <2016-11-16 Wed 23:38:01 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: FFmpeg
+
+http://ffmpeg.org/
+
+* Index
+#+BEGIN_EXAMPLE
+    ffmpeg (1)           - ffmpeg video converter
+    ffplay (1)           - FFplay media player
+    ffprobe (1)          - ffprobe media prober
+    ffserver (1)         - ffserver video server
+#+END_EXAMPLE
+
+* Receipts
+
+** ffmpeg                                                                       :cmd:
+*** ffmpeg::options
+*** ffmpeg::examples
+
+- ffmpeg-161116232611 :: Simple screen cast.
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  OUTPUT_PATH="$HOME/screencasts"
+  [[ -d "$OUTPUT_PATH" ]] ||  mkdir -p "$OUTPUT_PATH"
+
+  ffmpeg -f x11grab \
+         -r 25 \
+         -s 800x600 \
+         -i :0.0 \
+         "$OUTPUT_PATH"/output_file.mpg
+#+END_SRC
+[[file:./cix-gnu-core-utilities.org::mkdir][mkdir (1)]],
+test

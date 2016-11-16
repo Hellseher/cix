@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-16 Wed 23:07:12 GMT> sharlatan
+# Last Modified : <2016-11-16 Wed 23:38:13 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -127,7 +127,7 @@ on *GNU/Linux*
   + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
   + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
 
- - *Compress-Archive* /I'm a pac man/
+- *Compress-Archive* /I'm a pac man/
   + [[./spices/cix-gzip.org][gzip]] :: The GNU data compression program
   + [[./spices/cix-gnu-tar.org][gnu-tar]] :: A GNU file archiving program
   + [[./spices/cix-cpio.org][cpio]] :: A GNU archiving program
@@ -173,6 +173,7 @@ on *GNU/Linux*
 
 - *GUI* /Pleas your eyes/
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
+  + [[./spices/cix-ffmpeg.org][ffmpeg]] :: Digital VCR and streaming server
 
 - *Security* /It's never be save/
 -----
