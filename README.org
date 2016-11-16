@@ -1,220 +1,43 @@
-# File          : README.org
-# Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-14 Mon 22:20:09 GMT> sharlatan
-# Maintainer    : sharlatan <sharlatanus@gmail.com>
-# Short         :
+# File           : README.org
+# Created        : <2016-11-16 Wed 00:51:06 GMT>
+# Last Modified  : <2016-11-16 Wed 01:09:56 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
 
 #+OPTIONS: num:nil
-#+OPTIONS: toc:nil
 
-#+TITLE: CIX
-/Collectlion of unIX utilities tips/
+Collection of templates which I came across during daily work and research
+Internet for the "Answer". It a consolidated experience of using *nix OSes
 
-** Intro
+Contribution welcome!
 
-The aim of this repo is to collect short examples of command usage, to be
-helpful for *nix beginners and interesting place for advanced users.  More
-detailed information containing here can be reach in man pages.
+** Examples code-styling
 
-Man pages common sections.
+I'm using org-mode format all example files. It's very powerfull and flexible
+but takes time to master it.
 
-| Linux | Solaris | HP-UX | AIX |                                            |
-|-------+---------+-------+-----+--------------------------------------------|
-|     1 |       1 |     1 |   1 | General commands                           |
-|     2 |       2 |     2 |   2 | Systems calls                              |
-|     3 |       3 |     3 |   3 | C library functions                        |
-|     4 |       7 |     7 |   4 | Special files                              |
-|     5 |       4 |     4 |   5 | File formats and conventions               |
-|     6 |       6 |     - |   6 | Games and Screen savers                    |
-|     7 |       5 |     5 |   7 | Miscellaneous                              |
-|     8 |      1m |    1m |   8 | System administration commands and daemons |
-|     9 |       9 |     - |   - | Oscure kernel specs and interfaces         |
-|       |         |       |     |                                            |
-|     - |       - |     9 |   - | HP-UX general information                  |
-|-------+---------+-------+-----+--------------------------------------------|
-
-*** Basic
-For example, you know the command but not sure about package where it goes from
-
-/what package $CMD belongs to/
-
-on *GNU/Linux*
-#+BEGIN_EXAMPLE
-    $: CMD="ls"
-    $: rpm -qf $(which "$CMD")       # ReadHat, Fedora, CentOS
-    $: dpkg-query -S $(which "$CMD") # Debian, Ubuntu, LinuxMint
-#+END_EXAMPLE
-
-on *BSD*
-#+BEGIN_EXAMPLE
-    $: CMD="ls"
-    $: pkg which $(which "$CMD")
-#+END_EXAMPLE
-
-And oposite situation, you want to find out what commands are in the package
-
-/get list of commands belong to a $PACK/
-
-on *GNU/Linux*
-#+BEGIN_EXAMPLE
-    $: PACK="coreutils"
-    $: whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
-    $: rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
-#+END_EXAMPLE
-*** Examples code-styling
 Variables
-: ALL_CAPS="string"
-: ALL_CAPS="/long/path/to/file"
-: ALL_CAPS=1234
-: ALL_CAPS=$(find ./ -type f)
+#+BEGIN_EXAMPLE
+VAR_STRING="string"
+VAR_NUM=1234
+VAR_PATH="/path/to/somewhere"
+#+END_EXAMPLE
 
-Pathes
-: <SUFIX>_PATH
-** Index
-/Make each program do one thing well/
+Examples header with time-stamp
+- command-YmdHMS :: short description
+#+BEGIN_SRC sh
+  #!/usr/bin/env sh
+  # Point to what shell did you use.
 
-: <package-name><link><description>
+  # Body, less word more examples!
+#+END_SRC
+links to other command used
 
-- *Legacy* /Keep the history/
-  + [[./spices/cix-hall_of_fame.org][Hall of Fame]] :: Who made it posible!
-  + [[./spices/cix-unix_land.org][UNIX Land]] :: Common UNIX commands.
 
-- *Core* /Usually it contains on the most distributions/
-  + [[./spices/cix-busybox.org][busybox]] :: The Swiss Army Knife of Embedded Linux
-  + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities
-  + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages
-  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system
-
-- *File* /Everything is a file/!
-  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
-  + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
-  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
-  + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
-  + [[./spices/cix-nano.org][nano]] :: A small text editor
-  + [[./spices/cix-sed.org][sed/ed]] :: A GNU stream text editor
-  + [[./spices/cix-vim.org][vim-enchanced]] :: A version of the VIM editor which includes recent enhancements
-
-- *Filesystem* /Partition file system craft and check/
-  + [[./spices/cix-acl.org][acl]] :: Access control list utilities
-  + [[./spices/cix-btrfs-progs.org][btrfs-progs]] :: Userspace programs for btrfs.
-  + [[./spices/cix-curlftpfs.org][CurlFtpFS]] :: is a fs for accessing FTP hosts based on FUSE and libcurl
-  + [[./spices/cix-e2fsprogs.org][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
-  + [[./spices/cix-lvm2.org][lvm2]] :: Userland logical volume management tools
-  + [[./spices/cix-nfs-utils.org][nfs-utils]] :: supporting clients and daemons for the kernel NFS server
-  + [[./spices/cix-linux_diskquota.org][quota]] :: System tools for monitoring users disk usage
-
-- *Utillities* /Be silent and help ppls/
-  + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
-  + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when UNIX was young.
-  + [[file:./spices/cix-parallel.org][parallel]] :: Shell tool for executing jobs in parallel.
-  + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
-  + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
-  + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
-  + [[./spices/cix-shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
-  + [[file:./spices/cix-parted.org][parted]]  :: The GNU disk partition manipulation program
-
-- *Hardware* /Hard as a Rock!/
-  + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
-  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
-  + [[./spices/cix-smartmontools.org][smartmontools]] :: Tools for monitoring SMART capable hard disks
-  + [[./spices/cix-dmidecode.org][dmidecode]] :: Tool to analyse BIOS DMI data
-  + [[./spices/cix-usbutils.org][usbutils]] :: Linux USB utilities
-
-- *Scheduling* /World spinning around/
-  + [[./spices/cix-at.org][at]] :: Job spooling tools
-  + [[./spices/cix-cronie.org][cronie]]  :: Cron daemon for executing programs at set times
-
-- *Searching* /Loosing my religion/
-  + [[./spices/cix-gnu-grep.org][gnu-grep]] :: Pattern matching utilities
-  + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
-  + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
-  + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
-
- - *Compress-Archive* /I'm a pac man/
-  + [[./spices/cix-gzip.org][gzip]] :: The GNU data compression program
-  + [[./spices/cix-gnu-tar.org][gnu-tar]] :: A GNU file archiving program
-  + [[./spices/cix-cpio.org][cpio]] :: A GNU archiving program
-  + [[./spices/cix-lrzip.org][lrzip]] :: Compression program optimized for large files
-  + [[./spices/cix-bzip2.org][bzip2]] :: A file compression utility
-  + [[./spices/cix-xz.org][xz]] :: LZMA compression utilities
-  + [[./spices/cix-pax.org][pax]] :: POSIX File System Archiver
-
-- *Networking* /We all live in the someone's subnet in/
-  + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying DNS name server
-  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
-  + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: A collection of common network programs
-  + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
-  + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities
-  + [[./spices/cix-iputils.org][iputils]] :: Network monitoring tools including ping
-  + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
-  + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
-  + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
-  + [[./spices/cix-openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
-  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network
-
-- *Packaging* /Pack me up, pack me down/
-  + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks.
-
-- *Shell* /Not just sand.../
-  + [[./spices/cix-gnu-bash-builtin.org][gnu-bash-builtin]] :: GNU Bash shell built in commands
-  + [[./spices/cix-fish.org][fish]] ::  A friendly interactive shell
-  + [[./spices/cix-screen.org][screen]] :: A screen manager that supports multiple logins on one terminal
-  + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
-  + [[./spices/cix-zsh.org/][zsh]] ::  Powerful interactive shell
-
-- *Development* /In the fields of observation chance favors only the prepared mind./
-  + [[./spices/cix-glibc-common.org][glibc-common]] :: Common binaries and locale data for glibc
-
-- *Research* /I've got a clue!/
-  + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
-
-- *Kernel* /Got to basic/
-  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
-
-- *Cryptograpy* /Who break Enigma code?/
-  + [[./spices/cix-gpg.org][gnupg]] :: A GNU utility for secure communication and data storage
-
-- *GUI* /Pleas your eyes/
-  + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
-
-- *Security* /It's never be save/
------
-** Glosary
-- DMI ::
-- GUI ::
-- MBR ::
-** References
-*** Books
-- Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbinsp
-  *LINUX in a nutshell 6th Edition;*
-  O'reilly media, 2009;
-- Evi Nemeth, Garth Snyder, Trent R. Hein, Ben Whaley;
-  *UNIX and LINUX System Administration Handbook 4th edition*;
-  Prentice Hall, 2013;
-- Arnold Robbins;
-  *UNIX in a Nutshell*;
-  O'reilly, 2008;
-
-*** Links
-- GNU Coreutils http://www.gnu.org/software/coreutils/manual/coreutils.html
-- Basics of the Unix Philosophy http://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
-- Filenames and Pathnames in Shell: How to do it Correctly http://www.dwheeler.com/essays/filenames-in-shell.html
-- http://www.commandlinefu.com/commands/browse/sort-by-votes
-- http://everythingsysadmin.com/
-
-*** Wikis
-- http://wiki.bash-hackers.org/
-- https://emacswiki.org/
-- https://wiki.archlinux.org/
-- https://wiki.freebsd.org/
-- https://wiki.ubuntu.com/
-
-*** Hubs
-- Bioinformatics one-liners https://github.com/stephenturner/oneliners
-- Awesome Shell https://github.com/alebcay/awesome-shell
-- Awesome Bash https://github.com/awesome-lists/awesome-bash
-
-*** IRC
-- irc.freenode.org ::
-  - #linux was created on 2001-02-09 23:16:24
-# End of README.org
+** How to convert to whatever
+Export *org files to {pdf,html,tex,txt,whatever}
+- Emacs Org-Mode http://orgmode.org/manual/Exporting.html
+- Pandoc http://pandoc.org/demos.html
+- Org to Reveal.js https://github.com/yjwen/org-reveal
+- Org to nice HTML https://github.com/fniessen/org-html-themes
