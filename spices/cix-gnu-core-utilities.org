@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-16 Wed 00:33:38 GMT> sharlatan
+# Last Modified : <2016-11-16 Wed 23:07:00 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -258,6 +258,10 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 |--------------+---|
 
 *** dd::examples
+
+- dd-161116230224 :: Memory I/O speed test.
+: time dd if=/dev/zero of=/dev/null bs=1M count=32768
+
 - dd-161113185213 :: Test NFS, LAN and I/O speed
 #+BEGIN_SRC sh
   #!/usr/bin/bash
@@ -769,8 +773,15 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** tail::files
 *** tail::see-also
 ** tee                                                                          :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /read from standard input and write to standard output and files/
+/Written by Mike Parker, Richard M. Stallman, and David MacKenzie./
+
 *** tee::options
+
+You can use multiple process substitutions (works with zsh, bash, ksh)
+#+BEGIN_EXAMPLE
+>(COMMAND)
+#+END_EXAMPLE
 *** tee::examples
 - tee-161115235121 :: To split pipe in multiple streams.
 #+BEGIN_SRC sh
@@ -781,12 +792,11 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
            >(tr " " "_") \
            >(wc ) \
            >(tr "[:lower:]" "[:upper:]")
-
-
 #+END_SRC
 [[file:./cix-util-linux.org::*rev][rev (1)]],
 [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],
 [[file:./cix-gnu-bash-builtin.org::echo][echo]]
+
 - tee-161115231840 :: Download a file and validate it on the "fly"
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
