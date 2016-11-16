@@ -17,6 +17,7 @@
 | *Source*      | [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/][iproute2]]                                           |
 |-------------+----------------------------------------------------|
 
+* Index
 #+BEGIN_EXAMPLE
     ip (8)     - show / manipulate routing, devices, policy routing and tunnels
     ss (8)     - another utility to investigate sockets
@@ -49,23 +50,45 @@ ${NM} - netmask
 #+END_EXAMPLE
 -----
 
-** ip
-
+* Recipients
+** ip                                                                           :cmd:
+[[Index][⬆]]
+*** ip::options
 | Command | Valid abbreviations          |
 |---------+------------------------------|
 | address | a ad add addr addres address |
-|         |                              |
 
-*** ip: examples
+*** ip::examples
 
 - ip-161108233852 :: Watch trafic statistics on interface *enp2s0*
 #+BEGIN_SRC sh
     $: watch ip -s link show enp2s0
 #+END_SRC
-*** ip: files
+*** ip::files
 
-*** ip: see-also
+*** ip::see-also
 -----
+** ss                                                                           :cmd:
+[[Index][⬆]]
+*** ss::options
+*** ss::examples
+
+- ss-161116231307 :: programms that request access to Internet. banch of onelinere core option *-p*
+#+BEGIN_SRC sh
+  ss -p | cat
+  ss -p | grep STA
+
+  # Just process/command name
+  ss -p | cut -f2 -sd\"or
+  ss -p | grep STA | cut -f2 -d\"
+#+END_SRC
+cat,
+cut,
+grep,
+
+*** ss::files
+*** ss::see-also
+
 ** Referance
 *** Links
 - http://baturin.org/docs/iproute2/
