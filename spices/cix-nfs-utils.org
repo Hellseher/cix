@@ -1,15 +1,138 @@
 # File           : cix-nfs-utils.org
 # Created        : <2016-11-07 Mon 22:11:39 GMT>
-# Last Modified  : <2016-11-07 Mon 22:15:29 GMT> sharlatan
+# Last Modified  : <2016-11-17 Thu 23:35:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-http://linux-nfs.org/wiki/index.php/Main_Page
+[[../README.org::*Index][|≣|]]
 #+TITLE: NFS utils
 
-** References
-*** Links
+|-------------+---------------|
+| *Author*      |               |
+| *Maintainers* |               |
+| *Realiesed*   |               |
+| *Source*      | [[http://git.linux-nfs.org/][linux-nfs.git]] |
+| *Info*        |               |
+|-------------+---------------|
+The nfs-utils  package provides a daemon  for the kernel NFS  server and related
+tools, which  provides a much higher  level of performance than  the traditional
+Linux NFS server used by most users.
+-----
+
+* Index
+#+BEGIN_EXAMPLE
+    mount.nfs (8)   - mount a Network File System
+    nfsdcltrack (8) - NFSv4 Client Tracking Callout Program
+    rpc.statd (8)   - NSM service daemon
+    umount.nfs (8)  - unmount a Network File System
+    blkmapd (8)     - pNFS block layout mapping daemon
+    exportfs (8)    - maintain table of exported NFS file systems
+    mountstats (8)  - Displays various NFS client per-mount statistics
+    nfsidmap (8)    - The NFS idmapper upcall program
+    nfsiostat (8)   - Emulate iostat for NFS mount points using /proc/self/mountstats
+    nfsstat (8)     - list NFS statistics
+    rpc.gssd (8)    - RPCSEC_GSS daemon
+    rpc.idmapd (8)  - NFSv4 ID <-> Name Mapper
+    rpc.mountd (8)  - NFS mount daemon
+    rpc.nfsd (8)    - NFS server process
+    rpcdebug (8)    - set and clear NFS and RPC kernel debug flags
+    showmount (8)   - show mount information for an NFS server
+    sm-notify (8)   - send reboot notifications to NFS peers
+#+END_EXAMPLE
+* Receipts
+** mount.nfs
+***  mount.nfs::options
+***  mount.nfs::examples
+***  mount.nfs::files
+***  mount.nfs::see-also
+** nfsdcltrack
+***  nfsdcltrack::options
+***  nfsdcltrack::examples
+***  nfsdcltrack::files
+***  nfsdcltrack::see-also
+** rpc.statd
+***  rpc.statd::options
+***  rpc.statd::examples
+***  rpc.statd::files
+***  rpc.statd::see-also
+** umount.nfs
+***  umount.nfs::options
+***  umount.nfs::examples
+***  umount.nfs::files
+***  umount.nfs::see-also
+** blkmapd
+***  blkmapd::options
+***  blkmapd::examples
+***  blkmapd::files
+***  blkmapd::see-also
+** exportfs
+***  exportfs::options
+***  exportfs::examples
+***  exportfs::files
+***  exportfs::see-also
+** mountstats
+***  mountstats::options
+***  mountstats::examples
+***  mountstats::files
+***  mountstats::see-also
+** nfsidmap
+***  nfsidmap::options
+***  nfsidmap::examples
+***  nfsidmap::files
+***  nfsidmap::see-also
+** nfsiostat
+***  nfsiostat::options
+***  nfsiostat::examples
+***  nfsiostat::files
+***  nfsiostat::see-also
+** nfsstat
+***  nfsstat::options
+***  nfsstat::examples
+***  nfsstat::files
+***  nfsstat::see-also
+** rpc.gssd
+***  rpc.gssd::options
+***  rpc.gssd::examples
+***  rpc.gssd::files
+***  rpc.gssd::see-also
+** rpc.idmapd
+***  rpc.idmapd::options
+***  rpc.idmapd::examples
+***  rpc.idmapd::files
+***  rpc.idmapd::see-also
+** rpc.mountd
+***  rpc.mountd::options
+***  rpc.mountd::examples
+***  rpc.mountd::files
+***  rpc.mountd::see-also
+** rpc.nfsd
+***  rpc.nfsd::options
+***  rpc.nfsd::examples
+***  rpc.nfsd::files
+***  rpc.nfsd::see-also
+** rpcdebug
+***  rpcdebug::options
+***  rpcdebug::examples
+***  rpcdebug::files
+***  rpcdebug::see-also
+** showmount
+***  showmount::options
+***  showmount::examples
+***  showmount::files
+***  showmount::see-also
+** sm-notify
+***  sm-notify::options
+***  sm-notify::examples
+***  sm-notify::files
+***  sm-notify::see-also
+
+
+* References
+** Links
 - Linux NFS-HOWTO http://nfs.sourceforge.net/nfs-howto/
+- IETF::Network File System Version 4 (nfsv4) https://datatracker.ietf.org/wg/nfsv4/documents/
+- IETF::NFS: Network File System Protocol Specification https://tools.ietf.org/html/rfc1094
+- IETF::Network File System (NFS) version 4 Protocol https://www.ietf.org/rfc/rfc3530.txt

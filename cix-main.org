@@ -1,6 +1,6 @@
 # File          : README.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-16 Wed 23:38:13 GMT> sharlatan
+# Last Modified : <2016-11-17 Thu 23:35:53 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -93,12 +93,14 @@ on *GNU/Linux*
 
 - *Filesystem* /Partition file system craft and check/
   + [[./spices/cix-acl.org][acl]] :: Access control list utilities
+  + [[./spices/cix-autofs.org][autofs]] :: A tool for automatically mounting and unmounting filesystems
   + [[./spices/cix-btrfs-progs.org][btrfs-progs]] :: Userspace programs for btrfs.
   + [[./spices/cix-curlftpfs.org][CurlFtpFS]] :: is a fs for accessing FTP hosts based on FUSE and libcurl
   + [[./spices/cix-e2fsprogs.org][E2fsprogs]] :: Filesystem utilities for use with Ext2/3/4.
   + [[./spices/cix-lvm2.org][lvm2]] :: Userland logical volume management tools
   + [[./spices/cix-nfs-utils.org][nfs-utils]] :: supporting clients and daemons for the kernel NFS server
   + [[./spices/cix-linux_diskquota.org][quota]] :: System tools for monitoring users disk usage
+  + [[./spices/cix-nfs-kernel-server.org][nfs-kernel-server]] :: 
 
 - *Utillities* /Be silent and help ppls/
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
