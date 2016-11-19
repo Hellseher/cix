@@ -1,0 +1,19 @@
+# File           : cix-fdupes.org
+# Created        : <2016-11-19 Sat 19:13:55 GMT>
+# Last Modified  : <2016-11-19 Sat 21:54:10 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[../README.org::*Index][|≣|]]
+#+TITLE: Fdupes
+
+|------------+------------|
+| *Author*     |            |
+| *Maintainer* |            |
+| *Released*   |            |
+| *Source*     | [[https://github.com/adrianlopezroche/fdupes][fdupes.git]] |
+| *Info*       |            |
+|------------+------------|

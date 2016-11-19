@@ -1,6 +1,6 @@
-# File          : README.org
+# File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-17 Thu 23:35:53 GMT> sharlatan
+# Last Modified : <2016-11-19 Sat 21:54:10 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -12,9 +12,8 @@
 
 ** Intro
 
-The aim of this repo is to collect short examples of command usage, to be
-helpful for *nix beginners and interesting place for advanced users.  More
-detailed information containing here can be reach in man pages.
+The main purpouse of the project to collect templates, oneliners, examples in
+one place.
 
 Man pages common sections.
 
@@ -46,15 +45,15 @@ For example, you know the command but not sure about package where it goes from
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
-    $: CMD="ls"
-    $: rpm -qf $(which "$CMD")       # ReadHat, Fedora, CentOS
-    $: dpkg-query -S $(which "$CMD") # Debian, Ubuntu, LinuxMint
+    ~$ CMD="ls"
+    ~$ rpm -qf $(which "$CMD")       # ReadHad derived
+    ~$ dpkg-query -S $(which "$CMD") # Debian derived
 #+END_EXAMPLE
 
 on *BSD*
 #+BEGIN_EXAMPLE
-    $: CMD="ls"
-    $: pkg which $(which "$CMD")
+    ~$ CMD="ls"
+    ~$ pkg which $(which "$CMD")
 #+END_EXAMPLE
 
 And oposite situation, you want to find out what commands are in the package
@@ -63,9 +62,10 @@ And oposite situation, you want to find out what commands are in the package
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
-    $: PACK="coreutils"
-    $: whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
-    $: rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
+    ~$ PACK="coreutils"
+    ~$ whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
+    ~$ rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
+    ~$ dpkg-query -L "$PACK" | grep -oP "(?<=in/).+"      # Debian dirived
 #+END_EXAMPLE
 ** Index
 /Make each program do one thing well/
@@ -100,17 +100,18 @@ on *GNU/Linux*
   + [[./spices/cix-lvm2.org][lvm2]] :: Userland logical volume management tools
   + [[./spices/cix-nfs-utils.org][nfs-utils]] :: supporting clients and daemons for the kernel NFS server
   + [[./spices/cix-linux_diskquota.org][quota]] :: System tools for monitoring users disk usage
-  + [[./spices/cix-nfs-kernel-server.org][nfs-kernel-server]] :: 
+  + [[./spices/cix-nfs-kernel-server.org][nfs-kernel-server]] ::
 
 - *Utillities* /Be silent and help ppls/
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when UNIX was young.
   + [[file:./spices/cix-parallel.org][parallel]] :: Shell tool for executing jobs in parallel.
+  + [[file:./spices/cix-parted.org][parted]] :: The GNU disk partition manipulation program
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: Utilities for managing accounts and shadow password files
-  + [[file:./spices/cix-parted.org][parted]]  :: The GNU disk partition manipulation program
+  + [[./spices/cix-strace.org][strace]] :: Tracks and displays system calls associated with a running process
 
 - *Hardware* /Hard as a Rock!/
   + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
@@ -128,6 +129,7 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
   + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
   + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
+  + [[./spices/cix-fdupes.org][fdupes]] :: Finds duplicate files in a given set of directories
 
 - *Compress-Archive* /I'm a pac man/
   + [[./spices/cix-gzip.org][gzip]] :: The GNU data compression program
