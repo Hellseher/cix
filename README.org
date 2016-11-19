@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2016-11-16 Wed 23:07:12 GMT> sharlatan
+# Last Modified  : <2016-11-19 Sat 22:12:43 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -14,9 +14,19 @@ Contribution welcome!
 
 [[./cix-main.org][cix-main]]
 
-** Examples code-styling
-I'm using org-mode format all example files. It's very powerfull and flexible
-but takes time to master it.
+** Structure
+
+- cix-main.org :: Index of of all files.
+- img/ :: Picture files.
+- spices/ :: Collection of files stuffed with examples.
+- tests/ :: Files for testing referenced in examples.
+- tutors/ :: Full size tutorials "How to"
+
+** Layout
+I use org-mode format for example files. It's a very powerful and flexible but
+takes time to master it.
+
+Style requirements for exampls
 
 Variables
 #+BEGIN_EXAMPLE
@@ -25,18 +35,45 @@ VAR_NUM=1234
 VAR_PATH="/path/to/somewhere"
 #+END_EXAMPLE
 
-Examples header with time-stamp
-- command-YmdHMS :: short description
+Structure
+
+#+BEGIN_EXAMPLE
+Package name
+
+| Author      | |
+| Maintainers | |
+| Released    | |
+| Source      | |
+| Info        | |
+
+Long discription
+
+* Index
+List of commands inluded in package with shor description
+* Receipts
+** command
+*** command::option
+*** command::examples
+*** command::files
+*** command::see-also
+* References
+** Books
+** Links
+** Wiki
+** IRC
+#+END_EXAMPLE
+
+Example header with time-stamp
+- command-YmdHMS :: short description:
 #+BEGIN_SRC sh
   #!/usr/bin/env sh
   # Point to what shell did you use.
 
   # Body, less word more examples!
 #+END_SRC
-links to other command used
+cmd (1) links to other command used
 
-
-** How to convert to whatever
+** Convert to whatever
 Export *org files to {pdf,html,tex,txt,whatever}
 - Emacs Org-Mode http://orgmode.org/manual/Exporting.html
 - Pandoc http://pandoc.org/demos.html
