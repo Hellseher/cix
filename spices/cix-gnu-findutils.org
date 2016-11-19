@@ -1,94 +1,94 @@
 # File           : cix-gnu-findutils.org
-# Created        : <2016-11-07 Mon 23:34:20 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:47 GMT> sharlatan
+# Created        : <2015-11-17 Tue 22:54:30 GMT>
+# Last Modified  : <2016-11-19 Sat 21:54:10 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
+[[../README.org::*Index][|≣|]]
+#+TITLE: GNU Findutils
 
-File          : gnu-findutils.md
-Created       : Tue 17 Nov 2015 22:54:30
-Last Modified : Wed 26 Oct 2016 19:11:46 sharlatan
-Maintainer    : sharlatan
--->
-
-[[≣](../README.md#Index "Index")]
-[[↷](https://www.gnu.org/software/findutils/)]
-
-GNU Findutils
--------------
-
-|                 |                                                                 |
-| ---             | ---                                                             |
-| __Author__      | Kevin Dalley <kevind@rahul.net>                                 |
-| __Maintainers__ |                                                                 |
-|                 | Eric B. Decker                                                  |
-|                 | Michael Rendell                                                 |
-|                 | David J. MacKenzie                                              |
-|                 | Jim Meyering                                                    |
-|                 | Tim Wood                                                        |
-|                 | Paul Eggert <eggert@cs.ucla.edu>                                |
-|                 | James Youngman <jay@gnu.org>                                    |
-|                 | Jay Plett                                                       |
-|                 | Paul Sheer                                                      |
-|                 | Dmitry V. Levin                                                 |
-|                 | Bas van Gompel                                                  |
-|                 | Eric Blake <ebb9@byu.net>                                       |
-| __Realised__    | 2000                                                            |
-| __Source__      | [findutils git](http://git.savannah.gnu.org/cgit/findutils.git) |
-| __Info__        | [GNU findutils](https://www.gnu.org/software/findutils/)        |
+|-------------+-----------------------------------------------------|
+| *Author*      | Kevin Dalley                                        |
+| *Maintainers* | Eric B. Decker, Michael Rendell, David J. MacKenzie |
+|             | Jim Meyering, Tim Wood, Paul Eggert,                |
+|             | James Youngman, Jay Plett, Paul Sheer,              |
+|             | Dmitry V. Levin, Bas van Gompel, Eric Blake         |
+| *Realised*    | 2000                                                |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/findutils.git][findutils.git]]                                       |
+| *Info*        | [[https://www.gnu.org/software/findutils/][GNU findutils]]                                       |
+|-------------+-----------------------------------------------------|
 
 The GNU Find Utilities are  the basic directory searching utilities of
 the  GNU  operating  system.  These programs  are  typically  used  in
 conjunction  with  other  programs  to provide  modular  and  powerful
 directory search and file locating capabilities to other commands.
+-----
 
-* * *
+* Index
 
-[find](gnu-findutils.md#find) : search for files in a directory hierarchy
+#+Begin_EXAMPLE
+    find (1)    - search for files in a directory hierarchy
+    find (1p)   - find files
+    oldfind (1) - search for files in a directory hierarchy
+    xargs (1)   - build and execute command lines from standard input
+    xargs (1p)  - construct argument lists and invoke utility
+#+END_EXAMPLE
 
-    locate   : list files in databases that match a pattern
-    updatedb : update a file name database
-    xargs    : build and execute command lines from standard input
+* Receipts
 
-* * *
+** find                                                                         :cmd:
 
-### find ###
+*** find::options
 
-    find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
+:    find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
 
-copy all *jpg files from current directory to $HOME/Pictures one:
+*** find::exampls
 
-    $: find ./ -type f -name *jpg -exec cp {} ~/Pictures \;
+- find-161119210555 :: copy all "*jpg" files from current directory to
+     $HOME/Pictures one:
+:    ~$ find ./ -type f -name "*jpg" -exec cp {} ~/Pictures \;
+[[file:./cix-gnu-core-utilities.org::*cp][cp (1)]]
 
-find only in current directory (universal)
+- find-161119210633 :: find only in current directory (universal):
+:     ~$ find ./ \( ! -name . -prune \) \( -type -f -o -type l \) # POSIX version
+:     ~$ find ./ -maxdepth 1                                      # GNU version
 
-    $: find ./ \( ! -name . -prune \) \( -type -f -o -type l \) # POSIX version
-    $: find ./ -maxdepth 1                                      # GNU version
+- find-161119211114 :: show all files in current directory except hidden:
+:     ~$ find ./ -maxdepth 1 -type f -not '.*'
 
-find and show only unique files attribute from bunch of files:
+- find-161119211147 :: search for  specified "string" in list of files:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    $: find ./ -type f -printf "%Td_%TB_%TY\n" | sort -u
+  SEARCH_STR="find_me"
+  find ./ -type f -exec grep "$SEARCH_STR" {} /dev/null \;
+#+END_SRC
+[[file:./cix-gnu-grep.org::*grep][grep (1)]]
 
-show all files in current directory except hidden:
+- find-161119211506 :: Find all files on the file system that are called
+     configuration, ignoring case, and accommodating abbreviations such as
+     confg, cnfg, and cnfig:
+:    ~# find / -regex '^[/a-z_]*[cC]+[Oo]*[nN]+[fF]+[iI]*[gF]+$' 2>/dev/null
 
-    $: find ./ -maxdepth 1 -type f -not '.*'
+- find-161119211734 :: find all files chmod all 777 to 644:
+:    ~# find / -type f -perm 0777 -print -exec chmod 644 {} \;
+[[file:./cix-gnu-core-utilities.org::*chmod][chmod (1)]]
 
-find specified "string" in list of files:
+- find-161119212110 :: find all dublicated file by their hashes:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    $: find ./ -type f -exec grep "<string>" {} /dev/null \;и
+  # use any of (sha1sum 41), (sha224 57), (sha385sum 97), (sha256sum 65)
+  HASH_CHCK=(md5sum 32)
+  find ./ -maxdepth 1 -type f -print0 \
+      | xargs -0 "${HASH_CHCK[1]}" \
+      | sort \
+      | uniq -w"${HASH_CHCK[2]}" --all-repeated=separate
+#+END_SRC
 
-Find all the files on the file system that are called configuration,
-ignoring case, and accommodating abbreviations such as confg, cnfg,
-and cnfig using the following command:
-
-    $: find / -regex '^[/a-z_]*[cC]+[Oo]*[nN]+[fF]+[iI]*[gF]+$'
-
-find all files root directory with 777 permissions and chmod to 644;
-
-    #: find / -type f -perm 0777 -print -exec chmod 644 {} \;
-
-## Reference ##
-1. A collection of Unix/Linux find command examples http://alvinalexander.com/unix/edu/examples/find.shtml
+* References
+** Links
+- A collection of Unix/Linux find command examples http://alvinalexander.com/unix/edu/examples/find.shtml
