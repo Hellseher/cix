@@ -1,0 +1,26 @@
+# File           : cix-nfs-kernel-server.org
+# Created        : <2016-11-18 Fri 22:26:48 GMT>
+# Last Modified  : <2016-11-19 Sat 11:28:17 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: NFS Kernel Server
+
+* Index
+#+BEGIN_EXAMPLE
+    rpc.nfsd (8)    - NFS server process
+    exportfs (8)    - maintain table of exported NFS file systems
+    rpc.mountd (8)  - NFS mount daemon
+    nfsdcltrack (8) - NFSv4 Client Tracking Callout Program
+#+END_EXAMPLE
+
+
+*** files
+#+BEGIN_EXAMPLE
+/etc/default/nfs-kernel-server
+/etc/default/nfs-common
+/etc/exports
+#+END_EXAMPLE

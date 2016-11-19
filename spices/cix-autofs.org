@@ -1,0 +1,11 @@
+# File           : cix-autofs.org
+# Created        : <2016-11-17 Thu 22:42:00 GMT>
+# Last Modified  : <2016-11-17 Thu 22:42:11 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+
+#+TITLE: AutoFS

@@ -1,0 +1,10 @@
+# File           : cix-strace.org
+# Created        : <2016-11-18 Fri 23:35:13 GMT>
+# Last Modified  : <2016-11-18 Fri 23:39:34 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Strace

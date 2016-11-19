@@ -1,0 +1,25 @@
+# File           : cix-gnu-grep.org
+# Created        : <2016-11-18 Fri 23:49:59 GMT>
+# Last Modified  : <2016-11-19 Sat 11:28:17 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: GNU Grep
+
+* Index
+#+BEGIN_EXAMPLE
+    egrep (1) - print lines matching a pattern
+    fgrep (1) - print lines matching a pattern
+    grep (1)  - print lines matching a pattern
+    grep (1p) - search a file for a pattern
+#+END_EXAMPLE
+
+* Receipts
+** grep                                                                         :cmd:
+*** grep::options
+*** grep::examples
+*** grep::files
+*** grep::see-also
