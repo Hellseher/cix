@@ -1,0 +1,24 @@
+# File           : cix-pulseaudio-utils.org
+# Created        : <2016-11-20 Sun 22:31:06 GMT>
+# Last Modified  : <2016-11-20 Sun 22:32:29 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: PulseAudio
+
+* Index
+#+BEGIN_EXAMPLE
+    pacat (1)            - Play back or record raw or encoded audio streams on a PulseAudio sound server
+    pacmd (1)            - Reconfigure a PulseAudio sound server during runtime
+    pactl (1)            - Control a running PulseAudio sound server
+    padsp (1)            - PulseAudio OSS Wrapper
+    pamon (1)            - Play back or record raw or encoded audio streams on a PulseAudio sound server
+    paplay (1)           - Play back or record raw or encoded audio streams on a PulseAudio sound server
+    parec (1)            - Play back or record raw or encoded audio streams on a PulseAudio sound server
+    parecord (1)         - Play back or record raw or encoded audio streams on a PulseAudio sound server
+    pasuspender (1)      - Temporarily suspend PulseAudio
+    pax11publish (1)     - PulseAudio X11 Credential Utility
+#+END_EXAMPLE

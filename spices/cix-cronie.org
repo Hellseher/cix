@@ -1,0 +1,18 @@
+# File           : cix-cronie.org
+# Created        : <2016-11-20 Sun 22:41:51 GMT>
+# Last Modified  : <2016-11-20 Sun 22:42:35 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: cronie
+
+* Index
+#+BEGIN_EXAMPLE
+    crontab (1)          - maintains crontab files for individual users
+    crontab (5)          - files used to schedule the execution of programs
+    crontab (1p)         - schedule periodic background work
+    crond (8)            - daemon to execute scheduled commands
+#+END_EXAMPLE
