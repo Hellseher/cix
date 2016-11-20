@@ -1,6 +1,6 @@
 # File           : cix-util-linux.org
 # Created        : <2016-10-14 Wed 23:08:36 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 16:37:28 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -19,15 +19,15 @@
 |             | Werner Fink, Yuriy M. Kaminskiy                  |
 | *Realised*    | 2007                                             |
 | *Source*      | [[https://git.kernel.org/cgit/utils/util-linux/util-linux.git/][gutil-linux]]                                      |
+| *Info*        |                                                  |
 |-------------+--------------------------------------------------|
-
 
 The util-linux package contains a large variety of low-level system utilities
 that are necessary for a Linux system to function. Among others, Util-linux
 contains the fdisk configuration tool and the login program.
 ------
 
-** Index
+* Index
 #+BEGIN_EXAMPLE
      su (1)          - run a command with substitute user and group ID
      ul (1)          - do underlining
@@ -172,4 +172,627 @@ contains the fdisk configuration tool and the login program.
      switch_root (8) - switch to another filesystem as the root of the mount tree
 #+END_EXAMPLE
 
+* Receipts
+** addpart                                                                      :cmd:
+[[Index][⬆]]
+*** addpart::options
+*** addpart::examples
+*** addpart::files
+*** addpart::see-also
+** agetty                                                                       :cmd:
+[[Index][⬆]]
+*** agetty::options
+*** agetty::examples
+*** agetty::files
+*** agetty::see-also
+** blkid                                                                        :cmd:
+[[Index][⬆]]
+*** blkid::options
+*** blkid::examples
+*** blkid::files
+*** blkid::see-also
+** blockdev                                                                     :cmd:
+[[Index][⬆]]
+*** blockdev::options
+*** blockdev::examples
+*** blockdev::files
+*** blockdev::see-also
+** cal                                                                          :cmd:
+[[Index][⬆]]
+*** cal::options
+*** cal::examples
+*** cal::files
+*** cal::see-also
+** cfdisk                                                                       :cmd:
+[[Index][⬆]]
+*** cfdisk::options
+*** cfdisk::examples
+*** cfdisk::files
+*** cfdisk::see-also
+** chcpu                                                                        :cmd:
+[[Index][⬆]]
+*** chcpu::options
+*** chcpu::examples
+*** chcpu::files
+*** chcpu::see-also
+** chfn                                                                         :cmd:
+[[Index][⬆]]
+*** chfn::options
+*** chfn::examples
+*** chfn::files
+*** chfn::see-also
+** chrt                                                                         :cmd:
+[[Index][⬆]]
+*** chrt::options
+*** chrt::examples
+*** chrt::files
+*** chrt::see-also
+** chsh                                                                         :cmd:
+[[Index][⬆]]
+*** chsh::options
+*** chsh::examples
+*** chsh::files
+*** chsh::see-also
+** col                                                                          :cmd:
+[[Index][⬆]]
+*** col::options
+*** col::examples
+*** col::files
+*** col::see-also
+** colcrt                                                                       :cmd:
+[[Index][⬆]]
+*** olcrt::options
+*** olcrt::examples
+*** olcrt::files
+*** olcrt::see-also
+** colrm                                                                        :cmd:
+[[Index][⬆]]
+*** colrm::options
+*** colrm::examples
+*** colrm::files
+*** colrm::see-also
+** column                                                                       :cmd:
+[[Index][⬆]] /columnate lists/
 
+The column command appeared in 4.3BSD-Reno
+*** column::options
+*** column::examples
+- column-161120161537 :: nicely formated */etc/fstab*:
+:    ~$ sed 's/#.*//' /etc/fstab | column -t
+[[file:./cix-sed.org::*sed][sed (1)]]
+*** column::files
+*** column::see-also
+  colrm(1), ls(1), paste(1), sort(1)
+
+** ctrlaltdel                                                                   :cmd:
+[[Index][⬆]]
+*** ctrlaltdel::options
+*** ctrlaltdel::examples
+*** ctrlaltdel::files
+*** ctrlaltdel::see-also
+** delpart                                                                      :cmd:
+[[Index][⬆]]
+*** delpart::options
+*** delpart::examples
+*** delpart::files
+*** delpart::see-also
+** dmesg                                                                        :cmd:
+[[Index][⬆]]
+*** dmesg::options
+*** dmesg::examples
+*** dmesg::files
+*** dmesg::see-also
+** eject                                                                        :cmd:
+[[Index][⬆]]
+*** ject::options
+*** ject::examples
+*** ject::files
+*** ject::see-also
+** fallocate                                                                    :cmd:
+[[Index][⬆]]
+*** fallocate::options
+*** fallocate::examples
+*** fallocate::files
+*** fallocate::see-also
+** fdformat                                                                     :cmd:
+[[Index][⬆]]
+*** fdformat::options
+*** fdformat::examples
+*** fdformat::files
+*** fdformat::see-also
+** fdisk                                                                        :cmd:
+[[Index][⬆]]
+*** fdisk::options
+*** fdisk::examples
+*** fdisk::files
+*** fdisk::see-also
+** findfs                                                                       :cmd:
+[[Index][⬆]]
+*** findfs::options
+*** findfs::examples
+*** findfs::files
+*** findfs::see-also
+** findmnt                                                                      :cmd:
+[[Index][⬆]]
+*** findmnt::options
+*** findmnt::examples
+*** findmnt::files
+*** findmnt::see-also
+** flock                                                                        :cmd:
+[[Index][⬆]]
+*** flock::options
+*** flock::examples
+*** flock::files
+*** flock::see-also
+** fsck                                                                         :cmd:
+[[Index][⬆]]
+*** fsck::options
+*** fsck::examples
+*** fsck::files
+*** fsck::see-also
+** fsfreeze                                                                     :cmd:
+[[Index][⬆]]
+*** fsfreeze::options
+*** fsfreeze::examples
+*** fsfreeze::files
+*** fsfreeze::see-also
+** fstab                                                                        :cmd:
+[[Index][⬆]]
+*** fstab::options
+*** fstab::examples
+*** fstab::files
+*** fstab::see-also
+** fstrim                                                                       :cmd:
+[[Index][⬆]]
+*** fstrim::options
+*** fstrim::examples
+*** fstrim::files
+*** fstrim::see-also
+** getopt                                                                       :cmd:
+[[Index][⬆]]
+*** getopt::options
+*** getopt::examples
+*** getopt::files
+*** getopt::see-also
+** getopt                                                                       :cmd:
+[[Index][⬆]]
+*** getopt::options
+*** getopt::examples
+*** getopt::files
+*** getopt::see-also
+** getrlimit                                                                    :cmd:
+[[Index][⬆]]
+*** etrlimit::options
+*** etrlimit::examples
+*** etrlimit::files
+*** etrlimit::see-also
+** hexdump                                                                      :cmd:
+[[Index][⬆]]
+*** hexdump::options
+*** hexdump::examples
+*** hexdump::files
+*** hexdump::see-also
+** hwclock                                                                      :cmd:
+[[Index][⬆]]
+*** hwclock::options
+*** hwclock::examples
+*** hwclock::files
+*** hwclock::see-also
+** ionice                                                                       :cmd:
+[[Index][⬆]]
+*** ionice::options
+*** ionice::examples
+*** ionice::files
+*** ionice::see-also
+** ipcmk                                                                        :cmd:
+[[Index][⬆]]
+*** ipcmk::options
+*** ipcmk::examples
+*** ipcmk::files
+*** ipcmk::see-also
+** ipcrm                                                                        :cmd:
+[[Index][⬆]]
+*** ipcrm::options
+*** ipcrm::examples
+*** ipcrm::files
+*** ipcrm::see-also
+** ipcs                                                                         :cmd:
+[[Index][⬆]]
+*** pcs::options
+*** pcs::examples
+*** pcs::files
+*** pcs::see-also
+** isosize                                                                      :cmd:
+[[Index][⬆]]
+*** isosize::options
+*** isosize::examples
+*** isosize::files
+*** isosize::see-also
+** kill                                                                         :cmd:
+[[Index][⬆]]
+*** kill::options
+*** kill::examples
+*** kill::files
+*** kill::see-also
+** last                                                                         :cmd:
+[[Index][⬆]]
+*** last::options
+*** last::examples
+*** last::files
+*** last::see-also
+** ldattach                                                                     :cmd:
+[[Index][⬆]]
+*** ldattach::options
+*** ldattach::examples
+*** ldattach::files
+*** ldattach::see-also
+** logger                                                                       :cmd:
+[[Index][⬆]]
+*** logger::options
+*** logger::examples
+*** logger::files
+*** logger::see-also
+** login                                                                        :cmd:
+[[Index][⬆]]
+*** ogin::options
+*** ogin::examples
+*** ogin::files
+*** ogin::see-also
+** look                                                                         :cmd:
+[[Index][⬆]]
+*** look::options
+*** look::examples
+*** look::files
+*** look::see-also
+** losetup                                                                      :cmd:
+[[Index][⬆]]
+*** losetup::options
+*** losetup::examples
+*** losetup::files
+*** losetup::see-also
+** lsblk                                                                        :cmd:
+[[Index][⬆]]
+*** lsblk::options
+*** lsblk::examples
+*** lsblk::files
+*** lsblk::see-also
+** lscpu                                                                        :cmd:
+[[Index][⬆]]
+*** lscpu::options
+*** lscpu::examples
+*** lscpu::files
+*** lscpu::see-also
+** lslocks                                                                      :cmd:
+[[Index][⬆]]
+*** lslocks::options
+*** lslocks::examples
+*** lslocks::files
+*** lslocks::see-also
+** lslogins                                                                     :cmd:
+[[Index][⬆]]
+*** slogins::options
+*** slogins::examples
+*** slogins::files
+*** slogins::see-also
+** mcookie                                                                      :cmd:
+[[Index][⬆]]
+*** mcookie::options
+*** mcookie::examples
+*** mcookie::files
+*** mcookie::see-also
+** mesg                                                                         :cmd:
+[[Index][⬆]]
+*** mesg::options
+*** mesg::examples
+*** mesg::files
+*** mesg::see-also
+** mkfs                                                                         :cmd:
+[[Index][⬆]]
+*** mkfs::options
+*** mkfs::examples
+*** mkfs::files
+*** mkfs::see-also
+** mkswap                                                                       :cmd:
+[[Index][⬆]]
+*** mkswap::options
+*** mkswap::examples
+*** mkswap::files
+*** mkswap::see-also
+** more                                                                         :cmd:
+[[Index][⬆]]
+*** more::options
+*** more::examples
+*** more::files
+*** more::see-also
+** mount                                                                        :cmd:
+[[Index][⬆]] /mount a filesystem/
+/Written by  Karel Zak/
+
+A *mount* command existed in Version 5 AT&T UNIX
+*** mount::options
+*** mount::examples
+- mount-161120112604 :: nicely printed *mount* table:
+:    ~$ mount | column -t
+[[file:./cix-util-linux.org::*column][column (1)]]
+
+- mount-161120162011 :: mount ISO image to the system:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ISO_PATH="$HOME/Downloads/Fedora-Workstation-Live-x86_64-24-1.2.iso"
+  MNT_PATH="/mnt/iso"
+  mount -o loop "$ISO_PATH" "$MNT_PATH"
+#+END_SRC
+*** mount::files
+#+BEGIN_EXAMPLE
+    /etc/fstab       -  filesystem table
+    /etc/mtab        -  table of mounted filesystems
+    /etc/mtab~       -  lock file
+    /etc/mtab.tmp    -  temporary file
+    /etc/filesystems -  a list of filesystem types to try
+#+END_EXAMPLE
+*** mount::see-also
+  mount(2), umount(2), umount(8), fstab(5), findmnt(8), nfs(5), nfsd(8), xfs(5),
+  xfs_admin(8), mountd(8), mke2fs(8), tune2fs(8), e2label(8), swapon(8),
+  losetup(8)
+
+** mountpoint                                                                   :cmd:
+[[Index][⬆]]
+*** mountpoint::options
+*** mountpoint::examples
+*** mountpoint::files
+*** mountpoint::see-also
+** namei                                                                        :cmd:
+[[Index][⬆]]
+*** namei::options
+*** namei::examples
+*** namei::files
+*** namei::see-also
+** newgrp                                                                       :cmd:
+[[Index][⬆]]
+*** newgrp::options
+*** newgrp::examples
+*** newgrp::files
+*** newgrp::see-also
+** nologin                                                                      :cmd:
+[[Index][⬆]]
+*** nologin::options
+*** nologin::examples
+*** nologin::files
+*** nologin::see-also
+** nsenter                                                                      :cmd:
+[[Index][⬆]]
+*** nsenter::options
+*** nsenter::examples
+*** nsenter::files
+*** nsenter::see-also
+** partx                                                                        :cmd:
+[[Index][⬆]]
+*** artx::options
+*** artx::examples
+*** artx::files
+*** artx::see-also
+** pivot_root                                                                   :cmd:
+[[Index][⬆]]
+*** pivot_root::options
+*** pivot_root::examples
+*** pivot_root::files
+*** pivot_root::see-also
+** prlimit                                                                      :cmd:
+[[Index][⬆]]
+*** prlimit::options
+*** prlimit::examples
+*** prlimit::files
+*** prlimit::see-also
+** raw                                                                          :cmd:
+[[Index][⬆]]
+*** raw::options
+*** raw::examples
+*** raw::files
+*** raw::see-also
+** readprofile                                                                  :cmd:
+[[Index][⬆]]
+*** readprofile::options
+*** readprofile::examples
+*** readprofile::files
+*** readprofile::see-also
+** rename                                                                       :cmd:
+[[Index][⬆]]
+*** rename::options
+*** rename::examples
+*** rename::files
+*** rename::see-also
+** renice                                                                       :cmd:
+[[Index][⬆]]
+*** enice::options
+*** enice::examples
+*** enice::files
+*** enice::see-also
+** reset                                                                        :cmd:
+[[Index][⬆]]
+*** reset::options
+*** reset::examples
+*** reset::files
+*** reset::see-also
+** resizepart                                                                   :cmd:
+[[Index][⬆]]
+*** resizepart::options
+*** resizepart::examples
+*** resizepart::files
+*** resizepart::see-also
+** rev                                                                          :cmd:
+[[Index][⬆]]
+*** rev::options
+*** rev::examples
+*** rev::files
+*** rev::see-also
+** rtcwake                                                                      :cmd:
+[[Index][⬆]]
+*** rtcwake::options
+*** rtcwake::examples
+*** rtcwake::files
+*** rtcwake::see-also
+** runuser                                                                      :cmd:
+[[Index][⬆]]
+*** runuser::options
+*** runuser::examples
+*** runuser::files
+*** runuser::see-also
+** script                                                                       :cmd:
+[[Index][⬆]]
+*** cript::options
+*** cript::examples
+*** cript::files
+*** cript::see-also
+** setarch                                                                      :cmd:
+[[Index][⬆]]
+*** setarch::options
+*** setarch::examples
+*** setarch::files
+*** setarch::see-also
+** setpriv                                                                      :cmd:
+[[Index][⬆]]
+*** setpriv::options
+*** setpriv::examples
+*** setpriv::files
+*** setpriv::see-also
+** setsid                                                                       :cmd:
+[[Index][⬆]]
+*** setsid::options
+*** setsid::examples
+*** setsid::files
+*** setsid::see-also
+** setterm                                                                      :cmd:
+[[Index][⬆]]
+*** setterm::options
+*** setterm::examples
+*** setterm::files
+*** setterm::see-also
+** sfdisk                                                                       :cmd:
+[[Index][⬆]]
+*** sfdisk::options
+*** sfdisk::examples
+*** sfdisk::files
+*** sfdisk::see-also
+** su                                                                           :cmd:
+[[Index][⬆]]
+*** su::options
+*** su::examples
+*** su::files
+*** su::see-also
+** sulogin                                                                      :cmd:
+[[Index][⬆]]
+*** sulogin::options
+*** sulogin::examples
+*** sulogin::files
+*** sulogin::see-also
+** swaplabel                                                                    :cmd:
+[[Index][⬆]]
+*** swaplabel::options
+*** swaplabel::examples
+*** swaplabel::files
+*** swaplabel::see-also
+** swapoff                                                                      :cmd:
+[[Index][⬆]]
+*** swapoff::options
+*** swapoff::examples
+*** swapoff::files
+*** swapoff::see-also
+** swapon                                                                       :cmd:
+[[Index][⬆]]
+*** swapon::options
+*** swapon::examples
+*** swapon::files
+*** swapon::see-also
+** switch_root                                                                  :cmd:
+[[Index][⬆]]
+*** switch_root::options
+*** switch_root::examples
+*** switch_root::files
+*** switch_root::see-also
+** tailf                                                                        :cmd:
+[[Index][⬆]]
+*** ailf::options
+*** ailf::examples
+*** ailf::files
+*** ailf::see-also
+** taskset                                                                      :cmd:
+[[Index][⬆]]
+*** taskset::options
+*** taskset::examples
+*** taskset::files
+*** taskset::see-also
+** ul                                                                           :cmd:
+[[Index][⬆]]
+*** ul::options
+*** ul::examples
+*** ul::files
+*** ul::see-also
+** umount                                                                       :cmd:
+[[Index][⬆]]
+*** umount::options
+*** umount::examples
+*** umount::files
+*** umount::see-also
+** unshare                                                                      :cmd:
+[[Index][⬆]]
+*** unshare::options
+*** unshare::examples
+*** unshare::files
+*** unshare::see-also
+** utmpdump                                                                     :cmd:
+[[Index][⬆]]
+*** utmpdump::options
+*** utmpdump::examples
+*** utmpdump::files
+*** utmpdump::see-also
+** uuidgen                                                                      :cmd:
+[[Index][⬆]]
+*** uidgen::options
+*** uidgen::examples
+*** uidgen::files
+*** uidgen::see-also
+** vipw                                                                         :cmd:
+[[Index][⬆]]
+*** vipw::options
+*** vipw::examples
+*** vipw::files
+*** vipw::see-also
+** vlimit                                                                       :cmd:
+[[Index][⬆]]
+*** vlimit::options
+*** vlimit::examples
+*** vlimit::files
+*** vlimit::see-also
+** wall                                                                         :cmd:
+[[Index][⬆]]
+*** wall::options
+*** wall::examples
+*** wall::files
+*** wall::see-also
+** wdctl                                                                        :cmd:
+[[Index][⬆]]
+*** wdctl::options
+*** wdctl::examples
+*** wdctl::files
+*** wdctl::see-also
+** whereis                                                                      :cmd:
+[[Index][⬆]]
+*** whereis::options
+*** whereis::examples
+*** whereis::files
+*** whereis::see-also
+** wipefs                                                                       :cmd:
+[[Index][⬆]]
+*** ipefs::options
+*** ipefs::examples
+*** ipefs::files
+*** ipefs::see-also
+** write                                                                        :cmd:
+[[Index][⬆]]
+*** write::options
+*** write::examples
+*** write::files
+*** write::see-also
+
+* References
