@@ -1,20 +1,18 @@
 # File           : cix-gnu-bash-builtin.org
 # Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Last Modified  : <2016-11-07 Mon 23:12:27 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 16:46:41 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-[[≣](../README.md#Index "Index")]
-[↷](https://www.gnu.org/software/bash/)
-#+TITLE: GNU Bash builtin 
+[[../README.org::*Index][|≣|]]
+#+TITLE: GNU Bash builtin
 
 -----
-** Index
+* Index
 
-*** Commands
 #+BEGIN_EXAMPLE
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
@@ -73,16 +71,12 @@
     logout    - Exit a login shell.
     printf    - Formats and prints ARGUMENTS under control of the FORMAT.
     return    - Return from a shell function.
-
-[select](gnu-bash-builtin.md#select)    - Select words from a list and execute commands.
-
+    select    - Select words from a list and execute commands.
     source    - Execute commands from a file in the current shell.
     ulimit    - Modify shell resource limits.
 
     builtin   - Execute shell builtins.
-
-[command](gnu-bash-builtin.md#command)   - Execute a simple command or display information about commands.
-
+    command   - Execute a simple command or display information about commands.
     compgen   - Display possible completions depending on the options.
     compopt   - Modify or display completion options.
     declare   - Set variable values and attributes.
@@ -104,7 +98,8 @@
     readarray - Read lines from a file into an array variable.
     variables - Common shell variable names and usage.
 #+END_EXAMPLE
-*** Vars
+
+
 #+BEGIN_EXAMPLE
     BASH
     BASH_ALIASES
@@ -125,7 +120,7 @@
     BASH_VERSION
     BASH_XTRACEFD
     CHILD_MAX
-    COLUMNS
+    COLUMNS - Terminal columns number
     COMP_CWORD
     COMP_KEY
     COMP_LINE
@@ -141,9 +136,7 @@
     EUID
     FCEDIT
     FIGNORE
-
-[FUNCNAME](gnu-bash-builtin.md#FUNCNAME)  
-
+    FUNCNAME
     FUNCNEST
     GLOBIGNORE
     GROUPS
@@ -187,34 +180,45 @@
     TMPDIR
     UID
 #+END_EXAMPLE
+-----
 
+* Receipts::commands
+** command                                                                      :cmd:
+*** command::examples
+- command-161110202619 :: test wheather "CMD" installed/exists on the system:
+#+BEGIN_SRC sh
+  CMD="ls"
+  command -v "$CMD" >/dev/null 2>&1 || { echo >&2 "$CMD is required to be installed."; exit 1; }
+#+END_SRC
+** echo                                                                         :cmd:
 
-** Commands receipts
+** for                                                                          :cmd:
+** select                                                                       :cmd:
+select NAME [in WORDS ... ;] do COMMANDS; done
 
-*** select
-_select NAME [in WORDS ... ;] do COMMANDS; done_
+** ulimit                                                                       :cmd:
+ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
 
-
-*** command
-Test wheather command "foo" installed/exists on the system.
-
-    $ command -v foo >/dev/null 2>&1 || { echo >&2 "I require foo but it's not
-    installed.  Aborting."; exit 1; }
-
-*** ulimit
-_ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]_
-
-** Variable receipts
-
-*** FUNCNAME
+** while                                                                        :cmd:
+#+BEGIN_SRC sh
+  while true; do
+      echo "Hello World!"
+  done
+#+END_SRC
+* Receipts::variables
+** FUNCNAME                                                                     :var:
 
 Its a global internal variable maintained by any linux shell.  Its of type array
-and consists the name of the current function from where we are trying to read
-its value.  FUNCNAME is the current function name and FUNCNAME is the
-previous function name and so on ... Its a stack-trace of functions executed by
-a shell script.  Value of FUNCNAME gets cleared every-time we execute a new
-shell script.
+and consists the name  of the current function from where we  are trying to read
+its value.  FUNCNAME  is the current function name and  FUNCNAME is the previous
+function name and so  on ... Its a stack-trace of functions  executed by a shell
+script.   Value of  FUNCNAME  gets cleared  every-time we  execute  a new  shell
+script.
 
-** Referance
+* Referance
+** Links
 - Bash Variables https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
-- Bash wiki http://wiki.bash-hackers.org
+- https://www.gnu.org/software/bash/manual/html_node/Builtin-Index.html#Builtin-Index
+- http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08
+** Hubs
+- https://github.com/awesome-lists/awesome-bash

@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-16 Wed 23:07:00 GMT> sharlatan
+# Last Modified : <2016-11-20 Sun 23:58:42 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -478,6 +478,19 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
 *** ls::examples
+- ls-161118234510 :: Tree view of all sub directories.
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ls -R \
+      | grep ":$" \
+      | sed -e 's/:$//' \
+            -e 's/[^-][^\/]*\//--/g' \
+            -e 's/^/   /' \
+            -e 's/-/|/'
+#+END_SRC
+[[file:./cix-gnu-grep.org::*grep][grep (1)]],
+sed (1)
 - ls-161107232103 :: Sweet examples of using *ls*
 #+BEGIN_EXAMPLE
     $: ls -Rotti
@@ -507,6 +520,8 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
     alias ltail="ls -lhGgo | tail"
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
+*** ls::see-also
+  dir (1),
 ** md5sum                                                                       :cmd:
 [[Index][⬆]]
 *** md5sum::options
@@ -514,9 +529,12 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** md5sum::files
 *** md5sum::see-also
 ** mkdir                                                                        :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /make directories/
+/Written by David MacKenzie/
 *** mkdir::options
 *** mkdir::examples
+- mkdir-161120111806 :: create a set of 135199 directories:
+:    ~$ mkdir ./test_dir{1..1}{a..z}{A..Z}
 *** mkdir::files
 *** mkdir::see-also
 ** mkfifo                                                                       :cmd:
@@ -538,11 +556,13 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** mktemp::files
 *** mktemp::see-also
 ** mv                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /move (rename) files/
+/Written by Mike Parker, David MacKenzie, and Jim Meyering./
 *** mv::options
 *** mv::examples
 *** mv::files
 *** mv::see-also
+  [[file:./cix-util-linux.org::*rename][rename(2)]]
 ** nice                                                                         :cmd:
 [[Index][⬆]]
 *** nice::options
@@ -646,11 +666,17 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** realpath::files
 *** realpath::see-also
 ** rm                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /remove files or directories
+Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 *** rm::options
 *** rm::examples
+- rm-161118232317 :: remove all but specific file(s)
+:    ~$ rm !(save_me_please.log) # just a lis of files
+:    ~$ rm !(*.foo|*.bar|*.baz)  # wilde card
+
 *** rm::files
 *** rm::see-also
+  unlink(1), unlink(2), chattr(1), shred(1)
 ** rmdir                                                                        :cmd:
 [[Index][⬆]]
 *** rmdir::options
@@ -832,9 +858,21 @@ wget (1)
 *** touch::files
 *** touch::see-also
 ** tr                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /translate or delete characters/
+/Written by Jim Meyering./
 *** tr::options
 *** tr::examples
+- tr-161120163854 :: rename files in cwd from loser to UPPER case:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  for file in ./*; do
+      mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
+  done
+#+END_SRC
+[[file:./cix-gnu-bash-builtin.org::for][for]],
+[[file:./cix-gnu-bash-builtin.org::*echo][echo]],
+[[file:./cix-gnu-core-utilities.org::*mv][mv (1)]],
 *** tr::files
 *** tr::see-also
 ** true                                                                         :cmd:
@@ -934,9 +972,12 @@ wget (1)
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
   *UNIX Power Tools*.
   O'reilly
-- Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins.
-  *Linux In a Nutshell*.
-  O'reilly
+- Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins;
+  *Linux In a Nutshell, 6th edition*;
+  O'reilly 2005;
+- Stephen G. Kochan, Patrick Wood;
+  *UNIX® Shell Programming, 3thd edition*;
+  Sams Publishing, 2003;
 ** Links
 - GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
 - http://wiki.linuxquestions.org/

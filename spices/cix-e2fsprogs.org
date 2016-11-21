@@ -1,6 +1,6 @@
 # File           : cix-e2fsprogs.org
 # Created        : <2016-03-06 Sun 00:25:13 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Last Modified  : <2016-11-13 Sun 19:27:30 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -15,6 +15,12 @@
 | *Realised*    | 1997             |
 | *Source*      | [[http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/][git: e2fsprogs]]   |
 |-------------+------------------|
+Avaialble at: *Linux*
+
+The e2fsprogs  package contains  a number of  utilities for  creating, checking,
+modifying,  and correcting  any  inconsistencies in  second,  third and  fourth
+extended  (ext2/ext3/ext4)  filesystems.
+
 -----
 
 ** Index
