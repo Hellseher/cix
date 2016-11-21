@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2016-11-19 Sat 22:12:43 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 00:30:03 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -52,7 +52,7 @@ Long discription
 List of commands inluded in package with shor description
 * Receipts
 ** command
-*** command::option
+*** command::options
 *** command::examples
 *** command::files
 *** command::see-also
@@ -71,7 +71,7 @@ Example header with time-stamp
 
   # Body, less word more examples!
 #+END_SRC
-cmd (1) links to other command used
+cmd (1) link to other command used
 
 ** Convert to whatever
 Export *org files to {pdf,html,tex,txt,whatever}

@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-20 Sun 23:16:44 GMT> sharlatan
+# Last Modified : <2016-11-21 Mon 21:32:08 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -155,6 +155,8 @@ on *GNU/Linux*
   + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
   + [[./spices/cix-openssh.org][OpenSSH]] :: An open source implementation of SSH protocol versions 1 and 2
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network
+  + [[file:./cix-curl.org][curl]] :: A utility for getting files from remote servers.
+  + [[file:./cix-wget.org][wget]] :: A utility for retrieving files using the HTTP or FTP protocols
 
 - *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks.
