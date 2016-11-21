@@ -1,33 +1,71 @@
-# File          : gnu-core-utilities.md
+# File          : cix-gawk.org
 # Created       : <2016-11-04 Fri 22:15:18 GMT>
-# Last Modified : <2016-11-07 Mon 22:24:41 GMT> sharlatan
+# Last Modified : <2016-11-20 Sun 23:57:17 GMT> sharlatan
 # Author        : sharlatan
 # Maintainer    :
 
 #+OPTIONS: num:nil
 
-#+TITLE: AWK
-/gawk/
+#+TITLE: GAWK
+/awk/
 
-** Index
+|-------------+---|
+| *Author*      |   |
+| *Maintainers* |   |
+|             |   |
+| *Realised*    |   |
+| *Source*      |   |
+|-------------+---|
+
+* Index
 #+BEGIN_EXAMPLE
-    awk (1)              - pattern scanning and pr    ocessing language
-    awk (1p)             - pattern scanning and processing language
-    gawk (1)             - pattern scanning and processing language
-    igawk (1)            - gawk with include files
+    awk (1)   - pattern scanning and pr    ocessing language
+    awk (1p)  - pattern scanning and processing language
+    gawk (1)  - pattern scanning and processing language
+    igawk (1) - gawk with include files
 #+END_EXAMPLE
 
-** Commans
+* Receipts
 
-*** awk
-**** awk: options
-**** awk: examples
-- awk-161107213903 :: sort text by the length of lines.
+** awk                                                                          :cmd:
+*** awk::options
+*** awk::examples
+- awk-161111213155 :: Sort text by the length of lines:
 #+BEGIN_SRC sh
-    $: FILE_NAME="/path/to/your/file"
-    $: awk '{print length, $0;}' "$FILE_NAME"| sort -n | grep -oP "(?<=\s).+"
+  FILE_PATH="/path/to/your/file"
+  awk '{print length, $0;}' "$FILE_PATH" \
+      | sort -n \
+      | grep -oP "(?<=\s).+"
 #+END_SRC
-**** awk: files
-**** awk: see-also
-     egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
-     getgid(2), getegid(2), getgroups(2), usleep(3)
+[[./cix-gnu-core-utilities.org::*sort][sort (1)]],
+[[./cix-gnu-grep.org::*grep][grep (1)]]
+
+- awk-161120183934 :: rough word frequencies count in a file:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  FILE_PATH="../tests/test_big.txt"
+  awk '{ for (i = 1; i <= NF; i++) {print tolower($i);}}' "$FILE_PATH" \
+      | sort \
+      | uniq -c \
+      | sort -rm
+#+END_SRC
+[[./cix-gnu-core-utilities.org::*sort][sort (1)]],
+[[./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
+
+- awk-161120234902 :: swap 2 columns in a text file with SPS delimiter:
+:    ~$ awk '{tmp=$1; $1=$2; $2=tmp; print;}' ../tests/spices_files.md5
+
+*** awk::files
+*** awk::see-also
+    egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
+    getgid(2), getegid(2), getgroups(2), usleep(3)
+* References
+** Boooks
+- Alfred V. Aho, Brian W. Kernighan, Peter J. Weinberger;
+  *The AWK Programming Language*;
+  Addison-Wesley, 1988.  ISBN 0-201-07981-X;
+- *GAWK: Effective AWK Programming, Edition 4.1*;
+** Links
+- TCP/IP Internetworking With gawk https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html
+- The GNU Awk User’s Guide https://www.gnu.org/software/gawk/manual/gawk.html
