@@ -1,6 +1,6 @@
 # File           : cix-gnu-grep.org
 # Created        : <2016-11-18 Fri 23:49:59 GMT>
-# Last Modified  : <2016-11-19 Sat 11:28:17 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 23:28:36 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -21,5 +21,37 @@
 ** grep                                                                         :cmd:
 *** grep::options
 *** grep::examples
+- grep-161120232651 :: check virtualisation support of CPU:
+:    ~$ grep -E "^flat.*(vmx|svm)" /proc/cpuinfo
+
 *** grep::files
+*** grep::vars
+#+BEGIN_EXAMPLE
+GREP_OPTIONS
+GREP_COLOR
+GREP_COLORS
+    sl=
+    cx=
+    rv
+    mt=01;31
+    ms=01;31
+    mc=01;31
+    fn=35
+    ln=32
+    bn=32
+    se=36
+    neи
+LC_ALL
+LC_COLLATE
+LANG
+LC_ALL
+LC_CTYPE
+LANG
+LANGUAGE
+LC_ALL
+LC_MESSAGES
+LANG
+POSIXLY_CORRECT
+_N_GNU_nonoption_argv_flags_
+#+END_EXAMPLE
 *** grep::see-also
