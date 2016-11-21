@@ -1,6 +1,6 @@
 # File           : cix-lsof.org
 # Created        : <2016-11-05 Sat 23:22:08 GMT>
-# Last Modified  : <2016-11-12 Sat 00:33:17 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 02:29:16 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -59,11 +59,11 @@ system.
 - SIZE/OFF ::
 - NODE NAME ::
 **** lsof::examples
-- lsoff-161105232800 :: If there are a lot of files you are trying to search in,
+- lsof-161105232800 :: If there are a lot of files you are trying to search in,
      *lsof* helps to watch a directory which *find* working on.
 :   ~ # lsof -Fn -a -c find -d cwd +r 10
 
-- lsoff-161106001559 :: List of open port/connections, main option *-i*
+- lsof-161106001559 :: List of open port/connections, main option *-i*
 :    ~ # lsoff -i -P -n       # All open connections
 :    ~ # lsoff -i -a -p 1234  # All connections with PID=1234
 :    ~ # lsoff -i tcp:80      # Process licenning port 80
