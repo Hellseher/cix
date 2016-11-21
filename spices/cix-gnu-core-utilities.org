@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-20 Sun 23:58:42 GMT> sharlatan
+# Last Modified : <2016-11-21 Mon 01:05:12 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -147,9 +147,36 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** arch::files
 *** arch::see-also
 ** base64                                                                       :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /base64 encode/decode data and print to standard output/
+/Written by Simon Josefsson/
 *** base64::options
 *** base64::examples
+- base64-161121003148 :: create a *C* chars by *N* lines file of random ASCII:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ABSPATH="$(dirname $(readlink -f $0))"
+
+  L=100
+  C=80
+  FILE_PATH="$ABSPATH"/../tests/rnd"$C"x"$L"
+
+  if [ -e "$FILE_PATH" ]; then
+      rm "$FILE_PATH"
+  fi
+
+  for ((n=0;n<"$L";n++)); do
+      base64 /dev/urandom | head -c "$C" >> "$FILE_PATH"
+  done
+#+END_SRC
+[[file:./cix-gnu-bash-builtin.org::*if][if]],
+[[file:./cix-gnu-bash-builtin.org::*for][for]],
+[[file:./cix-gnu-core-utilities.org::*dirname][dirname (1)]],
+[[file:./cix-gnu-core-utilities.org::*readlink][readlink (1)]],
+[[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
+[[file:./cix-gnu-core-utilities.org::*head][head (1)]],
+
+
 *** base64::files
 *** base64::see-also
 ** basename                                                                     :cmd:
