@@ -1,0 +1,40 @@
+# File           : cix-wget.org
+# Created        : <2016-11-21 Mon 21:11:14 GMT>
+# Last Modified  : <2016-11-21 Mon 21:32:08 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: WGET
+
+|--------+---------------|
+| *Author* | Hrvoje NikXiX |
+
+GNU  Wget is  a file  retrieval utility  which can  use either  the HTTP  or FTP
+protocols. Wget features include the ability to work in the background while you
+are logged out, recursive retrieval of directories, file name wildcard matching,
+remote file timestamp  storage and comparison, use of Rest  with FTP servers and
+Range with  HTTP servers to  retrieve files  over slow or  unstable connections,
+support for Proxy servers, and configurability.
+
+-----
+
+* Receipts
+** wget                                                                         :cmd:
+*** wget::examples
+- wget-161121211338 :: download a sertain file in a list of files from a server
+     if you know the structure of them:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  URL="https://dumps.wikimedia.org/other/pageviews/2016/2016-01/"
+  REGEX="(?<=\<a href\=\").+(?=\"\>)"
+  declare -a FILE_NAMES
+
+  FILE_NAMES=($(curl -s "$URL"| grep -oP "$REGEX"))
+
+  echo "File ${FILE_NAMES[2]} will be downloaded."
+  wget "$URL${FILE_NAMES[2]}"
+#+END_SRC
