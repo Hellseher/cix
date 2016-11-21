@@ -1,22 +1,38 @@
 # File           : cix-kmod.org
 # Created        : <2016-06-19 Tue 23:54:09 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
-# Author         : sharlatan
+# Last Modified  : <2016-11-13 Sun 19:21:27 GMT> sharlatan
+#+Author: sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
 [[file:../README.org::*Index][|≣|]]
-[[↷])]
+
 #+TITLE: kmod
 
+|-------------+---|
+| *Author*      |   |
+| *Maintainers* |   |
+| *Source*      |   |
+| *Released*    |   |
+|-------------+---|
+
+The  kmod package  provides various  programs needed  for automatic  loading and
+unloading of modules under 2.6, 3.x, and  later kernels, as well as other module
+management programs. Device  drivers and filesystems are two  examples of loaded
+and unloaded modules.
+
+-----
+** Index
 #+BEGIN_EXAMPLE
     kmod (8)             - Program to manage Linux Kernel modules
+    lsmod (8)            - Show the status of modules in the Linux Kernel
+    rmmod (8)            - Simple program to remove a module from the Linux Kernel
     depmod (8)           - Generate modules.dep and map files.
     insmod (8)           - Simple program to insert a module into the Linux Kernel
-    lsmod (8)            - Show the status of modules in the Linux Kernel
     modinfo (8)          - Show information about a Linux Kernel module
     modprobe (8)         - Add and remove modules from the Linux Kernel
-    rmmod (8)            - Simple program to remove a module from the Linux Kernel
 #+END_EXAMPLE
+** Receipts
+** References

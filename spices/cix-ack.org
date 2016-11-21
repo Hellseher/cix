@@ -1,8 +1,13 @@
 # File           : cix-ack.org
 # Created        : <2016-11-04 Fri 22:37:59 GMT>
-# Last Modified  : <2016-11-04 Fri 22:38:04 GMT> sharlatan
+# Last Modified  : <2016-11-19 Sat 12:05:17 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
+
+[[../README.org::*Index][|≣|]]
+
+http://beyondgrep.com/
+#+TITLE: ack

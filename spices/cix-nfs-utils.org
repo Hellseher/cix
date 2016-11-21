@@ -1,6 +1,6 @@
 # File           : cix-nfs-utils.org
 # Created        : <2016-11-07 Mon 22:11:39 GMT>
-# Last Modified  : <2016-11-17 Thu 23:35:46 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 23:58:42 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -131,6 +131,10 @@ Linux NFS server used by most users.
 
 
 * References
+** Books
+- Hal Stern, Mike Eisler & Ricardo Labiaga;
+  *Managin NFS and NIS, 2nd edition*;
+  Oreilly, 2001;
 ** Links
 - Linux NFS-HOWTO http://nfs.sourceforge.net/nfs-howto/
 - IETF::Network File System Version 4 (nfsv4) https://datatracker.ietf.org/wg/nfsv4/documents/

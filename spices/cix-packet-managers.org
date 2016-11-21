@@ -1,19 +1,13 @@
-<!--
-File          : pm_managers.md
+# File           : cix-packet-managers.org
+# Created        : <2015-11-22 Sun 01:21:10 GMT>
+# Last Modified  : <2016-11-11 Fri 22:51:29 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
 
-Created       : Sun 22 Nov 2015 01:21:10
-Last Modified : Wed 10 Aug 2016 23:41:51 sharlatan
-Maintainer    : sharlatan
--->
+#+OPTIONS: num:nil
 
-[[≣](../README.md#Index "Index")]
-PM managers
------------
-
-## RPM [↷](http://www.rpm.org/) ##
-_RPM Package Manager_
-
-/var/lib/rpm
+#+TITLE: Packet Managers
 
 *   yum
 *   dnf

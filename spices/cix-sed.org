@@ -1,6 +1,6 @@
 # File           : cix-sed.org
 # Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Last Modified  : <2016-11-07 Mon 21:45:31 GMT> sharlatan
+# Last Modified  : <2016-11-20 Sun 16:17:54 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -9,7 +9,9 @@
 
 #+TITLE: SED
 
-** sed: options
-** sed: examples
-** sed: see-also
-   awk(1), ed(1), grep(1), tr(1), perlre(1)
+** sed                                                                          :cmd:
+*** sed::options
+*** sed::examples
+*** sed::files
+*** sed::see-also
+    awk(1), ed(1), grep(1), tr(1), perlre(1)
