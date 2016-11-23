@@ -1,17 +1,36 @@
 # File           : cix-sed.org
 # Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Last Modified  : <2016-11-20 Sun 16:17:54 GMT> sharlatan
+# Last Modified  : <2016-11-23 Wed 08:00:40 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
 
+[[../README.org::*Index][|≣|]]
 #+TITLE: SED
+|--------+----------------|
+| *Author* | Lee E. McMahon |
+|        |                |
+|--------+----------------|
+The sed  (Stream EDitor) editor is  a stream or batch  (non-interactive) editor.
+Sed takes text as input, performs an  operation or set of operations on the text
+and outputs the modified text.  The operations that sed performs (substitutions,
+deletions,  insertions, etc.)  can be  specified in  a script  file or  from the
+command line.
+-----
 
 ** sed                                                                          :cmd:
 *** sed::options
 *** sed::examples
+- sed-161122223125 :: remove leading and trailing white spaces from a file:
+:    ~$ sed "s/^ *//; s/ *$//" input_f > tmp_f && mv tmp_f input_f
+[[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
+
+- sed-161122224710 :: remove lenes between 2 patterns exluding and including:
+:    ~$ sed "/BEGIN_PAT/,/END_PAT/{//!d}" input_f > tmp_f && mv tmp_f input_f
+:    ~$ sed "/BEGIN_PAT/,/END_PAT/d" input_f > tmp_f && mv tmp_f input_f
+[[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 *** sed::files
 *** sed::see-also
     awk(1), ed(1), grep(1), tr(1), perlre(1)
