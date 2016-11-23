@@ -1,6 +1,6 @@
 # File           : cix-hall_of_fame.org
 # Created        : <2016-11-06 Sun 22:27:11 GMT>
-# Last Modified  : <2016-11-07 Mon 23:12:58 GMT> sharlatan
+# Last Modified  : <2016-11-23 Wed 23:38:47 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -10,8 +10,10 @@
 
 #+TITLE: Hall of Fame
 
-- (1928-1977, 48) Joe Ossanna  ::
+- (1928-1977 48) Joe Ossanna  ::
 - (1932) Douglas McIlroy  ::
-- (1941-2011, 70) Dennis Ritchie  ::
+- (1941-2011 70) Dennis Ritchie  ::
 - (1942) Brian Kernighan  ::
+- (1931-1989 58 US) Lee E. McMahon :: Designer of [[file:./cix-sed.org][sed]], comm, qsort, grep,
+      index, cref, cu
 - (1943) Thompson Ken  ::
