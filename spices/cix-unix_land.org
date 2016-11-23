@@ -1,6 +1,6 @@
 # File           : cix-unix_land.org
 # Created        : <2015-11-04 Wed 22:21:55 GMT>
-# Last Modified  : <2016-11-08 Tue 23:53:44 GMT> sharlatan
+# Last Modified  : <2016-11-23 Wed 23:38:47 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -9,25 +9,25 @@
 
 #+TITLE: UNIX Land
 
-This is a list of Unix commands as  specified by [[https://standards.ieee.org/findstds/standard/1003.1-2008.html][IEEE Std 1003.1-2008]] , which is
-part of the Single UNIX Specification (SUS). These commands can be found on Unix
-operating systems and most Unix-like operating systems.
+This is a list of UNIX commands most of them are included [[https://standards.ieee.org/findstds/standard/1003.1-2008.html][IEEE Std 1003.1-2008]],
+which is part of the Single UNIX Specification (SUS).  These commands can be
+found on UNIX operating systems and most UNIX-like operating systems.
 
 #+BEGIN_EXAMPLE
-    ar         - create and maintain library archives
     at         - execute commands at a later time
     bc         - arbitrary-precision arithmetic language
     bg         - run jobs in the background
     cc         - compile standard C programs
     cd         - change the working directory
     cp         - copy files
+    cu         - utility for establishing a terminal connection to a remote system
     dd         - convert and copy a file
     df         - report free disk space
     du         - estimate file space usage
-    ff         - lists the file names and statistics for a file system
     ed         - edit text
     ex         - text editor
     fc         - process the command history list
+    ff         - lists the file names and statistics for a file system
     fg         - run jobs in the foreground
     id         - return user identity
     ln         - link files
@@ -45,6 +45,7 @@ operating systems and most Unix-like operating systems.
     tr         - translate characters
     vi         - screen-oriented (visual) display editor
     wc         - word, line, and byte or character count
+    ar         - create and maintain library archives
 
     asa        - interpret carriage-control characters
     awk        - pattern scanning and processing language
