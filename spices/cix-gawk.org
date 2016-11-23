@@ -1,6 +1,6 @@
 # File          : cix-gawk.org
 # Created       : <2016-11-04 Fri 22:15:18 GMT>
-# Last Modified : <2016-11-20 Sun 23:57:17 GMT> sharlatan
+# Last Modified : <2016-11-23 Wed 23:54:16 GMT> sharlatan
 # Author        : sharlatan
 # Maintainer    :
 
@@ -55,6 +55,11 @@
 
 - awk-161120234902 :: swap 2 columns in a text file with SPS delimiter:
 :    ~$ awk '{tmp=$1; $1=$2; $2=tmp; print;}' ../tests/spices_files.md5
+
+- awk-161122203549 :: search text betwin two lines:
+:    ~$ awk '/line_begin/{f=1} /line_end/{f=0;print} f' ./file_name
+:    ~$ awk '/line_begin/{f=1} f; /line_end/{f=0}' ./file_name
+:    ~$ awk '/line_begin/,/line_end/' ./file_name
 
 *** awk::files
 *** awk::see-also
