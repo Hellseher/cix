@@ -1,6 +1,6 @@
 # File           : cix-util-linux.org
 # Created        : <2016-10-14 Wed 23:08:36 GMT>
-# Last Modified  : <2016-11-20 Sun 22:17:56 GMT> sharlatan
+# Last Modified  : <2016-11-23 Wed 08:00:40 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -259,10 +259,16 @@ The column command appeared in 4.3BSD-Reno
 *** column::examples
 - column-161120161537 :: nicely formated */etc/fstab*:
 :    ~$ sed 's/#.*//' /etc/fstab | column -t
-[[file:./cix-sed.org::*sed][sed (1)]]
+:    ~$ grep -v '#' /etc/fstab | column -t
+[[file:./cix-sed.org::*sed][sed (1)]],
+[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+
 *** column::files
 *** column::see-also
-  colrm(1), ls(1), paste(1), sort(1)
+  colrm(1),
+[[file:./cix-gnu-core-utilities.org::*ls][ls(1)]],
+paste(1),
+sort(1)
 
 ** ctrlaltdel                                                                   :cmd:
 [[Index][⬆]]
@@ -523,6 +529,8 @@ A *mount* command existed in Version 5 AT&T UNIX
   MNT_PATH="/mnt/iso"
   mount -o loop "$ISO_PATH" "$MNT_PATH"
 #+END_SRC
+- mount-161121225218 :: scratch ram partition for a fast access:
+:    ~# mount -t tmpfs tmpfs /mnt -o size=1024m
 *** mount::files
 #+BEGIN_EXAMPLE
     /etc/fstab       -  filesystem table
