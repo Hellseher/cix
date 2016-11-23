@@ -1,6 +1,6 @@
 # File           : cix-gnu-findutils.org
 # Created        : <2015-11-17 Tue 22:54:30 GMT>
-# Last Modified  : <2016-11-19 Sat 21:54:10 GMT> sharlatan
+# Last Modified  : <2016-11-23 Wed 08:00:40 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -88,6 +88,11 @@ directory search and file locating capabilities to other commands.
       | sort \
       | uniq -w"${HASH_CHCK[2]}" --all-repeated=separate
 #+END_SRC
+
+** xargs                                                                        :cmd:
+*** xargs::examples
+- xargs-161122000716 :: *cp* or *mv* files by list in a file:
+: xargs mv -t /distinction/direcotiry < list_of_file_pathes
 
 * References
 ** Links
