@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-21 Mon 01:05:12 GMT> sharlatan
+# Last Modified : <2016-11-23 Wed 23:50:54 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -151,7 +151,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 /Written by Simon Josefsson/
 *** base64::options
 *** base64::examples
-- base64-161121003148 :: create a *C* chars by *N* lines file of random ASCII:
+- base64-161121003148 :: create a *C* chars by *L* lines file of a random ASCII characters:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -161,9 +161,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
   C=80
   FILE_PATH="$ABSPATH"/../tests/rnd"$C"x"$L"
 
-  if [ -e "$FILE_PATH" ]; then
-      rm "$FILE_PATH"
-  fi
+  [ -e "$FILE_PATH" ] && rm "$FILE_PATH"
 
   for ((n=0;n<"$L";n++)); do
       base64 /dev/urandom | head -c "$C" >> "$FILE_PATH"
@@ -175,7 +173,6 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 [[file:./cix-gnu-core-utilities.org::*readlink][readlink (1)]],
 [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
 [[file:./cix-gnu-core-utilities.org::*head][head (1)]],
-
 
 *** base64::files
 *** base64::see-also
@@ -233,11 +230,13 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** cksum::files
 *** cksum::see-also
 ** comm                                                                         :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /compare two sorted files line by line/.
+/Written by Richard M. Stallman and David MacKenzie/
 *** comm::options
 *** comm::examples
 *** comm::files
 *** comm::see-also
+  [[file:./cix-gnu-core-utilities.org::*join][join(1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq(1)]]
 ** cp                                                                           :cmd:
 [[Index][⬆]]
 *** cp::options
@@ -500,12 +499,13 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** logname::files
 *** logname::see-also
 ** ls                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /list directory contents/.
+/Written by Richard M. Stallman and David MacKenzie./
 *** ls::options
-
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
+
 *** ls::examples
-- ls-161118234510 :: Tree view of all sub directories.
+- ls-161118234510 :: tree view of all sub directories:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -518,23 +518,29 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 #+END_SRC
 [[file:./cix-gnu-grep.org::*grep][grep (1)]],
 sed (1)
-- ls-161107232103 :: Sweet examples of using *ls*
+
+- ls-161107232103 :: sweet examples of using *ls*:
 #+BEGIN_EXAMPLE
-    $: ls -Rotti
-    $: ls -Ham
-    $: ls -and
-    $: ls -alSh
+    ~$ ls -Rotti
+    ~$ ls -Ham
+    ~$ ls -and
+    ~$ ls -alSh
 #+END_EXAMPLE
 
-- ls-161107232114 :: List only: Dir, files, links; hidden dirs, hidden files
-     hidden links,exec files. Actively using -F key to classify */=>@|
+- ls-161107232114 :: list only: dir, files, links, hidden dirs, hidden files
+     hidden links, exec files. Actively using *-F* key to classify */=>@|:
 #+BEGIN_EXAMPLE
-    $: ls -F | grep '/' | cut -d/ -f1
-    $: ls -p | grep -v /
-    $: ls -F | grep '[@]' | cut -d@ -f1
+    ~$ ls -F | grep '/' | cut -d/ -f1              # directories
+    ~$ ls -p | grep -v /                           # files
+    ~$ ls -F | grep '[@]' | cut -d@ -f1            # links
+    ~$ ls -d .*/ | cut -d/ -f1                     # hiden direcotires
+    ~$ ls -a | grep "^\."                          # hiden files
+    ~$ ls -Fa | grep "\." | grep "@" | cut -d@ -f1 # hiden links
 #+END_EXAMPLE
+[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+[[file:./cix-gnu-core-utilities.org::*cut][cut (1)]]
 
-- ls-151114230741 :: Aliases best practice.
+- ls-151114230741 :: aliases best practice:
 #+BEGIN_EXAMPLE
     alias ls="ls -1p --color=auto"
     alias l="ls -lhGgo"
@@ -548,7 +554,7 @@ sed (1)
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
 *** ls::see-also
-  dir (1),
+  [[file:./cix-gnu-core-utilities.org::*dir][dir (1)]],
 ** md5sum                                                                       :cmd:
 [[Index][⬆]]
 *** md5sum::options
