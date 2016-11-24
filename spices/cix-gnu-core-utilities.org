@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-23 Wed 23:50:54 GMT> sharlatan
+# Last Modified : <2016-11-24 Thu 23:44:58 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -284,86 +284,94 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 |--------------+---|
 
 *** dd::examples
+- dd-161124233800 :: output your microphone to a remote computer's speaker:
+  :    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
 
-- dd-161116230224 :: Memory I/O speed test.
-: time dd if=/dev/zero of=/dev/null bs=1M count=32768
+- dd-161124225351 :: killing fiartures of *dd* (*,..,*): distruc damage erase
+  :    ~ # dd if=/dev/zero of=/dev/sdX    #  format device
+  :    ~ # dd if=/dev/random of=/dev/port #  freez the system
 
-- dd-161113185213 :: Test NFS, LAN and I/O speed
-#+BEGIN_SRC sh
-  #!/usr/bin/bash
+- dd-161116230224 :: memory I/O speed test: memory io test
+  :    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
 
-  NFS_PATH="/mount/point/of/nfs/dir"
-  echo "Write speed"
-  time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
+- dd-161113185213 :: test NFS, LAN and I/O speed: lan-speed test
+  #+BEGIN_SRC sh
+    #!/usr/bin/bash
 
-  echo "Read speed"
-  time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
+    NFS_PATH="/mount/point/of/nfs/dir"
+    echo "Write speed"
+    time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
+
+    echo "Read speed"
+    time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
 #+END_SRC
-[[./cix-gnu-bash-builtin.org::echo][echo]]
+  [[./cix-gnu-bash-builtin.org::echo][echo]]
 
-- dd-161113185234 :: Copy and restore MBR of block device (HDD/SSD).
-#+BEGIN_SRC sh
-  #!/usr/bin/bash
+- dd-161113185234 :: copy and restore MBR of block device (HDD/SSD):
+  #+BEGIN_SRC sh
+    #!/usr/bin/bash
 
-  BLK_CP="/dev/sda"
-  BLK_RS="/dev/sdb"
-  MBR="$HOME"/mbr.img
+    BLK_CP="/dev/sda"
+    BLK_RS="/dev/sdb"
+    MBR="$HOME"/mbr.img
 
-  echo "Copy MBR data from $BLK_CP"
-  dd if="$BLK_CP" of="$MBR" bs=512 count=1
-  echo "Restore MBR data to $BLK_RS"
-  dd if="$MBR" of="$BLK_RS"
+    echo "Copy MBR data from $BLK_CP"
+    dd if="$BLK_CP" of="$MBR" bs=512 count=1
+    echo "Restore MBR data to $BLK_RS"
+    dd if="$MBR" of="$BLK_RS"
 #+END_SRC
-[[./cix-gnu-bash-builtin.org::echo][echo]]
+  [[./cix-gnu-bash-builtin.org::echo][echo]]
 
-- dd-161113185337 :: Stress test of BLOCK device with random size files to a random sector number.
-     WARRNING: IT COULD DAMAGE YOUR DEVICE!
-#+BEGIN_SRC sh
-  #!/usr/bin/bash
+- dd-161113185337 :: stress test of BLOCK device with random size files to a
+     random sector number: test block-device stress-test
+  #+BEGIN_SRC sh
+    #!/usr/bin/bash
 
-  MNT_PATH="/mnt/lv_test"
-  DEV_NAME="sdc"
-  DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
-  MBR=512
+    # WARRNING: IT COULD DAMAGE YOUR DEVICE!
+    MNT_PATH="/mnt/lv_test"
+    DEV_NAME="sdc"
+    DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
+    MBR=512
 
-  while true; do
-      SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
-      LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
+    while true; do
+        SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
+        LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
 
-      # write to DEV
-      dd if=/dev/urandom \
-         of="$MNT_PATH"/file_name \
-         seek="$SECTOR" \
-         count="$LENGTH"b 1>/dev/null
+        # write to DEV
+        dd if=/dev/urandom \
+           of="$MNT_PATH"/file_name \
+           seek="$SECTOR" \
+           count="$LENGTH"b 1>/dev/null
 
-      # read from DEV
-      dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
+        # read from DEV
+        dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
 
-      # clean up and loop
-      rm "$MNT_PATH"/file_name
-  done
+        # clean up and loop
+        rm "$MNT_PATH"/file_name
+    done
 #+END_SRC
-[[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],
-[[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
-[[./cix-gnu-core-utilities.org::*cat][cat (1)]]
-[[./cix-gnu-bash-builtin.org::*while][while]],
+  [[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],
+  [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
+  [[./cix-gnu-core-utilities.org::*cat][cat (1)]]
+  [[./cix-gnu-bash-builtin.org::*while][while]],
 
-- dd-161115233028 :: Dublicte several drives cuncurrently.
-#+BEGIN_SRC sh
-  #!/usr/bin/env bash
+- dd-161115233028 :: dublicte several drives cuncurrently: copy clone backup
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
 
-  DEV_1="/dev/sda"
-  DEV_2="/dev/sdb"
-  DEV_3="/dev/sdc"
-  DEV_4="/dev/sdd"
+    DEV_1="/dev/sda"
+    DEV_2="/dev/sdb"
+    DEV_3="/dev/sdc"
+    DEV_4="/dev/sdd"
 
-  # Add as many as needed afte tee command
-  dd if="$DEV_1" bs=64k \
-      | tee >(dd of="$DEV_2" bs=64k) \
-            >(dd of="$DEV_3" bs=64k) \
-      | dd of="$DEV_4" bs=64k
-#+END_SRC
-[[file:./cix-gnu-core-utilities.org::*tee][tee (1)]],
+    # Add as many as needed afte tee command
+    dd if="$DEV_1" bs=64k \
+  | tee >(dd of="$DEV_2" bs=64k) \
+              >(dd of="$DEV_3" bs=64k) \
+  | dd of="$DEV_4" bs=64k
+  #+END_SRC
+  [[file:./cix-gnu-core-utilities.org::*tee][tee (1)]],
+
 *** dd::files
 *** dd::see-also
 ** df                                                                           :cmd:
@@ -487,11 +495,18 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** link::files
 *** link::see-also
 ** ln                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /make links between files/
+/Written by Mike Parker and David MacKenzie./
+
 *** ln::options
 *** ln::examples
+- ln-161124233149 :: repoint symlink to another file: symlink repoint file
+:    ~$ ln -nfs TARGET_PATH LINK_NAME
+
 *** ln::files
 *** ln::see-also
+    [[file:./cix-gnu-core-utilities.org::*link][link (2)]]
+
 ** logname                                                                      :cmd:
 [[Index][⬆]]
 *** logname::options
@@ -820,11 +835,15 @@ Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 *** sync::files
 *** sync::see-also
 ** tac                                                                          :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /concatenate and print files in reverse/
+/Written by Jay Lepreau and David MacKenzie./
 *** tac::options
+: tac [-brs]... [FILE]...
 *** tac::examples
 *** tac::files
 *** tac::see-also
+    [[file:./cix-util-linux.org::*rev][rev (1)]]
+    tail
 ** tail                                                                         :cmd:
 [[Index][⬆]]
 *** tail::options
@@ -1000,6 +1019,7 @@ wget (1)
 *** yes::files
 *** yes::see-also
 
+
 * Reference
 ** Books
 - Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
@@ -1014,3 +1034,4 @@ wget (1)
 ** Links
 - GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
 - http://wiki.linuxquestions.org/
+- http://www.commandlinefu.com
