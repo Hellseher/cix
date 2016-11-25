@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-25 Fri 00:23:10 GMT> sharlatan
+# Last Modified : <2016-11-25 Fri 00:44:36 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -88,6 +88,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-diffutils.org][diffutils]] :: A GNU collection of diff utilities
   + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
   + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
+  + less :: A text file browser similar to more, but better
   + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: A small text editor
@@ -171,7 +172,7 @@ on *GNU/Linux*
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: Digital VCR and streaming server
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
   + [[file:./spices/cix-pulseaudio-utils.org][pulseaudio-utils]] :: PulseAudio sound server utilities
-  + [[file:./cix-sox.org][sox]] :: A general purpose sound file conversion tool
+  + [[file:./spices/cix-sox.org][sox]] :: A general purpose sound file conversion tool
 
 - *Security* /It's never be save/
   + pam :: An extensible library which provides authentication for applications
