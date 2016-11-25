@@ -1,0 +1,52 @@
+# File           : cix-sox.org
+# Created        : <2016-11-25 Fri 00:07:36 GMT>
+# Last Modified  : <2016-11-25 Fri 00:23:05 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: SoX
+
+* Index
+#+BEGIN_EXAMPLE
+    play (1)      - Sound eXchange, the Swiss Army knife of audio manipulation
+    rec (1)       - Sound eXchange, the Swiss Army knife of audio manipulation
+    soxeffect (7) - Sound eXchange, the Swiss Army knife of audio manipulation
+    sox (1)       - Sound eXchange, the Swiss Army knife of audio manipulation
+    soxi (1)      - Sound eXchange Information, display sound file metadata
+#+END_EXAMPLE
+
+* Receipts
+
+** play                                                                         :cmd:
+*** play::options
+*** play::examples
+*** play::files
+*** play::see-also
+** rec                                                                          :cmd:
+*** rec::options
+*** rec::examples
+*** rec::files
+*** rec::see-also
+** soxeffect                                                                    :cmd:
+*** soxeffect::options
+*** soxeffect::examples
+*** soxeffect::files
+*** soxeffect::see-also
+** sox                                                                          :cmd:
+*** sox::options
+*** sox::examples
+- sox-161125001624 :: forward mic output from host-local-host:
+  :    ~$ ssh user@host /usr/bin/sox -V0 -d -p | /usr/bin/sox - -d
+  :    ~$ /usr/bin/sox - V0 -d -p | ssh user@host /usr/bin/sox - -d
+  [[file:./spices/cix-openssh.org::*ssh][ssh]](1)
+
+*** sox::files
+*** sox::see-also
+** soxi                                                                         :cmd:
+*** soxi::options
+*** soxi::examples
+*** soxi::files
+*** soxi::see-also

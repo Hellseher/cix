@@ -1,0 +1,110 @@
+# File           : cix-alsa-utils.org
+# Created        : <2016-11-24 Thu 23:51:51 GMT>
+# Last Modified  : <2016-11-25 Fri 00:23:10 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: ALSA utilities
+
+-----
+* Index
+#+BEGIN_EXAMPLE
+    aconnect (1)     - ALSA sequencer connection manager
+    alsaloop (1)     - command-line PCM loopback
+    alsamixer (1)    - soundcard mixer for ALSA soundcard driver, with ncurses interface
+    alsaunmute (1)   - a simple script to initialize ALSA sound devices
+    amidi (1)        - read from and write to ALSA RawMIDI ports
+    amixer (1)       - command-line mixer for ALSA soundcard driver
+    aplay (1)        - command-line sound recorder and player for ALSA soundcard driver
+    aplaymidi (1)    - play Standard MIDI Files
+    arecord (1)      - command-line sound recorder and player for ALSA soundcard driver
+    arecordmidi (1)  - record Standard MIDI Files
+    aseqdump (1)     - show the events received at an ALSA sequencer port
+    aseqnet (1)      - ALSA sequencer connectors over network
+    iecset (1)       - Set or dump IEC958 status bits
+    speaker-test (1) - command-line speaker test tone generator for ALSA
+    alsa-info.sh (1) - command-line utility to gather information about the ALSA subsystem
+    alsactl (1)      - advanced controls for ALSA soundcard driver
+#+END_EXAMPLE
+
+* Receipts
+** aconnect                                                                     :cmd:
+*** aconnect::options
+*** aconnect::examples
+*** aconnect::files
+*** aconnect::see-also
+** alsaloop                                                                     :cmd:
+*** alsaloop::options
+*** alsaloop::examples
+*** alsaloop::files
+*** alsaloop::see-also
+** alsamixer                                                                    :cmd:
+*** alsamixer::options
+*** alsamixer::examples
+*** alsamixer::files
+*** alsamixer::see-also
+** alsaunmute                                                                   :cmd:
+*** alsaunmute::options
+*** alsaunmute::examples
+*** alsaunmute::files
+*** alsaunmute::see-also
+** amidi                                                                        :cmd:
+*** amidi::options
+*** amidi::examples
+*** amidi::files
+*** amidi::see-also
+** amixer                                                                       :cmd:
+*** amixer::options
+*** amixer::examples
+*** amixer::files
+*** amixer::see-also
+** aplay                                                                        :cmd:
+*** aplay::options
+*** aplay::examples
+*** aplay::files
+*** aplay::see-also
+** aplaymidi                                                                    :cmd:
+*** aplaymidi::options
+*** aplaymidi::examples
+*** aplaymidi::files
+*** aplaymidi::see-also
+** arecord                                                                      :cmd:
+*** arecord::options
+*** arecord::examples
+*** arecord::files
+*** arecord::see-also
+** arecordmidi                                                                  :cmd:
+*** arecordmidi::options
+*** arecordmidi::examples
+*** arecordmidi::files
+*** arecordmidi::see-also
+** aseqdump                                                                     :cmd:
+*** aseqdump::options
+*** aseqdump::examples
+*** aseqdump::files
+*** aseqdump::see-also
+** aseqnet                                                                      :cmd:
+*** aseqnet::options
+*** aseqnet::examples
+*** aseqnet::files
+*** aseqnet::see-also
+** iecset                                                                       :cmd:
+*** iecset::options
+*** iecset::examples
+*** iecset::files
+*** iecset::see-also
+** speaker-test                                                                 :cmd:
+*** speaker-test::options
+*** speaker-test::examples
+*** speaker-test::files
+*** speaker-test::see-also
+** alsactl                                                                      :cmd:
+*** alsactl::options
+*** alsactl::examples
+*** alsactl::files
+*** alsactl::see-also
+
+* Referances

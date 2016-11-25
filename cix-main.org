@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-23 Wed 23:38:47 GMT> sharlatan
+# Last Modified : <2016-11-25 Fri 00:23:10 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -167,9 +167,11 @@ on *GNU/Linux*
   + [[./spices/cix-cronie.org][cronie]]  :: Cron daemon for executing programs at set times
 
 - *Media* /Pleas your eyes and ears/
-  + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
+  + [[file:./spices/cix-alsa-utils.org][alsa-utils]] :: Advanced Linux Sound Architecture (ALSA) utilities
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: Digital VCR and streaming server
+  + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
   + [[file:./spices/cix-pulseaudio-utils.org][pulseaudio-utils]] :: PulseAudio sound server utilities
+  + [[file:./cix-sox.org][sox]] :: A general purpose sound file conversion tool
 
 - *Security* /It's never be save/
   + pam :: An extensible library which provides authentication for applications
@@ -197,6 +199,7 @@ on *GNU/Linux*
 - GUI ::
 - restricted delition flag :: prevents unprivileged users from removing or
      renaming a file in the directory unless they own the file or the directory
+- inode ::
 - MBR ::
 * References
 ** Books
