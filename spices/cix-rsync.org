@@ -1,0 +1,18 @@
+# File           : cix-rsync.org
+# Created        : <2016-11-25 Fri 20:32:45 GMT>
+# Last Modified  : <2016-11-25 Fri 20:41:55 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: rsync
+
+* Receipts
+** rsync                                                                       :cmd:
+
+* Referances
+** Links
+- Speaking UNIX: Advanced applications of rsync
+  https://www.ibm.com/developerworks/aix/library/au-spunix_rsync/
