@@ -1,6 +1,6 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Last Modified : <2016-11-08 Tue 23:47:20 GMT> sharlatan
+# Last Modified : <2016-11-26 Sat 21:35:06 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -18,7 +18,8 @@
 
 A collection of programs that form the base set of the NET-3 networking
 distribution for the Linux operating system.
-
+-----
+* Index
 #+BEGIN_EXAMPLE
     arp (8)        - manipulate the system ARP cache
     hostname (1)   - show or set the system's host name
@@ -34,5 +35,69 @@ distribution for the Linux operating system.
     slattach (8)   - attach a network interface to a serial line
 #+END_EXAMPLE
 
-** Referance
-- Linuxfoundation: net-tools http://www.linuxfoundation.org/collaborate/workgroups/networking/net-tools
+* Receipts
+** arp                                                                          :cmd:
+*** arp::options
+*** arp::examples
+*** arp::files
+*** arp::see-also
+** hostname                                                                     :cmd:
+*** hostname::options
+*** hostname::examples
+*** hostname::files
+*** hostname::see-also
+** ipmaddr                                                                      :cmd:
+*** ipmaddr::options
+*** ipmaddr::examples
+*** ipmaddr::files
+*** ipmaddr::see-also
+** iptunnel                                                                     :cmd:
+*** iptunnel::options
+*** iptunnel::examples
+*** iptunnel::files
+*** iptunnel::see-also
+** ifconfig                                                                     :cmd:
+*** ifconfig::options
+*** ifconfig::examples
+*** ifconfig::files
+*** ifconfig::see-also
+** mii-tool                                                                     :cmd:
+*** mii-tools::options
+*** mii-tools::examles
+*** mII-tools::files
+*** mii-tools::see-also
+** nameif                                                                       :cmd:
+*** nameif::options
+*** nameif::examples
+*** nameif::files
+*** nameif::see-also
+** netstat                                                                      :cmd:
+*** netstat::options
+*** netstat::examples
+*** netstat::files
+*** netstat::see-also
+** plipconfig                                                                   :cmd:
+*** plipconfig::options
+*** plipconfig::examples
+*** plipconfig::files
+*** plipconfig::see-also
+** rarp                                                                         :cmd:
+*** rarp::options
+*** rarp::examples
+*** rarp::files
+*** rarp::see-also
+** route                                                                        :cmd:
+*** route::options
+*** route::examples
+*** route::files
+*** route::see-also
+** slattach                                                                     :cmd:
+*** slattach::options
+*** slattach::examples
+*** slattach::files
+*** slattach::see-also
+
+
+* Referance
+- Linuxfoundation: net-tools
+  http://www.linuxfoundation.org/collaborate/workgroups/networking/net-tools

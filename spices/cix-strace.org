@@ -1,6 +1,6 @@
 # File           : cix-strace.org
 # Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Last Modified  : <2016-11-18 Fri 23:39:34 GMT> sharlatan
+# Last Modified  : <2016-11-26 Sat 21:35:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -8,3 +8,12 @@
 #+OPTIONS: num:nil
 
 #+TITLE: Strace
+
+The strace program  intercepts and records the system calls  called and received
+by  a running  process.  Strace  can print  a record  of each  system call,  its
+arguments and  its return value.  Strace  is useful for diagnosing  problems and
+debugging, as well as for instructional purposes.
+
+Install strace if you need a tool to track the system calls made and received by
+a process.
+-----
