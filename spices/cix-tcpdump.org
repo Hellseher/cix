@@ -1,16 +1,53 @@
 # File           : cix-tcpdump.org
 # Created        : <2016-11-07 Mon 23:06:06 GMT>
-# Last Modified  : <2016-11-07 Mon 23:06:50 GMT> sharlatan
+# Last Modified  : <2016-11-26 Sat 21:58:35 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-#+TITLE: TCPDUMP
+[[../README.org::*Index][|≣|]]
+#+TITLE: tcpdump
 
-** Index
+|----------+-------------------------------------------|
+| *Authors*  | Van Jacobson, Craig Leres, Steven McCanne |
+| *Released* | 1987                                      |
+| *Source*   | [[https://github.com/the-tcpdump-group/tcpdump][tcpdump.git]]                               |
+|----------+-------------------------------------------|
+
+Tcpdump  is a  command-line tool  for monitoring  network traffic.   Tcpdump can
+capture and display  the packet headers on a particular  network interface or on
+all interfaces.  Tcpdump can display all of the packet headers, or just the ones
+that match particular criteria.
+
+Install tcpdump if you need a program to monitor network traffic.
+----
+
+* Index
 #+BEGIN_EXAMPLE
-    tcpdump (8)          - dump traffic on a network
-    tcpslice (8)         - extract pieces of and/or merge together tcpdump files
+    tcpdump (8)  - dump traffic on a network
+    tcpslice (8) - extract pieces of and/or merge together tcpdump files
 #+END_EXAMPLE
+
+* Receipts
+- tcpdump-161126180824 :: cpapture active hosts on any interfaces for 10s on the
+     network:
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
+
+    IPV4_RE="((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
+    TIME_STAMP="$(date +%Y%m%d%H%M%S)"
+    DUMP_FILE="tcpdump_dmp"
+
+    [ "$UID" != "0" ] && exit 1
+    echo "Start capturing at $TIME_STAMP"
+    timeout 10 tcpdump -nnvvXS -i any > "$DUMP_FILE" 2>/dev/null
+
+    (echo "QTY IP";
+     grep -oP "$IPV4_RE" "$DUMP_FILE"\
+         | sort -n \
+         | uniq -c \
+         | sort -rn) | column -t
+  #+END_SRC
+  [[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq (1)]], [[file:./cix-util-linux.org::*column][column (1)]], [[file:./cix-gnu-core-utilities.org::*timeout][timeout (1)]]
