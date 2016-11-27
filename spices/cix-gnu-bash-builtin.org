@@ -1,6 +1,6 @@
 # File           : cix-gnu-bash-builtin.org
 # Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Last Modified  : <2016-11-20 Sun 16:46:41 GMT> sharlatan
+# Last Modified  : <2016-11-27 Sun 23:56:31 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -183,6 +183,7 @@
 -----
 
 * Receipts::commands
+** if                                                                           :cmd:
 ** command                                                                      :cmd:
 *** command::examples
 - command-161110202619 :: test wheather "CMD" installed/exists on the system:
@@ -205,6 +206,12 @@ ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
       echo "Hello World!"
   done
 #+END_SRC
+** history                                                                      :cmd:
+*** history::examples
+- history-161127235306 :: print command frequences:
+  :    ~ $ history | awk '{print $2}' | sort | uniq -c | sort -nr
+  :    ~ $ history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn
+  [[file:./cix-gawk.org::*awk][awk (1)]], [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
 * Receipts::variables
 ** FUNCNAME                                                                     :var:
 
@@ -217,8 +224,13 @@ script.
 
 * Referance
 ** Links
-- Bash Variables https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
-- https://www.gnu.org/software/bash/manual/html_node/Builtin-Index.html#Builtin-Index
-- http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08
+- Bash Variables
+  https://www.gnu.org/software/bash/manual/html_node/Bash-Variables.html
+- Bash Guide
+  http://mywiki.wooledge.org/BashGuide
+- Index of Shell Builtin Commands
+  https://www.gnu.org/software/bash/manual/html_node/Builtin-Index.html#Builtin-Index
+- Environment Variables
+  http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08
 ** Hubs
 - https://github.com/awesome-lists/awesome-bash
