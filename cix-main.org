@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-11-26 Sat 21:35:06 GMT> sharlatan
+# Last Modified : <2016-11-28 Mon 23:51:03 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -96,9 +96,9 @@ on *GNU/Linux*
 
 - *Transfare-sync* /Put me up, put me down/
   + lsyncd :: File change monitoring and synchronization daemon
-  + [[file:./cix-rsync.org][rsync]] :: A program for synchronizing files over a network
+  + [[file:./spices/cix-rsync.org][rsync]] :: A program for synchronizing files over a network
   + vftp :: Very Secure Ftp Daemon
-  + [[file:./cix-wget.org][wget]] :: A utility for retrieving files using the HTTP or FTP protocols
+  + [[file:./spices/cix-wget.org][wget]] :: A utility for retrieving files using the HTTP or FTP protocols
 
 - *Filesystem* /Partition file system craft and check/
   + [[./spices/cix-acl.org][acl]] :: Access control list utilities
