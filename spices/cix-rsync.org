@@ -1,6 +1,6 @@
 # File           : cix-rsync.org
 # Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Last Modified  : <2016-11-25 Fri 20:41:55 GMT> sharlatan
+# Last Modified  : <2016-11-28 Mon 23:49:10 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -11,6 +11,21 @@
 
 * Receipts
 ** rsync                                                                       :cmd:
+*** rsync::examples
+- rsync-161128234019 :: resume rsync after broken connection:
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
+
+    FILE_TO_SEND="send_me.there"
+    HOST_NAME="waiting.for.me"
+    USER_NAME="are_you"
+
+    while true; do
+        rsync -avz --append "$FILE_TO_SEND" "$USER_NAME"@"$HOST_NAME"
+        [[ "$?" = "0" ]] && break
+        echo "File is not tranfared, resume."
+    done
+  #+END_SRC
 
 * Referances
 ** Links
