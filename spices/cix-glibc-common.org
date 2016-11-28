@@ -1,6 +1,6 @@
 # File           : cix-glibc-common.org
 # Created        : <2016-11-14 Mon 21:40:36 GMT>
-# Last Modified  : <2016-11-14 Mon 22:13:37 GMT> sharlatan
+# Last Modified  : <2016-11-28 Mon 21:22:55 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,7 +12,7 @@
 The glibc-common package includes common binaries for the GNU libc libraries, as
 well as national language (locale) support
 -----
-** Index
+* Index
 #+BEGIN_EXAMPLE
     zic (8)        - timezone compiler
     ldd (1)        - print shared library dependencies
@@ -35,3 +35,70 @@ well as national language (locale) support
     localedef (1)  - compile locale definition files
     localedef (1p) - define locale environment
 #+END_EXAMPLE
+* Receipts
+** zic                                                                          :cmd:
+*** zic::options
+*** zic::examples
+*** zic::files
+*** zic::see-also
+** ldd                                                                          :cmd:
+*** ldd::options
+*** ldd::examples
+*** ldd::files
+*** ldd::see-also
+** pldd                                                                         :cmd:
+*** pldd::options
+*** pldd::examples
+*** pldd::files
+*** pldd::see-also
+** sprof                                                                        :cmd:
+*** sprof::options
+*** sprof::examples
+*** sprof::files
+*** sprof::see-also
+** encat                                                                        :cmd:
+*** encat::options
+*** encat::examples
+*** encat::files
+*** encat::see-also
+** zdump                                                                        :cmd:
+*** zdump::options
+*** zdump::examples
+*** zdump::files
+*** zdump::see-also
+** iconv                                                                        :cmd:
+*** iconv::options
+*** iconv::examples
+*** iconv::files
+*** iconv::see-also
+** getent                                                                       :cmd:
+*** getent::options
+*** getent::examples
+*** getent::files
+*** getent::see-also
+** locale                                                                       :cmd:
+*** locale::options
+*** locale::examples
+*** locale::files
+*** locale::see-also
+** getconf                                                                      :cmd:
+*** getconf::options
+*** getconf::examples
+*** getconf::files
+*** getconf::see-also
+** tzselect                                                                     :cmd:
+*** tzselect::options
+*** tzselect::examples
+*** tzselect::files
+*** tzselect::see-also
+** localedef                                                                    :cmd:
+*** localedef::options
+*** localedef::examples
+*** localedef::files
+*** localedef::see-also
+** localedef                                                                    :cmd:
+*** localedef::options
+*** localedef::examples
+*** localedef::files
+*** localedef::see-also
+* References
