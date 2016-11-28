@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-24 Thu 23:44:58 GMT> sharlatan
+# Last Modified : <2016-11-28 Mon 23:12:05 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -11,7 +11,6 @@
 
 |-------------+---------------|
 | *Author*      |               |
-|-------------+---------------|
 | *Maintainers* |               |
 | *Realised*    |               |
 | *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
@@ -287,9 +286,9 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 - dd-161124233800 :: output your microphone to a remote computer's speaker:
   :    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
 
-- dd-161124225351 :: killing fiartures of *dd* (*,..,*): distruc damage erase
-  :    ~ # dd if=/dev/zero of=/dev/sdX    #  format device
-  :    ~ # dd if=/dev/random of=/dev/port #  freez the system
+- dd-161124225351 :: killing features of *dd* (*,..,*): destruct damage erase
+  :    ~# dd if=/dev/zero of=/dev/sdX    #  format device
+  :    ~# dd if=/dev/random of=/dev/port #  freeze the system
 
 - dd-161116230224 :: memory I/O speed test: memory io test
   :    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
@@ -355,7 +354,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
   [[./cix-gnu-core-utilities.org::*cat][cat (1)]]
   [[./cix-gnu-bash-builtin.org::*while][while]],
 
-- dd-161115233028 :: dublicte several drives cuncurrently: copy clone backup
+- dd-161115233028 :: duplicate several drives concurrently: copy clone backup
   #+BEGIN_SRC sh
     #!/usr/bin/env bash
 
@@ -399,7 +398,8 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** dirname::files
 *** dirname::see-also
 ** du                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /estimate file space usage/
+/Written by Torbjorn Granlund, David MacKenzie, Paul Eggert, and Jim Meyering./
 *** du::options
 *** du::examples
 *** du::files
@@ -423,9 +423,23 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** expand::files
 *** expand::see-also
 ** expr                                                                         :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /evaluate expressions/
+/Written by Mike Parker, James Youngman, and Paul Eggert./
 *** expr::options
+: expr arg1 operator arg2 [ operator arg3 ... ]
+
 *** expr::examples
+- expr-161128225759 :: "grep" like examples of using expr: grep patern text matching
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
+
+    TEST_VAR="Value of Expression is 10"
+
+    expr "$TEST_VAR" : '.*'         # number of chars
+    expr "$TEST_VAR" : '\(.*\)'     # match all chars and print them
+    expr "$TEST_VAR" : '[A-Z]*'     # number of UPPER case chars at the begining
+    expr "$TEST_VAR" : '\(.....\)'  # truncate to 5 chars
+  #+END_SRC
 *** expr::files
 *** expr::see-also
 ** factor                                                                       :cmd:
@@ -718,13 +732,13 @@ sed (1)
 Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 *** rm::options
 *** rm::examples
-- rm-161118232317 :: remove all but specific file(s)
-:    ~$ rm !(save_me_please.log) # just a lis of files
-:    ~$ rm !(*.foo|*.bar|*.baz)  # wilde card
+- rm-161118232317 :: remove all but specific file(s):
+:    ~$ rm !(save_me_please.log) # just a rest of files
+:    ~$ rm !(*.foo|*.bar|*.baz)  # wild card
 
 *** rm::files
 *** rm::see-also
-  unlink(1), unlink(2), chattr(1), shred(1)
+  unlink (1), unlink(2), chattr(1), [[file:./cix-gnu-core-utilities.org::*shred][shred]](1)
 ** rmdir                                                                        :cmd:
 [[Index][⬆]]
 *** rmdir::options
@@ -855,40 +869,36 @@ Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 /Written by Mike Parker, Richard M. Stallman, and David MacKenzie./
 
 *** tee::options
-
 You can use multiple process substitutions (works with zsh, bash, ksh)
-#+BEGIN_EXAMPLE
->(COMMAND)
-#+END_EXAMPLE
+: >(COMMAND)
+
 *** tee::examples
 - tee-161115235121 :: To split pipe in multiple streams.
-#+BEGIN_SRC sh
-  #!/usr/bin/env bash
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
 
-  echo “Command tee can split a pipe in many!” \
-      |tee >(rev) \
-           >(tr " " "_") \
-           >(wc ) \
-           >(tr "[:lower:]" "[:upper:]")
+    echo “Command tee can split a pipe in many!” \
+        |tee >(rev) \
+             >(tr " " "_") \
+             >(wc ) \
+             >(tr "[:lower:]" "[:upper:]")
 #+END_SRC
-[[file:./cix-util-linux.org::*rev][rev (1)]],
-[[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],
-[[file:./cix-gnu-bash-builtin.org::echo][echo]]
+  [[file:./cix-util-linux.org::*rev][rev (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]], [[file:./cix-gnu-bash-builtin.org::echo][echo]]
 
 - tee-161115231840 :: Download a file and validate it on the "fly"
-#+BEGIN_SRC sh
-  #!/usr/bin/env bash
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
 
-  # Used a real ISO image of Fedora 24 Workstation
-  FILE_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso"
-  FILE_NAME="Fedora-Workstation-Live-x86_64-24-1.2.iso"
-  CHECKSUM_URL="https://getfedora.org/en_GB/static/checksums/Fedora-Workstation-24-x86_64-CHECKSUM"
-  CHECKSUM_FILE="FW24.sha245"
+    # Used a real ISO image of Fedora 24 Workstation
+    FILE_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso"
+    FILE_NAME="Fedora-Workstation-Live-x86_64-24-1.2.iso"
+    CHECKSUM_URL="https://getfedora.org/en_GB/static/checksums/Fedora-Workstation-24-x86_64-CHECKSUM"
+    CHECKSUM_FILE="FW24.sha245"
 
-  wget -O - "$FILE_URL" \
-       tee >(sha256sum > ./"$CHECKSUM_FILE") > "$FILE_NAME"
+    wget -O - "$FILE_URL" \
+         tee >(sha256sum > ./"$CHECKSUM_FILE") > "$FILE_NAME"
 #+END_SRC
-wget (1)
+  wget (1)
 *** tee::files
 *** tee::see-also
 ** test                                                                         :cmd:
@@ -915,16 +925,14 @@ wget (1)
 *** tr::options
 *** tr::examples
 - tr-161120163854 :: rename files in cwd from loser to UPPER case:
-#+BEGIN_SRC sh
-  #!/usr/bin/env bash
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
 
-  for file in ./*; do
-      mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
-  done
-#+END_SRC
-[[file:./cix-gnu-bash-builtin.org::for][for]],
-[[file:./cix-gnu-bash-builtin.org::*echo][echo]],
-[[file:./cix-gnu-core-utilities.org::*mv][mv (1)]],
+    for file in ./*; do
+        mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
+    done
+  #+END_SRC
+  [[file:./cix-gnu-bash-builtin.org::for][for]], [[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]],
 *** tr::files
 *** tr::see-also
 ** true                                                                         :cmd:
@@ -1018,7 +1026,6 @@ wget (1)
 *** yes::examples
 *** yes::files
 *** yes::see-also
-
 
 * Reference
 ** Books
