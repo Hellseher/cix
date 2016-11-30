@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-28 Mon 23:12:05 GMT> sharlatan
+# Last Modified : <2016-11-30 Wed 22:47:53 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -285,6 +285,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 *** dd::examples
 - dd-161124233800 :: output your microphone to a remote computer's speaker:
   :    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
+  [[file:./cix-openssh.org::*ssh][ssh (1)]]
 
 - dd-161124225351 :: killing features of *dd* (*,..,*): destruct damage erase
   :    ~# dd if=/dev/zero of=/dev/sdX    #  format device
@@ -303,7 +304,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 
     echo "Read speed"
     time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
-#+END_SRC
+  #+END_SRC
   [[./cix-gnu-bash-builtin.org::echo][echo]]
 
 - dd-161113185234 :: copy and restore MBR of block device (HDD/SSD):
@@ -318,7 +319,7 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
     dd if="$BLK_CP" of="$MBR" bs=512 count=1
     echo "Restore MBR data to $BLK_RS"
     dd if="$MBR" of="$BLK_RS"
-#+END_SRC
+  #+END_SRC
   [[./cix-gnu-bash-builtin.org::echo][echo]]
 
 - dd-161113185337 :: stress test of BLOCK device with random size files to a
@@ -348,28 +349,25 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
         # clean up and loop
         rm "$MNT_PATH"/file_name
     done
-#+END_SRC
-  [[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],
-  [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
-  [[./cix-gnu-core-utilities.org::*cat][cat (1)]]
-  [[./cix-gnu-bash-builtin.org::*while][while]],
+  #+END_SRC
+  [[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],  [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],  [[./cix-gnu-core-utilities.org::*cat][cat (1)]],  [[./cix-gnu-bash-builtin.org::*while][while]]
 
 - dd-161115233028 :: duplicate several drives concurrently: copy clone backup
   #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+      #!/usr/bin/env bash
 
-    DEV_1="/dev/sda"
-    DEV_2="/dev/sdb"
-    DEV_3="/dev/sdc"
-    DEV_4="/dev/sdd"
+      DEV_1="/dev/sda"
+      DEV_2="/dev/sdb"
+      DEV_3="/dev/sdc"
+      DEV_4="/dev/sdd"
 
-    # Add as many as needed afte tee command
-    dd if="$DEV_1" bs=64k \
-  | tee >(dd of="$DEV_2" bs=64k) \
-              >(dd of="$DEV_3" bs=64k) \
-  | dd of="$DEV_4" bs=64k
+      # Add as many as needed afte tee command
+      dd if="$DEV_1" bs=64k \
+    | tee >(dd of="$DEV_2" bs=64k) \
+                >(dd of="$DEV_3" bs=64k) \
+    | dd of="$DEV_4" bs=64k
   #+END_SRC
-  [[file:./cix-gnu-core-utilities.org::*tee][tee (1)]],
+  [[file:./cix-gnu-core-utilities.org::*tee][tee (1)]]
 
 *** dd::files
 *** dd::see-also
@@ -622,6 +620,27 @@ sed (1)
 /Written by Mike Parker, David MacKenzie, and Jim Meyering./
 *** mv::options
 *** mv::examples
+- mv-161130220901 :: replace spaces in file/dir name with underscore "_":
+  #+BEGIN_SRC sh
+    #!/usr/bin/env bash
+
+    SEARCH_PATH="$HOME"/Data
+
+    # First, replace spaces in dir names
+    find "$SEARCH_PATH" -type d -name "* *" -print \
+        | while read dir; do
+        new_dir=$(echo "$dir" | sed 's/ /_/g')
+        mv "$dir" "$new_dir"
+    done
+
+    # Replace spaces in files after that
+    find "$SEARCH_PATH" -type f -name "* *" -print \
+        | while read file; do
+        new_file=$(echo "$file" | sed 's/ /_/g')
+        mv "$file" "$new_file"
+    done
+  #+END_SRC
+  [[file:./cix-gnu-bash-builtin.org::*while][while]], [[file:./cix-gnu-bash-builtin.org::*read][read]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]], [[file:./cix-gnu-findutils.org::*find][find (1)]]
 *** mv::files
 *** mv::see-also
   [[file:./cix-util-linux.org::*rename][rename(2)]]
