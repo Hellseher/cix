@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-30 Wed 22:47:53 GMT> sharlatan
+# Last Modified : <2016-11-30 Wed 23:09:14 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -626,11 +626,16 @@ sed (1)
 
     SEARCH_PATH="$HOME"/Data
 
-    # First, replace spaces in dir names
-    find "$SEARCH_PATH" -type d -name "* *" -print \
-        | while read dir; do
-        new_dir=$(echo "$dir" | sed 's/ /_/g')
-        mv "$dir" "$new_dir"
+    # First, replace spaces in dir names,
+    # Keep trying utill all pathes changed.
+    while true; do
+        [[ -z $(find "$SEARCH_PATH" -type d -name "* *") ]] && echo "Clean" && break
+
+        find "$SEARCH_PATH" -type d -name "* *" -print \
+            | while read dir; do
+            new_dir=$(echo "$dir" | sed 's/ /_/g')
+            mv "$dir" "$new_dir"
+        done
     done
 
     # Replace spaces in files after that
