@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Last Modified : <2016-11-30 Wed 23:09:14 GMT> sharlatan
+# Last Modified : <2016-12-01 Thu 22:46:03 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -150,7 +150,8 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 /Written by Simon Josefsson/
 *** base64::options
 *** base64::examples
-- base64-161121003148 :: create a *C* chars by *L* lines file of a random ASCII characters:
+**** base64-161121003148
+create a *C* chars by *L* lines file of a random ASCII characters:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -283,91 +284,95 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 |--------------+---|
 
 *** dd::examples
-- dd-161124233800 :: output your microphone to a remote computer's speaker:
-  :    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
+**** dd-161124233800
+output your microphone to a remote computer's speaker:
+:    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
   [[file:./cix-openssh.org::*ssh][ssh (1)]]
 
-- dd-161124225351 :: killing features of *dd* (*,..,*): destruct damage erase
-  :    ~# dd if=/dev/zero of=/dev/sdX    #  format device
-  :    ~# dd if=/dev/random of=/dev/port #  freeze the system
+**** dd-161124225351                                                            :destruct:damage:erase:
+killing features of *dd* (*,..,*):
+:    ~# dd if=/dev/zero of=/dev/sdX    #  format device
+:    ~# dd if=/dev/random of=/dev/port #  freeze the system
 
-- dd-161116230224 :: memory I/O speed test: memory io test
-  :    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
+**** dd-161116230224                                                            :io:test:memory:
+memory I/O speed test:
+:    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
 
-- dd-161113185213 :: test NFS, LAN and I/O speed: lan-speed test
-  #+BEGIN_SRC sh
-    #!/usr/bin/bash
+**** dd-161113185213                                                            :lan_speed:test:
+test NFS, LAN and I/O speed:
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
 
-    NFS_PATH="/mount/point/of/nfs/dir"
-    echo "Write speed"
-    time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
+  NFS_PATH="/mount/point/of/nfs/dir"
+  echo "Write speed"
+  time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
 
-    echo "Read speed"
-    time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
-  #+END_SRC
-  [[./cix-gnu-bash-builtin.org::echo][echo]]
+  echo "Read speed"
+  time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
+#+END_SRC
+[[./cix-gnu-bash-builtin.org::echo][echo]]
 
-- dd-161113185234 :: copy and restore MBR of block device (HDD/SSD):
-  #+BEGIN_SRC sh
-    #!/usr/bin/bash
+**** dd-161113185234
+copy and restore MBR of block device (HDD/SSD):
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
 
-    BLK_CP="/dev/sda"
-    BLK_RS="/dev/sdb"
-    MBR="$HOME"/mbr.img
+  BLK_CP="/dev/sda"
+  BLK_RS="/dev/sdb"
+  MBR="$HOME"/mbr.img
+  echo "Copy MBR data from $BLK_CP"  dd if="$BLK_CP" of="$MBR" bs=512 count=1
+  echo "Restore MBR data to $BLK_RS"
+  dd if="$MBR" of="$BLK_RS"
+#+END_SRC
+[[./cix-gnu-bash-builtin.org::echo][echo]]
 
-    echo "Copy MBR data from $BLK_CP"
-    dd if="$BLK_CP" of="$MBR" bs=512 count=1
-    echo "Restore MBR data to $BLK_RS"
-    dd if="$MBR" of="$BLK_RS"
-  #+END_SRC
-  [[./cix-gnu-bash-builtin.org::echo][echo]]
+**** dd-161113185337                                                            :test:block_device:stress_test:
+stress test of BLOCK device with random size files to a random sector number:
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
 
-- dd-161113185337 :: stress test of BLOCK device with random size files to a
-     random sector number: test block-device stress-test
-  #+BEGIN_SRC sh
-    #!/usr/bin/bash
+  # WARRNING: IT COULD DAMAGE YOUR DEVICE!
+  MNT_PATH="/mnt/lv_test"
+  DEV_NAME="sdc"
+  DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
+  MBR=512
 
-    # WARRNING: IT COULD DAMAGE YOUR DEVICE!
-    MNT_PATH="/mnt/lv_test"
-    DEV_NAME="sdc"
-    DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
-    MBR=512
+  while true; do
+      SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
+      LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
 
-    while true; do
-        SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
-        LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
+      # write to DEV
+      dd if=/dev/urandom \
+         of="$MNT_PATH"/file_name \
+         seek="$SECTOR" \
+         count="$LENGTH"b 1>/dev/null
 
-        # write to DEV
-        dd if=/dev/urandom \
-           of="$MNT_PATH"/file_name \
-           seek="$SECTOR" \
-           count="$LENGTH"b 1>/dev/null
+      # read from DEV
+      dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
 
-        # read from DEV
-        dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
+      # clean up and loop
+      rm "$MNT_PATH"/file_name
+  done
+#+END_SRC
+[[./cix-gnu-core-utilities.org::*shuf][shuf (1)]], [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]], [[./cix-gnu-core-utilities.org::*cat][cat (1)]], [[./cix-gnu-bash-builtin.org::*while][while]]
 
-        # clean up and loop
-        rm "$MNT_PATH"/file_name
-    done
-  #+END_SRC
-  [[./cix-gnu-core-utilities.org::*shuf][shuf (1)]],  [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],  [[./cix-gnu-core-utilities.org::*cat][cat (1)]],  [[./cix-gnu-bash-builtin.org::*while][while]]
+**** dd-161115233028                                                            :copy:clone:backup:hdd:
+duplicate several drives concurrently:
+#+BEGIN_SRC sh
+    #!/usr/bin/env bash
 
-- dd-161115233028 :: duplicate several drives concurrently: copy clone backup
-  #+BEGIN_SRC sh
-      #!/usr/bin/env bash
+    DEV_1="/dev/sda"
+    DEV_2="/dev/sdb"
+    DEV_3="/dev/sdc"
+    DEV_4="/dev/sdd"
 
-      DEV_1="/dev/sda"
-      DEV_2="/dev/sdb"
-      DEV_3="/dev/sdc"
-      DEV_4="/dev/sdd"
-
-      # Add as many as needed afte tee command
-      dd if="$DEV_1" bs=64k \
-    | tee >(dd of="$DEV_2" bs=64k) \
-                >(dd of="$DEV_3" bs=64k) \
-    | dd of="$DEV_4" bs=64k
-  #+END_SRC
-  [[file:./cix-gnu-core-utilities.org::*tee][tee (1)]]
+    # Add as many as needed afte tee command
+    dd if="$DEV_1" bs=64k \
+  | tee >(dd of="$DEV_2" bs=64k) \
+              >(dd of="$DEV_3" bs=64k) \
+  | dd of="$DEV_4" bs=64k
+#+END_SRC
+[[file:./cix-gnu-core-utilities.org::*tee][tee (1)]]
 
 *** dd::files
 *** dd::see-also
@@ -427,17 +432,18 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 : expr arg1 operator arg2 [ operator arg3 ... ]
 
 *** expr::examples
-- expr-161128225759 :: "grep" like examples of using expr: grep patern text matching
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** expr-161128225759                                                          :grep:patern:text:matchin:
+"grep" like examples of using *expr*: grep patern text matching
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    TEST_VAR="Value of Expression is 10"
+  TEST_VAR="Value of Expression is 10"
 
-    expr "$TEST_VAR" : '.*'         # number of chars
-    expr "$TEST_VAR" : '\(.*\)'     # match all chars and print them
-    expr "$TEST_VAR" : '[A-Z]*'     # number of UPPER case chars at the begining
-    expr "$TEST_VAR" : '\(.....\)'  # truncate to 5 chars
-  #+END_SRC
+  expr "$TEST_VAR" : '.*'         # number of chars
+  expr "$TEST_VAR" : '\(.*\)'     # match all chars and print them
+  expr "$TEST_VAR" : '[A-Z]*'     # number of UPPER case chars at the begining
+  expr "$TEST_VAR" : '\(.....\)'  # truncate to 5 chars
+#+END_SRC
 *** expr::files
 *** expr::see-also
 ** factor                                                                       :cmd:
@@ -512,7 +518,8 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 
 *** ln::options
 *** ln::examples
-- ln-161124233149 :: repoint symlink to another file: symlink repoint file
+**** ln-161124233149
+repoint symlink to another file:
 :    ~$ ln -nfs TARGET_PATH LINK_NAME
 
 *** ln::files
@@ -532,7 +539,8 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
 : ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
 
 *** ls::examples
-- ls-161118234510 :: tree view of all sub directories:
+**** ls-161118234510
+tree view of all sub directories:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -544,9 +552,10 @@ is the union of the GNU fileutils, sh-utils, and textutils packages.
             -e 's/-/|/'
 #+END_SRC
 [[file:./cix-gnu-grep.org::*grep][grep (1)]],
-sed (1)
+[[file:./cix-sed.org::*sed][sed (1)]]
 
-- ls-161107232103 :: sweet examples of using *ls*:
+**** ls-161107232103
+sweet examples of using *ls*:
 #+BEGIN_EXAMPLE
     ~$ ls -Rotti
     ~$ ls -Ham
@@ -554,8 +563,9 @@ sed (1)
     ~$ ls -alSh
 #+END_EXAMPLE
 
-- ls-161107232114 :: list only: dir, files, links, hidden dirs, hidden files
-     hidden links, exec files. Actively using *-F* key to classify */=>@|:
+**** ls-161107232114
+list only - dir, files, links, hidden dirs, hidden files hidden links, exec
+files. Actively using *-F* key to classify */=>@|:
 #+BEGIN_EXAMPLE
     ~$ ls -F | grep '/' | cut -d/ -f1              # directories
     ~$ ls -p | grep -v /                           # files
@@ -564,10 +574,11 @@ sed (1)
     ~$ ls -a | grep "^\."                          # hiden files
     ~$ ls -Fa | grep "\." | grep "@" | cut -d@ -f1 # hiden links
 #+END_EXAMPLE
-[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+[[file:./cix-gnu-grep.org::*grep][grep (1)]],
 [[file:./cix-gnu-core-utilities.org::*cut][cut (1)]]
 
-- ls-151114230741 :: aliases best practice:
+**** ls-151114230741
+aliases best practice:
 #+BEGIN_EXAMPLE
     alias ls="ls -1p --color=auto"
     alias l="ls -lhGgo"
@@ -593,7 +604,8 @@ sed (1)
 /Written by David MacKenzie/
 *** mkdir::options
 *** mkdir::examples
-- mkdir-161120111806 :: create a set of 135199 directories:
+**** mkdir-161120111806
+create a set of 135199 directories:
 :    ~$ mkdir ./test_dir{1..1}{a..z}{A..Z}
 *** mkdir::files
 *** mkdir::see-also
@@ -620,31 +632,32 @@ sed (1)
 /Written by Mike Parker, David MacKenzie, and Jim Meyering./
 *** mv::options
 *** mv::examples
-- mv-161130220901 :: replace spaces in file/dir name with underscore "_":
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** mv-161130220901
+replace spaces in file/dir name with underscore "_":
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    SEARCH_PATH="$HOME"/Data
+  SEARCH_PATH="$HOME"/Data
 
-    # First, replace spaces in dir names,
-    # Keep trying utill all pathes changed.
-    while true; do
-        [[ -z $(find "$SEARCH_PATH" -type d -name "* *") ]] && echo "Clean" && break
+  # First, replace spaces in dir names,
+  # Keep trying utill all pathes changed.
+  while true; do
+      [[ -z $(find "$SEARCH_PATH" -type d -name "* *") ]] && echo "Clean" && break
 
-        find "$SEARCH_PATH" -type d -name "* *" -print \
-            | while read dir; do
-            new_dir=$(echo "$dir" | sed 's/ /_/g')
-            mv "$dir" "$new_dir"
-        done
-    done
+      find "$SEARCH_PATH" -type d -name "* *" -print \
+          | while read dir; do
+          new_dir=$(echo "$dir" | sed 's/ /_/g')
+          mv "$dir" "$new_dir"
+      done
+  done
 
-    # Replace spaces in files after that
-    find "$SEARCH_PATH" -type f -name "* *" -print \
-        | while read file; do
-        new_file=$(echo "$file" | sed 's/ /_/g')
-        mv "$file" "$new_file"
-    done
-  #+END_SRC
+  # Replace spaces in files after that
+  find "$SEARCH_PATH" -type f -name "* *" -print \
+      | while read file; do
+      new_file=$(echo "$file" | sed 's/ /_/g')
+      mv "$file" "$new_file"
+  done
+#+END_SRC
   [[file:./cix-gnu-bash-builtin.org::*while][while]], [[file:./cix-gnu-bash-builtin.org::*read][read]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]], [[file:./cix-gnu-findutils.org::*find][find (1)]]
 *** mv::files
 *** mv::see-also
@@ -756,7 +769,8 @@ sed (1)
 Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 *** rm::options
 *** rm::examples
-- rm-161118232317 :: remove all but specific file(s):
+**** rm-161118232317
+remove all but specific file(s):
 :    ~$ rm !(save_me_please.log) # just a rest of files
 :    ~$ rm !(*.foo|*.bar|*.baz)  # wild card
 
@@ -897,32 +911,34 @@ You can use multiple process substitutions (works with zsh, bash, ksh)
 : >(COMMAND)
 
 *** tee::examples
-- tee-161115235121 :: To split pipe in multiple streams.
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** tee-161115235121
+to split pipe in multiple streams:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    echo “Command tee can split a pipe in many!” \
-        |tee >(rev) \
-             >(tr " " "_") \
-             >(wc ) \
-             >(tr "[:lower:]" "[:upper:]")
+  echo “Command tee can split a pipe in many!” \
+      |tee >(rev) \
+           >(tr " " "_") \
+           >(wc ) \
+           >(tr "[:lower:]" "[:upper:]")
 #+END_SRC
-  [[file:./cix-util-linux.org::*rev][rev (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]], [[file:./cix-gnu-bash-builtin.org::echo][echo]]
+[[file:./cix-util-linux.org::*rev][rev (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]], [[file:./cix-gnu-bash-builtin.org::echo][echo]]
 
-- tee-161115231840 :: Download a file and validate it on the "fly"
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** tee-161115231840
+download a file and validate it on the "fly":
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    # Used a real ISO image of Fedora 24 Workstation
-    FILE_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso"
-    FILE_NAME="Fedora-Workstation-Live-x86_64-24-1.2.iso"
-    CHECKSUM_URL="https://getfedora.org/en_GB/static/checksums/Fedora-Workstation-24-x86_64-CHECKSUM"
-    CHECKSUM_FILE="FW24.sha245"
+  # Used a real ISO image of Fedora 24 Workstation
+  FILE_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso"
+  FILE_NAME="Fedora-Workstation-Live-x86_64-24-1.2.iso"
+  CHECKSUM_URL="https://getfedora.org/en_GB/static/checksums/Fedora-Workstation-24-x86_64-CHECKSUM"
+  CHECKSUM_FILE="FW24.sha245"
 
-    wget -O - "$FILE_URL" \
-         tee >(sha256sum > ./"$CHECKSUM_FILE") > "$FILE_NAME"
+  wget -O - "$FILE_URL" \
+       tee >(sha256sum > ./"$CHECKSUM_FILE") > "$FILE_NAME"
 #+END_SRC
-  wget (1)
+[[file:./cix-wget.org::*wget][wget]]
 *** tee::files
 *** tee::see-also
 ** test                                                                         :cmd:
@@ -948,15 +964,16 @@ You can use multiple process substitutions (works with zsh, bash, ksh)
 /Written by Jim Meyering./
 *** tr::options
 *** tr::examples
-- tr-161120163854 :: rename files in cwd from loser to UPPER case:
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** tr-161120163854
+rename files in cwd from lower to UPPER case:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    for file in ./*; do
-        mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
-    done
-  #+END_SRC
-  [[file:./cix-gnu-bash-builtin.org::for][for]], [[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]],
+  for file in ./*; do
+      mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
+  done
+#+END_SRC
+[[file:./cix-gnu-bash-builtin.org::for][for]], [[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]],
 *** tr::files
 *** tr::see-also
 ** true                                                                         :cmd:
