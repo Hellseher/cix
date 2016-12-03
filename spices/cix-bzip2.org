@@ -1,8 +1,25 @@
 # File           : cix-bzip2.org
 # Created        : <2016-11-04 Fri 22:44:47 GMT>
-# Last Modified  : <2016-11-04 Fri 22:44:47 GMT> sharlatan
+# Last Modified  : <2016-12-02 Fri 22:09:40 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
+
+#+TITLE: bzip2
+
+* Index
+#+BEGIN_EXAMPLE
+    bunzip2 (1)      - a block-sorting file compressor, v1.0.6
+    bzcat (1)        - decompresses files to stdout
+    bzcmp (1)        - compare bzip2 compressed files
+    bzdiff (1)       - compare bzip2 compressed files
+    bzegrep (1)      - search possibly bzip2 compressed files for a regular expression
+    bzfgrep (1)      - search possibly bzip2 compressed files for a regular expression
+    bzgrep (1)       - search possibly bzip2 compressed files for a regular expression
+    bzip2 (1)        - a block-sorting file compressor, v1.0.6
+    bzip2recover (1) - recovers data from damaged bzip2 files
+    bzless (1)       - file perusal filter for crt viewing of bzip2 compressed text
+    bzmore (1)       - file perusal filter for crt viewing of bzip2 compressed text
+#+END_EXAMPLE

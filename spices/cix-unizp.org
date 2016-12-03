@@ -1,0 +1,21 @@
+# File           : cix-unizp.org
+# Created        : <2016-12-02 Fri 22:00:47 GMT>
+# Last Modified  : <2016-12-02 Fri 22:09:40 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: unzip
+
+* Index
+#+BEGIN_EXAMPLE
+    funzip (1)   - filter for extracting from a ZIP archive in a pipe
+    unzip (1)    - list, test and extract compressed files in a ZIP archive
+    unzipsfx (1) - self-extracting stub for prepending to ZIP archives
+    zipgrep (1)  - search files in a ZIP archive for lines matching a pattern
+    zipinfo (1)  - list detailed information about a ZIP archive
+#+END_EXAMPLE
+
+* Receipts

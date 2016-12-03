@@ -1,8 +1,26 @@
 # File           : cix-xz.org
 # Created        : <2016-11-04 Fri 22:44:50 GMT>
-# Last Modified  : <2016-11-04 Fri 22:44:50 GMT> sharlatan
+# Last Modified  : <2016-12-02 Fri 22:05:20 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
+
+
+#+TITLE: xz
+
+* Index
+#+BEGIN_EXAMPLE
+    unxz (1)    - Compress or decompress .xz and .lzma files
+    xz (1)      - Compress or decompress .xz and .lzma files
+    xzcat (1)   - Compress or decompress .xz and .lzma files
+    xzcmp (1)   - compare compressed files
+    xzdec (1)   - Small .xz and .lzma decompressors
+    xzdiff (1)  - compare compressed files
+    xzegrep (1) - search compressed files for a regular expression
+    xzfgrep (1) - search compressed files for a regular expression
+    xzgrep (1)  - search compressed files for a regular expression
+    xzless (1)  - view xz or lzma compressed (text) files
+    xzmore (1)  - view xz or lzma compressed (text) files
+#+END_EXAMPLE
