@@ -1,6 +1,6 @@
 # File           : cix-rsync.org
 # Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Last Modified  : <2016-11-28 Mon 23:49:10 GMT> sharlatan
+# Last Modified  : <2016-12-11 Sun 00:41:33 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,22 +12,50 @@
 * Receipts
 ** rsync                                                                       :cmd:
 *** rsync::examples
-- rsync-161128234019 :: resume rsync after broken connection:
-  #+BEGIN_SRC sh
-    #!/usr/bin/env bash
+**** rsync-161128234019
+resume rsync after broken connection:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
-    FILE_TO_SEND="send_me.there"
-    HOST_NAME="waiting.for.me"
-    USER_NAME="are_you"
+  FILE_TO_SEND="send_me.there"
+  HOST_NAME="waiting.for.me"
+  USER_NAME="are_you"
 
-    while true; do
-        rsync -avz --append "$FILE_TO_SEND" "$USER_NAME"@"$HOST_NAME"
-        [[ "$?" = "0" ]] && break
-        echo "File is not tranfared, resume."
-    done
-  #+END_SRC
+  while true; do
+      rsync -avz --append "$FILE_TO_SEND" "$USER_NAME"@"$HOST_NAME"
+      [[ "$?" = "0" ]] && break
+      echo "File is not tranfared, resume."
+  done
+#+END_SRC
 
-* Referances
+**** rsyn-161210234525
+multi-threaded rsync on a splitted file (you can use tar to create a consolidated file):
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  THREADS="$(grep -c processor /proc/cpuinfo)"
+  CHUNK="10M"
+  SUFF="splitted_file_"
+  FNAME="test_file"
+
+  SRC_PATH="$HOME"
+  SRC_SHA256="$(sha256sum ${SRC_PATH}/test_file)"
+  # Having key authentication can ease the rsync process
+  DST="misa"
+  DST_PATH="${DST}:~/"
+
+  echo "$SRC_SHA256"
+  split --bytes="$CHUNK" "${SRC_PATH}/${FNAME}" "${SRC_PATH}/${SUFF}"
+
+  find "$SRC_PATH" -maxdepth 1 -name "${SUFF}*" -print0 \
+      | xargs -0 -n1 -P"$THREADS" -I% \
+              rsync --archive --compress "%" "$DST_PATH"
+
+  # Consolidate chunks and hash-check destination integrity
+  ssh "$DST" "cat ${SUFF}* > ${FNAME} && sha256sum test_file && rm ${SUFF}*"
+#+END_SRC
+
+* References
 ** Links
 - Speaking UNIX: Advanced applications of rsync
   https://www.ibm.com/developerworks/aix/library/au-spunix_rsync/
