@@ -1,13 +1,21 @@
 # File           : cix-strace.org
 # Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Last Modified  : <2016-11-26 Sat 21:35:06 GMT> sharlatan
+# Last Modified  : <2016-12-14 Wed 23:01:30 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-#+TITLE: Strace
+[[../cix-main.org::*Index][|≣|]]
+
+#+TITLE: strace
+
+|--------------+----------------|
+| *Author*       | Paul Kraneburg |
+| *Contributors* | Dmitry Levin   |
+| *Released*     | 1991           |
+|--------------+----------------|
 
 The strace program  intercepts and records the system calls  called and received
 by  a running  process.  Strace  can print  a record  of each  system call,  its
@@ -16,4 +24,15 @@ debugging, as well as for instructional purposes.
 
 Install strace if you need a tool to track the system calls made and received by
 a process.
+** Libraries
+
 -----
+
+* Receipts
+** strace                                                                       :cmd:
+*** strace::examples
+**** strace-161214223950
+list open files and libraries of a command:
+:    ~$ strace uptime 2>&1 | grep "open"
+*** strace::see-also
+ltrace xtrace trace-cmd ftrace truss DTrace ktrace kdump
