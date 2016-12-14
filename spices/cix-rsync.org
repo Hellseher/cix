@@ -1,6 +1,6 @@
 # File           : cix-rsync.org
 # Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Last Modified  : <2016-12-11 Sun 00:41:33 GMT> sharlatan
+# Last Modified  : <2016-12-14 Wed 00:08:02 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -27,9 +27,12 @@ resume rsync after broken connection:
       echo "File is not tranfared, resume."
   done
 #+END_SRC
+[[file:./cix-gnu-core-utilities.org::*echo][echo]]
+[[file:./cix-gnu-bash-builtin.org::*while][while]]
 
-**** rsyn-161210234525
-multi-threaded rsync on a splitted file (you can use tar to create a consolidated file):
+**** rsync-161210234525
+multi-threaded *rsync* on a splitted file you can use *tar* to create a consolidated
+file and split it after that and use key authentication:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -54,6 +57,10 @@ multi-threaded rsync on a splitted file (you can use tar to create a consolidate
   # Consolidate chunks and hash-check destination integrity
   ssh "$DST" "cat ${SUFF}* > ${FNAME} && sha256sum test_file && rm ${SUFF}*"
 #+END_SRC
+[[file:./cix-gnu-core-utilities.org::*sha256sum][sha256sum (1)]]
+[[file:./cix-gnu-core-utilities.org::*split][split (1)]]
+[[file:./cix-gnu-findutils.org::*find][find (1)]]
+[[file:./cix-gnu-findutils.org::*xargs][xargs (1)]]
 
 * References
 ** Links
