@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-12-11 Sun 23:04:03 GMT> sharlatan
+# Last Modified : <2016-12-17 Sat 23:19:18 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -172,7 +172,7 @@ on *GNU/Linux*
   + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
   + [[./spices/cix-zsh.org/][zsh]] ::  Powerful interactive shell
 
-- *Scheduling* /World spinning around/
+- *Scheduling* /World is spinning around/
   + [[./spices/cix-at.org][at]] :: Job spooling tools
   + [[./spices/cix-cronie.org][cronie]]  :: Cron daemon for executing programs at set times
 
@@ -188,8 +188,13 @@ on *GNU/Linux*
   + [[file:./spices/cix-libselinux-utils.org][libselinux-utils]] :: SELinux libselinux utilies
   + [[file:./cix-sudo.org][sudo]] :: Allows restricted root access for specified users
 
+- *Init-system* /Let's party started!/
+  + [[./spices/cix-systemd.org][systemd]] ::  A System and Service Manager
+
 - *Development* /In the fields of observation chance favors only the prepared mind./
-  + [[./spices/cix-glibc-common.org][glibc-common]] :: Common binaries and locale data for glibc
+  + [[./spices/cix-glibc.org][glibc]] :: Common binaries and locale data for glibc
+  + [[./spices/cix-gdb.org][gdb]] :: A GNU source-level debugger for C, C++, Fortran, Go and other language
+  + [[./spices/cix-gcc.org][gcc]] :: Various compilers (C, C++, Objective-C, Java, ...)
 
 - *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks
@@ -211,6 +216,9 @@ on *GNU/Linux*
      renaming a file in the directory unless they own the file or the directory
 - inode ::
 - RFC :: [[https://www.rfc-editor.org/retrieve/][Request for Comment]] - official standards in the internet community.
+- nice ::
+- UID ::
+- PID ::
 - MBR ::
 * References
 ** Books
