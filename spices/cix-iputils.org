@@ -1,6 +1,6 @@
 # File           : cix-iputils.org
 # Created        : <2015-11-16 Mon 00:31:15 GMT>
-# Last Modified  : <2016-11-07 Mon 23:03:50 GMT> sharlatan
+# Last Modified  : <2016-12-20 Tue 00:56:32 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -8,18 +8,17 @@
 #+OPTIONS: num:nil
 
 [[file:../README.md::*Index][|≣|]]
-[[↷](http://www.skbuff.net/iputils/)]
-#+TITLE: IPutils
+#+TITLE: IP Utils
 
-|-------------+------------------|
-| *Author*      | Alexey Kuznetsov |
-| *Maintainers* |                  |
-| *Realised*    | 2006             |
-| *Source*      | [[https://github.com/iputils/iputils][git: iputils]]     |
-|-------------+------------------|
+|--------------+------------------|
+| *Author*       | Alexey Kuznetsov |
+| *Contributors* |                  |
+| *Realised*     | 2006             |
+| *Source*       | [[https://github.com/iputils/iputils][iputils.git]]      |
+|--------------+------------------|
 -----
 
-** Index
+* Index
 #+BEGIN_EXAMPLE
     arping               -
     clockdiff (8)        - measure clock difference between hosts
@@ -34,5 +33,21 @@
     traceroute6 (8)      - print the route packets trace to network host
 #+END_EXAMPLE
 
-** Referance
+* Receipts
+** ping                                                                         :cmd:
+*** ping::examples
+**** ping-161219235343
+mini multithread network pinger-scaner:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  THR="$(grep process /proc/cpuinfo | wc -l)"
+  MSK="192.168.241."
+
+  seq 254 | xargs -n1 -P"$THR" -I% ping -c1 -W3 "${MSK}%"
+#+END_SRC
+
+#+RESULTS:
+
+* Referance
 - Linuxfoundation: iputils http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils
