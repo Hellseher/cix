@@ -1,6 +1,6 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-12-17 Sat 23:19:18 GMT> sharlatan
+# Last Modified : <2016-12-20 Tue 01:00:30 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
 
@@ -156,7 +156,7 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: *Linux*
-  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping
+  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: *Linux*
   + [[./spices/cix-net-snmp.org][net-snmp]] :: A collection of SNMP protocol tools and libraries
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: Network exploration tool and security scanner
@@ -180,7 +180,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-alsa-utils.org][alsa-utils]] :: Advanced Linux Sound Architecture (ALSA) utilities
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: Digital VCR and streaming server
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
-  + [[file:./spices/cix-pulseaudio-utils.org][pulseaudio-utils]] :: PulseAudio sound server utilities
+  + [[file:./spices/cix-pulseaudio.org][pulseaudio]] :: PulseAudio sound server utilities
   + [[file:./spices/cix-sox.org][sox]] :: A general purpose sound file conversion tool
 
 - *Security* /It's never be save/
