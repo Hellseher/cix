@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : <2016-11-03 Thu 23:13:44 GMT>
-# Last Modified : <2016-11-03 Thu 23:43:35 GMT> sharlatan
+# Last Modified : <2016-12-13 Tue 23:58:12 GMT> sharlatan
 # Author        : sharlatan
 # Maintainer    :
 
@@ -11,7 +11,7 @@
 |-------------+------------------------------|
 | *Author*      | Jean-loup Gailly, Mark Adler |
 |-------------+------------------------------|
-| *Maintainers* | Jim Meyering, Paul Eggert    |
+| *Contributors* | Jim Meyering, Paul Eggert    |
 | *Realised*    |                              |
 | *Source*      |                              |
 | *Info*        | [[https://www.gnu.org/software/gzip/manual/gzip.html][GNU Gzip]]                     |

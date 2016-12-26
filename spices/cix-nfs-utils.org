@@ -1,6 +1,6 @@
 # File           : cix-nfs-utils.org
 # Created        : <2016-11-07 Mon 22:11:39 GMT>
-# Last Modified  : <2016-11-20 Sun 23:58:42 GMT> sharlatan
+# Last Modified  : <2016-12-13 Tue 23:58:12 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,7 +12,7 @@
 
 |-------------+---------------|
 | *Author*      |               |
-| *Maintainers* |               |
+| *Contributors* |               |
 | *Realiesed*   |               |
 | *Source*      | [[http://git.linux-nfs.org/][linux-nfs.git]] |
 | *Info*        |               |

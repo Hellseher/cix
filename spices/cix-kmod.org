@@ -1,6 +1,6 @@
 # File           : cix-kmod.org
 # Created        : <2016-06-19 Tue 23:54:09 GMT>
-# Last Modified  : <2016-11-13 Sun 19:21:27 GMT> sharlatan
+# Last Modified  : <2016-12-13 Tue 23:58:12 GMT> sharlatan
 #+Author: sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -13,7 +13,7 @@
 
 |-------------+---|
 | *Author*      |   |
-| *Maintainers* |   |
+| *Contributors* |   |
 | *Source*      |   |
 | *Released*    |   |
 |-------------+---|

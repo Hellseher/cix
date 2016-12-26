@@ -1,6 +1,6 @@
 # File           : cix-lsof.org
 # Created        : <2016-11-05 Sat 23:22:08 GMT>
-# Last Modified  : <2016-11-20 Sun 02:29:16 GMT> sharlatan
+# Last Modified  : <2016-12-13 Tue 23:58:12 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -14,7 +14,7 @@
 |-------------+-----------|
 | *Author*      | Vic Abell |
 |-------------+-----------|
-| *Maintainers* |           |
+| *Contributors* |           |
 | *Realised*    | 1994      |
 | *Source*      | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/][ftp:lsof]]  |
 | *Info*        | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ][FAQ]]       |

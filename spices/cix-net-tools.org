@@ -1,6 +1,6 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Last Modified : <2016-11-26 Sat 21:35:06 GMT> sharlatan
+# Last Modified : <2016-12-13 Tue 23:58:12 GMT> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -10,7 +10,7 @@
 
 |-------------+-----------------------------------|
 | *Author*      | Bernd Eckenfels, Phil Blundell    |
-| *Maintainers* |                                   |
+| *Contributors* |                                   |
 | *Realised*    | 2006                              |
 | *Source*      | [[https://sourceforge.net/projects/net-tools/][net-tools]]                         |
 | *NOTES*       | marked as depricated see [[spices/iproute2.org][iproute2]] |
