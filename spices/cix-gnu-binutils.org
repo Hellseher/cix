@@ -1,6 +1,6 @@
 # File           : cix-gnu-binutils.org
 # Created        : <2015-11-02 Mon 22:18:23 GMT>
-# Last Modified  : <2016-12-14 Wed 22:14:29 GMT> sharlatan
+# Last Modified  : <2016-12-26 Mon 21:28:25 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -9,6 +9,24 @@
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: GNU Bin Utils
+/A GNU collection of binary utilities/
+
+|--------+------------------|
+| *Author* |                  |
+| *Source* | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
+|--------+------------------|
+
+** Libraries
+| № | Name            |
+|---+-----------------|
+| 1 | ld-linux-x86-64 |
+| 2 | libbfd-2        |
+| 3 | libc            |
+| 4 | libdl           |
+| 5 | libm            |
+| 6 | libopcodes-2    |
+|---+-----------------|
+-----
 
 * Index
 
@@ -35,12 +53,6 @@
 #+END_EXAMPLE
 
 * Receipts
-** addr2line                                                                    :cmd:
-[[Index][⬆]]
-*** addr2line::options
-*** addr2line::examples
-*** addr2line::files
-*** addr2line::see-also
 ** ar                                                                           :cmd:
 [[Index][⬆]]
 *** ar::options
@@ -53,42 +65,60 @@
 *** as::examples
 *** as::files
 *** as::see-also
-** c++filt                                                                      :cmd:
-[[Index][⬆]]
-*** c++filt::options
-*** c++filt::examples
-*** c++filt::files
-*** c++filt::see-also
-** elfedit                                                                      :cmd:
-[[Index][⬆]]
-*** elfedit::options
-*** elfedit::examples
-*** elfedit::files
-*** elfedit::see-also
-** gprof                                                                        :cmd:
-[[Index][⬆]]
-*** gprof::options
-*** gprof::examples
-*** gprof::files
-*** gprof::see-also
-** ld                                                                           :cmd:
-[[Index][⬆]]
-*** ld::options
-*** ld::examples
-*** ld::files
-*** ld::see-also
 ** nm                                                                           :cmd:
 [[Index][⬆]]
 *** nm::options
 *** nm::examples
 *** nm::files
 *** nm::see-also
+** ld                                                                           :cmd:
+[[Index][⬆]]
+*** ld::options
+*** ld::examples
+*** ld::files
+*** ld::see-also
+** size                                                                         :cmd:
+[[Index][⬆]]
+*** size::options
+*** size::examples
+*** size::files
+*** size::see-also
+** strip                                                                        :cmd:
+[[Index][⬆]]
+*** strip::options
+*** strip::examples
+*** strip::files
+*** strip::see-also
+** gprof                                                                        :cmd:
+[[Index][⬆]]
+*** gprof::options
+*** gprof::examples
+*** gprof::files
+*** gprof::see-also
+** ranlib                                                                       :cmd:
+[[Index][⬆]]
+*** ranlib::options
+*** ranlib::examples
+*** ranlib::files
+*** ranlib::see-also
+** c++filt                                                                      :cmd:
+[[Index][⬆]]
+*** c++filt::options
+*** c++filt::examples
+*** c++filt::files
+*** c++filt::see-also
 ** objcopy                                                                      :cmd:
 [[Index][⬆]]
 *** objcopy::options
 *** objcopy::examples
 *** objcopy::files
 *** objcopy::see-also
+** elfedit                                                                      :cmd:
+[[Index][⬆]]
+*** elfedit::options
+*** elfedit::examples
+*** elfedit::files
+*** elfedit::see-also
 ** objdump                                                                      :cmd:
 [[Index][⬆]] /display information from object files/
 *** objdump::options
@@ -98,7 +128,7 @@ list required libraries for a package:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
-  PKG="util-linux"
+  PKG="binutils"
 
   # For dpkg based
   if command -v dpkg-query >/dev/null 2>&1; then
@@ -114,46 +144,34 @@ list required libraries for a package:
           | awk '{print $2}' | sort -u | sed 's/\..*$//g'
   fi
 #+END_SRC
-[[file:./cix-gnu-bash-builtin.org::*if][if]]
-[[file:./cix-gnu-bash-builtin.org::*for][for]]
-[[file:./cix-gnu-bash-builtin.org::*command][command]]
-[[file:./cix-gawk.org::*awk][awk]]
-[[file:./cix-gnu-core-utilities.org::*sort][sort]]
-[[file:./cix-sed.org::*sed][sed]]
-[[file:./cix-gnu-grep.org::*grep][grep]]
+
+#+RESULTS:
+| ld-linux-x86-64 |
+| libbfd-2        |
+| libc            |
+| libdl           |
+| libm            |
+| libopcodes-2    |
+
+[[file:./cix-gnu-bash-builtin.org::*if][if]] [[file:./cix-gnu-bash-builtin.org::*for][for]] [[file:./cix-gnu-bash-builtin.org::*command][command]] [[file:./cix-gawk.org::*awk][awk (1)]] [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]] [[file:./cix-sed.org::*sed][sed (1)]] [[file:./cix-gnu-grep.org::*grep][grep (1)]]
 *** objdump::files
 *** objdump::see-also
-[[file:./cix-gnu-binutils.org::*nm][nm]]
-[[file:./cix-gnu-binutils.org::*readelf][readelf]]
-** ranlib                                                                       :cmd:
-[[Index][⬆]]
-*** ranlib::options
-*** ranlib::examples
-*** ranlib::files
-*** ranlib::see-also
+[[file:./cix-gnu-binutils.org::*nm][nm]] [[file:./cix-gnu-binutils.org::*readelf][readelf]]
 ** readelf                                                                      :cmd:
 [[Index][⬆]]
 *** readelf::options
 *** readelf::examples
 *** readelf::files
 *** readelf::see-also
-** size                                                                         :cmd:
-[[Index][⬆]]
-*** size::options
-*** size::examples
-*** size::files
-*** size::see-also
 ** strings                                                                      :cmd:
 [[Index][⬆]]
 *** strings::options
 *** strings::examples
 *** strings::files
 *** strings::see-also
-** strip                                                                        :cmd:
+** addr2line                                                                    :cmd:
 [[Index][⬆]]
-*** strip::options
-*** strip::examples
-*** strip::files
-*** strip::see-also
-
-
+*** addr2line::options
+*** addr2line::examples
+*** addr2line::files
+*** addr2line::see-also
