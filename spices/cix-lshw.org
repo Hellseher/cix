@@ -1,0 +1,18 @@
+# File           : cix-lshw.org
+# Created        : <2016-12-25 Sun 22:56:53 GMT>
+# Last Modified  : <2016-12-26 Mon 21:28:25 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: lshw
+
+http://www.ezix.org/project/wiki/HardwareLiSter
+
+|----------+---|
+| *Author*   |   |
+| *Source*   |   |
+| *Released* |   |
+|----------+---|
