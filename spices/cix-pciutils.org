@@ -1,17 +1,25 @@
 # File           : cix-pciutils.org
 # Created        : <2016-11-08 Tue 23:15:13 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Last Modified  : <2016-12-26 Mon 23:38:08 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
+[[../cix-main.org::*Index][|≣|]]
+#+TITLE: pciutils
+|----------+-----------------|
+| *Author*   | Martin Mareš CZ |
+| *Released* | 1997            |
+| *Source*   | [[http://git.kernel.org/cgit/utils/pciutils/pciutils.git/][pciutils.git]]    |
+|----------+-----------------|
 
-#+TITLE: PCI Utils
-
+The PCI  Utilities package  contains a  library for portable  access to  PCI bus
+configuration registers and several utilities based on this library.
 -----
-** Index
+
+* Index
 #+BEGIN_EXAMPLE
     lspci (8)            - list all PCI devices
     setpci (8)           - configure PCI devices
