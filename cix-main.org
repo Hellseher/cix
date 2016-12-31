@@ -1,104 +1,14 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-12-26 Mon 21:28:25 GMT> sharlatan
+# Last Modified : <2016-12-31 Sat 12:17:55 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
-
-#+OPTIONS: num:nil
-#+OPTIONS: toc:nil
-
-#+TITLE: CIX
-/Comprehensive Inspiration of uniX/
-
-* Intro
-
-The main purpouse of the project to collect templates, oneliners, examples in
-one place.
-
-Man pages common sections.
-
-| Allover | Linux | Solaris | BSD | HP-UX | AIX |                                    |
-|---------+-------+---------+-----+-------+-----+------------------------------------|
-|       0 |       |         |     |       |     | Header f                           |
-|      0p |       |         |     |       |     | Header f (POSIX)                   |
-|       1 |     1 |       1 |   1 |     1 |   1 | General cmd                        |
-|      1p |       |         |     |       |     | General cmd (POSIX)                |
-|       2 |     2 |       2 |   2 |     2 |   2 | Systems calls                      |
-|       3 |     3 |       3 |     |     3 |   3 | C lib fun                          |
-|      3n |       |         |     |       |     | Network fun                        |
-|      3p |       |         |     |       |     | Perl mod                           |
-|       4 |     4 |       7 |   4 |     7 |   4 | Special file                       |
-|       5 |     5 |       4 |   5 |     4 |   5 | File formats                       |
-|       6 |     6 |       6 |   6 |     - |   6 | Games                              |
-|       7 |     7 |       5 |     |     5 |   7 | misc                               |
-|       8 |     8 |      1m |   8 |    1m |   8 | Maintaince cmd                     |
-|       9 |     9 |       9 |   9 |     - |   - | Oscure kernel specs and interfaces |
-|       l |       |         |     |       |     | Local documentation                |
-|       n |       |         |     |       |     | New manpages                       |
-|         |     - |       - |     |     9 |   - | HP-UX general information          |
-|---------+-------+---------+-----+-------+-----+------------------------------------|
-
-** Basic
-For example, you know the command but not sure about package where it goes from
-
-/what package $CMD belongs to/
-
-on *GNU/Linux*
-#+BEGIN_EXAMPLE
-    ~$ CMD="ls"
-    ~$ rpm -qf $(which "$CMD")       # ReadHad derived
-    ~$ dpkg-query -S $(which "$CMD") # Debian derived
-#+END_EXAMPLE
-
-on *BSD*
-#+BEGIN_EXAMPLE
-    ~$ CMD="ls"
-    ~$ pkg which $(which "$CMD")
-#+END_EXAMPLE
-
-And oposite situation, you want to find out what commands are in the package
-
-/get list of commands belong to a $PACK/
-
-on *GNU/Linux*
-#+BEGIN_EXAMPLE
-    ~$ PACK="coreutils"
-    ~$ whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
-    ~$ rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
-    ~$ dpkg-query -L "$PACK" | grep -oP "(?<=in/).+"      # Debian dirived
-#+END_EXAMPLE
-* Index
-/Make each program do one thing well/
-
-: <package-name><link><description>
-
-- *Legacy* /Keep the history/
-  + [[./spices/cix-hall-of-fame.org][Hall of Fame]] :: Who made it posible!
-  + [[./spices/cix-unix_land.org][UNIX Land]] :: Common UNIX commands.
-
-- *Core* /Usually it contains on the most distributions/
-  + [[./spices/cix-busybox.org][busybox]] :: The Swiss Army Knife of Embedded Linux
-  + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities: *Linux FreeBSD*
-  + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages: *Linux*
-  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: *Linux*
-  + The Heirloom Project :: traditional implementations of standard UNIX utils
-  + BSD :: List of common BSD commands
-
-- *File* /Everything is a file/!
-  + [[file:./spices/cix-diffutils.org][diffutils]] :: A GNU collection of diff utilities
-  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
-  + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
-  + less :: A text file browser similar to more, but better
-  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
-  + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
-  + [[./spices/cix-nano.org][nano]] :: A small text editor
-  + [[./spices/cix-sed.org][sed]] :: A GNU stream text editor
-  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: *FreeBSD Linux OS-X*
-
+и
 - *Transfare-sync* /Put me up, put me down/
-  + lsyncd :: File change monitoring and synchronization daemon
+  + [[file:./cix-curl.org][curl]] :: A utility for getting files from remote servers: *Linux FreeBSD*
+  + [[./spices/cix-lsyncd.org][lsyncd]] :: Live Syncing Daemon synchronizes local directories with remote targиets
   + [[file:./spices/cix-rsync.org][rsync]] :: A program for synchronizing files over a network
-  + vftp :: Very Secure Ftp Daemon
+  + [[./spices/cix-vsftp.org][vsftp]] :: Very Secure Ftp Daemon
   + [[file:./spices/cix-wget.org][wget]] :: A utility for retrieving files using the HTTP or FTP protocols
 
 - *Filesystem* /Partition file system craft and check/
@@ -127,7 +37,9 @@ on *GNU/Linux*
 
 - *Hardware* /Hard as a Rock!/
   + [[./spices/cix-kbd.org][kbd]] :: Tools for configuring the console (keyboard, virtual terminals, etc.)
-  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities
+  + [[./spices/cix-pciutils.org][pciutils]] :: PCI bus related utilities:
+    *Linux FreeBSD NetBSD OpenBSD GNU/kFreeBSD  Solaris/i386 AIX GNU Hurd Windows
+    CYGWIN BeOS Haiku Darwin*
   + [[./spices/cix-smartmontools.org][smartmontools]] :: Tools for monitoring SMART capable hard disks
   + [[./spices/cix-dmidecode.org][dmidecode]] :: Tool to analyse BIOS DMI data
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux USB utilities
@@ -153,7 +65,6 @@ on *GNU/Linux*
 - *Networking* /We all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying DNS name server
   + [[./spices/cix-bridge_utils.org][bridge-utils]] :: Utilities for configuring the linux ethernet bridge
-  + [[file:./cix-curl.org][curl]] :: A utility for getting files from remote servers: *Linux FreeBSD*
   + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: *Linux*
@@ -171,7 +82,7 @@ on *GNU/Linux*
   + [[./spices/cix-fish.org][fish]] ::  A friendly interactive shell
   + [[./spices/cix-screen.org][screen]] :: A screen manager that supports multiple logins on one terminal
   + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
-  + [[./spices/cix-zsh.org/][zsh]] ::  Powerful interactive shell
+  + [[./spices/cix-zsh.org][zsh]] ::  Powerful interactive shell
 
 - *Scheduling* /World is spinning around/
   + [[./spices/cix-at.org][at]] :: Job spooling tools
