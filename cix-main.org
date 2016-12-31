@@ -1,9 +1,100 @@
 # File          : cix-main.org
 # Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-12-31 Sat 12:17:55 GMT> sharlatan
+# Last Modified : <2016-12-31 Sat 12:20:23 GMT> sharlatan
 # Maintainer    : sharlatan <sharlatanus@gmail.com>
 # Short         :
-и
+
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+
+#+TITLE: CIX
+/Comprehensive Inspiration of uniX/
+
+* Intro
+
+The main purpouse of the project to collect templates, oneliners, examples in
+one place.
+
+Man pages common sections.
+
+| Allover | Linux | Solaris | BSD | HP-UX | AIX |                                    |
+|---------+-------+---------+-----+-------+-----+------------------------------------|
+|       0 |       |         |     |       |     | Header f                           |
+|      0p |       |         |     |       |     | Header f (POSIX)                   |
+|       1 |     1 |       1 |   1 |     1 |   1 | General cmd                        |
+|      1p |       |         |     |       |     | General cmd (POSIX)                |
+|       2 |     2 |       2 |   2 |     2 |   2 | Systems calls                      |
+|       3 |     3 |       3 |     |     3 |   3 | C lib fun                          |
+|      3n |       |         |     |       |     | Network fun                        |
+|      3p |       |         |     |       |     | Perl mod                           |
+|       4 |     4 |       7 |   4 |     7 |   4 | Special file                       |
+|       5 |     5 |       4 |   5 |     4 |   5 | File formats                       |
+|       6 |     6 |       6 |   6 |     - |   6 | Games                              |
+|       7 |     7 |       5 |     |     5 |   7 | misc                               |
+|       8 |     8 |      1m |   8 |    1m |   8 | Maintaince cmd                     |
+|       9 |     9 |       9 |   9 |     - |   - | Oscure kernel specs and interfaces |
+|       l |       |         |     |       |     | Local documentation                |
+|       n |       |         |     |       |     | New manpages                       |
+|         |     - |       - |     |     9 |   - | HP-UX general information          |
+|---------+-------+---------+-----+-------+-----+------------------------------------|
+
+** Basic
+For example, you know the command but not sure about package where it goes from
+
+/what package $CMD belongs to/
+
+on *GNU/Linux*
+#+BEGIN_EXAMPLE
+    ~$ CMD="ls"
+    ~$ rpm -qf $(which "$CMD")       # ReadHad derived
+    ~$ dpkg-query -S $(which "$CMD") # Debian derived
+#+END_EXAMPLE
+
+on *BSD*
+#+BEGIN_EXAMPLE
+    ~$ CMD="ls"
+    ~$ pkg which $(which "$CMD")
+#+END_EXAMPLE
+
+And oposite situation, you want to find out what commands are in the package
+
+/get list of commands belong to a $PACK/
+
+on *GNU/Linux*
+#+BEGIN_EXAMPLE
+    ~$ PACK="coreutils"
+    ~$ whatis $(rpm -ql "$PACK" | grep -oP "(?<=in/).+")  # with short description
+    ~$ rpm -ql "$PACK" | grep -P "(?<=in/).+"             # path to command
+    ~$ dpkg-query -L "$PACK" | grep -oP "(?<=in/).+"      # Debian dirived
+#+END_EXAMPLE
+* Index
+/Make each program do one thing well/
+
+: <package-name><link><description>
+
+- *Legacy* /Keep the history/
+  + [[./spices/cix-hall-of-fame.org][Hall of Fame]] :: Who made it posible!
+  + [[./spices/cix-unix_land.org][UNIX Land]] :: Common UNIX commands.
+
+- *Core* /Usually it contains on the most distributions/
+  + [[./spices/cix-busybox.org][busybox]] :: The Swiss Army Knife of Embedded Linux
+  + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities: *Linux FreeBSD*
+  + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages: *Linux*
+  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: *Linux*
+  + The Heirloom Project :: traditional implementations of standard UNIX utils
+  + BSD :: List of common BSD commands
+
+- *File* /Everything is a file/!
+  + [[file:./spices/cix-diffutils.org][diffutils]] :: A GNU collection of diff utilities
+  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
+  + [[./spices/cix-gawk.org][gawk]] :: The GNU version of the awk text processing utility
+  + [[./spices/cix-less.org][less]] :: A text file browser similar to more, but better
+  + [[./spices/cix-lsof.org][lsof]] :: A utility which lists open files on a Linux/UNIX system
+  + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
+  + [[./spices/cix-nano.org][nano]] :: A small text editor
+  + [[./spices/cix-sed.org][sed]] :: A GNU stream text editor
+  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: *FreeBSD Linux OS-X*
+
 - *Transfare-sync* /Put me up, put me down/
   + [[file:./cix-curl.org][curl]] :: A utility for getting files from remote servers: *Linux FreeBSD*
   + [[./spices/cix-lsyncd.org][lsyncd]] :: Live Syncing Daemon synchronizes local directories with remote targиets
