@@ -1,6 +1,6 @@
 # File           : cix-gnu-bash-builtin.org
 # Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Last Modified  : <2016-11-27 Sun 23:56:31 GMT> sharlatan
+# Last Modified  : <2016-12-24 Sat 10:27:39 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -183,15 +183,28 @@
 -----
 
 * Receipts::commands
+** set
+*** set::examples
+**** set-161224094103
+list of all environment varialbes used in current session:
+:    ~$ (set -o posix ; set ) | less
+[[file::*less][less (1)]]
+
 ** if                                                                           :cmd:
 ** command                                                                      :cmd:
 *** command::examples
-- command-161110202619 :: test wheather "CMD" installed/exists on the system:
+**** command-161110202619
+test wheather "CMD" installed/exists on the system:
 #+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
   CMD="ls"
-  command -v "$CMD" >/dev/null 2>&1 || { echo >&2 "$CMD is required to be installed."; exit 1; }
+  command -v "$CMD" >/dev/null 2>&1 || {
+      echo >&2 "$CMD is required to be installed."
+      exit 1; }
 #+END_SRC
-** echo                                                                         :cmd:
+[[file:./cix-gnu-core-utilities.org::*echo][echo]]
+#+RESULTS:
 
 ** for                                                                          :cmd:
 ** select                                                                       :cmd:
@@ -201,6 +214,7 @@ select NAME [in WORDS ... ;] do COMMANDS; done
 ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
 
 ** while                                                                        :cmd:
+** read                                                                         :cmd:
 #+BEGIN_SRC sh
   while true; do
       echo "Hello World!"
@@ -232,5 +246,7 @@ script.
   https://www.gnu.org/software/bash/manual/html_node/Builtin-Index.html#Builtin-Index
 - Environment Variables
   http://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap08.html#tag_08
+- Bash oneliners
+  http://www.bashoneliners.com/
 ** Hubs
 - https://github.com/awesome-lists/awesome-bash
