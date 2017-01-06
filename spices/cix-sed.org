@@ -1,6 +1,6 @@
 # File           : cix-sed.org
 # Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Last Modified  : <2016-11-23 Wed 08:00:40 GMT> sharlatan
+# Last Modified  : <2017-1-06 Fri 22:57:01 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -20,17 +20,53 @@ deletions,  insertions, etc.)  can be  specified in  a script  file or  from the
 command line.
 -----
 
+* Receipts
 ** sed                                                                          :cmd:
 *** sed::options
+|-----------------------+----------------------------------------------|
+| -e /script/             | add the script to the commands to be execute |
+| -n, --quite, --silent | suppress automatic printing of pattern space |
+|-----------------------+----------------------------------------------|
 *** sed::examples
-- sed-161122223125 :: remove leading and trailing white spaces from a file:
+**** sed-161122223125
+remove leading and trailing white spaces from a file:
 :    ~$ sed "s/^ *//; s/ *$//" input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
-- sed-161122224710 :: remove lenes between 2 patterns exluding and including:
+**** sed-161122224710
+remove lines between 2 patterns exluding and including:
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/{//!d}" input_f > tmp_f && mv tmp_f input_f
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/d" input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
+
+**** sed-170106224318
+output text betwin BEGIN_PAT and END_PAT:
+:    ~$ sed -n '/BEGIN_PAT/,/END_PAT/p' input_f
+
+**** sed-170106225346
+wrap each line of a file in quotes:
+:    ~$ sed -e 's/\(.*\)/"\1"/' input_f
+
+**** sed-161209234700
+insert spaces every n character in a file or string:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  N=10
+  # Alter the header value to get longer string
+  TEST_DATA="$(head -100 /dev/random | base64 | tr -d '\n')"
+
+  echo "$TEST_DATA" | sed 's/.\{'$N'\}/& /g'
+
+#+END_SRC
+[[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-gnu-core-utilities.org::*base64][base64 (1)]]
+
+
+
 *** sed::files
 *** sed::see-also
     awk(1), ed(1), grep(1), tr(1), perlre(1)
+* References
+** Links
+- Sed - An Introduction and Tutorial by Bruce Barnett
+  http://www.grymoire.com/Unix/Sed.html
