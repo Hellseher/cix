@@ -1,8 +1,19 @@
 # File           : cix-netcat.org
 # Created        : <2016-11-04 Fri 22:44:54 GMT>
-# Last Modified  : <2016-11-04 Fri 22:44:54 GMT> sharlatan
+# Last Modified  : <2017-1-09 Mon 00:41:34 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
+
+#+TITLE: Netcat
+
+* Receipts
+** netcat
+*** netcat::options
+| -l | listen for a port |
+*** netcat::examples
+**** nc-170109001313
+setting up a one-shot webserver on port 8080 to present the content of a file:
+:    ~$  { echo -ne "HTTP/1.0 200 OK\r\nContent-Length: $(wc -c < input_f)\r\n\r\n" cat input_f; } | nc -l -p8080
