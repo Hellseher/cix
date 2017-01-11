@@ -1,6 +1,6 @@
 # File           : cix-shadow-utils.org
 # Created        : <2016-05-03 Tue 00:09:23 GMT>
-# Last Modified  : <2016-12-13 Tue 23:58:12 GMT> sharlatan
+# Last Modified  : <2017-1-11 Wed 22:41:17 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -11,12 +11,12 @@
 [[http://pkg-shadow.alioth.debian.org][|↷|]]
 #+TITLE: Sadow utils
 
-|-------------+----------------------------------|
-| *Author*      |                                  |
+|--------------+----------------------------------|
+| *Author*       |                                  |
 | *Contributors* | Tomasz Kłoczko, Nicolas François |
-| *Realised*    | 2005                             |
-| *Source*      | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]                       |
-|-------------+----------------------------------|
+| *Realised*     | 2005                             |
+| *Source*       | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]                       |
+|--------------+----------------------------------|
 
 The shadow-utils  package includes  the necessary  programs for  converting UNIX
 password files  to the shadow password  format, plus programs for  managing user
@@ -63,3 +63,10 @@ used for managing group accounts.
     newgidmap (1) - set the gid mapping of a user namespace
     newuidmap (1) - set the uid mapping of a user namespace
 #+END_EXAMPLE
+
+* Receipts
+** gpasswd
+*** gpasswd::examples
+**** gpasswd-170111224028
+add current user to a "docker" group:
+:    ~$ sudo gpasswd - ${USER} docker
