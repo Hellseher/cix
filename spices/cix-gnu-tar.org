@@ -1,8 +1,17 @@
 # File           : cix-gnu-tar.org
 # Created        : <2016-11-04 Fri 22:42:50 GMT>
-# Last Modified  : <2016-11-04 Fri 22:42:53 GMT> sharlatan
+# Modified       : <2017-1-17 Tue 21:43:49 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
 
 #+OPTIONS: num:nil
+
+#+TITLE: GNU tar
+
+* Receipts
+** tar
+*** tar::examples
+**** tar-170117214147
+creat an tarball of current working directory:
+:    ~$ tar -cvzf "../${PWD##*/}.tar.gz" ./
