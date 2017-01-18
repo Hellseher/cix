@@ -1,21 +1,21 @@
-# File          : cix-gawk.org
+# File          : cix-awk.org
 # Created       : <2016-11-04 Fri 22:15:18 GMT>
-# Last Modified : <2016-11-23 Wed 23:54:16 GMT> sharlatan
+# Last Modified : <2017-1-18 Wed 21:35:16 GMT> sharlatan
 # Author        : sharlatan
 # Maintainer    :
 
 #+OPTIONS: num:nil
 
-#+TITLE: GAWK
+#+TITLE: AWK
 /awk/
 
-|-------------+---|
-| *Author*      |   |
-| *Maintainers* |   |
-|             |   |
-| *Realised*    |   |
-| *Source*      |   |
-|-------------+---|
+|--------------+---|
+| *Author*       |   |
+| *Contributors* |   |
+|              |   |
+| *Realised*     |   |
+| *Source*       |   |
+|--------------+---|
 
 * Index
 #+BEGIN_EXAMPLE
@@ -26,21 +26,30 @@
 #+END_EXAMPLE
 
 * Receipts
-
 ** awk                                                                          :cmd:
 *** awk::options
 *** awk::examples
-- awk-161111213155 :: Sort text by the length of lines:
-#+BEGIN_SRC sh
-  FILE_PATH="/path/to/your/file"
-  awk '{print length, $0;}' "$FILE_PATH" \
-      | sort -n \
-      | grep -oP "(?<=\s).+"
-#+END_SRC
-[[./cix-gnu-core-utilities.org::*sort][sort (1)]],
-[[./cix-gnu-grep.org::*grep][grep (1)]]
+**** awk-161111213155
+sort text by the length of lines:
+:   ~$ awk '{print length, $0;}' inptut_f | sort -n | grep -oP "(?<=\s).+"
+[[./cix-gnu-core-utilities.org::*sort][sort (1)]] [[./cix-gnu-grep.org::*grep][grep (1)]]
 
-- awk-161120183934 :: rough word frequencies count in a file:
+**** awk-161120234902
+swap 2 columns in a text file with SPS delimiter:
+:    ~$ awk '{tmp=$1; $1=$2; $2=tmp; print;}' ../tests/spices_files.md5
+
+**** awk-161122203549
+search text betwin two lines:
+:    ~$ awk '/line_begin/{f=1} /line_end/{f=0;print} f' ./file_name
+:    ~$ awk '/line_begin/{f=1} f; /line_end/{f=0}' ./file_name
+:    ~$ awk '/line_begin/,/line_end/' ./file_name
+
+**** awk-161225233030
+print unique line of a file:
+:    ~$ awk '!a[$0]++' file
+
+**** awk-161120183934
+word frequencies count in a file:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -50,16 +59,24 @@
       | uniq -c \
       | sort -rm
 #+END_SRC
-[[./cix-gnu-core-utilities.org::*sort][sort (1)]],
-[[./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
+[[./cix-gnu-core-utilities.org::*sort][sort (1)]] [[./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
 
-- awk-161120234902 :: swap 2 columns in a text file with SPS delimiter:
-:    ~$ awk '{tmp=$1; $1=$2; $2=tmp; print;}' ../tests/spices_files.md5
 
-- awk-161122203549 :: search text betwin two lines:
-:    ~$ awk '/line_begin/{f=1} /line_end/{f=0;print} f' ./file_name
-:    ~$ awk '/line_begin/{f=1} f; /line_end/{f=0}' ./file_name
-:    ~$ awk '/line_begin/,/line_end/' ./file_name
+**** awk-170118210126
+measure total bytes writen since system boot, Linux:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  KERNEL_RELEASE="$(uname -r | sed 's/\.//g')"
+
+  if [ "${KERNEL_RELEASE:0:2}" -gt "26" ]; then
+      echo "Total Bytes Writen (TBW)"
+      awk '/sd/ {print $3"\t"$10 / 2 / 1024, "MB"}' /proc/diskstats
+  else
+      echo "Not supported in kernel v2.6 or lower."
+  fi
+#+END_SRC
+[[file:./cix-gnu-core-utilities.org::*uname][uname (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]]
 
 *** awk::files
 *** awk::see-also
@@ -72,5 +89,7 @@
   Addison-Wesley, 1988.  ISBN 0-201-07981-X;
 - *GAWK: Effective AWK Programming, Edition 4.1*;
 ** Links
-- TCP/IP Internetworking With gawk https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html
-- The GNU Awk User’s Guide https://www.gnu.org/software/gawk/manual/gawk.html
+- TCP/IP Internetworking With gawk
+  https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html
+- The GNU Awk User’s Guide
+  https://www.gnu.org/software/gawk/manual/gawk.html
