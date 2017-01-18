@@ -1,17 +1,22 @@
 # File           : cix-openssh.org
 # Created        : <2016-11-13 Sun 19:25:52 GMT>
-# Last Modified  : <2016-11-25 Fri 00:23:10 GMT> sharlatan
+# Last Modified  : <2016-12-21 Wed 22:20:35 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
-
+[[../cix-main.org::*Index][|≣|]]
 #+TITLE: OpenSSH
 
-| Author |
-|        |
+|--------------+---------------|
+| *Author*       | Damien Miller |
+| *Contributors* |               |
+| *Realised*     |               |
+| *Source*       |               |
+| *Info*         |               |
+|--------------+---------------|
 
 SSH (Secure  SHell) is a  program for logging into  and executing commands  on a
 remote machine. SSH is intended to replace *rlogin* and *rsh*, and to provide secure
@@ -25,6 +30,38 @@ date in terms of security and features.
 This package includes  the core files necessary for both  the OpenSSH client and
 server. To  make this package  useful, you should also  install openssh-clients,
 openssh-server, or both.
+
+** Packages
+| № | Name            | RPM | DEB | *BSD |
+|---+-----------------+-----+-----+------|
+| 1 | openssh-server  | +   |     |      |
+| 2 | openssh-clients | +   |     |      |
+|---+-----------------+-----+-----+------|
+
+** Libraries
+|  № | Name           | RPM | DEB |
+|----+----------------+-----+-----|
+|  1 | libaudit       |     |     |
+|  2 | libc           |     |     |
+|  3 | libcap-ng      |     |     |
+|  4 | libcom_err     |     |     |
+|  5 | libcrypt       |     |     |
+|  6 | libcrypto      |     |     |
+|  7 | libdl          |     |     |
+|  8 | libedit        |     |     |
+|  9 | libfipscheck   |     |     |
+| 10 | libgssapi_krb5 |     |     |
+| 11 | libk5crypto    |     |     |
+| 12 | libkrb5        |     |     |
+| 13 | liblber-2      |     |     |
+| 14 | libpam         |     |     |
+| 15 | libresolv      |     |     |
+| 16 | libselinux     |     |     |
+| 17 | libtinfo       |     |     |
+| 18 | libutil        |     |     |
+| 19 | libwrap        |     |     |
+| 20 | libz           |     |     |
+|----+----------------+-----+-----|
 ----
 
 * Index
@@ -58,6 +95,9 @@ openssh-server, or both.
 ** ssh                                                                          :cmd:
 *** ssh::options
 *** ssh::examples
+**** ssh-161211224536
+revers-SOCKS-proxy
+:    ~$ ssh -D 8080 -R 8080:127.0.0.1:8080 usr@1.2.3.4 ssh -R 8080:172.0.0.1:8080 user@2.3.4.5
 *** ssh::files
 *** ssh::see-also
 ** ssh-add                                                                      :cmd:
@@ -80,6 +120,5 @@ openssh-server, or both.
 *** ssh-keyscan::examples
 *** ssh-keyscan::files
 *** ssh-keyscan::see-also
-
 
 * References

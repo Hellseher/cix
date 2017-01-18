@@ -1,6 +1,6 @@
 # File           : cix-gnu-grep.org
 # Created        : <2016-11-18 Fri 23:49:59 GMT>
-# Last Modified  : <2016-11-20 Sun 23:28:36 GMT> sharlatan
+# Last Modified  : <2017-1-06 Fri 22:57:01 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -21,10 +21,15 @@
 ** grep                                                                         :cmd:
 *** grep::options
 *** grep::examples
-- grep-161120232651 :: check virtualisation support of CPU:
+**** grep-161120232651
+check virtualisation support of CPU:
 :    ~$ grep -E "^flat.*(vmx|svm)" /proc/cpuinfo
 
-*** grep::files
+**** grep-161202222559
+grep process list exluding grep itself:
+:    ~$ ps aux | grep [e]macs
+
+*** grep1::files
 *** grep::vars
 #+BEGIN_EXAMPLE
 GREP_OPTIONS
@@ -55,3 +60,4 @@ POSIXLY_CORRECT
 _N_GNU_nonoption_argv_flags_
 #+END_EXAMPLE
 *** grep::see-also
+[[file:./cix-procps-ng.org::*pgrep][pgrep (1)]],

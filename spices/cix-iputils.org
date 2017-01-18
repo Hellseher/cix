@@ -1,6 +1,6 @@
 # File           : cix-iputils.org
 # Created        : <2015-11-16 Mon 00:31:15 GMT>
-# Last Modified  : <2016-12-20 Tue 00:56:32 GMT> sharlatan
+# Last Modified  : <2016-12-20 Tue 01:00:18 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -46,8 +46,11 @@ mini multithread network pinger-scaner:
 
   seq 254 | xargs -n1 -P"$THR" -I% ping -c1 -W3 "${MSK}%"
 #+END_SRC
+[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+[[file:./cix-gnu-core-utilities.org::*wc][wc (1)]]
+[[file:./cix-gnu-core-utilities.org::*seq][seq (1)]]
+[[file:./cix-gnu-findutils.org::*xargs][xargs (1)]]
 
-#+RESULTS:
 
 * Referance
 - Linuxfoundation: iputils http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils

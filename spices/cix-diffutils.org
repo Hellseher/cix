@@ -1,6 +1,6 @@
 # File           : cix-diffutils.org
 # Created        : <2016-11-20 Sun 23:05:57 GMT>
-# Last Modified  : <2016-11-20 Sun 23:06:42 GMT> sharlatan
+# Last Modified  : <2016-12-10 Sat 09:44:21 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -11,10 +11,10 @@
 
 * Index
 #+BEGIN_EXAMPLE
-    cmp (1)              - compare two files byte by byte
-    cmp (1p)             - compare two files
-    diff (1)             - compare files line by line
-    diff (1p)            - compare two files
-    diff3 (1)            - compare three files line by line
-    sdiff (1)            - side-by-side merge of file differences
+    cmp (1)   - compare two files byte by byte
+    cmp (1p)  - compare two files
+    diff (1)  - compare files line by line
+    diff (1p) - compare two files
+    diff3 (1) - compare three files line by line
+    sdiff (1) - side-by-side merge of file differences
 #+END_EXAMPLE

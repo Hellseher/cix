@@ -1,6 +1,6 @@
 # File           : cix-util-linux.org
 # Created        : <2016-10-14 Wed 23:08:36 GMT>
-# Last Modified  : <2016-12-13 Tue 23:58:12 GMT> sharlatan
+# Last Modified  : <2016-12-14 Wed 22:31:00 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -26,31 +26,37 @@ The util-linux package contains a large variety of low-level system utilities
 that are necessary for a Linux system to function. Among others, Util-linux
 contains the fdisk configuration tool and the login program.
 
+** Packages
+| name        | RPM | DEB | ARCH |
+|-------------+-----+-----+------|
+| utils-linux | +   | +   | +    |
+
 ** Libraries
-|  № | Name | Released | RPM             | DEB | BSD |
-|----+------+----------+-----------------+-----+-----|
-|  1 |      |          | ld-linux-x86-64 |     |     |
-|  2 |      |          | libaudit        |     |     |
-|  3 |      |          | libblkid        |     |     |
-|  4 |      |          | libcap-ng       |     |     |
-|  5 |      |          | libcrypt        |     |     |
-|  6 |      |          | libc            |     |     |
-|  7 |      |          | libfdisk        |     |     |
-|  8 |      |          | libmount        |     |     |
-|  9 |      |          | libm            |     |     |
-| 10 |      |          | libncursesw     |     |     |
-| 11 |      |          | libpam_misc     |     |     |
-| 12 |      |          | libpam          |     |     |
-| 13 |      |          | librt           |     |     |
-| 14 |      |          | libselinux      |     |     |
-| 15 |      |          | libsmartcols    |     |     |
-| 16 |      |          | libsystemd      |     |     |
-| 17 |      |          | libtinfo        |     |     |
-| 18 |      |          | libudev         |     |     |
-| 19 |      |          | libutempter     |     |     |
-| 20 |      |          | libutil         |     |     |
-| 21 |      |          | libuuid         |     |     |
-| 22 |      |          | libz            |     |     |
+|  № | Name            | RPM | DEB | ARCH |
+|----+-----------------+-----+-----+------|
+|  1 | ld-linux-x86-64 | +   | +   |      |
+|  2 | libaudit        | +   |     |      |
+|  3 | libblkid        | +   | +   |      |
+|  4 | libcap-ng       | +   |     |      |
+|  5 | libcrypt        | +   | +   |      |
+|  6 | libc            | +   | +   |      |
+|  7 | libfdisk        | +   | +   |      |
+|  8 | libmount        | +   | +   |      |
+|  9 | libm            | +   | +   |      |
+| 10 | libncursesw     | +   | +   |      |
+| 11 | libpam_misc     | +   | +   |      |
+| 12 | libpam          | +   | +   |      |
+| 13 | librt           | +   | +   |      |
+| 14 | libselinux      | +   | +   |      |
+| 15 | libsmartcols    | +   | +   |      |
+| 16 | libsystemd      | +   | +   |      |
+| 17 | libtinfo        | +   | +   |      |
+| 18 | libudev         | +   | +   |      |
+| 19 | libutempter     | +   |     |      |
+| 20 | libutil         | +   |     |      |
+| 21 | libuuid         | +   | +   |      |
+| 22 | libz            | +   | +   |      |
+|----+-----------------+-----+-----+------|
 ------
 
 * Index

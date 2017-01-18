@@ -1,6 +1,6 @@
 # File           : cix-sed.org
 # Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Last Modified  : <2017-1-06 Fri 22:57:01 GMT> sharlatan
+# Last Modified  : <2017-1-11 Wed 21:47:15 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -44,7 +44,7 @@ output text betwin BEGIN_PAT and END_PAT:
 :    ~$ sed -n '/BEGIN_PAT/,/END_PAT/p' input_f
 
 **** sed-170106225346
-wrap each line of a file in quotes:
+     wrap each line of a file in quotes:
 :    ~$ sed -e 's/\(.*\)/"\1"/' input_f
 
 **** sed-161209234700
@@ -61,8 +61,6 @@ insert spaces every n character in a file or string:
 #+END_SRC
 [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-gnu-core-utilities.org::*base64][base64 (1)]]
 
-
-
 *** sed::files
 *** sed::see-also
     awk(1), ed(1), grep(1), tr(1), perlre(1)
@@ -70,3 +68,5 @@ insert spaces every n character in a file or string:
 ** Links
 - Sed - An Introduction and Tutorial by Bruce Barnett
   http://www.grymoire.com/Unix/Sed.html
+- Sed One-Liners Explained
+  http://www.catonmat.net/blog/sed-one-liners-explained-part-one/

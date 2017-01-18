@@ -1,6 +1,6 @@
 # File           : cix-hall_of_fame.org
 # Created        : <2016-11-06 Sun 22:27:11 GMT>
-# Last Modified  : <2016-11-23 Wed 23:38:47 GMT> sharlatan
+# Last Modified  : <2016-12-15 Thu 20:43:00 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -12,8 +12,12 @@
 
 - (1928-1977 48) Joe Ossanna  ::
 - (1932) Douglas McIlroy  ::
-- (1941-2011 70) Dennis Ritchie  ::
+- (1941-2011 70 US) Dennis Ritchie  :: (co) Designer of UNIX, C-lang,
 - (1942) Brian Kernighan  ::
 - (1931-1989 58 US) Lee E. McMahon :: Designer of [[file:./cix-sed.org][sed]], comm, qsort, grep,
       index, cref, cu
-- (1943) Thompson Ken  ::
+- (1943 US) Ken Thompson :: (co) Designer of UNIX, utf-8, Go-lang
+- (1953 US) Richard Stallman :: (co) Designer of GNU Project, Emacs, gcc, gdb
+- (1954 US) Bill Joy :: (co) Designer of Sun Microsystems, Java, NFS, BSD, vi,
+     csh, chroot, TCP/IP
+- (1969 FI) Linus Torvalds ::
