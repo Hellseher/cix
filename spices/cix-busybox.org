@@ -1,15 +1,21 @@
-# File           : cix-busybox.org • spices
-# Created        : <2016-11-07 Mon 21:06:33 GMT>
-# Last Modified  : <2016-11-07 Mon 21:29:19 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Short          :
+# File     : cix-busybox.org • spices
+# Created  : <2016-11-07 Mon 21:06:33 GMT>
+# Modified : <2017-1-20 Fri 21:21:29 GMT> sharlatan
+# Author   : sharlatan <sharlatanus@gmail.com>
+# Short    :
 
 #+OPTIONS: num:nil
 
 #+TITLE: Busybox
 
-** Index
+|--------------+--------------|
+| *Author*       | Bruce Perens |
+| *Released*     | 1999         |
+| *Contributors* |              |
+| *Source*       | [[https://git.busybox.net/][busybox.git]]  |
+| *Info*         |              |
+|--------------+--------------|
+* Index
 #+BEGIN_EXAMPLE
     [ () -
     [[ () -
@@ -334,3 +340,4 @@
 
     start-stop-daemon () -
 #+END_EXAMPLE
+* Referances
