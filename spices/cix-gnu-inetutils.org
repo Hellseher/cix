@@ -1,6 +1,6 @@
 # File           : cix-gnu-inetutils.org
 # Created        : <2016-11-07 Mon 23:34:03 GMT>
-# Last Modified  : <2016-11-07 Mon 23:34:05 GMT> sharlatan
+# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -10,7 +10,7 @@
 File          : gnu-inetutils.md
 
 Created       : Wed 18 Nov 2015 21:20:07
-Last Modified : Sat 21 Nov 2015 20:41:51
+Modified : Sat 21 Nov 2015 20:41:51
 Maintainer    : sharlatan
 -->
 

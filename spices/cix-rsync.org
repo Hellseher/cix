@@ -1,6 +1,6 @@
 # File           : cix-rsync.org
 # Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Last Modified  : <2016-12-14 Wed 00:08:02 GMT> sharlatan
+# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :

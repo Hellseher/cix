@@ -1,6 +1,6 @@
 # File           : cix-moreutils.org
 # Created        : <2016-11-07 Mon 22:33:39 GMT>
-# Last Modified  : <2016-11-08 Tue 23:18:46 GMT> sharlatan
+# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :

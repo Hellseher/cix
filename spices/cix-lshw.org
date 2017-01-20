@@ -1,6 +1,6 @@
 # File           : cix-lshw.org
 # Created        : <2016-12-25 Sun 22:56:53 GMT>
-# Last Modified  : <2016-12-26 Mon 21:28:25 GMT> sharlatan
+# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :

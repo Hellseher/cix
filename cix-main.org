@@ -1,8 +1,8 @@
-# File          : cix-main.org
-# Created       : Sat 07 Nov 2015 22:58:38
-# Last Modified : <2016-12-31 Sat 12:20:23 GMT> sharlatan
-# Maintainer    : sharlatan <sharlatanus@gmail.com>
-# Short         :
+# File       : cix-main.org
+# Created    : Sat 07 Nov 2015 22:58:38
+# Modified   : <2017-1-20 Fri 21:30:33 GMT> sharlatan
+# Maintainer : sharlatan <sharlatanus@gmail.com>
+# Short      :
 
 #+OPTIONS: num:nil
 #+OPTIONS: toc:nil
@@ -185,6 +185,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: Font configuration and customization library
   + [[file:./spices/cix-pulseaudio.org][pulseaudio]] :: PulseAudio sound server utilities
   + [[file:./spices/cix-sox.org][sox]] :: A general purpose sound file conversion tool
+  + [[./spaces/cix-imagemagic.org][ImageMagic]] ::
 
 - *Security* /It's never be save/
   + pam :: An extensible library which provides authentication for applications
