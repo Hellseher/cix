@@ -1,6 +1,6 @@
 # File           : cix-gnu-bash-builtin.org
 # Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-1-28 Sat 12:00:03 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,7 +12,7 @@
 
 -----
 * Index
-
+** Index::Functions
 #+BEGIN_EXAMPLE
     .         - Execute commands from a file in the current shell.
     [ ... ]   - Evaluate conditional expression (synonym "test").
@@ -85,23 +85,20 @@
     mapfile   - Read lines from the standard input into an indexed array variable.
     suspend   - Suspend shell execution.
     typeset   - Set variable values and attributes.
-    typeset   - Set variable values and attributes.
     unalias   - Remove each NAME from the list of defined aliases.
 
     complete  - Specify how arguments are to be completed by Readline.
     continue  - Resume for, while, or until loops.
     function  - Define shell function.
     readonly  - Mark shell variables as unchangeable.
-    readonly  - Mark shell variables as unchangeable.
 
-    readarray - Read lines from a file into an array variable.
     readarray - Read lines from a file into an array variable.
     variables - Common shell variable names and usage.
 #+END_EXAMPLE
 
-
+** Index::Variables
 #+BEGIN_EXAMPLE
-    BASH
+    BASH    - The full pathname used to execute the current instance of Bash.
     BASH_ALIASES
     BASH_ARGC
     BASH_ARGV
@@ -230,10 +227,10 @@ ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
 ** FUNCNAME                                                                     :var:
 
 Its a global internal variable maintained by any linux shell.  Its of type array
-and consists the name  of the current function from where we  are trying to read
-its value.  FUNCNAME  is the current function name and  FUNCNAME is the previous
-function name and so  on ... Its a stack-trace of functions  executed by a shell
-script.   Value of  FUNCNAME  gets cleared  every-time we  execute  a new  shell
+and consists the name of the current function from where we are trying to read
+its value.  FUNCNAME is the current function name and FUNCNAME is the previous
+function name and so on ... Its a stack-trace of functions executed by a shell
+script.  Value of FUNCNAME gets cleared every-time we execute a new shell
 script.
 
 * Referance
