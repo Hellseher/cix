@@ -1,6 +1,6 @@
 # File           : cix-gnu-grep.org
 # Created        : <2016-11-18 Fri 23:49:59 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-2-03 Fri 22:31:48 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -28,6 +28,10 @@ check virtualisation support of CPU:
 **** grep-161202222559
 grep process list exluding grep itself:
 :    ~$ ps aux | grep [e]macs
+
+**** grep-170203223001
+split line of text into character array:
+:    ~$ char_array="$(echo $input_line | grep -o .)"
 
 *** grep1::files
 *** grep::vars
