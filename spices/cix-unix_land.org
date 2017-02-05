@@ -1,6 +1,6 @@
 # File           : cix-unix_land.org
 # Created        : <2015-11-04 Wed 22:21:55 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-2-05 Sun 13:45:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -149,6 +149,7 @@ found on UNIX operating systems and most UNIX-like operating systems.
     write      - write to another user
     xargs      - construct argument lists and invoke utility
 
+
     csplit     - split files based on context
     expand     - convert tabs to spaces
     fort77     - FORTRAN compiler (FORTRAN)
@@ -176,6 +177,7 @@ found on UNIX operating systems and most UNIX-like operating systems.
     strings    - find printable strings in files
     unalias    - remove alias definitions
 
+    terminfo   -
     basename   - return non-directory portion of a pathname
     compress   - compress data
     unexpand   - convert spaces to tabs
