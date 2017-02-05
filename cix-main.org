@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-1-20 Fri 21:30:33 GMT> sharlatan
+# Modified   : <2017-2-05 Sun 20:51:34 GMT> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Short      :
 
@@ -81,6 +81,8 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities: *Linux FreeBSD*
   + [[./spices/cix-man-db.org][man-db]] :: Tools for searching and reading man pages: *Linux*
   + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: *Linux*
+  + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens with
+               reasonable optimization.
   + The Heirloom Project :: traditional implementations of standard UNIX utils
   + BSD :: List of common BSD commands
 
@@ -141,6 +143,7 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: The GNU versions of find utilities (find and xargs)
   + [[./spices/cix-ag.org][ag]] :: Super-fast text searching tool - Silversearcher
   + [[./spices/cix-ack.org][ack]] :: Grep-like text finder
+  + [[file:spices/cix-jq.org][jq]] :: Command-line JSON processor
   + [[./spices/cix-fdupes.org][fdupes]] :: Finds duplicate files in a given set of directories
 
 - *Compress-archive* /I'm a pac man/
@@ -169,7 +172,7 @@ on *GNU/Linux*
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: *Linux FreeBSD*
 
 - *Shell* /Not just sand.../
-  + [[./spices/cix-gnu-bash-builtin.org][gnu-bash-builtin]] :: GNU Bash shell built in commands
+  + [[./spices/cix-gnu-bash.org][gnu-bash]] :: GNU Bash shell built in commands
   + [[./spices/cix-fish.org][fish]] ::  A friendly interactive shell
   + [[./spices/cix-screen.org][screen]] :: A screen manager that supports multiple logins on one terminal
   + [[./spices/cix-tmux.org][tmux]] :: A terminal multiplexer
@@ -188,17 +191,20 @@ on *GNU/Linux*
   + [[./spaces/cix-imagemagic.org][ImageMagic]] ::
 
 - *Security* /It's never be save/
-  + pam :: An extensible library which provides authentication for applications
+  + [[file:spices/cix-pam.org][pam]] :: An extensible library which provides authentication for applications
   + [[file:./spices/cix-libselinux-utils.org][libselinux-utils]] :: SELinux libselinux utilies
   + [[file:./cix-sudo.org][sudo]] :: Allows restricted root access for specified users
 
 - *Init-system* /Let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  A System and Service Manager
+  + [[./spices/cix-sysvinit-utils.org][sysvinit-utils]] :: System-V-like utilities
+  + [[./spices/cix-upstart.org][upstart]] :: event-based init daemo
 
 - *Development* /In the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-glibc.org][glibc]] :: Common binaries and locale data for glibc
   + [[./spices/cix-gdb.org][gdb]] :: A GNU source-level debugger for C, C++, Fortran, Go and other language
   + [[./spices/cix-gcc.org][gcc]] :: Various compilers (C, C++, Objective-C, Java, ...)
+  + [[./spices/cix-autoconf.org][autoconf]] :: A GNU tool for automatically configuring source code
 
 - *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-packet-managers.org][Package managers utils]] :: PM comparison table and tricks

@@ -1,0 +1,22 @@
+# File           : cix-sysvinit-utils.org
+# Created        : <2017-02-05 Sun 14:00:28 GMT>
+# Modified       : <2017-2-05 Sun 20:49:50 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+* Index
+#+BEGIN_EXAMPLE
+    service (8)      - run a System V init script
+    last (1)         - show listing of last logged in users
+    mesg (1)         - control write access to your terminal
+    killall5 (8)     - send a signal to all processes.
+    startpar (8)     - start runlevel scripts in parallel
+    fstab-decode (8) - run a command with fstab-encoded arguments
+    sulogin (8)      - Single-user login
+    bootlogd (8)     - record boot messages
+    lastb (1)        - show listing of last logged in users
+    pidof (8)        - find the process ID of a running program.
+#+END_EXAMPLE

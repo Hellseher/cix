@@ -1,0 +1,27 @@
+# File           : cix-ncurses.org
+# Created        : <2017-02-05 Sun 13:35:46 GMT>
+# Modified       : <2017-2-05 Sun 13:45:46 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: ncurses
+
+* Index
+#+BEGIN_EXAMPLE
+    captoinfo (1m) - convert a termcap description into a terminfo description
+    clear (3x)     - clear all or part of a curses window
+    clear (1)      - clear the terminal screen
+    infocmp (1m)   - compare or print out terminfo descriptions
+    infotocap (1m) - convert a terminfo description into a termcap description
+    reset (1)      - terminal initialization
+    tabs (1)       - set tabs on a terminal
+    tabs (1p)      - set terminal tabs
+    tic (1m)       - the terminfo entry-description compiler
+    toe (1m)       - table of (terminfo) entries
+    tput (1)       - initialize a terminal or query terminfo database
+    tput (1p)      - change terminal characteristics
+    tset (1)       - terminal initialization
+#+END_EXAMPLE

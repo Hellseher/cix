@@ -1,0 +1,36 @@
+# File           : cix-upstart.org
+# Created        : <2017-02-05 Sun 20:41:27 GMT>
+# Modified       : <2017-2-05 Sun 20:49:50 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: upstart
+
+* Index
+#+BEGIN_EXAMPLE
+    shutdown (8)              - bring the system down
+    upstart-udev-bridge (7)   - Bridge between Upstart and udev
+    upstart-udev-bridge (8)   - Bridge between Upstart and udev
+    initctl (8)               - init daemon control tool
+    upstart-socket-bridge (8) - Bridge between Upstart and sockets
+    telinit (8)               - change system runlevel
+    reboot (8)                - reboot or stop the system
+    init (7)                  - Upstart process management daemon
+    init (5)                  - Upstart init daemon job configuration
+    init (8)                  - Upstart process management daemon
+    runlevel (7)              - event signalling change of system runlevel
+    runlevel (8)              - output previous and current runlevel
+    init-checkconf (8)        - manual page for init-checkconf
+    initctl2dot (8)           - manual page for initctl2dot
+    reload (8)                - init daemon control tool
+    status (8)                - init daemon control tool
+    halt (5)                  - variables that affect the behavior of the shutdown scripts
+    halt (8)                  - reboot or stop the system
+    restart (8)               - init daemon control tool
+    stop (8)                  - init daemon control tool
+    poweroff (8)              - reboot or stop the system
+    start (8)                 - init daemon control tool
+#+END_EXAMPLE
