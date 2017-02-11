@@ -1,6 +1,6 @@
 # File           : cix-gnu-tar.org
 # Created        : <2016-11-04 Fri 22:42:50 GMT>
-# Modified       : <2017-1-17 Tue 21:43:49 GMT> sharlatan
+# Modified       : <2017-2-11 Sat 02:08:35 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -11,7 +11,19 @@
 
 * Receipts
 ** tar
+*** tar::options
+
+| -x | Extract files                                                  |
+| -v | verbose, print the file names as they are extracted one by one |
+| -z | The file is a "gzipped" file                                   |
+| -f | Use the following tar archive for the operation                |
+
 *** tar::examples
 **** tar-170117214147
-creat an tarball of current working directory:
+creat a tarball of current working directory:
 :    ~$ tar -cvzf "../${PWD##*/}.tar.gz" ./
+
+**** tar-170210225833
+extart *.tar.gz, *.tar.bz2 files:
+:    ~$ tar -xzvf tarball_file.tar.gz
+:    ~$ tar -xjvf tarball_file.tar.bz2
