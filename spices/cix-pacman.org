@@ -1,0 +1,23 @@
+# File           : cix-pacman.org
+# Created        : <2017-02-07 Tue 22:53:49 GMT>
+# Modified       : <2017-2-08 Wed 08:11:47 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+
+* Receipts
+
+** pacman
+*** pacman::examples
+**** pacman-170207225417
+list files that are not owned by any installed package:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  for file in /usr/bin/*; do
+      pacman -Qo "$file" &> /dev/null || echo "$file";
+  done
+#+END_SRC

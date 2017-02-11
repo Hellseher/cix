@@ -1,0 +1,18 @@
+# File           : cix-aptitude.org
+# Created        : <2017-02-07 Tue 22:45:18 GMT>
+# Modified       : <2017-2-08 Wed 08:11:47 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: aptitude
+
+* Receipts
+
+** aptitude
+*** aptitude::examples
+**** aptitude-170207225209
+rolling upgrades via aptitude:
+:    # aptitude update && aptitude -DrVWZ full-upgrade && aptitude autoclean
