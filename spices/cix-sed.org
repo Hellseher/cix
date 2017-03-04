@@ -1,6 +1,6 @@
 # File           : cix-sed.org
 # Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Modified  : <2017-2-03 Fri 21:49:08 GMT> sharlatan
+# Modified  : <2017-3-04 Sat 15:46:15 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Short          :
@@ -21,16 +21,23 @@ command line.
 -----
 
 * Receipts
-** sed                                                                          :cmd:
+** GNU sed                                                                      :cmd:
 *** sed::options
-|-----------------------+----------------------------------------------|
-| -e /script/             | add the script to the commands to be execute |
-| -n, --quite, --silent | suppress automatic printing of pattern space |
-|-----------------------+----------------------------------------------|
+|---------------------------------+-------------------------------------------------------|
+| =-i[SUFFIX], --in-place[=SUFFIX]= | edit files in place (makes backup if SUFFIX supplied) |
+| =-e script, --expression=script=  | add the script to the commands to be execute          |
+| =-n, --quite, --silent=           | suppress automatic printing of pattern space          |
+|---------------------------------+-------------------------------------------------------|
 *** sed::examples
 **** sed-161122223125
-remove leading and trailing white spaces from a file:
-:    ~$ sed "s/^ *//; s/ *$//" input_f > tmp_f && mv tmp_f input_f
+remove leading white spaces from a file:
+:    ~$ sed -i -e 's/^ *//g' input_f
+:    ~$ sed 's/^ *//' input_f > tmp_f && mv tmp_f input_f
+[[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
+**** sed-170304154248
+remove trailing white spaces from a file:
+:    ~$ sed -i -e 's/ *$//g' input_f
+:    ~$ sed -e 's/ *$//g' input_f > tmp_f && mv tm_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-161122224710
