@@ -1,0 +1,29 @@
+# File           : cix-tcsh.org
+# Created        : <2017-02-27 Mon 23:29:58 GMT>
+# Modified       : <2017-3-02 Thu 23:34:06 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[../README.org::*Index][|≣|]]
+#+TITLE: tcsh
+
+|--------------+--------------------------------|
+| *Author*       | Ken Greer                      |
+| *Contributors* | Paul Placeway, Christos Zoulas |
+| *Realised*     | 1983                           |
+| *Source*       |                                |
+| *Info*         |                                |
+|--------------+--------------------------------|
+
+
+
+Tcsh is an enhanced, but completely compatible version of the Berkeley UNIX C
+shell (csh). It is a command language interpreter usable both as an interactive
+login shell and a shell script command processor. It includes a command-line
+editor, programmable word completion, spelling correction, a history mechanism,
+job control and a C-like syntax.
+
+-----

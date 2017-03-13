@@ -1,0 +1,14 @@
+# File           : cix-apt-get.org
+# Created        : <2017-03-13 Mon 22:14:32 GMT>
+# Modified       : <2017-3-13 Mon 22:16:27 GMT> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: apt
+
+* Receipts
+** apt-get
+*** apt-get::files
