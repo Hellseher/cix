@@ -1,6 +1,6 @@
 # File           : cix-ncurses.org
 # Created        : <2017-02-05 Sun 13:35:46 GMT>
-# Modified       : <2017-2-05 Sun 13:45:46 GMT> sharlatan
+# Modified       : <2017-3-15 Wed 22:03:39 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -25,3 +25,22 @@
     tput (1p)      - change terminal characteristics
     tset (1)       - terminal initialization
 #+END_EXAMPLE
+
+* Receipts
+
+** tput
+*** tput::examples
+show warning message if user is not root:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  [ "$(id -ur)" = 0 ] ||
+      {
+          tput bold; tput setaf 1
+          cat << EOF
+     Run as root. Exit.
+  EOF
+          tput sgr0; exit 1
+      }
+
+#+END_SRC
