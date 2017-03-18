@@ -1,9 +1,9 @@
-# File           : cix-sed.org
-# Created        : <2016-11-04 Fri 22:49:14 GMT>
-# Modified  : <2017-3-04 Sat 15:46:15 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Short          :
+# File         : cix-sed.org
+# Created      : <2016-11-04 Fri 22:49:14 GMT>
+# Modified     : <2017-3-04 Sat 20:03:29 GMT> sharlatan
+# Author       : sharlatan
+# Maintainer(s :
+# Short        :
 
 #+OPTIONS: num:nil
 
@@ -22,6 +22,7 @@ command line.
 
 * Receipts
 ** GNU sed                                                                      :cmd:
+
 *** sed::options
 |---------------------------------+-------------------------------------------------------|
 | =-i[SUFFIX], --in-place[=SUFFIX]= | edit files in place (makes backup if SUFFIX supplied) |
@@ -81,3 +82,5 @@ insert spaces every n character in a file or string:
   http://www.grymoire.com/Unix/Sed.html
 - Sed One-Liners Explained
   http://www.catonmat.net/blog/sed-one-liners-explained-part-one/
+- sed.sf.net
+  http://sed.sourceforge.net/
