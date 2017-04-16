@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Modified : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified : <2017-4-16 Sun 12:39:32 BST> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -8,18 +8,27 @@
 [[../cix-main.org::*Index][|≣|]]
 #+TITLE: GNU Core Utilities
 
-|--------------+---------------|
-| *Author*       |               |
-| *Contributors* |               |
-| *Realised*     |               |
-| *Source*       | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
-| *Info*         | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
-|--------------+---------------|
+|--------------+-------------------------------------------------|
+| *Author*       |                                                 |
+| *Contributors* | Jim Meyering <jim@meyering.net>                 |
+|              | Paul Eggert <eggert@cs.ucla.edu>                |
+|              | Pádraig Brady <P@draigBrady.com>                |
+|              | Eric Blake <eblake@redhat.com>                  |
+|              | Bernhard Voelker <mail@bernhard-voelker.de>     |
+|              | Stefano Lattarini <stefano.lattarini@gmail.com> |
+|              | Benno Schulenberg <bensberg@justemail.net>      |
+|              | Assaf Gordon <assafgordon@gmail.com>            |
+|              | Ondřej Vašík <ovasik@redhat.com>                |
+|              | Kamil Dudka <kdudka@redhat.com>                 |
+| *Realised*     | 2003                                            |
+| *Source*       | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]]                                   |
+| *Info*         | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]]                                   |
+|--------------+-------------------------------------------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation utilities
 of the GNU operating system.  These are the core utilities which are expected to
 exist  on  every  operating system.   This  package  is  the  union of  the  GNU
-fileutils, sh-utils, and textutils packages.
+=fileutils=, =shellutils=, and =textutils= packages.
 -----
 
 * Index
@@ -612,10 +621,14 @@ aliases best practice:
 [[Index][⬆]] /make directories/
 /Written by David MacKenzie/
 *** mkdir::options
+| -p | create full path |
 *** mkdir::examples
 **** mkdir-161120111806
 create a set of 135199 directories:
 :    ~$ mkdir ./test_dir{1..1}{a..z}{A..Z}
+
+create a directory tree with one line:
+:    ~$ mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/a}
 *** mkdir::files
 *** mkdir::see-also
 ** mkfifo                                                                       :cmd:
@@ -646,7 +659,7 @@ replace spaces in file/dir name with underscore "_":
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
-  SEARCH_PATH="$HOME"/Data
+  SEARCH_PATH="$HOME"/Downloads
 
   # First, replace spaces in dir names,
   # Keep trying utill all pathes changed.
@@ -1101,6 +1114,7 @@ windows files to UNIX format:
   *UNIX® Shell Programming, 3thd edition*;
   Sams Publishing, 2003;
 ** Links
-- GNU Coreutils https://www.gnu.org/software/coreutils/manual/coreutils.html
+- GNU Coreutils
+  https://www.gnu.org/software/coreutils/manual/coreutils.html
 - http://wiki.linuxquestions.org/
 - http://www.commandlinefu.com
