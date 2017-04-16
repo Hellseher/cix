@@ -1,0 +1,78 @@
+# File           : cix-convension.org
+# Created        : <2017-04-16 Sun 12:04:39 BST>
+# Modified       : <2017-4-16 Sun 21:36:48 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+#+TITLE: Comprehensive Inspiration of UNIX convension
+
+* Styling
+** Layout
+I use org-mode format for building example files. It's a very powerful and flexible but it
+takes some time to master it.
+
+Style requirements for exampls
+
+Variables
+#+BEGIN_EXAMPLE
+VAR_STRING="string"
+VAR_NUM=1234
+VAR_PATH="/path/to/somewhere"
+#+END_EXAMPLE
+
+Structure
+#+BEGIN_EXAMPLE
+Package name
+
+| Author      | |
+| Maintainers | |
+| Released    | |
+| Source      | |
+| Info        | |
+
+Long discription
+-----
+
+* Index
+List of commands included in package with short description
+* Receipts
+** command
+*** command::options
+*** command::examples
+*** command::files
+*** command::see-also
+* References
+** Books
+** Links
+** Wiki
+** IRC
+#+END_EXAMPLE
+
+Example header with time-stamp
+#+BEGIN_EXAMPLE
+**** command-YmdHMS
+short description:
+#+END_EXAMPLE
+
+#+BEGIN_SRC sh
+  #!/usr/bin/env sh
+  # Point to what shell did you use.
+
+  # Body, less word more examples!
+#+END_SRC
+cmd (1) link to other command used
+
+#+BEGIN_EXAMPLE
+$ - system user commands
+# - system root user commands
+#+END_EXAMPLE
+
+* Convert to whatever
+Export *org files to {pdf,html,tex,txt,whatever}
+- Emacs Org-Mode http://orgmode.org/manual/Exporting.html
+- Pandoc http://pandoc.org/demos.html
+- Org to Reveal.js https://github.com/yjwen/org-reveal
+- Org to nice HTML https://github.com/fniessen/org-html-themes
