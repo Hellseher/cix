@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-4-16 Sun 12:41:39 BST> sharlatan
+# Modified   : <2017-4-16 Sun 21:38:07 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Short      :
 
@@ -75,29 +75,30 @@ on *GNU/Linux*
   + [[./spices/cix-unix_land.org][unix land]] :: common unix commands.
 
 - *Core* /usually it contains on the most distributions/
+  + bsd :: list of common bsd commands
   + [[./spices/cix-busybox.org][BusyBox]] :: the swiss army knife of embedded Linux
-  + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities: *linux freebsd*
-  + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: *linux*
-  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the linux operating system: *linux*
+  + [[./spices/cix-gnu-core-utilities.org][gnu-coreutilities]] :: basic file, shell and text manipulation utilities: *Linux FreeBSD*
+  + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console (keyboard, virtual terminals, etc.)
+  + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: *Linux*
   + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens with
                reasonable optimization.
-  + the heirloom project :: traditional implementations of standard unix utils
-  + bsd :: list of common bsd commands
-  + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console (keyboard, virtual terminals, etc.)
+  + the heirloom project :: traditional implementations of standard UNIX utils
+  + [[./spices/cix-toybox.org][toybox]]  :: common Linux commands for embedded systems (POSIX-2008 and LSB 4.1).
+  + [[./spices/cix-util-linux.org][util-Linux]] :: is a standard package of the Linux operating system: *Linux*
 
 - *File* /everything is a file/!
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a gnu collection of diff utilities
   + [[./spices/cix-emacs.org][emacs]] :: gnu emacs text editor
   + [[./spices/cix-gawk.org][gawk]] :: the gnu version of the awk text processing utility
   + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better
-  + [[./spices/cix-lsof.org][lsof]] :: a utility which lists open files on a linux/unix system
+  + [[./spices/cix-lsof.org][lsof]] :: a utility which lists open files on a Linux/unix system
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: a small text editor
   + [[./spices/cix-sed.org][sed]] :: a gnu stream text editor
-  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: *freebsd linux os-x*
+  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: *FreeBSD Linux os-x*
 
 - *Transfare-sync* /put me up, put me down/
-  + [[file:./cix-curl.org][curl]] :: a utility for getting files from remote servers: *linux freebsd*
+  + [[file:./cix-curl.org][curl]] :: a utility for getting files from remote servers: *Linux FreeBSD*
   + [[./spices/cix-lsyncd.org][lsyncd]] :: live syncing daemon synchronizes local directories with remote targиets
   + [[file:./spices/cix-rsync.org][rsync]] :: a program for synchronizing files over a network
   + [[./spices/cix-vsftp.org][vsftp]] :: very secure ftp daemon
@@ -130,11 +131,11 @@ on *GNU/Linux*
 
 - *Hardware* /hard as a rock!/
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities:
-    *linux freebsd netbsd openbsd gnu/kfreebsd  solaris/i386 aix gnu hurd windows
+    *Linux FreeBSD netbsd openbsd gnu/kFreeBSD  solaris/i386 aix gnu hurd windows
     cygwin beos haiku darwin*
   + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks
   + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data
-  + [[./spices/cix-usbutils.org][usbutils]] :: linux usb utilities
+  + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities
   + [[./spices/cix-lshw.org][lshw]] :: hardware lister
 
 - *Searching* /loosing my religion/
@@ -153,22 +154,22 @@ on *GNU/Linux*
   + [[./spices/cix-unizp.org][unzip]] :: a utility for unpacking zip files
   + [[./spices/cix-lrzip.org][lrzip]] :: compression program optimized for large files
   + [[./spices/cix-pax.org][pax]] :: posix file system archiver
-  + [[./spices/cix-xz.org][xz]] :: lzma compression utilities: *linux freebsd*
+  + [[./spices/cix-xz.org][xz]] :: lzma compression utilities: *Linux FreeBSD*
 
 - *Networking* /we all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
-  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: utilities for configuring the linux ethernet bridge
+  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: utilities for configuring the Linux ethernet bridge
   + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
-  + [[./spices/cix-iptables.org][iptables]] :: linux kernel packet filtering capabilities: *linux*
-  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: *linux*
+  + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: *Linux*
+  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: *Linux*
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
   + [[./spices/cix-openssh.org][openssh]] :: an open source implementation of ssh protocol:
-  *aix hp-ux irix linux next sco sni/reliant unix solaris digital unix/tru64/osf
+  *aix hp-ux irix Linux next sco sni/reliant unix solaris digital unix/tru64/osf
   mac os-x cygwin*
-  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: *linux freebsd*
+  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: *Linux FreeBSD*
 
 - *Shell* /not just sand.../
   + [[./spices/cix-gnu-bash.org][gnu-bash]] :: gnu bash shell built in commands
@@ -183,7 +184,7 @@ on *GNU/Linux*
   + [[./spices/cix-cronie.org][cronie]]  :: cron daemon for executing programs at set times
 
 - *Media* /please your eyes and ears/
-  + [[file:./spices/cix-alsa-utils.org][alsa-utils]] :: advanced linux sound architecture (alsa) utilities
+  + [[file:./spices/cix-alsa-utils.org][alsa-utils]] :: advanced Linux sound architecture (alsa) utilities
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: digital vcr and streaming server
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: font configuration and customization library
   + [[file:./spices/cix-pulseaudio.org][pulseaudio]] :: pulseaudio sound server utilities
@@ -192,7 +193,7 @@ on *GNU/Linux*
 
 - *Security* /it's never be save/
   + [[file:spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications
-  + [[file:./spices/cix-libselinux-utils.org][libselinux-utils]] :: selinux libselinux utilies
+  + [[file:./spices/cix-libselinux-utils.org][libseLinux-utils]] :: seLinux libseLinux utilies
   + [[file:./cix-sudo.org][sudo]] :: allows restricted root access for specified users
 
 - *Init-system* /let's party started!/
@@ -212,7 +213,7 @@ on *GNU/Linux*
   + [[file:cix-yum-dnf.org][yum/dnf]] :: fork of yum, using libsolv as a dependency resolve
   + [[file:spices/cix-rpm.org][rpm]] :: the rpm package manager (rpm) is a powerful command line driven
            package management system
-  + [[file:spices/cix-aptitude.org][aptitude]] :: is a featureful package manager for debian gnu/linux systems,
+  + [[file:spices/cix-aptitude.org][aptitude]] :: is a featureful package manager for debian gnu/Linux systems,
                 based on the renowned apt
   + [[file:spices/cix-pacman.org][pacman]] :: is one of the major distinguishing features of Arch Linux
   + [[file:spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD
@@ -270,8 +271,8 @@ on *GNU/Linux*
 ** Wikis
 - http://wiki.bash-hackers.org/
 - https://emacswiki.org/
-- https://wiki.archlinux.org/
-- https://wiki.freebsd.org/
+- https://wiki.archLinux.org/
+- https://wiki.FreeBSD.org/
 - https://wiki.ubuntu.com/
 
 ** Hubs
