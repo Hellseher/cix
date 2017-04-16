@@ -1,11 +1,9 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-3-13 Mon 22:16:24 GMT> sharlatan
+# Modified   : <2017-4-16 Sun 12:41:39 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Short      :
 
-#+OPTIONS: num:nil
-#+OPTIONS: toc:nil
 
 #+TITLE: CIX
 /Comprehensive Inspiration of uniX/
@@ -17,7 +15,7 @@ one place.
 
 Man pages common sections.
 
-| Allover | Linux | Solaris | BSD | HP-UX | AIX |                                    |
+| ALLOVER | LINUX | SOLARIS | BSD | HP-UX | AIX |                                    |
 |---------+-------+---------+-----+-------+-----+------------------------------------|
 |       0 |       |         |     |       |     | Header f                           |
 |      0p |       |         |     |       |     | Header f (POSIX)                   |
@@ -77,7 +75,7 @@ on *GNU/Linux*
   + [[./spices/cix-unix_land.org][unix land]] :: common unix commands.
 
 - *Core* /usually it contains on the most distributions/
-  + [[./spices/cix-busybox.org][busybox]] :: the swiss army knife of embedded linux
+  + [[./spices/cix-busybox.org][BusyBox]] :: the swiss army knife of embedded Linux
   + [[./spices/cix-gnu-core-utilities.org][gnu-core-utilities]] :: basic file, shell and text manipulation utilities: *linux freebsd*
   + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: *linux*
   + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the linux operating system: *linux*
@@ -229,10 +227,11 @@ on *GNU/Linux*
   + [[./spices/cix-gpg.org][gnupg]] :: A GNU utility for secure communication and data storage
 -----
 * Glosary
+- SUS :: Single UNIX Specitication
 - discriptor ::
 - DMI ::
 - sticky bit ::
-- GUI ::
+- GUI :: Graphical User Interface
 - restricted delition flag :: prevents unprivileged users from removing or
      renaming a file in the directory unless they own the file or the directory
 - inode ::
@@ -276,12 +275,16 @@ on *GNU/Linux*
 - https://wiki.ubuntu.com/
 
 ** Hubs
-- Bioinformatics one-liners https://github.com/stephenturner/oneliners
-- Awesome Shell https://github.com/alebcay/awesome-shell
-- Awesome Bash https://github.com/awesome-lists/awesome-bash
+- Bioinformatics one-liners
+  https://github.com/stephenturner/oneliners
+- Awesome Shell
+  https://github.com/alebcay/awesome-shell
+- Awesome Bash
+  https://github.com/awesome-lists/awesome-bash
 
 ** IRC
-- irc.freenode.org ::
+- *irc.freenode.org*
   - #linux was created on 2001-02-09 23:16:24
   - #emacs was created on 2006-11-26 06:42:33
+  - #org-mode was created on 2010-01-30 07:48:24
 # End of README.org
