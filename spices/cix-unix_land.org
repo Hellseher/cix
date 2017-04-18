@@ -1,6 +1,6 @@
 # File           : cix-unix_land.org
 # Created        : <2015-11-04 Wed 22:21:55 GMT>
-# Modified  : <2017-4-18 Tue 22:21:19 BST> sharlatan
+# Modified  : <2017-4-18 Tue 23:21:06 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -15,172 +15,341 @@ stundurds[fn:1], [fn:2], [fn:3] which is a part of the Single UNIX Specification
 operating systems.
 
 #+NAME: unix-commands
-| CMD        | DESCRIPTION                                                                     | POSIX | UTIL-LINUX | COREUTILS | BUSYBOX | TOYBOX |
-|------------+---------------------------------------------------------------------------------+-------+------------+-----------+---------+--------|
-| admin      | create and administer SCCS files                                                |       |            |           |         |        |
-| alias      | define or display aliases                                                       |       |            |           |         |        |
-| ar         | create and maintain library archives                                            |       |            |           |         |        |
-| asa        | interpret carriage-control characters                                           |       |            |           |         |        |
-| at         | execute commands at a later time                                                |       |            |           |         |        |
-| awk        | pattern scanning and processing language                                        |       |            |           |         |        |
-| basename   | return non-directory portion of a pathname                                      |       |            |           |         |        |
-| batch      | schedule commands to be executed in a batch queue                               |       |            |           |         |        |
-| bc         | arbitrary-precision arithmetic language                                         |       |            |           |         |        |
-| bg         | run jobs in the background                                                      |       |            |           |         |        |
-| cal        | print a calendar                                                                |       |            |           |         |        |
-| cat        | concatenate and print files                                                     |       |            |           |         |        |
-| cc         | compile standard C programs                                                     |       |            |           |         |        |
-| cd         | change the working directory                                                    |       |            |           |         |        |
-| cflow      | generate a C-language flowgraph (DEVELOPMENT)                                   |       |            |           |         |        |
-| chgrp      | change the file group ownership                                                 |       |            |           |         |        |
-| chmod      | change the file modes                                                           |       |            |           |         |        |
-| chown      | change the file ownership                                                       |       |            |           |         |        |
-| cksum      | write file checksums and sizes                                                  |       |            |           |         |        |
-| cmp        | compare two files                                                               |       |            |           |         |        |
-| comm       | select or reject lines common to two files                                      |       |            |           |         |        |
-| command    | execute a simple command                                                        |       |            |           |         |        |
-| compress   | compress data                                                                   |       |            |           |         |        |
-| cp         | copy files                                                                      |       |            |           |         |        |
-| crontab    | schedule periodic background work                                               |       |            |           |         |        |
-| csplit     | split files based on context                                                    |       |            |           |         |        |
-| ctags      | create a tags file (DEVELOPMENT, FORTRAN)                                       |       |            |           |         |        |
-| cu         | utility for establishing a terminal connection to a remote system               |       |            |           |         |        |
-| cut        | cut out selected fields of each line of a file                                  |       |            |           |         |        |
-| cxref      | generate a C-language program cross-reference table (DEVELOPMENT)               |       |            |           |         |        |
-| date       | write the date and time                                                         |       |            |           |         |        |
-| dd         | convert and copy a file                                                         |       |            |           |         |        |
-| delta      | Make a delta (change) to an SCCS file                                           |       |            |           |         |        |
-| df         | report free disk space                                                          |       |            |           |         |        |
-| diff       | compare two files                                                               |       |            |           |         |        |
-| dirname    | return the directory portion of a pathname                                      |       |            |           |         |        |
-| du         | estimate file space usage                                                       |       |            |           |         |        |
-| echo       | write arguments to standard output                                              |       |            |           |         |        |
-| ed         | edit text                                                                       |       |            |           |         |        |
-| env        | set the environment for command invocation                                      |       |            |           |         |        |
-| ex         | text editor                                                                     |       |            |           |         |        |
-| expand     | convert tabs to spaces                                                          |       |            |           |         |        |
-| expr       | evaluate arguments as an expression                                             |       |            |           |         |        |
-| false      | return false value                                                              |       |            |           |         |        |
-| fc         | process the command history list                                                |       |            |           |         |        |
-| ff         | lists the file names and statistics for a file system                           |       |            |           |         |        |
-| fg         | run jobs in the foreground                                                      |       |            |           |         |        |
-| file       | determine file type                                                             |       |            |           |         |        |
-| find       | find files                                                                      |       |            |           |         |        |
-| fold       | filter for folding lines                                                        |       |            |           |         |        |
-| fort77     | FORTRAN compiler (FORTRAN)                                                      |       |            |           |         |        |
-| fuser      | list process IDs of all processes that have one or more files open              |       |            |           |         |        |
-| gencat     | generate a formatted message catalog                                            |       |            |           |         |        |
-| get        | get a version of an SCCS file                                                   |       |            |           |         |        |
-| getconf    | get configuration values                                                        |       |            |           |         |        |
-| getopts    | parse utility options                                                           |       |            |           |         |        |
-| grep       | search a file for a pattern                                                     |       |            |           |         |        |
-| hash       | remember or report utility locations                                            |       |            |           |         |        |
-| head       | copy the first part of files                                                    |       |            |           |         |        |
-| iconv      | codeset conversion                                                              |       |            |           |         |        |
-| id         | return user identity                                                            |       |            |           |         |        |
-| ipcrm      | remove an XSI message queue, semaphore set, or shared memory segment identifier |       |            |           |         |        |
-| ipcs       | report XSI interprocess communication facilities status                         |       |            |           |         |        |
-| jobs       | display status of jobs in the current session                                   |       |            |           |         |        |
-| join       | relational database operator                                                    |       |            |           |         |        |
-| kill       | terminate or signal processes                                                   |       |            |           |         |        |
-| lex        | generate programs for lexical tasks (DEVELOPMENT)                               |       |            |           |         |        |
-| link       | call link function                                                              |       |            |           |         |        |
-| ln         | link files                                                                      |       |            |           |         |        |
-| locale     | get locale-specific information                                                 |       |            |           |         |        |
-| localedef  | define locale environment                                                       |       |            |           |         |        |
-| logger     | log messages                                                                    |       |            |           |         |        |
-| logname    | return the user's login name                                                    |       |            |           |         |        |
-| lp         | send files to a printer                                                         |       |            |           |         |        |
-| ls         | list directory contents                                                         |       |            |           |         |        |
-| m4         | macro processor (DEVELOPMENT)                                                   |       |            |           |         |        |
-| mailx      | process messages                                                                |       |            |           |         |        |
-| make       | maintain, update, and regenerate groups of programs (DEVELOPMENT)               |       |            |           |         |        |
-| man        | display system documentation                                                    |       |            |           |         |        |
-| mesg       | permit or deny messages                                                         |       |            |           |         |        |
-| mkdir      | make directories                                                                |       |            |           |         |        |
-| mkfifo     | make FIFO special files                                                         |       |            |           |         |        |
-| more       | display files on a page-by-page basis                                           |       |            |           |         |        |
-| mv         | move files                                                                      |       |            |           |         |        |
-| newgrp     | change to a new group                                                           |       |            |           |         |        |
-| nice       | invoke a utility with an altered nice value                                     |       |            |           |         |        |
-| nl         | line numbering filter                                                           |       |            |           |         |        |
-| nm         | write the name list of an object file (DEVELOPMENT)                             |       |            |           |         |        |
-| nohup      | invoke a utility immune to hangups                                              |       |            |           |         |        |
-| od         | dump files in various formats                                                   |       |            |           |         |        |
-| paste      | merge corresponding or subsequent lines of files                                |       |            |           |         |        |
-| patch      | apply changes to files                                                          |       |            |           |         |        |
-| pathchk    | check pathnames                                                                 |       |            |           |         |        |
-| pax        | portable archive interchange                                                    |       |            |           |         |        |
-| pr         | print files                                                                     |       |            |           |         |        |
-| printf     | write formatted output                                                          |       |            |           |         |        |
-| prs        | print an SCCS file                                                              |       |            |           |         |        |
-| ps         | report process status                                                           |       |            |           |         |        |
-| pwd        | return working directory name                                                   |       |            |           |         |        |
-| qalter     | alter batch job                                                                 |       |            |           |         |        |
-| qdel       | delete batch jobs                                                               |       |            |           |         |        |
-| qhold      | hold batch jobs                                                                 |       |            |           |         |        |
-| qmove      | move batch jobs                                                                 |       |            |           |         |        |
-| qmsg       | send message to batch jobs                                                      |       |            |           |         |        |
-| qrerun     | rerun batch jobs                                                                |       |            |           |         |        |
-| qrls       | release batch jobs                                                              |       |            |           |         |        |
-| qselect    | select batch jobs                                                               |       |            |           |         |        |
-| qsig       | signal batch jobs                                                               |       |            |           |         |        |
-| qstat      | show status of batch jobs                                                       |       |            |           |         |        |
-| qsub       | submit a script                                                                 |       |            |           |         |        |
-| read       | read a line from standard input                                                 |       |            |           |         |        |
-| renice     | set nice values of running processes                                            |       |            |           |         |        |
-| rm         | remove directory entries                                                        |       |            |           |         |        |
-| rmdel      | remove a delta from an SCCS file                                                |       |            |           |         |        |
-| rmdir      | remove directories                                                              |       |            |           |         |        |
-| sact       | print current SCCS file-editing activity                                        |       |            |           |         |        |
-| sccs       | front end for the SCCS subsystem                                                |       |            |           |         |        |
-| sed        | stream editor                                                                   |       |            |           |         |        |
-| sh         | shell, the standard command language interpreter                                |       |            |           |         |        |
-| sleep      | suspend execution for an interval                                               |       |            |           |         |        |
-| sort       | sort, merge, or sequence check text files                                       |       |            |           |         |        |
-| spawn      | fork and exec process, not part of POSIX standart                               |       |            |           |         |        |
-| split      | split files into pieces                                                         |       |            |           |         |        |
-| strings    | find printable strings in files                                                 |       |            |           |         |        |
-| strip      | remove unnecessary information from executable files (DEVELOPMENT)              |       |            |           |         |        |
-| stty       | set the options for a terminal                                                  |       |            |           |         |        |
-| tabs       | set terminal tabs                                                               |       |            |           |         |        |
-| tail       | copy the last part of a file                                                    |       |            |           |         |        |
-| talk       | talk to another user                                                            |       |            |           |         |        |
-| tee        | duplicate standard input                                                        |       |            |           |         |        |
-| terminfo   |                                                                                 |       |            |           |         |        |
-| test       | evaluate expression                                                             |       |            |           |         |        |
-| time       | time a simple command                                                           |       |            |           |         |        |
-| touch      | change file access and modification times                                       |       |            |           |         |        |
-| tput       | change terminal characteristics                                                 |       |            |           |         |        |
-| tr         | translate characters                                                            |       |            |           |         |        |
-| true       | return true value                                                               |       |            |           |         |        |
-| tsort      | topological sort                                                                |       |            |           |         |        |
-| tty        | return user's terminal name                                                     |       |            |           |         |        |
-| type       | write a description of command type                                             |       |            |           |         |        |
-| ulimit     | set or report file size limit                                                   |       |            |           |         |        |
-| umask      | get or set the file mode creation mask                                          |       |            |           |         |        |
-| unalias    | remove alias definitions                                                        |       |            |           |         |        |
-| uname      | return system name                                                              |       |            |           |         |        |
-| uncompress | expand compressed data                                                          |       |            |           |         |        |
-| unexpand   | convert spaces to tabs                                                          |       |            |           |         |        |
-| unget      | undo a previous get of an SCCS file                                             |       |            |           |         |        |
-| uniq       | report or filter out repeated lines in a file                                   |       |            |           |         |        |
-| unlink     | call the unlink function                                                        |       |            |           |         |        |
-| uucp       | system-to-system copy                                                           |       |            |           |         |        |
-| uudecode   | decode a binary file                                                            |       |            |           |         |        |
-| uuencode   | encode a binary file                                                            |       |            |           |         |        |
-| uustat     | uucp status inquiry and job control                                             |       |            |           |         |        |
-| uux        | remote command execution                                                        |       |            |           |         |        |
-| val        | validate SCCS files                                                             |       |            |           |         |        |
-| vi         | screen-oriented (visual) display editor                                         |       |            |           |         |        |
-| wait       | await process completion                                                        |       |            |           |         |        |
-| wc         | word, line, and byte or character count                                         |       |            |           |         |        |
-| what       | identify SCCS files                                                             |       |            |           |         |        |
-| who        | display who is on the system                                                    |       |            |           |         |        |
-| write      | write to another user                                                           |       |            |           |         |        |
-| xargs      | construct argument lists and invoke utility                                     |       |            |           |         |        |
-| yacc       | yet another compiler compiler (DEVELOPMENT)                                     |       |            |           |         |        |
-| zcat       | expand and concatenate data                                                     |       |            |           |         |        |
+| CMD         | DESCRIPTION                                                                     | POSIX | UTIL-LINUX | COREUTILS | BUSYBOX | TOYBOX |   |
+|-------------+---------------------------------------------------------------------------------+-------+------------+-----------+---------+--------+---|
+| =addpart=     | simple wrapper around the "add partition" ioctl                                 |       | +          |           |         |        |   |
+| =admin=       | create and administer SCCS files                                                | +     |            |           |         |        |   |
+| =agetty=      | alternative Linux getty                                                         |       | +          |           |         |        |   |
+| =alias=       | define or display aliases                                                       | +     |            |           |         |        |   |
+| =ar=          | create and maintain library archives                                            | +     |            |           |         |        |   |
+| =arch=        | print machine hardware name (same as uname                                      |       |            | +         |         |        |   |
+| =asa=         | interpret carriage-control characters                                           | +     |            |           |         |        |   |
+| =at=          | execute commands at a later time                                                | +     |            |           |         |        |   |
+| =awk=         | pattern scanning and processing language                                        | +     |            |           |         |        |   |
+| =base64=      | base64 encode/decode data and print to standard output                          |       |            | +         |         |        |   |
+| =basename=    | return non-directory portion of a pathname                                      | +     |            | +         |         |        |   |
+| =batch=       | schedule commands to be executed in a batch queue                               | +     |            |           |         |        |   |
+| =bc=          | arbitrary-precision arithmetic language                                         | +     |            |           |         |        |   |
+| =bg=          | run jobs in the background                                                      | +     |            |           |         |        |   |
+| =blkid=       | locate/print block device attributes                                            |       | +          |           |         |        |   |
+| =blockdev=    | call block device ioctls from the command line                                  |       | +          |           |         |        |   |
+| =cal=         | print a calendar                                                                | +     | +          |           |         |        |   |
+| =cat=         | concatenate files and print on the standard output                              | +     |            | +         |         |        |   |
+| =cc=          | compile standard C programs                                                     | +     |            |           |         |        |   |
+| =cd=          | change the working directory                                                    | +     |            | +         |         |        |   |
+| =cfdisk=      | display or manipulate disk partition table                                      |       | +          |           |         |        |   |
+| =cflow=       | generate a C-language flowgraph (DEVELOPMENT)                                   | +     |            |           |         |        |   |
+| =chcon=       | change file SELinux security context                                            |       |            | +         |         |        |   |
+| =chcpu=       | configure CPUs                                                                  |       | +          |           |         |        |   |
+| =chfn=        | change your finger information                                                  |       | +          |           |         |        |   |
+| =chgrp=       | change group ownership                                                          | +     |            | +         |         |        |   |
+| =chmod=       | change file mode bits                                                           | +     |            | +         |         |        |   |
+| =chown=       | change file owner and group                                                     | +     |            | +         |         |        |   |
+| =chroot=      | run command or interactive shell with special root directory                    |       |            | +         |         |        |   |
+| =chrt=        | manipulate the real-time attributes of a process                                |       | +          |           |         |        |   |
+| =chsh=        | change your login shell                                                         |       | +          |           |         |        |   |
+| =cksum=       | checksum and count the bytes in a file                                          | +     |            | +         |         |        |   |
+| =cmp=         | compare two files                                                               | +     |            |           |         |        |   |
+| =col=         | filter reverse line feeds from input                                            |       | +          |           |         |        |   |
+| =colcrt=      | filter nroff output for CRT previewing                                          |       | +          |           |         |        |   |
+| =colrm=       | remove columns from a file                                                      |       | +          |           |         |        |   |
+| =column=      | columnate lists                                                                 |       | +          |           |         |        |   |
+| =comm=        | compare two sorted files line by line                                           | +     |            | +         |         |        |   |
+| =command=     | execute a simple command                                                        | +     |            |           |         |        |   |
+| =compress=    | compress data                                                                   | +     |            |           |         |        |   |
+| =cp=          | copy files and directories                                                      | +     |            | +         |         |        |   |
+| =crontab=     | schedule periodic background work                                               | +     |            |           |         |        |   |
+| =csplit=      | split a file into sections determined by context lines                          | +     |            | +         |         |        |   |
+| =ctags=       | create a tags file (DEVELOPMENT, FORTRAN)                                       | +     |            |           |         |        |   |
+| =ctrlaltdel=  | set the function of the Ctrl-Alt-Del combination                                |       | +          |           |         |        |   |
+| =cu=          | utility for establishing a terminal connection to a remote system               | +     |            |           |         |        |   |
+| =cut=         | cut out selected fields of each line of a file                                  | +     |            | +         |         |        |   |
+| =cxref=       | generate a C-language program cross-reference table (DEVELOPMENT)               | +     |            |           |         |        |   |
+| =date=        | print or set the system date and time                                           | +     |            | +         |         |        |   |
+| =dd=          | convert copy a file                                                             | +     |            | +         |         |        |   |
+| =delpart=     | simple wrapper around the "del partition" ioctl                                 |       | +          |           |         |        |   |
+| =delta=       | Make a delta (change) to an SCCS file                                           | +     |            |           |         |        |   |
+| =df=          | report file system disk space usage                                             | +     |            | +         |         |        |   |
+| =diff=        | compare two files                                                               | +     |            |           |         |        |   |
+| =dir=         | list directory contents                                                         |       |            | +         |         |        |   |
+| =dircolors=   | color setup for ls                                                              |       |            | +         |         |        |   |
+| =dirname=     | strip last component from file name                                             | +     |            | +         |         |        |   |
+| =dmesg=       | print or control the kernel ring buffer                                         |       | +          |           |         |        |   |
+| =du=          | estimate file space usage                                                       | +     |            | +         |         |        |   |
+| =echo=        | write arguments to standard output                                              | +     |            | +         |         |        |   |
+| =ed=          | edit text                                                                       | +     |            |           |         |        |   |
+| =eject=       | eject removable media                                                           |       | +          |           |         |        |   |
+| =env=         | run a program in a modified environment                                         | +     |            | +         |         |        |   |
+| =ex=          | text editor                                                                     | +     |            |           |         |        |   |
+| =expand=      | convert tabs to spaces                                                          | +     |            | +         |         |        |   |
+| =expr=        | evaluate arguments as an expression                                             | +     |            | +         |         |        |   |
+| =factor=      | factor numbers                                                                  |       |            | +         |         |        |   |
+| =fallocate=   | preallocate space to a file                                                     |       | +          |           |         |        |   |
+| =false=       | do nothing, unsuccessfully                                                      | +     |            | +         |         |        |   |
+| =fc=          | process the command history list                                                | +     |            |           |         |        |   |
+| =fdformat=    | low-level format a floppy disk                                                  |       | +          |           |         |        |   |
+| =fdisk=       | manipulate disk partition table                                                 |       | +          |           |         |        |   |
+| =ff=          | lists the file names and statistics for a file system                           | +     |            |           |         |        |   |
+| =fg=          | run jobs in the foreground                                                      | +     |            |           |         |        |   |
+| =file=        | determine file type                                                             | +     |            |           |         |        |   |
+| =find=        | find files                                                                      | +     |            |           |         |        |   |
+| =findfs=      | find a filesystem by label or UUID                                              |       | +          |           |         |        |   |
+| =findmnt=     | find a filesystem                                                               |       | +          |           |         |        |   |
+| =flock=       | manage locks from shell scripts                                                 |       | +          |           |         |        |   |
+| =fmt=         | simple optimal text formatter                                                   |       |            | +         |         |        |   |
+| =fold=        | wrap each input line to fit in specified width                                  | +     |            | +         |         |        |   |
+| =fort77=      | FORTRAN compiler (FORTRAN)                                                      | +     |            |           |         |        |   |
+| =fsck=        | check and repair a Linux filesystem                                             |       | +          |           |         |        |   |
+| =fsfreeze=    | suspend access to a filesystem (Linux Ext3/4, ReiserFS, JFS, XFS)               |       | +          |           |         |        |   |
+| =fstab=       | static information about the filesystems                                        |       | +          |           |         |        |   |
+| =fstrim=      | discard unused blocks on a mounted filesystem                                   |       | +          |           |         |        |   |
+| =fuser=       | list process IDs of all processes that have one or more files open              | +     |            |           |         |        |   |
+| =gencat=      | generate a formatted message catalog                                            | +     |            |           |         |        |   |
+| =get=         | get a version of an SCCS file                                                   | +     |            |           |         |        |   |
+| =getconf=     | get configuration values                                                        | +     |            |           |         |        |   |
+| =getopt=      | Parse command-line options                                                      |       | +          |           |         |        |   |
+| =getopts=     | parse utility options                                                           | +     |            |           |         |        |   |
+| =getrlimit=   | get/set resource limits                                                         |       | +          |           |         |        |   |
+| =grep=        | search a file for a pattern                                                     | +     |            |           |         |        |   |
+| =groups=      | print the groups a user is in                                                   |       |            | +         |         |        |   |
+| =hash=        | remember or report utility locations                                            | +     |            |           |         |        |   |
+| =head=        | copy the first part of files                                                    | +     |            | +         |         |        |   |
+| =hexdump=     | display file contents in ascii, decimal, hexadecimal, or octal                  |       | +          |           |         |        |   |
+| =hostid=      | print the numeric identifier for the current host                               |       |            | +         |         |        |   |
+| =hwclock=     | query or set the hardware clock (RTC)                                           |       | +          |           |         |        |   |
+| =iconv=       | codeset conversion                                                              | +     |            |           |         |        |   |
+| =id=          | print real and effective user and group IDs                                     | +     |            | +         |         |        |   |
+| =install=     | copy files and set attributes                                                   |       |            | +         |         |        |   |
+| =ionice=      | set or get process I/O scheduling class and priority                            |       | +          |           |         |        |   |
+| =ipcmk=       | create various ipc resources                                                    |       | +          |           |         |        |   |
+| =ipcrm=       | remove an XSI message queue, semaphore set, or shared memory segment identifier | +     | +          |           |         |        |   |
+| =ipcs=        | report XSI interprocess communication facilities status                         | +     | +          |           |         |        |   |
+| =isosize=     | output the length of an iso9660 filesystem                                      |       | +          |           |         |        |   |
+| =jobs=        | display status of jobs in the current session                                   | +     |            |           |         |        |   |
+| =join=        | relational database operator                                                    | +     |            |           |         |        |   |
+| =join=        | join lines of two files on a common field                                       |       |            | +         |         |        |   |
+| =kill=        | terminate or signal processes                                                   | +     | +          |           |         |        |   |
+| =last=        | show listing of last logged in users                                            |       | +          |           |         |        |   |
+| =ldattach=    | attach a line discipline to a serial line                                       |       | +          |           |         |        |   |
+| =lex=         | generate programs for lexical tasks (DEVELOPMENT)                               | +     |            |           |         |        |   |
+| =link=        | call the link function to create a link to a file                               | +     |            | +         |         |        |   |
+| =ln=          | make links between files                                                        | +     |            | +         |         |        |   |
+| =locale=      | get locale-specific information                                                 | +     |            |           |         |        |   |
+| =localedef=   | define locale environment                                                       | +     |            |           |         |        |   |
+| =logger=      | log messages                                                                    | +     | +          |           |         |        |   |
+| =login=       | begin session on the system                                                     |       | +          |           |         |        |   |
+| =logname=     | return the user's login name                                                    | +     |            | +         |         |        |   |
+| =look=        | display lines beginning with a given string                                     |       | +          |           |         |        |   |
+| =losetup=     | set up and control loop devices                                                 |       | +          |           |         |        |   |
+| =lp=          | send files to a printer                                                         | +     |            |           |         |        |   |
+| =ls=          | list directory contents                                                         | +     |            | +         |         |        |   |
+| =lsblk=       | list block devices                                                              |       | +          |           |         |        |   |
+| =lscpu=       | display information about the CPU architecture                                  |       | +          |           |         |        |   |
+| =lslocks=     | list local system locks                                                         |       | +          |           |         |        |   |
+| =lslogins=    | display information about known users in the system                             |       | +          |           |         |        |   |
+| =m4=          | macro processor (DEVELOPMENT)                                                   | +     |            |           |         |        |   |
+| =mailx=       | process messages                                                                | +     |            |           |         |        |   |
+| =make=        | maintain, update, and regenerate groups of programs (DEVELOPMENT)               | +     |            |           |         |        |   |
+| =man=         | display system documentation                                                    | +     |            |           |         |        |   |
+| =mcookie=     | generate magic cookies for xauth                                                |       | +          |           |         |        |   |
+| =md5sum=      | compute and check MD5 message digest                                            |       |            | +         |         |        |   |
+| =mesg=        | permit or deny messages                                                         | +     |            |           |         |        |   |
+| =mesg=        | control write access to your terminal                                           |       | +          |           |         |        |   |
+| =mkdir=       | make directories                                                                | +     |            | +         |         |        |   |
+| =mkfifo=      | make FIFO special files                                                         | +     |            | +         |         |        |   |
+| =mkfs=        | build a Linux filesystem                                                        |       | +          |           |         |        |   |
+| =mknod=       | make block or character special files                                           |       |            | +         |         |        |   |
+| =mkswap=      | set up a Linux swap area                                                        |       | +          |           |         |        |   |
+| =mktemp=      | create a temporary file or directory                                            |       |            | +         |         |        |   |
+| =more=        | display files on a page-by-page basis                                           | +     | +          |           |         |        |   |
+| =mount=       | mount a filesystem                                                              |       | +          |           |         |        |   |
+| =mountpoint=  | see if a directory is a mountpoint                                              |       | +          |           |         |        |   |
+| =mv=          | move (rename) files                                                             | +     |            | +         |         |        |   |
+| =namei=       | follow a pathname until a terminal point is found                               |       | +          |           |         |        |   |
+| =newgrp=      | log in to a new group                                                           | +     | +          |           |         |        |   |
+| =nice=        | run a program with modified scheduling priority                                 | +     |            | +         |         |        |   |
+| =nl=          | line numbering filter                                                           | +     |            | +         |         |        |   |
+| =nm=          | write the name list of an object file (DEVELOPMENT)                             | +     |            |           |         |        |   |
+| =nohup=       | run a command immune to hangups, with output to a non-tty                       | +     |            | +         |         |        |   |
+| =nologin=     | prevent unprivileged users from logging into the system                         |       | +          |           |         |        |   |
+| =nproc=       | print the number of processing units available                                  |       |            | +         |         |        |   |
+| =nsenter=     | run program with namespaces of other processes                                  |       | +          |           |         |        |   |
+| =numfmt=      | Convert numbers from/to huma-readable strings                                   |       |            | +         |         |        |   |
+| =od=          | dump files in octal and other formats                                           | +     |            | +         |         |        |   |
+| =partx=       | tell kernel about the presence and numbering of on-disk partitions              |       | +          |           |         |        |   |
+| =paste=       | merge corresponding or subsequent lines of files                                | +     |            | +         |         |        |   |
+| =patch=       | apply changes to files                                                          | +     |            |           |         |        |   |
+| =pathchk=     | check whether file names are valid or portable                                  | +     |            | +         |         |        |   |
+| =pax=         | portable archive interchange                                                    | +     |            |           |         |        |   |
+| =pinky=       | lightweight finger                                                              |       |            | +         |         |        |   |
+| =pivot_root=  | change the root filesystem                                                      |       | +          |           |         |        |   |
+| =pr=          | convert text files for printing                                                 |  +    |            | +         |         |        |   |
+| =printenv=    | print all or part of environment                                                |       |            | +         |         |        |   |
+| =printf=      | format and print data                                                           |   +   |            | +         |         |        |   |
+| =prlimit=     | get and set a process resource limits.                                          |       | +          |           |         |        |   |
+| =prs=         | print an SCCS file                                                              | +     |            |           |         |        |   |
+| =ps=          | report process status                                                           | +     |            |           |         |        |   |
+| =ptx=         | produce a permuted index of file contents                                       |       |            | +         |         |        |   |
+| =pwd=         | print name of current/working directory                                         |    +  |            | +         |         |        |   |
+| =qalter=      | alter batch job                                                                 | +     |            |           |         |        |   |
+| =qdel=        | delete batch jobs                                                               | +     |            |           |         |        |   |
+| =qhold=       | hold batch jobs                                                                 | +     |            |           |         |        |   |
+| =qmove=       | move batch jobs                                                                 | +     |            |           |         |        |   |
+| =qmsg=        | send message to batch jobs                                                      | +     |            |           |         |        |   |
+| =qrerun=      | rerun batch jobs                                                                | +     |            |           |         |        |   |
+| =qrls=        | release batch jobs                                                              | +     |            |           |         |        |   |
+| =qselect=     | select batch jobs                                                               | +     |            |           |         |        |   |
+| =qsig=        | signal batch jobs                                                               | +     |            |           |         |        |   |
+| =qstat=       | show status of batch jobs                                                       | +     |            |           |         |        |   |
+| =qsub=        | submit a script                                                                 | +     |            |           |         |        |   |
+| =raw=         | Linux IPv4 raw sockets                                                          |       | +          |           |         |        |   |
+| =raw=         | bind a Linux raw character device                                               |       | +          |           |         |        |   |
+| =read=        | read a line from standard input                                                 | +     |            |           |         |        |   |
+| =readlink=    | print resolved symbolic links or canonical file names                           |       |            | +         |         |        |   |
+| =readprofile= | read kernel profiling information                                               |       | +          |           |         |        |   |
+| =realpath=    | print the resolved path                                                         |       |            | +         |         |        |   |
+| =realpath=    | return the canonicalized absolute pathname                                      |       |            | +         |         |        |   |
+| =rename=      | rename files                                                                    |       | +          |           |         |        |   |
+| =rename=      | change the name or location of a file                                           |       | +          |           |         |        |   |
+| =rename=      | Rename or delete a command                                                      |       | +          |           |         |        |   |
+| =renice=      | set nice values of running processes                                            | +     |            |           |         |        |   |
+| =renice=      | alter priority of running processes                                             |       | +          |           |         |        |   |
+| =reset=       | terminal initialization                                                         |       | +          |           |         |        |   |
+| =resizepart=  | simple wrapper around the "resize partition" ioctl                              |       | +          |           |         |        |   |
+| =rev=         | reverse lines of a file or files                                                |       | +          |           |         |        |   |
+| =rm=          | remove directory entries                                                        | +     |            |           |         |        |   |
+| =rm=          | remove files or directories                                                     |       |            | +         |         |        |   |
+| =rmdel=       | remove a delta from an SCCS file                                                | +     |            |           |         |        |   |
+| =rmdir=       | remove directories                                                              | +     |            |           |         |        |   |
+| =rmdir=       | remove empty directories                                                        |       |            | +         |         |        |   |
+| =rtcwake=     | enter a system sleep state until specified wakeup time                          |       | +          |           |         |        |   |
+| =runcon=      | run command with specified SELinux security context                             |       |            | +         |         |        |   |
+| =runuser=     | run a command with substitute user and group ID                                 |       | +          |           |         |        |   |
+| =sact=        | print current SCCS file-editing activity                                        | +     |            |           |         |        |   |
+| =sccs=        | front end for the SCCS subsystem                                                | +     |            |           |         |        |   |
+| =script=      | make typescript of terminal session                                             |       | +          |           |         |        |   |
+| =sed=         | stream editor                                                                   | +     |            |           |         |        |   |
+| =seq=         | print a sequence of numbers                                                     |       |            | +         |         |        |   |
+| =setarch=     | change reported arch in new program env and set personality flags               |       | +          |           |         |        |   |
+| =setpriv=     | run a program with different Linux privilege settings                           |       | +          |           |         |        |   |
+| =setsid=      | run a program in a new session                                                  |       | +          |           |         |        |   |
+| =setsid=      | creates a session and sets the process group ID                                 |       | +          |           |         |        |   |
+| =setterm=     | set terminal attributes                                                         |       | +          |           |         |        |   |
+| =sfdisk=      | partition table manipulator for Linux                                           |       | +          |           |         |        |   |
+| =sh=          | shell, the standard command language interpreter                                | +     |            |           |         |        |   |
+| =sha1sum=     | compute and check SHA1 message digest                                           |       |            | +         |         |        |   |
+| =sha224sum=   | compute and check SHA224 message digest                                         |       |            | +         |         |        |   |
+| =sha256sum=   | compute and check SHA256 message digest                                         |       |            | +         |         |        |   |
+| =sha384sum=   | compute and check SHA384 message digest                                         |       |            | +         |         |        |   |
+| =sha512sum=   | compute and check SHA512 message digest                                         |       |            | +         |         |        |   |
+| =shred=       | overwrite a file to hide its contents, and optionally delete it                 |       |            | +         |         |        |   |
+| =shuf=        | generate random permutations                                                    |       |            | +         |         |        |   |
+| =sleep=       | suspend execution for an interval                                               | +     |            |           |         |        |   |
+| =sleep=       | delay for a specified amount of time                                            |       |            | +         |         |        |   |
+| =sort=        | sort, merge, or sequence check text files                                       | +     |            |           |         |        |   |
+| =sort=        | sort lines of text files                                                        |       |            | +         |         |        |   |
+| =spawn=       | fork and exec process, not part of POSIX standart                               | +     |            |           |         |        |   |
+| =split=       | split files into pieces                                                         | +     |            |           |         |        |   |
+| =split=       | split a file into pieces                                                        |       |            | +         |         |        |   |
+| =stat=        | display file or file system status                                              |       |            | +         |         |        |   |
+| =stdbuf=      | Run COMMAND, with modified buffering operations for its standard streams.       |       |            | +         |         |        |   |
+| =strings=     | find printable strings in files                                                 | +     |            |           |         |        |   |
+| =strip=       | remove unnecessary information from executable files (DEVELOPMENT)              | +     |            |           |         |        |   |
+| =stty=        | set the options for a terminal                                                  | +     |            |           |         |        |   |
+| =stty=        | change and print terminal line settings                                         |       |            | +         |         |        |   |
+| =su=          | run a command with substitute user and group ID                                 |       | +          |           |         |        |   |
+| =sulogin=     | Single-user login                                                               |       | +          |           |         |        |   |
+| =sum=         | checksum and count the blocks in a file                                         |       |            | +         |         |        |   |
+| =swaplabel=   | print or change the label or UUID of a swap area                                |       | +          |           |         |        |   |
+| =swapoff=     | start/stop swapping to file/device                                              |       | +          |           |         |        |   |
+| =swapoff=     | enable/disable devices and files for paging and swapping                        |       | +          |           |         |        |   |
+| =swapon=      | start/stop swapping to file/device                                              |       | +          |           |         |        |   |
+| =swapon=      | enable/disable devices and files for paging and swapping                        |       | +          |           |         |        |   |
+| =switch_root= | switch to another filesystem as the root of the mount tree                      |       | +          |           |         |        |   |
+| =sync=        | flush file system buffers                                                       |       |            | +         |         |        |   |
+| =tabs=        | set terminal tabs                                                               | +     |            |           |         |        |   |
+| =tac=         | concatenate and print files in reverse                                          |       |            | +         |         |        |   |
+| =tail=        | copy the last part of a file                                                    | +     |            |           |         |        |   |
+| =tail=        | output the last part of files                                                   |       |            | +         |         |        |   |
+| =tailf=       | follow the growth of a log file                                                 |       | +          |           |         |        |   |
+| =talk=        | talk to another user                                                            | +     |            |           |         |        |   |
+| =taskset=     | retrieve or set a process's CPU affinity                                        |       | +          |           |         |        |   |
+| =tee=         | duplicate standard input                                                        | +     |            |           |         |        |   |
+| =tee=         | read from standard input and write to standard output and files                 |       |            | +         |         |        |   |
+| =terminfo=    |                                                                                 | +     |            |           |         |        |   |
+| =test=        | evaluate expression                                                             | +     |            |           |         |        |   |
+| =test=        | check file types and compare values                                             |       |            | +         |         |        |   |
+| =time=        | time a simple command                                                           | +     |            |           |         |        |   |
+| =timeout=     | run a command with a time limit                                                 |       |            | +         |         |        |   |
+| =touch=       | change file access and modification times                                       | +     |            |           |         |        |   |
+| =touch=       | change file timestamps                                                          |       |            | +         |         |        |   |
+| =tput=        | change terminal characteristics                                                 | +     |            |           |         |        |   |
+| =tr=          | translate characters                                                            | +     |            |           |         |        |   |
+| =tr=          | translate or delete characters                                                  |       |            | +         |         |        |   |
+| =true=        | return true value                                                               | +     |            |           |         |        |   |
+| =true=        | do nothing, successfully                                                        |       |            | +         |         |        |   |
+| =truncate=    | shrink or extend the size of a file to the specified size                       |       |            | +         |         |        |   |
+| =tsort=       | topological sort                                                                | +     |            |           |         |        |   |
+| =tsort=       | perform topological sort                                                        |       |            | +         |         |        |   |
+| =tty=         | return user's terminal name                                                     | +     |            |           |         |        |   |
+| =tty=         | print the file name of the terminal connected to standard input                 |       |            | +         |         |        |   |
+| =type=        | write a description of command type                                             | +     |            |           |         |        |   |
+| =ul=          | do underlining                                                                  |       | +          |           |         |        |   |
+| =ulimit=      | set or report file size limit                                                   | +     |            |           |         |        |   |
+| =umask=       | get or set the file mode creation mask                                          | +     |            |           |         |        |   |
+| =umount=      | unmount file system                                                             |       | +          |           |         |        |   |
+| =umount=      | unmount file systems                                                            |       | +          |           |         |        |   |
+| =unalias=     | remove alias definitions                                                        | +     |            |           |         |        |   |
+| =uname=       | return system name                                                              | +     |            |           |         |        |   |
+| =uname=       | print system information                                                        |       |            | +         |         |        |   |
+| =uncompress=  | expand compressed data                                                          | +     |            |           |         |        |   |
+| =unexpand=    | convert spaces to tabs                                                          | +     |            |           |         |        |   |
+| =unexpand=    | convert spaces to tabs                                                          |       |            | +         |         |        |   |
+| =unget=       | undo a previous get of an SCCS file                                             | +     |            |           |         |        |   |
+| =uniq=        | report or filter out repeated lines in a file                                   | +     |            |           |         |        |   |
+| =uniq=        | report or omit repeated lines                                                   |       |            | +         |         |        |   |
+| =unlink=      | call the unlink function                                                        | +     |            |           |         |        |   |
+| =unlink=      | call the unlink function to remove the specified file                           |       |            | +         |         |        |   |
+| =unshare=     | run program with some namespaces unshared from parent                           |       | +          |           |         |        |   |
+| =unshare=     | disassociate parts of the process execution context                             |       | +          |           |         |        |   |
+| =uptime=      | Tell how long the system has been running.                                      |       |            | +         |         |        |   |
+| =users=       | print the user names of users currently logged in to the current host           |       |            | +         |         |        |   |
+| =utmpdump=    | dump UTMP and WTMP files in raw format                                          |       | +          |           |         |        |   |
+| =uucp=        | system-to-system copy                                                           | +     |            |           |         |        |   |
+| =uudecode=    | decode a binary file                                                            | +     |            |           |         |        |   |
+| =uuencode=    | encode a binary file                                                            | +     |            |           |         |        |   |
+| =uuidgen=     | create a new UUID value                                                         |       | +          |           |         |        |   |
+| =uustat=      | uucp status inquiry and job control                                             | +     |            |           |         |        |   |
+| =uux=         | remote command execution                                                        | +     |            |           |         |        |   |
+| =val=         | validate SCCS files                                                             | +     |            |           |         |        |   |
+| =vdir=        | list directory contents                                                         |       |            | +         |         |        |   |
+| =vi=          | screen-oriented (visual) display editor                                         | +     |            |           |         |        |   |
+| =vipw=        | edit the password, group, shadow-password or shadow-group file                  |       | +          |           |         |        |   |
+| =vipw=        | edit the password, group, shadow-password or shadow-group file                  |       | +          |           |         |        |   |
+| =vlimit=      | get/set resource limits                                                         |       | +          |           |         |        |   |
+| =wait=        | await process completion                                                        | +     |            |           |         |        |   |
+| =wall=        | send a message to everybody's terminal.                                         |       | +          |           |         |        |   |
+| =wall=        | send a message to everybody's terminal.                                         |       | +          |           |         |        |   |
+| =wc=          | word, line, and byte or character count                                         | +     |            |           |         |        |   |
+| =wc=          | print newline, word, and byte counts for each file                              |       |            | +         |         |        |   |
+| =wdctl=       | show hardware watchdog status                                                   |       | +          |           |         |        |   |
+| =what=        | identify SCCS files                                                             | +     |            |           |         |        |   |
+| =whereis=     | locate the binary, source, and manual page files for a command                  |       | +          |           |         |        |   |
+| =who=         | display who is on the system                                                    | +     |            |           |         |        |   |
+| =who=         | show who is logged on                                                           |       |            | +         |         |        |   |
+| =whoami=      | print effective userid                                                          |       |            | +         |         |        |   |
+| =wipefs=      | wipe a signature from a device                                                  |       | +          |           |         |        |   |
+| =write=       | write to another user                                                           | +     |            |           |         |        |   |
+| =write=       | send a message to another user                                                  |       | +          |           |         |        |   |
+| =write=       | write to a file descriptor                                                      |       | +          |           |         |        |   |
+| =xargs=       | construct argument lists and invoke utility                                     | +     |            |           |         |        |   |
+| =yacc=        | yet another compiler compiler (DEVELOPMENT)                                     | +     |            |           |         |        |   |
+| =yes=         | output a string repeatedly until killed                                         |       |            | +         |         |        |   |
+| =zcat=        | expand and concatenate data                                                     | +     |            |           |         |        |   |
+
+
+
+
 
 * Footnotes
 
