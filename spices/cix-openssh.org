@@ -1,6 +1,6 @@
 # File           : cix-openssh.org
 # Created        : <2016-11-13 Sun 19:25:52 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-4-18 Tue 22:15:08 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -30,6 +30,7 @@ date in terms of security and features.
 This package includes  the core files necessary for both  the OpenSSH client and
 server. To  make this package  useful, you should also  install openssh-clients,
 openssh-server, or both.
+----
 
 ** Packages
 | № | Name            | RPM | DEB | *BSD |
@@ -96,8 +97,11 @@ openssh-server, or both.
 *** ssh::options
 *** ssh::examples
 **** ssh-161211224536
-revers-SOCKS-proxy
+revers-SOCKS-proxy:
 :    ~$ ssh -D 8080 -R 8080:127.0.0.1:8080 usr@1.2.3.4 ssh -R 8080:172.0.0.1:8080 user@2.3.4.5
+**** ssh-170418221026
+compare remote file and with local one without copying:
+:    ~$ ssh user@host cat /path/to/remote/file | diff /path/to/local/file
 *** ssh::files
 *** ssh::see-also
 ** ssh-add                                                                      :cmd:
