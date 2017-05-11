@@ -1,6 +1,6 @@
 # File           : cix-iputils.org
 # Created        : <2015-11-16 Mon 00:31:15 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-5-11 Thu 22:41:53 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -20,7 +20,7 @@
 
 * Index
 #+BEGIN_EXAMPLE
-    arping               -
+    arping (8)           - send ARP REQUEST to a neighbour host
     clockdiff (8)        - measure clock difference between hosts
     ipg                  -
     ping (8)             - send ICMP ECHO_REQUEST to network hosts
@@ -46,11 +46,24 @@ mini multithread network pinger-scaner:
 
   seq 254 | xargs -n1 -P"$THR" -I% ping -c1 -W3 "${MSK}%"
 #+END_SRC
-[[file:./cix-gnu-grep.org::*grep][grep (1)]]
-[[file:./cix-gnu-core-utilities.org::*wc][wc (1)]]
-[[file:./cix-gnu-core-utilities.org::*seq][seq (1)]]
-[[file:./cix-gnu-findutils.org::*xargs][xargs (1)]]
+[[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-gnu-core-utilities.org::*wc][wc (1)]] [[file:./cix-gnu-core-utilities.org::*seq][seq (1)]] [[file:./cix-gnu-findutils.org::*xargs][xargs (1)]]
+** arpping
+*** aprping::examples
+**** aprping-170511220947
+find dublicated IP on LAN:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
 
+  IF_NAME=enp2s0
+  HOST_IP=10.75.253.111
+
+  arping -D -q -I "$IF_NAME" -c3 "$HOST_IP"
+  if [ "$?" = "0" ]; then
+      printf "Your host %s is unique.\n" "$HOST_IP"
+  else
+      echo "Dublicates detected"
+  fi
+#+END_SRC
 
 * Referance
 - Linuxfoundation: iputils http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils
