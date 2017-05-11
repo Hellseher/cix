@@ -1,6 +1,6 @@
 # File           : cix-gnu-bash-builtin.org
 # Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Modified  : <2017-1-28 Sat 12:00:03 GMT> sharlatan
+# Modified  : <2017-5-11 Thu 22:43:12 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -180,14 +180,14 @@
 -----
 
 * Receipts::commands
-** set
-*** set::examples
-**** set-161224094103
-list of all environment varialbes used in current session:
-:    ~$ (set -o posix ; set ) | less
-[[file::*less][less (1)]]
 
-** if                                                                           :cmd:
+** printf
+
+*** printf::examples
+
+**** printf-170307215451
+pirnt multiple characters:
+:    ~$ printf '%0.1s' "-"{1..80}
 ** command                                                                      :cmd:
 *** command::examples
 **** command-161110202619
@@ -204,26 +204,29 @@ test wheather "CMD" installed/exists on the system:
 #+RESULTS:
 
 ** for                                                                          :cmd:
-** select                                                                       :cmd:
-select NAME [in WORDS ... ;] do COMMANDS; done
-
-** ulimit                                                                       :cmd:
-ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
-
-** while                                                                        :cmd:
-** read                                                                         :cmd:
-#+BEGIN_SRC sh
-  while true; do
-      echo "Hello World!"
-  done
-#+END_SRC
 ** history                                                                      :cmd:
 *** history::examples
 - history-161127235306 :: print command frequences:
   :    ~ $ history | awk '{print $2}' | sort | uniq -c | sort -nr
   :    ~ $ history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn
   [[file:./cix-gawk.org::*awk][awk (1)]], [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
+** if                                                                           :cmd:
+** read                                                                         :cmd:
+** select                                                                       :cmd:
+** set
+*** set::examples
+**** set-161224094103
+list of all environment varialbes used in current session:
+:    ~$ (set -o posix ; set ) | less
+[[file::*less][less (1)]]
+
+** ulimit                                                                       :cmd:
+ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
+
+** while                                                                        :cmd:
 * Receipts::variables
+** PIPESTATUS
+
 ** FUNCNAME                                                                     :var:
 
 Its a global internal variable maintained by any linux shell.  Its of type array
