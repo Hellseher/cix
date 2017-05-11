@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2016-12-21 Wed 21:24:00 GMT> sharlatan
+# Last Modified  : <2017-4-16 Sun 12:30:13 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -12,8 +12,7 @@ Internet for the "Answer". It a consolidated experience of using *nix OSes
 
 Contribution welcome!
 
-[[./cix-main.org][cix-main]]
-
+You can start from here > [[./cix-main.org][cix-main]]
 ** Structure
 
 - cix-main.org :: Index of of all files.
@@ -22,60 +21,19 @@ Contribution welcome!
 - tests/ :: Files for testing referenced in examples.
 - tutors/ :: Full size tutorials "How to"
 
-** Layout
-I use org-mode format for example files. It's a very powerful and flexible but
-takes time to master it.
-
-Style requirements for exampls
-
-Variables
-#+BEGIN_EXAMPLE
-VAR_STRING="string"
-VAR_NUM=1234
-VAR_PATH="/path/to/somewhere"
-#+END_EXAMPLE
-
-Structure
-
-#+BEGIN_EXAMPLE
-Package name
-
-| Author      | |
-| Maintainers | |
-| Released    | |
-| Source      | |
-| Info        | |
-
-Long discription
-
-* Index
-List of commands inluded in package with shor description
-* Receipts
-** command
-*** command::options
-*** command::examples
-*** command::files
-*** command::see-also
-* References
-** Books
-** Links
-** Wiki
-** IRC
-#+END_EXAMPLE
-
-Example header with time-stamp
-- command-YmdHMS :: short description:
 #+BEGIN_SRC sh
-  #!/usr/bin/env sh
-  # Point to what shell did you use.
+ls -D ./
 
-  # Body, less word more examples!
 #+END_SRC
-cmd (1) link to other command used
 
-** Convert to whatever
-Export *org files to {pdf,html,tex,txt,whatever}
-- Emacs Org-Mode http://orgmode.org/manual/Exporting.html
-- Pandoc http://pandoc.org/demos.html
-- Org to Reveal.js https://github.com/yjwen/org-reveal
-- Org to nice HTML https://github.com/fniessen/org-html-themes
+#+RESULTS:
+| cix-convension.org |
+| cix-main.org       |
+| cix-stat.sh        |
+| img                |
+| LICENSE            |
+| README.org         |
+| README-ru.md       |
+| spices             |
+| tests              |
+| tutors             |
