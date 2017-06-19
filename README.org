@@ -1,8 +1,7 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-4-16 Sun 12:30:13 BST> sharlatan
+# Last Modified  : <2017-6-19 Mon 22:18:37 BST> sharlatan
 # Author         : sharlatan
-# Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
@@ -15,25 +14,73 @@ Contribution welcome!
 You can start from here > [[./cix-main.org][cix-main]]
 ** Structure
 
+#+BEGIN_SRC sh :results value org :results output replace :exports results
+pwd | rev | cut -d"/" -f1 | rev
+tree -L 1
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+cix
+.
+├── cix-convension.org
+├── cix-main.org
+├── cix-stat.sh
+├── img
+├── LICENSE
+├── README.org
+├── README-ru.md
+├── spices
+├── tests
+└── tutors
+
+4 directories, 6 files
+#+END_SRC
+
 - cix-main.org :: Index of of all files.
 - img/ :: Picture files.
 - spices/ :: Collection of files stuffed with examples.
 - tests/ :: Files for testing referenced in examples.
 - tutors/ :: Full size tutorials "How to"
 
-#+BEGIN_SRC sh
-ls -D ./
-
+** Statistic
+#+BEGIN_SRC sh :results value org output replace :exports results
+./cix-stat.sh
 #+END_SRC
 
 #+RESULTS:
-| cix-convension.org |
-| cix-main.org       |
-| cix-stat.sh        |
-| img                |
-| LICENSE            |
-| README.org         |
-| README-ru.md       |
-| spices             |
-| tests              |
-| tutors             |
+#+BEGIN_SRC org
+QTY  CMD
+8    find
+8    dd
+7    sed
+6    awk
+5    ls
+3    tr
+3    grep
+2    xargs
+2    wget
+2    tee
+2    tar
+2    ssh
+2    rsync
+2    nc
+1    strace
+1    set
+1    rm
+1    rev
+1    printf
+1    ping
+1    pacman
+1    objdump
+1    mv
+1    mkdir
+1    ln
+1    gpasswd
+1    expr
+1    curl
+1    command
+1    base64
+1    aptitude
+1    aprping
+#+END_SRC

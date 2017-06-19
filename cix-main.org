@@ -1,8 +1,8 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-4-16 Sun 21:38:07 BST> sharlatan
+# Modified   : <2017-6-19 Mon 22:10:12 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
-# Short      :
+# Short      : Index of of all files.
 
 
 #+TITLE: CIX

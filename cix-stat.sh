@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # File     : cix-stat.sh
 # Created  : <2016-11-20 Sun 21:59:18 GMT> sharlatan
-# Modified : <2017-4-16 Sun 12:01:44 BST> sharlatan
+# Modified : <2017-6-19 Mon 22:10:57 BST> sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
-# Short    :
+# Short    : Show statistic of examples.
 
 
 ABS_PATH="$(dirname "$(readlink -f "$0")")"

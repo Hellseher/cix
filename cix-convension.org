@@ -1,9 +1,8 @@
 # File           : cix-convension.org
 # Created        : <2017-04-16 Sun 12:04:39 BST>
-# Modified       : <2017-4-16 Sun 21:36:48 BST> sharlatan
+# Modified       : <2017-6-19 Mon 22:18:16 BST> sharlatan
 # Author         : sharlatan
-# Maintainer(s)  :
-# Short          :
+# Short          : Styles and structure of the project.
 
 #+OPTIONS: num:nil
 
