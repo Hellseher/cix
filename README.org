@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-6-19 Mon 22:37:18 BST> sharlatan
+# Last Modified  : <2017-6-19 Mon 22:55:28 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -28,14 +28,13 @@ cix
 ├── cix-stat.sh
 ├── img
 ├── LICENSE
-├── #README.org#
 ├── README.org
 ├── README-ru.md
 ├── spices
 ├── tests
 └── tutors
 
-4 directories, 7 files
+4 directories, 6 files
 #+END_SRC
 
 ** Statistic
@@ -46,6 +45,7 @@ cix
 #+RESULTS:
 #+BEGIN_SRC org
 QTY  CMD
+33   tcpdump
 8    find
 8    dd
 7    sed

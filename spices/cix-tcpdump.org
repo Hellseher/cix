@@ -1,9 +1,8 @@
-# File           : cix-tcpdump.org
-# Created        : <2016-11-07 Mon 23:06:06 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Short          :
+# File          : cix-tcpdump.org
+# Created       : <2016-11-07 Mon 23:06:06 GMT>
+# Modified      : <2017-6-19 Mon 22:55:03 BST> sharlatan
+# Author        : sharlatan
+# Short         :
 
 #+OPTIONS: num:nil
 
@@ -43,9 +42,9 @@ Install tcpdump if you need a program to monitor network traffic.
 | nn | don't resolve hostnames or part names |
 
 *** tcpdump::examples
-- tcpdump-161126180824 :: cpapture active hosts on any interfaces for 10s on the
-     network:
-  #+BEGIN_SRC sh
+**** tcpdump-161126180824
+cpapture active hosts on any interfaces for 10s on the:
+#+BEGIN_SRC sh
     #!/usr/bin/env bash
 
     IPV4_RE="((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"
@@ -61,6 +60,148 @@ Install tcpdump if you need a program to monitor network traffic.
          | sort -n \
          | uniq -c \
          | sort -rn) | column -t
+ #+END_SRC
+[[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq (1)]], [[file:./cix-util-linux.org::*column][column (1)]], [[file:./cix-gnu-core-utilities.org::*timeout][timeout (1)]]
 
-  #+END_SRC
-     [[file:./cix-gnu-bash-builtin.org::*echo][echo]], [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq (1)]], [[file:./cix-util-linux.org::*column][column (1)]], [[file:./cix-gnu-core-utilities.org::*timeout][timeout (1)]]
+**** tcpdump-170619224419
+See the list of interfaces on which tcpdump can listen:
+:    ~$ tcpdump -D
+
+**** tcpdump-170619224520
+Listen on interface eth0:
+:    ~# tcpdump -i eth0
+
+**** tcpdump-170619224527
+Listen on any available interface (Linux kernel 2.2 or greater):
+:    ~# tcpdump -i any
+
+**** tcpdump-170619224727
+Be verbose while capturing packets:
+:    ~# tcpdump -v -i any
+
+**** tcpdump-170619224823
+Be more verbose while capturing packets:
+:    ~# tcpdump -vv -i any
+
+**** tcpdump-170619224836
+Be very verbose while capturing packets:
+:    ~# tcpdump -vvv -i any
+
+**** tcpdump-170619224858
+Be verbose and print the data of each packet in both hex and ASCII:
+:    ~# tcpdump -v -X -i any
+
+**** tcpdump-170619225001
+Be less verbose (than the default) while capturing packets:
+:    ~# tcpdump -q -i any
+
+**** tcpdump-170619225014
+Limit the capture to 100 packets:
+:    ~# tcpdump -c 100 -i any
+
+**** tcpdump-170619225109
+Record the packet capture to a file called capture.cap:
+:    ~# tcpdump -w capture.cap -i any
+
+**** tcpdump-170619225116
+Record the packet capture to a file called capture.cap but display on-screen how
+many packets have been captured in real-time:
+:    ~# tcpdump -v -w capture.cap -i any
+
+**** tcpdump-170619225137
+Display the packets of a file called capture.cap:
+:    ~# tcpdump -r capture.cap
+
+**** tcpdump-170619225144
+Display the packets using maximum detail of a file called capture.cap:
+:    ~# tcpdump -vvv -r capture.cap
+
+**** tcpdump-170619225158
+Display IP addresses and port numbers instead of domain and service names when
+capturing packets (note: on some systems you need to specify -nn to display port
+numbers):
+:    ~# tcpdump -n -i any
+
+**** tcpdump-170619225212
+Capture any packets where the destination host is 192.168.1.1. Display IP
+addresses and port numbers:
+:    ~# tcpdump -n dst host 192.168.1.1 -i any
+
+**** tcpdump-170619225228
+Capture any packets where the source host is 192.168.1.1. Display IP addresses
+and port numbers:
+:    ~# tcpdump -n src host 192.168.1.1 -i any
+
+**** tcpdump-170619225238
+Capture any packets where the source or destination host is 192.168.1.1. Display
+IP addresses and port numbers:
+:    ~# tcpdump -n host 192.168.1.1 -i any
+
+**** tcpdump-170619225250
+Capture any packets where the destination network is 192.168.1.0/24. Display IP
+addresses and port numbers:
+:    ~# tcpdump -n dst net 192.168.1.0/24 -i any
+
+**** tcpdump-170619225259
+Capture any packets where the source network is 192.168.1.0/24. Display IP
+addresses and port numbers:
+:    ~# tcpdump -n src net 192.168.1.0/24 -i any
+
+**** tcpdump-170619225309
+Capture any packets where the source or destination network is
+192.168.1.0/24. Display IP addresses and port numbers:
+:    ~# tcpdump -n net 192.168.1.0/24 -i any
+
+**** tcpdump-170619225321
+Capture any packets where the destination port is 23. Display IP addresses and
+port numbers:
+:    ~# tcpdump -n dst port 23 -i any
+
+**** tcpdump-170619225330
+Capture any packets where the destination port is is between 1 and 1023
+inclusive. Display IP addresses and port numbers:
+:    ~# tcpdump -n dst portrange 1-1023 -i any
+
+**** tcpdump-170619225336
+Capture only TCP packets where the destination port is is between 1 and 1023
+inclusive. Display IP addresses and port numbers:
+:    ~# tcpdump -n tcp dst portrange 1-1023 -i any
+
+**** tcpdump-170619225348
+Capture only UDP packets where the destination port is is between 1 and 1023
+inclusive. Display IP addresses and port numbers:
+:    ~# tcpdump -n udp dst portrange 1-1023 -i any
+
+**** tcpdump-170619225353
+Capture any packets with destination IP 192.168.1.1 and destination
+port 23. Display IP addresses and port numbers:
+:    ~# tcpdump -n "dst host 192.168.1.1 and dst port 23" -i any
+
+**** tcpdump-170619225407
+Capture any packets with destination IP 192.168.1.1 and destination port 80
+or 443. Display IP addresses and port numbers:
+:    ~# tcpdump -n "dst host 192.168.1.1 and (dst port 80 or dst port 443)" -i any
+
+**** tcpdump-170619225419
+Capture any ICMP packets:
+:    ~# tcpdump -v icmp -i any
+
+**** tcpdump-170619225427
+Capture any ARP packets:
+:    ~# tcpdump -v arp -i any
+
+**** tcpdump-170619225432
+Capture either ICMP or ARP packets:
+:    ~# tcpdump -v "icmp or arp" -i any
+
+**** tcpdump-170619225437
+Capture any packets that are broadcast or multicast:
+:    ~# tcpdump -n "broadcast or multicast" -i any
+
+**** tcpdump-170619225444
+Capture 500 bytes of data for each packet rather than the default of 68 bytes:
+:    ~# tcpdump -s 500 -i any
+
+**** tcpdump-170619225455
+Capture all bytes of data within the packet:
+:    ~# tcpdump -s 0 -i any
