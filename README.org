@@ -1,13 +1,13 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-6-19 Mon 22:18:37 BST> sharlatan
+# Last Modified  : <2017-6-19 Mon 22:37:18 BST> sharlatan
 # Author         : sharlatan
-# Short          :
+# Short          : README-en
 
 #+OPTIONS: num:nil
 
 Collection of templates which I came across during daily work and research
-Internet for the "Answer". It a consolidated experience of using *nix OSes
+Internet for the "Answer". It is a consolidated experience of using *nix OSes
 
 Contribution welcome!
 
@@ -28,20 +28,15 @@ cix
 ├── cix-stat.sh
 ├── img
 ├── LICENSE
+├── #README.org#
 ├── README.org
 ├── README-ru.md
 ├── spices
 ├── tests
 └── tutors
 
-4 directories, 6 files
+4 directories, 7 files
 #+END_SRC
-
-- cix-main.org :: Index of of all files.
-- img/ :: Picture files.
-- spices/ :: Collection of files stuffed with examples.
-- tests/ :: Files for testing referenced in examples.
-- tutors/ :: Full size tutorials "How to"
 
 ** Statistic
 #+BEGIN_SRC sh :results value org output replace :exports results
