@@ -1,6 +1,6 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-5-17 Wed 22:37:15 BST> sharlatan
+# Modified      : <2017-6-20 Tue 23:08:24 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Short         :
@@ -550,11 +550,13 @@ sort(1)
 A *mount* command existed in Version 5 AT&T UNIX
 *** mount::options
 *** mount::examples
-- mount-161120112604 :: nicely printed *mount* table:
+**** mount-161120112604
+Nicely printed *mount* table:
 :    ~$ mount | column -t
 [[file:./cix-util-linux.org::*column][column (1)]]
 
-- mount-161120162011 :: mount ISO image to the system:
+**** mount-161120162011
+Mount ISO image to the system:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -562,7 +564,9 @@ A *mount* command existed in Version 5 AT&T UNIX
   MNT_PATH="/mnt/iso"
   mount -o loop "$ISO_PATH" "$MNT_PATH"
 #+END_SRC
-- mount-161121225218 :: scratch ram partition for a fast access:
+
+**** mount-161121225218
+Scratch ram partition for a fast access:
 :    ~# mount -t tmpfs tmpfs /mnt -o size=1024m
 *** mount::files
 #+BEGIN_EXAMPLE

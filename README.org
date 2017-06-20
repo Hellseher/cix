@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-6-19 Mon 22:55:28 BST> sharlatan
+# Last Modified  : <2017-6-20 Tue 23:10:03 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -52,6 +52,7 @@ QTY  CMD
 6    awk
 5    ls
 3    tr
+3    mount
 3    grep
 2    xargs
 2    wget
