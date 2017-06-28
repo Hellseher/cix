@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Modified : <2017-4-16 Sun 12:39:32 BST> sharlatan
+# Modified : <2017-6-29 Thu 00:49:08 BST> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -555,12 +555,12 @@ repoint symlink to another file:
 *** ls::examples
 
 **** ls-161226204717
-list block devices:
+List block devices:
 :    ~$ ls -l /dev /dev/mapper | grep '^b'
 [[file:./cix-gnu-grep.org::*grep][grep (1)]]
 
 **** ls-161118234510
-tree view of all sub directories:
+Tree view of all sub directories:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -574,25 +574,23 @@ tree view of all sub directories:
 [[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
 
 **** ls-161107232103
-sweet examples of using *ls*:
-#+BEGIN_EXAMPLE
-    ~$ ls -Rotti
-    ~$ ls -Ham
-    ~$ ls -and
-    ~$ ls -laSh
-#+END_EXAMPLE
+Sweet memorising examples of using *ls*:
+:    ~$ ls -Rotti
+:    ~$ ls -Ham
+:    ~$ ls -and
+:    ~$ ls -laSh
+:    ~$ ls -Qam
+
 
 **** ls-161107232114
-list only - dir, files, links, hidden dirs, hidden files hidden links, exec
+List only - dir, files, links, hidden dirs, hidden files hidden links, exec
 files. Actively using *-F* key to classify */=>@|:
-#+BEGIN_EXAMPLE
-    ~$ ls -F | grep '/' | cut -d/ -f1              # directories
-    ~$ ls -p | grep -v /                           # files
-    ~$ ls -F | grep '[@]' | cut -d@ -f1            # links
-    ~$ ls -d .*/ | cut -d/ -f1                     # hiden direcotires
-    ~$ ls -a | grep "^\."                          # hiden files
-    ~$ ls -Fa | grep "\." | grep "@" | cut -d@ -f1 # hiden links
-#+END_EXAMPLE
+:    ~$ ls -F | grep '/' | cut -d/ -f1              # directories
+:    ~$ ls -p | grep -v /                           # files
+:    ~$ ls -F | grep '[@]' | cut -d@ -f1            # links
+:    ~$ ls -d .*/ | cut -d/ -f1                     # hiden direcotires
+:    ~$ ls -a | grep "^\."                          # hiden files
+:    ~$ ls -Fa | grep "\." | grep "@" | cut -d@ -f1 # hiden links
 [[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-gnu-core-utilities.org::*cut][cut (1)]]
 
 **** ls-151114230741
