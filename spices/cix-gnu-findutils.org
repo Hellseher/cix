@@ -1,6 +1,6 @@
 # File           : cix-gnu-findutils.org
 # Created        : <2015-11-17 Tue 22:54:30 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-7-04 Tue 20:46:42 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -38,51 +38,52 @@ directory search and file locating capabilities to other commands.
 #+END_EXAMPLE
 
 * Receipts
-
 ** find                                                                         :cmd:
-
 *** find::options
 
-:    find [-H] [-L] [-P] [-D debugopts] [-Olevel] [path...] [expression]
+| OPTIONS | FROM V. | DISCRIPTION |
+|---------+---------+-------------|
+| -type   |         |             |
+| -printf |         |             |
+| -exec   |         |             |
+| -print  |         |             |
+| -print0 |         |             |
+| -regex  |         |             |
+| -name   |         |             |
+|---------+---------+-------------|
 
 *** find::exampls
-
 **** find-161119210555
-copy all "*jpg" files from current directory to $HOME/Pictures:
+Copy all "*jpg" files from current directory to $HOME/Pictures recursevly:
 :    ~$ find ./ -type f -name "*jpg" -exec cp {} ~/Pictures \;
 [[file:./cix-gnu-core-utilities.org::*cp][cp (1)]]
 
 **** find-161119210633
-find only in current directory (universal):
+Find only in current directory (universal):
 :     ~$ find ./ \( ! -name . -prune \) \( -type -f -o -type l \) # POSIX version
 :     ~$ find ./ -maxdepth 1                                      # GNU version
 
 **** find-161119211114
-show all files in current directory except hidden:
+Show all files in current directory except hidden:
 :     ~$ find ./ -maxdepth 1 -type f -not '.*'
 
 **** find-161119211147
 search for  specified "string" in list of files:
-#+BEGIN_SRC sh
-  #!/usr/bin/env bash
-
-  SEARCH_STR="find_me"
-  find ./ -type f -exec grep "$SEARCH_STR" {} /dev/null \;
-#+END_SRC
+:    ~$ find ./ -type f -exec grep "search_str" {}  \;
 [[file:./cix-gnu-grep.org::*grep][grep (1)]]
 
 **** find-161119211506
-find all files on the file system that are called configuration, ignoring case,
+Find all files on the file system that are called configuration, ignoring case,
 and accommodating abbreviations such as confg, cnfg, and cnfig:
 :    ~# find / -regex '^[/a-z_]*[cC]+[Oo]*[nN]+[fF]+[iI]*[gF]+$' 2>/dev/null
 
 **** find-161119211734
-find all files permission 777 and change them to 644:
+Find all files permission 777 and change them to 644:
 :    ~# find / -type f -perm 0777 -print -exec chmod 644 {} \;
 [[file:./cix-gnu-core-utilities.org::*chmod][chmod (1)]]
 
 **** find-161119212110
-find all dublicated file by their hashes:
+Find all dublicated file by their hashes:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -93,11 +94,17 @@ find all dublicated file by their hashes:
       | sort \
       | uniq -w"${HASH_CHCK[2]}" --all-repeated=separate
 #+END_SRC
+[[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-core-utilities.org::*uniq][uniq]]
 
 **** find-161202213913
 find all setuid files/commands:
 :    ~# find / -user root -perm -4000 -exec ls -ldb {} 2>/dev/null \;
+[[file:./cix-gnu-core-utilities.org::*ls][ls]]
 
+**** find-170704204000
+List directories by depth recursevly:
+:    ~$ find ./ -type d -printf "%d %p\n" | sort -rn | cut -d" " -f2
+[[file:./cix-gnu-core-utilities.org::*sort][sort]] [[file:./cix-gnu-core-utilities.org::*cut][cut]]
 *** find:see-also
 chflags
 (1), chmod(1), cvs(1), locate(1), whereis(1), which(1), xargs(1),
@@ -105,11 +112,13 @@ stat(2), acl(3), fts(3), getgrent(3), getpwent(3), strmode(3),
 re_format(7), symlink(7)
 ** xargs                                                                        :cmd:
 *** xargs::examples
+
 **** xargs-161122000716
 *cp* or *mv* files by list in a file:
 :    ~$ xargs mv -t /distinction/direcotiry < list_of_file_pathes
+
 **** xargs-161210000709
-split bulk text into n culloms:
+Split bulk text into n culloms:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -119,6 +128,13 @@ split bulk text into n culloms:
 
   echo "$TEST_DATA" | xargs -n "$N"
 #+END_SRC
+[[file:./cix-gnu-core-utilities.org::*head][head]]
+[[file:./cix-gnu-core-utilities.org::*base64][base64]]
+[[file:./cix-gnu-core-utilities.org::*tr][tr]]
+
+**** xargs-170621222335
+Count all lines of code for the project in C (for example):
+:    ~$ find ./ -regex ".+\.c\|.+\.h" | xargs wc -l
 
 * References
 ** Links
