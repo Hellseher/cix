@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-6-19 Mon 22:10:12 BST> sharlatan
+# Modified   : <2017-7-12 Wed 00:43:21 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Short      : Index of of all files.
 
@@ -77,14 +77,14 @@ on *GNU/Linux*
 - *Core* /usually it contains on the most distributions/
   + bsd :: list of common bsd commands
   + [[./spices/cix-busybox.org][BusyBox]] :: the swiss army knife of embedded Linux
-  + [[./spices/cix-gnu-core-utilities.org][gnu-coreutilities]] :: basic file, shell and text manipulation utilities: *Linux FreeBSD*
+  + [[./spices/cix-gnu-core-utilities.org][gnu-coreutilities]] :: basic file, shell and text manipulation utilities: =Linux FreeBSD=
   + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console (keyboard, virtual terminals, etc.)
-  + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: *Linux*
+  + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: =Linux=
   + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens with
                reasonable optimization.
   + the heirloom project :: traditional implementations of standard UNIX utils
   + [[./spices/cix-toybox.org][toybox]]  :: common Linux commands for embedded systems (POSIX-2008 and LSB 4.1).
-  + [[./spices/cix-util-linux.org][util-Linux]] :: is a standard package of the Linux operating system: *Linux*
+  + [[./spices/cix-util-linux.org][util-Linux]] :: is a standard package of the Linux operating system: =Linux=
 
 - *File* /everything is a file/!
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a gnu collection of diff utilities
@@ -95,10 +95,11 @@ on *GNU/Linux*
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: a small text editor
   + [[./spices/cix-sed.org][sed]] :: a gnu stream text editor
-  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: *FreeBSD Linux os-x*
+  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: =FreeBSD Linux OS-X=
+  + [[./spices/cix-file.org][file]] :: A utility for determining file types: =Linux NetBSD FreeBSD OS/2 DOS Win=
 
 - *Transfare-sync* /put me up, put me down/
-  + [[file:./cix-curl.org][curl]] :: a utility for getting files from remote servers: *Linux FreeBSD*
+  + [[file:./cix-curl.org][curl]] :: a utility for getting files from remote servers: =Linux FreeBSD=
   + [[./spices/cix-lsyncd.org][lsyncd]] :: live syncing daemon synchronizes local directories with remote targиets
   + [[file:./spices/cix-rsync.org][rsync]] :: a program for synchronizing files over a network
   + [[./spices/cix-vsftp.org][vsftp]] :: very secure ftp daemon
@@ -130,9 +131,9 @@ on *GNU/Linux*
   + [[./spices/cix-perf.org][perf]] :: Performance monitoring for the Linux kerne
 
 - *Hardware* /hard as a rock!/
-  + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities:
-    *Linux FreeBSD netbsd openbsd gnu/kFreeBSD  solaris/i386 aix gnu hurd windows
-    cygwin beos haiku darwin*
+  + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =Linux FreeBSD netbsd openbsd=
+                =GNU/Linux FreeBSD Solaris/i386 AIX GNU-Hurdd Windows Cygwin BeOS Haiku=
+                =Darwin=
   + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks
   + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities
@@ -154,7 +155,7 @@ on *GNU/Linux*
   + [[./spices/cix-unizp.org][unzip]] :: a utility for unpacking zip files
   + [[./spices/cix-lrzip.org][lrzip]] :: compression program optimized for large files
   + [[./spices/cix-pax.org][pax]] :: posix file system archiver
-  + [[./spices/cix-xz.org][xz]] :: lzma compression utilities: *Linux FreeBSD*
+  + [[./spices/cix-xz.org][xz]] :: lzma compression utilities: =Linux FreeBSD=
 
 - *Networking* /we all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
@@ -166,10 +167,10 @@ on *GNU/Linux*
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
-  + [[./spices/cix-openssh.org][openssh]] :: an open source implementation of ssh protocol:
-  *aix hp-ux irix Linux next sco sni/reliant unix solaris digital unix/tru64/osf
-  mac os-x cygwin*
-  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: *Linux FreeBSD*
+  + [[./spices/cix-openssh.org][openssh]] :: an open source implementation of ssh protocol: =AIX HP-UX IRIX
+               Linux Next Sco Sni/Reliant Unix Solaris Digital Unix/Tru64/Osf=
+               =Mac Os-X Cygwin=
+  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =Linux FreeBSD=
 
 - *Shell* /not just sand.../
   + [[./spices/cix-gnu-bash.org][gnu-bash]] :: gnu bash shell built in commands

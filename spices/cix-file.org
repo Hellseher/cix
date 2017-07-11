@@ -1,0 +1,27 @@
+# File           : cix-file.org
+# Created        : <2017-07-12 Wed 00:22:46 BST>
+# Modified       : <2017-7-12 Wed 00:40:37 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Short          :
+
+#+OPTIONS: num:nil
+
+[[../cix-main.org::*Index][|≣|]]
+#+TITLE: File
+
+|--------------+--------------------------------|
+| *Author*       | Ian Darwin                     |
+| *Contributors* | Geoff Collyer,                 |
+|              | Guy Harris, Chris Lowth,       |
+|              | Eric Fischer,  Christos Zoulas |
+| *Realised*     | 1987                           |
+| *Source*       | [[https://github.com/file/file][file.git]]                       |
+| *Info*         |                                |
+|--------------+--------------------------------|
+
+The =file= command is used to identify a particular file according to the type of
+data contained by the file.  =file= can identify many different file types,
+including ELF binaries, system libraries, RPM packages, and different graphics
+formats.
+-----
