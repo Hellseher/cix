@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-6-20 Tue 23:10:03 BST> sharlatan
+# Last Modified  : <2017-7-17 Mon 00:52:10 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -44,39 +44,41 @@ cix
 
 #+RESULTS:
 #+BEGIN_SRC org
-QTY  CMD
-33   tcpdump
-8    find
-8    dd
-7    sed
-6    awk
-5    ls
-3    tr
-3    mount
-3    grep
-2    xargs
-2    wget
-2    tee
-2    tar
-2    ssh
-2    rsync
-2    nc
-1    strace
-1    set
-1    rm
-1    rev
-1    printf
-1    ping
-1    pacman
-1    objdump
-1    mv
-1    mkdir
-1    ln
-1    gpasswd
-1    expr
-1    curl
-1    command
-1    base64
-1    aptitude
-1    aprping
+QTY  CMD       PKG
+---  ---       ---
+33   tcpdump   tcpdump
+10   find      gnu-findutils
+8    dd        gnu-core-utilities
+7    sed       sed
+6    awk       gawk
+5    ls        gnu-core-utilities
+3    xargs     gnu-findutils
+3    tr        gnu-core-utilities
+3    mount     util-linux
+3    grep      gnu-grep
+2    wget      wget
+2    tee       gnu-core-utilities
+2    tar       tar
+2    ssh       openssh
+2    rsync     rsync
+2    nc        netcat
+1    strace    strace
+1    set       gnu-bash
+1    rm        gnu-core-utilities
+1    rev       util-linux
+1    printf    gnu-bash
+1    ping      iputils
+1    pacman    pacman
+1    objdump   gnu-binutils
+1    mv        gnu-core-utilities
+1    mkdir     gnu-core-utilities
+1    ln        gnu-core-utilities
+1    ldd       glibc
+1    gpasswd   shadow-utils
+1    expr      gnu-core-utilities
+1    curl      curl
+1    command   gnu-bash
+1    base64    gnu-core-utilities
+1    aptitude  aptitude
+1    aprping   iputils
 #+END_SRC
