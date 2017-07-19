@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # File     : cix-stat.sh
 # Created  : <2016-11-20 Sun 21:59:18 GMT> sharlatan
-# Modified : <2017-7-17 Mon 00:51:39 BST> sharlatan
+# Modified : <2017-7-18 Tue 22:53:06 BST> sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
 # Short    : Show statistic of examples.
 
@@ -36,9 +36,10 @@ oneliner_or_script()
 }
 
 main() {
+    printf "Distribution per subjest:\n\n"
     ls_cmd_distribution
- #   echo
-  #  oneliner_or_script
+    printf "\nDistribution per example:\n\n"
+    oneliner_or_script
 }
 
 main "$@"
