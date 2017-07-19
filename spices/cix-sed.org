@@ -1,6 +1,6 @@
 # File         : cix-sed.org
 # Created      : <2016-11-04 Fri 22:49:14 GMT>
-# Modified     : <2017-3-04 Sat 20:03:29 GMT> sharlatan
+# Modified     : <2017-7-19 Wed 00:17:05 BST> sharlatan
 # Author       : sharlatan
 # Maintainer(s :
 # Short        :
@@ -9,14 +9,18 @@
 
 [[../README.org::*Index][|≣|]]
 #+TITLE: SED
-|--------+----------------|
-| *Author* | Lee E. McMahon |
-|        |                |
-|--------+----------------|
-The sed  (Stream EDitor) editor is  a stream or batch  (non-interactive) editor.
-Sed takes text as input, performs an  operation or set of operations on the text
+|--------------+----------------|
+| *Author*       | Lee E. McMahon |
+| *Contributors* |                |
+| *Realised*     | 1974           |
+| *Source*       | [[http://git.savannah.gnu.org/gitweb/?p%3Dsed.git][sed.git]]        |
+| *Info*         |                |
+|--------------+----------------|
+
+The sed (Stream EDitor) editor is a stream or batch (non-interactive) editor.
+Sed takes text as input, performs an operation or set of operations on the text
 and outputs the modified text.  The operations that sed performs (substitutions,
-deletions,  insertions, etc.)  can be  specified in  a script  file or  from the
+deletions, insertions, etc.)  can be specified in a script file or from the
 command line.
 -----
 
@@ -27,40 +31,78 @@ command line.
 |---------------------------------+-------------------------------------------------------|
 | =-i[SUFFIX], --in-place[=SUFFIX]= | edit files in place (makes backup if SUFFIX supplied) |
 | =-e script, --expression=script=  | add the script to the commands to be execute          |
+| -r                              |                                                       |
 | =-n, --quite, --silent=           | suppress automatic printing of pattern space          |
 |---------------------------------+-------------------------------------------------------|
+
+**** Regular expressions
+
+| SIMBOL | DESCRIPTIONS                               |
+|--------+--------------------------------------------|
+| =^=      | Begining of the line                       |
+| =$=      | End of line                                |
+| =.=      | Match any symbol                           |
+| =[a-z]=  | Any letter from a to z                     |
+| =[0-9]=  | Any number from 0 to 9                     |
+| =*=      | One or more sympols                        |
+| ={n}=    | Quantifier where n is any interg number    |
+| =&=      | Matched string                             |
+| =\n=     | Group number where n is any integer number |
+|--------+--------------------------------------------|
+
 *** sed::examples
 **** sed-161122223125
-remove leading white spaces from a file:
+Remove leading white spaces from a file:
 :    ~$ sed -i -e 's/^ *//g' input_f
-:    ~$ sed 's/^ *//' input_f > tmp_f && mv tmp_f input_f
+:    ~$ sed 's/^ *//g' input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
+
 **** sed-170304154248
-remove trailing white spaces from a file:
+Remove trailing white spaces from a file:
 :    ~$ sed -i -e 's/ *$//g' input_f
 :    ~$ sed -e 's/ *$//g' input_f > tmp_f && mv tm_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
+**** sed-170718230254
+Remove blank lines from a file:
+:    ~$ sed -i -e '/^$/' input_f
+
+**** sed-170718231048
+Remove leading, trailing whitespaces and blank lines in one run:
+:    ~$ sed -i -e 's/^ *//;s/ *$//;s/^$/' input_f
+
+**** sed-170718231657
+To remove everything except the 1st n characters in every line:
+:    ~$ sed -r 's/(.{3}).*/\1/' input_f
+
+**** sed-170718231934
+To remove everything except the last n characters in a file:
+:    ~$ sed -r 's/.*(.{3})/\1/' input_f
+
 **** sed-161122224710
-remove lines between 2 patterns exluding and including:
+Remove lines between 2 patterns exluding and including:
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/{//!d}" input_f > tmp_f && mv tmp_f input_f
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/d" input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-170106224318
-output text betwin BEGIN_PAT and END_PAT:
+Output text betwin BEGIN_PAT and END_PAT:
 :    ~$ sed -n '/BEGIN_PAT/,/END_PAT/p' input_f
 
 **** sed-170106225346
-wrap each line of a file in quotes:
+Wrap each line of a file in quotes:
 :    ~$ sed -e 's/\(.*\)/"\1"/' input_f
 
 **** sed-170203214632
-split camelcase with spaces:
+Split camelcase with spaces:
 :    ~$ sed 's/\([A-Z]\)/ \1/g'
 
+**** sed-170718233452
+Insert line after PATTERN:
+:    ~$ sed -i '/PATTERN/a NEW_LINE_STRING' input_f
+
 **** sed-161209234700
-insert spaces every n character in a file or string:
+Insert spaces every n character in a file or string:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
