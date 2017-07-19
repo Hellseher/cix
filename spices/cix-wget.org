@@ -1,6 +1,6 @@
 # File           : cix-wget.org
 # Created        : <2016-11-21 Mon 21:11:14 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-4-01 Sat 21:01:56 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -32,8 +32,7 @@ download an entire website:
 :    ~ $  wget --random-wait -r -p -e robots=off -U mozilla WEBSITE_URL
 
 **** wget-161121211338
-download a sertain file in a list of files from a server if you know the
-structure of them:
+download a sertain file in a list of files from a server with known structure:
 
 #+BEGIN_SRC sh
   #!/usr/bin/env bash

@@ -1,6 +1,6 @@
 # File           : cix-ffmpeg.org
 # Created        : <2016-11-16 Wed 23:24:34 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-3-02 Thu 23:34:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -10,6 +10,7 @@
 #+TITLE: FFmpeg
 
 http://ffmpeg.org/
+
 FFmpeg is a complete and free Internet live audio and video
 broadcasting solution for Linux/Unix. It also includes a digital
 VCR. It can encode in real time in many formats including MPEG1 audio

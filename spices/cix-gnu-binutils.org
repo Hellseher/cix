@@ -1,6 +1,6 @@
 # File           : cix-gnu-binutils.org
 # Created        : <2015-11-02 Mon 22:18:23 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-7-12 Wed 20:40:28 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -9,12 +9,25 @@
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: GNU Bin Utils
-/A GNU collection of binary utilities/
+|---------------+------------------|
+| *Author*        |                  |
+| *Maintainer(s) |                  |
+| *Released*      |                  |
+| *Source*        | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
+| *Info*          |                  |
+|---------------+------------------|
 
-|--------+------------------|
-| *Author* |                  |
-| *Source* | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
-|--------+------------------|
+ Binutils is a collection of binary utilities, including ar (for creating,
+ modifying and extracting from archives), as (a family of GNU assemblers), gprof
+ (for displaying call graph profile data), ld (the GNU linker), nm (for listing
+ symbols from object files), objcopy (for copying and translating object files),
+ objdump (for displaying information from object files), ranlib (for generating
+ an index for the contents of an archive), readelf (for displaying detailed
+ information about binary files), size (for listing the section sizes of an
+ object or archive file), strings (for listing printable strings from files),
+ strip (for discarding symbols), and addr2line (for converting addresses to file
+ and line).
+-----
 
 ** Libraries
 | № | Name            |

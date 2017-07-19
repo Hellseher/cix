@@ -1,6 +1,6 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Modified : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified : <2017-5-11 Thu 22:41:53 BST> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -8,13 +8,13 @@
 [[file:../README.org::*Index][|≣|]][[http://net-tools.sourceforge.net][|↷|]]
 #+TITLE: net-tools
 
-|-------------+-----------------------------------|
-| *Author*      | Bernd Eckenfels, Phil Blundell    |
+|--------------+-----------------------------------|
+| *Author*       | Bernd Eckenfels, Phil Blundell    |
 | *Contributors* |                                   |
-| *Realised*    | 2006                              |
-| *Source*      | [[https://sourceforge.net/projects/net-tools/][net-tools]]                         |
-| *NOTES*       | marked as depricated see [[spices/iproute2.org][iproute2]] |
-|-------------+-----------------------------------|
+| *Realised*     | 2006                              |
+| *Source*       | [[https://sourceforge.net/projects/net-tools/][net-tools]]                         |
+| *NOTES*        | marked as depricated see [[./cix-iproute2.org][iproute2]] |
+|--------------+-----------------------------------|
 
 A collection of programs that form the base set of the NET-3 networking
 distribution for the Linux operating system.

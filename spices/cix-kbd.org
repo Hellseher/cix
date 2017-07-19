@@ -5,9 +5,11 @@
 
 #+OPTIONS: num:nil
 
-[[../README.md#Index "Index"][|≣|]][[http://net-tools.sourceforge.net][↷|]]
+[[../cix-main.org][|≣|]]
 
 #+TITLE: KBD
+
+-----
 ** Commands
 #+BEGIN_EXAMPLE
 chvt (1)             - change foreground virtual terminal

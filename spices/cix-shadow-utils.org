@@ -1,6 +1,6 @@
 # File           : cix-shadow-utils.org
 # Created        : <2016-05-03 Tue 00:09:23 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-2-05 Sun 13:45:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -18,14 +18,14 @@
 | *Source*       | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]                       |
 |--------------+----------------------------------|
 
-The shadow-utils  package includes  the necessary  programs for  converting UNIX
-password files  to the shadow password  format, plus programs for  managing user
-and  group  accounts.  The  pwconv  command  converts  passwords to  the  shadow
-password format. The pwunconv command  unconverts shadow passwords and generates
-a passwd  file (a  standard UNIX  password file).  The  pwck command  checks the
+The shadow-utils package includes the necessary programs for converting UNIX
+password files to the shadow password format, plus programs for managing user
+and group accounts.  The pwconv command converts passwords to the shadow
+password format. The pwunconv command unconverts shadow passwords and generates
+a passwd file (a standard UNIX password file).  The pwck command checks the
 integrity of password and shadow files.  The lastlog command prints out the last
-login times for all users.  The  useradd, userdel, and usermod commands are used
-for managing user  accounts.  The groupadd, groupdel, and  groupmod commands are
+login times for all users.  The useradd, userdel, and usermod commands are used
+for managing user accounts.  The groupadd, groupdel, and groupmod commands are
 used for managing group accounts.
 -----
 * Index

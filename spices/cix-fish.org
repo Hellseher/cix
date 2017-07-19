@@ -1,15 +1,16 @@
 # File           : cix-fish.org
 # Created        : <2016-11-12 Sat 23:00:43 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-2-27 Mon 23:31:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
 
 #+OPTIONS: num:nil
 
+[[../README.org::*Index][|≣|]]
 #+TITLE: Fish shell
 
-** Index
+* Index
 #+BEGIN_EXAMPLE
     abbr
     alias

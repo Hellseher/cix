@@ -1,6 +1,6 @@
 # File           : cix-glibc-common.org
 # Created        : <2016-11-14 Mon 21:40:36 GMT>
-# Modified       : <2017-1-20 Fri 21:24:37 GMT> sharlatan
+# Modified       : <2017-7-12 Wed 20:40:28 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -8,15 +8,30 @@
 #+OPTIONS: num:nil
 
 [[../cix-main.org::*Index][|≣|]]
-
 #+TITLE: Glibc
+|--------------+---|
+| *Author*       |   |
+| *Contributors* |   |
+| *Realised*     |   |
+| *Source*       |   |
+| *Info*         |   |
+|--------------+---|
 
-The glibc-common package includes common binaries for the GNU libc libraries, as
-well as national language (locale) support
+The glibc package contains standard libraries which are used by multiple
+programs on the system. In order to save disk space and memory, as well as to
+make upgrading easier, common system code is kept in one place and shared
+between programs. This particular package contains the most important sets of
+shared libraries: the standard C library and the standard math library. Without
+these two libraries, a Linux system will not function.
+
 ** Packages
-glibc-common
 glibc
+glibc-common
+glibc-benchtests
+glibc-devel
 glibc-utils
+glibc-static
+glibc-headers
 -----
 * Index
 #+BEGIN_EXAMPLE
@@ -57,6 +72,18 @@ glibc-utils
 ** ldd                                                                          :cmd:
 *** ldd::options
 *** ldd::examples
+**** ldd-170712005358
+Find most used libraries on your system:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  find /usr/bin -type f -executable -exec sh -c "file -i '{}' \
+       | grep -q 'x-executable; charset=binary'" \; -print \
+
+#+END_SRC
+
+#+RESULTS:
+
 *** ldd::files
 *** ldd::see-also
 ** pldd                                                                         :cmd:

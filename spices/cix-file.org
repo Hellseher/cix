@@ -1,6 +1,6 @@
 # File           : cix-file.org
 # Created        : <2017-07-12 Wed 00:22:46 BST>
-# Modified       : <2017-7-12 Wed 00:40:37 BST> sharlatan
+# Modified       : <2017-7-12 Wed 20:40:28 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Short          :
@@ -25,3 +25,5 @@ data contained by the file.  =file= can identify many different file types,
 including ELF binaries, system libraries, RPM packages, and different graphics
 formats.
 -----
+** file
+*** file::options
