@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-7-19 Wed 08:17:09 BST> sharlatan
+# Last Modified  : <2017-7-21 Fri 00:32:44 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -51,7 +51,7 @@ QTY  CMD       PKG
 33   tcpdump   tcpdump
 12   sed       sed
 10   find      gnu-findutils
-8    dd        gnu-core-utilities
+9    dd        gnu-core-utilities
 6    awk       gawk
 5    ls        gnu-core-utilities
 3    xargs     gnu-findutils
@@ -78,6 +78,7 @@ QTY  CMD       PKG
 1    ldd       glibc
 1    gpasswd   shadow-utils
 1    expr      gnu-core-utilities
+1    du        gnu-core-utilities
 1    curl      curl
 1    command   gnu-bash
 1    base64    gnu-core-utilities
@@ -86,6 +87,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  112
+Onliners:  115
 Scripts:   33
 #+END_SRC

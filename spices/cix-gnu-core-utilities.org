@@ -1,6 +1,6 @@
 # File          : gnu-core-utilities.md
 # Created       : Wed 14 Oct 2015 23:07:41
-# Modified : <2017-6-29 Thu 00:49:08 BST> sharlatan
+# Modified : <2017-7-21 Fri 00:32:21 BST> sharlatan
 # Maintainer    : sharlatan
 
 #+OPTIONS: num:nil
@@ -276,44 +276,49 @@ create a *C* chars by *L* lines file of a random ASCII characters:
 *** dd::options
 
 |--------------+-------------------|
-| bs=BYTES     | c w b K MB M GB G |
-| cbs=BYTES    |                   |
-| conv=CONVS   |                   |
-| count=N      |                   |
-| ibs=BYTES    |                   |
-| if=FILE      |                   |
-| iflag=FLAGS  |                   |
-| obs=BYTES    |                   |
-| of=FILE      |                   |
-| oflag=FLAGS  |                   |
-| seek=N       |                   |
-| skip=N       |                   |
-| status=LEVEL |                   |
+| =bs=BYTES=     | c w b K MB M GB G |
+| =cbs=BYTES=    |                   |
+| =conv=CONVS=   |                   |
+| =count=N=      |                   |
+| =ibs=BYTES=    |                   |
+| =if=FILE=      | Input file        |
+| =iflag=FLAGS=  |                   |
+| =obs=BYTES=    |                   |
+| =of=FILE=      | Output file       |
+| =oflag=FLAGS=  |                   |
+| =seek=N=       |                   |
+| =skip=N=       |                   |
+| =status=LEVEL= |                   |
 |--------------+-------------------|
 
 *** dd::examples
 **** dd-161124233800
-output your microphone to a remote computer's speaker:
+Output your microphone to a remote computer's speaker:
 :    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
 [[file:./cix-openssh.org::*ssh][ssh (1)]]
 
-**** dd-161124225351                                                            :destruct:damage:erase:
-killing features of *dd* (*,..,*):
+**** dd-161124225351
+Killing features of =dd=:
 :    ~# dd if=/dev/zero of=/dev/sdX    #  format device
 :    ~# dd if=/dev/random of=/dev/port #  freeze the system
 
-**** dd-161116230224                                                            :io:test:memory:
-memory I/O speed test with 34G of data:
+**** dd-161116230224
+Memory I/O speed test with 34G of data:
 :    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
 
-**** dd-161221215259                                                            :hdd:backup:
-make an image of and device and send it via ssh (or receive it):
+**** dd-161221215259
+Make an image of and device and send it via ssh (or receive it):
 :    ~$ dd if=/dev/sda | gzip -1 - | ssh user@local dd of=img.gz     # from remote
 :    ~$ ssh user@remote "dd if=/dev/sda | gzip -1 -" | dd of=img.zip # from local
+:    ~$ ssh user@remote "dd if=/dev/cdrom" | dd of=remote_cdrom.iso
 [[file::*gzip][gzip (1)]] [[file:./cix-openssh.org::*ssh][ssh (1)]]
 
-**** dd-161113185213                                                            :lan_speed:test:
-test NFS, LAN and I/O speed:
+**** dd-170720235928
+Read =file1= and =file2= and append output back to =file1=:
+:    ~$ cat file1 <(dd if=file2 bs="$(wc -c file2)" count=1) >> file2
+
+**** dd-161113185213
+Test NFS, LAN and I/O speed:
 #+BEGIN_SRC sh
   #!/usr/bin/bash
 
@@ -327,7 +332,7 @@ test NFS, LAN and I/O speed:
 [[./cix-gnu-bash-builtin.org::echo][echo]] [[file::*time][time (1)]]
 
 **** dd-161113185234
-copy and restore MBR of block device (HDD/SSD):
+Copy and restore MBR of block device (HDD/SSD):
 #+BEGIN_SRC sh
   #!/usr/bin/bash
 
@@ -419,6 +424,11 @@ duplicate several drives concurrently:
 /Written by Torbjorn Granlund, David MacKenzie, Paul Eggert, and Jim Meyering./
 *** du::options
 *** du::examples
+**** du-170721002845
+Show size of hiden and normal dirrectores of the current location:
+:   ~$ du -sch .[!.]* * | sort -h
+=.[!.]*= It's a glob that lists all the files that start with a single =.=
+
 *** du::files
 *** du::see-also
 ** echo                                                                         :cmd:

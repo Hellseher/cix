@@ -1,16 +1,14 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-6-20 Tue 23:08:24 BST> sharlatan
+# Modified      : <2017-7-21 Fri 00:32:45 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Short         :
 
 #+OPTIONS: num:nil
 
-[[file:../README.org::*Index][|≣|]][[https://github.com/karelzak/util-linux][|↷|]]
+[[file:../README.org::*Index][|≣|]]
 #+TITLE: Util Linux
-/it is a standard package of the Linux operating system./
-
 |--------------+--------------------------------------------------|
 | *Author*       | Karel Zak                                        |
 | *Contributors* | Ruediger Meier, Sami Kerola, Stanislav Brabec    |
@@ -361,6 +359,9 @@ sort(1)
 /Written by H. Peter Anvin/
 *** flock::options
 *** flock::examples
+**** flock-170719223531
+To protect against multiple run of the script
+:    ~$ flock -n /tmp/lock.txt -c "./script.sh"
 *** flock::files
 *** flock::see-also
 ** fsck                                                                         :cmd:
