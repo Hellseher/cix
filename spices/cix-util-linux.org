@@ -1,6 +1,6 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-7-29 Sat 08:56:55 BST> sharlatan
+# Modified      : <2017-7-29 Sat 17:12:29 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis  :
@@ -300,12 +300,59 @@ contains the fdisk configuration tool and the login program.
 
 The column command appeared in 4.3BSD-Reno
 *** column::options
+#+NAME: util-linux--column-opt
+| OPT                       | FROM V. | END V. | DESC                                                  |
+|---------------------------+---------+--------+-------------------------------------------------------|
+| =-c, --columns=             |    2.13 |   2.30 | width of output in number of character                |
+| =-s, --separator=           |    2.19 |        | possible table delimiters                             |
+| =-t, --table=               |    2.19 |        | format a table output                                 |
+| =-x, --fillrows=            |    2.19 |        | fill rows before columns                              |
+| =-e, --table-header-repeat= |    2.30 |        | repeat header for each page                           |
+| =-E, --table-noextreme=     |    2.30 |        | don't count long text from the columns to column widt |
+| =-N, --table-columns=       |    2.30 |        | comma separated columns names                         |
+| =-n, --talbe-name=          |    2.30 |        | table name for JSON output                            |
+| =-o, --output-separator=    |    2.30 |        | columns separator for table output                    |
+| =-O, --table-order=         |    2.30 |        | specify order of output columns                       |
+| =-c, --output-width=        |    2.30 |        | width of output in number of character                |
+| =-H, --table-hide=          |    2.30 |        | don't print the columns                               |
+| =-i, --tree-id=             |    2.30 |        | line ID to specify child-parent relation              |
+| =-J, --json=                |    2.30 |        | use JSON output format for table                      |
+| =-p, --tree-parent=         |    2.30 |        | parent to specify child-parent relation               |
+| =-R, --table-right=         |    2.30 |        | right align text in these columns                     |
+| =-T, --table-truncate=      |    2.30 |        | truncate text in the columns when necessary           |
+|---------------------------+---------+--------+-------------------------------------------------------|
+
 *** column::examples
-- column-161120161537 :: nicely formated */etc/fstab*:
+**** column-161120161537
+Nicely formated =/etc/fstab=:
 :    ~$ sed 's/#.*//' /etc/fstab | column -t
 :    ~$ grep -v '#' /etc/fstab | column -t
-[[file:./cix-sed.org::*sed][sed (1)]],
-[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+[[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-grep.org::*grep][grep (1)]]
+
+**** column-170729092307
+pstree-like output, using =libsmartcols= from util-linux v2.30:
+:    ~$ ps -h -o pid,ppid,comm | column --table --tree 3 --tree-id 1 --tree-parent 2 --table-hide 2 --table-right 1
+
+**** column-170729112444
+=findmnt=-like output from util-linux v2.30:
+#+BEGIN_SRC sh
+column /proc/self/mountinfo \
+     --table-columns ID,PARENT,MAJMIN,ROOT,TARGET,VFS-OPTS,PROP,SEP,TYPE,SOURCE,FS-OPTS \
+     --table-hide=SEP,ID,PARENT,ROOT,PROP,FS-OPTS,MAJMIN \
+     --table-order TARGET,SOURCE,TYPE,VFS-OPTS \
+     --tree TARGET \
+     --tree-id ID \
+     --tree-parent PARENT
+#+END_SRC
+
+**** column-170729112604
+Print =/etc/passwd= in JSON format from util-linux v2.30:
+#+BEGIN_SRC sh
+grep -v nologin /etc/passwd | \
+     column --separator : --table --table-name passwd --json \
+            --table-columns USERNAME,PWD,UID,GID,GECOS,HOME,SHELL \
+            --table-hide PWD
+#+END_SRC
 
 *** column::files
 *** column::see-also
@@ -564,14 +611,15 @@ To protect against multiple run of the script
 
 A *mount* command existed in Version 5 AT&T UNIX
 *** mount::options
-| OPT     | FROM V. | END V. | DESC |
-|---------+---------+--------+------|
-| =-l=      |         |        |      |
-| =-o=      |         |        |      |
-| =-o loop= |         |        |      |
-| =-B=      |         |        |      |
-| =-t=      |         |        |      |
-|---------+---------+--------+------|
+| OPT       | FROM V. | END V. | DESC                       |
+|-----------+---------+--------+----------------------------|
+| =-a, --all= |         |        | Mount all from =/etc/fstab/= |
+| =-B=        |         |        |                            |
+| =-l=        |         |        |                            |
+| =-o=        |         |        |                            |
+| =-o loop=   |         |        |                            |
+| =-t=        |         |        |                            |
+|-----------+---------+--------+----------------------------|
 
 *** mount::examples
 **** mount-161120112604
