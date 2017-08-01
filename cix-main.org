@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-7-12 Wed 00:43:21 BST> sharlatan
+# Modified   : <2017-7-24 Mon 00:50:38 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Short      : Index of of all files.
 
@@ -105,24 +105,24 @@ on *GNU/Linux*
   + [[./spices/cix-vsftp.org][vsftp]] :: very secure ftp daemon
   + [[file:./spices/cix-wget.org][wget]] :: a utility for retrieving files using the http or ftp protocols
 
-- *Filesystem* /partition file system craft and check/
+- *Filesystem* /partitions, filesystem craft and check/
   + [[./spices/cix-acl.org][acl]] :: access control list utilities
   + [[./spices/cix-autofs.org][autofs]] :: a tool for automatically mounting and unmounting filesystems
   + bindf :: fuse filesystem to mirror a directory
   + [[./spices/cix-btrfs-progs.org][btrfs-progs]] :: userspace programs for btrfs.
   + [[./spices/cix-curlftpfs.org][curlftpfs]] :: is a fs for accessing ftp hosts based on fuse and libcurl
   + [[./spices/cix-e2fsprogs.org][e2fsprogs]] :: filesystem utilities for use with ext2/3/4
+  + glusterfs :: distributed file system
   + [[./spices/cix-lvm2.org][lvm2]] :: userland logical volume management tools
   + [[./spices/cix-nfs-kernel-server.org][nfs-kernel-server]] ::
   + [[./spices/cix-nfs-utils.org][nfs-utils]] :: supporting clients and daemons for the kernel nfs server
+  + [[file:./spices/cix-parted.org][parted]] :: the gnu disk partition manipulation program
   + [[./spices/cix-linux_diskquota.org][quota]] :: system tools for monitoring users disk usage
-  + glusterfs :: distributed file system
 
 - *Utillities* /be silent and help ppls/
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
-  + [[file:./spices/cix-parted.org][parted]] :: the gnu disk partition manipulation program
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
@@ -138,6 +138,8 @@ on *GNU/Linux*
   + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities
   + [[./spices/cix-lshw.org][lshw]] :: hardware lister
+  + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =Linux
+              Gentoo OpenBSD FreeBSD=
 
 - *Searching* /loosing my religion/
   + [[./spices/cix-gnu-grep.org][gnu-grep]] :: pattern matching utilities

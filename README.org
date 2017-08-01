@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-7-21 Fri 00:32:44 BST> sharlatan
+# Last Modified  : <2017-8-01 Tue 23:27:41 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -49,14 +49,17 @@ Distribution per subjest:
 QTY  CMD       PKG
 ---  ---       ---
 33   tcpdump   tcpdump
-12   sed       sed
-10   find      gnu-findutils
+13   sed       sed
+11   find      gnu-findutils
 9    dd        gnu-core-utilities
 6    awk       gawk
+5    mount     util-linux
 5    ls        gnu-core-utilities
+4    lsof      lsof
+4    curl      curl
+4    column    util-linux
 3    xargs     gnu-findutils
 3    tr        gnu-core-utilities
-3    mount     util-linux
 3    grep      gnu-grep
 2    wget      wget
 2    tee       gnu-core-utilities
@@ -72,14 +75,16 @@ QTY  CMD       PKG
 1    ping      iputils
 1    pacman    pacman
 1    objdump   gnu-binutils
+1    nohup     gnu-core-utilities
 1    mv        gnu-core-utilities
+1    mktemp    gnu-core-utilities
 1    mkdir     gnu-core-utilities
 1    ln        gnu-core-utilities
 1    ldd       glibc
 1    gpasswd   shadow-utils
+1    flock     util-linux
 1    expr      gnu-core-utilities
 1    du        gnu-core-utilities
-1    curl      curl
 1    command   gnu-bash
 1    base64    gnu-core-utilities
 1    aptitude  aptitude
@@ -87,6 +92,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  115
-Scripts:   33
+Onliners:  133
+Scripts:   37
 #+END_SRC

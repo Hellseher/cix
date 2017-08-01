@@ -1,20 +1,69 @@
 # File           : cix-curl.org
-# Created        : <2017-01-06 Fri 23:28:37 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2017-08-01 Tue 22:48:24 BST>
+# Modified       : <2017-8-01 Tue 23:26:11 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
 
+[[file:../README.org*Index][|≣|]]
 #+TITLE: curl
+|---------------+-----------------------------|
+| *Author*        | Daniel Stenberg             |
+|               | Kungliga Tekniska Högskolan |
+| *Maintainer(s) |                             |
+| *Released*      | 1997                        |
+| *Source*        | [[https://github.com/curl/curl][curl.git]]                    |
+| *Info*          |                             |
+|---------------+-----------------------------|
 
-| *Author* | |
 
 -----
-* Recipets
+* Index
+* Receipts
 ** curl
+*** curl::options
+| OPT          | FROM V. | END V. | DESC |
+|--------------+---------+--------+------|
+| =--head=       |         |        |      |
+| =-L=           |         |        |      |
+| =--limit-rate= |         |        |      |
+| =--locatino=   |         |        |      |
+| =-T=       |         |        |      |
+| =-u=         |         |        |      |
+| =--output=     |         |        |      |
+| =-C=           |         |        |      |
+| =-O=           |         |        |      |
+| =-o=           |         |        |      |
+| =--write-out=  |         |        |      |
+| =-s, --silent= |         |        |      |
+|--------------+---------+--------+------|
+
 *** curl::examples
-**** curl-170106232953
+**** curl-170801230251
+Determine if a web page exists:
+:    ~$ curl -s --head https://myurl/ | head -n1 | grep "HTTP/1.[01] [23].."
+:    ~$ curl --silent --head --location --output /dev/null --write-out '%{http_code}' http://myurl | grep '^2'
+[[file:./cix-gnu-core-utilities.org::*head][head]], [[file:./cix-gnu-grep.org::*grep][grep]]
+
+**** curl-170801231218
+Fetch multiple file at a time:
+:    ~$ curl -O URL1 -O URL2 -O URL-n
+
+**** curl-170801231434
+Continure/resume a previus download
+:    ~$ curl -C - -O http://download.my/file.iso
+
+**** curl-170801232152
+Upload file to FTP:
+:    ~$ curl -u username:password -T single_file ftp://upload_host
+:    ~$ curl -u username:password -T "{file_one,file_two,file_etc}" ftp://upload_host
+
+
 
 * Refreances
+** PDF
+- Everything curl (official)
+https://www.gitbook.com/download/pdf/book/bagder/everything-curl
+# End of cix-curl.org
