@@ -1,0 +1,40 @@
+# File           : cix-lsyncd.org
+# Created        : <2017-08-04 Fri 23:01:05 BST>
+# Modified       : <2017-08-04 Fri 23:01:05 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Synchronizes local directories with remote targets 
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: lsyncd
+|-----------------+------------|
+| *Author*        |            |
+| *Maintainer(s)* |            |
+| *Released*      |            |
+| *Source*        | [[https://github.com/axkibe/lsyncd][lsyncd.git]] |
+| *Info*          |            |
+|-----------------+------------|
+
+Lsyncd watches a local directory trees event monitor interface (inotify or
+fsevents). It aggregates and combines events for a few seconds and then spawns
+one (or more) process(es) to synchronize the changes. By default this is rsync.
+Lsyncd is thus a light-weight live mirror solution that is comparatively easy to
+install not requiring new filesystems or block devices and does not hamper local
+filesystem performance. Rsync+ssh is an advanced action configuration that uses
+a SSH to act file and directory moves directly on the target instead of
+re-transmitting the move destination over the wire. Fine-grained customization
+can be achieved through the config file. Custom action configs can even be
+written from scratch in cascading layers ranging from shell scripts to code
+written in the Lua language. This way simple, powerful and flexible
+configurations can be acheived. See the manual for details. Lsyncd 2.2.1
+requires rsync >= 3.1 on all source and target machines. License: GPLv2 or any
+later GPL version.
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-lsyncd.org

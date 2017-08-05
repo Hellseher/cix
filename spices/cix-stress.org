@@ -1,0 +1,18 @@
+# File           : cix-stress.org
+# Created        : <2017-07-23 Sun 22:54:58 BST>
+# Modified       : <2017-7-28 Fri 23:34:34 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis  :
+
+#+OPTIONS: num:nil
+
+|≣|]]
+#+TITLE: Stress
+|---------------+----------------|
+| *Author*        | Amos Waterland |
+| *Maintainer(s) |                |
+| *Released*      |                |
+| *Source*        |           2002 |
+| *Info*          |                |
+|---------------+----------------|

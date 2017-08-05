@@ -1,0 +1,26 @@
+# File           : cix-less.org
+# Created        : <2017-08-04 Fri 22:20:21 BST>
+# Modified       : <2017-08-04 Fri 22:20:21 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: less
+|-----------------+-----------------|
+| *Author*        | 	Mark Nudelman |
+| *Maintainer(s)* |                 |
+| *Released*      | 1984            |
+| *Source*        |                 |
+| *Info*          | [[http://www.greenwoodsoftware.com/less/][Less]]            |
+|                 | [[https://www.gnu.org/software/less/][GNU Less]]        |
+|-----------------+-----------------|
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-less.org

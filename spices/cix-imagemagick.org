@@ -1,0 +1,34 @@
+# File           : cix-imagemagick.org
+# Created        : <2017-08-05 Sat 00:03:53 BST>
+# Modified       : <2017-8-05 Sat 00:11:07 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ImageMagic
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Info*          |   |
+|-----------------+---|
+
+ImageMagick includes a number of command-line utilities for manipulating images.
+Most of you are probably accustomed to editing images one at a time with a
+graphical user interface (GUI) with such programs as Gimp or Photoshop. However,
+a GUI is not always convenient. Suppose you want to process an image dynamically
+from a web script or you want to apply the same operations to many images or
+repeat a specific operation at different times to the same or different image.
+For these types of operations, the command-line image processing utility is
+appropriate.
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-imagemagick.org

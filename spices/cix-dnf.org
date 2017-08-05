@@ -1,0 +1,26 @@
+# File           : cix-dnf.org
+# Created        : <2017-08-05 Sat 00:45:48 BST>
+# Modified       : <2017-8-05 Sat 00:45:56 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: dnf
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Info*          |   |
+|-----------------+---|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-dnf.org

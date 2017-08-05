@@ -1,0 +1,26 @@
+# File           : cix-jq.org
+# Created        : <2017-08-04 Fri 23:19:38 BST>
+# Modified       : <2017-08-04 Fri 23:19:38 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : lightweight and flexible command-line JSON processor.
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: jq
+|-----------------+-----------------|
+| *Author*        | 	Stephen Dolan |
+| *Maintainer(s)* |                 |
+| *Released*      |            2012 |
+| *Source*        |                 |
+| *Info*          |                 |
+|-----------------+-----------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-jq.org

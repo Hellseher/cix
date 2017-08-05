@@ -1,0 +1,26 @@
+# File           : cix-ucg.org
+# Created        : <2017-08-04 Fri 23:32:07 BST>
+# Modified       : <2017-08-04 Fri 23:32:07 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ucg
+|-----------------+---------|
+| *Author*        |         |
+| *Maintainer(s)* |         |
+| *Released*      |         |
+| *Source*        | [[https://github.com/gvansickle/ucg][ucg.git]] |
+| *Info*          |         |
+|-----------------+---------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-ucg.org

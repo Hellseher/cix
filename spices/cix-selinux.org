@@ -1,0 +1,26 @@
+# File           : cix-selinux.org
+# Created        : <2017-08-05 Sat 00:20:51 BST>
+# Modified       : <2017-8-05 Sat 00:27:20 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: SElinux
+|-----------------+-------------|
+| *Author*        |             |
+| *Maintainer(s)* |             |
+| *Released*      |             |
+| *Source*        | [[https://github.com/SELinuxProject/selinux][selinux.git]] |
+| *Info*          |             |
+|-----------------+-------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-selinux.org

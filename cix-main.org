@@ -1,9 +1,8 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-7-24 Mon 00:50:38 BST> sharlatan
+# Modified   : <2017-8-05 Sat 01:06:19 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
-# Short      : Index of of all files.
-
+# Sinopsis   : Index of of all files.
 
 #+TITLE: CIX
 /Comprehensive Inspiration of uniX/
@@ -99,7 +98,7 @@ on *GNU/Linux*
   + [[./spices/cix-file.org][file]] :: A utility for determining file types: =Linux NetBSD FreeBSD OS/2 DOS Win=
 
 - *Transfare-sync* /put me up, put me down/
-  + [[file:./cix-curl.org][curl]] :: a utility for getting files from remote servers: =Linux FreeBSD=
+  + [[file:./spices/cix-curl.org][curl]] :: a utility for getting files from remote servers: =Linux FreeBSD=
   + [[./spices/cix-lsyncd.org][lsyncd]] :: live syncing daemon synchronizes local directories with remote targиets
   + [[file:./spices/cix-rsync.org][rsync]] :: a program for synchronizing files over a network
   + [[./spices/cix-vsftp.org][vsftp]] :: very secure ftp daemon
@@ -132,22 +131,25 @@ on *GNU/Linux*
 
 - *Hardware* /hard as a rock!/
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =Linux FreeBSD netbsd openbsd=
-                =GNU/Linux FreeBSD Solaris/i386 AIX GNU-Hurdd Windows Cygwin BeOS Haiku=
-                =Darwin=
+       =GNU/Linux FreeBSD Solaris/i386 AIX GNU-Hurdd Windows Cygwin BeOS Haiku=
+       =Darwin=
   + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks
   + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities
   + [[./spices/cix-lshw.org][lshw]] :: hardware lister
   + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =Linux
-              Gentoo OpenBSD FreeBSD=
+       Gentoo OpenBSD FreeBSD=
 
 - *Searching* /loosing my religion/
-  + [[./spices/cix-gnu-grep.org][gnu-grep]] :: pattern matching utilities
-  + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: the gnu versions of find utilities (find and xargs)
-  + [[./spices/cix-ag.org][ag]] :: super-fast text searching tool - silversearcher
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder
-  + [[file:spices/cix-jq.org][jq]] :: command-line json processor
+  + [[./spices/cix-ag.org][ag]] :: super-fast text searching tool - The Silver Searcher
   + [[./spices/cix-fdupes.org][fdupes]] :: finds duplicate files in a given set of directories
+  + [[./spices/cix-gnu-findutils.org][gnu-findutils]] :: the gnu versions of find utilities (find and xargs)
+  + [[./spices/cix-gnu-grep.org][gnu-grep]] :: pattern matching utilities
+  + [[file:./spices/cix-jq.org][jq]] :: command-line json processor: =OS-X FreeBSD Solaris Linux Win=
+  + [[file:./spices/cix-ripgrep.org][ripgrep]] :: rg combines the usability of The Silver Searcher with the raw speed of grep.
+  + [[file:./spices/cix-sift.org][sift]] :: A fast and powerful alternative to grep: =OS-X Linux= 
+  + [[file:./spices/cix-ucg.org][ucg]] :: extremely fast grep-like tool specialized for searching large bodies of source code.
 
 - *Compress-archive* /i'm a pac man/
   + [[./spices/cix-bzip2.org][bzip2]] :: a file compression utility
@@ -161,7 +163,7 @@ on *GNU/Linux*
 
 - *Networking* /we all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
-  + [[./spices/cix-bridge_utils.org][bridge-utils]] :: utilities for configuring the Linux ethernet bridge
+  + [[file:./spices/cix-bridge-utils.org][bridge-utils]] :: utilities for configuring the Linux ethernet bridge
   + [[./spices/cix-gnu-inetutils.org][gnu-inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: *Linux*
@@ -169,9 +171,9 @@ on *GNU/Linux*
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
-  + [[./spices/cix-openssh.org][openssh]] :: an open source implementation of ssh protocol: =AIX HP-UX IRIX
-               Linux Next Sco Sni/Reliant Unix Solaris Digital Unix/Tru64/Osf=
-               =Mac Os-X Cygwin=
+  + [[./spices/cix-openssh.org][openssh]] :: an open source implementation of ssh protocol: =AIX HP-UX IRIX=
+       =Linux Next Sco Sni/Reliant Unix Solaris Digital Unix/Tru64/Osf Mac Os-X=
+       =Cygwin=
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =Linux FreeBSD=
 
 - *Shell* /not just sand.../
@@ -187,17 +189,19 @@ on *GNU/Linux*
   + [[./spices/cix-cronie.org][cronie]]  :: cron daemon for executing programs at set times
 
 - *Media* /please your eyes and ears/
-  + [[file:./spices/cix-alsa-utils.org][alsa-utils]] :: advanced Linux sound architecture (alsa) utilities
+  + [[file:./spices/cix-alsa.org][alsa]] :: advanced Linux sound architecture (alsa) utilities
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: digital vcr and streaming server
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: font configuration and customization library
   + [[file:./spices/cix-pulseaudio.org][pulseaudio]] :: pulseaudio sound server utilities
   + [[file:./spices/cix-sox.org][sox]] :: a general purpose sound file conversion tool
-  + [[./spaces/cix-imagemagic.org][imagemagic]] ::
+  + [[file:./spices/cix-imagemagick.org][ImageMagick]] :: An X application for displaying and manipulating images
 
 - *Security* /it's never be save/
-  + [[file:spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications
+  + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications:
+       =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
   + [[file:./spices/cix-libselinux-utils.org][libseLinux-utils]] :: seLinux libseLinux utilies
-  + [[file:./cix-sudo.org][sudo]] :: allows restricted root access for specified users
+  + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
+  + [[file:./spices/cix-selinux.org][SElinux]] :: 
 
 - *Init-system* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
@@ -206,20 +210,18 @@ on *GNU/Linux*
 
 - *Development* /in the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-glibc.org][glibc]] :: common binaries and locale data for glibc
-  + [[./spices/cix-gdb.org][gdb]] :: a gnu source-level debugger for c, c++, fortran, go and other language
+  + [[./spices/cix-gdb.org][gdb]] :: a gnu source-level debugger for C, C++, Fortran, Go and other languages
   + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
   + [[./spices/cix-autoconf.org][autoconf]] :: a gnu tool for automatically configuring source code
 
 - *Packaging* /pack me up, pack me down/
-  + [[file:spices/cix-dpkg.org][dpkg]] :: package manager for debian
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
-  + [[file:cix-yum-dnf.org][yum/dnf]] :: fork of yum, using libsolv as a dependency resolve
-  + [[file:spices/cix-rpm.org][rpm]] :: the rpm package manager (rpm) is a powerful command line driven
-           package management system
-  + [[file:spices/cix-aptitude.org][aptitude]] :: is a featureful package manager for debian gnu/Linux systems,
-                based on the renowned apt
+  + [[file:spices/cix-aptitude.org][aptitude]] :: is a featureful package manager for debian GNU/Linux systems
+  + [[file:./spices/cix-dnf.org][dnf]] :: fork of yum, using libsolv as a dependency resolve
+  + [[file:./spices/cix-dpkg.org][dpkg]] :: package manager for debian
   + [[file:spices/cix-pacman.org][pacman]] :: is one of the major distinguishing features of Arch Linux
-  + [[file:spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD
+  + [[file:./spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD
+  + [[file:./spices/cix-rpm.org][rpm]] :: package manager is a command line driven package management system
 
 - *Research* /I've got a clue!/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system

@@ -1,0 +1,33 @@
+# File           : cix-vsftp.org
+# Created        : <2017-08-04 Fri 23:06:13 BST>
+# Modified       : <2017-08-04 Fri 23:06:13 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: vsftp
+|-----------------+---------------|
+| *Author*        | 	Chris Evans |
+| *Maintainer(s)* |               |
+| *Released*      |               |
+| *Source*        |               |
+| *Info*          |               |
+|-----------------+---------------|
+
+
+-----
+* Index
+* Receipts
+** vsftpd
+*** vsftpd::files
+- /etc/vsftpd/vsftpd.conf
+- /usr/lib/systemd/system/vsftpd.service
+- /usr/lib/systemd/system/vsftpd@.service
+- /usr/lib/systemd/system/vsftpd.target
+
+* Refreances
+
+  # End of cix-vsftp.org

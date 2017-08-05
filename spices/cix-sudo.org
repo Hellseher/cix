@@ -1,0 +1,26 @@
+# File           : cix-sudo.org
+# Created        : <2017-08-05 Sat 00:22:50 BST>
+# Modified       : <2017-8-05 Sat 00:26:38 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: sudo
+|-----------------+-------------------------------------|
+| *Author*        | Robert Coggeshall and Cliff Spencer |
+| *Maintainer(s)* |                                     |
+| *Released*      | 1980                                |
+| *Source*        | [[https://www.sudo.ws/repos/sudo][sudo.mercurial]]                      |
+| *Info*          |                                     |
+|-----------------+-------------------------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-sudo.org

@@ -1,0 +1,39 @@
+# File           : cix-gcc.org
+# Created        : <2017-08-05 Sat 00:38:47 BST>
+# Modified       : <2017-8-05 Sat 00:43:25 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gcc
+|-----------------+------------------|
+| *Author*        | Richard Stallman |
+| *Maintainer(s)* |                  |
+| *Released*      |             1987 |
+| *Source*        |                  |
+| *Info*          |                  |
+|-----------------+------------------|
+
+
+-----
+* Index
+#+BEGIN_EXAMPLE
+c89
+c99
+cc
+gcc
+gcc-ar
+gcc-nm
+gcc-ranlib
+gcov
+gcov-tool
+x86_64-redhat-linux-gcc
+x86_64-redhat-linux-gcc-6.3.1
+#+END_EXAMPLE
+* Receipts
+* Refreances
+
+# End of cix-gcc.org

@@ -1,0 +1,28 @@
+# File           : cix-bridge-utils.org
+# Created        : <2017-08-04 Fri 23:46:04 BST>
+# Modified       : <2017-08-04 Fri 23:46:04 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: bridge-utils
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Info*          |   |
+|-----------------+---|
+
+The bridge-utils package contains a utility needed to create and manage bridge
+devices. This is useful in setting up networks for a hosted virtual machine
+(VM).
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-bridge-utils.org

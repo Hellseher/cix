@@ -1,0 +1,26 @@
+# File           : cix-sift.org
+# Created        : <2017-08-04 Fri 23:36:02 BST>
+# Modified       : <2017-08-04 Fri 23:36:02 BST>
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: sift
+|-----------------+----------|
+| *Author*        |          |
+| *Maintainer(s)* |          |
+| *Released*      |          |
+| *Source*        | [[https://github.com/svent/sift][sift.git]] |
+| *Info*          |          |
+|-----------------+----------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-sift.org

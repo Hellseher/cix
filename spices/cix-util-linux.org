@@ -1,6 +1,6 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-7-29 Sat 17:12:29 BST> sharlatan
+# Modified      : <2017-7-29 Sat 23:20:32 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis  :
@@ -202,6 +202,22 @@ contains the fdisk configuration tool and the login program.
      readprofile (8) - read kernel profiling information
      switch_root (8) - switch to another filesystem as the root of the mount tree
 #+END_EXAMPLE
+#+BEGIN_SRC sh :results value org output replace :exports results
+  #!/usr/bin/env bash
+  { echo \| CMD \| MAN \| DESCRIPTION\|; \
+    rpm -ql "util-linux" \
+      | grep -oP "(?<=in/).+" \
+      | xargs -n1 whatis \
+      | sed -e 's/^/\|/g' \
+            -e 's/\(([a-z0-9]\{1,2\})\)/\|\1\|/' \
+            -e 's/ - //g' \
+            -e 's/$/\|/g' \
+            -e 's/.*::.*//g'; } | column -t -s\| -o\|
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+#+END_SRC
 
 * Receipts
 ** addpart                                                                      :cmd:

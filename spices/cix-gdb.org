@@ -1,0 +1,26 @@
+# File           : cix-gdb.org
+# Created        : <2017-08-05 Sat 00:28:37 BST>
+# Modified       : <2017-8-05 Sat 00:38:24 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gdb
+|-----------------+------------------|
+| *Author*        | Richard Stallman |
+| *Maintainer(s)* | John Gilmore     |
+| *Released*      | 1986             |
+| *Source*        |                  |
+| *Info*          |                  |
+|-----------------+------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-gdb.org
