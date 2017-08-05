@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-05 Sat 01:22:00 BST> sharlatan
+# Modified   : <2017-8-06 Sun 00:11:30 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -128,6 +128,7 @@ on *GNU/Linux*
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
   + [[./spices/cix-perf.org][perf]] :: Performance monitoring for the Linux kerne
+  + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
 
 - *Hardware* /hard as a rock!/
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =Linux FreeBSD netbsd openbsd=

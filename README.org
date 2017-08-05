@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-8-05 Sat 22:54:15 BST> sharlatan
+# Last Modified  : <2017-8-06 Sun 00:13:57 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -68,6 +68,7 @@ QTY  CMD       PKG
 2    rsync     rsync
 2    nc        netcat
 1    strace    strace
+1    smem      smem
 1    set       gnu-bash
 1    rm        gnu-core-utilities
 1    rev       util-linux
@@ -92,6 +93,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  133
+Onliners:  134
 Scripts:   37
 #+END_SRC

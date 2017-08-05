@@ -1,0 +1,46 @@
+# File           : cix-smem.org
+# Created        : <2017-08-05 Sat 23:11:46 BST>
+# Modified       : <2017-8-06 Sun 00:11:30 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Report application memory usage in a meaningful way
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: smem
+|---------------+---------|
+| *Author*        |         |
+| *Maintainer(s)* |         |
+| *Released*      |         |
+| *Source*        | [[http://selenic.com/repo/smem][smem.hg]] |
+| *Info*          |         |
+|---------------+---------|
+smem is a tool that can give numerous reports on memory usage on Linux
+systems. Unlike existing tools, smem can report proportional set size (PSS),
+which is a more meaningful representation of the amount of memory used by
+libraries and applications in a virtual memory system.
+
+-----
+* Index
+* Receipts
+** smem
+*** smem::options
+| OPT             | TYPE   | ++V | --V | DESC |
+|-----------------+--------+-----+-----+------|
+| =--sort=          | str    |     |     |      |
+| =-t, --totals=    |        |     |     |      |
+| =-C, --columns=   | str    |     |     |      |
+| =-m, --mappings=  |        |     |     |      |
+| =-K, --kernel=    | str    |     |     |      |
+| =-H, --no-header= | switch |     |     |      |
+| =--reverse=       | switch |     |     |      |
+|-----------------+--------+-----+-----+------|
+*** smem::examples
+**** smem-170805231834
+Show top 10 most memory usage PID with USS (in bytes):
+:    ~$ smem --sort=uss --reverse --columns="pid name uss" --no-header | head | nl
+[[file:./cix-gnu-core-utilities.org::*head][head]], [[file:./cix-gnu-core-utilities.org::*nl][nl]]
+* Refreances
+
+# End of cix-smem.org
