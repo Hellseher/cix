@@ -1,7 +1,8 @@
-# File          : gnu-core-utilities.md
-# Created       : Wed 14 Oct 2015 23:07:41
-# Modified : <2017-7-21 Fri 00:32:21 BST> sharlatan
-# Maintainer    : sharlatan
+# File       : gnu-core-utilities.md
+# Created    : Wed 14 Oct 2015 23:07:41
+# Modified   : <2017-7-30 Sun 08:53:00 BST> sharlatan
+# Maintainer : sharlatan
+# Sinopsis   :
 
 #+OPTIONS: num:nil
 
@@ -652,9 +653,25 @@ create a directory tree with one line:
 *** mknod::files
 *** mknod::see-also
 ** mktemp                                                                       :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /create a temporary file or directory/
+/Written by Jim Meyering and Eric Blake./
 *** mktemp::options
+#+NAME: core-utilities--mktemp-opt
+| OPT              | FROM V.1 | END V. | DESC                                  |
+|------------------+----------+--------+---------------------------------------|
+| =-d, --directory=  |          |        | create a directory                    |
+| =-u, --dry-run=    |          |        | do not create anything                |
+| =-q, --quiet=      |          |        | suppress diagnostics                  |
+| =--suffix=SUFF=    |          |        | append SUFF to TEMPLATE               |
+| =-p DIR, --tmpdir= |          |        | interpret  TEMPLATE  relative  to DIR |
+| =-t=               |          |        |                                       |
+|------------------+----------+--------+---------------------------------------|
+
 *** mktemp::examples
+**** mktemp-170730001143
+Create a temporary dirrectory in =/tmp=:
+:    ~$ mktemp -d -t test_dir.XXX
+
 *** mktemp::files
 *** mktemp::see-also
 ** mv                                                                           :cmd:
@@ -705,9 +722,20 @@ replace spaces in file/dir name with underscore "_":
 *** nl::files
 *** nl::see-also
 ** nohup                                                                        :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /run a command immune to hangups, with output to a non-tty/
+/Written by Jim Meyering./
 *** nohup::options
+**** Exit status
+| 125 | if /nohup/ itself fails, and *POSIXLY_CORRECT* is not set |
+| 126 | if command is found but cannot be invoked             |
+| 127 | if command cannot be found                            |
+|     | the exit status of command otherwise                  |
+
 *** nohup::examples
+**** nohup-170728232621
+Run a script and exit from a shell, makes it running on background:
+:    ~$ nohup script_to_run.sh &; exit
+
 *** nohup::files
 *** nohup::see-also
 ** nproc                                                                        :cmd:
@@ -1000,7 +1028,7 @@ download a file and validate it on the "fly":
 *** tr::options
 *** tr::examples
 **** tr-161120163854
-rename files in cwd from lower to UPPER case:
+Rename files in cwd from lower to UPPER case:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -1010,11 +1038,11 @@ rename files in cwd from lower to UPPER case:
 #+END_SRC
 [[file:./cix-gnu-bash-builtin.org::for][for]] [[file:./cix-gnu-bash-builtin.org::*echo][echo]] [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 **** tr-161209233045
-remove new lines from a file:
+Remove new lines from a file:
 :    ~$ tr -d '\n' < input_file > input_file_tm && mv input_file_tm input_file
 
 **** tr-170104001918
-windows files to UNIX format:
+Windows files to UNIX format:
 :    ~$ tr -d '\15\32' < input_win_file.txt > output_unix_file
 *** tr::files
 *** tr::see-also

@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-05 Sat 01:06:19 BST> sharlatan
+# Modified   : <2017-8-05 Sat 01:22:00 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -83,7 +83,7 @@ on *GNU/Linux*
                reasonable optimization.
   + the heirloom project :: traditional implementations of standard UNIX utils
   + [[./spices/cix-toybox.org][toybox]]  :: common Linux commands for embedded systems (POSIX-2008 and LSB 4.1).
-  + [[./spices/cix-util-linux.org][util-Linux]] :: is a standard package of the Linux operating system: =Linux=
+  + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: =Linux=
 
 - *File* /everything is a file/!
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a gnu collection of diff utilities
