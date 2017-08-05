@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-8-01 Tue 23:27:41 BST> sharlatan
+# Last Modified  : <2017-8-05 Sat 22:54:15 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -34,12 +34,12 @@ cix
 ├── tests
 └── tutors
 
-4 directories, 6 files
+4 directories, 7 files
 #+END_SRC
 
 ** Statistic
 #+BEGIN_SRC sh :results value org output replace :exports results
-./cix-stat.sh
+./cix-stat.sh stat
 #+END_SRC
 
 #+RESULTS:
