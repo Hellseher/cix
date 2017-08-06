@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-06 Sun 00:11:30 BST> sharlatan
+# Modified   : <2017-8-06 Sun 22:52:57 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -202,7 +202,7 @@ on *GNU/Linux*
        =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
   + [[file:./spices/cix-libselinux-utils.org][libseLinux-utils]] :: seLinux libseLinux utilies
   + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
-  + [[file:./spices/cix-selinux.org][SElinux]] :: 
+  + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =Linux=
 
 - *Init-system* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
