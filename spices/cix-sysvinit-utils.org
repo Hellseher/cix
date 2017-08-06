@@ -1,12 +1,14 @@
 # File           : cix-sysvinit-utils.org
 # Created        : <2017-02-05 Sun 14:00:28 GMT>
-# Modified       : <2017-2-05 Sun 20:49:50 GMT> sharlatan
+# Modified       : <2017-8-06 Sun 23:46:39 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
+[[file:../cix-main.org][|≣|]]
+#+TITLE: SysV init
 * Index
 #+BEGIN_EXAMPLE
     service (8)      - run a System V init script

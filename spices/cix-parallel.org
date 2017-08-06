@@ -3,8 +3,8 @@
 # Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: GNU Parallel
+[[file:../cix-main.org][|≣|]]#+TITLE: GNU Parallel

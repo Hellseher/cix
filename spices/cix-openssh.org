@@ -3,11 +3,11 @@
 # Modified  : <2017-4-18 Tue 22:15:08 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../cix-main.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: OpenSSH
 
 |--------------+---------------|

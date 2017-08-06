@@ -1,8 +1,26 @@
 # File           : cix-curlftpfs.org
-# Created        : <2016-11-07 Mon 21:53:06 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2017-08-07 Mon 00:28:29 BST>
+# Modified       : <2017-8-07 Mon 00:28:31 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: curlftpfs
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-curlftpfs.org

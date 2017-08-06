@@ -1,13 +1,13 @@
 # File         : cix-sed.org
 # Created      : <2016-11-04 Fri 22:49:14 GMT>
-# Modified     : <2017-7-19 Wed 00:17:05 BST> sharlatan
+# Modified     : <2017-8-07 Mon 00:51:32 BST> sharlatan
 # Author       : sharlatan
 # Maintainer(s :
-# Short        :
+# Sinopsis        :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: SED
 |--------------+----------------|
 | *Author*       | Lee E. McMahon |
@@ -28,12 +28,13 @@ command line.
 ** GNU sed                                                                      :cmd:
 
 *** sed::options
-|---------------------------------+-------------------------------------------------------|
-| =-i[SUFFIX], --in-place[=SUFFIX]= | edit files in place (makes backup if SUFFIX supplied) |
-| =-e script, --expression=script=  | add the script to the commands to be execute          |
-| -r                              |                                                       |
-| =-n, --quite, --silent=           | suppress automatic printing of pattern space          |
-|---------------------------------+-------------------------------------------------------|
+| OPT                             | TYPE | ++V | --V | DESC                                                  |
+|---------------------------------+------+-----+-----+-------------------------------------------------------|
+| =-i[SUFFIX], --in-place[=SUFFIX]= |      |     |     | edit files in place (makes backup if SUFFIX supplied) |
+| =-e script, --expression=script=  |      |     |     | add the script to the commands to be execute          |
+| -r                              |      |     |     |                                                       |
+| =-n, --quite, --silent=           |      |     |     | suppress automatic printing of pattern space          |
+|---------------------------------+------+-----+-----+-------------------------------------------------------|
 
 **** Regular expressions
 
@@ -98,8 +99,9 @@ Split camelcase with spaces:
 :    ~$ sed 's/\([A-Z]\)/ \1/g'
 
 **** sed-170718233452
-Insert line after PATTERN:
+Insert line after or before PATTERN:
 :    ~$ sed -i '/PATTERN/a NEW_LINE_STRING' input_f
+:    ~$ sed 's/\(PATERN\)/NEW_LINE_STRING\1/g' input_f
 
 **** sed-161209234700
 Insert spaces every n character in a file or string:
@@ -115,6 +117,10 @@ Insert spaces every n character in a file or string:
 #+END_SRC
 [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-gnu-core-utilities.org::*base64][base64 (1)]]
 
+**** sed-170806230716
+Only return the matched string:
+:    ~$ sed -n 's/.*\(PATERN\).*/\1/p' input_f
+:    ~$ sed 's/.*\(PATERN\).*/\1/' input_f
 *** sed::files
 *** sed::see-also
     [[file:./cix-gawk.org::*awk][awk (1)]], ed, [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],perlre(1)

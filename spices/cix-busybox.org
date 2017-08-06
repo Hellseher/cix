@@ -1,11 +1,12 @@
 # File     : cix-busybox.org • spices
 # Created  : <2016-11-07 Mon 21:06:33 GMT>
-# Modified : <2017-1-20 Fri 21:21:29 GMT> sharlatan
+# Modified : <2017-8-07 Mon 00:13:56 BST> sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
-# Short    :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
+[[file:../cix-main.org][|≣|]]
 #+TITLE: Busybox
 
 |--------------+--------------|

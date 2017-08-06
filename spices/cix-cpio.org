@@ -1,8 +1,26 @@
 # File           : cix-cpio.org
-# Created        : <2016-11-04 Fri 22:44:35 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2017-08-07 Mon 00:29:47 BST>
+# Modified       : <2017-8-07 Mon 00:29:48 BST> sharlatan
 # Author         : sharlatan
-# Maintainer(s   :
-# Short          :
+# Maintainer(s)  :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: cpio
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-cpio.org

@@ -3,11 +3,11 @@
 # Modified  : <2017-7-12 Wed 20:40:28 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[file:../README.org*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Bin Utils
 |---------------+------------------|
 | *Author*        |                  |

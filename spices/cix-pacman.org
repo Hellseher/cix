@@ -1,12 +1,25 @@
 # File           : cix-pacman.org
-# Created        : <2017-02-07 Tue 22:53:49 GMT>
-# Modified       : <2017-2-08 Wed 08:11:47 GMT> sharlatan
+# Created        : <2017-08-07 Mon 00:30:45 BST>
+# Modified       : <2017-8-07 Mon 00:31:09 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
 
+[[file:../cix-main.org][|≣|]]
+#+TITLE: pacman
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
 
 * Receipts
 
@@ -21,3 +34,5 @@ list files that are not owned by any installed package:
       pacman -Qo "$file" &> /dev/null || echo "$file";
   done
 #+END_SRC
+# End of cix-pacman.org
+* Refreances

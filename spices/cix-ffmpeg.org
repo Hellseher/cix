@@ -3,11 +3,11 @@
 # Modified  : <2017-3-02 Thu 23:34:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: FFmpeg
+[[file:../cix-main.org][|≣|]]#+TITLE: FFmpeg
 
 http://ffmpeg.org/
 

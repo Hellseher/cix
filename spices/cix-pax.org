@@ -1,8 +1,26 @@
 # File           : cix-pax.org
-# Created        : <2016-11-04 Fri 22:44:51 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2017-08-07 Mon 00:28:01 BST>
+# Modified       : <2017-8-07 Mon 00:28:03 BST> sharlatan
 # Author         : sharlatan
-# Maintainer(s   :
-# Short          :
+# Maintainer(s)  :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: pax
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-pax.org

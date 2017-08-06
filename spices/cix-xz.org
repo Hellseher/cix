@@ -3,11 +3,11 @@
 # Modified  : <2017-3-02 Thu 23:34:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../cix-main.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: xz
 
 * Index

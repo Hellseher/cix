@@ -1,8 +1,26 @@
 # File           : cix-net-snmp.org
-# Created        : <2016-11-04 Fri 22:44:55 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2017-08-07 Mon 00:11:43 BST>
+# Modified       : <2017-8-07 Mon 00:12:08 BST> sharlatan
 # Author         : sharlatan
-# Maintainer(s   :
-# Short          :
+# Maintainer(s)  :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: net-snmp
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Info*          |   |
+|-----------------+---|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-net-snmp.org

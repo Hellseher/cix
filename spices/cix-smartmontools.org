@@ -1,7 +1,26 @@
-# File          : cix-smartmontools.org
-# Created       : <2016-11-04 Fri 22:34:05 GMT>
-# Modified : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author        : sharlatan
-# Maintainer    :
+# File           : cix-smartmontools.org
+# Created        : <2017-08-07 Mon 00:28:50 BST>
+# Modified       : <2017-8-07 Mon 00:28:52 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: smartmontools
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-smartmontools.org

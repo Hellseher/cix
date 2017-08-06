@@ -3,11 +3,11 @@
 # Modified  : <2017-5-11 Thu 22:43:12 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Bash builtin
 
 -----

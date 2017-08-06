@@ -3,11 +3,11 @@
 # Modified  : <2017-5-11 Thu 22:41:53 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[file:../README.md::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: IP Utils
 
 |--------------+------------------|

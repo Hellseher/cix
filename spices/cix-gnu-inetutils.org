@@ -1,23 +1,17 @@
 # File           : cix-gnu-inetutils.org
-# Created        : <2016-11-07 Mon 23:34:03 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Created        : <2015-12-18 Wed 21:20:07 GMT>
+# Modified  : <2017-8-06 Sun 23:48:46 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-File          : gnu-inetutils.md
+[[file:../cix-main.org][|≣|]]
+#+TITLE: GNU Inetutils
 
-Created       : Wed 18 Nov 2015 21:20:07
-Modified : Sat 21 Nov 2015 20:41:51
-Maintainer    : sharlatan
--->
-
-[[≣](../README.md#Index "Index")]
-GNU Inetutils
--------------
-
+* Index
+#+BEGIN_EXAMPLE
      dnsdomainname - show DNS domain name
      hostname      - show or set system host name.
      logger        - send messages to system log
@@ -43,3 +37,4 @@ GNU Inetutils
      telnetd       - telnet server
      tftpd         - TFTP server
      uucpd         - unix to Unix Copy relay daemon.
+#+END_EXAMPLE

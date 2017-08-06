@@ -3,11 +3,11 @@
 # Modified       : <2017-3-06 Mon 20:38:23 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: tar
+[[file:../cix-main.org][|≣|]]#+TITLE: tar
 
 * Receipts
 ** GNU tar

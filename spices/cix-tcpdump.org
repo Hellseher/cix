@@ -2,11 +2,11 @@
 # Created       : <2016-11-07 Mon 23:06:06 GMT>
 # Modified      : <2017-6-19 Mon 22:55:03 BST> sharlatan
 # Author        : sharlatan
-# Short         :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: tcpdump
 
 |----------+-------------------------------------------|

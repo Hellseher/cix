@@ -3,11 +3,11 @@
 # Modified  : <2017-4-01 Sat 21:01:56 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: WGET
+[[file:../cix-main.org][|≣|]]#+TITLE: WGET
 
 |--------+---------------|
 | *Author* | Hrvoje NikXiX |

@@ -6,7 +6,7 @@
 
 #+OPTIONS: num:nil
 
-[[../cix-main.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Core Utilities
 
 |--------------+-------------------------------------------------|

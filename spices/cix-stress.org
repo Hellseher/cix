@@ -7,7 +7,7 @@
 
 #+OPTIONS: num:nil
 
-|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: Stress
 |---------------+----------------|
 | *Author*        | Amos Waterland |

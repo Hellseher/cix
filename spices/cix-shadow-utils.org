@@ -3,13 +3,13 @@
 # Modified  : <2017-2-05 Sun 13:45:46 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
 
 [[http://pkg-shadow.alioth.debian.org][|↷|]]
-#+TITLE: Sadow utils
+[[file:../cix-main.org][|≣|]]#+TITLE: Sadow utils
 
 |--------------+----------------------------------|
 | *Author*       |                                  |

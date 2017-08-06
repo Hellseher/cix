@@ -3,12 +3,12 @@
 # Modified  : <2017-2-08 Wed 08:11:47 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
 
-#+TITLE: Hall of Fame
+[[file:../cix-main.org][|≣|]]#+TITLE: Hall of Fame
 
 - (1928-1977 48) Joe Ossanna  ::
 - (1932) Douglas McIlroy  ::

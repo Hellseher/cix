@@ -3,11 +3,11 @@
 # Modified       : <2017-3-15 Wed 22:05:24 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: ncurses
+[[file:../cix-main.org][|≣|]]#+TITLE: ncurses
 
 * Index
 #+BEGIN_EXAMPLE

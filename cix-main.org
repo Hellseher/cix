@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-06 Sun 22:52:57 BST> sharlatan
+# Modified   : <2017-8-07 Mon 00:40:08 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -149,7 +149,7 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-grep.org][gnu-grep]] :: pattern matching utilities
   + [[file:./spices/cix-jq.org][jq]] :: command-line json processor: =OS-X FreeBSD Solaris Linux Win=
   + [[file:./spices/cix-ripgrep.org][ripgrep]] :: rg combines the usability of The Silver Searcher with the raw speed of grep.
-  + [[file:./spices/cix-sift.org][sift]] :: A fast and powerful alternative to grep: =OS-X Linux= 
+  + [[file:./spices/cix-sift.org][sift]] :: A fast and powerful alternative to grep: =OS-X Linux=
   + [[file:./spices/cix-ucg.org][ucg]] :: extremely fast grep-like tool specialized for searching large bodies of source code.
 
 - *Compress-archive* /i'm a pac man/

@@ -3,11 +3,11 @@
 # Modified  : <2017-2-27 Mon 23:31:06 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: Fish shell
 
 * Index

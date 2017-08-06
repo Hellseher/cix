@@ -3,11 +3,11 @@
 # Modified  : <2017-4-18 Tue 23:21:06 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: UNIX Land
+[[file:../cix-main.org][|≣|]]#+TITLE: UNIX Land
 
 This is a list of UNIX commands most of them are included in most
 stundurds[fn:1], [fn:2], [fn:3] which is a part of the Single UNIX Specification

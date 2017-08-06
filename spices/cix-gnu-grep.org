@@ -1,13 +1,13 @@
 # File           : cix-gnu-grep.org
 # Created        : <2016-11-18 Fri 23:49:59 GMT>
-# Modified  : <2017-2-03 Fri 22:31:48 GMT> sharlatan
+# Modified  : <2017-8-07 Mon 00:09:27 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: GNU Grep
+[[file:../cix-main.org][|≣|]]#+TITLE: GNU Grep
 
 * Index
 #+BEGIN_EXAMPLE
@@ -30,8 +30,11 @@ grep process list exluding grep itself:
 :    ~$ ps aux | grep [e]macs
 
 **** grep-170203223001
-split line of text into character array:
+Split line of text into character array:
 :    ~$ char_array="$(echo $input_line | grep -o .)"
+**** grep-170807000616
+Find all files wich has not matched PATERN:
+:   ~$ find ./ -type f -print0 | xargs -0 grep -L "PATERN"
 
 *** grep1::files
 *** grep::vars

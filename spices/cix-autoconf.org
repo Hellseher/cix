@@ -3,8 +3,8 @@
 # Modified       : <2017-1-22 Sun 23:40:54 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: autoconf
+[[file:../cix-main.org][|≣|]]#+TITLE: autoconf

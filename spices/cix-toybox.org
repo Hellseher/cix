@@ -3,10 +3,10 @@
 # Modified       : <2017-4-16 Sun 12:50:54 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: toybox
+[[file:../cix-main.org][|≣|]]#+TITLE: toybox
 
 http://www.landley.net/toybox/about.html

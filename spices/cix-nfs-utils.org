@@ -3,11 +3,11 @@
 # Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: NFS utils
 
 |-------------+---------------|

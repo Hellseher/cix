@@ -3,11 +3,11 @@
 # Modified  : <2017-7-21 Fri 00:32:45 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-[[../README.org::*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: lsof
 
 |--------------+-----------|

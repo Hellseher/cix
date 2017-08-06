@@ -3,11 +3,11 @@
 # Modified       : <2017-2-05 Sun 20:49:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: upstart
+[[file:../cix-main.org][|≣|]]#+TITLE: upstart
 
 * Index
 #+BEGIN_EXAMPLE

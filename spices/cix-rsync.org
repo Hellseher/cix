@@ -1,19 +1,20 @@
 # File           : cix-rsync.org
 # Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-8-07 Mon 00:15:52 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
+[[file:../cix-main.org][|≣|]]
 #+TITLE: rsync
 
 * Receipts
 ** rsync                                                                       :cmd:
 *** rsync::examples
 **** rsync-161128234019
-resume rsync after broken connection:
+Resume rsync after broken connection:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 

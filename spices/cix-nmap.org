@@ -1,7 +1,26 @@
-# File          : gnu-core-utilities.md
-# Created       : <2016-10-30 Sun 21:06:58 GMT>
-# Modified : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author        : sharlatan
-# Maintainer    :
+# File           : cix-nmap.org
+# Created        : <2017-08-07 Mon 00:29:30 BST>
+# Modified       : <2017-8-07 Mon 00:29:32 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
 
 #+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: nmap
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Info*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-nmap.org

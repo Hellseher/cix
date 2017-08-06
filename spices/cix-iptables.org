@@ -3,11 +3,11 @@
 # Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: IP talbes
+[[file:../cix-main.org][|≣|]]#+TITLE: IP talbes
 
 * Index
 #+BEGIN_EXAMPLE

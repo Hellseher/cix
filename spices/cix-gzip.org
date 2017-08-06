@@ -1,12 +1,13 @@
 # File          : gnu-core-utilities.md
 # Created       : <2016-11-03 Thu 23:13:44 GMT>
-# Modified : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified : <2017-8-07 Mon 00:39:05 BST> sharlatan
 # Author        : sharlatan
 # Maintainer    :
+# Sinopsis :
 
 #+OPTIONS: num:nil
-[[../README.md][|≣|]][[https://www.gnu.org/software/coreutils/coreutils.html][↷|]]
 
+[[file:../cix-main.org][|≣|]]
 #+TITLE: Gzip
 |-------------+------------------------------|
 | *Author*      | Jean-loup Gailly, Mark Adler |
@@ -16,8 +17,6 @@
 | *Source*      |                              |
 | *Info*        | [[https://www.gnu.org/software/gzip/manual/gzip.html][GNU Gzip]]                     |
 |-------------+------------------------------|
-
-
 
 #+BEGIN_EXAMPLE
     gunzip (1) - compress or expand files

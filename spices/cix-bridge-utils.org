@@ -7,7 +7,7 @@
 
 #+OPTIONS: num:nil
 
-[[file:../README.org*Index][|≣|]]
+[[file:../cix-main.org][|≣|]]
 #+TITLE: bridge-utils
 |-----------------+---|
 | *Author*        |   |

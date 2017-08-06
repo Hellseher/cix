@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-8-06 Sun 00:13:57 BST> sharlatan
+# Last Modified  : <2017-8-07 Mon 00:52:12 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -50,17 +50,17 @@ QTY  CMD       PKG
 ---  ---       ---
 33   tcpdump   tcpdump
 13   sed       sed
-11   find      gnu-findutils
+10   find      gnu-findutils
 9    dd        gnu-core-utilities
-6    awk       gawk
+6    awk       awk
 5    mount     util-linux
 5    ls        gnu-core-utilities
 4    lsof      lsof
+4    grep      gnu-grep
 4    curl      curl
 4    column    util-linux
 3    xargs     gnu-findutils
 3    tr        gnu-core-utilities
-3    grep      gnu-grep
 2    wget      wget
 2    tee       gnu-core-utilities
 2    tar       tar

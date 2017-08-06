@@ -3,11 +3,11 @@
 # Modified       : <2017-3-13 Mon 22:16:27 GMT> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Short          :
+# Sinopsis :
 
 #+OPTIONS: num:nil
 
-#+TITLE: apt
+[[file:../cix-main.org][|≣|]]#+TITLE: apt
 
 * Receipts
 ** apt-get
