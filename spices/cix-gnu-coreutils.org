@@ -1,0 +1,1287 @@
+# File       : cix-gnu-coreutils.org
+# Created    : Wed 14 Oct 2015 23:07:41
+# Modified   : <2017-8-08 Tue 22:45:41 BST> sharlatan
+# Maintainer : sharlatan
+# Sinopsis   : A set of basic GNU tools commonly used in shell scripts
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: GNU Core Utilities
+
+|----------------+-------------------------------------------------|
+| *Author*       |                                                 |
+| *Contributors* | Jim Meyering <jim@meyering.net>                 |
+|                | Paul Eggert <eggert@cs.ucla.edu>                |
+|                | Pádraig Brady <P@draigBrady.com>                |
+|                | Eric Blake <eblake@redhat.com>                  |
+|                | Bernhard Voelker <mail@bernhard-voelker.de>     |
+|                | Stefano Lattarini <stefano.lattarini@gmail.com> |
+|                | Benno Schulenberg <bensberg@justemail.net>      |
+|                | Assaf Gordon <assafgordon@gmail.com>            |
+|                | Ondřej Vašík <ovasik@redhat.com>                |
+|                | Kamil Dudka <kdudka@redhat.com>                 |
+| *Realised*     | 2003                                            |
+| *Source*       | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]]                                   |
+| *Info*         | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]]                                   |
+|----------------+-------------------------------------------------|
+
+The GNU Core Utilities are the basic file, shell and text manipulation utilities
+of the GNU operating system.  These are the core utilities which are expected to
+exist  on  every  operating system.   This  package  is  the  union of  the  GNU
+=fileutils=, =shellutils=, and =textutils= packages.
+-----
+
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc coreutils
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD                                                                           | MAN  | DESCRIPTION                                               |
+| [                                                                             | (1)  | bash built-in commands, see bash(1)                       |
+| arch                                                                          | (1)  | print machine hardware name (same as uname -m)            |
+| base32                                                                        | (1)  | base32 encode/decode data and print to standard output    |
+| base64                                                                        | (1)  | base64 encode/decode data and print to standard output    |
+| basename                                                                      | (3)  | parse pathname components                                 |
+| basename                                                                      | (1)  | strip directory and suffix from filenames                 |
+| basename                                                                      | (3p) | return the last component of a pathname                   |
+| basename                                                                      | (1p) | return non-directory portion of a pathname                |
+| cat                                                                           | (1)  | concatenate files and print on the standard output        |
+| cat                                                                           | (1p) | concatenate and print files                               |
+| chcon                                                                         | (1)  | change file SELinux security context                      |
+| chgrp                                                                         | (1)  | change group ownership                                    |
+| chgrp                                                                         | (1p) | change the file group ownership                           |
+| chmod                                                                         | (1)  | change file mode bits                                     |
+| chmod                                                                         | (2)  | change permissions of a file                              |
+| chmod                                                                         | (3p) | change mode of a file relative to directory file descr... |
+| chmod                                                                         | (1p) | change the file modes                                     |
+| chown                                                                         | (1)  | change file owner and group                               |
+| chown                                                                         | (2)  | change ownership of a file                                |
+| chown                                                                         | (3p) | change owner and group of a file relative to directory... |
+| chown                                                                         | (1p) | change the file ownership                                 |
+| cksum                                                                         | (1)  | checksum and count the bytes in a file                    |
+| cksum                                                                         | (1p) | write file checksums and sizes                            |
+| comm                                                                          | (1)  | compare two sorted files line by line                     |
+| comm                                                                          | (1p) | select or reject lines common to two files                |
+| cp                                                                            | (1)  | copy files and directories                                |
+| cp                                                                            | (1p) | copy files                                                |
+| csplit                                                                        | (1)  | split a file into sections determined by context lines    |
+| csplit                                                                        | (1p) | split files based on context                              |
+| cut                                                                           | (1)  | remove sections from each line of files                   |
+| cut                                                                           | (1p) | cut out selected fields of each line of a file            |
+| date                                                                          | (1)  | print or set the system date and time                     |
+| date                                                                          | (1p) | write the date and time                                   |
+| dd                                                                            | (1)  | convert and copy a file                                   |
+| dd                                                                            | (1p) | convert and copy a file                                   |
+| df                                                                            | (1)  | report file system disk space usage                       |
+| df                                                                            | (1p) | report free disk space                                    |
+| dir                                                                           | (1)  | list directory contents                                   |
+| dircolors                                                                     | (1)  | color setup for ls                                        |
+| dirname                                                                       | (3)  | parse pathname components                                 |
+| dirname                                                                       | (1)  | strip last component from file name                       |
+| dirname                                                                       | (3p) | report the parent directory name of a file pathname       |
+| dirname                                                                       | (1p) | return the directory portion of a pathname                |
+| du                                                                            | (1)  | estimate file space usage                                 |
+| du                                                                            | (1p) | estimate file space usage                                 |
+| echo                                                                          | (3x) | curses input options                                      |
+| echo                                                                          | (1)  | display a line of text                                    |
+| echo                                                                          | (1p) | write arguments to standard output                        |
+| env                                                                           | (1)  | run a program in a modified environment                   |
+| env                                                                           | (n)  | Variables used by Tcl                                     |
+| env                                                                           | (1p) | set the environment for command invocation                |
+| expand                                                                        | (1)  | convert tabs to spaces                                    |
+| expand                                                                        | (1p) | convert tabs to spaces                                    |
+| expr                                                                          | (1)  | evaluate expressions                                      |
+| expr                                                                          | (n)  | Evaluate an expression                                    |
+| expr                                                                          | (1p) | evaluate arguments as an expression                       |
+| factor                                                                        | (1)  | factor numbers                                            |
+| false                                                                         | (1)  | do nothing, unsuccessfully                                |
+| false                                                                         | (1p) | return false value                                        |
+| fmt                                                                           | (1)  | simple optimal text formatter                             |
+| fold                                                                          | (1)  | wrap each input line to fit in specified width            |
+| fold                                                                          | (1p) | filter for folding lines                                  |
+| groups                                                                        | (1)  | print the groups a user is in                             |
+| head                                                                          | (1)  | output the first part of files                            |
+| HEAD                                                                          | (1)  | Simple command line user agent                            |
+| head                                                                          | (1p) | copy the first part of files                              |
+| hostid                                                                        | (1)  | print the numeric identifier for the current host         |
+| id                                                                            | (1)  | print real and effective user and group IDs               |
+| id                                                                            | (1p) | return user identity                                      |
+| install                                                                       | (1)  | copy files and set attributes                             |
+| join                                                                          | (1)  | join lines of two files on a common field                 |
+| join                                                                          | (n)  | Create a string by joining together list elements         |
+| join                                                                          | (1p) | relational database operator                              |
+| link                                                                          | (1)  | call the link function to create a link to a file         |
+| link                                                                          | (2)  | make a new name for a file                                |
+| link                                                                          | (3p) | link one file to another file relative to two director... |
+| link                                                                          | (1p) | calllink() function                                       |
+| ln                                                                            | (1)  | make links between files                                  |
+| ln                                                                            | (1p) | link files                                                |
+| logname                                                                       | (1)  | print user's login name                                   |
+| logname                                                                       | (1p) | return the user's login name                              |
+| ls                                                                            | (1)  | list directory contents                                   |
+| ls                                                                            | (1p) | list directory contents                                   |
+| md5sum                                                                        | (1)  | compute and check MD5 message digest                      |
+| mkdir                                                                         | (1)  | make directories                                          |
+| mkdir                                                                         | (2)  | create a directory                                        |
+| mkdir                                                                         | (3p) | make a directory relative to directory file descriptor    |
+| mkdir                                                                         | (1p) | make directories                                          |
+| mkfifo                                                                        | (3)  | make a FIFO special file (a named pipe)                   |
+| mkfifo                                                                        | (1)  | make FIFOs (named pipes)                                  |
+| mkfifo                                                                        | (3p) | make a FIFO special file relative to directory file de... |
+| mkfifo                                                                        | (1p) | make FIFO special files                                   |
+| mknod                                                                         | (1)  | make block or character special files                     |
+| mknod                                                                         | (2)  | create a special or ordinary file                         |
+| mknod                                                                         | (3p) | make directory, special file, or regular file             |
+| mktemp                                                                        | (3)  | make a unique temporary filename                          |
+| mktemp                                                                        | (1)  | create a temporary file or directory                      |
+| mv                                                                            | (1)  | move (rename) files                                       |
+| mv                                                                            | (1p) | move files                                                |
+| nice                                                                          | (1)  | run a program with modified scheduling priority           |
+| nice                                                                          | (2)  | change process priority                                   |
+| nice                                                                          | (3p) | change the nice value of a process                        |
+| nice                                                                          | (1p) | invoke a utility with an altered nice value               |
+| nl                                                                            | (3x) | curses output options                                     |
+| nl                                                                            | (1)  | number lines of files                                     |
+| nl                                                                            | (1p) | line numbering filter                                     |
+| nohup                                                                         | (1)  | run a command immune to hangups, with output to a non-tty |
+| nohup                                                                         | (1p) | invoke a utility immune to hangups                        |
+| nproc                                                                         | (1)  | print the number of processing units available            |
+| numfmt                                                                        | (1)  | Convert numbers from/to human-readable strings            |
+| od                                                                            | (1)  | dump files in octal and other formats                     |
+| od                                                                            | (1p) | dump files in various formats                             |
+| paste                                                                         | (1)  | merge lines of files                                      |
+| paste                                                                         | (1p) | merge corresponding or subsequent lines of files          |
+| pathchk                                                                       | (1)  | check whether file names are valid or portable            |
+| pathchk                                                                       | (1p) | check pathnames                                           |
+| pinky                                                                         | (1)  | lightweight finger                                        |
+| pr                                                                            | (1)  | convert text files for printing                           |
+| pr                                                                            | (1p) | print files                                               |
+| printenv                                                                      | (1)  | print all or part of environment                          |
+| printf                                                                        | (3)  | formatted output conversion                               |
+| printf                                                                        | (1)  | format and print data                                     |
+| printf                                                                        | (3p) | print formatted output                                    |
+| printf                                                                        | (1p) | write formatted output                                    |
+| ptx                                                                           | (1)  | produce a permuted index of file contents                 |
+| pwd                                                                           | (1)  | print name of current/working directory                   |
+| pwd                                                                           | (n)  | Return the absolute path of the current working directory |
+| pwd                                                                           | (1p) | return working directory name                             |
+| readlink                                                                      | (1)  | print resolved symbolic links or canonical file names     |
+| readlink                                                                      | (2)  | read value of a symbolic link                             |
+| readlink                                                                      | (3p) | read the contents of a symbolic link                      |
+| realpath                                                                      | (3)  | return the canonicalized absolute pathname                |
+| realpath                                                                      | (1)  | print the resolved path                                   |
+| realpath                                                                      | (3p) | resolve a pathname                                        |
+| rm                                                                            | (1)  | remove files or directories                               |
+| rm                                                                            | (1p) | remove directory entries                                  |
+| rmdir                                                                         | (1)  | remove empty directories                                  |
+| rmdir                                                                         | (2)  | delete a directory                                        |
+| rmdir                                                                         | (3p) | remove a directory                                        |
+| rmdir                                                                         | (1p) | remove directories                                        |
+| runcon                                                                        | (1)  | run command with specified SELinux security context       |
+| seq                                                                           | (1)  | print a sequence of numbers                               |
+| sha1sum                                                                       | (1)  | compute and check SHA1 message digest                     |
+| sha224sum                                                                     | (1)  | compute and check SHA224 message digest                   |
+| sha256sum                                                                     | (1)  | compute and check SHA256 message digest                   |
+| sha384sum                                                                     | (1)  | compute and check SHA384 message digest                   |
+| sha512sum                                                                     | (1)  | compute and check SHA512 message digest                   |
+| shred                                                                         | (1)  | overwrite a file to hide its contents, and optionally ... |
+| shuf                                                                          | (1)  | generate random permutations                              |
+| sleep                                                                         | (3)  | sleep for the specified number of seconds                 |
+| sleep                                                                         | (1)  | delay for a specified amount of time                      |
+| sleep                                                                         | (3p) | suspend execution for an interval of time                 |
+| sleep                                                                         | (1p) | suspend execution for an interval                         |
+| sort                                                                          | (1)  | sort lines of text files                                  |
+| sort                                                                          | (1p) | sort, merge, or sequence check text files                 |
+| split                                                                         | (1)  | split a file into pieces                                  |
+| split                                                                         | (n)  | Split a string into a proper Tcl list                     |
+| split                                                                         | (1p) | split files into pieces                                   |
+| stat                                                                          | (1)  | display file or file system status                        |
+| stat                                                                          | (2)  | get file status                                           |
+| stat                                                                          | (3p) | get file status                                           |
+| stdbuf                                                                        | (1)  | Run COMMAND, with modified buffering operations for it... |
+| stty                                                                          | (1)  | change and print terminal line settings                   |
+| stty                                                                          | (2)  | unimplemented system calls                                |
+| stty                                                                          | (1p) | set the options for a terminal                            |
+| sum                                                                           | (1)  | checksum and count the blocks in a file                   |
+| sync                                                                          | (1)  | Synchronize cached writes to persistent storage           |
+| sync                                                                          | (2)  | commit filesystem caches to disk                          |
+| sync                                                                          | (3p) | schedule file system updates                              |
+| tac                                                                           | (1)  | concatenate and print files in reverse                    |
+| tail                                                                          | (1)  | output the last part of files                             |
+| tail                                                                          | (1p) | copy the last part of a file                              |
+| tee                                                                           | (1)  | read from standard input and write to standard output ... |
+| tee                                                                           | (2)  | duplicating pipe content                                  |
+| tee                                                                           | (1p) | duplicate standard input                                  |
+| test                                                                          | (1)  | check file types and compare values                       |
+| test                                                                          | (1p) | evaluate expression                                       |
+| timeout                                                                       | (3x) | curses input options                                      |
+| timeout                                                                       | (1)  | run a command with a time limit                           |
+| touch                                                                         | (1)  | change file timestamps                                    |
+| touch                                                                         | (1p) | change file access and modification times                 |
+| tr                                                                            | (1)  | translate or delete characters                            |
+| tr                                                                            | (1p) | translate characters                                      |
+| true                                                                          | (1)  | do nothing, successfully                                  |
+| true                                                                          | (1p) | return true value                                         |
+| truncate                                                                      | (1)  | shrink or extend the size of a file to the specified size |
+| truncate                                                                      | (2)  | truncate a file to a specified length                     |
+| truncate                                                                      | (3p) | truncate a file to a specified length                     |
+| tsort                                                                         | (1)  | perform topological sort                                  |
+| tsort                                                                         | (1p) | topological sort                                          |
+| tty                                                                           | (4)  | controlling terminal                                      |
+| tty                                                                           | (1)  | print the file name of the terminal connected to stand... |
+| tty                                                                           | (1p) | return user's terminal name                               |
+| uname                                                                         | (1)  | print system information                                  |
+| uname                                                                         | (2)  | get name and information about current kernel             |
+| uname                                                                         | (3p) | get the name of the current system                        |
+| uname                                                                         | (1p) | return system name                                        |
+| unexpand                                                                      | (1)  | convert spaces to tabs                                    |
+| unexpand                                                                      | (1p) | convert spaces to tabs                                    |
+| uniq                                                                          | (1)  | report or omit repeated lines                             |
+| uniq                                                                          | (1p) | report or filter out repeated lines in a file             |
+| unlink                                                                        | (1)  | call the unlink function to remove the specified file     |
+| unlink                                                                        | (2)  | delete a name and possibly the file it refers to          |
+| unlink                                                                        | (3p) | remove a directory entry relative to directory file de... |
+| unlink                                                                        | (1p) | call theunlink() function                                 |
+| users                                                                         | (1)  | print the user names of users currently logged in to t... |
+| vdir                                                                          | (1)  | list directory contents                                   |
+| wc                                                                            | (1)  | print newline, word, and byte counts for each file        |
+| wc                                                                            | (1p) | word, line, and byte or character count                   |
+| who                                                                           | (1)  | show who is logged on                                     |
+| who                                                                           | (1p) | display who is on the system                              |
+| whoami                                                                        | (1)  | print effective userid                                    |
+| yes                                                                           | (1)  | output a string repeatedly until killed                   |
+| chroot                                                                        | (1)  | run command or interactive shell with special root dir... |
+| chroot                                                                        | (2)  | change root directory                                     |
+#+END_SRC
+
+* Receipts
+** arch                                                                         :cmd:
+[[Index][⬆]]
+*** arch::options
+*** arch::examples
+*** arch::files
+*** arch::see-also
+** base64                                                                       :cmd:
+[[Index][⬆]] /base64 encode/decode data and print to standard output/
+/Written by Simon Josefsson/
+*** base64::options
+*** base64::examples
+**** base64-161121003148
+create a *C* chars by *L* lines file of a random ASCII characters:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ABSPATH="$(dirname $(readlink -f $0))"
+
+  L=100
+  C=80
+  FILE_PATH="$ABSPATH"/../tests/rnd"$C"x"$L"
+
+  [ -e "$FILE_PATH" ] && rm "$FILE_PATH"
+
+  for ((n=0;n<"$L";n++)); do
+      base64 /dev/urandom | head -c "$C" >> "$FILE_PATH"
+  done
+#+END_SRC
+[[file:./cix-gnu-bash-builtin.org::*if][if]],
+[[file:./cix-gnu-bash-builtin.org::*for][for]],
+[[file:./cix-gnu-core-utilities.org::*dirname][dirname (1)]],
+[[file:./cix-gnu-core-utilities.org::*readlink][readlink (1)]],
+[[file:./cix-gnu-core-utilities.org::*rm][rm (1)]],
+[[file:./cix-gnu-core-utilities.org::*head][head (1)]],
+
+*** base64::files
+*** base64::see-also
+** basename                                                                     :cmd:
+[[Index][⬆]]
+*** basename::options
+*** basename::examples
+*** basename::files
+*** basename::see-also
+** cat                                                                          :cmd:
+[[Index][⬆]]
+*** cat::options
+*** cat::examples
+*** cat::files
+*** cat::see-also
+** chcon                                                                        :cmd:
+[[Index][⬆]]
+*** chcon::options
+*** chcon::examples
+*** chcon::files
+*** chcon::see-also
+** chgrp                                                                        :cmd:
+[[Index][⬆]]
+*** chgrp::options
+*** chgrp::examples
+*** chgrp::files
+*** chgrp::see-also
+** chmod                                                                        :cmd:
+[[Index][⬆]] /change file mode bits/
+/Written by David MacKenzie and Jim Meyering/
+
+*** chmod::options
+/[ugoa+-=rwxXstA]/
+/[{1,7}{1,7}{1,7}]/
+
+*** chmod::examples
+*** chmod::files
+*** chmod::see-also
+** chown                                                                        :cmd:
+[[Index][⬆]]
+*** chown::options
+*** chown::examples
+*** chown::files
+*** chown::see-also
+** chroot                                                                       :cmd:
+[[Index][⬆]]
+*** chroot::options
+*** chroot::examples
+*** chroot::files
+*** chroot::see-also
+** cksum                                                                        :cmd:
+[[Index][⬆]]
+*** cksum::options
+*** cksum::examples
+*** cksum::files
+*** cksum::see-also
+** comm                                                                         :cmd:
+[[Index][⬆]] /compare two sorted files line by line/.
+/Written by Richard M. Stallman and David MacKenzie/
+*** comm::options
+*** comm::examples
+*** comm::files
+*** comm::see-also
+  [[file:./cix-gnu-core-utilities.org::*join][join(1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq(1)]]
+** cp                                                                           :cmd:
+[[Index][⬆]]
+*** cp::options
+*** cp::examples
+*** cp::files
+*** cp::see-also
+** csplit                                                                       :cmd:
+[[Index][⬆]]
+*** csplit::options
+*** csplit::examples
+*** csplit::files
+*** csplit::see-also
+** cut                                                                          :cmd:
+[[Index][⬆]]
+*** cut::options
+*** cut::examples
+*** cut::files
+*** cut::see-also
+** date                                                                         :cmd:
+[[Index][⬆]]
+*** date::options
+*** date::examples
+*** date::files
+*** date::see-also
+** dd                                                                           :cmd:
+[[Index][⬆]] /convert and copy a file/
+/Written by Paul Rubin, David MacKenzie, and Stuart Kemp./
+
+*** dd::options
+
+|--------------+-------------------|
+| =bs=BYTES=     | c w b K MB M GB G |
+| =cbs=BYTES=    |                   |
+| =conv=CONVS=   |                   |
+| =count=N=      |                   |
+| =ibs=BYTES=    |                   |
+| =if=FILE=      | Input file        |
+| =iflag=FLAGS=  |                   |
+| =obs=BYTES=    |                   |
+| =of=FILE=      | Output file       |
+| =oflag=FLAGS=  |                   |
+| =seek=N=       |                   |
+| =skip=N=       |                   |
+| =status=LEVEL= |                   |
+|--------------+-------------------|
+
+*** dd::examples
+**** dd-161124233800
+Output your microphone to a remote computer's speaker:
+:    ~$ dd if=/dev/dsp | ssh -c arcfour -C username@host dd of=/dev/dsp
+[[file:./cix-openssh.org::*ssh][ssh (1)]]
+
+**** dd-161124225351
+Killing features of =dd=:
+:    ~# dd if=/dev/zero of=/dev/sdX    #  format device
+:    ~# dd if=/dev/random of=/dev/port #  freeze the system
+
+**** dd-161116230224
+Memory I/O speed test with 34G of data:
+:    ~$ time dd if=/dev/zero of=/dev/null bs=1M count=32768
+
+**** dd-161221215259
+Make an image of and device and send it via ssh (or receive it):
+:    ~$ dd if=/dev/sda | gzip -1 - | ssh user@local dd of=img.gz     # from remote
+:    ~$ ssh user@remote "dd if=/dev/sda | gzip -1 -" | dd of=img.zip # from local
+:    ~$ ssh user@remote "dd if=/dev/cdrom" | dd of=remote_cdrom.iso
+[[file::*gzip][gzip (1)]] [[file:./cix-openssh.org::*ssh][ssh (1)]]
+
+**** dd-170720235928
+Read =file1= and =file2= and append output back to =file1=:
+:    ~$ cat file1 <(dd if=file2 bs="$(wc -c file2)" count=1) >> file2
+
+**** dd-161113185213
+Test NFS, LAN and I/O speed:
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
+
+  NFS_PATH="/mount/point/of/nfs/dir"
+  echo "Write speed"
+  time dd if=/dev/zero of="$NFS_PATH"/test_file bs=16k count=16384
+
+  echo "Read speed"
+  time dd if="$NFS_PATH"/test_file of=/dev/null bs=16k
+#+END_SRC
+[[./cix-gnu-bash-builtin.org::echo][echo]] [[file::*time][time (1)]]
+
+**** dd-161113185234
+Copy and restore MBR of block device (HDD/SSD):
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
+
+  BLK_CP="/dev/sda"
+  BLK_RS="/dev/sdb"
+  MBR="$HOME"/mbr.img
+  echo "Copy MBR data from $BLK_CP"  dd if="$BLK_CP" of="$MBR" bs=512 count=1
+  echo "Restore MBR data to $BLK_RS"
+  dd if="$MBR" of="$BLK_RS"
+#+END_SRC
+[[./cix-gnu-bash-builtin.org::echo][echo]]
+
+**** dd-161113185337                                                            :test:block_device:stress_test:
+stress test of BLOCK device with random size files to a random sector number:
+#+BEGIN_SRC sh
+  #!/usr/bin/bash
+
+  # WARRNING: IT COULD DAMAGE YOUR DEVICE!
+  MNT_PATH="/mnt/lv_test"
+  DEV_NAME="sdc"
+  DEV_SIZE=$(cat "/sys/block/$DEV_NAME/size")
+  MBR=512
+
+  while true; do
+      SECTOR="$(shuf -i"$MBR"-"$DEV_SIZE" -n1)"
+      LENGTH="$(shuf -i"$SECTOR"-"$DEV_SIZE" -n1)"
+
+      # write to DEV
+      dd if=/dev/urandom \
+         of="$MNT_PATH"/file_name \
+         seek="$SECTOR" \
+         count="$LENGTH"b 1>/dev/null
+
+      # read from DEV
+      dd if="$MNT_PATH"/file_name of=/dev/null 1>/dev/null
+
+      # clean up and loop
+      rm "$MNT_PATH"/file_name
+  done
+#+END_SRC
+[[./cix-gnu-core-utilities.org::*shuf][shuf (1)]] [[file:./cix-gnu-core-utilities.org::*rm][rm (1)]] [[./cix-gnu-core-utilities.org::*cat][cat (1)]] [[./cix-gnu-bash-builtin.org::*while][while]]
+
+**** dd-161115233028                                                            :copy:clone:backup:hdd:
+duplicate several drives concurrently:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  DEV_1="/dev/sda"
+  DEV_2="/dev/sdb"
+  DEV_3="/dev/sdc"
+  DEV_4="/dev/sdd"
+
+  # Add as many as needed afte tee command
+  dd if="$DEV_1" bs=64k \
+      | tee >(dd of="$DEV_2" bs=64k) \
+            >(dd of="$DEV_3" bs=64k) \
+      | dd of="$DEV_4" bs=64k
+#+END_SRC
+[[file:./cix-gnu-core-utilities.org::*tee][tee (1)]]
+
+*** dd::files
+*** dd::see-also
+** df                                                                           :cmd:
+[[Index][⬆]]
+*** df::options
+*** df::examples
+*** df::files
+*** df::see-also
+** dir                                                                          :cmd:
+[[Index][⬆]]
+*** dir::options
+*** dir::examples
+*** dir::files
+*** dir::see-also
+** dircolors                                                                    :cmd:
+[[Index][⬆]]
+*** dircolors::options
+*** dircolors::examples
+*** dircolors::files
+*** dircolors::see-also
+** dirname                                                                      :cmd:
+[[Index][⬆]]
+*** dirname::options
+*** dirname::examples
+*** dirname::files
+*** dirname::see-also
+** du                                                                           :cmd:
+[[Index][⬆]] /estimate file space usage/
+/Written by Torbjorn Granlund, David MacKenzie, Paul Eggert, and Jim Meyering./
+*** du::options
+*** du::examples
+**** du-170721002845
+Show size of hiden and normal dirrectores of the current location:
+:   ~$ du -sch .[!.]* * | sort -h
+=.[!.]*= It's a glob that lists all the files that start with a single =.=
+
+*** du::files
+*** du::see-also
+** echo                                                                         :cmd:
+[[Index][⬆]]
+*** echo::options
+*** echo::examples
+*** echo::files
+*** echo::see-also
+** env                                                                          :cmd:
+[[Index][⬆]]
+*** env::options
+*** env::examples
+*** env::files
+*** env::see-also
+** expand                                                                       :cmd:
+[[Index][⬆]]
+*** expand::options
+*** expand::examples
+*** expand::files
+*** expand::see-also
+** expr                                                                         :cmd:
+[[Index][⬆]] /evaluate expressions/
+/Written by Mike Parker, James Youngman, and Paul Eggert./
+*** expr::options
+: expr arg1 operator arg2 [ operator arg3 ... ]
+
+*** expr::examples
+**** expr-161128225759                                                          :grep:patern:text:matchin:
+"grep" like examples of using *expr*: grep patern text matching
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  TEST_VAR="Value of Expression is 10"
+
+  expr "$TEST_VAR" : '.*'         # number of chars
+  expr "$TEST_VAR" : '\(.*\)'     # match all chars and print them
+  expr "$TEST_VAR" : '[A-Z]*'     # number of UPPER case chars at the begining
+  expr "$TEST_VAR" : '\(.....\)'  # truncate to 5 chars
+#+END_SRC
+*** expr::files
+*** expr::see-also
+** factor                                                                       :cmd:
+[[Index][⬆]]
+*** factor::options
+*** factor::examples
+*** factor::files
+*** factor::see-also
+** false                                                                        :cmd:
+[[Index][⬆]]
+*** false::options
+*** false::examples
+*** false::files
+*** false::see-also
+** fmt                                                                          :cmd:
+[[Index][⬆]]
+*** fmt::options
+*** fmt::examples
+*** fmt::files
+*** fmt::see-also
+** fold                                                                         :cmd:
+[[Index][⬆]]
+*** fold::options
+*** fold::examples
+*** fold::files
+*** fold::see-also
+** groups                                                                       :cmd:
+[[Index][⬆]]
+*** groups::options
+*** groups::examples
+*** groups::files
+*** groups::see-also
+** head                                                                         :cmd:
+[[Index][⬆]]
+*** head::options
+*** head::examples
+*** head::files
+*** head::see-also
+** hostid                                                                       :cmd:
+[[Index][⬆]]
+*** hostid::options
+*** hostid::examples
+*** hostid::files
+*** hostid::see-also
+** id                                                                           :cmd:
+[[Index][⬆]]
+*** id::options
+*** id::examples
+*** id::files
+*** id::see-also
+** install                                                                      :cmd:
+[[Index][⬆]]
+*** install::options
+*** install::examples
+*** install::files
+*** install::see-also
+** join                                                                         :cmd:
+[[Index][⬆]]
+*** join::options
+*** join::examples
+*** join::files
+*** join::see-also
+** link                                                                         :cmd:
+[[Index][⬆]]
+*** link::options
+*** link::examples
+*** link::files
+*** link::see-also
+** ln                                                                           :cmd:
+[[Index][⬆]] /make links between files/
+/Written by Mike Parker and David MacKenzie./
+
+*** ln::options
+*** ln::examples
+**** ln-161124233149
+repoint symlink to another file:
+:    ~$ ln -nfs TARGET_PATH LINK_NAME
+
+*** ln::files
+*** ln::see-also
+    [[file:./cix-gnu-core-utilities.org::*link][link (2)]]
+
+** logname                                                                      :cmd:
+[[Index][⬆]]
+*** logname::options
+*** logname::examples
+*** logname::files
+*** logname::see-also
+** ls                                                                           :cmd:
+[[Index][⬆]] /list directory contents/.
+/Written by Richard M. Stallman and David MacKenzie./
+*** ls::options
+: ls [-aAlbBCdDfFghHiIklLmNopqQrRsStTuvwxXZ1] [FILE/DIRECTORY]
+
+*** ls::examples
+
+**** ls-161226204717
+List block devices:
+:    ~$ ls -l /dev /dev/mapper | grep '^b'
+[[file:./cix-gnu-grep.org::*grep][grep (1)]]
+
+**** ls-161118234510
+Tree view of all sub directories:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ls -R \
+      | grep ":$" \
+      | sed -e 's/:$//' \
+            -e 's/[^-][^\/]*\//--/g' \
+            -e 's/^/   /' \
+            -e 's/-/|/'
+#+END_SRC
+[[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
+
+**** ls-161107232103
+Sweet memorising examples of using *ls*:
+:    ~$ ls -Rotti
+:    ~$ ls -Ham
+:    ~$ ls -and
+:    ~$ ls -laSh
+:    ~$ ls -Qam
+
+
+**** ls-161107232114
+List only - dir, files, links, hidden dirs, hidden files hidden links, exec
+files. Actively using *-F* key to classify */=>@|:
+:    ~$ ls -F | grep '/' | cut -d/ -f1              # directories
+:    ~$ ls -p | grep -v /                           # files
+:    ~$ ls -F | grep '[@]' | cut -d@ -f1            # links
+:    ~$ ls -d .*/ | cut -d/ -f1                     # hiden direcotires
+:    ~$ ls -a | grep "^\."                          # hiden files
+:    ~$ ls -Fa | grep "\." | grep "@" | cut -d@ -f1 # hiden links
+[[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-gnu-core-utilities.org::*cut][cut (1)]]
+
+**** ls-151114230741
+aliases best practice:
+#+BEGIN_EXAMPLE
+    alias ls="ls -1p --color=auto"
+    alias l="ls -lhGgo"
+    alias ll="ls -lh"
+    alias la="ls -lhGgoA"
+    alias lt="ls -lhGgotr"
+    alias lS="ls -lhGgoSr"
+    alias l.="ls -lhGgod .*"
+    alias lhead="ls -lhGgo | head"
+    alias ltail="ls -lhGgo | tail"
+    alias lmore='ls -lhGgo | more'
+#+END_EXAMPLE
+*** ls::see-also
+  [[file:./cix-gnu-core-utilities.org::*dir][dir (1)]]
+** md5sum                                                                       :cmd:
+[[Index][⬆]]
+*** md5sum::options
+*** md5sum::examples
+*** md5sum::files
+*** md5sum::see-also
+** mkdir                                                                        :cmd:
+[[Index][⬆]] /make directories/
+/Written by David MacKenzie/
+*** mkdir::options
+| -p | create full path |
+*** mkdir::examples
+**** mkdir-161120111806
+create a set of 135199 directories:
+:    ~$ mkdir ./test_dir{1..1}{a..z}{A..Z}
+
+create a directory tree with one line:
+:    ~$ mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/a}
+*** mkdir::files
+*** mkdir::see-also
+** mkfifo                                                                       :cmd:
+[[Index][⬆]]
+*** mkfifo::options
+*** mkfifo::examples
+*** mkfifo::files
+*** mkfifo::see-also
+** mknod                                                                        :cmd:
+[[Index][⬆]]
+*** mknod::options
+*** mknod::examples
+*** mknod::files
+*** mknod::see-also
+** mktemp                                                                       :cmd:
+[[Index][⬆]] /create a temporary file or directory/
+/Written by Jim Meyering and Eric Blake./
+*** mktemp::options
+#+NAME: core-utilities--mktemp-opt
+| OPT              | FROM V.1 | END V. | DESC                                  |
+|------------------+----------+--------+---------------------------------------|
+| =-d, --directory=  |          |        | create a directory                    |
+| =-u, --dry-run=    |          |        | do not create anything                |
+| =-q, --quiet=      |          |        | suppress diagnostics                  |
+| =--suffix=SUFF=    |          |        | append SUFF to TEMPLATE               |
+| =-p DIR, --tmpdir= |          |        | interpret  TEMPLATE  relative  to DIR |
+| =-t=               |          |        |                                       |
+|------------------+----------+--------+---------------------------------------|
+
+*** mktemp::examples
+**** mktemp-170730001143
+Create a temporary dirrectory in =/tmp=:
+:    ~$ mktemp -d -t test_dir.XXX
+
+*** mktemp::files
+*** mktemp::see-also
+** mv                                                                           :cmd:
+[[Index][⬆]] /move (rename) files/
+/Written by Mike Parker, David MacKenzie, and Jim Meyering./
+*** mv::options
+*** mv::examples
+**** mv-161130220901
+replace spaces in file/dir name with underscore "_":
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  SEARCH_PATH="$HOME"/Downloads
+
+  # First, replace spaces in dir names,
+  # Keep trying utill all pathes changed.
+  while true; do
+      [[ -z $(find "$SEARCH_PATH" -type d -name "* *") ]] && echo "Clean" && break
+
+      find "$SEARCH_PATH" -type d -name "* *" -print \
+          | while read dir; do
+          new_dir=$(echo "$dir" | sed 's/ /_/g')
+          mv "$dir" "$new_dir"
+      done
+  done
+
+  # Replace spaces in files after that
+  find "$SEARCH_PATH" -type f -name "* *" -print \
+      | while read file; do
+      new_file=$(echo "$file" | sed 's/ /_/g')
+      mv "$file" "$new_file"
+  done
+#+END_SRC
+  [[file:./cix-gnu-bash-builtin.org::*while][while]], [[file:./cix-gnu-bash-builtin.org::*read][read]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]], [[file:./cix-gnu-findutils.org::*find][find (1)]]
+*** mv::files
+*** mv::see-also
+  [[file:./cix-util-linux.org::*rename][rename(2)]]
+** nice                                                                         :cmd:
+[[Index][⬆]]
+*** nice::options
+*** nice::examples
+*** nice::files
+*** nice::see-also
+** nl                                                                           :cmd:
+[[Index][⬆]]
+*** nl::options
+*** nl::examples
+*** nl::files
+*** nl::see-also
+** nohup                                                                        :cmd:
+[[Index][⬆]] /run a command immune to hangups, with output to a non-tty/
+/Written by Jim Meyering./
+
+*** nohup::options
+**** Exit status
+| 125 | if /nohup/ itself fails, and *POSIXLY_CORRECT* is not set |
+| 126 | if command is found but cannot be invoked                 |
+| 127 | if command cannot be found                                |
+|     | the exit status of command otherwise                      |
+
+*** nohup::examples
+**** nohup-170728232621
+Run a script and exit from a shell, makes it running on background:
+:    ~$ nohup script_to_run.sh &; exit
+
+**** nohup-170808221729
+Run a process as background process:
+:    ~$ nohup bash -c "(script_to_run.sh &>/dev/null)" &>/dev/null
+
+It omits bouth stdin and stdout from script and =nohup=.
+*** nohup::files
+*** nohup::see-also
+** nproc                                                                        :cmd:
+[[Index][⬆]]
+*** nproc::options
+*** nproc::examples
+*** nproc::files
+*** nproc::see-also
+** numfmt                                                                       :cmd:
+[[Index][⬆]] /Convert numbers from/to human-readable strings/
+/Writen by Assaf Gordon/
+
+*** numfmt::options
+*** numfmt::examples
+*** numfmt::files
+*** numfmt::see-also
+** od                                                                           :cmd:
+[[Index][⬆]]
+*** od::options
+*** od::examples
+*** od::files
+*** od::see-also
+** paste                                                                        :cmd:
+[[Index][⬆]] /merge lines of files/
+/Written by David M. Ihnat and David MacKenzie/
+
+*** paste::options
+| OPT                     | TYPE   | ++V | --V | DESC |
+|-------------------------+--------+-----+-----+------|
+| =-s, --serial=          | switch |     |     |      |
+| =-d, --delimiters=      | str    |     |     |      |
+| =-z, --zero-terminated= | switch |     |     |      |
+|-------------------------+--------+-----+-----+------|
+
+*** paste::examples
+**** paste-170808223506
+Sumirize the size of git directores using =Bash= $[...] $((...)):
+:    ~$ echo $[$(find ~/ -type d -name ".git" -print0 | xargs -0 du -s | cut -f1 | paste -sd+)] 
+[[file:./cix-gnu-coreutils.org::*echo][echo]] [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*du][du]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
+
+*** paste::files
+*** paste::see-also
+** pathchk                                                                      :cmd:
+[[Index][⬆]]
+*** pathchk::options
+*** pathchk::examples
+*** pathchk::files
+*** pathchk::see-also
+** pinky                                                                        :cmd:
+[[Index][⬆]]
+*** pinky::options
+*** pinky::examples
+*** pinky::files
+*** pinky::see-also
+** pr                                                                           :cmd:
+[[Index][⬆]]
+*** pr::options
+*** pr::examples
+*** pr::files
+*** pr::see-also
+** printenv                                                                     :cmd:
+[[Index][⬆]]
+*** printenv::options
+*** printenv::examples
+*** printenv::files
+*** printenv::see-also
+** printf                                                                       :cmd:
+[[Index][⬆]]
+*** printf::options
+*** printf::examples
+*** printf::files
+*** printf::see-also
+** ptx                                                                          :cmd:
+[[Index][⬆]]
+*** ptx::options
+*** ptx::examples
+*** ptx::files
+*** ptx::see-also
+** pwd                                                                          :cmd:
+[[Index][⬆]]
+*** pwd::options
+*** pwd::examples
+*** pwd::files
+*** pwd::see-also
+** readlink                                                                     :cmd:
+[[Index][⬆]]
+*** readlink::options
+*** readlink::examples
+*** readlink::files
+*** readlink::see-also
+** realpath                                                                     :cmd:
+[[Index][⬆]]
+*** realpath::options
+*** realpath::examples
+*** realpath::files
+*** realpath::see-also
+** realpath                                                                     :cmd:
+[[Index][⬆]]
+*** realpath::options
+*** realpath::examples
+*** realpath::files
+*** realpath::see-also
+** rm                                                                           :cmd:
+[[Index][⬆]] /remove files or directories
+Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
+*** rm::options
+*** rm::examples
+**** rm-161118232317
+remove all but specific file(s):
+:    ~$ rm !(save_me_please.log) # just a rest of files
+:    ~$ rm !(*.foo|*.bar|*.baz)  # wild card
+
+*** rm::files
+*** rm::see-also
+  unlink (1), unlink(2), chattr(1), [[file:./cix-gnu-core-utilities.org::*shred][shred]](1)
+** rmdir                                                                        :cmd:
+[[Index][⬆]]
+*** rmdir::options
+*** rmdir::examples
+*** rmdir::files
+*** rmdir::see-also
+** runcon                                                                       :cmd:
+[[Index][⬆]]
+*** runcon::options
+*** runcon::examples
+*** runcon::files
+*** runcon::see-also
+** seq                                                                          :cmd:
+[[Index][⬆]]
+*** seq::options
+*** seq::examples
+*** seq::files
+*** seq::see-also
+** sha1sum                                                                      :cmd:
+[[Index][⬆]]
+*** sha1sum::options
+*** sha1sum::examples
+*** sha1sum::files
+*** sha1sum::see-also
+** sha224sum                                                                    :cmd:
+[[Index][⬆]]
+*** sha224sum::options
+*** sha224sum::examples
+*** sha224sum::files
+*** sha224sum::see-also
+** sha256sum                                                                    :cmd:
+[[Index][⬆]]
+*** sha256sum::options
+*** sha256sum::examples
+*** sha256sum::files
+*** sha256sum::see-also
+** sha384sum                                                                    :cmd:
+[[Index][⬆]]
+*** sha384sum::options
+*** sha384sum::examples
+*** sha384sum::files
+*** sha384sum::see-also
+** sha512sum                                                                    :cmd:
+[[Index][⬆]]
+*** sha512sum::options
+*** sha512sum::examples
+*** sha512sum::files
+*** sha512sum::see-also
+
+** shred                                                                        :cmd:
+[[Index][⬆]]
+*** shred::options
+*** shred::examples
+*** shred::files
+*** shred::see-also
+** shuf                                                                         :cmd:
+[[Index][⬆]]
+*** shuf::options
+*** shuf::examples
+*** shuf::files
+*** shuf::see-also
+** sleep                                                                        :cmd:
+[[Index][⬆]]
+*** sleep::options
+*** sleep::examples
+*** sleep::files
+*** sleep::see-also
+** sort                                                                         :cmd:
+[[Index][⬆]]
+*** sort::options
+*** sort::examples
+*** sort::files
+*** sort::see-also
+** split                                                                        :cmd:
+[[Index][⬆]]
+*** split::options
+*** split::examples
+*** split::files
+*** split::see-also
+** stat                                                                         :cmd:
+[[Index][⬆]]
+*** stat::options
+*** stat::examples
+*** stat::files
+*** stat::see-also
+** stdbuf                                                                       :cmd:
+[[Index][⬆]]
+*** stdbuf::options
+*** stdbuf::examples
+*** stdbuf::files
+*** stdbuf::see-also
+** stty                                                                         :cmd:
+[[Index][⬆]]
+*** stty::options
+*** stty::examples
+*** stty::files
+*** stty::see-also
+** sum                                                                          :cmd:
+[[Index][⬆]]
+*** sum::options
+*** sum::examples
+*** sum::files
+*** sum::see-also
+** sync                                                                         :cmd:
+[[Index][⬆]]
+*** sync::options
+*** sync::examples
+*** sync::files
+*** sync::see-also
+** tac                                                                          :cmd:
+[[Index][⬆]] /concatenate and print files in reverse/
+/Written by Jay Lepreau and David MacKenzie./
+*** tac::options
+: tac [-brs]... [FILE]...
+*** tac::examples
+*** tac::files
+*** tac::see-also
+    [[file:./cix-util-linux.org::*rev][rev (1)]]
+    tail
+** tail                                                                         :cmd:
+[[Index][⬆]] /output the last part of file/
+/Written by Paul Rubin, David MacKenzie, Ian Lance Taylor, and Jim Meyering./
+
+A *tail* command appeared in Version 7 AT&T UNIX.
+*** tail::options
+*** tail::examples
+*** tail::files
+*** tail::see-also
+    [[file:./cix-gnu-core-utilities.org::*cat][cat (1)]] [[file:./cix-gnu-core-utilities.org::*tac][tac (1)]] [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
+
+** tee                                                                          :cmd:
+[[Index][⬆]] /read from standard input and write to standard output and files/
+/Written by Mike Parker, Richard M. Stallman, and David MacKenzie./
+
+*** tee::options
+You can use multiple process substitutions (works with zsh, bash, ksh)
+: >(COMMAND)
+
+*** tee::examples
+**** tee-161115235121
+to split pipe in multiple streams:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  echo “Command tee can split a pipe in many!” \
+      |tee >(rev) \
+           >(tr " " "_") \
+           >(wc ) \
+           >(tr "[:lower:]" "[:upper:]")
+#+END_SRC
+[[file:./cix-util-linux.org::*rev][rev (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]], [[file:./cix-gnu-bash-builtin.org::echo][echo]]
+
+**** tee-161115231840
+download a file and validate it on the "fly":
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  # Used a real ISO image of Fedora 24 Workstation
+  FILE_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso"
+  FILE_NAME="Fedora-Workstation-Live-x86_64-24-1.2.iso"
+  CHECKSUM_URL="https://getfedora.org/en_GB/static/checksums/Fedora-Workstation-24-x86_64-CHECKSUM"
+  CHECKSUM_FILE="FW24.sha245"
+
+  wget -O - "$FILE_URL" \
+       tee >(sha256sum > ./"$CHECKSUM_FILE") > "$FILE_NAME"
+#+END_SRC
+[[file:./cix-wget.org::*wget][wget]]
+*** tee::files
+*** tee::see-also
+** test                                                                         :cmd:
+[[Index][⬆]]
+*** test::options
+*** test::examples
+*** test::files
+*** test::see-also
+** timeout                                                                      :cmd:
+[[Index][⬆]]
+*** timeout::options
+*** timeout::examples
+*** timeout::files
+*** timeout::see-also
+** touch                                                                        :cmd:
+[[Index][⬆]]
+*** touch::options
+*** touch::examples
+*** touch::files
+*** touch::see-also
+** tr                                                                           :cmd:
+[[Index][⬆]] /translate or delete characters/
+/Written by Jim Meyering./
+*** tr::options
+*** tr::examples
+**** tr-161120163854
+Rename files in cwd from lower to UPPER case:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  for file in ./*; do
+      mv "$file" $(echo "$file" | tr '[:lower:]' '[:upper:]')
+  done
+#+END_SRC
+[[file:./cix-gnu-bash-builtin.org::for][for]] [[file:./cix-gnu-bash-builtin.org::*echo][echo]] [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
+**** tr-161209233045
+Remove new lines from a file:
+:    ~$ tr -d '\n' < input_file > input_file_tm && mv input_file_tm input_file
+
+**** tr-170104001918
+Windows files to UNIX format:
+:    ~$ tr -d '\15\32' < input_win_file.txt > output_unix_file
+*** tr::files
+*** tr::see-also
+** true                                                                         :cmd:
+[[Index][⬆]]
+*** true::options
+*** true::examples
+*** true::files
+*** true::see-also
+** truncate                                                                     :cmd:
+[[Index][⬆]]
+*** truncate::options
+*** truncate::examples
+*** truncate::files
+*** truncate::see-also
+** tsort                                                                        :cmd:
+[[Index][⬆]]
+*** tsort::options
+*** tsort::examples
+*** tsort::files
+*** tsort::see-also
+** tty                                                                          :cmd:
+[[Index][⬆]]
+*** tty::options
+*** tty::examples
+*** tty::files
+*** tty::see-also
+** uname                                                                        :cmd:
+[[Index][⬆]]
+*** uname::options
+*** uname::examples
+*** uname::files
+*** uname::see-also
+** unexpand                                                                     :cmd:
+[[Index][⬆]]
+*** unexpand::options
+*** unexpand::examples
+*** unexpand::files
+*** unexpand::see-also
+** uniq                                                                         :cmd:
+[[Index][⬆]]
+*** uniq::options
+*** uniq::examples
+*** uniq::files
+*** uniq::see-also
+** unlink                                                                       :cmd:
+[[Index][⬆]]
+*** unlink::options
+*** unlink::examples
+*** unlink::files
+*** unlink::see-also
+** uptime                                                                       :cmd:
+[[Index][⬆]]
+*** uptime::options
+*** uptime::examples
+*** uptime::files
+*** uptime::see-also
+** users                                                                        :cmd:
+[[Index][⬆]]
+*** users::options
+*** users::examples
+*** users::files
+*** users::see-also
+** vdir                                                                         :cmd:
+[[Index][⬆]]
+*** vdir::options
+*** vdir::examples
+*** vdir::files
+*** vdir::see-also
+** wc                                                                           :cmd:
+[[Index][⬆]]
+*** wc::options
+*** wc::examples
+*** wc::files
+*** wc::see-also
+** who                                                                          :cmd:
+[[Index][⬆]]
+*** who::options
+*** who::examples
+*** who::files
+*** who::see-also
+** whoami                                                                       :cmd:
+[[Index][⬆]]
+*** whoami::options
+*** whoami::examples
+*** whoami::files
+*** whoami::see-also
+[[Index][⬆]]
+** yes                                                                          :cmd:
+[[Index][⬆]]
+*** yes::options
+*** yes::examples
+*** yes::files
+*** yes::see-also
+
+* Reference
+** Books
+- Jerry Peek, Shelley Powers, Tim O'Reilly, Mike Loukides.
+  *UNIX Power Tools*.
+  O'reilly
+- Ellen Siever, Stepben Figgins, Robert Love & Arnold Robbins;
+  *Linux In a Nutshell, 6th edition*;
+  O'reilly 2005;
+- Stephen G. Kochan, Patrick Wood;
+  *UNIX® Shell Programming, 3thd edition*;
+  Sams Publishing, 2003;
+** Links
+- GNU Coreutils
+  https://www.gnu.org/software/coreutils/manual/coreutils.html
+# End of cix-gnu-corutils.org
