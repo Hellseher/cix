@@ -1,23 +1,33 @@
-# File           : cix-dmidecode.org
-# Created        : <2016-11-13 Sun 19:49:01 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-dmidecode.org
+# Created       : <2016-11-13 Sun 19:49:01 GMT>
+# Modified      : <2017-8-09 Wed 00:02:41 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      :
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: dmidecode
+[[file:../cix-main.org][|≣|]]
+#+TITLE: dmidecode
 
-|-------------+---------------|
-| *Author*      |               |
-| *Contributors* |               |
-| *Released*    |               |
-| *Source*      | [[http://git.savannah.gnu.org/cgit/dmidecode.git][dmidecode.git]] |
-|-------------+---------------|
+|--------------+------------------------------|
+| *Author*     | 	Alan Cox, Jean Delvare   [[http://git.savannah.gnu.org/cgit/dmidecode.git/plain/AUTHORS][•]] |
+| *Maintainer* |                              |
+| *Released*   |                              |
+| *Source*     | [[http://git.savannah.gnu.org/cgit/dmidecode.git][dmidecode.git]]                |
+| *Info*       | [[http://www.nongnu.org/dmidecode/][dmidecode]]                    |
+|--------------+------------------------------|
+=dmidecode= reports information about x86 & ia64 hardware as described in the
+system BIOS according to the SMBIOS/DMI standard. This information typically
+includes system manufacturer, model name, serial number, BIOS version, asset tag
+as well as a lot of other details of varying level of interest and reliability
+depending on the manufacturer.
+
+This will often include usage status for the CPU sockets, expansion slots (e.g.
+AGP, PCI, ISA) and memory module slots, and the list of I/O ports (e.g. serial,
+parallel, USB).-
 -----
-
-** Index
+* Index
 #+BEGIN_EXAMPLE
     biosdecode (8)       - BIOS information decoder
     dmidecode (8)        - DMI table decoder

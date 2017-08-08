@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-8-07 Mon 00:52:12 BST> sharlatan
+# Last Modified  : <2017-8-09 Wed 00:32:35 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -26,6 +26,7 @@ cix
 ├── cix-convension.org
 ├── cix-main.org
 ├── cix-stat.sh
+├── cix-todo.org
 ├── img
 ├── LICENSE
 ├── README.org
@@ -51,48 +52,51 @@ QTY  CMD       PKG
 33   tcpdump   tcpdump
 13   sed       sed
 10   find      gnu-findutils
-9    dd        gnu-core-utilities
-6    awk       awk
+9    dd        gnu-coreutils
+6    awk       gawk
 5    mount     util-linux
-5    ls        gnu-core-utilities
+5    ls        gnu-coreutils
 4    lsof      lsof
 4    grep      gnu-grep
 4    curl      curl
 4    column    util-linux
 3    xargs     gnu-findutils
-3    tr        gnu-core-utilities
+3    tr        gnu-coreutils
 2    wget      wget
-2    tee       gnu-core-utilities
+2    tee       gnu-coreutils
 2    tar       tar
 2    ssh       openssh
 2    rsync     rsync
+2    nohup     gnu-coreutils
 2    nc        netcat
+1    udevadm   systemd
 1    strace    strace
 1    smem      smem
 1    set       gnu-bash
-1    rm        gnu-core-utilities
+1    rm        gnu-coreutils
 1    rev       util-linux
 1    printf    gnu-bash
 1    ping      iputils
+1    perf      perf
+1    paste     gnu-coreutils
 1    pacman    pacman
 1    objdump   gnu-binutils
-1    nohup     gnu-core-utilities
-1    mv        gnu-core-utilities
-1    mktemp    gnu-core-utilities
-1    mkdir     gnu-core-utilities
-1    ln        gnu-core-utilities
+1    mv        gnu-coreutils
+1    mktemp    gnu-coreutils
+1    mkdir     gnu-coreutils
+1    ln        gnu-coreutils
 1    ldd       glibc
 1    gpasswd   shadow-utils
 1    flock     util-linux
-1    expr      gnu-core-utilities
-1    du        gnu-core-utilities
+1    expr      gnu-coreutils
+1    du        gnu-coreutils
 1    command   gnu-bash
-1    base64    gnu-core-utilities
+1    base64    gnu-coreutils
 1    aptitude  aptitude
 1    aprping   iputils
 
 Distribution per example:
 
-Onliners:  134
-Scripts:   37
+Onliners:  138
+Scripts:   43
 #+END_SRC

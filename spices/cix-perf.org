@@ -1,10 +1,40 @@
 # File           : cix-perf.org
-# Created        : <2017-03-10 Fri 23:11:30 GMT>
-# Modified       : <2017-3-10 Fri 23:11:39 GMT> sharlatan
+# Created        : <2017-08-08 Tue 22:53:39 BST>
+# Modified       : <2017-8-09 Wed 00:05:41 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis       : Performance monitoring for the Linux kernel
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: perf
+[[file:../README.org*Index][|≣|]]
+#+TITLE: perf
+|-----------------+-----------|
+| *Author*        |           |
+| *Maintainer(s)* |           |
+| *Released*      |           |
+| *Source*        |           |
+| *Info*          | [[https://perf.wiki.kernel.org/index.php/Main_Page][perf.wiki]] |
+|-----------------+-----------|
+Perf is a profiler tool for Linux 2.6+ based systems that abstracts away CPU
+hardware differences in Linux performance measurements and presents a simple
+commandline interface. Perf is based on the perf_events interface exported by
+recent versions of the Linux kernel.
+-----
+* Index
+* Receipts
+** perf
+*** perf::examples
+**** perf-170809000348
+Run a programm repeatedly and summarize the time it takes:
+:    ~$ perf stat -r 100 ./program
+
+* Refreances
+** Links
+- Analyzing performance using perf annotate
+https://www.ibm.com/developerworks/library/l-analyzing-performance-perf-annotate-trs/index.html
+- =perf= Examples
+http://www.brendangregg.com/perf.html?cm_mc_uid=39251919996114790637160&cm_mc_sid_50200000=1502230500
+** Hubs
+- https://github.com/brendangregg/perf-tools
+# End of cix-perf.org

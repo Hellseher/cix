@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-07 Mon 00:40:08 BST> sharlatan
+# Modified   : <2017-8-08 Tue 23:59:58 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -76,7 +76,7 @@ on *GNU/Linux*
 - *Core* /usually it contains on the most distributions/
   + bsd :: list of common bsd commands
   + [[./spices/cix-busybox.org][BusyBox]] :: the swiss army knife of embedded Linux
-  + [[./spices/cix-gnu-core-utilities.org][gnu-coreutilities]] :: basic file, shell and text manipulation utilities: =Linux FreeBSD=
+  + [[./spices/cix-gnu-coreutils.org][gnu-coreutis]] :: basic file, shell and text manipulation utilities: =Linux FreeBSD=
   + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console (keyboard, virtual terminals, etc.)
   + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: =Linux=
   + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens with
@@ -127,19 +127,24 @@ on *GNU/Linux*
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
-  + [[./spices/cix-perf.org][perf]] :: Performance monitoring for the Linux kerne
   + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
 
 - *Hardware* /hard as a rock!/
+  + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data: =Linux= =FreeBSD= =NetBSD=
+       =OpenBSD= =BeOS= =Solaris= =Haiku=
+  + [[./spices/cix-lshw.org][lshw]] :: hardware lister: =Linux=
+  + [[file:~/Projects/my-GitHub/spices/cix-oprofile.org][OProfile]] :: System wide profiler: =Linux=
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =Linux FreeBSD netbsd openbsd=
        =GNU/Linux FreeBSD Solaris/i386 AIX GNU-Hurdd Windows Cygwin BeOS Haiku=
        =Darwin=
-  + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks
-  + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data
-  + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities
-  + [[./spices/cix-lshw.org][lshw]] :: hardware lister
+  + [[./spices/cix-perf.org][perf]] :: Performance monitoring for the Linux kerne: =Linux=
+  + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks: =OS-X=
+       =Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS/2= =Cygwin= =QNX=
+       =eComStation= =Win=
   + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =Linux
        Gentoo OpenBSD FreeBSD=
+  + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities: =Linux=
+  + [dtrace] ::
 
 - *Searching* /loosing my religion/
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder

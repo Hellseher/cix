@@ -1,13 +1,24 @@
-# File           : cix-usbutils.org
-# Created        : <2016-11-13 Sun 20:16:58 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-usbutils.org
+# Created       : <2016-11-13 Sun 20:16:58 GMT>
+# Modified      : <2017-8-09 Wed 00:02:41 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      :
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: us-utilities
+[[file:../cix-main.org][|≣|]]
+#+TITLE: usbutils
+|-----------------+--------------------------------------------|
+| *Author*        | Thomas Sailer, <t.sailer@alumni.ethz.ch> [[https://github.com/gregkh/usbutils/blob/master/AUTHORS][*]] |
+| *Maintainer(s)* |                                            |
+| *Released*      |                                            |
+| *Source*        | [[https://github.com/gregkh/usbutils][usbutils.git]]                               |
+| *Info*          |                                            |
+|-----------------+--------------------------------------------|
+
+
+-----
 
 * Index
 #+BEGIN_EXAMPLE
@@ -15,3 +26,4 @@
    usb-devices (1)      - print USB device details
    usbhid-dump (8)      - dump USB HID device report descriptors and streams
 #+END_EXAMPLE
+# End of cix-usbutils.org

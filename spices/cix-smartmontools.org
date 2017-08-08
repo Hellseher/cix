@@ -1,6 +1,6 @@
 # File           : cix-smartmontools.org
 # Created        : <2017-08-07 Mon 00:28:50 BST>
-# Modified       : <2017-8-07 Mon 00:28:52 BST> sharlatan
+# Modified       : <2017-8-08 Tue 23:50:31 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       :
@@ -9,13 +9,13 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: smartmontools
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-------------------------------------------------|
+| *Author*        | 	Bruce Allen, Christian Franke, Guido Guenther |
+| *Maintainer(s)* |                                                 |
+| *Released*      | 2002                                            |
+| *Source*        |                                                 |
+| *Info*          | [[https://www.smartmontools.org/][smartmontools]]                                   |
+|-----------------+-------------------------------------------------|
 
 
 -----
@@ -23,4 +23,4 @@
 * Receipts
 * Refreances
 
-  # End of cix-smartmontools.org
+# End of cix-smartmontools.org
