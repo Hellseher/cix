@@ -1,6 +1,6 @@
 # File           : cix-strace.org
 # Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-8-16 Wed 00:13:35 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis :
@@ -8,14 +8,15 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-
 #+TITLE: strace
-
-|--------------+----------------|
+|----------------+----------------|
 | *Author*       | Paul Kraneburg |
 | *Contributors* | Dmitry Levin   |
 | *Released*     | 1991           |
-|--------------+----------------|
+| *Source*       | [[https://github.com/strace/strace][strace.git]]     |
+| *Man*          | [[http://man7.org/linux/man-pages/man1/strace.1.html][strace.man]]     |
+| *Info*         | [[https://strace.io/][strace.io]]      |
+|----------------+----------------|
 
 The strace program  intercepts and records the system calls  called and received
 by  a running  process.  Strace  can print  a record  of each  system call,  its
@@ -24,15 +25,40 @@ debugging, as well as for instructional purposes.
 
 Install strace if you need a tool to track the system calls made and received by
 a process.
+-----
 ** Libraries
 
 -----
 
 * Receipts
 ** strace                                                                       :cmd:
+*** strace::options
+| OPT  | TYPE | ++V | --V | DESC |
+| =-e= |      |     |     |      |
+| =-t= |      |     |     |      |
+| =-c= |     |     |     |      |
+
+
 *** strace::examples
 **** strace-161214223950
 list open files and libraries of a command:
 :    ~$ strace uptime 2>&1 | grep "open"
+
+**** strace-170815235928
+trace a specific system calls in a executable:
+:    ~$ strace -e open <CMD>
+:    ~$ strace -e trace=open,read <CMD>
+
+**** strace-170816000135
+print timestamp for each trace output line:
+:    ~$ strace -t -e open <CMD>
+
+**** strace-170816000443 
+generate statistics report of system calls:
+:    ~$ strace -c <CMD>
+
 *** strace::see-also
 ltrace xtrace trace-cmd ftrace truss DTrace ktrace kdump
+
+* References
+** IRC

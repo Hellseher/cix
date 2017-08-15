@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-8-08 Tue 23:59:58 BST> sharlatan
+# Modified   : <2017-8-15 Tue 23:54:34 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -88,14 +88,14 @@ on *GNU/Linux*
 - *File* /everything is a file/!
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a gnu collection of diff utilities
   + [[./spices/cix-emacs.org][emacs]] :: gnu emacs text editor
+  + [[./spices/cix-file.org][file]] :: a utility for determining file types: =Linux NetBSD FreeBSD OS/2 DOS Win=
   + [[./spices/cix-gawk.org][gawk]] :: the gnu version of the awk text processing utility
-  + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better
+  + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better: =Linux= =UNIX= =OS-X=
   + [[./spices/cix-lsof.org][lsof]] :: a utility which lists open files on a Linux/unix system
   + [[./spices/cix-micro.org][micro]] :: a modern and intuitive terminal-based text editor
   + [[./spices/cix-nano.org][nano]] :: a small text editor
   + [[./spices/cix-sed.org][sed]] :: a gnu stream text editor
-  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: =FreeBSD Linux OS-X=
-  + [[./spices/cix-file.org][file]] :: A utility for determining file types: =Linux NetBSD FreeBSD OS/2 DOS Win=
+  + [[./spices/cix-vim.org][vim]] :: recent enhancements of vim: =FreeBSD= =Linux= =OS-X=
 
 - *Transfare-sync* /put me up, put me down/
   + [[file:./spices/cix-curl.org][curl]] :: a utility for getting files from remote servers: =Linux FreeBSD=
@@ -128,12 +128,13 @@ on *GNU/Linux*
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
   + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
+  + [likwid]  :: 
 
 - *Hardware* /hard as a rock!/
   + [[./spices/cix-dmidecode.org][dmidecode]] :: tool to analyse bios dmi data: =Linux= =FreeBSD= =NetBSD=
        =OpenBSD= =BeOS= =Solaris= =Haiku=
-  + [[./spices/cix-lshw.org][lshw]] :: hardware lister: =Linux=
-  + [[file:~/Projects/my-GitHub/spices/cix-oprofile.org][OProfile]] :: System wide profiler: =Linux=
+ + [[./spices/cix-lshw.org][lshw]] :: hardware lister: =Linux=
+  + [[file:./spices/cix-oprofile.org][OProfile]] :: System wide profiler: =Linux=
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =Linux FreeBSD netbsd openbsd=
        =GNU/Linux FreeBSD Solaris/i386 AIX GNU-Hurdd Windows Cygwin BeOS Haiku=
        =Darwin=
@@ -145,6 +146,7 @@ on *GNU/Linux*
        Gentoo OpenBSD FreeBSD=
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities: =Linux=
   + [dtrace] ::
+  + [iw] :: A nl80211 based wireless configuration tool
 
 - *Searching* /loosing my religion/
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder
@@ -219,6 +221,7 @@ on *GNU/Linux*
   + [[./spices/cix-gdb.org][gdb]] :: a gnu source-level debugger for C, C++, Fortran, Go and other languages
   + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
   + [[./spices/cix-autoconf.org][autoconf]] :: a gnu tool for automatically configuring source code
+  + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool
 
 - *Packaging* /pack me up, pack me down/
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
