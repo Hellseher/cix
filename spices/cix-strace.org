@@ -1,6 +1,6 @@
 # File           : cix-strace.org
 # Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Modified  : <2017-8-16 Wed 00:13:35 BST> sharlatan
+# Modified  : <2017-8-17 Thu 22:39:04 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis :
@@ -36,8 +36,9 @@ a process.
 | OPT  | TYPE | ++V | --V | DESC |
 | =-e= |      |     |     |      |
 | =-t= |      |     |     |      |
-| =-c= |     |     |     |      |
-
+| =-c= |      |     |     |      |
+| =-p= |      |     |     |      |
+| =-f= |      |     |     |      |
 
 *** strace::examples
 **** strace-161214223950
@@ -56,6 +57,11 @@ print timestamp for each trace output line:
 **** strace-170816000443 
 generate statistics report of system calls:
 :    ~$ strace -c <CMD>
+
+**** strace-170817222951
+capture all network traffic of a single process:
+:    ~# strace -f -e trace=network -s 10000 <CMD>    # if not running
+:    ~# strace -f -e trace=network -s 10000 -p <PID> # if runnint
 
 *** strace::see-also
 ltrace xtrace trace-cmd ftrace truss DTrace ktrace kdump

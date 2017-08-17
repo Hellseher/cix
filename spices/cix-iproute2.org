@@ -1,23 +1,25 @@
-# File          : iproute2.md
-# Created       : Wed 17 Feb 2016 02:44:12
-# Modified : Sat 01 Oct 2016 01:42:12 sharlatan
-# Maintainer    : sharlatan
-# Sinopsis :
+# File       : iproute2.md
+# Created    : Wed 17 Feb 2016 02:44:12
+# Modified   : <2017-8-18 Fri 00:01:00 BST> sharlatan
+# Maintainer : sharlatan
+# Sinopsis   : Advanced IP routing and network device configuration tools
 
 #+OPTIONS: toc:nil num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: iproute2
-|--------------+----------------------------------------------------|
+|----------------+----------------------------------------------------|
 | *Author*       | Alexey Kuznetsovd                                  |
-|--------------+----------------------------------------------------|
 | *Contributors* | Nikolay Aleksandrov, Daniel Borkmann, Roopa Prabhu |
-|              | Gustavo Zacarias, Nicolas Dichtel, Paolo Abeni     |
-|              | Stephen Hemminger, Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]             |
+|                | Gustavo Zacarias, Nicolas Dichtel, Paolo Abeni     |
+|                | Stephen Hemminger, Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]             |
 | *Realised*     | 2007                                               |
 | *Source*       | [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/][iproute2]]                                           |
-|--------------+----------------------------------------------------|
-
+|----------------+----------------------------------------------------|
+The iproute package contains networking utilities (ip and rtmon, for example)
+which are designed to use the advanced networking capabilities of the Linux
+2.4.x and 2.6.x kernel.
+-----
 * Index
 #+BEGIN_EXAMPLE
     ip (8)     - show / manipulate routing, devices, policy routing and tunnels
@@ -72,20 +74,26 @@ ${NM} - netmask
 ** ss                                                                           :cmd:
 [[Index][⬆]]
 *** ss::options
+| OPT               | TYPE | ++V | --V | DESC                                     |
+|-------------------+------+-----+-----+------------------------------------------|
+| =-p, --processes= |      |     |     | Show process using socket.               |
+| =-n, --numeric=   |      |     |     | Do not try to resolve service names.     |
+| =-a, --all=       |      |     |     | Display both listening and non-listening |
+|-------------------+------+-----+-----+------------------------------------------|
 *** ss::examples
 
-- ss-161116231307 :: programms that request access to Internet. banch of onelinere core option *-p*
-#+BEGIN_SRC sh
-  ss -p | cat
-  ss -p | grep STA
+**** ss-161116231307 
+programms that request access to Internet
+:    ~# ss -p | cat
+:    ~# ss -p | grep STA
+:    ~# ss -p | cut -f2 -sd\"or # Just process/command name
+:    ~# ss -p | grep STA | cut -f2 -d\"
+[[file:./cix-gnu-coreutils.org::*cat][cat]] [[file:./cix-gnu-coreutils.org::*cut][cut]] [[file:./cix-gnu-grep.org::*grep][grep]] 
 
-  # Just process/command name
-  ss -p | cut -f2 -sd\"or
-  ss -p | grep STA | cut -f2 -d\"
-#+END_SRC
-cat,
-cut,
-grep,
+**** ss-170817234939
+list top 10 PIDs wich has most of all connections:
+:    ~# ss -nap | grep -P "(?<=pid\=)[0-9]+" -o | sort | uniq -c | sort -rn | head
+[[file:./cix-gnu-coreutils.org::*sort][sort]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]] [[file:./cix-gnu-coreutils.org::*head][head]] [[file:./cix-gnu-grep.org::*grep][grep]]
 
 *** ss::files
 *** ss::see-also

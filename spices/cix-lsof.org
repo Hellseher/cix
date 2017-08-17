@@ -1,6 +1,6 @@
 # File           : cix-lsof.org
 # Created        : <2016-11-05 Sat 23:22:08 GMT>
-# Modified  : <2017-7-21 Fri 00:32:45 BST> sharlatan
+# Modified  : <2017-8-17 Thu 23:46:18 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s   :
 # Sinopsis :
@@ -24,38 +24,13 @@ system.
 * Receipts
 ** lsof                                                                         :cmd:
 *** lsof::options
-- COMMAND ::
-- PID ::
-- TID ::
-- USER ::
-- FD :: FileDiscriptor
-  + *[0-9]+[rwu-]*
-    - r for read access;
-    - w for write access;
-    - u for read and write access;
-    - space if mode unknown and no lock character follows;
-    - '-' if mode unknown and lock character follows.
-  + colord
-  + cwd - CurentWorkingDirectory;
-  + dbus
-   + DEL -
-  + gdm
-  + mem - MEmoryMapped file;
-  + mem-r
-  + mmap - MemoryMapped device;
-  + NOFD
-  + pd - ParentDirectory;
-  + polkitd
-  + rtd - RooTDirectory;
-  + rtkit
-  + txt - TeXT;
-  + USER
-- TYPE ::
-  + VDIR
-  + VREG
-- DEVICE ::
-- SIZE/OFF ::
-- NODE NAME ::
+| OPT  | TYPE | ++V | --V | DESC |
+| =-i= |      |     |     |      |
+| =-P= |      |     |     |      |
+| =-a= |      |     |     |      |
+| =-p= |      |     |     |      |
+| =-e= |      |     |     |      |
+| =-f= |      |     |     |      |
 *** lsof::examples
 **** lsof-161105232800
 If there are a lot of files you are trying to search in, *lsof* helps to watch a
@@ -64,9 +39,9 @@ directory which *find* working on:
 
 **** lsof-161106001559
 List of open port/connections, main option *-i*:
-:    ~ # lsoff -i -P -n       # All open connections
-:    ~ # lsoff -i -a -p 1234  # All connections with PID=1234
-:    ~ # lsoff -i tcp:80      # Process licenning port 80
+:    ~# lsof -i -P -n       # All open connections
+:    ~# lsof -i -a -p 1234  # All connections with PID=1234
+:    ~# lsof -i tcp:80      # Process licenning port 80
 
 **** lsof-170719225835
 To exlude a file and check sertain files:

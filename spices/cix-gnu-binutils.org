@@ -1,6 +1,6 @@
 # File           : cix-gnu-binutils.org
 # Created        : <2015-11-02 Mon 22:18:23 GMT>
-# Modified  : <2017-7-12 Wed 20:40:28 BST> sharlatan
+# Modified  : <2017-8-17 Thu 22:29:02 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis :
@@ -9,13 +9,13 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Bin Utils
-|---------------+------------------|
-| *Author*        |                  |
+|----------------+------------------|
+| *Author*       | Alan Modra       |
 | *Maintainer(s) |                  |
-| *Released*      |                  |
-| *Source*        | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
-| *Info*          |                  |
-|---------------+------------------|
+| *Released*     |                  |
+| *Source*       | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
+| *Info*         |                  |
+|----------------+------------------|
 
  Binutils is a collection of binary utilities, including ar (for creating,
  modifying and extracting from archives), as (a family of GNU assemblers), gprof
@@ -25,8 +25,8 @@
  an index for the contents of an archive), readelf (for displaying detailed
  information about binary files), size (for listing the section sizes of an
  object or archive file), strings (for listing printable strings from files),
- strip (for discarding symbols), and addr2line (for converting addresses to file
- and line).
+ strip (for digit --no-pager shortlog -nse | cut -f 2- | sort -f)scarding
+ symbols), and addr2line (for converting addresses to file and line).
 -----
 
 ** Libraries
@@ -79,9 +79,13 @@
 *** as::files
 *** as::see-also
 ** nm                                                                           :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /list symbols from object files/
+
 *** nm::options
 *** nm::examples
+**** nm-170817220958
+list available functions in a shared librry .so file:
+:    ~$ nm -D /usr/lib/libc.*
 *** nm::files
 *** nm::see-also
 ** ld                                                                           :cmd:
