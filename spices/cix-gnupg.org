@@ -1,0 +1,38 @@
+# File           : cix-gpg.org
+# Created        : <2017-08-07 Mon 00:14:36 BST>
+# Modified       : <2017-8-19 Sat 01:10:16 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : A GNU utility for secure communication and data storage
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: gnupg
+|-----------------+-------------|
+| *Author*        | Werner Koch |
+| *Maintainer(s)* |             |
+| *Released*      | 1999        |
+| *Source*        | [[git://git.gnupg.org/gnupg.git][gnupg.git]]   |
+| *Info*          |             |
+|-----------------+-------------|
+
+
+-----
+* Index
+* Receipts
+** gpg
+*** gpg::options
+| OPT             | TYPE | ++V | --V | DESC |
+|-----------------+------+-----+-----+------|
+| =-v=            |      |     |     |      |
+| =-c=            |      |     |     |      |
+| =--cipher-algo= |      |     |     |      |
+|-----------------+------+-----+-----+------|
+*** gpg::examples
+**** gpg-170819010727
+encrypt file with the symetric cipher AES256:
+:   ~$ gpg -v -c --cipher-algo AES256 input_file
+* Refreances
+
+  # End of cix-gpg.org
