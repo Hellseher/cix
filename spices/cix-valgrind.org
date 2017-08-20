@@ -1,0 +1,33 @@
+# File           : cix-valgrind.org
+# Created        : <2017-08-20 Sun 22:49:31 BST>
+# Modified       : <2017-8-20 Sun 22:56:11 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Tool for finding memory management bugs in programs
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: valgrind
+|-----------------+---------------|
+| *Author*        | Julian Seward |
+| *Maintainer(s)* |               |
+| *Released*      | 2006          |
+| *Source*        | [[https://sourceware.org/git/?p=valgrind.git;a=summary][valgrind.git]]  |
+| *Info*          | [[http://valgrind.org/info/][valgrind.web]]  |
+|-----------------+---------------|
+
+Valgrind is an instrumentation framework for building dynamic analysis tools.
+There are Valgrind tools that can automatically detect many memory management
+and threading bugs, and profile your programs in detail. You can also use
+Valgrind to build new tools. The Valgrind distribution currently includes six
+production-quality tools: a memory error detector (memcheck, the default tool),
+two thread error detectors (helgrind and drd), a cache and branch-prediction
+profiler (cachegrind), a call-graph generating cache and branch-prediction
+profiler (callgrind), and a heap profiler (massif).ard
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-valgrind.org

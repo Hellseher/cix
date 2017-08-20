@@ -1,0 +1,27 @@
+# File           : cix-ctags.org
+# Created        : <2017-08-15 Tue 22:44:20 BST>
+# Modified       : <2017-8-15 Tue 22:47:10 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ctags
+|-----------------+------------|
+| *Author*        | Ken Arnold |
+| *Maintainer(s)* |            |
+| *Released*      |            |
+| *Source*        | [[https://github.com/universal-ctags/ctags][ctags.git]]  |
+| *Info*          |            |
+|-----------------+------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-ctags.org
+ 
