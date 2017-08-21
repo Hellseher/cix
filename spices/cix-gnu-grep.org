@@ -1,14 +1,34 @@
-# File           : cix-gnu-grep.org
-# Created        : <2016-11-18 Fri 23:49:59 GMT>
-# Modified  : <2017-8-07 Mon 00:09:27 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-gnu-grep.org
+# Created       : <2016-11-18 Fri 23:49:59 GMT>
+# Modified      : <2017-8-21 Mon 22:51:31 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Pattern matching utilities
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: GNU Grep
+[[file:../cix-main.org][|≣|]]
+#+TITLE: GNU Grep
+|-----------------+---------------------|
+| *Author*        | Ken Thompson,       |
+|                 | Mike Haertel,       |
+|                 | Arthur David Olson, |
+|                 | Richard Stallman,   |
+|                 | Karl Berry,         |
+|                 | Henry Spencer,      |
+|                 | Scott Anderson,     |
+|                 | David MacKenzie     |
+| *Maintainer(s)* |                     |
+| *Released*      | 1974, 1993          |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/grep.git][grep.git]]            |
+| *Man*           | [[http://man7.org/linux/man-pages/man1/grep.1.html][grep.1]]              |
+| *Info*          | [[https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html][grep.web]]            |
+|-----------------+---------------------|
 
+The GNU versions of commonly used grep utilities. Grep searches through textual
+input for lines which contain a match to a specified pattern and then prints the
+matching lines. GNU's grep utilities include grep, egrep and fgrep.
+-----
 * Index
 #+BEGIN_EXAMPLE
     egrep (1) - print lines matching a pattern
@@ -20,6 +40,14 @@
 * Receipts
 ** grep                                                                         :cmd:
 *** grep::options
+| OPT                         | TYPE | ++V | --V | DESC                                                                                    |
+|-----------------------------+------+-----+-----+-----------------------------------------------------------------------------------------|
+| =-r, --recursive=           |      |     |     |                                                                                         |
+| =-L, --files-without-match= |      |     |     |                                                                                         |
+| =-c, --count=               |      |     |     |                                                                                         |
+| =-i, --ignore-case=         |      |     |     | Ignore case distinctions, so that characters that differ only in case match each other. |
+| =-H, --with-filename=       |      |     |     |                                                                                         |
+|-----------------------------+------+-----+-----+-----------------------------------------------------------------------------------------|
 *** grep::examples
 **** grep-161120232651
 check virtualisation support of CPU:
@@ -30,11 +58,22 @@ grep process list exluding grep itself:
 :    ~$ ps aux | grep [e]macs
 
 **** grep-170203223001
-Split line of text into character array:
+split line of text into character array:
 :    ~$ char_array="$(echo $input_line | grep -o .)"
+[[file:./cix-gnu-coreutils.org::*echo][echo]]
+
 **** grep-170807000616
-Find all files wich has not matched PATERN:
-:   ~$ find ./ -type f -print0 | xargs -0 grep -L "PATERN"
+find all files wich has not matched PATERN:
+:    ~$ find ./ -type f -print0 | xargs -0 grep -L "PATERN"
+[[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-findutils.org::*find][find]]
+
+**** grep-170821224051
+find files that do not contain matching PATERN:
+:    ~$ find ./ -type f -print0 | xargs -0 grep -H -c "PATERN" | grep "0$" | cut -d":" -f1
+:    ~$ find ./ -type f -exec grep -H -c "PATERN" {} \; | grep "0$" | cut -d":" -f1
+:    ~$ find ./ -type f -prnt0 | xargs -0 grep -L "PATERN" 
+:    ~$ grep -rL "PATERN" ./
+[[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
 
 *** grep1::files
 *** grep::vars
