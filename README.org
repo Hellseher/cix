@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-8-21 Mon 22:52:02 BST> sharlatan
+# Last Modified  : <2017-8-22 Tue 23:10:40 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -51,9 +51,9 @@ QTY  CMD       PKG
 ---  ---       ---
 33   tcpdump   tcpdump
 13   sed       sed
+11   awk       gawk
 10   find      gnu-findutils
 10   dd        gnu-coreutils
-6    awk       gawk
 5    strace    strace
 5    mount     util-linux
 5    ls        gnu-coreutils
@@ -100,6 +100,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  158
-Scripts:   56
+Onliners:  167
+Scripts:   58
 #+END_SRC
