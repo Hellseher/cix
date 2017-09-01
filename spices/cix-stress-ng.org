@@ -1,0 +1,29 @@
+# File           : cix-stress-ng.org
+# Created        : <2017-09-02 Sat 00:22:56 BST>
+# Modified       : <2017-9-02 Sat 00:32:54 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Stress test a computer system in various ways
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: stress-ng
+|-----------------+----------------|
+| *Author*        | Colin Ian King |
+| *Maintainer(s)* |                |
+| *Released*      | 2012           |
+| *Source*        | [[http://kernel.ubuntu.com/git/cking/stress-ng.git/][stress-ng.git]], |
+|                 | [[https://github.com/ColinIanKing/stress-ng][stress-ng.git]]  |
+| *Info*          | [[http://kernel.ubuntu.com/~cking/stress-ng/][stress-ng.web]]  |
+|-----------------+----------------|
+
+=stress-ng= will stress test a computer system in various selectable ways. It
+was designed to exercise various physical subsystems of a computer as well as
+the various operating system kernel interfaces. Stress-ng features:
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-stress-ng.org
