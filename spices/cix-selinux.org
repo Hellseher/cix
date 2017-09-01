@@ -1,26 +1,61 @@
 # File           : cix-selinux.org
 # Created        : <2017-08-05 Sat 00:20:51 BST>
-# Modified       : <2017-8-07 Mon 00:01:48 BST> sharlatan
+# Modified       : <2017-8-20 Sun 23:32:22 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Security enhancement to Linux.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: SElinux
-|-----------------+-------------|
-| *Author*        |             |
-| *Maintainer(s)* |             |
-| *Released*      |             |
-| *Source*        | [[https://github.com/SELinuxProject/selinux][selinux.git]] |
-| *Info*          |             |
-|-----------------+-------------|
+|-----------------+--------------|
+| *Author*        | /NSA/        |
+| *Maintainer(s)* |              |
+| *Released*      | 1998         |
+| *Source*        | [[https://github.com/SELinuxProject/selinux][selinux.git]]  |
+| *Man*           | [[http://man7.org/linux/man-pages/man8/selinux.8.html][selinux.8]]    |
+| *Info*          | [[https://selinuxproject.org/page/Main_Page][selinux.wiki]] |
+|-----------------+--------------|
 
+Security-enhanced Linux is a feature of the Linux® kernel and a number of
+utilities with enhanced security functionality designed to add mandatory access
+controls to Linux. The Security-enhanced Linux kernel contains new architectural
+components originally developed to improve the security of the Flask operating
+system. These architectural components provide general support for the
+enforcement of many kinds of mandatory access control policies, including those
+based on the concepts of Type Enforcement®, Role-based Access Control, and
+Multi-level Security.
 
+policycoreutils contains the policy core utilities that are required for basic
+operation of a SELinux system. These utilities include load_policy to load
+policies, setfiles to label filesystems, newrole to switch roles.
+** Packages
+
+policycoreutils
 -----
 * Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc policycoreutils
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD              | MAN | DESCRIPTION                                               |
+| secon            | (1) | See an SELinux context, from a file, program or user i... |
+| fixfiles         | (8) | fix file SELinux security contexts.                       |
+| genhomedircon    | (8) | generate SELinux file context configuration entries fo... |
+| load_policy      | (8) | load a new SELinux policy into the kernel                 |
+| restorecon       | (8) | restore file(s) default SELinux security contexts.        |
+| restorecon_xattr | (8) | manage security.restorecon_last extended attribute ent... |
+| semodule         | (8) | Manage SELinux policy modules.                            |
+| sestatus         | (8) | SELinux status tool                                       |
+| setfiles         | (8) | set SELinux file security contexts.                       |
+| setsebool        | (8) | set SELinux boolean value                                 |
+#+END_SRC
+
 * Receipts
 * Refreances
 
-# End of cix-selinux.org
+# End of cix-selinux.org 
+

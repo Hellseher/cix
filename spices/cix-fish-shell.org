@@ -1,15 +1,28 @@
-# File           : cix-fish.org
-# Created        : <2016-11-12 Sat 23:00:43 GMT>
-# Modified  : <2017-2-27 Mon 23:31:06 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-fish-shell.org
+# Created       : <2016-11-12 Sat 23:00:43 GMT>
+# Modified      : <2017-8-23 Wed 22:55:43 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A friendly interactive shell
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Fish shell
+#+TITLE: fish-shell
+|-----------------+-------------------|
+| *Author*        | Axel Liljencrantz |
+| *Maintainer(s)* |                   |
+| *Released*      | 2005              |
+| *Source*        | [[https://github.com/fish-shell/fish-shell][fish-shell.git]]    |
+| *Man*           |                   |
+| *Info*          |                   |
+|-----------------+-------------------|
 
+=fish= is a fully-equipped command line shell (like =bash= or =zsh=) that is
+smart and user-friendly. fish supports powerful features like syntax
+highlighting, autosuggestions, and tab completions that just work, with nothing
+to learn or configure.
+-----
 * Index
 #+BEGIN_EXAMPLE
     abbr

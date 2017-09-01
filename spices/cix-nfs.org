@@ -1,6 +1,6 @@
-# File           : cix-nfs-utils.org
+# File           : cix-nfs.org
 # Created        : <2016-11-07 Mon 22:11:39 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-8-21 Mon 21:44:59 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis :
@@ -8,15 +8,20 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: NFS utils
+#+TITLE: NFS
 
-|-------------+---------------|
-| *Author*      |               |
-| *Contributors* |               |
-| *Realiesed*   |               |
-| *Source*      | [[http://git.linux-nfs.org/][linux-nfs.git]] |
-| *Info*        |               |
-|-------------+---------------|
+|----------------+------------------|
+| *Author(s)*    | Russel Sandberg, |
+|                | Bob Lyon,        |
+|                | Bill Joy,        |
+|                | Steve Kleiman    |
+| *Contributors* |                  |
+| *Realiesed*    | 1989             |
+| *Source*       | [[http://git.linux-nfs.org/][linux-nfs.git]]    |
+| *Info*         |                  |
+|----------------+------------------|
+** Packages
+*** nfs-utils
 The nfs-utils  package provides a daemon  for the kernel NFS  server and related
 tools, which  provides a much higher  level of performance than  the traditional
 Linux NFS server used by most users.
@@ -140,3 +145,4 @@ Linux NFS server used by most users.
 - IETF::Network File System Version 4 (nfsv4) https://datatracker.ietf.org/wg/nfsv4/documents/
 - IETF::NFS: Network File System Protocol Specification https://tools.ietf.org/html/rfc1094
 - IETF::Network File System (NFS) version 4 Protocol https://www.ietf.org/rfc/rfc3530.txt
+# End of cix-nfs.org

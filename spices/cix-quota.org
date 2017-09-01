@@ -1,0 +1,52 @@
+# File          : cix-quota.org
+# Created       : <2015-12-13 Sun 20:46:43 GMT>
+# Modified      : <2017-8-28 Mon 00:28:14 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : System administration tools for monitoring users' disk usage
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: quota
+|-----------------+----------------------|
+| *Author*        | Jan Kara,            |
+|                 | Marco van Wieringen, |
+|                 | Nathan Scott         |
+| *Maintainer(s)* |                      |
+| *Released*      |                      |
+| *Source*        | [[https://sourceforge.net/p/linuxquota/code/ci/master/tree/][linuxquota.git]]       |
+| *Man*           |                      |
+| *Info*          |                      |
+|-----------------+----------------------|
+
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc quota
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD          | MAN | DESCRIPTION                                               |
+| quota        | (1) | display disk usage and limits                             |
+| quotasync    | (1) | synchronize in-kernel file system usage and limits to ... |
+| convertquota | (8) | convert quota from old file format to new one             |
+| edquota      | (8) | edit user quotas                                          |
+| quot         | (8) | summarize filesystem ownership                            |
+| quotacheck   | (8) | scan a filesystem for disk usage, create, check and re... |
+| quotaoff     | (8) | turn filesystem quotas on and off                         |
+| quotaon      | (8) | turn filesystem quotas on and off                         |
+| quotastats   | (8) | Program to query quota statistics                         |
+| repquota     | (8) | summarize quotas for a filesystem                         |
+| setquota     | (8) | set disk quotas                                           |
+| xqmstats     | (8) | Display XFS quota manager statistics from /proc           |
+#+END_SRC
+
+* References
+** Links
+- Learn about > managing disk quotas in Linux 
+  https://sourceforge.net/p/linuxquota/code/ci/master/tree/
+- Quotas implementation and management
+  http://www.i-justblog.com/2009/07/quotas-implementation-and-management.html
+
+# End of cix-quota.org
