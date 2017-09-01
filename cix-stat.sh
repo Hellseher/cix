@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # File     : cix-stat.sh
 # Created  : <2016-11-20 Sun 21:59:18 GMT> sharlatan
-# Modified : <2017-8-05 Sat 22:52:48 BST> sharlatan
+# Modified : <2017-9-02 Sat 00:56:39 BST> sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
 # Short    : Show statistic of examples.
 
@@ -47,7 +47,18 @@ man_doc()
                 -e 's/\(([a-z0-9]\{1,2\})\)/\|\1\|/' \
                 -e 's/ - //g' \
                 -e 's/$/\|/g' \
+                -e 's/.*[pP]erl.*//g'
                 -e 's/.*::.*//g'; } | column -t -s\| -o\|
+}
+
+manifest()
+{ # Compile a MANIFEST file
+    # Format: UNIXTIME.MLSEC TYPE SIZE PATH
+    find ./ -printf "%T@ %y %s %p\n" \
+        | grep -v "\.git\|\#\|\./$\|MANIFEST" \
+        | sort -rn \
+        | column -t \
+        | tee ./MANIFEST
 }
 
 main()
@@ -63,6 +74,9 @@ main()
             ;;
         mandoc)
             man_doc "$2"
+            ;;
+        manifest)
+            manifest
             ;;
     esac
 }
