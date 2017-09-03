@@ -1,0 +1,26 @@
+# File           : cix-automake.org<spices>
+# Created        : <2017-08-25 Fri 00:23:18 BST>
+# Modified       : <2017-8-28 Mon 22:36:08 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : A GNU tool for automatically creating Makefiles
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: automake
+|------------------+--------------------------|
+| *Author*         | David MacKenzie [[http://git.savannah.gnu.org/cgit/automake.git/tree/AUTHORS][(all...)]] |
+| *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/automake.git/tree/THANKS][(all...)]]                 |
+| *Released*       | 1996                     |
+| *Source*         | [[http://git.savannah.gnu.org/cgit/automake.git][automake.git]]             |
+| *Info*           |                          |
+|------------------+--------------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-automake.org

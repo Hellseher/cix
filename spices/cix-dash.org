@@ -1,0 +1,28 @@
+# File           : cix-dash.org
+# Created        : <2017-09-02 Sat 10:26:47 BST>
+# Modified       : <2017-9-02 Sat 12:43:56 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Small and fast POSIX-compliant shell.
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: dash
+|-----------------+------------|
+| *Author*        | Herbert Xu |
+| *Maintainer(s)* |            |
+| *Released*      | 1997       |
+| *Source*        | [[https://git.kernel.org/pub/scm/utils/dash/dash.git][dash.git]]   |
+| *Info*          |            |
+|-----------------+------------|
+
+DASH is a POSIX-compliant implementation of /bin/sh that aims to be as small as
+possible. It does this without sacrificing speed where possible. In fact, it is
+significantly faster than bash (the GNU Bourne-Again SHell) for most tasks.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-dash.org

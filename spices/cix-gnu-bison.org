@@ -1,0 +1,35 @@
+# File           : cix-gnu-bison.org
+# Created        : <2017-08-28 Mon 23:36:43 BST>
+# Modified       : <2017-9-03 Sun 21:38:30 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : A GNU general-purpose parser generator
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gnu-bison
+|-----------------+---------------------------|
+| *Author*        | Robert Corbett            |
+|                 | Richard Stallman [[http://git.savannah.gnu.org/cgit/bison.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                           |
+| *Released*      | 1985                      |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/bison.git/][bison.git]]                 |
+| *Info*          |                           |
+|-----------------+---------------------------|
+
+=bison= is a general purpose parser generator that converts a grammar
+description for an LALR(1) context-free grammar into a C program to parse that
+grammar. =bison= can be used to develop a wide range of language parsers, from
+ones used in simple desk calculators to complex programming languages. =bison=
+is upwardly compatible with =yacc=, so any correctly written =yacc= grammar
+should work with =bison= without any changes. If you know =yacc=, you shouldn't
+have any trouble using =bison=. You do need to be very proficient in C
+programming to be able to use =bison=. =bison= is only needed on systems that
+are used for development.
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-gnu-bison.org

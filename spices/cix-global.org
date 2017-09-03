@@ -1,0 +1,27 @@
+# File           : cix-global.org
+# Created        : <2017-08-28 Mon 22:23:25 BST>
+# Modified       : <2017-9-01 Fri 22:28:12 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :Source code tag system
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: global
+|-----------------+-----------------------------------|
+| *Author*        | /Tama Communications Corporation/ |
+| *Maintainer(s)* |                                   |
+| *Released*      | 2000                              |
+| *Source*        | [[http://web.cvs.savannah.gnu.org/viewvc/global/global/][global.cvs]]                        |
+| *Info*          |                                   |
+|-----------------+-----------------------------------|
+
+GNU GLOBAL is a source code tag system that works the same way across diverse
+environments. It supports C, C++, Yacc, Java, PHP and assembler source code.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-global.org

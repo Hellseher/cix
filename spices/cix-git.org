@@ -1,0 +1,31 @@
+# File           : cix-git.org
+# Created        : <2017-08-28 Mon 22:17:29 BST>
+# Modified       : <2017-8-28 Mon 22:22:57 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Fast Version Control System
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: git
+|-----------------+------------------|
+| *Author*        | 	Linus Torvalds |
+| *Maintainer(s)* |                  |
+| *Released*      | 2005             |
+| *Source*        | [[https://github.com/git/git][git.git]]          |
+| *Info*          | [[https://git-scm.com/about][git.web]]          |
+|-----------------+------------------|
+
+
+-----
+* Index
+* Receipts
+** git
+*** git::examples
+**** git-170828222035 
+list top 10 contributers to the project:
+:    ~$ git log --format='%aN' | sort | uniq -c | sort -rn | head
+* Refreances
+
+# End of cix-git.org

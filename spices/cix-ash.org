@@ -1,0 +1,26 @@
+# File           : cix-ash.org
+# Created        : <2017-09-02 Sat 10:26:27 BST>
+# Modified       : <2017-9-03 Sun 23:05:39 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Lightweight Unix shell. 
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ash
+|-----------------+------------------|
+| *Author*        | Kenneth Almquist |
+| *Maintainer(s)* |                  |
+| *Released*      | 1989             |
+| *Source*        | [[http://cvsweb.netbsd.org/bsdweb.cgi/src/bin/sh/][ash.cvs]]          |
+| *Info*          |                  |
+|-----------------+------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-ash.org
