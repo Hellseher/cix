@@ -1,66 +1,75 @@
-# File         : cix-sed.org
-# Created      : <2016-11-04 Fri 22:49:14 GMT>
-# Modified     : <2017-8-07 Mon 00:51:32 BST> sharlatan
-# Author       : sharlatan
-# Maintainer(s :
-# Sinopsis        :
+# File          : cix-sed.org
+# Created       : <2016-11-04 Fri 22:49:14 GMT>
+# Modified      : <2017-9-03 Sun 23:40:59 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A GNU stream text editor
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: SED
-|--------------+----------------|
-| *Author*       | Lee E. McMahon |
-| *Contributors* |                |
-| *Realised*     | 1974           |
-| *Source*       | [[http://git.savannah.gnu.org/gitweb/?p%3Dsed.git][sed.git]]        |
-| *Info*         |                |
-|--------------+----------------|
+#+TITLE: sed
+|-----------------+-----------------|
+| *Author(s)*     | Lee E. McMahon, |
+|                 | Jay Fenlason,   |
+|                 | Tom Lord        |
+| *Maintainer(s)* | Ken Pizzini,    |
+|                 | Paolo Bozini,   |
+|                 | Jim Meyering,   |
+|                 | Assaf Gordon    |
+| *Released*      | 1974            |
+|                 | gnu-1989        |
+| *Source*        | [[http://git.savannah.gnu.org/gitweb/?p%3Dsed.git][sed.git]]         |
+| *Info*          |                 |
+|-----------------+-----------------|
 
-The sed (Stream EDitor) editor is a stream or batch (non-interactive) editor.
+The =sed= (Stream EDitor) editor is a stream or batch (non-interactive) editor.
 Sed takes text as input, performs an operation or set of operations on the text
-and outputs the modified text.  The operations that sed performs (substitutions,
-deletions, insertions, etc.)  can be specified in a script file or from the
+and outputs the modified text. The operations that sed performs (substitutions,
+deletions, insertions, etc.) can be specified in a script file or from the
 command line.
 -----
-
 * Receipts
 ** GNU sed                                                                      :cmd:
 
 *** sed::options
-| OPT                             | TYPE | ++V | --V | DESC                                                  |
-|---------------------------------+------+-----+-----+-------------------------------------------------------|
+| OPT                               | TYPE | ++V | --V | DESC                                                  |
+|-----------------------------------+------+-----+-----+-------------------------------------------------------|
 | =-i[SUFFIX], --in-place[=SUFFIX]= |      |     |     | edit files in place (makes backup if SUFFIX supplied) |
 | =-e script, --expression=script=  |      |     |     | add the script to the commands to be execute          |
-| -r                              |      |     |     |                                                       |
+| =-r=                              |      |     |     |                                                       |
 | =-n, --quite, --silent=           |      |     |     | suppress automatic printing of pattern space          |
-|---------------------------------+------+-----+-----+-------------------------------------------------------|
+|-----------------------------------+------+-----+-----+-------------------------------------------------------|
 
 **** Regular expressions
 
-| SIMBOL | DESCRIPTIONS                               |
-|--------+--------------------------------------------|
-| =^=      | Begining of the line                       |
-| =$=      | End of line                                |
-| =.=      | Match any symbol                           |
-| =[a-z]=  | Any letter from a to z                     |
-| =[0-9]=  | Any number from 0 to 9                     |
-| =*=      | One or more sympols                        |
-| ={n}=    | Quantifier where n is any interg number    |
-| =&=      | Matched string                             |
-| =\n=     | Group number where n is any integer number |
-|--------+--------------------------------------------|
+| SIMBOL  | DESCRIPTIONS                               |
+|---------+--------------------------------------------|
+| =^=     | Begining of the line                       |
+| =$=     | End of line                                |
+| =.=     | Match any symbol                           |
+| =[a-z]= | Any letter from a to z                     |
+| =[0-9]= | Any number from 0 to 9                     |
+| =*=     | One or more sympols                        |
+| ={n}=   | Quantifier where n is any interg number    |
+| =&=     | Matched string                             |
+| =\n=    | Group number where n is any integer number |
+|---------+--------------------------------------------|
+
+*** sed::options
+| OPT              | TYPE | ++V | --V | DESC |
+| =-i, --in-place= | str  |     |     |      |
 
 *** sed::examples
 **** sed-161122223125
-Remove leading white spaces from a file:
-:    ~$ sed -i -e 's/^ *//g' input_f
+Remove leading white spaces and tabs from a file:
+:    ~$ sed -i -e 's/^[ \t]*//g' input_f
 :    ~$ sed 's/^ *//g' input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-170304154248
 Remove trailing white spaces from a file:
-:    ~$ sed -i -e 's/ *$//g' input_f
+:    ~$ sed -i -e 's/[\t ]*$//g' input_f
 :    ~$ sed -e 's/ *$//g' input_f > tmp_f && mv tm_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
@@ -69,8 +78,8 @@ Remove blank lines from a file:
 :    ~$ sed -i -e '/^$/' input_f
 
 **** sed-170718231048
-Remove leading, trailing whitespaces and blank lines in one run:
-:    ~$ sed -i -e 's/^ *//;s/ *$//;s/^$/' input_f
+Remove leading, trailing whitespaces, tabs and blank lines in one run:
+:    ~$ sed -i -e 's/^[\t ]*//;s/[\t ]*$//;s/^$/' input_f
 
 **** sed-170718231657
 To remove everything except the 1st n characters in every line:
@@ -118,9 +127,15 @@ Insert spaces every n character in a file or string:
 [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-gnu-core-utilities.org::*base64][base64 (1)]]
 
 **** sed-170806230716
-Only return the matched string:
+only return the matched string:
 :    ~$ sed -n 's/.*\(PATERN\).*/\1/p' input_f
 :    ~$ sed 's/.*\(PATERN\).*/\1/' input_f
+
+**** sed-170903233956 
+display the last line of the file:
+:    ~$ sed -n '$p' input_f
+:    ~$ sed '$!d' input_f
+
 *** sed::files
 *** sed::see-also
     [[file:./cix-gawk.org::*awk][awk (1)]], ed, [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],perlre(1)
@@ -132,3 +147,5 @@ Only return the matched string:
   http://www.catonmat.net/blog/sed-one-liners-explained-part-one/
 - sed.sf.net
   http://sed.sourceforge.net/
+- Useful one-line scripts for sed 
+  http://www.pement.org/sed/sed1line.txt
