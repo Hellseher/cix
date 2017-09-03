@@ -1,0 +1,156 @@
+# File       : cix-todo.org
+# Created    : <2017-8-06 Sun 22:58:42 BST>
+# Modified   : <2017-9-03 Sun 23:25:03 BST> sharlatan
+# Maintainer : sharlatan <sharlatanus@gmail.com>
+# Sinopsis   :
+
+* Cleanups [2/4][50%]
+** DONE Menu link fix
+   CLOSED: [2017-08-07 Mon 00:32]
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2017-08-07 Mon 00:32]
+   :END:      
+
+| FROM                    | TO                    | WHEN             |
+|-------------------------+-----------------------+------------------|
+| =[../README.org::*Index]= | =[file:../cix-main.org= | [2017-08-06 Sun] |
+|                         |                       |                  |
+|-------------------------+-----------------------+------------------|
+
+[[file:../cix-main.org][|≣|]]
+#+NAME: menu-link-fix--fixer
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  find ./spices -type f -print0 \
+      | xargs -0 -n1 -I'{}' \
+              sed -i \
+              -e 's/.*≣.*/\[\[file:..\/cix-main\.org\]\[\|≣\|\]\]/g' \
+              {}
+
+  grep -L "≣" ./spices/*org \
+      | xargs -n1 \
+              sed -i 's/\(^.*TITLE.*\)/\[\[file:..\/cix-main\.org\]\[\|≣\|\]\]\1/g'
+#+END_SRC
+#+RESULTS:
+
+#+NAME: menu-link-fix--check
+#+BEGIN_SRC sh :results value org output replace :exports results
+      #!/usr/bin/env bash
+
+  printf "Total files: %s\n" "$(ls ./spices/*org | wc -l)"
+  printf "Right menu: %s\n" \
+         "$(find ./spices -type f -name "*org" -print0 \
+               | xargs -0 grep  "\[\[file:..\/cix-main.org\]\[|≣|\]\]" \
+               | wc -l)"
+  echo "Rest to fix"
+  find ./spices -type f -print0 \
+       | xargs -0 grep -L "≣"
+#+END_SRC
+#+RESULTS: menu-link-fix--check
+#+BEGIN_SRC org
+Total files: 114
+Right menu: 114
+Rest to fix
+#+END_SRC
+
+** DONE Header
+   CLOSED: [2017-08-07 Mon 00:42]
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2017-08-07 Mon 00:42]
+   :END:      
+=^#\s*Short.*:= --> # Sinopsis :
+
+** TODO Spell check all files
+** TODO Add # Enf of <file>
+* Roadmap [0/6][0%]
+** TODO Help extractor to cix-stat.sh
+
+# End of cix-todo.org
+
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+
+#+BEGIN_SRC sh
+ls
+
+#+END_SRC
+
+#+RESULTS:
+| cix-convension.org |
+| cix-main.org       |
+| cix-stat.sh        |
+| cix-todo.org       |
+| img                |
+| LICENSE            |
+| README.org         |
+| README-ru.md       |
+| spices             |
+| tests              |
+| tutors             |
+** TODO Add/check header table 
+*** Files with no *Author*
+  #+BEGIN_SRC sh
+  find ./spices -type f -print0 | xargs -0 grep -Po "\*Author\*\s*\|\s*\|"
+  #+END_SRC
+
+  #+RESULTS:
+
+No header table at all:
+#+BEGIN_SRC sh
+  grep -rL "\*Author" ./spices
+#+END_SRC
+
+#+RESULTS:
+
+*** Files without *Released*
+  #+BEGIN_SRC sh
+  find ./spices -type f -print0 | xargs -0 grep -Po "\*Released\*\s*\|\s*\|"
+  #+END_SRC
+
+  #+RESULTS:
+
+#+BEGIN_SRC sh
+find ./spices -type f -print0 | xargs -0 grep -H -c "\*Released\*" | grep 0$ | cut -d":" -f1
+#+END_SRC
+
+#+RESULTS:
+| ./spices/cix-nfs.org          |
+| ./spices/cix-wget.org         |
+| ./spices/cix-bind-utils.org   |
+| ./spices/cix-parted.html      |
+| ./spices/cix-unix_land.org    |
+| ./spices/cix-hall-of-fame.org |
+
+*** Files without *Source*
+#+BEGIN_SRC sh
+find ./spices -type f -print0 | xargs -0 grep -Po "\*Source\*\s*\|\s*\|"
+#+END_SRC
+
+#+RESULTS:
+*** Files without # Sinopsis 
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  find ./spices -type f -print0 \
+      | xargs -0 grep -Po "^\# Sinopsis\s*\:$" \
+#+END_SRC
+
+#+RESULTS:
+: ./spices/cix-gnu-inetutils.org:# Sinopsis :
+
+#+BEGIN_SRC sh 
+find ./ -printf "%T@ %y %s %p\n" | grep -v "\.git\|\#\|\./$" | sort -rn | column -t  > MANIFEST 
+#+END_SRC
+** TODO Add references
+*** Links
+*** CVE
+*** papers
+** TODO Add at leas one example per cmd 
+** TODO Add a short intro to each cix-* files
+** TODO Add supported systems to cix-main.org  
