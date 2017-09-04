@@ -1,25 +1,48 @@
-# File           : cix-bzip2.org
-# Created        : <2016-11-04 Fri 22:44:47 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File         : cix-bzip2.org
+# Created      : <2016-11-04 Fri 22:44:47 GMT>
+# Modified     : <2017-8-26 Sat 00:51:41 BST> sharlatan
+# Author       : sharlatan
+# Maintainer(s :
+# Sinopsis     : A file compression utility.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: bzip2
-
+[[file:../cix-main.org][|≣|]]
+#+TITLE: bzip2
+|-----------------+-----------------|
+| *Author*        | 	Julian Seward |
+| *Maintainer(s)* |                 |
+| *Released*      | 1996            |
+| *Source*        | [[http://www.bzip.org/downloads.html][bzip.web]]        |
+| *Man*           | [[http://bzip.org/1.0.5/bzip2.txt][bzip2.1]]         |
+| *Info*          |                 |
+|-----------------+-----------------|
+=bzip2= is a freely available, patent-free, high quality data compressor. Bzip2
+compresses files to within 10 to 15 percent of the capabilities of the best
+techniques available. However, =bzip2= has the added benefit of being
+approximately two times faster at compression and six times faster at
+decompression than those techniques. =bzip2= is not the fastest compression
+utility, but it does strike a balance between speed and compression capability.
+-----
 * Index
-#+BEGIN_EXAMPLE
-    bunzip2 (1)      - a block-sorting file compressor, v1.0.6
-    bzcat (1)        - decompresses files to stdout
-    bzcmp (1)        - compare bzip2 compressed files
-    bzdiff (1)       - compare bzip2 compressed files
-    bzegrep (1)      - search possibly bzip2 compressed files for a regular expression
-    bzfgrep (1)      - search possibly bzip2 compressed files for a regular expression
-    bzgrep (1)       - search possibly bzip2 compressed files for a regular expression
-    bzip2 (1)        - a block-sorting file compressor, v1.0.6
-    bzip2recover (1) - recovers data from damaged bzip2 files
-    bzless (1)       - file perusal filter for crt viewing of bzip2 compressed text
-    bzmore (1)       - file perusal filter for crt viewing of bzip2 compressed text
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc bzip2
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD          | MAN | DESCRIPTION                                               |
+| bunzip2      | (1) | a block-sorting file compressor, v1.0.6                   |
+| bzcat        | (1) | decompresses files to stdout                              |
+| bzcmp        | (1) | compare bzip2 compressed files                            |
+| bzdiff       | (1) | compare bzip2 compressed files                            |
+| bzegrep      | (1) | search possibly bzip2 compressed files for a regular e... |
+| bzfgrep      | (1) | search possibly bzip2 compressed files for a regular e... |
+| bzgrep       | (1) | search possibly bzip2 compressed files for a regular e... |
+| bzip2        | (1) | a block-sorting file compressor, v1.0.6                   |
+| bzip2recover | (1) | recovers data from damaged bzip2 files                    |
+| bzless       | (1) | file perusal filter for crt viewing of bzip2 compresse... |
+| bzmore       | (1) | file perusal filter for crt viewing of bzip2 compresse... |
+#+END_SRC
+
+# End of cix-bzip2.org

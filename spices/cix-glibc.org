@@ -1,21 +1,21 @@
-# File           : cix-glibc-common.org
-# Created        : <2016-11-14 Mon 21:40:36 GMT>
-# Modified       : <2017-7-12 Wed 20:40:28 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-glibc-common.org
+# Created       : <2016-11-14 Mon 21:40:36 GMT>
+# Modified      : <2017-8-20 Sun 23:47:54 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : The GNU libc libraries
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Glibc
-|--------------+---|
-| *Author*       |   |
-| *Contributors* |   |
-| *Realised*     |   |
-| *Source*       |   |
-| *Info*         |   |
-|--------------+---|
+|----------------+----------------|
+| *Author*       | Roland McGrath |
+| *Contributors* | [[https://sourceware.org/glibc/wiki/MAINTAINERS][(all...)]]       |
+| *Released*     | 1987           |
+| *Source*       | [[https://sourceware.org/git/?p=glibc.git][glibc.git]]      |
+| *Info*         | [[https://www.gnu.org/software/libc/][glibc.web]]      |
+|----------------+----------------|
 
 The glibc package contains standard libraries which are used by multiple
 programs on the system. In order to save disk space and memory, as well as to
@@ -23,6 +23,7 @@ make upgrading easier, common system code is kept in one place and shared
 between programs. This particular package contains the most important sets of
 shared libraries: the standard C library and the standard math library. Without
 these two libraries, a Linux system will not function.
+-----
 
 ** Packages
 glibc
@@ -32,7 +33,6 @@ glibc-devel
 glibc-utils
 glibc-static
 glibc-headers
------
 * Index
 #+BEGIN_EXAMPLE
     memusage (1)     - profile memory usage of a program
@@ -142,3 +142,5 @@ Find most used libraries on your system:
 *** localedef::files
 *** localedef::see-also
 * References
+
+# End of cix-glibc.org

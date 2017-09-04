@@ -353,3 +353,5 @@ operating systems.
 [fn:1] [[https://standards.ieee.org/findstds/standard/1003.1-2008.html][IEEE Std 1003.1™-2008]] - IEEE Standard for Information Technology - Portable Operating System Interface,
 [fn:2] [[https://www.iso.org/standard/43781.html][ISO/IEC 23360-1:2006]] - Linux Standard Base (LSB) core specification 3.1 -- Part 1: Generic specification
 [fn:3] [[http://pubs.opengroup.org/onlinepubs/9699919799/][POSIX-1.20080]]
+
+# End of cix-unix-land.org

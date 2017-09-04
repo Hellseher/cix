@@ -1,28 +1,41 @@
 # File           : cix-ffmpeg.org
 # Created        : <2016-11-16 Wed 23:24:34 GMT>
-# Modified  : <2017-3-02 Thu 23:34:06 GMT> sharlatan
+# Modified  : <2017-8-23 Wed 23:29:17 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : Digital VCR and streaming server
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: FFmpeg
+[[file:../cix-main.org][|≣|]]
+#+TITLE: FFmpeg
+|-----------------+-----------------|
+| *Author*        | Fabrice Bellard |
+| *Maintainer(s)* | [[https://github.com/FFmpeg/FFmpeg/blob/master/MAINTAINERS][(all...)]]        |
+| *Released*      | 2000            |
+| *Source*        | [[https://github.com/FFmpeg/FFmpeg][FFmpeg.git]]      |
+| *Man*           |                 |
+| *Info*          | [[https://ffmpeg.org/][FFmpeg.web]]      |
+|-----------------+-----------------|
 
-http://ffmpeg.org/
-
-FFmpeg is a complete and free Internet live audio and video
-broadcasting solution for Linux/Unix. It also includes a digital
-VCR. It can encode in real time in many formats including MPEG1 audio
-and video, MPEG4, h263, ac3, asf, avi, real, mjpeg, and flash.
+FFmpeg is a complete and free Internet live audio and video broadcasting
+solution for Linux/Unix. It also includes a digital VCR. It can encode in real
+time in many formats including MPEG1 audio and video, MPEG4, h263, ac3, asf,
+avi, real, mjpeg, and flash.
 -----
 * Index
-#+BEGIN_EXAMPLE
-    ffmpeg (1)           - ffmpeg video converter
-    ffplay (1)           - FFplay media player
-    ffprobe (1)          - ffprobe media prober
-    ffserver (1)         - ffserver video server
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc ffmpeg
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD      | MAN | DESCRIPTION            |
+| ffmpeg   | (1) | ffmpeg video converter |
+| ffplay   | (1) | FFplay media player    |
+| ffprobe  | (1) | ffprobe media prober   |
+| ffserver | (1) | ffserver video server  |
+#+END_SRC
 
 * Receipts
 
@@ -45,3 +58,5 @@ and video, MPEG4, h263, ac3, asf, avi, real, mjpeg, and flash.
 #+END_SRC
 [[file:./cix-gnu-core-utilities.org::mkdir][mkdir (1)]],
 test
+
+# End of cix-ffmpeg.org

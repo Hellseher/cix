@@ -1,20 +1,41 @@
-# File           : cix-psmisc.org
-# Created        : <2016-01-25 Mon 22:28:37 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-psmisc.org
+# Created       : <2016-01-25 Mon 22:28:37 GMT>
+# Modified      : <2017-8-25 Fri 00:39:09 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Utilities for managing processes on your system
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: PSmisc
+[[file:../cix-main.org][|≣|]]
+#+TITLE: PSmisc
+|-----------------+---------------------|
+| *Author*        | Werner Almesberger, |
+|                 | Craig Small,        |
+|                 | Trent Waddington,   |
+|                 | Vito Mule'          |
+| *Maintainer(s)* |                     |
+| *Released*      | 2001                |
+| *Source*        | [[https://gitlab.com/psmisc/psmisc][psmisc.git]]          |
+| *Man*           |                     |
+| *Info*          |                     |
+|-----------------+---------------------|
 
-** Index
-#+BEGIN_EXAMPLE
-    killall (1)          - kill processes by name
-    peekfd (1)           - peek at file descriptors of running processes
-    prtstat (1)          - print statistics of a process
-    pstree (1)           - display a tree of processes
-    fuser (1)            - identify processes using files or sockets
-    fuser (1p)           - list process IDs of all processes that have one or more files open
-#+END_EXAMPLE
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc psmisc
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD     | MAN  | DESCRIPTION                                               |
+| killall | (1)  | kill processes by name                                    |
+| peekfd  | (1)  | peek at file descriptors of running processes             |
+| prtstat | (1)  | print statistics of a process                             |
+| pstree  | (1)  | display a tree of processes                               |
+| fuser   | (1)  | identify processes using files or sockets                 |
+| fuser   | (1p) | list process IDs of all processes that have one or mor... |
+#+END_SRC
+
+# End of cix-psmisc.org

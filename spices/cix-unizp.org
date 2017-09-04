@@ -1,14 +1,34 @@
-# File           : cix-unizp.org
-# Created        : <2016-12-02 Fri 22:00:47 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-unizp.org
+# Created       : <2016-12-02 Fri 22:00:47 GMT>
+# Modified      : <2017-9-01 Fri 23:22:48 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A utility for unpacking zip files
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: unzip
+[[file:../cix-main.org][|≣|]]
+#+TITLE: unzip
+|-----------------+--------------------|
+| *Author*        | Christian Spieler, |
+|                 | Samuel M. Smith    |
+| *Maintainer(s)* | Ed Gordon,         |
+|                 | Greg Roelofs,      |
+|                 | Mike White,        |
+|                 | Steven Schweda     |
+| *Released*      | 1989               |
+| *Source*        | [[ftp://ftp.info-zip.org/pub/infozip/][unzip.ftp]]          |
+| *Man*           |                    |
+| *Info*          | [[http://www.info-zip.org/UnZip.html][UnZip.web]]          |
+|-----------------+--------------------|
 
+
+The unzip utility is used to list, test, or extract files from a zip archive.
+Zip archives are commonly found on MS-DOS systems. The zip utility, included in
+the zip package, creates zip archives. Zip and unzip are both compatible with
+archives created by PKWARE(R)'s PKZIP for MS-DOS, but the programs' options and
+default behaviors do differ in some respects.
+-----
 * Index
 #+BEGIN_EXAMPLE
     funzip (1)   - filter for extracting from a ZIP archive in a pipe
@@ -19,3 +39,12 @@
 #+END_EXAMPLE
 
 * Receipts
+** Links
+- http://www.zlib.net/
+** CVE
+- CVE-2005-2475
+  http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2475
+	
+
+
+# End of cix-unizp.org

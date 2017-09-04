@@ -1,21 +1,30 @@
 # File     : cix-busybox.org • spices
 # Created  : <2016-11-07 Mon 21:06:33 GMT>
-# Modified : <2017-8-07 Mon 00:13:56 BST> sharlatan
+# Modified : <2017-9-03 Sun 21:50:16 BST> sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
-# Sinopsis :
+# Sinopsis : Statically linked binary providing simplified versions of system commands.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Busybox
 
-|--------------+--------------|
-| *Author*       | Bruce Perens |
-| *Released*     | 1999         |
-| *Contributors* |              |
-| *Source*       | [[https://git.busybox.net/][busybox.git]]  |
-| *Info*         |              |
-|--------------+--------------|
+|--------------+----------------|
+| *Author*     | Bruce Perens   |
+| *Maintainer* | Denys Vlasenko |
+| *Released*   | 1999           |
+| *Source*     | [[https://git.busybox.net/][busybox.git]]    |
+| *Info*       | [[https://busybox.net/][busybox.web]]    |
+|--------------+----------------|
+
+BusyBox combines tiny versions of many common UNIX utilities into a single small
+executable. It provides replacements for most of the utilities you usually find
+in GNU fileutils, shellutils, etc. The utilities in BusyBox generally have fewer
+options than their full-featured GNU cousins; however, the options that are
+included provide the expected functionality and behave very much like their GNU
+counterparts. BusyBox provides a fairly complete environment for any small or
+embedded system.
+-----
 * Index
 #+BEGIN_EXAMPLE
     [ () -
@@ -342,3 +351,4 @@
     start-stop-daemon () -
 #+END_EXAMPLE
 * Referances
+# End of cix-busybox.org

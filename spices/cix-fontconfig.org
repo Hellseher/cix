@@ -1,10 +1,52 @@
-# File           : cix-fontconfig.org
-# Created        : <2016-11-09 Wed 22:57:03 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-fontconfig.org
+# Created       : <2016-11-09 Wed 22:57:03 GMT>
+# Modified      : <2017-8-26 Sat 13:28:38 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Font configuration and customization library
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: Fontconfig
+[[file:../cix-main.org][|≣|]]
+#+TITLE: Fontconfig
+|-----------------+----------------|
+| *Author*        | Keith Packard, |
+|                 | Patrick Lam    |
+| *Maintainer(s)* |                |
+| *Released*      | 2001           |
+| *Source*        | [[https://cgit.freedesktop.org/fontconfig/][fontconfig.git]] |
+| *Man*           |                |
+| *Info*          | [[https://www.freedesktop.org/wiki/Software/fontconfig/][fontconfig.web]] |
+|-----------------+----------------|
+
+Fontconfig is designed to locate fonts within the
+system and select them according to requirements specified by
+applications.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc fontconfig
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD         | MAN | DESCRIPTION                        |
+| fc-cache    | (1) | build font information cache files |
+| fc-cat      | (1) | read font information cache files  |
+| fc-list     | (1) | list available fonts               |
+| fc-match    | (1) | match available fonts              |
+| fc-pattern  | (1) | parse and show pattern             |
+| fc-query    | (1) | query font files                   |
+| fc-scan     | (1) | scan font files or directories     |
+| fc-validate | (1) | validate font files                |
+| fc-cache    | (1) | build font information cache files |
+| fc-cat      | (1) | read font information cache files  |
+| fc-list     | (1) | list available fonts               |
+| fc-match    | (1) | match available fonts              |
+| fc-pattern  | (1) | parse and show pattern             |
+| fc-query    | (1) | query font files                   |
+| fc-scan     | (1) | scan font files or directories     |
+| fc-validate | (1) | validate font files                |
+#+END_SRC
+
+# End of cix-fontconfig.org

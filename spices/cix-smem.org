@@ -1,6 +1,6 @@
 # File           : cix-smem.org
 # Created        : <2017-08-05 Sat 23:11:46 BST>
-# Modified       : <2017-8-06 Sun 00:11:30 BST> sharlatan
+# Modified       : <2017-8-20 Sun 18:53:22 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Report application memory usage in a meaningful way
@@ -9,18 +9,18 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: smem
-|---------------+---------|
-| *Author*        |         |
-| *Maintainer(s)* |         |
-| *Released*      |         |
-| *Source*        | [[http://selenic.com/repo/smem][smem.hg]] |
-| *Info*          |         |
-|---------------+---------|
+|-----------------+--------------|
+| *Author*        | Matt Mackall |
+| *Maintainer(s)* |              |
+| *Released*      | 2009         |
+| *Source*        | [[http://selenic.com/repo/smem][smem.hg]]      |
+| *Info*          |              |
+|-----------------+--------------|
+
 smem is a tool that can give numerous reports on memory usage on Linux
 systems. Unlike existing tools, smem can report proportional set size (PSS),
 which is a more meaningful representation of the amount of memory used by
 libraries and applications in a virtual memory system.
-
 -----
 * Index
 * Receipts

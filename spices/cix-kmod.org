@@ -1,38 +1,46 @@
-# File           : cix-kmod.org
-# Created        : <2016-06-19 Tue 23:54:09 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-#+Author: sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-kmod.org
+# Created       : <2016-06-19 Tue 23:54:09 GMT>
+# Modified      : <2017-8-20 Sun 11:54:47 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Linux kernel module management utilities
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-
 #+TITLE: kmod
 
-|-------------+---|
-| *Author*      |   |
-| *Contributors* |   |
-| *Source*      |   |
-| *Released*    |   |
-|-------------+---|
+|----------------+-----------------|
+| *Author*       | Lucas De Marchi |
+| *Contributors* |                 |
+| *Source*       | [[https://git.kernel.org/pub/scm/utils/kernel/kmod][kmod.git]]        |
+| *Man*          | [[http://man7.org/linux/man-pages/man8/kmod.8.html][kmod.8]]          |
+| *Released*     | 2001            |
+|----------------+-----------------|
 
 The  kmod package  provides various  programs needed  for automatic  loading and
 unloading of modules under 2.6, 3.x, and  later kernels, as well as other module
 management programs. Device  drivers and filesystems are two  examples of loaded
 and unloaded modules.
-
 -----
-** Index
-#+BEGIN_EXAMPLE
-    kmod (8)             - Program to manage Linux Kernel modules
-    lsmod (8)            - Show the status of modules in the Linux Kernel
-    rmmod (8)            - Simple program to remove a module from the Linux Kernel
-    depmod (8)           - Generate modules.dep and map files.
-    insmod (8)           - Simple program to insert a module into the Linux Kernel
-    modinfo (8)          - Show information about a Linux Kernel module
-    modprobe (8)         - Add and remove modules from the Linux Kernel
-#+END_EXAMPLE
-** Receipts
-** References
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc kmod
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD      | MAN | DESCRIPTION                                             |
+| kmod     | (8) | Program to manage Linux Kernel modules                  |
+| depmod   | (8) | Generate modules.dep and map files.                     |
+| insmod   | (8) | Simple program to insert a module into the Linux Kernel |
+| lsmod    | (8) | Show the status of modules in the Linux Kernel          |
+| modinfo  | (8) | Show information about a Linux Kernel module            |
+| modprobe | (8) | Add and remove modules from the Linux Kernel            |
+| rmmod    | (8) | Simple program to remove a module from the Linux Kernel |
+#+END_SRC
+
+* Receipts
+* References
+
+# End of cix-kmod.org

@@ -1,6 +1,6 @@
 # File       : cix-awk.org
 # Created    : <2016-11-04 Fri 22:15:18 GMT>
-# Modified   : <2017-8-22 Tue 23:09:54 BST> sharlatan
+# Modified   : <2017-9-04 Mon 22:40:24 BST> sharlatan
 # Author     : sharlatan
 # Maintainer :
 # Sinopsis   : The GNU version of the AWK text processing utility
@@ -116,6 +116,17 @@ calculate total size of files in directory including sub directories in Mb:
 :    ~$ find ./ -type f -print0 | xargs -0 ls -l | awk '{total += $5} END {print "subtotal: "total/1024/1024"Mb"}'
 [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*ls][ls]]
 
+**** awk-170904001614 
+print just last line of a file or all files in a directory:
+:    ~$ awk 'END {print}' inptu_f
+:    ~$ find ./ -type f -name "PATERN" -ptint0 | xags -0 -n1 awk 'END {print}'
+
+**** awk-170904182410 
+print file name and the last line for the list of files:
+:    ~$ find ./ -type f -name "PATERN" -print0 | xargs -0 -n1 awk '{s=$0};END{print FILENAME,s}'
+:    ~$ find ./ -type f -name "PATERN" -print0 | xargs -0 -n1 awk '{s=$0};END{if(s)print FILENAME,s}'
+:    ~$ find ./ -type f -name "PATERN" -print0 | xargs -0 -n1 awk 'END{if ($0) print FILENAME,$0}'
+[[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-findutils.org::*find][find]]
 *** awk::files
 *** awk::see-also
     egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
@@ -131,3 +142,5 @@ calculate total size of files in directory including sub directories in Mb:
   https://www.gnu.org/software/gawk/manual/gawkinet/gawkinet.html
 - The GNU Awk User’s Guide
   https://www.gnu.org/software/gawk/manual/gawk.html
+
+# End of cix-gawk.org

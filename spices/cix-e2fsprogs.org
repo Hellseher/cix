@@ -1,29 +1,26 @@
 # File           : cix-e2fsprogs.org
 # Created        : <2016-03-06 Sun 00:25:13 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : Utilities for managing ext2, ext3, and ext4 filesystems.
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: E2fsprogs
 
-|-------------+------------------|
-| *Author*      | Theodore Ts'o    |
+|----------------+------------------|
+| *Author*       | Theodore Ts'o    |
 | *Contributors* | Darrick J. Wong, |
-|             | Andreas Dilger   |
-| *Realised*    | 1997             |
-| *Source*      | [[http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/][git: e2fsprogs]]   |
-|-------------+------------------|
-Avaialble at: *Linux*
+|                | Andreas Dilger   |
+| *Released*     | 1997             |
+| *Source*       | [[http://git.kernel.org/cgit/fs/ext2/e2fsprogs.git/][git: e2fsprogs]]   |
+|----------------+------------------|
 
 The e2fsprogs  package contains  a number of  utilities for  creating, checking,
 modifying,  and correcting  any  inconsistencies in  second,  third and  fourth
 extended  (ext2/ext3/ext4)  filesystems.
-
 -----
-
-** Index
+* Index
 
 #+BEGIN_EXAMPLE
     e2fsck (8)     - check a Linux ext2/ext3/ext4 file system
@@ -45,3 +42,5 @@ extended  (ext2/ext3/ext4)  filesystems.
     e4defrag (8)   - online defragmenter for ext4 filesystem
     lsattr (1)     - list file attributes on a Linux second extended file system
 #+END_EXAMPLE
+
+# End of cix-e2fsprogs.org

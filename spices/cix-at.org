@@ -1,23 +1,31 @@
 # File           : cix-at.org
 # Created        : <2017-08-04 Fri 23:50:32 BST>
-# Modified       : <2017-08-04 Fri 23:50:32 BST>
+# Modified       : <2017-9-03 Sun 20:59:15 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Job spooling tools
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: at
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+|-----------------+----------------|
+| *Author*        | Thomas Koenig  |
+| *Maintainer(s)* | David Parsons, |
+|                 | Ryan Murray    |
+| *Released*      | 1993           |
+| *Source*        | [[http://ftp.debian.org/debian/pool/main/a/at/][at.ftp]]         |
+| *Info*          |                |
+|-----------------+----------------|
 
+=at= and =batch= read commands from standard input or from a specified file. At
+allows you to specify that a command will be run at a particular time. Batch
+will execute commands when the system load levels drop to a particular level.
+Both commands use user's shell.
 
+You should install the at package if you need a utility for time-oriented job
+control. Note: If it is a recurring job that will need to be repeated at the
+same time every day/week, etc. you should use crontab instead.
 -----
 * Index
 * Receipts

@@ -1,26 +1,50 @@
-# File           : cix-xz.org
-# Created        : <2016-11-04 Fri 22:44:50 GMT>
-# Modified  : <2017-3-02 Thu 23:34:06 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File         : cix-xz.org
+# Created      : <2016-11-04 Fri 22:44:50 GMT>
+# Modified     : <2017-8-28 Mon 00:48:10 BST> sharlatan
+# Author       : sharlatan
+# Maintainer(s :
+# Sinopsis     : LZMA compression utilities.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: xz
+|------------------+-----------------------|
+| *Author*         | Lasse Collin[[https://git.tukaani.org/?p=xz.git;a=blob;f=AUTHORS;h=bda87975a51d87ccbbc9ea3a4232d2597cd3a45f;hb=HEAD][ (all...)]] |
+| *Contributor(s)* | [[https://git.tukaani.org/?p=xz.git;a=blob;f=THANKS;h=ee86a1494d3e4418b31f278b35a7b4120e53bd42;hb=HEAD][(all...)]]              |
+| *Released*       | 2008                  |
+| *Source*         | [[https://git.tukaani.org/?p=xz.git][xz.git]]                |
+| *Man*            |                       |
+| *Info*           | [[https://tukaani.org/xz/][xz.web]]                |
+|------------------+-----------------------|
 
+XZ Utils are an attempt to make LZMA compression easy to use on free (as in
+freedom) operating systems. This is achieved by providing tools and libraries
+which are similar to use than the equivalents of the most popular existing
+compression algorithms.
+
+LZMA is a general purpose compression algorithm designed by Igor Pavlov as part
+of 7-Zip. It provides high compression ratio while keeping the decompression
+speed fast.
+-----
 * Index
-#+BEGIN_EXAMPLE
-    unxz (1)    - Compress or decompress .xz and .lzma files
-    xz (1)      - Compress or decompress .xz and .lzma files
-    xzcat (1)   - Compress or decompress .xz and .lzma files
-    xzcmp (1)   - compare compressed files
-    xzdec (1)   - Small .xz and .lzma decompressors
-    xzdiff (1)  - compare compressed files
-    xzegrep (1) - search compressed files for a regular expression
-    xzfgrep (1) - search compressed files for a regular expression
-    xzgrep (1)  - search compressed files for a regular expression
-    xzless (1)  - view xz or lzma compressed (text) files
-    xzmore (1)  - view xz or lzma compressed (text) files
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc xz
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD     | MAN | DESCRIPTION                                      |
+| unxz    | (1) | Compress or decompress .xz and .lzma files       |
+| xz      | (1) | Compress or decompress .xz and .lzma files       |
+| xzcat   | (1) | Compress or decompress .xz and .lzma files       |
+| xzcmp   | (1) | compare compressed files                         |
+| xzdec   | (1) | Small .xz and .lzma decompressors                |
+| xzdiff  | (1) | compare compressed files                         |
+| xzegrep | (1) | search compressed files for a regular expression |
+| xzfgrep | (1) | search compressed files for a regular expression |
+| xzgrep  | (1) | search compressed files for a regular expression |
+| xzless  | (1) | view xz or lzma compressed (text) files          |
+| xzmore  | (1) | view xz or lzma compressed (text) files          |
+#+END_SRC
+# End of cix-xz.org

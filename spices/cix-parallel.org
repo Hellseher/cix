@@ -1,10 +1,29 @@
-# File           : cix-parallel.org
-# Created        : <2016-11-08 Tue 22:50:08 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-parallel.org
+# Created       : <2016-11-08 Tue 22:50:08 GMT>
+# Modified      : <2017-9-01 Fri 23:34:05 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Shell tool for executing jobs in parallel.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: GNU Parallel
+[[file:../cix-main.org][|≣|]]
+#+TITLE: GNU Parallel
+|------------------+--------------|
+| *Author*         | [[http://git.savannah.gnu.org/cgit/parallel.git][(all...)]]     |
+| *Contributor(s)* |              |
+| *Released*       | 2007         |
+| *Source*         | [[http://git.savannah.gnu.org/cgit/parallel.git][parallel.git]] |
+| *Man*            |              |
+| *Info*           |              |
+|------------------+--------------|
+
+GNU Parallel is a shell tool for executing jobs in parallel using one or more
+computers. A job can be a single command or a small script that has to be run
+for each of the lines in the input. The typical input is a list of files, a list
+of hosts, a list of users, a list of URLs, or a list of tables. A job can also
+be a command that reads from a pipe. GNU Parallel can then split the input and
+pipe it into commands in parallel.
+-----
+
+# End of cix-parallel.org

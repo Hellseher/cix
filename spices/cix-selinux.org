@@ -1,6 +1,6 @@
 # File           : cix-selinux.org
 # Created        : <2017-08-05 Sat 00:20:51 BST>
-# Modified       : <2017-8-20 Sun 23:32:22 BST> sharlatan
+# Modified       : <2017-9-04 Mon 22:42:48 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Security enhancement to Linux.
@@ -58,4 +58,3 @@ policycoreutils
 * Refreances
 
 # End of cix-selinux.org 
-

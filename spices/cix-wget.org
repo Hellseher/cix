@@ -1,17 +1,22 @@
 # File           : cix-wget.org
 # Created        : <2016-11-21 Mon 21:11:14 GMT>
-# Modified  : <2017-4-01 Sat 21:01:56 BST> sharlatan
+# Modified  : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : A utility for retrieving files using the HTTP or FTP protocols.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: WGET
-
-|--------+---------------|
-| *Author* | Hrvoje NikXiX |
-|--------+---------------|
+[[file:../cix-main.org][|≣|]]
+#+TITLE: wget
+|-----------------+------------------------|
+| *Author*        | Hrvoje Nikšić [[https://git.savannah.gnu.org/cgit/wget.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                        |
+| *Released*      | 1996                   |
+| *Source*        | [[https://git.savannah.gnu.org/cgit/wget.git][wget.git]]               |
+| *Man*           |                        |
+| *Info*          |                        |
+|-----------------+------------------------|
 
 GNU  Wget is  a file  retrieval utility  which can  use either  the HTTP  or FTP
 protocols. Wget features include the ability to work in the background while you
@@ -46,3 +51,5 @@ download a sertain file in a list of files from a server with known structure:
   wget "$URL${FILE_NAMES[2]}"
 #+END_SRC
 declare [[file::*curl][curl (1)]] [[file:./cix-gnu-grep.org::*grep][grep (1)]]
+
+# End of cix-wget.org

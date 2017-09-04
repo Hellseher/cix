@@ -1,9 +1,9 @@
 # File           : cix-vsftp.org
 # Created        : <2017-08-04 Fri 23:06:13 BST>
-# Modified       : <2017-08-04 Fri 23:06:13 BST>
+# Modified       : <2017-9-01 Fri 00:12:51 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Very Secure Ftp Daemon.
 
 #+OPTIONS: num:nil
 
@@ -12,9 +12,9 @@
 |-----------------+---------------|
 | *Author*        | 	Chris Evans |
 | *Maintainer(s)* |               |
-| *Released*      |               |
-| *Source*        |               |
-| *Info*          |               |
+| *Released*      | 2009          |
+| *Source*        | [[https://security.appspot.com/vsftpd.html#download][vsftpd.ftp]]    |
+| *Info*          | [[http://vsftpd.beasts.org/][vsftpd.web]]    |
 |-----------------+---------------|
 
 

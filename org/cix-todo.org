@@ -1,10 +1,10 @@
 # File       : cix-todo.org
 # Created    : <2017-8-06 Sun 22:58:42 BST>
-# Modified   : <2017-9-03 Sun 23:25:03 BST> sharlatan
+# Modified   : <2017-9-04 Mon 22:46:46 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   :
 
-* Cleanups [2/4][50%]
+* Cleanups [3/4][75%]
 ** DONE Menu link fix
    CLOSED: [2017-08-07 Mon 00:32]
    :LOGBOOK:  
@@ -60,40 +60,149 @@ Rest to fix
    - State "DONE"       from "TODO"       [2017-08-07 Mon 00:42]
    :END:      
 =^#\s*Short.*:= --> # Sinopsis :
-
-** TODO Spell check all files
-** TODO Add # Enf of <file>
-* Roadmap [0/6][0%]
-** TODO Help extractor to cix-stat.sh
-
-# End of cix-todo.org
-
-|   | test |
-|   | test |
-|   | test |
-|   | test |
-|   | test |
-|   | test |
-|   | test |
-
+** DONE Add # Enf of <file>
+   CLOSED: [2017-09-04 Mon 22:46]
 #+BEGIN_SRC sh
-ls
-
+  #!/usr/bin/env bash
+  SEARCH_PATH="../spices"
+  find "$SEARCH_PATH" -name "*org" -print0 \
+      | xargs -0 -n1 -I{} sed '$!d' {} \
+     # | grep -v "End of" \
+     # | xargs -n1 -I{} grep {} "$SEARCH_PATH"/*org \
+     # | grep -oP "(?<=^\./).+(?=\.org:)" \
+     # | sort -u
 #+END_SRC
 
 #+RESULTS:
-| cix-convension.org |
-| cix-main.org       |
-| cix-stat.sh        |
-| cix-todo.org       |
-| img                |
-| LICENSE            |
-| README.org         |
-| README-ru.md       |
-| spices             |
-| tests              |
-| tutors             |
-** TODO Add/check header table 
+| /home/sharlatan/Projects/my-GitHub/cix/org |
+| cix-ack.org                                |
+| cix-acl.org                                |
+| cix-ag.org                                 |
+| cix-alsa.org                               |
+| cix-aptitude.org                           |
+| cix-apt.org                                |
+| cix-ash.org                                |
+| cix-at.org                                 |
+| cix-autoconf.org                           |
+| cix-autofs.org                             |
+| cix-automake.org                           |
+| cix-bind-utils.org                         |
+| cix-bridge-utils.org                       |
+| cix-btrfs-progs.org                        |
+| cix-busybox.org                            |
+| cix-bzip2.org                              |
+| cix-cpio.org                               |
+| cix-cronie.org                             |
+| cix-ctags.org                              |
+| cix-curlftpfs.org                          |
+| cix-curl.org                               |
+| cix-dash.org                               |
+| cix-diffutils.org                          |
+| cix-dmidecode.org                          |
+| cix-dnf.org                                |
+| cix-dpkg.org                               |
+| cix-e2fsprogs.org                          |
+| cix-emacs.org                              |
+| cix-fdupes.org                             |
+| cix-ffmpeg.org                             |
+| cix-file.org                               |
+| cix-fish-shell.org                         |
+| cix-fontconfig.org                         |
+| cix-gawk.org                               |
+| cix-gcc.org                                |
+| cix-gdb.org                                |
+| cix-git.org                                |
+| cix-glibc.org                              |
+| cix-global.org                             |
+| cix-gnu-bash.org                           |
+| cix-gnu-binutils.org                       |
+| cix-gnu-bison.org                          |
+| cix-gnu-coreutils.org                      |
+| cix-gnu-findutils.org                      |
+| cix-gnu-grep.org                           |
+| cix-gnu-inetutils.org                      |
+| cix-gnupg.org                              |
+| cix-gzip.html                              |
+| cix-gzip.org                               |
+| cix-hall-of-fame.org                       |
+| cix-imagemagick.org                        |
+| cix-iproute2.org                           |
+| cix-iptables.org                           |
+| cix-iputils.org                            |
+| cix-jq.org                                 |
+| cix-kbd.org                                |
+| cix-kmod.org                               |
+| cix-less.org                               |
+| cix-lrzip.org                              |
+| cix-lshw.org                               |
+| cix-lsof.org                               |
+| cix-lsyncd.org                             |
+| cix-lvm2.org                               |
+| cix-make.org                               |
+| cix-man-db.org                             |
+| cix-micro.org                              |
+| cix-moreutils.org                          |
+| cix-nano.org                               |
+| cix-ncurses.org                            |
+| cix-netcat.org                             |
+| cix-netkit.org                             |
+| cix-net-snmp.org                           |
+| cix-net-tools.org                          |
+| cix-nfs.org                                |
+| cix-nmap.org                               |
+| cix-openssh.org                            |
+| cix-pacman.org                             |
+| cix-pam.org                                |
+| cix-parallel.org                           |
+| cix-parted.html                            |
+| cix-parted.org                             |
+| cix-pax.org                                |
+| cix-pciutils.org                           |
+| cix-perf.org                               |
+| cix-pkg-pkgng.org                          |
+| cix-pm-utils.org                           |
+| cix-procps-ng.org                          |
+| cix-psmisc.org                             |
+| cix-pulseaudio.org                         |
+| cix-quota.org                              |
+| cix-ripgrep.org                            |
+| cix-rpm.org                                |
+| cix-rsync.org                              |
+| cix-screen.org                             |
+| cix-sed.org                                |
+| cix-selinux.org                            |
+| cix-shadow-utils.org                       |
+| cix-sift.org                               |
+| cix-smartmontools.org                      |
+| cix-smem.org                               |
+| cix-sox.org                                |
+| cix-strace.org                             |
+| cix-stress-ng.org                          |
+| cix-stress.org                             |
+| cix-sudo.org                               |
+| cix-systemd.org                            |
+| cix-tar.org                                |
+| cix-tcpdump.org                            |
+| cix-tcsh.org                               |
+| cix-tmux.org                               |
+| cix-toybox.org                             |
+| cix-ucg.org                                |
+| cix-unix-land.org                          |
+| cix-unizp.org                              |
+| cix-upstart.org                            |
+| cix-usbutils.org                           |
+| cix-util-linux.org                         |
+| cix-valgrind.org                           |
+| cix-vim.org                                |
+| cix-vsftp.org                              |
+| cix-wget.org                               |
+| cix-xz.org                                 |
+| cix-zsh.org                                |
+
+** TODO Spell check all files
+* Roadmap [1/6][16%]
+** DONE Add/check header table 
+   CLOSED: [2017-09-03 Sun 23:54]
 *** Files with no *Author*
   #+BEGIN_SRC sh
   find ./spices -type f -print0 | xargs -0 grep -Po "\*Author\*\s*\|\s*\|"
@@ -147,6 +256,35 @@ find ./spices -type f -print0 | xargs -0 grep -Po "\*Source\*\s*\|\s*\|"
 #+BEGIN_SRC sh 
 find ./ -printf "%T@ %y %s %p\n" | grep -v "\.git\|\#\|\./$" | sort -rn | column -t  > MANIFEST 
 #+END_SRC
+** TODO Help extractor to cix-stat.sh
+
+# End of cix-todo.org
+
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+|   | test |
+
+#+BEGIN_SRC sh
+ls
+
+#+END_SRC
+
+#+RESULTS:
+| cix-convension.org |
+| cix-main.org       |
+| cix-stat.sh        |
+| cix-todo.org       |
+| img                |
+| LICENSE            |
+| README.org         |
+| README-ru.md       |
+| spices             |
+| tests              |
+| tutors             |
 ** TODO Add references
 *** Links
 *** CVE

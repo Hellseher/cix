@@ -1,24 +1,52 @@
-# File           : cix-man-db.org
-# Created        : <2016-11-05 Sat 00:08:04 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-man-db.org
+# Created       : <2016-11-05 Sat 00:08:04 GMT>
+# Modified      : <2017-9-01 Fri 00:12:51 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Tools for searching and reading man pages
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: Man-db
+[[file:../cix-main.org][|≣|]]
+#+TITLE: man-db
+|-----------------+--------------|
+| *Author*        | Colin Watson |
+| *Maintainer(s)* |              |
+| *Released*      |  1994        |
+| *Source*        | [[http://git.savannah.nongnu.org/cgit/man-db.git][man-db.git]]   |
+| *Man*           |              |
+| *Info*          |              |
+|-----------------+--------------|
 
-#+BEGIN_EXAMPLE
-    apropos (1)          - search the manual page names and descriptions
-    catman (8)           - create or update the pre-formatted manual pages
-    lexgrog (1)          - parse header information in man pages
-    man (7)              - macros to format man pages
-    man (1)              - an interface to the on-line reference manuals
-    man (1p)             - display system documentation
-    mandb (8)            - create or update the manual page index caches
-    manpath (1)          - determine search path for manual pages
-    manpath (5)          - format of the /etc/man_db.conf file
-    whatis (1)           - display one-line manual page descriptions
-    accessdb (8)         - dumps the content of a man-db database in a human readable format
-#+END_EXAMPLE
+The man-db package includes five tools for browsing man-pages: man, whatis,
+apropos, manpath and lexgrog. man formats and displays manual pages. whatis
+searches the manual page names. apropos searches the manual page names and
+descriptions. manpath determines search path for manual pages. lexgrog directly
+reads header information in manual pages.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc man-db
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD      | MAN  | DESCRIPTION                                               |
+| apropos  | (1)  | search the manual page names and descriptions             |
+| catman   | (8)  | create or update the pre-formatted manual pages           |
+| lexgrog  | (1)  | parse header information in man pages                     |
+| man      | (7)  | macros to format man pages                                |
+| man      | (1)  | an interface to the on-line reference manuals             |
+| man      | (1p) | display system documentation                              |
+| mandb    | (8)  | create or update the manual page index caches             |
+| manpath  | (1)  | determine search path for manual pages                    |
+| manpath  | (5)  | format of the /etc/man_db.conf file                       |
+| whatis   | (1)  | display one-line manual page descriptions                 |
+| accessdb | (8)  | dumps the content of a man-db database in a human read... |
+#+END_SRC
+* Receipts
+** whatis
+*** whatis::examples
+**** whatis-170829193014 
+
+  # End of cix-man-db.org

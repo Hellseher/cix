@@ -1,27 +1,29 @@
 # File           : cix-lshw.org
 # Created        : <2017-08-08 Tue 23:27:53 BST>
-# Modified       : <2017-8-08 Tue 23:34:43 BST> sharlatan
+# Modified       : <2017-9-04 Mon 22:42:11 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Hardware lister.
 
 #+OPTIONS: num:nil
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: lshw
-|-----------------+----------------------------------|
-| *Author*        | Lyonel Vincent <lyonel@ezix.org> |
-| *Maintainer(s)* |                                  |
-| *Released*      |                                  |
-| *Source*        | [[https://github.com/lyonel/lshw][lshw.git]]                         |
-| *Info*          |                                  |
-|-----------------+----------------------------------|
+|-----------------+----------------|
+| *Author*        | Lyonel Vincent |
+| *Maintainer(s)* |                |
+| *Released*      | 2003           |
+| *Source*        | [[https://github.com/lyonel/lshw][lshw.git]]       |
+| *Info*          | [[http://www.ezix.org/project/wiki/HardwareLiSter][lshw.web]]       |
+|-----------------+----------------|
 
-
+=lshw= is a small tool to provide detailed informaton on the hardware
+configuration of the machine. It can report exact memory configuration, firmware
+version, mainboard configuration, CPU version and speed, cache configuration,
+bus speed, etc. on DMI-capable x86 systems and on some PowerPC machines
+(PowerMac G4 is known to work).
 -----
 * Index
 * Receipts
 * Refreances
-
 # End of cix-lshw.org
-

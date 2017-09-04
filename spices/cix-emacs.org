@@ -1,22 +1,23 @@
 # File           : cix-emacs.org
 # Created        : <2017-08-07 Mon 00:31:31 BST>
-# Modified       : <2017-8-07 Mon 00:31:32 BST> sharlatan
+# Modified       : <2017-8-21 Mon 21:26:17 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : GNU Emacs text editor
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: emacs
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
-
+|-----------------+-------------------|
+| *Author*        | David A. Moon,    |
+|                 | Guy L. Steele Jr. |
+|                 | Richard Stallman  |
+| *Maintainer(s)* | [[http://git.savannah.gnu.org/cgit/emacs.git/tree/admin/MAINTAINERS][(all...)]]          |
+| *Released*      | 1976              |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/emacs.git][emacs.git]]         |
+| *Info*          | [[https://www.gnu.org/software/emacs/][emacs.web]]         |
+|-----------------+-------------------|
 
 -----
 * Index

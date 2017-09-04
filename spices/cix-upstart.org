@@ -1,13 +1,22 @@
-# File           : cix-upstart.org
-# Created        : <2017-02-05 Sun 20:41:27 GMT>
-# Modified       : <2017-2-05 Sun 20:49:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-upstart.org
+# Created       : <2017-02-05 Sun 20:41:27 GMT>
+# Modified      : <2017-9-03 Sun 23:23:14 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Upstart is an event-based replacement for the /sbin/init daemon.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: upstart
+[[file:../cix-main.org][|≣|]]
+#+TITLE: upstart
+|-----------------+---------------------|
+| *Author*        | Scott James Remnant |
+| *Maintainer(s)* |                     |
+| *Released*      | 2006                |
+| *Source*        | [[https://code.launchpad.net/upstart][upstart.git]]         |
+| *Man*           |                     |
+| *Info*          |                     |
+|-----------------+---------------------|
 
 * Index
 #+BEGIN_EXAMPLE
@@ -34,3 +43,5 @@
     poweroff (8)              - reboot or stop the system
     start (8)                 - init daemon control tool
 #+END_EXAMPLE
+
+# End of cix-upstart.org

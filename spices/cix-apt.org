@@ -1,14 +1,31 @@
-# File           : cix-apt-get.org
+# File           : cix-apt.org
 # Created        : <2017-03-13 Mon 22:14:32 GMT>
-# Modified       : <2017-3-13 Mon 22:16:27 GMT> sharlatan
+# Modified       : <2017-9-03 Sun 22:16:48 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis :i Debian's Advanced Packaging Tool with RPM support.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: apt
+[[file:../cix-main.org][|≣|]]
+#+TITLE: apt
+|-----------------+----------|
+| *Author*        | [[https://anonscm.debian.org/git/apt/apt.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |          |
+| *Released*      | 1998     |
+| *Source*        | [[https://anonscm.debian.org/git/apt/apt.git][apt.git]]  |
+| *Man*           |          |
+| *Info*          |          |
+|-----------------+----------|
 
+=apt= is the main commandline package manager for Debian and its derivatives. It
+provides commandline tools for searching and managing as well as querying
+information about packages as well as low-level access to all features provided
+by the libapt-pkg and libapt-inst libraries which higher-level package managers
+can depend upon.
+-----
 * Receipts
 ** apt-get
 *** apt-get::files
+
+# End of cix-apt.org

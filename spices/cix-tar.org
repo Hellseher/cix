@@ -1,23 +1,43 @@
-# File           : cix-tar.org
-# Created        : <2016-11-04 Fri 22:42:50 GMT>
-# Modified       : <2017-3-06 Mon 20:38:23 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-tar.org
+# Created       : <2016-11-04 Fri 22:42:50 GMT>
+# Modified      : <2017-9-01 Fri 22:35:49 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : File archiving program
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: tar
+[[file:../cix-main.org][|≣|]]
+#+TITLE: tar
+|------------------+-----------------------|
+| *Author*         | John Gilmore [[http://git.savannah.gnu.org/cgit/tar.git/tree/AUTHORS][(all...)]] |
+| *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/tar.git/tree/THANKS][(all...)]]              |
+| *Released*       | gnu-2000              |
+| *Source*         | [[http://git.savannah.gnu.org/cgit/tar.git][gnu-tar.git]]           |
+| *Man*            | [[http://man7.org/linux/man-pages/man1/tar.1.html][gnu-tar.1]],            |
+|                  | [[http://man.openbsd.org/OpenBSD-current/man1/tar.1][openbsd-tar.1]],        |
+|                  | [[https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1][freebsd-tar.1]]         |
+| *Info*           | [[https://www.gnu.org/software/tar/][gnu-tar.web]]           |
+|------------------+-----------------------|
 
+GNU =tar= saves many files together into a single tape or disk archive, and can
+restore individual files from the archive. It includes multivolume support, the
+ability to archive sparse files, automatic archive compression/decompression,
+remote archives and special features that allow =tar= to be used for incremental
+and full backups. This distribution also includes =rmt=, the remote tape server.
+The =mt= tape drive control program is in the GNU =cpio= distribution.
+-----
 * Receipts
 ** GNU tar
 *** gnu-tar::options
-
-| -x | Extract files                                                  |
-| -v | verbose, print the file names as they are extracted one by one |
-| -c | commpress                                                      |
-| -z | The file is a "gzipped" file                                   |
-| -f | Use the following tar archive for the operation                |
+| OPT  | TYPE | ++V | --V | DESC                                                           |
+|------+------+-----+-----+----------------------------------------------------------------|
+| =-x= |      |     |     | Extract files                                                  |
+| =-v= |      |     |     | verbose, print the file names as they are extracted one by one |
+| =-c= |      |     |     | commpress                                                      |
+| =-z= |      |     |     | The file is a "gzipped" file                                   |
+| =-f= |      |     |     | Use the following tar archive for the operation                |
+|------+------+-----+-----+----------------------------------------------------------------|
 
 *** gnu-tar::examples
 **** tar-170117214147
@@ -28,3 +48,5 @@ creat a tarball of current working directory:
 extart *.tar.gz, *.tar.bz2 files:
 :    ~$ tar -xzvf tarball_file.tar.gz
 :    ~$ tar -xjvf tarball_file.tar.bz2
+
+# End of cix-tar.org

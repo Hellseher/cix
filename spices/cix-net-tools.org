@@ -1,8 +1,8 @@
 # File          : net-utils.md
 # Created       : Mon 16 Nov 2015 20:51:24
-# Modified : <2017-8-07 Mon 00:39:51 BST> sharlatan
+# Modified : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Maintainer    : sharlatan
-# Sinopsis :
+# Sinopsis : Basic networking tools.
 
 #+OPTIONS: num:nil
 
@@ -12,7 +12,7 @@
 |--------------+-----------------------------------|
 | *Author*       | Bernd Eckenfels, Phil Blundell    |
 | *Contributors* |                                   |
-| *Realised*     | 2006                              |
+| *Released*     | 2006                              |
 | *Source*       | [[https://sourceforge.net/projects/net-tools/][net-tools]]                         |
 | *NOTES*        | marked as depricated see [[./cix-iproute2.org][iproute2]] |
 |--------------+-----------------------------------|
@@ -102,3 +102,5 @@ distribution for the Linux operating system.
 * Referance
 - Linuxfoundation: net-tools
   http://www.linuxfoundation.org/collaborate/workgroups/networking/net-tools
+
+# End of cix-net-tools.org

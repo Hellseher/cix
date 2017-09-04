@@ -1,23 +1,36 @@
 # File           : cix-cpio.org
 # Created        : <2017-08-07 Mon 00:29:47 BST>
-# Modified       : <2017-8-07 Mon 00:29:48 BST> sharlatan
+# Modified       : <2017-8-20 Sun 22:20:04 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A GNU archiving program
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: cpio
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-------------------|
+| *Author*        | Phil Nelson,      |
+|                 | David MacKenzie,  |
+|                 | John Oleynick,    |
+|                 | Sergey Poznyakoff |
+| *Maintainer(s)* |                   |
+| *Released*      | 1989              |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/cpio.git][cpio.git]]          |
+| *Info*          |                   |
+|-----------------+-------------------|
 
 
+GNU =cpio= copies files into or out of a cpio or tar archive. Archives are files
+which contain a collection of other files plus information about them, such as
+their file name, owner, timestamps, and access permissions. The archive can be
+another file on the disk, a magnetic tape, or a pipe. GNU cpio supports the
+following archive formats: binary, old ASCII, new ASCII, crc, HPUX binary, HPUX
+old ASCII, old tar and POSIX.1 tar. By default, cpio creates binary format
+archives, so that they are compatible with older cpio programs. When it is
+extracting files from archives, cpio automatically recognizes which kind of
+archive it is reading and can read archives created on machines with a different
+byte-order.
 -----
 * Index
 * Receipts

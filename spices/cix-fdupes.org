@@ -1,19 +1,21 @@
-# File           : cix-fdupes.org
-# Created        : <2016-11-19 Sat 19:13:55 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-fdupes.org
+# Created       : <2016-11-19 Sat 19:13:55 GMT>
+# Modified      : <2017-8-20 Sun 19:02:55 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A program for identifying or deleting duplicate files 
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Fdupes
+#+TITLE: fdupes
+|---------------+--------------|
+| *Author*      | Adrian Lopez |
+| *Contibutors* | [[https://github.com/adrianlopezroche/fdupes/blob/master/CONTRIBUTORS][(all...)]]     |
+| *Released*    | 1999         |
+| *Source*      | [[https://github.com/adrianlopezroche/fdupes][fdupes.git]]   |
+| *Info*        |              |
+|---------------+--------------|
 
-|------------+------------|
-| *Author*     |            |
-| *Maintainer* |            |
-| *Released*   |            |
-| *Source*     | [[https://github.com/adrianlopezroche/fdupes][fdupes.git]] |
-| *Info*       |            |
-|------------+------------|
+-----
+# End of cix-fdupes.org

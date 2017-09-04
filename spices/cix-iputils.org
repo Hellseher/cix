@@ -1,9 +1,9 @@
 # File           : cix-iputils.org
 # Created        : <2015-11-16 Mon 00:31:15 GMT>
-# Modified  : <2017-5-11 Thu 22:41:53 BST> sharlatan
+# Modified  : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : Network monitoring tools including ping.
 
 #+OPTIONS: num:nil
 
@@ -13,7 +13,7 @@
 |--------------+------------------|
 | *Author*       | Alexey Kuznetsov |
 | *Contributors* |                  |
-| *Realised*     | 2006             |
+| *Released*     | 2006             |
 | *Source*       | [[https://github.com/iputils/iputils][iputils.git]]      |
 |--------------+------------------|
 -----
@@ -67,3 +67,5 @@ find dublicated IP on LAN:
 
 * Referance
 - Linuxfoundation: iputils http://www.linuxfoundation.org/collaborate/workgroups/networking/iputils
+
+# End of cix-iputils.org

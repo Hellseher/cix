@@ -1,22 +1,27 @@
-# File           : cix-openssh.org
-# Created        : <2016-11-13 Sun 19:25:52 GMT>
-# Modified  : <2017-4-18 Tue 22:15:08 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-openssh.org
+# Created       : <2016-11-13 Sun 19:25:52 GMT>
+# Modified      : <2017-8-28 Mon 23:01:42 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : An open source implementation of SSH protocol versions 1 and 2.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: OpenSSH
-
-|--------------+---------------|
-| *Author*       | Damien Miller |
-| *Contributors* |               |
-| *Realised*     |               |
-| *Source*       |               |
-| *Info*         |               |
-|--------------+---------------|
+|------------------+-----------------|
+| *Author*         | Tatu Ylonen,    |
+|                  | Aaron Campbell, |
+|                  | Bob Beck,       |
+|                  | Markus Friedl,  |
+|                  | Niels Provos,   |
+|                  | Theo de Raadt,  |
+|                  | Dug Song        |
+| *Contributor(s)* | [[https://anongit.mindrot.org/openssh.git/tree/CREDITS][(all...)]]        |
+| *Released*       | 1999            |
+| *Source*         | [[https://anongit.mindrot.org/openssh.git][openssh.git]]     |
+| *Info*           |                 |
+|------------------+-----------------|
 
 SSH (Secure  SHell) is a  program for logging into  and executing commands  on a
 remote machine. SSH is intended to replace *rlogin* and *rsh*, and to provide secure
@@ -126,3 +131,5 @@ compare remote file and with local one without copying:
 *** ssh-keyscan::see-also
 
 * References
+
+# End of cix-openssh.org

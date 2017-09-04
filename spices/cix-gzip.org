@@ -1,35 +1,89 @@
-# File          : gnu-core-utilities.md
-# Created       : <2016-11-03 Thu 23:13:44 GMT>
-# Modified : <2017-8-07 Mon 00:39:05 BST> sharlatan
-# Author        : sharlatan
-# Maintainer    :
-# Sinopsis :
+# File       : gnu-core-utilities.md
+# Created    : <2016-11-03 Thu 23:13:44 GMT>
+# Modified   : <2017-9-02 Sat 12:25:00 BST> sharlatan
+# Author     : sharlatan
+# Maintainer :
+# Sinopsis   : The GNU data compression program.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Gzip
-|-------------+------------------------------|
-| *Author*      | Jean-loup Gailly, Mark Adler |
-|-------------+------------------------------|
-| *Contributors* | Jim Meyering, Paul Eggert    |
-| *Realised*    |                              |
-| *Source*      |                              |
-| *Info*        | [[https://www.gnu.org/software/gzip/manual/gzip.html][GNU Gzip]]                     |
-|-------------+------------------------------|
+|----------------+-------------------|
+| *Author*       | Jean-loup Gailly, |
+|                | Mark Adler        |
+| *Contributors* | Jim Meyering,     |
+|                | Paul Eggert       |
+| *Released*     | 2009              |
+| *Source*       | [[http://git.savannah.gnu.org/cgit/gzip.git/][gzip.git]]          |
+| *Info*         | [[https://www.gnu.org/software/gzip/manual/gzip.html][GNU Gzip]]          |
+|----------------+-------------------|
 
-#+BEGIN_EXAMPLE
-    gunzip (1) - compress or expand files
-    gzexe (1)  - compress executable files in place
-    gzip (1)   - compress or expand files
-    zcat (1)   - compress or expand files
-    zcat (1p)  - expand and concatenate data
-    zcmp (1)   - compare compressed files
-    zdiff (1)  - compare compressed files
-    zforce (1) - force a '.gz' extension on all gzip files
-    zgrep (1)  - search possibly compressed files for a regular expression
-    zless (1)  - file perusal filter for crt viewing of compressed text
-    zmore (1)  - file perusal filter for crt viewing of compressed text
-    znew (1)   - recompress .Z files to .gz files
-    zegrep (1) -
-#+END_EXAMPLE
+=gzip= (GNU zip) is a compression utility designed to be a replacement for
+=compress=. Its main advantages over compress are much better compression and
+freedom from patented algorithms. The GNU Project uses it as the standard
+compression program for its system.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc gzip
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD    | MAN  | DESCRIPTION                                               |
+| gunzip | (1)  | compress or expand files                                  |
+| gzexe  | (1)  | compress executable files in place                        |
+| gzip   | (1)  | compress or expand files                                  |
+| zcat   | (1)  | compress or expand files                                  |
+| zcat   | (1p) | expand and concatenate data                               |
+| zcmp   | (1)  | compare compressed files                                  |
+| zdiff  | (1)  | compare compressed files                                  |
+| zforce | (1)  | force a '.gz' extension on all gzip files                 |
+| zgrep  | (1)  | search possibly compressed files for a regular expression |
+| zless  | (1)  | file perusal filter for crt viewing of compressed text    |
+| zmore  | (1)  | file perusal filter for crt viewing of compressed text    |
+| znew   | (1)  | recompress .Z files to .gz files                          |
+#+END_SRC
+* References
+** CVE
+https://www.cvedetails.com/vulnerability-list/vendor_id-72/product_id-1670/GNU-Gzip.html
+- CVE-2010-0001 :: Integer underflow in the unlzw function in unlzw.c in gzip
+                   before 1.4 on 64-bit platforms, as used in ncompress and
+                   probably others, allows remote attackers to cause a denial of
+                   service (application crash) or possibly execute arbitrary
+                   code via a crafted archive that uses LZW compression, leading
+                   to an array index error.
+- CVE-2009-2624 :: The huft_build function in inflate.c in gzip before 1.3.13
+                   creates a hufts (aka huffman) table that is too small, which
+                   allows remote attackers to cause a denial of service
+                   (application crash or infinite loop) or possibly execute
+                   arbitrary code via a crafted archive. NOTE: this issue is
+                   caused by a CVE-2006-4334 regression.
+- CVE-2005-1228 :: None Directory traversal vulnerability in gunzip -N in gzip
+                   1.2.4 through 1.3.5 allows remote attackers to write to
+                   arbitrary directories via a .. (dot dot) in the original
+                   filename within a compressed file.
+- CVE-2005-0988 ::  Race condition in gzip 1.2.4, 1.3.3, and earlier, when
+                   decompressing a gzipped file, allows local users to modify
+                   permissions of arbitrary files via a hard link attack on a
+                   file while it is being decompressed, whose permissions are
+                   changed by gzip after the decompression is complete.
+- CVE-2005-0758 :: zgrep in gzip before 1.3.5 does not properly sanitize
+                   arguments, which allows local users to execute arbitrary
+                   commands via filenames that are injected into a sed script.
+- CVE-2004-0970 :: None The (1) gzexe, (2) zdiff, and (3) znew scripts in the
+                   gzip package, as used by other packages such as ncompress,
+                   allows local users to overwrite files via a symlink attack on
+                   temporary files. NOTE: the znew vulnerability may overlap
+                   CVE-2003-0367.
+- CVE-2004-0603 :: gzexe in gzip 1.3.3 and earlier will execute an argument when
+                   the creation of a temp file fails instead of exiting the
+                   program, which could allow remote attackers or local users to
+                   execute arbitrary commands, a different vulnerability than
+                   CVE-1999-1332.
+- CVE-2001-1228 :: Buffer overflows in gzip 1.3x, 1.2.4, and other versions
+                   might allow attackers to execute code via a long file name,
+                   possibly remotely if gzip is run on an FTP server.
+
+# End of cix-gzip.org

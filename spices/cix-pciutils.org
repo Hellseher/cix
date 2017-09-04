@@ -1,9 +1,9 @@
 # File           : cix-pciutils.org
 # Created        : <2016-11-08 Tue 23:15:13 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-9-03 Sun 22:35:34 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : PCI bus related utilities
 
 #+OPTIONS: num:nil
 
@@ -25,3 +25,5 @@ configuration registers and several utilities based on this library.
     setpci (8)           - configure PCI devices
     update-pciids (8)    - download new version of the PCI ID list
 #+END_EXAMPLE
+
+# End of cix-pciutils.org

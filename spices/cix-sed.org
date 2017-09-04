@@ -1,6 +1,6 @@
 # File          : cix-sed.org
 # Created       : <2016-11-04 Fri 22:49:14 GMT>
-# Modified      : <2017-9-03 Sun 23:40:59 BST> sharlatan
+# Modified      : <2017-9-04 Mon 22:38:08 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU stream text editor
@@ -149,3 +149,4 @@ display the last line of the file:
   http://sed.sourceforge.net/
 - Useful one-line scripts for sed 
   http://www.pement.org/sed/sed1line.txt
+# End of cix-sed.org

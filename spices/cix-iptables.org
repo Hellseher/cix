@@ -1,21 +1,39 @@
-# File           : cix-iptables.org
-# Created        : <2016-11-07 Mon 23:05:04 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-iptables.org
+# Created       : <2016-11-07 Mon 23:05:04 GMT>
+# Modified      : <2017-8-28 Mon 21:43:22 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      :Tools for managing Linux kernel packet filtering capabilities
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: IP talbes
+[[file:../cix-main.org][|≣|]]
+#+TITLE: IP talbes
+|-----------------+---------------|
+| *Author*        | Rusty Russell |
+| *Maintainer(s)* |               |
+| *Released*      | 1998          |
+| *Source*        | [[http://git.netfilter.org/iptables/][iptables.git]]  |
+| *Man*           |               |
+| *Info*          |               |
+|-----------------+---------------|
 
 * Index
-#+BEGIN_EXAMPLE
-    iptables-xml (1)     - Convert iptables-save format to XML
-    ip6tables (8)        - administration tool for IPv4/IPv6 packet filtering and NAT
-    ip6tables-restore (8) - Restore IPv6 Tables
-    ip6tables-save (8)   - dump iptables rules to stdout
-    iptables (8)         - administration tool for IPv4/IPv6 packet filtering and NAT
-    iptables-restore (8) - Restore IP Tables
-    iptables-save (8)    - dump iptables rules to stdout
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc iptables
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD               | MAN | DESCRIPTION                                               |
+| iptables-xml      | (1) | Convert iptables-save format to XML                       |
+| ip6tables         | (8) | administration tool for IPv4/IPv6 packet filtering and... |
+| ip6tables-restore | (8) | Restore IPv6 Tables                                       |
+| ip6tables-save    | (8) | dump iptables rules to stdout                             |
+| iptables          | (8) | administration tool for IPv4/IPv6 packet filtering and... |
+| iptables-apply    | (8) | a safer way to update iptables remotely                   |
+| iptables-restore  | (8) | Restore IP Tables                                         |
+| iptables-save     | (8) | dump iptables rules to stdout                             |
+#+END_SRC
+
+# End of cix-iptables.org

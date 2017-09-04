@@ -1,10 +1,50 @@
-# File           : cix-autoconf.org
-# Created        : <2017-01-22 Sun 23:40:29 GMT>
-# Modified       : <2017-1-22 Sun 23:40:54 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-autoconf.org
+# Created       : <2017-01-22 Sun 23:40:29 GMT>
+# Modified      : <2017-8-25 Fri 00:21:06 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A GNU tool for automatically configuring source code
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: autoconf
+[[file:../cix-main.org][|≣|]]
+#+TITLE: autoconf
+|------------------+-----------------|
+| *Author*         | David MacKenzie |
+| *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/autoconf.git/tree/AUTHORS][(all...)]]        |
+| *Released*       | 1991            |
+| *Source*         | [[http://git.savannah.gnu.org/cgit/autoconf.git/about/][autoconf.git]]    |
+| *Man*            |                 |
+| *Info*           |                 |
+|------------------+-----------------|
+
+ GNU's Autoconf is a tool for configuring source code and Makefiles. Using
+Autoconf, programmers can create portable and configurable packages, since the
+person building the package is allowed to specify various configuration options.
+
+You should install Autoconf if you are developing software and would like to
+create shell scripts that configure your source code packages. If you are
+installing Autoconf, you will also need to install the GNU m4 package.
+
+Note that the Autoconf package is not required for the end-user who may be
+configuring software with an Autoconf-generated script; Autoconf is only
+required for the generation of the scripts, not their use.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc autoconf
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD        | MAN | DESCRIPTION                                  |
+| autoconf   | (1) | Generate configuration scripts               |
+| autoheader | (1) | Create a template header for configure       |
+| autom4te   | (1) | Generate files and scripts thanks to M4      |
+| autoreconf | (1) | Update generated configuration files         |
+| autoscan   | (1) | Generate a preliminary configure.in          |
+| autoupdate | (1) | Update a configure.in to a newer Autoconf    |
+| ifnames    | (1) | Extract CPP conditionals from a set of files |
+#+END_SRC
+
+# End of cix-autoconf.org

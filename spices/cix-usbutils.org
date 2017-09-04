@@ -1,25 +1,24 @@
 # File          : cix-usbutils.org
 # Created       : <2016-11-13 Sun 20:16:58 GMT>
-# Modified      : <2017-8-09 Wed 00:02:41 BST> sharlatan
+# Modified      : <2017-9-03 Sun 22:41:34 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      :
+# Sinopsis      : Linux USB utilities.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: usbutils
-|-----------------+--------------------------------------------|
-| *Author*        | Thomas Sailer, <t.sailer@alumni.ethz.ch> [[https://github.com/gregkh/usbutils/blob/master/AUTHORS][*]] |
-| *Maintainer(s)* |                                            |
-| *Released*      |                                            |
-| *Source*        | [[https://github.com/gregkh/usbutils][usbutils.git]]                               |
-| *Info*          |                                            |
-|-----------------+--------------------------------------------|
+|-----------------+------------------------|
+| *Author*        | Thomas Sailer [[https://github.com/gregkh/usbutils/blob/master/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                        |
+| *Released*      | 1999                   |
+| *Source*        | [[https://github.com/gregkh/usbutils][usbutils.git]]           |
+| *Info*          | [[http://www.linux-usb.org/][usbutils.web]]           |
+|-----------------+------------------------|
 
 
 -----
-
 * Index
 #+BEGIN_EXAMPLE
    lsusb (8)            - list USB devices

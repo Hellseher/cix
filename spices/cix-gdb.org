@@ -1,9 +1,9 @@
 # File           : cix-gdb.org
 # Created        : <2017-08-05 Sat 00:28:37 BST>
-# Modified       : <2017-8-05 Sat 00:38:24 BST> sharlatan
+# Modified       : <2017-9-03 Sun 19:06:13 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A stub package for GNU source-level debugger.
 
 #+OPTIONS: num:nil
 
@@ -13,7 +13,7 @@
 | *Author*        | Richard Stallman |
 | *Maintainer(s)* | John Gilmore     |
 | *Released*      | 1986             |
-| *Source*        |                  |
+| *Source*        | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][gdb.git]]          |
 | *Info*          |                  |
 |-----------------+------------------|
 
@@ -22,5 +22,32 @@
 * Index
 * Receipts
 * Refreances
+** CVE
+-	 CVE-2017-9778 :: GNU Debugger (GDB) 8.0 and earlier fails to detect a
+                    negative length field in a DWARF section. A malformed
+                    section in an ELF binary or a core file can cause GDB to
+                    repeatedly allocate memory until a process limit is reached.
+                    This can, for example, impede efforts to analyze malware
+                    with GDB.
+-	 CVE-2011-4355 :: GNU Project Debugger (GDB) before 7.5, when
+                    .debug_gdb_scripts is defined, automatically loads certain
+                    files from the current working directory, which allows local
+                    users to gain privileges via crafted files such as Python
+                    scripts.
+-	 CVE-2006-4146 :: 	Buffer overflow in the (1) DWARF (dwarfread.c) and (2)
+                    DWARF2 (dwarf2read.c) debugging code in GNU Debugger (GDB)
+                    6.5 allows user-assisted attackers, or restricted users, to
+                    execute arbitrary code via a crafted file with a location
+                    block (DW_FORM_block) that contains a large number of
+                    operations.
+-	 CVE-2005-1705 :: gdb before 6.3 searches the current working directory to
+                    load the .gdbinit configuration file, which allows local
+                    users to execute arbitrary commands as the user running gdb.
+-	 CVE-2005-1704 :: Integer overflow in the Binary File Descriptor (BFD)
+                    library for gdb before 6.3, binutils, elfutils, and possibly
+                    other packages, allows user-assisted attackers to execute
+                    arbitrary code via a crafted object file that specifies a
+                    large number of section headers, leading to a heap-based
+                    buffer overflow.
 
 # End of cix-gdb.org

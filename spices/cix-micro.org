@@ -1,21 +1,21 @@
 # File           : cix-micro.org
 # Created        : <2017-08-07 Mon 00:27:45 BST>
-# Modified       : <2017-8-07 Mon 00:27:49 BST> sharlatan
+# Modified       : <2017-8-20 Sun 12:10:09 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A modern and intuitive terminal-based text editor
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: micro
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-----------------|
+| *Author*        | Zachary Yedidia |
+| *Maintainer(s)* | [[https://github.com/zyedidia/micro/graphs/contributors][(all...)]]        |
+| *Released*      | 2016            |
+| *Source*        | [[https://github.com/zyedidia/micro][micro.git]]       |
+| *Info*          | [[https://micro-editor.github.io/][micro.web]]       |
+|-----------------+-----------------|
 
 
 -----

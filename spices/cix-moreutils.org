@@ -1,33 +1,50 @@
-# File           : cix-moreutils.org
-# Created        : <2016-11-07 Mon 22:33:39 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-moreutils.org
+# Created       : <2016-11-07 Mon 22:33:39 GMT>
+# Modified      : <2017-8-28 Mon 21:35:58 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Additional unix utilities.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Moreutils
+|-----------------+---------------|
+| *Author*        | Joey Hess     |
+| *Maintainer(s)* |               |
+| *Released*      | 2005          |
+| *Source*        | [[https://git.joeyh.name/index.cgi/moreutils.git/][moreutils.git]] |
+| *Man*           |               |
+| *Info*          |               |
+|-----------------+---------------|
 
-** Index
-#+BEGIN_EXAMPLE
-    chronic (1)          - runs a command quietly unless it fails
-    combine (1)          - combine sets of lines from two files using boolean operations
-    Errno (3pm)          - System errno constants
-    errno (3)            - number of last error
-    errno (3p)           - error return value
-    errno (1)            - look up errno names and descriptions
-    ifdata (1)           - get network interface info without parsing ifconfig output
-    ifne (1)             - Run command if the standard input is not empty
-    isutf8 (1)           - check whether files are valid UTF-8
-    lckdo (1)            - run a program with a lock held
-    mispipe (1)          - pipe two commands, returning the exit status of the first
-    pee (1)              - tee standard input to pipes
-    sponge (1)           - soak up standard input and write to a file
-    ts (1ssl)            - Time Stamping Authority tool (client/server)
-    ts (1)               - timestamp input
-    vidir (1)            - edit directory
-    vipe (1)             - edit pipe
-    zrun (1)             - automatically uncompress arguments to command
-#+END_EXAMPLE
+This is a collection of the unix tools that nobody thought to write
+long ago, when unix was young.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc moreutils
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD                                                              | MAN  | DESCRIPTION                                               |
+| chronic                                                          | (1)  | runs a command quietly unless it fails                    |
+| combine                                                          | (1)  | combine sets of lines from two files using boolean ope... |
+| errno                                                            | (3)  | number of last error                                      |
+| errno                                                            | (1)  | look up errno names and descriptions                      |
+| errno                                                            | (3p) | error return value                                        |
+| ifdata                                                           | (1)  | get network interface info without parsing ifconfig ou... |
+| ifne                                                             | (1)  | Run command if the standard input is not empty            |
+| isutf8                                                           | (1)  | check whether files are valid UTF-8                       |
+| lckdo                                                            | (1)  | run a program with a lock held                            |
+| mispipe                                                          | (1)  | pipe two commands, returning the exit status of the first |
+| pee                                                              | (1)  | tee standard input to pipes                               |
+| sponge                                                           | (1)  | soak up standard input and write to a file                |
+| ts                                                               | (1)  | timestamp input                                           |
+| vidir                                                            | (1)  | edit directory                                            |
+| vipe                                                             | (1)  | edit pipe                                                 |
+| zrun                                                             | (1)  | automatically uncompress arguments to command             |
+#+END_SRC
+
+# End of cix-moreutils.org

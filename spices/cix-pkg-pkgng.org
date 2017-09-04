@@ -1,21 +1,22 @@
 # File           : cix-pkg-pkgng.org
 # Created        : <2017-08-05 Sat 01:06:08 BST>
-# Modified       : <2017-8-05 Sat 01:06:12 BST> sharlatan
+# Modified       : <2017-8-20 Sun 12:03:37 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Next Generation package management tool for FreeBSD
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: pkg-pkgng
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|----------------+---------------------|
+| *Author*       | Baptiste Daroussin, |
+|                | Julien Laffaye      |
+| *Contributors* | [[https://github.com/freebsd/pkg/graphs/contributors][(all...)]]            |
+| *Released*     | 2010                |
+| *Source*       | [[https://github.com/freebsd/pkg][pkgng.git]]           |
+| *Info*         | [[https://wiki.freebsd.org/pkgng][pkgng.wiki]]          |
+|----------------+---------------------|
 
 
 -----

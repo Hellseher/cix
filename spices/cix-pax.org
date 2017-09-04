@@ -1,25 +1,39 @@
 # File           : cix-pax.org
 # Created        : <2017-08-07 Mon 00:28:01 BST>
-# Modified       : <2017-8-07 Mon 00:28:03 BST> sharlatan
+# Modified       : <2017-9-02 Sat 12:52:23 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : POSIX File System Archiver
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: pax
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+--------------|
+| *Author*        | Keith Muller |
+| *Maintainer(s)* |              |
+| *Released*      | 2001         |
+| *Source*        | (?)          |
+| *Man*           | [[https://www.freebsd.org/cgi/man.cgi?format=html&query=pax%25281%2529][pax.1]]        |
+| *Info*          | [[http://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html][pax.web]]      |
+|-----------------+--------------|
 
-
+The =pax= utility is the POSIX standard archive tool. It supports the two most
+common forms of standard Unix archive (backup) files - =cpio= and =tar=.
 -----
 * Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc pax
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD  | MAN  | DESCRIPTION                                               |
+| opax | (1)  | read and write file archives and copy directory hierar... |
+| pax  | (1)  | portable archive interchange                              |
+| pax  | (1p) | portable archive interchange                              |
+#+END_SRC
+
 * Receipts
 * Refreances
 

@@ -1,9 +1,9 @@
 # File           : cix-strace.org
 # Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Modified  : <2017-8-17 Thu 22:39:04 BST> sharlatan
+# Modified  : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : Tracks and displays system calls associated with a running.
 
 #+OPTIONS: num:nil
 
@@ -68,3 +68,5 @@ ltrace xtrace trace-cmd ftrace truss DTrace ktrace kdump
 
 * References
 ** IRC
+
+# End of cix-strace.org

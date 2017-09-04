@@ -1,21 +1,22 @@
 # File           : cix-imagemagick.org
 # Created        : <2017-08-05 Sat 00:03:53 BST>
-# Modified       : <2017-8-05 Sat 00:11:07 BST> sharlatan
+# Modified       : <2017-8-20 Sun 19:19:48 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : An X application for displaying and manipulating images
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: ImageMagic
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+#+TITLE: ImageMagick
+|------------------+-----------------|
+| *Author*         | John Cristy,    |
+|                  | Dirk Lemstra    |
+| *Contributor(s)* | [[https://github.com/ImageMagick/ImageMagick/blob/master/AUTHORS.txt][(all...)]]        |
+| *Released*       | 1990            |
+| *Source*         | [[https://github.com/ImageMagick/ImageMagick/blob/master/AUTHORS.txt][ImageMagick.git]] |
+| *Info*           |                 |
+|------------------+-----------------|
 
 ImageMagick includes a number of command-line utilities for manipulating images.
 Most of you are probably accustomed to editing images one at a time with a
@@ -25,7 +26,6 @@ from a web script or you want to apply the same operations to many images or
 repeat a specific operation at different times to the same or different image.
 For these types of operations, the command-line image processing utility is
 appropriate.
-
 -----
 * Index
 * Receipts

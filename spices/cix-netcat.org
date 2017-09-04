@@ -1,20 +1,30 @@
-# File           : cix-netcat.org
-# Created        : <2016-11-04 Fri 22:44:54 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-netcat.org
+# Created       : <2016-11-04 Fri 22:44:54 GMT>
+# Modified      : <2017-8-24 Thu 23:01:10 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A utility which r/w data across network connections, using TCP/UDP
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: Netcat
+[[file:../cix-main.org][|≣|]]
+#+TITLE: Netcat
+|-----------------+-----------|
+| *Author*        | *Hobbit*  |
+| *Maintainer(s)* |           |
+| *Released*      | 2007      |
+| *Source*        | [[http://svn.code.sf.net/p/nc110/code/nc110.svn][nc110.svn]] |
+| *Man*           |           |
+| *Info*          | [[http://nc110.sourceforge.net/][nc110.web]] |
+|-----------------+-----------|
 
 * Receipts
 ** netcat
 *** netcat::options
-|----+-------------------|
-| -l | listen for a port |
-|----+-------------------|
+| OPT  | TYPE | ++V | --V | DISC              |
+|------+------+-----+-----+-------------------|
+| =-l= |      |     |     | listen for a port |
+|------+------+-----+-----+-------------------|
 
 *** netcat::examples
 **** nc-170109001313
@@ -24,3 +34,9 @@ setting up a one-shot webserver on port 8080 to present the content of a file:
 **** nc-170117213449
 "share" a FILE on a localhost:PORT (FILE=file.txt PORT=80):
 :    ~# while (nc -l 80 < file.txt > :); do : ;done
+
+**** nc- 170824224751 
+opening a raw connection to port 25 (like SMTP):
+:    ~$ nc mail.server.net 25
+
+# End of cix-netcat.org

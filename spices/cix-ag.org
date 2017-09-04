@@ -1,21 +1,21 @@
 # File           : cix-ag.org
 # Created        : <2017-08-07 Mon 00:30:00 BST>
-# Modified       : <2017-8-07 Mon 00:30:01 BST> sharlatan
+# Modified       : <2017-8-20 Sun 22:45:55 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A code-searching tool similar to ack, but faster 
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: ag
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-------------------------|
+| *Author*        | Geoff Greer             |
+| *Maintainer(s)* |                         |
+| *Released*      | 2011                    |
+| *Source*        | [[https://github.com/ggreer/the_silver_searcher][the_silver_searcher.git]] |
+| *Info*          |                         |
+|-----------------+-------------------------|
 
 
 -----

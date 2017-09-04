@@ -1,6 +1,6 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-8-07 Mon 00:45:00 BST> sharlatan
+# Modified      : <2017-8-19 Sat 13:24:55 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : is a standard package of the Linux operating system: =Linux=
@@ -10,16 +10,16 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Util Linux
-|--------------+--------------------------------------------------|
+|----------------+--------------------------------------------------|
 | *Author*       | Karel Zak                                        |
 | *Contributors* | Ruediger Meier, Sami Kerola, Stanislav Brabec    |
-|              | Filipe Brandenburger, Igor Gnatenko              |
-|              | J William Piggott, Lada Trimasova, Wayne R. Roth |
-|              | Werner Fink, Yuriy M. Kaminskiy                  |
-| *Realised*     | 2007                                             |
+|                | Filipe Brandenburger, Igor Gnatenko              |
+|                | J William Piggott, Lada Trimasova, Wayne R. Roth |
+|                | Werner Fink, Yuriy M. Kaminskiy                  |
+| *Released*     | 2007                                             |
 | *Source*       | [[https://git.kernel.org/cgit/utils/util-linux/util-linux.git/][util-linux.git]]                                   |
 | *Info*         |                                                  |
-|--------------+--------------------------------------------------|
+|----------------+--------------------------------------------------|
 
 The util-linux package contains a large variety of low-level system utilities
 that are necessary for a Linux system to function. Among others, Util-linux
@@ -464,9 +464,16 @@ To protect against multiple run of the script
 *** etrlimit::files
 *** etrlimit::see-also
 ** hexdump                                                                      :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /display file contents in hexadecimal, decimal, octal, or ascii/
+
 *** hexdump::options
+| OPT | TYPE | ++V | --V | DESC |
+|-----+------+-----+-----+------|
+|     |      |     |     |      |
+|-----+------+-----+-----+------|
 *** hexdump::examples
+display a hex dump of a file:
+:    ~$ hexdump -C -v input_file
 *** hexdump::files
 *** hexdump::see-also
 ** hwclock                                                                      :cmd:
@@ -950,3 +957,5 @@ display sertain part of the path:
 *** write::see-also
 
 * References
+
+# End of cix-util-linux.org

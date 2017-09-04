@@ -1,18 +1,26 @@
-# File           : cix-stress.org
-# Created        : <2017-07-23 Sun 22:54:58 BST>
-# Modified       : <2017-7-28 Fri 23:34:34 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis  :
+# File          : cix-stress.org
+# Created       : <2017-07-23 Sun 22:54:58 BST>
+# Modified      : <2017-9-03 Sun 21:22:59 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A tool to put given subsystems under a specified load
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Stress
-|---------------+----------------|
-| *Author*        | Amos Waterland |
+|----------------+----------------|
+| *Author*       | Amos Waterland |
 | *Maintainer(s) |                |
-| *Released*      |                |
-| *Source*        |           2002 |
-| *Info*          |                |
-|---------------+----------------|
+| *Released*     | 2002           |
+| *Source*       | [[http://people.seas.harvard.edu/~apw/stress/][stress.web]]     |
+| *Info*         | [[http://people.seas.harvard.edu/~apw/stress/][stress.web]]     |
+|----------------+----------------|
+
+=stress= is not a benchmark, but is rather a tool designed to put given
+subsytems under a specified load. Instances in which this is useful include
+those in which a system administrator wishes to perform tuning activities, a
+kernel or libc programmer wishes to evaluate denial of service possibilities,
+etc.
+-----
+# End of cix-stress.org

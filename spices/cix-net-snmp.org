@@ -1,25 +1,44 @@
 # File           : cix-net-snmp.org
 # Created        : <2017-08-07 Mon 00:11:43 BST>
-# Modified       : <2017-8-07 Mon 00:12:08 BST> sharlatan
+# Modified       : <2017-9-02 Sat 12:42:04 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       :  A collection of SNMP protocol tools and libraries
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: net-snmp
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+|-----------------+--------------|
+| *Author*        | Wes Hardaker |
+| *Maintainer(s)* |              |
+| *Released*      | 1992         |
+| *Source*        | [[https://sourceforge.net/p/net-snmp/code/ci/master/tree/][net-snmp.git]] |
+| *Info*          | [[http://www.net-snmp.org/][net-snmp.web]] |
+|-----------------+--------------|
 
-
+SNMP (Simple Network Management Protocol) is a protocol used for network
+management. The NET-SNMP project includes various SNMP tools: an extensible
+agent, an SNMP library, tools for requesting or setting information from SNMP
+agents, tools for generating and handling SNMP traps, a version of the netstat
+command which uses SNMP, and a Tk/Perl mib browser. This package contains the
+snmpd and snmptrapd daemons, documentation, etc.
 -----
 * Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc net-snmp
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD                     | MAN | DESCRIPTION                                        |
+| agentxtrap              | (1) | send an AgentX NotifyPDU to an AgentX master agent |
+| net-snmp-create-v3-user | (1) | create a SNMPv3 user in net-snmp configuration ... |
+| snmpconf                | (1) | creates and modifies SNMP configuration files      |
+| snmpd                   | (8) | daemon to respond to SNMP request packets.         |
+| snmptrapd               | (8) | Receive and log SNMP trap messages.                |
+#+END_SRC
+
 * Receipts
 * Refreances
 

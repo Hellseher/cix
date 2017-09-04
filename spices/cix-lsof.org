@@ -1,22 +1,22 @@
-# File           : cix-lsof.org
-# Created        : <2016-11-05 Sat 23:22:08 GMT>
-# Modified  : <2017-8-17 Thu 23:46:18 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-lsof.org
+# Created       : <2016-11-05 Sat 23:22:08 GMT>
+# Modified      : <2017-9-03 Sun 22:54:45 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A utility which lists open files on a Linux/UNIX system.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: lsof
 
-|--------------+-----------|
+|----------------+-----------|
 | *Author*       | Vic Abell |
 | *Contributors* |           |
-| *Realised*     | 1994      |
-| *Source*       | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/][ftp:lsof]]  |
-| *Info*         | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/FAQ][FAQ]]       |
-|--------------+-----------|
+| *Released*     | 1994      |
+| *Source*       | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/][lsof.ftp]]  |
+| *Info*         | [[https://people.freebsd.org/~abe/][lsof.web]]  |
+|----------------+-----------|
 
 Lists information about files that are open by the processes running on a UNIX
 system.
@@ -78,3 +78,5 @@ Find out who is using file system when failed to unmount it:
 ** Links
 - Vic Abell's Home Page https://people.freebsd.org/~abe/
 - Finding open files with lsof http://www.ibm.com/developerworks/aix/library/au-lsof.html
+
+# End of cix-lsof.org

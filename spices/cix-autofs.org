@@ -1,11 +1,29 @@
-# File           : cix-autofs.org
-# Created        : <2016-11-17 Thu 22:42:00 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-autofs.org
+# Created       : <2016-11-17 Thu 22:42:00 GMT>
+# Modified      : <2017-8-25 Fri 00:12:30 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A tool for automatically mounting and unmounting filesystems
 
 #+OPTIONS: num:nil
 
 
-[[file:../cix-main.org][|≣|]]#+TITLE: AutoFS
+[[file:../cix-main.org][|≣|]]
+#+TITLE: AutoFS
+|-----------------+-----------------|
+| *Author*        | H. Peter Anvin, |
+|                 | Ian Kent        |
+| *Maintainer(s)* |                 |
+| *Released*      | 2003            |
+| *Source*        | [[https://git.kernel.org/pub/scm/linux/storage/autofs/autofs.git/][autofs.git]]      |
+| *Man*           | [[http://man7.org/linux/man-pages/man8/automount.8.html][automount.8]]     |
+| *Info*          |                 |
+|-----------------+-----------------|
+
+=autofs= is a kernel-based automounter for Linux. It performs a job similar to
+amd(8) but relies on a small stub of kernel code instead of pretending to be an
+NFS server. The result is simpler code, better reliability, and much faster
+operation in the common case (everything already mounted.)
+-----
+
+# End of cix-autofs.org

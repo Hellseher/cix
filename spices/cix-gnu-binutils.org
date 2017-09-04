@@ -1,9 +1,9 @@
-# File           : cix-gnu-binutils.org
-# Created        : <2015-11-02 Mon 22:18:23 GMT>
-# Modified  : <2017-8-17 Thu 22:29:02 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-gnu-binutils.org
+# Created       : <2015-11-02 Mon 22:18:23 GMT>
+# Modified      : <2017-8-28 Mon 22:55:56 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A GNU collection of binary utilities
 
 #+OPTIONS: num:nil
 
@@ -12,21 +12,13 @@
 |----------------+------------------|
 | *Author*       | Alan Modra       |
 | *Maintainer(s) |                  |
-| *Released*     |                  |
+| *Released*     | 1991             |
 | *Source*       | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
 | *Info*         |                  |
 |----------------+------------------|
 
- Binutils is a collection of binary utilities, including ar (for creating,
- modifying and extracting from archives), as (a family of GNU assemblers), gprof
- (for displaying call graph profile data), ld (the GNU linker), nm (for listing
- symbols from object files), objcopy (for copying and translating object files),
- objdump (for displaying information from object files), ranlib (for generating
- an index for the contents of an archive), readelf (for displaying detailed
- information about binary files), size (for listing the section sizes of an
- object or archive file), strings (for listing printable strings from files),
- strip (for digit --no-pager shortlog -nse | cut -f 2- | sort -f)scarding
- symbols), and addr2line (for converting addresses to file and line).
+A set of programming tools for creating and managing binary programs, object
+files, libraries, profile data, and assembly source code.
 -----
 
 ** Libraries
@@ -139,6 +131,11 @@ list available functions in a shared librry .so file:
 ** objdump                                                                      :cmd:
 [[Index][⬆]] /display information from object files/
 *** objdump::options
+| OPT  | TYPE | ++V | --V | DESC |
+|------+------+-----+-----+------|
+| =-d= |      |     |     |      |
+| =-p= |      |     |     |      |
+
 *** objdump::examples
 **** objdump-161214215154
 list required libraries for a package:
@@ -171,6 +168,9 @@ list required libraries for a package:
 | libopcodes-2    |
 
 [[file:./cix-gnu-bash-builtin.org::*if][if]] [[file:./cix-gnu-bash-builtin.org::*for][for]] [[file:./cix-gnu-bash-builtin.org::*command][command]] [[file:./cix-gawk.org::*awk][awk (1)]] [[file:./cix-gnu-core-utilities.org::*sort][sort (1)]] [[file:./cix-sed.org::*sed][sed (1)]] [[file:./cix-gnu-grep.org::*grep][grep (1)]]
+**** objdump-170819012037
+display the assembler code for object file:
+:    ~$ objdump -d /usr/lib/libc.so.6
 *** objdump::files
 *** objdump::see-also
 [[file:./cix-gnu-binutils.org::*nm][nm]] [[file:./cix-gnu-binutils.org::*readelf][readelf]]
@@ -192,3 +192,4 @@ list required libraries for a package:
 *** addr2line::examples
 *** addr2line::files
 *** addr2line::see-also
+# End of cix-gnu-binutils.org

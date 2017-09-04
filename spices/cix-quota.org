@@ -1,6 +1,6 @@
 # File          : cix-quota.org
 # Created       : <2015-12-13 Sun 20:46:43 GMT>
-# Modified      : <2017-8-28 Mon 00:28:14 BST> sharlatan
+# Modified      : <2017-9-02 Sat 10:17:32 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : System administration tools for monitoring users' disk usage
@@ -14,12 +14,15 @@
 |                 | Marco van Wieringen, |
 |                 | Nathan Scott         |
 | *Maintainer(s)* |                      |
-| *Released*      |                      |
+| *Released*      | 2000(?)              |
 | *Source*        | [[https://sourceforge.net/p/linuxquota/code/ci/master/tree/][linuxquota.git]]       |
 | *Man*           |                      |
 | *Info*          |                      |
 |-----------------+----------------------|
 
+The =quota= package contains system administration tools for monitoring
+and limiting user and or group disk usage per file system.
+-----
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc quota

@@ -1,21 +1,21 @@
 # File           : cix-lrzip.org
 # Created        : <2017-08-07 Mon 00:31:21 BST>
-# Modified       : <2017-8-07 Mon 00:31:23 BST> sharlatan
+# Modified       : <2017-8-21 Mon 21:35:27 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Compression program optimized for large files
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: lrzip
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|------------------+-------------|
+| *Author*         | Con Kolivas |
+| *Contributor(s)* | [[https://github.com/ckolivas/lrzip/blob/master/AUTHORS][(all...)]]    |
+| *Released*       | 2010        |
+| *Source*         | [[https://github.com/ckolivas/lrzip/blob/master/AUTHORS][lrzip.git]]   |
+| *Info*           |             |
+|------------------+-------------|
 
 
 -----

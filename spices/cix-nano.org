@@ -1,21 +1,21 @@
 # File           : cix-nano.org
 # Created        : <2017-08-07 Mon 00:32:00 BST>
-# Modified       : <2017-8-07 Mon 00:32:02 BST> sharlatan
+# Modified       : <2017-8-20 Sun 12:50:15 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : An enhanced clone of the Pico text editor
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: nano
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+------------------|
+| *Author*        | Chris Allegretta |
+| *Maintainer(s)* |                  |
+| *Released*      | 2000             |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/nano.git/log/][nano.git]]         |
+| *Info*          | [[https://www.nano-editor.org/][nano.web]]         |
+|-----------------+------------------|
 
 
 -----

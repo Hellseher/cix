@@ -1,9 +1,9 @@
 # File           : cix-procps-ng.org
 # Created        : <2015-11-02 Tue 01:14:54 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-9-03 Sun 22:56:14 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : System and process monitoring utilities.
 
 #+OPTIONS: num:nil
 
@@ -150,3 +150,5 @@ status of entries in its process table.
 *** vmstat::see-also
 
 * References
+
+# End of cix-procps-ng.org

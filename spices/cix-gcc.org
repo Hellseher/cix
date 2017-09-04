@@ -1,9 +1,9 @@
 # File           : cix-gcc.org
 # Created        : <2017-08-05 Sat 00:38:47 BST>
-# Modified       : <2017-8-05 Sat 00:43:25 BST> sharlatan
+# Modified       : <2017-9-03 Sun 08:34:09 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Various compilers (C, C++, Objective-C, Java, ...)
 
 #+OPTIONS: num:nil
 
@@ -11,28 +11,27 @@
 #+TITLE: gcc
 |-----------------+------------------|
 | *Author*        | Richard Stallman |
-| *Maintainer(s)* |                  |
-| *Released*      |             1987 |
-| *Source*        |                  |
+| *Maintainer(s)* | [[https://gcc.gnu.org/git/?p=gcc.git;a=blob;f=MAINTAINERS;h=7effec1287f768759873bc81da543e72b572b1c4;hb=HEAD][(all...)]]         |
+| *Released*      | 1987             |
+| *Source*        | [[https://gcc.gnu.org/git/?p=gcc.git;a=summary][gcc.git]]          |
 | *Info*          |                  |
 |-----------------+------------------|
 
 
 -----
 * Index
-#+BEGIN_EXAMPLE
-c89
-c99
-cc
-gcc
-gcc-ar
-gcc-nm
-gcc-ranlib
-gcov
-gcov-tool
-x86_64-redhat-linux-gcc
-x86_64-redhat-linux-gcc-6.3.1
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc gcc
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD  | MAN  | DESCRIPTION                    |
+| c99  | (1p) | compile standard C programs    |
+| gcc  | (1)  | GNU project C and C++ compiler |
+| gcov | (1)  | coverage testing tool          |
+#+END_SRC
+
 * Receipts
 * Refreances
 

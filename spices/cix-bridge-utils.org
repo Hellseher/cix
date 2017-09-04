@@ -1,27 +1,38 @@
 # File           : cix-bridge-utils.org
 # Created        : <2017-08-04 Fri 23:46:04 BST>
-# Modified       : <2017-08-04 Fri 23:46:04 BST>
+# Modified       : <2017-8-19 Sat 17:52:40 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Utilities for configuring the linux ethernet bridge
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: bridge-utils
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+|-----------------+--------------------|
+| *Author*        | Stephen Hemminger, |
+|                 | Lennert Buytenhek  |
+| *Maintainer(s)* |                    |
+| *Released*      | 2000               |
+| *Source*        | [[https://git.kernel.org/pub/scm/linux/kernel/git/shemminger/bridge-utils.git/][bridge-utils.git]]   |
+| *Info*          |                    |
+|-----------------+--------------------|
 
 The bridge-utils package contains a utility needed to create and manage bridge
 devices. This is useful in setting up networks for a hosted virtual machine
 (VM).
 -----
 * Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc bridge-utils
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD   | MAN | DESCRIPTION                    |
+| brctl | (8) | ethernet bridge administration |
+#+END_SRC
+
 * Receipts
 * Refreances
 

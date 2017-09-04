@@ -1,14 +1,22 @@
-# File           : cix-gnu-inetutils.org
-# Created        : <2015-12-18 Wed 21:20:07 GMT>
-# Modified  : <2017-8-06 Sun 23:48:46 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-gnu-inetutils.org
+# Created       : <2015-12-18 Wed 21:20:07 GMT>
+# Modified      : <2017-9-03 Sun 23:26:23 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : GNU common networking utilities.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Inetutils
+|-----------------+---------------|
+| *Author*        | [[http://git.savannah.gnu.org/cgit/inetutils.git/tree/AUTHORS][(all...)]]      |
+| *Maintainer(s)* |               |
+| *Released*      | 1995          |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/inetutils.git][inetutils.git]] |
+| *Man*           |               |
+| *Info*          |               |
+|-----------------+---------------|
 
 * Index
 #+BEGIN_EXAMPLE
@@ -38,3 +46,5 @@
      tftpd         - TFTP server
      uucpd         - unix to Unix Copy relay daemon.
 #+END_EXAMPLE
+
+# End of cix-gnu-inetutils.org

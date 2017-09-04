@@ -1,18 +1,34 @@
-# File           : cix-acl.org
-# Created        : <2016-11-07 Mon 19:54:33 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-acl.org
+# Created       : <2016-11-07 Mon 19:54:33 GMT>
+# Modified      : <2017-8-28 Mon 22:39:29 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Access control list utilities. 
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: acl
-/Access Control List/
+[[file:../cix-main.org][|≣|]]
+#+TITLE: acl
+|-----------------+----------------------|
+| *Author*        | Nathan Scott,        |
+|                 | Andreas Gruenbacher, |
+|                 | Tim Shimmin,         |
+|                 | Brandon Philips,     |
+|                 | Mike Frysinger,      |
+|                 | Eric Sandeen         |
+| *Maintainer(s)* |                      |
+| *Released*      | 1999                 |
+| *Source*        | [[http://git.savannah.nongnu.org/cgit/acl.git][acl.git]]              |
+| *Man*           |                      |
+| *Info*          |                      |
+|-----------------+----------------------|
 
-** Index
+
+* Index
 #+BEGIN_EXAMPLE
     chacl (1)            - change the access control list of a file or directory
     getfacl (1)          - get file access control lists
     setfacl (1)          - set file access control lists
-#+END_EXAMPLE
+#+END_EXAMPLE,
+
+# End of cix-acl.org

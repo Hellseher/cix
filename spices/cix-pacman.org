@@ -1,22 +1,23 @@
 # File           : cix-pacman.org
 # Created        : <2017-08-07 Mon 00:30:45 BST>
-# Modified       : <2017-8-07 Mon 00:31:09 BST> sharlatan
+# Modified       : <2017-9-04 Mon 22:41:13 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : ArchLinux package manager
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: pacman
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
-
+|------------------+----------------------|
+| *Author*         | Judd vinet           |
+| *Contributor(s)* | Dan McGee            |
+|                  | Allan McRae,         |
+|                  | Nagy Gabor  [[https://git.archlinux.org/pacman.git/tree/AUTHORS][(all...)]] |
+| *Released*       | 2002                 |
+| *Source*         | [[https://git.archlinux.org/pacman.git/][pacman.git]]           |
+| *Info*           | [[https://wiki.archlinux.org/index.php/pacman][pacman.wiki]]          |
+|------------------+----------------------|
 
 -----
 * Index
@@ -34,5 +35,6 @@ list files that are not owned by any installed package:
       pacman -Qo "$file" &> /dev/null || echo "$file";
   done
 #+END_SRC
-# End of cix-pacman.org
+# End of cix-pacman.org,
 * Refreances
+# End of cix-pacman.org

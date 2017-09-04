@@ -1,9 +1,9 @@
 # File           : cix-sudo.org
 # Created        : <2017-08-05 Sat 00:22:50 BST>
-# Modified       : <2017-8-05 Sat 00:26:38 BST> sharlatan
+# Modified       : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Allows restricted root access for specified users.
 
 #+OPTIONS: num:nil
 

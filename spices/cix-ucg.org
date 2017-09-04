@@ -1,21 +1,21 @@
 # File           : cix-ucg.org
 # Created        : <2017-08-04 Fri 23:32:07 BST>
-# Modified       : <2017-08-04 Fri 23:32:07 BST>
+# Modified       : <2017-8-20 Sun 23:22:46 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : An extremely fast grep-like tool specialized for searching in source code 
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: ucg
-|-----------------+---------|
-| *Author*        |         |
-| *Maintainer(s)* |         |
-| *Released*      |         |
-| *Source*        | [[https://github.com/gvansickle/ucg][ucg.git]] |
-| *Info*          |         |
-|-----------------+---------|
+|-----------------+--------------------|
+| *Author*        | Gary R. Van Sickle |
+| *Maintainer(s)* |                    |
+| *Released*      | 2015               |
+| *Source*        | [[https://github.com/gvansickle/ucg][ucg.git]]            |
+| *Info*          |                    |
+|-----------------+--------------------|
 
 
 -----

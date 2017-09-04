@@ -1,13 +1,29 @@
-# File           : cix-pulseaudio-utils.org
-# Created        : <2016-11-20 Sun 22:31:06 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-pulseaudio-utils.org
+# Created       : <2016-11-20 Sun 22:31:06 GMT>
+# Modified      : <2017-8-28 Mon 21:50:05 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Improved Linux Sound Server
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: PulseAudio
+[[file:../cix-main.org][|≣|]]
+#+TITLE: PulseAudio
+|-----------------+---------------------|
+| *Author*        | Lennart Poettering, |
+|                 | Pierre Ossman,      |
+|                 | Shahms E. King,     |
+|                 | Tanu Kaskinen,      |
+|                 | Colin Guthrie,      |
+|                 | Arun Raghavan,      |
+|                 | David Henningsson   |
+| *Maintainer(s)* |                     |
+| *Released*      | 2005                |
+| *Source*        | [[https://github.com/pulseaudio/pulseaudio][pulseaudeo.git]]      |
+| *Man*           |                     |
+| *Info*          |                     |
+|-----------------+---------------------|
+
 
 * Index
 #+BEGIN_EXAMPLE
@@ -22,3 +38,4 @@
     pasuspender (1)      - Temporarily suspend PulseAudio
     pax11publish (1)     - PulseAudio X11 Credential Utility
 #+END_EXAMPLE
+# End of cix-pulseaudeo.org

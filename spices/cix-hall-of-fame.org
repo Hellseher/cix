@@ -1,23 +1,23 @@
-# File           : cix-hall_of_fame.org
-# Created        : <2016-11-06 Sun 22:27:11 GMT>
-# Modified  : <2017-2-08 Wed 08:11:47 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-hall-of-fame.org
+# Created       : <2016-11-06 Sun 22:27:11 GMT>
+# Modified      : <2017-9-02 Sat 09:55:50 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Main figures of UNIX world.
 
 #+OPTIONS: num:nil
 
-
-[[file:../cix-main.org][|≣|]]#+TITLE: Hall of Fame
+[[file:../cix-main.org][|≣|]]
+#+TITLE: Hall of Fame
 
 - (1928-1977 48) Joe Ossanna  ::
+- (1931-1989 58 US) Lee E. McMahon :: Designer of: [[file:./cix-sed.org][sed]] =comm= =qsort= =grep= =index= =cref= =cu=
 - (1932) Douglas McIlroy  ::
 - (1941-2011 70 US) Dennis Ritchie  :: (co) Designer of UNIX, C-lang,
 - (1942) Brian Kernighan  ::
-- (1931-1989 58 US) Lee E. McMahon :: Designer of [[file:./cix-sed.org][sed]], comm, qsort, grep,
-      index, cref, cu
 - (1943 US) Ken Thompson :: (co) Designer of UNIX, utf-8, Go-lang
 - (1953 US) Richard Stallman :: (co) Designer of GNU Project, Emacs, gcc, gdb
-- (1954 US) Bill Joy :: (co) Designer of Sun Microsystems, Java, NFS, BSD, vi,
-     csh, chroot, TCP/IP
-- (1969 FI) Linus Torvalds ::
+- (1954 US) Bill Joy :: (co) Designer of Sun Microsystems, Java, NFS, BSD, vi, csh, chroot, TCP/IP
+- (1959 US) Brian Fox :: Author of: =bash=
+- (1969 FI) Linus Torvalds :: Author of: =Linux= kernel, 
+# End of cix-hall-of-fame.org

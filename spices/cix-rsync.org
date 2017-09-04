@@ -1,15 +1,31 @@
-# File           : cix-rsync.org
-# Created        : <2016-11-25 Fri 20:32:45 GMT>
-# Modified  : <2017-8-07 Mon 00:15:52 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-rsync.org
+# Created       : <2016-11-25 Fri 20:32:45 GMT>
+# Modified      : <2017-8-22 Tue 23:42:40 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A program for synchronizing files over a network
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: rsync
+|-----------------+------------------|
+| *Author*        | Andrew Tridgell, |
+|                 | Paul Mackerras   |
+| *Maintainer(s)* |                  |
+| *Released*      | 1996             |
+| *Source*        | [[https://git.samba.org/rsync.git/][rsync.git]]        |
+| *Man*           | [[http://man7.org/linux/man-pages/man1/rsync.1.html][rsync.1]]          |
+| *Info*          |                  |
+|-----------------+------------------|
 
+=rsync= uses a reliable algorithm to bring remote and host files into sync very
+quickly. =rsync= is fast because it just sends the differences in the files over
+the network instead of sending the complete files. =rsync= is often used as a
+very powerful mirroring process or just as a more capable replacement for the
+=rcp= command. A technical report which describes the =rsync= algorithm is
+included in this package.
+-----
 * Receipts
 ** rsync                                                                       :cmd:
 *** rsync::examples
@@ -67,3 +83,5 @@ file and split it after that and use key authentication:
 ** Links
 - Speaking UNIX: Advanced applications of rsync
   https://www.ibm.com/developerworks/aix/library/au-spunix_rsync/
+
+# End of cix-rsync.org

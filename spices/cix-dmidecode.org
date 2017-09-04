@@ -1,22 +1,24 @@
 # File          : cix-dmidecode.org
 # Created       : <2016-11-13 Sun 19:49:01 GMT>
-# Modified      : <2017-8-09 Wed 00:02:41 BST> sharlatan
+# Modified      : <2017-9-01 Fri 23:07:29 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      :
+# Sinopsis      : Tool to analyse BIOS DMI data.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: dmidecode
 
-|--------------+------------------------------|
-| *Author*     | 	Alan Cox, Jean Delvare   [[http://git.savannah.gnu.org/cgit/dmidecode.git/plain/AUTHORS][•]] |
-| *Maintainer* |                              |
-| *Released*   |                              |
-| *Source*     | [[http://git.savannah.gnu.org/cgit/dmidecode.git][dmidecode.git]]                |
-| *Info*       | [[http://www.nongnu.org/dmidecode/][dmidecode]]                    |
-|--------------+------------------------------|
+|--------------+------------------------|
+| *Author*     | Alan Cox,              |
+|              | Jean Delvare  [[http://git.savannah.gnu.org/cgit/dmidecode.git/plain/AUTHORS][(all...)]] |
+| *Maintainer* |                        |
+| *Released*   | 2001                   |
+| *Source*     | [[http://git.savannah.gnu.org/cgit/dmidecode.git][dmidecode.git]]          |
+| *Info*       | [[http://www.nongnu.org/dmidecode/][dmidecode.web]]          |
+|--------------+------------------------|
+
 =dmidecode= reports information about x86 & ia64 hardware as described in the
 system BIOS according to the SMBIOS/DMI standard. This information typically
 includes system manufacturer, model name, serial number, BIOS version, asset tag
@@ -34,3 +36,5 @@ parallel, USB).-
     ownership (8)        - Compaq ownership tag retriever
     vpddecode (8)        - VPD structure decoder
 #+END_EXAMPLE
+
+# End of cix-dmidecode.org

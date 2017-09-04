@@ -1,13 +1,22 @@
-# File           : cix-ack.org
-# Created        : <2016-11-04 Fri 22:37:59 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-ack.org
+# Created       : <2016-11-04 Fri 22:37:59 GMT>
+# Modified      : <2017-8-23 Wed 00:32:54 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Grep-like text finder
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-
-http://beyondgrep.com/
 #+TITLE: ack
+|-----------------+-------------|
+| *Author*        | Andy Lester |
+| *Maintainer(s)* |             |
+| *Released*      | 2011        |
+| *Source*        | [[https://github.com/beyondgrep/ack2][ack2.git]]    |
+|                 | [[https://github.com/beyondgrep/ack3][ack3.git]]    |
+| *Man*           |             |
+| *Info*          | [[https://beyondgrep.com/][ack.web]]     |
+|-----------------+-------------|
+
+# End of cix-ack.org

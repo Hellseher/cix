@@ -1,15 +1,28 @@
-# File           : cix-gnu-bash-builtin.org
-# Created        : <2015-11-07 Mon 00:07:40 GMT>
-# Modified  : <2017-5-11 Thu 22:43:12 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-gnu-bash-builtin.org
+# Created       : <2015-11-07 Mon 00:07:40 GMT>
+# Modified      : <2017-8-26 Sat 00:26:04 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : The GNU Bourne Again shell
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Bash builtin
+|-----------------+---------------------|
+| *Author*        | Brian Fox,          |
+|                 | Chet Ramey [[http://git.savannah.gnu.org/cgit/bash.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                     |
+| *Released*      | 1989                |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/bash.git/tree/AUTHORS][bash.git]]            |
+| *Man*           |                     |
+| *Info*          |                     |
+|-----------------+---------------------|
 
+The GNU Bourne Again shell (Bash) is a shell or command language interpreter
+that is compatible with the Bourne shell (sh). Bash incorporates useful features
+from the Korn shell (ksh) and the C shell (csh). Most sh scripts can be run by
+bash without modification.
 -----
 * Index
 ** Index::Functions
@@ -236,6 +249,50 @@ function name and so on ... Its a stack-trace of functions executed by a shell
 script.  Value of FUNCNAME gets cleared every-time we execute a new shell
 script.
 
+** IFS
+use IFS to separage enteries in a string:
+#+BEGIN_SRC sh
+#!/usr/bin/env bash
+
+SYS_USRS="
+    usr1:hash-1:1003:/home/user1:/bin/bash:group1,gropu2
+    usr2:hash-2:1004:/home/user2:/bin/bash:group3,group4
+    usr3:hash-3:1005:/home/user3:/bin/bash:group5,group6
+"
+
+sys_cfg_usrs() { # Add/mod system users
+    local usr hash gid home shell
+
+    for usr_str in $SYS_USRS; do
+        IFS=: read usr hash uid home shell groups <<< "$usr_str"
+
+        if id "$usr" &>/dev/null; then
+            echo "Modifing"
+            usermod -d "$home" \
+                    -u "$uid" \
+                    -G "$groups" \
+                    -p "$hash" \
+                    -s "$shell" \
+                    "$usr"
+        else
+            echo "Adding"
+            useradd -d "$home" \
+                    -u "$uid" \
+                    -G "$groups" \
+                    -p "$hash" \
+                    -s "$shell" \
+                    "$usr"
+        fi
+    done
+}
+
+main() {
+    sys_cfg_usrs
+    echo "$IFS"
+}
+
+main "$@"
+#+END_SRC
 * Referance
 ** Links
 - Bash Variables
@@ -250,3 +307,5 @@ script.
   http://www.bashoneliners.com/
 ** Hubs
 - https://github.com/awesome-lists/awesome-bash
+
+# End of cix-gnu-bash.org

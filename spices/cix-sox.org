@@ -1,22 +1,45 @@
-# File           : cix-sox.org
-# Created        : <2016-11-25 Fri 00:07:36 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-sox.org
+# Created       : <2016-11-25 Fri 00:07:36 GMT>
+# Modified      : <2017-9-02 Sat 12:53:09 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A general purpose sound file conversion tool
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: SoX
+[[file:../cix-main.org][|≣|]]
+#+TITLE: sox
+|-----------------+----------------|
+| *Author*        | Lance Norskog, |
+|                 | Chris Bagwell, |
+|                 | Rob Sykes,     |
+|                 | Pascal Giard   |
+| *Maintainer(s)* |                |
+| *Released*      | 1991           |
+| *Source*        | [[https://sourceforge.net/p/sox/code/ci/master/tree/][sox.git]]        |
+| *Man*           |                |
+| *Info*          | [[http://sox.sourceforge.net/][sox.web]]        |
+|-----------------+----------------|
 
+SoX (Sound eXchange) is a sound file format converter SoX can convert between
+many different digitized sound formats and perform simple sound manipulation
+functions, including sound effects.
+-----
 * Index
-#+BEGIN_EXAMPLE
-    play (1)      - Sound eXchange, the Swiss Army knife of audio manipulation
-    rec (1)       - Sound eXchange, the Swiss Army knife of audio manipulation
-    soxeffect (7) - Sound eXchange, the Swiss Army knife of audio manipulation
-    sox (1)       - Sound eXchange, the Swiss Army knife of audio manipulation
-    soxi (1)      - Sound eXchange Information, display sound file metadata
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc sox
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD       | MAN | DESCRIPTION                                               |
+| play      | (1) | Sound eXchange, the Swiss Army knife of audio manipula... |
+| rec       | (1) | Sound eXchange, the Swiss Army knife of audio manipula... |
+| soxeffect | (7) | Sound eXchange, the Swiss Army knife of audio manipula... |
+| rec       | (1) | Sound eXchange, the Swiss Army knife of audio manipula... |
+| sox       | (1) | Sound eXchange, the Swiss Army knife of audio manipula... |
+| soxi      | (1) | Sound eXchange Information, display sound file metadata   |
+#+END_SRC
 
 * Receipts
 
@@ -50,3 +73,5 @@
 *** soxi::examples
 *** soxi::files
 *** soxi::see-also
+
+# End of cix-sox.org

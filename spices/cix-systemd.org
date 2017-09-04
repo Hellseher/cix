@@ -1,25 +1,29 @@
 # File           : cix-systemd.org
 # Created        : <2016-12-17 Sat 20:57:29 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
+# Modified  : <2017-9-03 Sun 22:35:33 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : System and Service Manager.
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: systemd
-|--------------+----------------------------------|
-| *Authors*      | Lennart Poettering, Kay Sievers, |
-|              | Harald Hoyer, Daniel Mack,       |
-|              | Tom Gundersen, David Herrmann    |
-| *Contributors* |                                  |
-|--------------+----------------------------------|
+[[file:../cix-main.org][|≣|]]
+#+TITLE: systemd
+|---------------+----------------------------------|
+| *Author*      | Lennart Poettering, Kay Sievers, |
+|               | Harald Hoyer, Daniel Mack,       |
+|               | Tom Gundersen, David Herrmann    |
+| *Contibutors* |                                  |
+| *Released*    | 2010                             |
+| *Source*      | [[https://github.com/systemd/systemd][systemd.git]]                      |
+| *Info*        |                                  |
+|---------------+----------------------------------|
 
-systemd is a system and service manager  for Linux, compatible with SysV and LSB
-init  scripts. systemd  provides aggressive  parallelization capabilities,  uses
-socket and D-Bus activation for  starting services, offers on-demand starting of
+=systemd= is a system and service manager for Linux, compatible with SysV and
+LSB init scripts. systemd provides aggressive parallelization capabilities, uses
+socket and D-Bus activation for starting services, offers on-demand starting of
 daemons, keeps track of processes using Linux cgroups, supports snapshotting and
-restoring  of  the  system  state,  maintains mount  and  automount  points  and
+restoring of the system state, maintains mount and automount points and
 implements an elaborate transactional dependency-based service control logic.
 
 ** Pacakges
@@ -56,49 +60,66 @@ implements an elaborate transactional dependency-based service control logic.
 
 * Index
 ** systemd
-#+BEGIN_EXAMPLE
-    bootctl (1)                        - Control the firmware and boot manager settings
-    busctl (1)                         - Introspect the bus
-    coredumpctl (1)                    - Retrieve coredumps from the journal
-    hostnamectl (1)                    - Control the system hostname
-    journalctl (1)                     - Query the systemd journal
-    kernel-install (8)                 - Add and remove kernel and initramfs images to and from /boot
-    localectl (1)                      - Control the system locale and keyboard layout settings
-    loginctl (1)                       - Control the systemd login manager
-    networkctl (1)                     - Query the status of network links
-    systemctl (1)                      - Control the systemd system and service manager
-    systemd-analyze (1)                - Analyze system boot-up performance
-    systemd-ask-password (1)           - Query the user for a system password
-    systemd-cat (1)                    - Connect a pipeline or program's output with the journal
-    systemd-cgls (1)                   - Recursively show control group contents
-    systemd-cgtop (1)                  - Show top control groups by their resource usage
-    systemd-delta (1)                  - Find overridden configuration files
-    systemd-detect-virt (1)            - Detect execution in a virtualized environment
-    systemd-escape (1)                 - Escape strings for usage in system unit names
-    systemd-firstboot (1)              - Initialize basic system settings on or before the first boot-up of a system
-    systemd-inhibit (1)                - Execute a program with an inhibition lock taken
-    systemd-machine-id-setup (1)       - Initialize the machine ID in /etc/machine-id
-    systemd-notify (1)                 - Notify service manager about start-up completion and other daemon status changes
-    systemd-path (1)                   - List and query system and user paths
-    systemd-resolve (1)                - Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services
-    systemd-run (1)                    - Run programs in transient scope or service or timer units
-    systemd-sysusers (8)               - Allocate system users and groups
-    systemd-tmpfiles (8)               - Creates, deletes and cleans up volatile and temporary files and directories
-    systemd-tty-ask-password-agent (1) - List or process pending systemd password requests
-    timedatectl (1)                    - Control the system time and date
-    halt (8)                           - Halt, power-off or reboot the machine
-    init (1)                           - systemd system and service manager
-    poweroff (8)                       - Halt, power-off or reboot the machine
-    reboot (8)                         - Halt, power-off or reboot the machine
-    reboot (2)                         - reboot or enable/disable Ctrl-Alt-Del
-    runlevel (8)                       - Print previous and current SysV runlevel
-    shutdown (8)                       - Halt, power-off or reboot the machine
-    shutdown (2)                       - shut down part of a full-duplex connection
-    shutdown (3p)                      - shut down socket send and receive operations
-    telinit (8)                        - Change SysV runlevel
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc systemd
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD                            | MAN  | DESCRIPTION                                               |
+| bootctl                        | (1)  | Control the firmware and boot manager settings            |
+| busctl                         | (1)  | Introspect the bus                                        |
+| coredumpctl                    | (1)  | Retrieve coredumps from the journal                       |
+| hostnamectl                    | (1)  | Control the system hostname                               |
+| journalctl                     | (1)  | Query the systemd journal                                 |
+| kernel-install                 | (8)  | Add and remove kernel and initramfs images to and from... |
+| localectl                      | (1)  | Control the system locale and keyboard layout settings    |
+| loginctl                       | (1)  | Control the systemd login manager                         |
+| networkctl                     | (1)  | Query the status of network links                         |
+| systemctl                      | (1)  | Control the systemd system and service manager            |
+| systemd-analyze                | (1)  | Analyze system boot-up performance                        |
+| systemd-ask-password           | (1)  | Query the user for a system password                      |
+| systemd-cat                    | (1)  | Connect a pipeline or program's output with the journal   |
+| systemd-cgls                   | (1)  | Recursively show control group contents                   |
+| systemd-cgtop                  | (1)  | Show top control groups by their resource usage           |
+| systemd-delta                  | (1)  | Find overridden configuration files                       |
+| systemd-detect-virt            | (1)  | Detect execution in a virtualized environment             |
+| systemd-escape                 | (1)  | Escape strings for usage in system unit names             |
+| systemd-firstboot              | (1)  | Initialize basic system settings on or before the fir...  |
+| systemd-inhibit                | (1)  | Execute a program with an inhibition lock taken           |
+| systemd-machine-id-setup       | (1)  | Initialize the machine ID in /etc/machine-id              |
+| systemd-notify                 | (1)  | Notify service manager about start-up completion and o... |
+| systemd-path                   | (1)  | List and query system and user paths                      |
+| systemd-resolve                | (1)  | Resolve domain names, IPV4 and IPv6 addresses, DNS res... |
+| systemd-run                    | (1)  | Run programs in transient scope or service or timer units |
+| systemd-sysusers               | (8)  | Allocate system users and groups                          |
+| systemd-tmpfiles               | (8)  | Creates, deletes and cleans up volatile and temporary ... |
+| systemd-tty-ask-password-agent | (1)  | List or process pending systemd password...               |
+| timedatectl                    | (1)  | Control the system time and date                          |
+| halt                           | (8)  | Halt, power-off or reboot the machine                     |
+| init                           | (1)  | systemd system and service manager                        |
+| poweroff                       | (8)  | Halt, power-off or reboot the machine                     |
+| reboot                         | (8)  | Halt, power-off or reboot the machine                     |
+| reboot                         | (2)  | reboot or enable/disable Ctrl-Alt-Del                     |
+| runlevel                       | (8)  | Print previous and current SysV runlevel                  |
+| shutdown                       | (8)  | Halt, power-off or reboot the machine                     |
+| shutdown                       | (2)  | shut down part of a full-duplex connection                |
+| shutdown                       | (3p) | shut down socket send and receive operations              |
+| telinit                        | (8)  | Change SysV runlevel                                      |
+#+END_SRC
 
 ** systemd-udev
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc systemd-udev
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD          | MAN | DESCRIPTION                       |
+| systemd-hwdb | (8) | hardware database management tool |
+| udevadm      | (8) | udev management tool              |
+| udevadm      | (8) | udev management tool              |
+#+END_SRC
 
 * Receipts
 
@@ -140,6 +161,26 @@ implements an elaborate transactional dependency-based service control logic.
 ** shutdown                                                                     :cmd:
 ** shutdown                                                                     :cmd:
 ** shutdown                                                                     :cmd:
-** telinit                                                                      :cmd:
+** telinit                                                              :cmd:
 
+** udevadm
+/Send control commands or test the device manager/
+*** udevadm::options
+| OPT          | TYPE | ++V | --V | DESC                             |
+|--------------+------+-----+-----+----------------------------------|
+| info         |      |     |     | Query sysfs or the udev database |
+| trigger      |      |     |     | Request events from the kernel   |
+| settle       |      |     |     | Wait for pending udev events     |
+| control      |      |     |     | Control the udev daemon          |
+| monitor      |      |     |     | Listen to kernel and udev events |
+| test         |      |     |     | Test an event run                |
+| test-builtin |      |     |     | Test a built-in command          |
+|--------------+------+-----+-----+----------------------------------|
+
+*** udevadm::examples
+**** udevadm-170808190519
+Update/reload udev rules without system reboot:
+:    ~# udevadm control --reload-rules && udevvadm trigger
 * References
+
+# End of cix-systemd.org

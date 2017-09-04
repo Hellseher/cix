@@ -1,23 +1,25 @@
 # File           : cix-sift.org
 # Created        : <2017-08-04 Fri 23:36:02 BST>
-# Modified       : <2017-08-04 Fri 23:36:02 BST>
+# Modified       : <2017-8-20 Sun 18:39:36 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A fast and powerful alternative to grep 
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: sift
-|-----------------+----------|
-| *Author*        |          |
-| *Maintainer(s)* |          |
-| *Released*      |          |
-| *Source*        | [[https://github.com/svent/sift][sift.git]] |
-| *Info*          |          |
-|-----------------+----------|
-
-
+|---------------+------------|
+| *Author*      | Sven Taute |
+| *Contibutors* | [[https://github.com/svent/sift/graphs/contributors][(all...)]]   |
+| *Released*    | 2014       |
+| *Source*      | [[https://github.com/svent/sift][sift.git]]   |
+| *Info*        |            |
+|---------------+------------|
+sift has a slightly different focus than most other grep alternatives. Code
+search, log search / digital forensics and data processing are the main use
+cases, but the primary goal is to provide safe defaults and to make it easily
+configurable for a specific use case.
 -----
 * Index
 * Receipts

@@ -1,9 +1,9 @@
-# File           : cix-nfs.org
-# Created        : <2016-11-07 Mon 22:11:39 GMT>
-# Modified  : <2017-8-21 Mon 21:44:59 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-nfs.org
+# Created       : <2016-11-07 Mon 22:11:39 GMT>
+# Modified      : <2017-9-03 Sun 23:41:15 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : List of common NFS packages.
 
 #+OPTIONS: num:nil
 
@@ -20,12 +20,15 @@
 | *Source*       | [[http://git.linux-nfs.org/][linux-nfs.git]]    |
 | *Info*         |                  |
 |----------------+------------------|
+
 ** Packages
-*** nfs-utils
-The nfs-utils  package provides a daemon  for the kernel NFS  server and related
-tools, which  provides a much higher  level of performance than  the traditional
-Linux NFS server used by most users.
------
+| PKG               | RPM | DEB | DESC                                                                       |
+|-------------------+-----+-----+----------------------------------------------------------------------------|
+| nfs-common        |     | +   | NFS support files common to client and server                              |
+| nfs-kernel-server |     | +   | support for NFS kernel server                                              |
+| nfs-utils         | +   |     | NFS utilities and supporting clients and daemons for the kernel NFS server |
+|-------------------+-----+-----+----------------------------------------------------------------------------|
+ -----
 
 * Index
 #+BEGIN_EXAMPLE
@@ -141,8 +144,13 @@ Linux NFS server used by most users.
   *Managin NFS and NIS, 2nd edition*;
   Oreilly, 2001;
 ** Links
-- Linux NFS-HOWTO http://nfs.sourceforge.net/nfs-howto/
-- IETF::Network File System Version 4 (nfsv4) https://datatracker.ietf.org/wg/nfsv4/documents/
-- IETF::NFS: Network File System Protocol Specification https://tools.ietf.org/html/rfc1094
-- IETF::Network File System (NFS) version 4 Protocol https://www.ietf.org/rfc/rfc3530.txt
+- Linux NFS-HOWTO 
+  http://nfs.sourceforge.net/nfs-howto/
+- IETF::Network File System Version 4 (nfsv4)
+  https://datatracker.ietf.org/wg/nfsv4/documents/
+** RFC
+- IETF::NFS: Network File System Protocol Specification 
+  https://tools.ietf.org/html/rfc1094
+- IETF::Network File System (NFS) version 4 Protocol 
+  https://www.ietf.org/rfc/rfc3530.txt
 # End of cix-nfs.org

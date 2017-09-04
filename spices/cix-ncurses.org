@@ -1,30 +1,55 @@
-# File           : cix-ncurses.org
-# Created        : <2017-02-05 Sun 13:35:46 GMT>
-# Modified       : <2017-3-15 Wed 22:05:24 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-ncurses.org
+# Created       : <2017-02-05 Sun 13:35:46 GMT>
+# Modified      : <2017-8-24 Thu 23:40:38 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Ncurses support utilities
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: ncurses
+[[file:../cix-main.org][|≣|]]
+#+TITLE: ncurses
+|-----------------+-----------------------|
+| *Author*        | Thomas E. Dickey,     |
+|                 | Juergen Pfeifer ,     |
+|                 | Eric S Raymond,       |
+|                 | Alexander V Lukyanov, |
+|                 | Philippe Blain,       |
+|                 | Sven Verdoolaege      |
+| *Maintainer(s)* |                       |
+| *Released*      | 1993                  |
+| *Source*        | [[ftp://ftp.gnu.org/gnu/ncurses/][ncurses.ftp]]           |
+| *Man*           |                       |
+| *Info*          | [[http://invisible-island.net/ncurses/ncurses.html][ncurses.web]]           |
+|-----------------+-----------------------|
 
+The curses library routines are a terminal-independent method of updating
+character screens with reasonable optimization. The ncurses (new curses) library
+is a freely distributable replacement for the discontinued 4.4 BSD classic
+curses library.
+-----
 * Index
-#+BEGIN_EXAMPLE
-    captoinfo (1m) - convert a termcap description into a terminfo description
-    clear (3x)     - clear all or part of a curses window
-    clear (1)      - clear the terminal screen
-    infocmp (1m)   - compare or print out terminfo descriptions
-    infotocap (1m) - convert a terminfo description into a termcap description
-    reset (1)      - terminal initialization
-    tabs (1)       - set tabs on a terminal
-    tabs (1p)      - set terminal tabs
-    tic (1m)       - the terminfo entry-description compiler
-    toe (1m)       - table of (terminfo) entries
-    tput (1)       - initialize a terminal or query terminfo database
-    tput (1p)      - change terminal characteristics
-    tset (1)       - terminal initialization
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc ncurses
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD       | MAN  | DESCRIPTION                                               |
+| captoinfo | (1m) | convert a termcap description into a terminfo description |
+| clear     | (3x) | clear all or part of a curses window                      |
+| clear     | (1)  | clear the terminal screen                                 |
+| infocmp   | (1m) | compare or print out terminfo descriptions                |
+| infotocap | (1m) | convert a terminfo description into a termcap description |
+| reset     | (1)  | terminal initialization                                   |
+| tabs      | (1)  | set tabs on a terminal                                    |
+| tabs      | (1p) | set terminal tabs                                         |
+| tic       | (1m) | the terminfo entry-description compiler                   |
+| toe       | (1m) | table of (terminfo) entries                               |
+| tput      | (1)  | initialize a terminal or query terminfo database          |
+| tput      | (1p) | change terminal characteristics                           |
+| tset      | (1)  | terminal initialization                                   |
+#+END_SRC
 
 * Receipts
 
@@ -44,3 +69,5 @@ show warning message if user is not root:
       }
 
 #+END_SRC
+
+# End of cix-ncurses.org

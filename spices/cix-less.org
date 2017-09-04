@@ -1,9 +1,9 @@
 # File           : cix-less.org
 # Created        : <2017-08-04 Fri 22:20:21 BST>
-# Modified       : <2017-08-04 Fri 22:20:21 BST>
+# Modified       : <2017-9-02 Sat 12:33:52 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A text file browser similar to more, but better
 
 #+OPTIONS: num:nil
 
@@ -13,14 +13,17 @@
 | *Author*        | 	Mark Nudelman |
 | *Maintainer(s)* |                 |
 | *Released*      | 1984            |
-| *Source*        |                 |
-| *Info*          | [[http://www.greenwoodsoftware.com/less/][Less]]            |
-|                 | [[https://www.gnu.org/software/less/][GNU Less]]        |
+| *Source*        | [[https://ftp.gnu.org/gnu/less/][gnu-less.ftp]]    |
+| *Info*          | [[http://www.greenwoodsoftware.com/less/][less]],           |
+|                 | [[https://www.gnu.org/software/less/][gnu-less]],       |
 |-----------------+-----------------|
 
+The =less= utility is a text file browser that resembles more, but has more
+capabilities. Less allows you to move backwards in the file as well as forwards.
+Since =less= doesn't have to read the entire input file before it starts, =less=
+starts up more quickly than text editors (for example, vi).
 -----
 * Index
 * Receipts
 * Refreances
-
 # End of cix-less.org

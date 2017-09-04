@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-9-02 Sat 00:33:16 BST> sharlatan
+# Modified   : <2017-9-03 Sun 23:02:46 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -71,7 +71,7 @@ on *GNU/Linux*
 
 - *Legacy* /Keep the history/
   + [[./spices/cix-hall-of-fame.org][hall of fame]] :: who made it posible!
-  + [[./spices/cix-unix_land.org][unix land]] :: common unix commands.
+  + [[./spices/cix-unix-land.org][unix land]] :: common unix commands.
 
 - *Core* /usually it contains on the most distributions/
   + bsd :: list of common bsd commands
@@ -169,7 +169,7 @@ on *GNU/Linux*
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: *Linux*
   + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: *Linux*
-  + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries: =GNU/Linux= =FreeBSD= =OpenBSD= =Solaris= =OS-X=
+  + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries: =GNU/Linux= =FreeBSD= =OpenBSD= =Solaris/SPARC= =OS-X= =AIX= =HP-UX= =NetBSD= =OSF= =SunOS= =Ultrix= =QNX= =Dynix= =IRIX= =Win=
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
   + [[./spices/cix-openssh.org][OpenSSH]] :: an open source implementation of ssh protocol: =AIX= =HP-UX= =IRIX= =GNU/Linux= =Next= =Sco= =Sni/Reliant= =Unix= =Solaris= =Digital= =Unix/Tru64/Osf= =Mac= =Os-X= =Cygwin=
@@ -181,14 +181,16 @@ on *GNU/Linux*
   + [[./spices/cix-screen.org][screen]] :: a screen manager that supports multiple logins on one terminal
   + [[./spices/cix-tmux.org][tmux]] :: a terminal multiplexer
   + [[./spices/cix-zsh.org][zsh]] ::  powerful interactive shell
-  + [[./spices/cix-tcsh.org][tcsh]] :: An enhanced version of csh, the C shell
+  + [[./spices/cix-tcsh.org][tcsh]] :: An enhanced version of csh, the C shell: =FreeBSD=
+  + [[file:./spices/cix-dash.org][dash]] :: Small and fast POSIX-compliant shell
+  + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD
 
 - *Scheduling* /world is spinning around/
   + [[./spices/cix-at.org][at]] :: job spooling tools
   + [[./spices/cix-cronie.org][cronie]]  :: cron daemon for executing programs at set times
 
 - *Media* /please your eyes and ears/
-  + [[file:./spices/cix-alsa.org][alsa]] :: advanced Linux sound architecture (alsa) utilities
+  + [[file:./spices/cix-alsa.org][alsa]] :: advanced Linux sound architecture (alsa) utilities: =GNU/Linux=
   + [[./spices/cix-ffmpeg.org][ffmpeg]] :: digital vcr and streaming server
   + [[file:./spices/cix-fontconfig.org][fontconfig]] :: font configuration and customization library
   + [[file:./spices/cix-pulseaudio.org][pulseaudio]] :: pulseaudio sound server utilities
@@ -199,15 +201,16 @@ on *GNU/Linux*
   + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
   + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
   + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
+  + [apparmor] :: 
 
-- *Init-system* /let's party started!/
+- *Boot-Init-systems* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
-  + [[./spices/cix-sysvinit-utils.org][sysvinit-utils]] :: system-v-like utilities
   + [[./spices/cix-upstart.org][upstart]] :: event-based init daemo
 
 - *Development* /in the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-autoconf.org][autoconf]] :: a gnu tool for automatically configuring source code
   + [[file:./spices/cix-automake.org][automake]] :: A GNU tool for automatically creating Makefiles
+  + [[file:./spaces/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
   + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool
   + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
   + [[./spices/cix-gdb.org][gdb]] :: a gnu source-level debugger for C, C++, Fortran, Go and other languages
@@ -216,7 +219,6 @@ on *GNU/Linux*
   + [[file:./spices/cix-global.org][global]] :: Source code tag system
   + [[file:./spices/cix-make.org][make]] :: A tool which simplifies the build process for users
   + [[file:./spices/cix-valgrind.org][valgrind]] :: Tool for finding memory management bugs in programs
-  + [[file:./spaces/cix-gnu-bison.org][bison]] :: 
 
 - *Packaging* /pack me up, pack me down/
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
@@ -261,6 +263,9 @@ on *GNU/Linux*
 - Arnold Robbins;
   *UNIX in a Nutshell*;
   O'reilly, 2008;
+- Richard Blum;
+  *Linux Command Line and Shell Scripting Bible*;
+  Wiley  Publishing Inc., 2008;
 
 ** Articles
 - M. Douglas McIlroy;

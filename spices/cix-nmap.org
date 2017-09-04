@@ -1,23 +1,33 @@
 # File           : cix-nmap.org
 # Created        : <2017-08-07 Mon 00:29:30 BST>
-# Modified       : <2017-8-07 Mon 00:29:32 BST> sharlatan
+# Modified       : <2017-9-01 Fri 23:46:30 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Network exploration tool and security scanner
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: nmap
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-------------|
+| *Author*        | Gordon Lyon |
+| *Maintainer(s)* |             |
+| *Released*      | 1997        |
+| *Source*        | [[https://github.com/nmap/nmap][nmap.git]],   |
+|                 | [[https://svn.nmap.org/nmap/][nmap.svn]]    |
+| *Info*          | [[https://svn.nmap.org/nmap/][nmap.web]]    |
+|-----------------+-------------|
 
-
+=nmap= is a utility for network exploration or security auditing. It supports
+ping scanning (determine which hosts are up), many port scanning techniques
+(determine what services the hosts are offering), and TCP/IP fingerprinting
+(remote host operating system identification). =nmap= also offers flexible
+target and port specification, decoy scanning, determination of TCP sequence
+predictability characteristics, reverse-identd scanning, and more. In addition
+to the classic command-line nmap executable, the Nmap suite includes a flexible
+data transfer, redirection, and debugging tool (netcat utility =ncat)=, a
+utility for comparing scan results (=ndiff=), and a packet generation and
+response analysis tool (=nping=).
 -----
 * Index
 * Receipts

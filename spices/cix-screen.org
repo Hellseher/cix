@@ -1,11 +1,28 @@
-# File           : cix-screen.org
-# Created        : <2016-11-04 Fri 22:45:19 GMT>
-# Modified  : <2017-2-27 Mon 23:31:06 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s   :
-# Sinopsis :
+# File          : cix-screen.org
+# Created       : <2016-11-04 Fri 22:45:19 GMT>
+# Modified      : <2017-8-24 Thu 23:15:38 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : A screen manager that supports multiple logins on one terminal
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: screen
+|-----------------+---------------------|
+| *Author*        | Oliver Laumann,     |
+|                 | Carsten Bormann     |
+| *Maintainer(s)* | Amadeusz Sławiński, |
+|                 | Alexander Naumov    |
+| *Released*      | 1987                |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/screen.git][screen.git]]          |
+| *Man*           | [[http://man7.org/linux/man-pages/man1/screen.1.html][screen.1]]            |
+| *Info*          |                     |
+|-----------------+---------------------|
+
+The screen utility allows you to have multiple logins on just one terminal.
+Screen is useful for users who telnet into a machine or are connected via a dumb
+terminal, but want to use more than just one login.
+-----
+
+# End of cix-screen.org

@@ -1,6 +1,6 @@
 # File          : cix-gnu-grep.org
 # Created       : <2016-11-18 Fri 23:49:59 GMT>
-# Modified      : <2017-8-21 Mon 22:51:31 BST> sharlatan
+# Modified      : <2017-8-21 Mon 23:12:11 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Pattern matching utilities
@@ -71,6 +71,7 @@ find all files wich has not matched PATERN:
 find files that do not contain matching PATERN:
 :    ~$ find ./ -type f -print0 | xargs -0 grep -H -c "PATERN" | grep "0$" | cut -d":" -f1
 :    ~$ find ./ -type f -exec grep -H -c "PATERN" {} \; | grep "0$" | cut -d":" -f1
+:    ~$ find ./ -type f ! -exec grep -q "PATERN" {} \; -print
 :    ~$ find ./ -type f -prnt0 | xargs -0 grep -L "PATERN" 
 :    ~$ grep -rL "PATERN" ./
 [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
@@ -107,3 +108,5 @@ _N_GNU_nonoption_argv_flags_
 #+END_EXAMPLE
 *** grep::see-also
 [[file:./cix-procps-ng.org::*pgrep][pgrep (1)]],
+
+# End of cix-gnu-grep.org

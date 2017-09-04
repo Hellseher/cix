@@ -1,23 +1,24 @@
 # File           : cix-curlftpfs.org
 # Created        : <2017-08-07 Mon 00:28:29 BST>
-# Modified       : <2017-8-07 Mon 00:28:31 BST> sharlatan
+# Modified       : <2017-8-20 Sun 12:44:09 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : CurlFtpFS is a filesystem for accessing FTP hosts based on FUSE and libcurl
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: curlftpfs
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
-
-
+|-----------------+---------------------|
+| *Author*        | Robson Braga Araujo |
+| *Maintainer(s)* |                     |
+| *Released*      | 2006                |
+| *Source*        | [[http://curlftpfs.cvs.sourceforge.net/viewvc/curlftpfs/curlftpfs/][curlftpfs.cvs]]       |
+| *Info*          | [[http://curlftpfs.sourceforge.net/][curlftpfs.web]]       |
+|-----------------+---------------------|
+ CurlFtpFS is a filesystem for accessing FTP hosts based on FUSE and libcurl. It
+features SSL support, connecting through tunneling HTTP proxies, and
+automatically reconnecting if the server times out.
 -----
 * Index
 * Receipts

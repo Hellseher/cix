@@ -1,23 +1,26 @@
 # File           : cix-tmux.org
 # Created        : <2017-08-07 Mon 00:29:07 BST>
-# Modified       : <2017-8-07 Mon 00:29:09 BST> sharlatan
+# Modified       : <2017-8-20 Sun 19:14:11 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A terminal multiplexer
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: tmux
-|--------+-|
-|*Author*||
-|*Maintainer(s)*||
-|*Released*||
-|*Source*||
-|*Info*||
-|------+-|
+|-----------------+-------------------|
+| *Author*        | Nicholas Marriott |
+| *Maintainer(s)* |                   |
+| *Released*      | 2007              |
+| *Source*        | [[https://github.com/tmux/tmux][tmux.git]],         |
+|                 | [[http://bxr.su/OpenBSD/usr.bin/tmux/][tmux.git]]          |
+| *Info*          |                   |
+|-----------------+-------------------|
 
-
+=tmux= is a "terminal multiplexer." It enables a number of terminals (or
+windows) to be accessed and controlled from a single terminal. tmux is intended
+to be a simple, modern, BSD-licensed alternative to programs such as GNU Screen.
 -----
 * Index
 * Receipts

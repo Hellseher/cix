@@ -1,21 +1,21 @@
 # File           : cix-dnf.org
 # Created        : <2017-08-05 Sat 00:45:48 BST>
-# Modified       : <2017-8-05 Sat 00:45:56 BST> sharlatan
+# Modified       : <2017-8-21 Mon 21:38:28 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Package manager forked from Yum, using libsolv as a dependency resolver
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: dnf
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+|-----------------+----------|
+| *Author*        | [[https://github.com/rpm-software-management/dnf/blob/master/AUTHORS][(all...)]] |
+| *Maintainer(s)* |          |
+| *Released*      | 2015     |
+| *Source*        | [[https://github.com/rpm-software-management/dnf][dnf.git]]  |
+| *Info*          |          |
+|-----------------+----------|
 
 
 -----

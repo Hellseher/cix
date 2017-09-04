@@ -1,30 +1,28 @@
-# File           : cix-gnu-findutils.org
-# Created        : <2015-11-17 Tue 22:54:30 GMT>
-# Modified  : <2017-8-07 Mon 00:41:12 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis          :
+# File          : cix-gnu-findutils.org
+# Created       : <2015-11-17 Tue 22:54:30 GMT>
+# Modified      : <2017-9-03 Sun 23:01:43 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : The GNU versions of find utilities (find and xargs).
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Findutils
+|----------------+--------------------|
+| *Author*       | Kevin Dalley       |
+| *Contributors* | Eric B. Decker,    |
+|                | Michael Rendell,   |
+|                | David J. MacKenzie |
+| *Released*     | 2000               |
+| *Source*       | [[http://git.savannah.gnu.org/cgit/findutils.git][findutils.git]]      |
+| *Info*         | [[https://www.gnu.org/software/findutils/][findutils.web]]      |
+|----------------+--------------------|
 
-|--------------+-----------------------------------------------------|
-| *Author*       | Kevin Dalley                                        |
-| *Contributors* | Eric B. Decker, Michael Rendell, David J. MacKenzie |
-|              | Jim Meyering, Tim Wood, Paul Eggert,                |
-|              | James Youngman, Jay Plett, Paul Sheer,              |
-|              | Dmitry V. Levin, Bas van Gompel, Eric Blake         |
-| *Realised*     | 2000                                                |
-| *Source*       | [[http://git.savannah.gnu.org/cgit/findutils.git][findutils.git]]                                       |
-| *Info*         | [[https://www.gnu.org/software/findutils/][GNU findutils]]                                       |
-|--------------+-----------------------------------------------------|
-
-The GNU Find Utilities are  the basic directory searching utilities of
-the  GNU  operating  system.  These programs  are  typically  used  in
-conjunction  with  other  programs  to provide  modular  and  powerful
-directory search and file locating capabilities to other commands.
+The GNU Find Utilities are the basic directory searching utilities of the GNU
+operating system. These programs are typically used in conjunction with other
+programs to provide modular and powerful directory search and file locating
+capabilities to other commands.
 -----
 
 * Index
@@ -146,3 +144,5 @@ Count all lines of code for the project in C (for example):
 ** Links
 - A collection of Unix/Linux find command examples
   http://alvinalexander.com/unix/edu/examples/find.shtml
+
+# End of cix-gnu-findutils.org

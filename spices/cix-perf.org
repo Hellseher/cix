@@ -1,6 +1,6 @@
 # File           : cix-perf.org
 # Created        : <2017-08-08 Tue 22:53:39 BST>
-# Modified       : <2017-8-09 Wed 00:05:41 BST> sharlatan
+# Modified       : <2017-9-02 Sat 10:04:47 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Performance monitoring for the Linux kernel
@@ -10,15 +10,16 @@
 [[file:../README.org*Index][|≣|]]
 #+TITLE: perf
 |-----------------+-----------|
-| *Author*        |           |
+| *Author*        | [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/perf/CREDITS][(all...)]]  |
 | *Maintainer(s)* |           |
-| *Released*      |           |
-| *Source*        |           |
+| *Released*      | 2009      |
+| *Source*        | [[https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/perf][perf.git]]  |
 | *Info*          | [[https://perf.wiki.kernel.org/index.php/Main_Page][perf.wiki]] |
 |-----------------+-----------|
-Perf is a profiler tool for Linux 2.6+ based systems that abstracts away CPU
+
+=perf= is a profiler tool for Linux 2.6+ based systems that abstracts away CPU
 hardware differences in Linux performance measurements and presents a simple
-commandline interface. Perf is based on the perf_events interface exported by
+commandline interface. =perf= is based on the perf_events interface exported by
 recent versions of the Linux kernel.
 -----
 * Index
@@ -32,9 +33,15 @@ Run a programm repeatedly and summarize the time it takes:
 * Refreances
 ** Links
 - Analyzing performance using perf annotate
-https://www.ibm.com/developerworks/library/l-analyzing-performance-perf-annotate-trs/index.html
+  https://www.ibm.com/developerworks/library/l-analyzing-performance-perf-annotate-trs/index.html
 - =perf= Examples
-http://www.brendangregg.com/perf.html?cm_mc_uid=39251919996114790637160&cm_mc_sid_50200000=1502230500
+  http://www.brendangregg.com/perf.html?cm_mc_uid=39251919996114790637160&cm_mc_sid_50200000=1502230500
 ** Hubs
 - https://github.com/brendangregg/perf-tools
+** CVE
+- CVE-2013-2094 :: The perf_swevent_init function in kernel/events/core.c in the
+                   Linux kernel before 3.8.9 uses an incorrect integer data
+                   type, which allows local users to gain privileges via a 
+                   crafted perf_event_open system call.
+                   http://www.cvedetails.com/cve/CVE-2013-2094/
 # End of cix-perf.org

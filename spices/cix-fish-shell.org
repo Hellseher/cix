@@ -104,3 +104,5 @@ to learn or configure.
     vared
     while
 #+END_EXAMPLE
+
+# End of cix-fish-shell.org

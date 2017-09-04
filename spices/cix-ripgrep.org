@@ -1,26 +1,30 @@
 # File           : cix-ripgrep.org
 # Created        : <2017-08-04 Fri 23:28:29 BST>
-# Modified       : <2017-08-04 Fri 23:28:29 BST>
+# Modified       : <2017-8-20 Sun 21:53:04 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : A search tool that combines the usability of ag with the raw speed of grep
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: ripgrep
-|-----------------+-------------|
-| *Author*        |             |
-| *Maintainer(s)* |             |
-| *Released*      |             |
-| *Source*        | [[https://github.com/BurntSushi/ripgrep][ripgrep.git]] |
-| *Info*          |             |
-|-----------------+-------------|
+|-----------------+----------------|
+| *Author*        | Andrew Gallant |
+| *Maintainer(s)* |                |
+| *Released*      | 2016           |
+| *Source*        | [[https://github.com/BurntSushi/ripgrep][ripgrep.git]]    |
+| *Info*          |                |
+|-----------------+----------------|
 
-
+=ripgrep= is a command line search tool that combines the usability of The
+Silver Searcher (an =ack= clone) with the raw speed of GNU =grep=. ripgrep is
+fast, cross platform, and written in Rust.
 -----
 * Index
 * Receipts
 * Refreances
-
-  # End of cix-ripgrep.org
+** Links
+- Rust Crate regex
+  https://doc.rust-lang.org/regex/regex/index.html#syntax
+   # End of cix-ripgrep.org

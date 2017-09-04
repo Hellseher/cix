@@ -1,9 +1,9 @@
 # File           : cix-file.org
 # Created        : <2017-07-12 Wed 00:22:46 BST>
-# Modified       : <2017-7-12 Wed 20:40:28 BST> sharlatan
+# Modified       : <2017-9-03 Sun 22:41:38 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis :
+# Sinopsis : A utility for determining file types.
 
 #+OPTIONS: num:nil
 
@@ -15,7 +15,7 @@
 | *Contributors* | Geoff Collyer,                 |
 |              | Guy Harris, Chris Lowth,       |
 |              | Eric Fischer,  Christos Zoulas |
-| *Realised*     | 1987                           |
+| *Released*     | 1987                           |
 | *Source*       | [[https://github.com/file/file][file.git]]                       |
 | *Info*         |                                |
 |--------------+--------------------------------|
@@ -27,3 +27,5 @@ formats.
 -----
 ** file
 *** file::options
+
+# End of cix-file.org

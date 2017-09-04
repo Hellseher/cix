@@ -1,23 +1,29 @@
 # File           : cix-smartmontools.org
 # Created        : <2017-08-07 Mon 00:28:50 BST>
-# Modified       : <2017-8-08 Tue 23:50:31 BST> sharlatan
+# Modified       : <2017-9-03 Sun 19:18:53 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis       :
+# Sinopsis       : Tools for monitoring SMART capable hard disks.
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: smartmontools
-|-----------------+-------------------------------------------------|
-| *Author*        | 	Bruce Allen, Christian Franke, Guido Guenther |
-| *Maintainer(s)* |                                                 |
-| *Released*      | 2002                                            |
-| *Source*        |                                                 |
-| *Info*          | [[https://www.smartmontools.org/][smartmontools]]                                   |
-|-----------------+-------------------------------------------------|
+|-----------------+-------------------------|
+| *Author*        | Bruce Allen,            |
+|                 | Christian Franke,       |
+|                 | Guido Guenther [[https://www.smartmontools.org/browser/trunk/smartmontools/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                         |
+| *Released*      | 2002                    |
+| *Source*        | [[https://www.smartmontools.org/browser/trunk/smartmontools/AUTHORS][smartmontools.cvs]]       |
+| *Info*          | [[https://www.smartmontools.org/][smartmontools]]           |
+|-----------------+-------------------------|
 
-
+The =smartmontools= package contains two utility programs (smartctl and smartd)
+to control and monitor storage systems using the Self-Monitoring, Analysis and
+Reporting Technology System (SMART) built into most modern ATA and SCSI hard
+disks. In many cases, these utilities will provide advanced warning of disk
+degradation and failure.
 -----
 * Index
 * Receipts

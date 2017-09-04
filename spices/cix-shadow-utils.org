@@ -1,72 +1,74 @@
-# File           : cix-shadow-utils.org
-# Created        : <2016-05-03 Tue 00:09:23 GMT>
-# Modified  : <2017-2-05 Sun 13:45:46 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-shadow-utils.org
+# Created       : <2016-05-03 Tue 00:09:23 GMT>
+# Modified      : <2017-8-20 Sun 23:41:03 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Utilities for managing accounts and shadow password files
 
 #+OPTIONS: num:nil
 
-
-[[http://pkg-shadow.alioth.debian.org][|↷|]]
-[[file:../cix-main.org][|≣|]]#+TITLE: Sadow utils
-
-|--------------+----------------------------------|
-| *Author*       |                                  |
-| *Contributors* | Tomasz Kłoczko, Nicolas François |
-| *Realised*     | 2005                             |
-| *Source*       | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]                       |
-|--------------+----------------------------------|
+[[file:../cix-main.org][|≣|]]
+#+TITLE: Shadow utils
+|-----------------+------------------|
+| *Author(s)*     | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git/tree/README][(all...)]]         |
+| *Maintainer(s)* | Tomasz Kłoczko,  |
+|                 | Nicolas François |
+| *Released*      | 2005             |
+| *Source*        | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]       |
+|-----------------+------------------|
 
 The shadow-utils package includes the necessary programs for converting UNIX
 password files to the shadow password format, plus programs for managing user
-and group accounts.  The pwconv command converts passwords to the shadow
-password format. The pwunconv command unconverts shadow passwords and generates
-a passwd file (a standard UNIX password file).  The pwck command checks the
-integrity of password and shadow files.  The lastlog command prints out the last
-login times for all users.  The useradd, userdel, and usermod commands are used
-for managing user accounts.  The groupadd, groupdel, and groupmod commands are
-used for managing group accounts.
+and group accounts. The pwconv command converts passwords to the shadow password
+format. The pwunconv command unconverts shadow passwords and generates a passwd
+file (a standard UNIX password file). The pwck command checks the integrity of
+password and shadow files. The lastlog command prints out the last login times
+for all users. The useradd, userdel, and usermod commands are used for managing
+user accounts. The groupadd, groupdel, and groupmod commands are used for
+managing group accounts.
 -----
 * Index
-#+BEGIN_EXAMPLE
-    sg (1)        - execute command as different group ID
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc shadow-utils
+#+END_SRC
 
-    vipw (8)      - edit the password, group, shadow-password or shadow-group file
-    pwck (8)      - verify integrity of password files
-    vigr (8)      - edit the password, group, shadow-password or shadow-group file
-
-    chage (1)     - change user password expiry information
-    grpck (8)     - verify integrity of group files
-    pwconv (8)    - convert to and from shadow passwords and groups
-
-    newgrp (1)    - log in to a new group
-    newgrp (1p)   - change to a new group
-
-    adduser (8)   - create a new user or update default new user information
-    lastlog (8)   - reports the most recent login of all users or of a given user
-    grpconv (8)   - convert to and from shadow passwords and groups
-    useradd (8)   - create a new user or update default new user information
-    gpasswd (1)   - administer /etc/group and /etc/gshadow
-    userdel (8)   - delete a user account and related files
-    usermod (8)   - modify a user account
-
-    groupdel (8)  - delete a group
-    groupadd (8)  - create a new group
-    groupmod (8)  - modify a group definition on the system
-    chpasswd (8)  - update passwords in batch mode
-    newusers (8)  - update and create new users in batch
-    pwunconv (8)  - convert to and from shadow passwords and groups
-
-    groupmems (8) - administer members of a user's primary group
-    grpunconv (8) - convert to and from shadow passwords and groups
-    newgidmap (1) - set the gid mapping of a user namespace
-    newuidmap (1) - set the uid mapping of a user namespace
-#+END_EXAMPLE
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD       | MAN  | DESCRIPTION                                               |
+| chage     | (1)  | change user password expiry information                   |
+| gpasswd   | (1)  | administer /etc/group and /etc/gshadow                    |
+| lastlog   | (8)  | reports the most recent login of all users or of a giv... |
+| newgidmap | (1)  | set the gid mapping of a user namespace                   |
+| newgrp    | (1)  | log in to a new group                                     |
+| newgrp    | (1p) | change to a new group                                     |
+| newuidmap | (1)  | set the uid mapping of a user namespace                   |
+| sg        | (1)  | execute command as different group ID                     |
+| adduser   | (8)  | create a new user or update default new user information  |
+| chgpasswd | (8)  | update group passwords in batch mode                      |
+| chpasswd  | (8)  | update passwords in batch mode                            |
+| groupadd  | (8)  | create a new group                                        |
+| groupdel  | (8)  | delete a group                                            |
+| groupmems | (8)  | administer members of a user's primary group              |
+| groupmod  | (8)  | modify a group definition on the system                   |
+| grpck     | (8)  | verify integrity of group files                           |
+| grpconv   | (8)  | convert to and from shadow passwords and groups           |
+| grpunconv | (8)  | convert to and from shadow passwords and groups           |
+| newusers  | (8)  | update and create new users in batch                      |
+| pwck      | (8)  | verify integrity of password files                        |
+| pwconv    | (8)  | convert to and from shadow passwords and groups           |
+| pwunconv  | (8)  | convert to and from shadow passwords and groups           |
+| useradd   | (8)  | create a new user or update default new user information  |
+| userdel   | (8)  | delete a user account and related files                   |
+| usermod   | (8)  | modify a user account                                     |
+| vigr      | (8)  | edit the password, group, shadow-password or shadow-gr... |
+| vipw      | (8)  | edit the password, group, shadow-password or shadow-gr... |
+#+END_SRC
 
 * Receipts
 ** gpasswd
 *** gpasswd::examples
 **** gpasswd-170111224028
 add current user to a "docker" group:
-:    ~$ sudo gpasswd - ${USER} docker
+:    ~# gpasswd - ${USER} docker
+
+# End of cix-shadow-utils.org

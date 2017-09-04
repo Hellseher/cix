@@ -1,6 +1,6 @@
 # File           : cix-jq.org
 # Created        : <2017-08-04 Fri 23:19:38 BST>
-# Modified       : <2017-08-04 Fri 23:19:38 BST>
+# Modified       : <2017-9-03 Sun 21:03:14 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : lightweight and flexible command-line JSON processor.
@@ -9,15 +9,25 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: jq
-|-----------------+-----------------|
-| *Author*        | 	Stephen Dolan |
-| *Maintainer(s)* |                 |
-| *Released*      |            2012 |
-| *Source*        |                 |
-| *Info*          |                 |
-|-----------------+-----------------|
+|-----------------+---------------|
+| *Author*        | Stephen Dolan |
+| *Maintainer(s)* |               |
+| *Released*      | 2012          |
+| *Source*        | [[https://github.com/stedolan/jq][jq.git]]        |
+| *Info*          | [[https://stedolan.github.io/jq/][jq.web]]        |
+|-----------------+---------------|
 
+lightweight and flexible command-line JSON processor
 
+=jq= is like =sed= for JSON data – you can use it to slice and filter and map
+and transform structured data with the same ease that =sed=, =awk=, =grep= and
+friends let you play with text.
+
+It is written in portable C, and it has zero runtime dependencies.
+
+=jq= can mangle the data format that you have into the one that you want with
+very little effort, and the program to do so is often shorter and simpler than
+you'd expect.
 -----
 * Index
 * Receipts

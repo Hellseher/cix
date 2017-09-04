@@ -1,25 +1,22 @@
-# File           : cix-lvm2.org
-# Created        : <2016-02-21 Mon 02:02:27 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-lvm2.org
+# Created       : <2016-02-21 Mon 02:02:27 GMT>
+# Modified      : <2017-9-03 Sun 22:11:48 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Userland logical volume management tools
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: lvm2
-/Userland logical volume management tools/
-
-|--------------+------------------------------------|
+|----------------+------------------------------------|
 | *Author*       | Heinz Mauelshagen                  |
 | *Contributors* | Zdenek Kabelac, Peter Rajnoha      |
-|              | David Teigland, Alasdair G Kergon, |
-|              | Tony Asleson                       |
-| *Realised*     | 1998                               |
+|                | David Teigland, Alasdair G Kergon, |
+|                | Tony Asleson                       |
+| *Released*     | 1998                               |
 | *Source*       | [[https://git.fedorahosted.org/git/lvm2.git][lvm2.git]]                           |
-|--------------+------------------------------------|
-
+|----------------+------------------------------------|
 
 LVM2 includes all of the support  for handling read/write operations on physical
 volumes (hard disks, RAID-Systems, magneto optical, etc., multiple devices (MD),
@@ -39,7 +36,6 @@ logical volumes (kind of logical partitions) in volume groups.
 | 8 | librt              |
 | 9 | libudev            |
 |---+--------------------|
-
 -----
 
 * Index
@@ -106,3 +102,5 @@ logical volumes (kind of logical partitions) in volume groups.
 * Reference
 ** Links
 - https://wiki.debian.org/LVM
+
+# End of cix-lvm2.org

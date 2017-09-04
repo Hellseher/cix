@@ -1,34 +1,72 @@
-# File           : cix-alsa-utils.org
-# Created        : <2016-11-24 Thu 23:51:51 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-alsa.org
+# Created       : <2016-11-24 Thu 23:51:51 GMT>
+# Modified      : <2017-9-02 Sat 12:45:22 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : Advanced Linux Sound Architecture 
 
 #+OPTIONS: num:nil
 
-[[file:../cix-main.org][|≣|]]#+TITLE: ALSA utilities
+[[file:../cix-main.org][|≣|]]
+#+TITLE: ALSA
+|-----------------+------------------|
+| *Author*        | Jaroslav Kysela  |
+| *Maintainer(s)* |                  |
+| *Released*      | 1998             |
+| *Source*        | [[http://git.alsa-project.org/][alsa-project.git]] |
+| *Man*           |                  |
+| *Info*          | [[https://www.alsa-project.org/main/index.php/Main_Page][alsa.wiki]]        |
+|-----------------+------------------|
+
+-----
+** Packages
+| PKG                 | RPM | DEB | DESC                                                 |
+|---------------------+-----+-----+------------------------------------------------------|
+| alsa-lib            | +   |     | The Advanced Linux Sound Architecture (ALSA) library |
+| alsa-utils          | +   |     | Advanced Linux Sound Architecture (ALSA) utilities   |
+| alsa-tools          | +   |     | Specialist tools for ALSA                            |
+| alsa-firmware       | +   |     | Firmware for several ALSA-supported sound cards      |
+| alsa-tools-firmware | +   |     | ALSA tools for uploading firmware to some soundcards |
+| tinycompress        | +   |     | A library for compress audio offload in alsa         |
+|---------------------+-----+-----+------------------------------------------------------|
 
 -----
 * Index
-#+BEGIN_EXAMPLE
-    aconnect (1)     - ALSA sequencer connection manager
-    alsaloop (1)     - command-line PCM loopback
-    alsamixer (1)    - soundcard mixer for ALSA soundcard driver, with ncurses interface
-    alsaunmute (1)   - a simple script to initialize ALSA sound devices
-    amidi (1)        - read from and write to ALSA RawMIDI ports
-    amixer (1)       - command-line mixer for ALSA soundcard driver
-    aplay (1)        - command-line sound recorder and player for ALSA soundcard driver
-    aplaymidi (1)    - play Standard MIDI Files
-    arecord (1)      - command-line sound recorder and player for ALSA soundcard driver
-    arecordmidi (1)  - record Standard MIDI Files
-    aseqdump (1)     - show the events received at an ALSA sequencer port
-    aseqnet (1)      - ALSA sequencer connectors over network
-    iecset (1)       - Set or dump IEC958 status bits
-    speaker-test (1) - command-line speaker test tone generator for ALSA
-    alsa-info.sh (1) - command-line utility to gather information about the ALSA subsystem
-    alsactl (1)      - advanced controls for ALSA soundcard driver
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc alsa-utils
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD          | MAN | DESCRIPTION                                               |
+| aconnect     | (1) | ALSA sequencer connection manager                         |
+| alsaloop     | (1) | command-line PCM loopback                                 |
+| alsamixer    | (1) | soundcard mixer for ALSA soundcard driver, with ncurse... |
+| alsaunmute   | (1) | a simple script to initialize ALSA sound devices          |
+| amidi        | (1) | read from and write to ALSA RawMIDI ports                 |
+| amixer       | (1) | command-line mixer for ALSA soundcard driver              |
+| aplay        | (1) | command-line sound recorder and player for ALSA soundc... |
+| aplaymidi    | (1) | play Standard MIDI Files                                  |
+| arecord      | (1) | command-line sound recorder and player for ALSA soundc... |
+| arecordmidi  | (1) | record Standard MIDI Files                                |
+| aseqdump     | (1) | show the events received at an ALSA sequencer port        |
+| aseqnet      | (1) | ALSA sequencer connectors over network                    |
+| iecset       | (1) | Set or dump IEC958 status bits                            |
+| speaker-test | (1) | command-line speaker test tone generator for ALSA         |
+| alsa-info.sh | (1) | command-line utility to gather information about the A... |
+| alsactl      | (1) | advanced controls for ALSA soundcard driver               |
+#+END_SRC
+
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc alsa-tools
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD           | MAN | DESCRIPTION                                               |
+| cspctl        | (1) | Sound Blaster 16 ASP/CSP control program                  |
+| envy24control | (1) | GUI control tool for Envy24 (ice1712) based soundcards... |
+#+END_SRC
 
 * Receipts
 ** aconnect                                                                     :cmd:
@@ -108,3 +146,4 @@
 *** alsactl::see-also
 
 * Referances
+# End of cix-alsa.org

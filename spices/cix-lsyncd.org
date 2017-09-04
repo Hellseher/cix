@@ -1,6 +1,6 @@
 # File           : cix-lsyncd.org
 # Created        : <2017-08-04 Fri 23:01:05 BST>
-# Modified       : <2017-08-04 Fri 23:01:05 BST>
+# Modified       : <2017-8-21 Mon 21:28:57 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Synchronizes local directories with remote targets 
@@ -9,13 +9,13 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: lsyncd
-|-----------------+------------|
-| *Author*        |            |
-| *Maintainer(s)* |            |
-| *Released*      |            |
-| *Source*        | [[https://github.com/axkibe/lsyncd][lsyncd.git]] |
-| *Info*          |            |
-|-----------------+------------|
+|-----------------+-------------------|
+| *Author*        | Axel Kittenberger |
+| *Maintainer(s)* |                   |
+| *Released*      |   2008            |
+| *Source*        | [[https://github.com/axkibe/lsyncd][lsyncd.git]]        |
+| *Info*          |                   |
+|-----------------+-------------------|
 
 Lsyncd watches a local directory trees event monitor interface (inotify or
 fsevents). It aggregates and combines events for a few seconds and then spawns
@@ -31,7 +31,6 @@ written in the Lua language. This way simple, powerful and flexible
 configurations can be acheived. See the manual for details. Lsyncd 2.2.1
 requires rsync >= 3.1 on all source and target machines. License: GPLv2 or any
 later GPL version.
-
 -----
 * Index
 * Receipts

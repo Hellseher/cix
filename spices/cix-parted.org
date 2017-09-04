@@ -1,21 +1,42 @@
-# File           : cix-parted.org
-# Created        : <2016-11-12 Sat 10:01:15 GMT>
-# Modified  : <2017-1-20 Fri 21:28:50 GMT> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis :
+# File          : cix-parted.org
+# Created       : <2016-11-12 Sat 10:01:15 GMT>
+# Modified      : <2017-8-26 Sat 13:14:36 BST> sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : The GNU disk partition manipulation program.
 
-#+OPTIONS: num:nil
+#+OPTIONS: num:nil d:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Parted
+#+TITLE: parted
+|-----------------+-------------------------|
+| *Author(s)*     | Andrew Clausen [[http://git.savannah.gnu.org/cgit/parted.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                         |
+| *Released*      | 1999                    |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/parted.git][parted.git]]              |
+| *Man*           |                         |
+| *Info*          |                         |
+|-----------------+-------------------------|
 
-** Index
-#+BEGIN_EXAMPLE
-    parted (8)    - a partition manipulation program
-    partprobe (8) - inform the OS of partition table changes
-#+END_EXAMPLE
+The GNU Parted program allows you to create, destroy, resize, move, and copy
+hard disk partitions. Parted can be used for creating space for new operating
+systems, reorganizing disk usage, and copying data to new hard disks.
+-----
+* Index
+#+BEGIN_SRC sh  :results value org output replace :exports results
+../cix-stat.sh mandoc parted
+#+END_SRC
 
-** References
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD       | MAN | DESCRIPTION                              |
+| parted    | (8) | a partition manipulation program         |
+| partprobe | (8) | inform the OS of partition table changes |
+#+END_SRC
+
+* References
 *** Links
-- Linux on 4 KB sector disks: Practical advice https://www.ibm.com/developerworks/library/l-linux-on-4kb-sector-disks/
+- Linux on 4 KB sector disks: Practical advice
+   https://www.ibm.com/developerworks/library/l-linux-on-4kb-sector-disks/
+
+# End of cix-parted.org
