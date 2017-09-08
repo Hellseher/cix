@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-9-03 Sun 23:02:46 BST> sharlatan
+# Modified   : <2017-9-09 Sat 00:44:40 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -80,7 +80,7 @@ on *GNU/Linux*
   + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console (keyboard, virtual terminals, etc.)
   + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: =GNU/Linux=
   + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens
-  + the heirloom project :: traditional implementations of standard UNIX utils
+  + [[file:./spices/cix-the-heirloom-project.org][the heirloom project]] :: traditional implementations of standard UNIX utils
   + [[./spices/cix-toybox.org][toybox]]  :: common Linux commands for embedded systems (POSIX-2008 and LSB 4.1).
   + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: =GNU/Linux=
 
@@ -126,7 +126,7 @@ on *GNU/Linux*
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
   + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
-  + [likwid]  :: 
+  + [likwid]  ::
 
 - *Hardware* /hard as a rock!/
   + [dtrace] ::
@@ -206,6 +206,8 @@ on *GNU/Linux*
 - *Boot-Init-systems* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
   + [[./spices/cix-upstart.org][upstart]] :: event-based init daemo
+  + [[file:./spices/cix-syslinux.org][syslinux]] :: Simple kernel loader which boots from a FAT filesystem: =GNU/Linux=
+  + [[file:./spices/cix-gnu-grub2.org][grub2]] :: Bootloader with support multiboot and more: =GNU/Linux= 
 
 - *Development* /in the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-autoconf.org][autoconf]] :: a gnu tool for automatically configuring source code
@@ -238,6 +240,27 @@ on *GNU/Linux*
 - *Cryptograpy* /Who breaks Enigma code?/
   + [[./spices/cix-gnugpg.org][gnupg]] :: A GNU utility for secure communication and data storage
 -----
+* Configuration
+Header example of configuration file:
+#+BEGIN_SRC sh :results value org output replace :exports result
+grep "+conf" ./conf/cix-vsftpd.conf
+#+END_SRC
+
+#+RESULTS:
+#+BEGIN_SRC org
+,#+conf_url: http://vsftpd.beasts.org/vsftpd_conf.html
+,#+conf_man: vsftpd.conf.5
+,#+conf_cmd: /usr/bin/vsftpd
+,#+conf_path: /etc/vsftpd/vsftpd.conf
+,#+conf_frmt: option=value
+,#+conf_re: ^[^#][a-z_]+=(YES|NO|[0-9]*|.*)$ 
+,#+conf_total: 125
+#+END_SRC
+
+
+- [[file:./conf/cix-vsftpd.org][vsftpd.conf]]
+- [[file:conf/cix-grub.cfg][grub.cfg]]
+
 * Glosary
 - SUS :: Single UNIX Specitication
 - discriptor ::

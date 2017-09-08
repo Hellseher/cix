@@ -1,0 +1,27 @@
+# File           : cix-gnu-grub2.org
+# Created        : <2017-09-08 Fri 23:28:47 BST>
+# Modified       : <2017-9-08 Fri 23:36:05 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gnu-grub2
+|-----------------+-----------------------------|
+| *Author*        | Yoshinori K. Okuji [[http://git.savannah.gnu.org/cgit/grub.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                             |
+| *Released*      | 2008                        |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/grub.git/][grub2.git]]                   |
+| *Config*        | [[file:../conf/cix-grub.cfg][grub.conf]]                   |
+| *Info*          | [[https://www.gnu.org/software/grub/][grub2.web]]                   |
+|-----------------+-----------------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-gnu-grub2.org

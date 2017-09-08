@@ -1,6 +1,6 @@
 # File       : cix-todo.org
 # Created    : <2017-8-06 Sun 22:58:42 BST>
-# Modified   : <2017-9-04 Mon 22:46:46 BST> sharlatan
+# Modified   : <2017-9-09 Sat 00:44:39 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   :
 
@@ -200,7 +200,7 @@ Rest to fix
 | cix-zsh.org                                |
 
 ** TODO Spell check all files
-* Roadmap [1/6][16%]
+* Roadmap [1/7][14%]
 ** DONE Add/check header table 
    CLOSED: [2017-09-03 Sun 23:54]
 *** Files with no *Author*
@@ -291,4 +291,11 @@ ls
 *** papers
 ** TODO Add at leas one example per cmd 
 ** TODO Add a short intro to each cix-* files
-** TODO Add supported systems to cix-main.org  
+** TODO Add supported systems to cix-main.org
+** TODO Configuration files 
+*** what to include [1/5]
+- [X] vsftpd
+- [ ] grub
+- [ ] slim
+- [ ] sshd/ssh
+- [ ] 
