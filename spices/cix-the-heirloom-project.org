@@ -1,0 +1,26 @@
+# File           : cix-the-heirloom-project.org
+# Created        : <2017-09-09 Sat 00:49:21 BST>
+# Modified       : <2017-9-09 Sat 00:49:27 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: the-heirloom-project
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Info*          |   |
+|-----------------+---|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-the-heirloom-project.org

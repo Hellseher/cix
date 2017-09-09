@@ -1,0 +1,28 @@
+# File           : cix-oprofile.org
+# Created        : <2017-09-09 Sat 00:50:47 BST>
+# Modified       : <2017-9-09 Sat 00:56:28 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : System wide profiler
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: OProfile
+|-----------------+--------------|
+| *Author*        | John Levon   |
+| *Maintainer(s)* |              |
+| *Released*      | 2001         |
+| *Source*        | [[https://sourceforge.net/p/oprofile/oprofile/ci/master/tree/][oprofile.git]] |
+| *Info*          | [[http://oprofile.sourceforge.net/news/][oprofile.web]] |
+|-----------------+--------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+** Links
+- Smashing performance with OProfile
+  https://www.ibm.com/developerworks/linux/library/l-oprof/index.html
+# End of cix-oprofile.org

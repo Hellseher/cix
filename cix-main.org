@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-9-09 Sat 00:44:40 BST> sharlatan
+# Modified   : <2017-9-09 Sat 01:14:14 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -114,7 +114,7 @@ on *GNU/Linux*
   + [[./spices/cix-lvm2.org][lvm2]] :: userland logical volume management tools
   + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share 
   + [[file:./spices/cix-parted.org][parted]] :: the gnu disk partition manipulation program
-  + [[./spices/cix-linux_diskquota.org][quota]] :: system tools for monitoring users disk usage
+  + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /be silent and help ppls/
   + [[./spices/cix-gnu-binutils.org][gnu-binutils]] :: collection of binary tools
@@ -177,7 +177,7 @@ on *GNU/Linux*
 
 - *Shell* /not just sand.../
   + [[./spices/cix-gnu-bash.org][gnu-bash]] :: gnu bash shell built in commands
-  + [[./spices/cix-fish.org][fish]] ::  a friendly interactive shell
+  + [[./spices/cix-fish-shell.org][fish-shell]] ::  a friendly interactive shell
   + [[./spices/cix-screen.org][screen]] :: a screen manager that supports multiple logins on one terminal
   + [[./spices/cix-tmux.org][tmux]] :: a terminal multiplexer
   + [[./spices/cix-zsh.org][zsh]] ::  powerful interactive shell
@@ -212,7 +212,7 @@ on *GNU/Linux*
 - *Development* /in the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-autoconf.org][autoconf]] :: a gnu tool for automatically configuring source code
   + [[file:./spices/cix-automake.org][automake]] :: A GNU tool for automatically creating Makefiles
-  + [[file:./spaces/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
+  + [[file:./spices/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
   + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool
   + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
   + [[./spices/cix-gdb.org][gdb]] :: a gnu source-level debugger for C, C++, Fortran, Go and other languages
@@ -238,11 +238,11 @@ on *GNU/Linux*
   + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
 
 - *Cryptograpy* /Who breaks Enigma code?/
-  + [[./spices/cix-gnugpg.org][gnupg]] :: A GNU utility for secure communication and data storage
+  + [[./spices/cix-gnu-pg.org][gnupg]] :: A GNU utility for secure communication and data storage
 -----
 * Configuration
 Header example of configuration file:
-#+BEGIN_SRC sh :results value org output replace :exports result
+#+BEGIN_SRC sh :results output org replace :exports results
 grep "+conf" ./conf/cix-vsftpd.conf
 #+END_SRC
 
@@ -257,8 +257,7 @@ grep "+conf" ./conf/cix-vsftpd.conf
 ,#+conf_total: 125
 #+END_SRC
 
-
-- [[file:./conf/cix-vsftpd.org][vsftpd.conf]]
+- [[file:./conf/cix-vsftpd.conf][vsftpd.conf]]
 - [[file:conf/cix-grub.cfg][grub.cfg]]
 
 * Glosary

@@ -1,6 +1,6 @@
 # File           : cix-selinux.org
 # Created        : <2017-08-05 Sat 00:20:51 BST>
-# Modified       : <2017-9-04 Mon 22:42:48 BST> sharlatan
+# Modified       : <2017-9-09 Sat 01:14:16 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Security enhancement to Linux.
@@ -35,7 +35,7 @@ policies, setfiles to label filesystems, newrole to switch roles.
 policycoreutils
 -----
 * Index
-#+BEGIN_SRC sh  :results value org output replace :exports results
+#+BEGIN_SRC sh  :results output org replace :exports results
 ../cix-stat.sh mandoc policycoreutils
 #+END_SRC
 

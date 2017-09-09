@@ -1,0 +1,29 @@
+# File           : cix-syslinux.org
+# Created        : <2017-09-09 Sat 01:01:28 BST>
+# Modified       : <2017-9-09 Sat 01:05:18 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Simple kernel loader which boots from a FAT filesystem
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: syslinux
+|-----------------+------------------|
+| *Author*        | 	H. Peter Anvin |
+| *Maintainer(s)* |                  |
+| *Released*      | 2006             |
+| *Source*        | [[http://repo.or.cz/syslinux.git][syslinux.git]]     |
+| *Info*          |                  |
+|-----------------+------------------|
+
+SYSLINUX is a suite of bootloaders, currently supporting DOS FAT filesystems,
+Linux ext2/ext3 filesystems (EXTLINUX), PXE network boots (PXELINUX), or ISO
+9660 CD-ROMs (ISOLINUX). It also includes a tool, MEMDISK, which loads legacy
+operating systems from these media.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-syslinux.org
