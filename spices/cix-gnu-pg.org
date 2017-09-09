@@ -1,6 +1,6 @@
 # File           : cix-gpg.org
 # Created        : <2017-08-07 Mon 00:14:36 BST>
-# Modified       : <2017-8-19 Sat 01:10:16 BST> sharlatan
+# Modified       : <2017-9-09 Sat 01:28:00 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : A GNU utility for secure communication and data storage
@@ -9,15 +9,20 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: gnupg
-|-----------------+-------------|
-| *Author*        | Werner Koch |
-| *Maintainer(s)* |             |
-| *Released*      | 1999        |
-| *Source*        | [[git://git.gnupg.org/gnupg.git][gnupg.git]]   |
-| *Info*          |             |
-|-----------------+-------------|
+|------------------+------------------------|
+| *Author*         | Werner Koch            |
+| *Contributor(s)* | Daniel Kahn Gillmor,	 |
+|                  | NIIBE Yutaka [[https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=AUTHORS][(all..)]]   |
+| *Released*       | 1999                   |
+| *Source*         | [[https://git.gnupg.org/cgi-bin/gitweb.cgi][gnupg.git]]              |
+| *Info*           | [[https://gnupg.org/index.html][gnupg.web]]              |
 
-
+GnuPG (GNU Privacy Guard) is a GNU utility for encrypting data and creating
+digital signatures. GnuPG has advanced key management capabilities and is
+compliant with the proposed OpenPGP Internet standard described in RFC2440.
+Since GnuPG doesn't use any patented algorithm, it is not compatible with any
+version of PGP2 (PGP2.x uses only IDEA for symmetric-key encryption, which is
+patented worldwide).
 -----
 * Index
 * Receipts
