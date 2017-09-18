@@ -1,25 +1,23 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-8-19 Sat 13:24:55 BST> sharlatan
+# Modified      : <2017-9-17 Sun 21:22:32 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : is a standard package of the Linux operating system: =Linux=
-
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Util Linux
-|----------------+--------------------------------------------------|
-| *Author*       | Karel Zak                                        |
-| *Contributors* | Ruediger Meier, Sami Kerola, Stanislav Brabec    |
-|                | Filipe Brandenburger, Igor Gnatenko              |
-|                | J William Piggott, Lada Trimasova, Wayne R. Roth |
-|                | Werner Fink, Yuriy M. Kaminskiy                  |
-| *Released*     | 2007                                             |
-| *Source*       | [[https://git.kernel.org/cgit/utils/util-linux/util-linux.git/][util-linux.git]]                                   |
-| *Info*         |                                                  |
-|----------------+--------------------------------------------------|
+|------------------+---------------------------|
+| *Author*         | Karel Zak                 |
+| *Contributor(s)* | Ruediger Meier,           |
+|                  | Sami Kerola,              |
+|                  | Stanislav Brabec [[https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/AUTHORS][(all...)]] |
+| *Released*       | 2007                      |
+| *Source*         | [[https://git.kernel.org/cgit/utils/util-linux/util-linux.git/][util-linux.git]]            |
+| *Info*           |                           |
+|------------------+---------------------------|
 
 The util-linux package contains a large variety of low-level system utilities
 that are necessary for a Linux system to function. Among others, Util-linux
@@ -297,26 +295,26 @@ contains the fdisk configuration tool and the login program.
 The column command appeared in 4.3BSD-Reno
 *** column::options
 #+NAME: util-linux--column-opt
-| OPT                       | FROM V. | END V. | DESC                                                  |
-|---------------------------+---------+--------+-------------------------------------------------------|
-| =-c, --columns=             |    2.13 |   2.30 | width of output in number of character                |
-| =-s, --separator=           |    2.19 |        | possible table delimiters                             |
-| =-t, --table=               |    2.19 |        | format a table output                                 |
-| =-x, --fillrows=            |    2.19 |        | fill rows before columns                              |
-| =-e, --table-header-repeat= |    2.30 |        | repeat header for each page                           |
-| =-E, --table-noextreme=     |    2.30 |        | don't count long text from the columns to column widt |
-| =-N, --table-columns=       |    2.30 |        | comma separated columns names                         |
-| =-n, --talbe-name=          |    2.30 |        | table name for JSON output                            |
-| =-o, --output-separator=    |    2.30 |        | columns separator for table output                    |
-| =-O, --table-order=         |    2.30 |        | specify order of output columns                       |
-| =-c, --output-width=        |    2.30 |        | width of output in number of character                |
-| =-H, --table-hide=          |    2.30 |        | don't print the columns                               |
-| =-i, --tree-id=             |    2.30 |        | line ID to specify child-parent relation              |
-| =-J, --json=                |    2.30 |        | use JSON output format for table                      |
-| =-p, --tree-parent=         |    2.30 |        | parent to specify child-parent relation               |
-| =-R, --table-right=         |    2.30 |        | right align text in these columns                     |
-| =-T, --table-truncate=      |    2.30 |        | truncate text in the columns when necessary           |
-|---------------------------+---------+--------+-------------------------------------------------------|
+| OPT                         | ++V. |  --V | DESC                                                  |
+|-----------------------------+------+------+-------------------------------------------------------|
+| =-c, --columns=             | 2.13 | 2.30 | width of output in number of character                |
+| =-s, --separator=           | 2.19 |      | possible table delimiters                             |
+| =-t, --table=               | 2.19 |      | format a table output                                 |
+| =-x, --fillrows=            | 2.19 |      | fill rows before columns                              |
+| =-e, --table-header-repeat= | 2.30 |      | repeat header for each page                           |
+| =-E, --table-noextreme=     | 2.30 |      | don't count long text from the columns to column widt |
+| =-N, --table-columns=       | 2.30 |      | comma separated columns names                         |
+| =-n, --talbe-name=          | 2.30 |      | table name for JSON output                            |
+| =-o, --output-separator=    | 2.30 |      | columns separator for table output                    |
+| =-O, --table-order=         | 2.30 |      | specify order of output columns                       |
+| =-c, --output-width=        | 2.30 |      | width of output in number of character                |
+| =-H, --table-hide=          | 2.30 |      | don't print the columns                               |
+| =-i, --tree-id=             | 2.30 |      | line ID to specify child-parent relation              |
+| =-J, --json=                | 2.30 |      | use JSON output format for table                      |
+| =-p, --tree-parent=         | 2.30 |      | parent to specify child-parent relation               |
+| =-R, --table-right=         | 2.30 |      | right align text in these columns                     |
+| =-T, --table-truncate=      | 2.30 |      | truncate text in the columns when necessary           |
+|-----------------------------+------+------+-------------------------------------------------------|
 
 *** column::examples
 **** column-161120161537
@@ -555,9 +553,41 @@ display a hex dump of a file:
 *** losetup::files
 *** losetup::see-also
 ** lsblk                                                                        :cmd:
-[[Index][⬆]]
+[[Index][⬆]] /list block devices/
+/Written by Milan Broz, Karel Zak/
 *** lsblk::options
+| OPT                    | ++V | --V | DESC                                                     |
+|------------------------+-----+-----+----------------------------------------------------------|
+| =-a, --all=            |     |     | print all devices                                        |
+| =-b, --bytes=          |     |     | print SIZE in bytes rather than in human readable format |
+| =-d, --nodeps=         |     |     | don't print slaves or holders                            |
+| =-D, --discard=        |     |     | print discard capabilities                               |
+| =-z, --zoned=          |     |     | print zone model                                         |
+| =-e, --exclude <list>= |     |     | exclude devices by major number (default: RAM disks)     |
+| =-f, --fs=             |     |     | output info about filesystems                            |
+| =-i, --ascii=          |     |     | use ascii characters only                                |
+| =-I, --include <list>= |     |     | show only devices with specified major numbers           |
+| =-J, --json=           |     |     | use JSON output format                                   |
+| =-l, --list=           |     |     | use list format output                                   |
+| =-m, --perms=          |     |     | output info about permissions                            |
+| =-n, --noheadings=     |     |     | don't print headings                                     |
+| =-o, --output <list>=  |     |     | output columns                                           |
+| =-O, --output-all=     |     |     | output all columns                                       |
+| =-p, --paths=          |     |     | print complete device path                               |
+| =-P, --pairs=          |     |     | use key="value" output format                            |
+| =-r, --raw=            |     |     | use raw output format                                    |
+| =-s, --inverse=        |     |     | inverse dependencies                                     |
+| =-S, --scsi=           |     |     | output info about SCSI devices                           |
+| =-t, --topology=       |     |     | output info about topology                               |
+| =-x, --sort <column>=  |     |     | sort output by <column>                                  |
+|------------------------+-----+-----+----------------------------------------------------------|
+
 *** lsblk::examples
+**** lsblk-170917210802
+output main devises sorted by size (sizes pathes):
+:    ~$ lsblk -ldnbp | awk '{print $1" ",$2}' | sort -rk1
+[[file:./cix-gawk.org::*awk][awk]] [[file:./cix-gnu-coreutils.org::*sort][sort]]
+
 *** lsblk::files
 *** lsblk::see-also
 ** lscpu                                                                        :cmd:

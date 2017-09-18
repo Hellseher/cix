@@ -1,6 +1,6 @@
 # File           : cix-nmap.org
 # Created        : <2017-08-07 Mon 00:29:30 BST>
-# Modified       : <2017-9-01 Fri 23:46:30 BST> sharlatan
+# Modified       : <2017-9-17 Sun 21:32:21 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Network exploration tool and security scanner
@@ -9,14 +9,14 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: nmap
-|-----------------+-------------|
-| *Author*        | Gordon Lyon |
-| *Maintainer(s)* |             |
-| *Released*      | 1997        |
-| *Source*        | [[https://github.com/nmap/nmap][nmap.git]],   |
-|                 | [[https://svn.nmap.org/nmap/][nmap.svn]]    |
-| *Info*          | [[https://svn.nmap.org/nmap/][nmap.web]]    |
-|-----------------+-------------|
+|------------------+---------------|
+| *Author*         | Gordon Lyon   |
+| *Contributor(s)* | Daniel Miller |
+| *Released*       | 1997          |
+| *Source*         | [[https://github.com/nmap/nmap][nmap.git]]      |
+|                  | [[https://svn.nmap.org/nmap/][nmap.svn]]      |
+| *Info*           | [[https://svn.nmap.org/nmap/][nmap.web]]      |
+|------------------+---------------|
 
 =nmap= is a utility for network exploration or security auditing. It supports
 ping scanning (determine which hosts are up), many port scanning techniques
@@ -32,5 +32,10 @@ response analysis tool (=nping=).
 * Index
 * Receipts
 * Refreances
-
-  # End of cix-nmap.org
+** Links
+- Scripts
+  https://nmap.org/nsedoc/
+** Hubs
+- nmap-completion
+  https://github.com/bonsaiviking/nmap-completion
+# End of cix-nmap.org

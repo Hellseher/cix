@@ -1,6 +1,6 @@
 # File           : cix-gpg.org
 # Created        : <2017-08-07 Mon 00:14:36 BST>
-# Modified       : <2017-9-09 Sat 01:28:00 BST> sharlatan
+# Modified       : <2017-9-17 Sun 21:32:21 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : A GNU utility for secure communication and data storage
@@ -39,5 +39,72 @@ patented worldwide).
 encrypt file with the symetric cipher AES256:
 :   ~$ gpg -v -c --cipher-algo AES256 input_file
 * Refreances
-
-  # End of cix-gpg.org
+** RFC
+- RFC4880
+  https://www.ietf.org/rfc/rfc4880.txt
+** CVE
+-	CVE-2017-9526 :: In Libgcrypt before 1.7.7, an attacker who learns the EdDSA
+                   session key (from side-channel observation during the signing
+                   process) can easily recover the long-term secret key. 1.7.7
+                   makes a cipher/ecc-eddsa.c change to store this session key
+                   in secure memory, to ensure that constant-time point
+                   operations are used in the MPI library.
+-	CVE-2017-0379 :: Libgcrypt before 1.8.1 does not properly consider Curve25519
+                   side-channel attacks, which makes it easier for attackers to
+                   discover a secret key, related to cipher/ecc.c and mpi/ec.c.
+-	CVE-2016-6313 :: The mixing functions in the random number generator in
+                   Libgcrypt before 1.5.6, 1.6.x before 1.6.6, and 1.7.x before
+                   1.7.3 and GnuPG before 1.4.21 make it easier for attackers to
+                   obtain the values of 160 bits by leveraging knowledge of the
+                   previous 4640 bits.
+-	CVE-2014-4617 :: The do_uncompress function in g10/compress.c in GnuPG 1.x
+                   before 1.4.17 and 2.x before 2.0.24 allows context-dependent
+                   attackers to cause a denial of service (infinite loop) via
+                   malformed compressed packets, as demonstrated by an a3 01 5b
+                   ff byte sequence.
+-	CVE-2013-4402 :: The compressed packet parser in GnuPG 1.4.x before 1.4.15 and
+                   2.0.x before 2.0.22 allows remote attackers to cause a denial
+                   of service (infinite recursion) via a crafted OpenPGP
+                   message.
+-	CVE-2013-4351 :: None GnuPG 1.4.x, 2.0.x, and 2.1.x treats a key flags
+                   subpacket with all bits cleared (no usage permitted) as if it
+                   has all bits set (all usage permitted), which might allow
+                   remote attackers to bypass intended cryptographic protection
+                   mechanisms by leveraging the subkey.
+-	CVE-2012-6085 :: The read_block function in g10/import.c in GnuPG 1.4.x before
+                   1.4.13 and 2.0.x through 2.0.19, when importing a key, allows
+                   remote attackers to corrupt the public keyring database or
+                   cause a denial of service (application crash) via a crafted
+                   length field of an OpenPGP packet.
+-	CVE-2010-2547 :: Use-after-free vulnerability in kbx/keybox-blob.c in GPGSM in
+                   GnuPG 2.x through 2.0.16 allows remote attackers to cause a
+                   denial of service (crash) and possibly execute arbitrary code
+                   via a certificate with a large number of Subject Alternate
+                   Names, which is not properly handled in a realloc operation
+                   when importing the certificate or verifying its signature.
+-	CVE-2008-1530 :: GnuPG (gpg) 1.4.8 and 2.0.8 allows remote attackers to cause
+                   a denial of service (crash) and possibly execute arbitrary
+                   code via crafted duplicate keys that are imported from key
+                   servers, which triggers "memory corruption around
+                   deduplication of user IDs."
+-	CVE-2007-1263 :: GnuPG 1.4.6 and earlier and GPGME before 1.1.4, when run from
+                   the command line, does not visually distinguish signed and
+                   unsigned portions of OpenPGP messages with multiple
+                   components, which might allow remote attackers to forge the
+                   contents of a message without detection.
+-	CVE-2006-6169 :: Heap-based buffer overflow in the ask_outfile_name function
+                   in openfile.c for GnuPG (gpg) 1.4 and 2.0, when running
+                   interactively, might allow attackers to execute arbitrary
+                   code via messages with "C-escape" expansions, which cause the
+                   make_printable_string function to return a longer string than
+                   expected while constructing a prompt.
+-	CVE-2006-3746 :: Integer overflow in parse_comment in GnuPG (gpg) 1.4.4 allows
+                   remote attackers to cause a denial of service (segmentation
+                   fault) via a crafted message.
+- CVE-2006-3082 :: parse-packet.c in GnuPG (gpg) 1.4.3 and 1.9.20, and earlier
+                   versions, allows remote attackers to cause a denial of
+                   service (gpg crash) and possibly overwrite memory via a
+                   message packet with a large length (long user ID string),
+                   which could lead to an integer overflow, as demonstrated
+                   using the --no-armor option.
+# End of cix-gpg.org

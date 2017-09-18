@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-9-09 Sat 01:14:14 BST> sharlatan
+# Modified   : <2017-9-17 Sun 21:32:20 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -113,7 +113,7 @@ on *GNU/Linux*
   + glusterfs :: distributed file system
   + [[./spices/cix-lvm2.org][lvm2]] :: userland logical volume management tools
   + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share 
-  + [[file:./spices/cix-parted.org][parted]] :: the gnu disk partition manipulation program
+  + [[file:./spices/cix-gnu-parted.org][parted]] :: the GNU disk partition manipulation program: =GNU/Linux=
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /be silent and help ppls/

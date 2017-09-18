@@ -1,6 +1,6 @@
 # File       : cix-awk.org
 # Created    : <2016-11-04 Fri 22:15:18 GMT>
-# Modified   : <2017-9-04 Mon 22:40:24 BST> sharlatan
+# Modified   : <2017-9-17 Sun 21:32:18 BST> sharlatan
 # Author     : sharlatan
 # Maintainer :
 # Sinopsis   : The GNU version of the AWK text processing utility
@@ -20,11 +20,12 @@
 | *Man*        | [[http://man7.org/linux/man-pages/man1/gawk.1.html][gawk.1]]             |
 | *Info*       |                    |
 |--------------+--------------------|
-The gawk package contains the GNU version of AWK text processing utility. AWK is
+
+The =gawk= package contains the GNU version of AWK text processing utility. AWK is
 a programming language designed for text processing and typically used as a data
 extraction and reporting tool.
 
-The gawk utility can be used to do quick and easy text pattern matching,
+The =gawk= utility can be used to do quick and easy text pattern matching,
 extracting or reformatting. It is considered to be a standard Linux tool for
 text processing.
 -----
@@ -76,7 +77,6 @@ word frequencies count in a file:
 #+END_SRC
 [[./cix-gnu-core-utilities.org::*sort][sort (1)]] [[./cix-gnu-core-utilities.org::*uniq][uniq (1)]]
 
-
 **** awk-170118210126
 measure total bytes writen since system boot, Linux:
 #+BEGIN_SRC sh
@@ -107,7 +107,7 @@ number of lines in a file:
 number of fields (columns) in each row of input_f:
 :    ~$ awk '{print NF]' input_f
 
-**** awk-170822225351  
+**** awk-170822225351 
 list all lines longer than 50 characters:
 :    ~$ awk 'length($0) > 50 {print}' input_f
 
@@ -131,6 +131,11 @@ print file name and the last line for the list of files:
 *** awk::see-also
     egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
     getgid(2), getegid(2), getgroups(2), usleep(3)
+**** awk-170917194956 
+list UserName UserID and GroupID in readable format:
+:    ~$ awk -F: '{ print "UN: " $1"*" "UID: " $3"*" "GID: " $4 }' /etc/passwd | column -t -s '*' | nl
+[[file::*coulmn][coulmn]] [[file:./cix-gnu-coreutils.org::*nl][nl]]
+
 * References
 ** Boooks
 - Alfred V. Aho, Brian W. Kernighan, Peter J. Weinberger;

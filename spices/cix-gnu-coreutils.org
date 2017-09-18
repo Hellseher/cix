@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-9-01 Fri 00:12:51 BST> sharlatan
+# Modified   : <2017-9-17 Sun 21:32:19 BST> sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -8,26 +8,19 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Core Utilities
-|---------------+--------------------|
-| *Author*      | [[http://git.savannah.gnu.org/cgit/coreutils.git/tree/AUTHORS][(all..)]]            |
-| *Maintainers* | Jim Meyering,      |
-|               | Paul Eggert,       |
-|               | Pádraig Brady,     |
-|               | Eric Blake,        |
-|               | Bernhard Voelker,  |
-|               | Stefano Lattarini, |
-|               | Benno Schulenberg, |
-|               | Assaf Gordon,      |
-|               | Ondřej Vašík,      |
-|               | Kamil Dudka        |
-| *Released*    | 2003               |
-| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]]      |
-| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]]      |
-|---------------+--------------------|
+|---------------+---------------|
+| *Author*      | [[http://git.savannah.gnu.org/cgit/coreutils.git/tree/AUTHORS][(all..)]]       |
+| *Maintainers* | Jim Meyering, |
+|               | Paul Eggert,  |
+|               | Pádraig Brady |
+| *Released*    | 2003          |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
+| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
+|---------------+---------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation utilities
-of the GNU operating system.  These are the core utilities which are expected to
-exist  on  every  operating system.   This  package  is  the  union of  the  GNU
+of the GNU operating system. These are the core utilities which are expected to
+exist on every operating system. This package is the union of the GNU
 =fileutils=, =shellutils=, and =textutils= packages.
 -----
 

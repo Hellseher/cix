@@ -1,6 +1,6 @@
 # File          : cix-parted.org
 # Created       : <2016-11-12 Sat 10:01:15 GMT>
-# Modified      : <2017-8-26 Sat 13:14:36 BST> sharlatan
+# Modified      : <2017-9-17 Sun 21:32:20 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : The GNU disk partition manipulation program.
@@ -18,12 +18,12 @@
 | *Info*          |                         |
 |-----------------+-------------------------|
 
-The GNU Parted program allows you to create, destroy, resize, move, and copy
+The GNU =parted= program allows you to create, destroy, resize, move, and copy
 hard disk partitions. Parted can be used for creating space for new operating
 systems, reorganizing disk usage, and copying data to new hard disks.
 -----
 * Index
-#+BEGIN_SRC sh  :results value org output replace :exports results
+#+BEGIN_SRC sh  :results value org replace :exports results
 ../cix-stat.sh mandoc parted
 #+END_SRC
 
@@ -34,9 +34,16 @@ systems, reorganizing disk usage, and copying data to new hard disks.
 | partprobe | (8) | inform the OS of partition table changes |
 #+END_SRC
 
+* Receipts
+** parted
+*** parted::options
+| OPT | ++V | --V | DESC |
+|-----+-----+-----+------|
+|     |     |     |      |
+
 * References
 *** Links
 - Linux on 4 KB sector disks: Practical advice
-   https://www.ibm.com/developerworks/library/l-linux-on-4kb-sector-disks/
+  https://www.ibm.com/developerworks/library/l-linux-on-4kb-sector-disks/
 
 # End of cix-parted.org
