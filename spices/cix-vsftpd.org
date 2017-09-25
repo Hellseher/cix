@@ -1,6 +1,6 @@
-# File           : cix-vsftp.org
+# File           : cix-vsftpd.org
 # Created        : <2017-08-04 Fri 23:06:13 BST>
-# Modified       : <2017-9-01 Fri 00:12:51 BST> sharlatan
+# Modified       : <2017-9-25 Mon 23:22:40 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Very Secure Ftp Daemon.
@@ -8,7 +8,7 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: vsftp
+#+TITLE: vsftpd
 |-----------------+---------------|
 | *Author*        | 	Chris Evans |
 | *Maintainer(s)* |               |
@@ -29,5 +29,4 @@
 - /usr/lib/systemd/system/vsftpd.target
 
 * Refreances
-
-  # End of cix-vsftp.org
+# End of cix-vsftpd.org
