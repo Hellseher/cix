@@ -1,0 +1,28 @@
+# File           : cix-bindfs.org
+# Created        : <2017-09-21 Thu 00:03:30 BST>
+# Modified       : <2017-9-21 Thu 00:33:28 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : fuse filesystem to mirror a directory
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: bindfs
+|-----------------+---------------|
+| *Author*        | Martin Pärtel |
+| *Maintainer(s)* |               |
+| *Released*      |               |
+| *Source*        | [[https://github.com/mpartel/bindfs][bindfs.git]]    |
+| *Homepage*      | [[http://bindfs.org/][bindfs.web]]    |
+|-----------------+---------------|
+
+=bindfs= is a FUSE filesystem for mirroring a directory to another directory,
+similarly to =mount --bind=. The permissions of the mirrored directory can be
+altered in various ways.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-bindfs.org

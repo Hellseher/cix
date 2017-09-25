@@ -1,0 +1,37 @@
+# File           : cix-gnu-libtool.org
+# Created        : <2017-09-25 Mon 21:40:26 BST>
+# Modified       : <2017-9-25 Mon 21:48:16 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: libtool
+|-----------------+---------------------|
+| *Author*        | Gordon Matzigkeit	 |
+| *Maintainer(s)* |                     |
+| *Released*      | 1997                |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/libtool.git][libtool.git]]         |
+| *Homepage*      | [[https://www.gnu.org/software/libtool/][libtool.web]]         |
+|-----------------+---------------------|
+
+GNU Libtool is a set of shell scripts which automatically configure UNIX and
+UNIX-like systems to generically build shared libraries. Libtool provides a
+consistent, portable interface which simplifies the process of using shared
+libraries.
+
+If you are developing programs which will use shared libraries, but do not use
+the rest of the GNU Autotools (such as GNU Autoconf and GNU Automake), you
+should install the libtool package.
+
+The libtool package also includes all files needed to integrate the GNU Portable
+Library Tool (libtool) and the GNU Libtool Dynamic Module Loader (ltdl) into a
+package built using the GNU Autotools (including GNU Autoconf and GNU Automake).
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-gnu-libtool.org

@@ -1,0 +1,27 @@
+# File           : cix-dtrace.org
+# Created        : <2017-09-21 Thu 00:18:48 BST>
+# Modified       : <2017-9-21 Thu 00:21:53 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: dtrace
+|-----------------+-----------------|
+| *Author*        | Bryan Cantrill, |
+|                 | Mike Shapiro,   |
+|                 | Adam Leventhal  |
+| *Maintainer(s)* |                 |
+| *Released*      |                 |
+| *Source*        |                 |
+| *Info*          |                 |
+|-----------------+-----------------|
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-dtrace.org

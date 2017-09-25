@@ -1,0 +1,26 @@
+# File           : cix-vmtouch.org
+# Created        : <2017-09-19 Tue 23:33:16 BST>
+# Modified       : <2017-9-21 Thu 00:33:28 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: vmtouch
+|-----------------+-------------|
+| *Author*        | Doug Hoyte  |
+| *Maintainer(s)* |             |
+| *Released*      | 2012        |
+| *Source*        | [[https://github.com/hoytech/vmtouch][vmtouch.git]] |
+| *Info*          |             |
+|-----------------+-------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-vmtouch.org

@@ -1,0 +1,26 @@
+# File           : cix-tym.org
+# Created        : <2017-09-25 Mon 23:05:40 BST>
+# Modified       : <2017-9-25 Mon 23:14:03 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: tym
+|-----------------+-----------------------|
+| *Author*        | M.T. Carrasco Benitez |
+| *Maintainer(s)* |                       |
+| *Released*      |                       |
+| *Source*        | [[http://dragoman.org/tym/tym][tym.sh]]                |
+| *Info*          |                       |
+|-----------------+-----------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-tym.org

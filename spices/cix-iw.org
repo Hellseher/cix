@@ -1,0 +1,29 @@
+# File           : cix-iw.org
+# Created        : <2017-09-21 Thu 00:27:06 BST>
+# Modified       : <2017-9-25 Mon 20:59:17 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : A nl80211 based wireless configuration tool
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: iw
+|-----------------+-----------------|
+| *Author*        | Jean Tourrilhes |
+| *Maintainer(s)* |                 |
+| *Released*      | 2008            |
+| *Source*        | [[https://git.kernel.org/pub/scm/linux/kernel/git/jberg/iw.git][iw.git]]          |
+| *Homepage*      |                 |
+|-----------------+-----------------|
+
+=iw= is a new nl80211 based CLI configuration utility for wireless devices. It
+supports all new drivers that have been added to the kernel recently. The old
+tool iwconfig, which uses Wireless Extensions interface, is deprecated and it's
+strongly recommended to switch to iw and nl80211.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-iw.org

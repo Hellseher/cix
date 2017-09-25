@@ -1,0 +1,26 @@
+# File           : cix-netperf.org
+# Created        : <2017-09-23 Sat 13:32:33 BST>
+# Modified       : <2017-9-23 Sat 22:00:25 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: netperf
+|-----------------+-------------|
+| *Author*        | [[https://github.com/HewlettPackard/netperf/blob/master/AUTHORS][(all...)]]    |
+| *Maintainer(s)* |             |
+| *Released*      | 2005        |
+| *Source*        | [[https://github.com/HewlettPackard/netperf/blob/master/AUTHORS][netperf.git]] |
+| *Info*          |             |
+|-----------------+-------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-netperf.org

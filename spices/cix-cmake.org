@@ -1,0 +1,36 @@
+# File           : cix-cmake.org
+# Created        : <2017-09-19 Tue 20:48:48 BST>
+# Modified       : <2017-9-19 Tue 23:31:25 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: cmake
+|-----------------+--------------------|
+| *Author(s)*     | Andy Cedilnik,     |
+|                 | Bill Hoffman,      |
+|                 | Brad King,         |
+|                 | Ken Martin,        |
+|                 | Alexander Neundorf |
+| *Maintainer(s)* |                    |
+| *Released*      | 2000               |
+| *Source*        | [[https://gitlab.kitware.com/cmake/cmake][cmake.git]]          |
+| *Info*          | [[https://cmake.org/][cmake.web]]          |
+|-----------------+--------------------|
+
+
+=CMake= is used to control the software compilation process using simple
+platform and compiler independent configuration files. CMake generates native
+makefiles and workspaces that can be used in the compiler environment of your
+choice. CMake is quite sophisticated: it is possible to support complex
+environments requiring system configuration, preprocessor generation, code
+generation, and template instantiation.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-cmake.org

@@ -1,0 +1,26 @@
+# File           : cix-glusterfs.org
+# Created        : <2017-09-21 Thu 00:11:00 BST>
+# Modified       : <2017-9-21 Thu 00:15:36 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: glusterfs
+|-----------------+---------------|
+| *Author*        | [[https://github.com/gluster/glusterfs/blob/master/MAINTAINERS][(all...)]]      |
+| *Maintainer(s)* | [[https://github.com/gluster/glusterfs/blob/master/MAINTAINERS][(all...)]]      |
+| *Released*      | 2009          |
+| *Source*        | [[https://github.com/gluster/glusterfs][glusterfs.git]] |
+| *Homepage*      | [[https://www.gluster.org/][glusterfs.web]] |
+|-----------------+---------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-glusterfs.org
