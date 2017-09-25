@@ -1,6 +1,6 @@
 # File          : cix-rsync.org
 # Created       : <2016-11-25 Fri 20:32:45 GMT>
-# Modified      : <2017-8-22 Tue 23:42:40 BST> sharlatan
+# Modified      : <2017-9-25 Mon 23:00:00 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A program for synchronizing files over a network
@@ -16,7 +16,7 @@
 | *Released*      | 1996             |
 | *Source*        | [[https://git.samba.org/rsync.git/][rsync.git]]        |
 | *Man*           | [[http://man7.org/linux/man-pages/man1/rsync.1.html][rsync.1]]          |
-| *Info*          |                  |
+| *Homepage*      | [[https://rsync.samba.org/][rsync.web]]        |
 |-----------------+------------------|
 
 =rsync= uses a reliable algorithm to bring remote and host files into sync very
@@ -28,6 +28,140 @@ included in this package.
 -----
 * Receipts
 ** rsync                                                                       :cmd:
+*** rsync::options
+| OPT                          | TYPE | =--V= | =++V= | DESC                                                                             |
+|------------------------------+------+-------+-------+----------------------------------------------------------------------------------|
+| =--address=<address>=        |      |       |       | bind address for outgoing socket to daemon                                       |
+| =--append=                   |      |       |       | append data onto shorter files                                                   |
+| =--append-verify=            |      |       |       | --append w/old data in file checksum                                             |
+| =--backup-dir=DIR=           |      |       |       | make backups into hierarchy based in DIR                                         |
+| =--blocking-io=              |      |       |       | use blocking I/O for the remote shell                                            |
+| =--bwlimit=<rate>=           |      |       |       | limit socket I/O bandwidth                                                       |
+| =--checksum-seed=<=num>=     |      |       |       | set block/file checksum seed (advanced)                                          |
+| =--chmod=CHMOD=              |      |       |       | affect file and/or directory permissions                                         |
+| =--chown=USER:GROUP=         |      |       |       | simple username/groupname mapping                                                |
+| =--compare-dest=DIR=         |      |       |       | also compare received files relative to DIR                                      |
+| =--compress-level=NUM=       |      |       |       | explicitly set compression level                                                 |
+| =--contimeout=SECONDS=       |      |       |       | set daemon connection timeout in seconds                                         |
+| =--copy-dest=DIR=            |      |       |       | ... and include copies of unchanged files                                        |
+| =--copy-devices=             |      |       |       | copy device contents as regular file                                             |
+| =--copy-unsafe-links=        |      |       |       | only "unsafe" symlinks are transformed                                           |
+| =--debug=FLAGS=              |      |       |       | fine-grained debug verbosity                                                     |
+| =--del=                      |      |       |       | an alias for --delete-during                                                     |
+| =--delay-updates=            |      |       |       | put all updated files into place at end                                          |
+| =--delete=                   |      |       |       | delete extraneous files from dest dirs                                           |
+| =--delete-after=             |      |       |       | receiver deletes after transfer, not during                                      |
+| =--delete-before=            |      |       |       | receiver deletes before xfer, not during                                         |
+| =--delete-delay=             |      |       |       | find deletions during, delete after                                              |
+| =--delete-during=            |      |       |       | receiver deletes during the transfer                                             |
+| =--delete-excluded=          |      |       |       | also delete excluded files from dest dirs                                        |
+| =--delete-missing-args=      |      |       |       | delete missing source args from destination                                      |
+| =--devices=                  |      |       |       | preserve device files (super-user only)                                          |
+| =--exclude-from=FILE=        |      |       |       | read exclude patterns from FILE                                                  |
+| =--exclude=PATTERN=          |      |       |       | exclude files matching PATTERN                                                   |
+| =--existing=                 |      |       |       | skip creating new files on receiver                                              |
+| =--fake-super=               |      |       |       | store/recover privileged attrs using xattrs                                      |
+| =--files-from=FILE=          |      |       |       | read list of source-file names from FILE                                         |
+| =--force=                    |      |       |       | force deletion of dirs even if not empty                                         |
+| =--groupmap=STRING=          |      |       |       | custom groupname mapping                                                         |
+| =--iconv=CONVERT_SPEC=       |      |       |       | request charset conversion of filenames                                          |
+| =--ignore-errors=            |      |       |       | delete even if there are I/O errors                                              |
+| =--ignore-existing=          |      |       |       | skip updating files that exist on receiver                                       |
+| =--ignore-missing-args=      |      |       |       | ignore missing source args without error                                         |
+| =--include-from=FILE=        |      |       |       | read include patterns from FILE                                                  |
+| =--include=PATTERN=          |      |       |       | don't exclude files matching PATTERN                                             |
+| =--info=FLAGS=               |      |       |       | fine-grained informational verbosity                                             |
+| =--inplace=                  |      |       |       | update destination files in-place                                                |
+| =--link-dest=DIR=            |      |       |       | hardlink to files in DIR when unchanged                                          |
+| =--list-only=                |      |       |       | list the files instead of copying them                                           |
+| =--log-file-format=FMT=      |      |       |       | log updates using the specified FMT                                              |
+| =--log-file=FILE=            |      |       |       | log what we're doing to the specified FILE                                       |
+| =--max-delete=NUM=           |      |       |       | don't delete more than NUM files                                                 |
+| =--max-size=SIZE=            |      |       |       | don't transfer any file larger than SIZE                                         |
+| =--min-size=SIZE=            |      |       |       | don't transfer any file smaller than SIZE                                        |
+| =--modify-window=NUM=        |      |       |       | compare mod-times with reduced accuracy                                          |
+| =--msgs2stderr=              |      |       |       | special output handling for debugging                                            |
+| =--munge-links=              |      |       |       | munge symlinks to make them safer                                                |
+| =--no-OPTION=                |      |       |       | turn off an implied OPTION (e.g. --no-D)                                         |
+| =--no-implied-dirs=          |      |       |       | don't send implied dirs with --relative                                          |
+| =--no-motd=                  |      |       |       | suppress daemon-mode MOTD (see caveat)                                           |
+| =--numeric-ids=              |      |       |       | don't map uid/gid values by user/group name                                      |
+| =--only-write-batch=FILE=    |      |       |       | like --write-batch but w/o updating dest                                         |
+| =--out-format=FORMAT=        |      |       |       | output updates using the specified FORMAT                                        |
+| =--outbuf=N,L,B=             |      |       |       | set out buffering to None, Line, or Block                                        |
+| =--partial=                  |      |       |       | keep partially transferred files                                                 |
+| =--partial-dir=DIR=          |      |       |       | put a partially transferred file into DIR                                        |
+| =--password-file=FILE=       |      |       |       | read daemon-access password from FILE                                            |
+| =--port=PORT=                |      |       |       | specify double-colon alternate port number                                       |
+| =--preallocate=              |      |       |       | allocate dest files before writing                                               |
+| =--progress=                 |      |       |       | show progress during transfer                                                    |
+| =--protocol=NUM=             |      |       |       | force an older protocol version to be used                                       |
+| =--read-batch=FILE=          |      |       |       | read a batched update from FILE                                                  |
+| =--remove-source-files=      |      |       |       | sender removes synchronized files (non-dir)                                      |
+| =--rsync-path=PROGRAM=       |      |       |       | specify the rsync to run on remote machine                                       |
+| =--safe-links=               |      |       |       | ignore symlinks that point outside the tree                                      |
+| =--size-only=                |      |       |       | skip files that match in size                                                    |
+| =--skip-compress=LIST=       |      |       |       | skip compressing files with suffix in LIST                                       |
+| =--sockopts=OPTIONS=         |      |       |       | specify custom TCP options                                                       |
+| =--specials=                 |      |       |       | preserve special files                                                           |
+| =--stats=                    |      |       |       | give some file-transfer stats                                                    |
+| =--suffix=SUFFIX=            |      |       |       | backup suffix (default ~ w/o --backup-dir)                                       |
+| =--super=                    |      |       |       | receiver attempts super-user activities                                          |
+| =--timeout=SECONDS=          |      |       |       | set I/O timeout in seconds                                                       |
+| =--usermap=STRING=           |      |       |       | custom username mapping                                                          |
+| =--version=                  |      |       |       | print version number                                                             |
+| =--write-batch=FILE=         |      |       |       | write a batched update to FILE                                                   |
+| =-0, --from0=                |      |       |       | all *from/filter files are delimited by 0s                                       |
+| =-4, --ipv4=                 |      |       |       | prefer IPv4                                                                      |
+| =-6, --ipv6=                 |      |       |       | prefer IPv6                                                                      |
+| =-8, --8-bit-output=         |      |       |       | leave high-bit chars unescaped in output                                         |
+| =-A, --acls=                 |      |       |       | preserve ACLs (implies -p)                                                       |
+| =-B, --block-size=SIZE=      |      |       |       | force a fixed checksum block-size                                                |
+| =-C, --cvs-exclude=          |      |       |       | auto-ignore files in the same way CVS does                                       |
+| =-D=                         |      |       |       | same as --devices --specials                                                     |
+| =-E, --executability=        |      |       |       | preserve executability                                                           |
+| =-F=                         |      |       |       | same as --filter='dir-merge /.rsync-filter' repeated: --filter='- .rsync-filter' |
+| =-H, --hard-links=           |      |       |       | preserve hard links                                                              |
+| =-I, --ignore-times=         |      |       |       | don't skip files that match size and time                                        |
+| =-J, --omit-link-times=      |      |       |       | omit symlinks from --times                                                       |
+| =-K, --keep-dirlinks=        |      |       |       | treat symlinked dir on receiver as dir                                           |
+| =-L, --copy-links=           |      |       |       | transform symlink into referent file/dir                                         |
+| =-M, --remote-option=OPTION= |      |       |       | send OPTION to the remote side only                                              |
+| =-O, --omit-dir-times=       |      |       |       | omit directories from --times                                                    |
+| =-P=                         |      |       |       | same as --partial --progress                                                     |
+| =-R, --relative=             |      |       |       | use relative path names                                                          |
+| =-S, --sparse=               |      |       |       | handle sparse files efficiently                                                  |
+| =-T, --temp-dir=DIR=         |      |       |       | create temporary files in directory DIR                                          |
+| =-W, --whole-file=           |      |       |       | copy files whole (w/o delta-xfer algorithm)                                      |
+| =-X, --xattrs=               |      |       |       | preserve extended attributes                                                     |
+| =-a, --archive=              |      |       |       | archive mode; equals -rlptgoD (no -H,-A,-X)                                      |
+| =-b, --backup=               |      |       |       | make backups (see --suffix & --backup-dir)                                       |
+| =-c, --checksum=             |      |       |       | skip based on checksum, not mod-time & size                                      |
+| =-d, --dirs=                 |      |       |       | transfer directories without recursing                                           |
+| =-e, --rsh=COMMAND=          |      |       |       | specify the remote shell to use                                                  |
+| =-f, --filter=RULE=          |      |       |       | add a file-filtering RULE                                                        |
+| =-g, --group=                |      |       |       | preserve group                                                                   |
+| =-h --help=                  |      |       |       | show this help (see below for -h comment)                                        |
+| =-h, --human-readable=       |      |       |       | output numbers in a human-readable format                                        |
+| =-i, --itemize-changes=      |      |       |       | output a change-summary for all updates                                          |
+| =-k, --copy-dirlinks=        |      |       |       | transform symlink to dir into referent dir                                       |
+| =-l, --links=                |      |       |       | copy symlinks as symlinks                                                        |
+| =-m, --prune-empty-dirs=     |      |       |       | prune empty directory chains from file-list                                      |
+| =-n, --dry-run=              |      |       |       | perform a trial run with no changes made                                         |
+| =-o, --owner=                |      |       |       | preserve owner (super-user only)                                                 |
+| =-p, --perms=                |      |       |       | preserve permissions                                                             |
+| =-q, --quiet=                |      |       |       | suppress non-error messages                                                      |
+| =-r, --recursive=            |      |       |       | recurse into directories                                                         |
+| =-s, --protect-args=         |      |       |       | no space-splitting; wildcard chars only                                          |
+| =-t, --times=                |      |       |       | preserve modification times                                                      |
+| =-u, --update=               |      |       |       | skip files that are newer on the receiver                                        |
+| =-v, --verbose=              |      |       |       | increase verbosity                                                               |
+| =-x, --one-file-system=      |      |       |       | don't cross filesystem boundaries                                                |
+| =-y, --fuzzy=                |      |       |       | find similar file for basis if no dest file                                      |
+| =-z, --compress=             |      |       |       | compress file data during the transfer                                           |
+|------------------------------+------+-------+-------+----------------------------------------------------------------------------------|
+
+
 *** rsync::examples
 **** rsync-161128234019
 Resume rsync after broken connection:
