@@ -1,0 +1,26 @@
+# File           : cix-binwalk.org
+# Created        : <2017-09-27 Wed 00:25:44 BST>
+# Modified       : <2017-9-27 Wed 00:31:08 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: binwalk
+|-----------------+-------------|
+| *Author*        | devttys0    |
+| *Maintainer(s)* |             |
+| *Released*      | 2013        |
+| *Source*        | [[https://github.com/devttys0/binwalk][binwalk.git]] |
+| *Homepage*      | [[http://binwalk.org/][binwalk.web]] |
+|-----------------+-------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-binwalk.org
