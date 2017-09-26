@@ -1,6 +1,6 @@
 # File          : cix-gnu-binutils.org
 # Created       : <2015-11-02 Mon 22:18:23 GMT>
-# Modified      : <2017-8-28 Mon 22:55:56 BST> sharlatan
+# Modified      : <2017-9-27 Wed 00:21:37 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU collection of binary utilities
@@ -183,7 +183,27 @@ display the assembler code for object file:
 ** strings                                                                      :cmd:
 [[Index][⬆]]
 *** strings::options
+| OPT                               | TYPE | =++V= | =--V= | DESC                                                                                       |
+|-----------------------------------+------+-------+-------+--------------------------------------------------------------------------------------------|
+| =-<number>=                       |      |       |       | least [number] characters (default 4).                                                     |
+| =-T, --target=<BFDNAME>=          |      |       |       | Specify the binary file format                                                             |
+| =-a - --all=                      |      |       |       | Scan the entire file, not just the data section [default]                                  |
+| =-d, --data=                      |      |       |       | Only scan the data sections in the file                                                    |
+| =-e, --encoding={s,S,b,l,B,L}=    |      |       |       | Select character size and endianness: s = 7-bit, S = 8-bit, {b,l} = 16-bit, {B,L} = 32-bit |
+| =-f, --print-file-name=           |      |       |       | Print the name of the file before each string                                              |
+| =-h, --help=                      |      |       |       | Display this information                                                                   |
+| =-n, --bytes=<number>=            |      |       |       | Locate & print any NUL-terminated sequence of at                                           |
+| =-o=                              |      |       |       | An alias for --radix=o                                                                     |
+| =-s, --output-separator=<string>= |      |       |       | String used to separate strings in output.                                                 |
+| =-t, --radix={o,d,x}=             |      |       |       | Print the location of the string in base 8, 10 or 16                                       |
+| =-v, -V, --version=               |      |       |       | Print the program's version number                                                         |
+| =-w, --include-all-whitespace=    |      |       |       | Include all whitespace as valid string characters                                          |
+| =@<file>=                         |      |       |       | Read options from <file>                                                                   |
+|-----------------------------------+------+-------+-------+--------------------------------------------------------------------------------------------|
 *** strings::examples
+**** strings-170927000040
+prints the offset in decimal into the file of each string it finds.
+:    ~$ strings -t d input_f
 *** strings::files
 *** strings::see-also
 ** addr2line                                                                    :cmd:
