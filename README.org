@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-9-27 Wed 23:03:09 BST> sharlatan
+# Last Modified  : <2017-9-27 Wed 23:12:53 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -66,6 +66,7 @@ QTY  CMD       PKG
 3    xargs     gnu-findutils
 3    tr        gnu-coreutils
 3    tar       tar
+3    nc        nmap-ncat
 2    wget      wget
 2    tee       gnu-coreutils
 2    ss        iproute2
@@ -73,7 +74,6 @@ QTY  CMD       PKG
 2    rsync     rsync
 2    objdump   gnu-binutils
 2    nohup     gnu-coreutils
-2    nc        nmap-ncat
 2    nc        netcat
 1    whatis    man-db
 1    usermod   shadow-utils
@@ -108,6 +108,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  183
+Onliners:  185
 Scripts:   101
 #+END_SRC

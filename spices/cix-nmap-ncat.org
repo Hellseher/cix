@@ -1,6 +1,6 @@
 # File           : cix-nmap-ncat.org<2>
 # Created        : <2017-09-23 Sat 22:44:24 BST>
-# Modified       : <2017-9-25 Mon 21:18:04 BST> sharlatan
+# Modified       : <2017-9-27 Wed 23:11:50 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Nmap's Netcat replacement
@@ -89,6 +89,11 @@ connect TCP port 80 on host example.com:
 **** nc-170924215315
 keep listen for inbound connections on TCP port 1234:
 :    ~$ nc -vv -l 1234
+
+**** nc-170927230540
+transfare file/dirrectory from one machine to other, both need nc avaialable:
+:    ~# nc -l 7000 | tar -xzvpf -      # reciver
+:    ~# tar -czf - * | nc reciver 7000 # transmiter
 
 *** nc::files
 /usr/share/ncat/ca-bundle.crt.
