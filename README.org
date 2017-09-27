@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-9-27 Wed 00:33:54 BST> sharlatan
+# Last Modified  : <2017-9-27 Wed 23:03:09 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -26,16 +26,18 @@ cix
 ├── cix-convension.org
 ├── cix-main.org
 ├── cix-stat.sh
-├── cix-todo.org
+├── conf
 ├── img
 ├── LICENSE
+├── MANIFEST
+├── org
 ├── README.org
 ├── README-ru.md
 ├── spices
 ├── tests
 └── tutors
 
-4 directories, 7 files
+6 directories, 7 files
 #+END_SRC
 
 ** Statistic
@@ -63,9 +65,9 @@ QTY  CMD       PKG
 4    column    util-linux
 3    xargs     gnu-findutils
 3    tr        gnu-coreutils
+3    tar       tar
 2    wget      wget
 2    tee       gnu-coreutils
-2    tar       tar
 2    ss        iproute2
 2    ssh       openssh
 2    rsync     rsync
@@ -106,6 +108,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  182
+Onliners:  183
 Scripts:   101
 #+END_SRC

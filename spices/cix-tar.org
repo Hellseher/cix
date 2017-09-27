@@ -1,6 +1,6 @@
 # File          : cix-tar.org
 # Created       : <2016-11-04 Fri 22:42:50 GMT>
-# Modified      : <2017-9-01 Fri 22:35:49 BST> sharlatan
+# Modified      : <2017-9-27 Wed 23:01:39 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : File archiving program
@@ -14,8 +14,8 @@
 | *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/tar.git/tree/THANKS][(all...)]]              |
 | *Released*       | gnu-2000              |
 | *Source*         | [[http://git.savannah.gnu.org/cgit/tar.git][gnu-tar.git]]           |
-| *Man*            | [[http://man7.org/linux/man-pages/man1/tar.1.html][gnu-tar.1]],            |
-|                  | [[http://man.openbsd.org/OpenBSD-current/man1/tar.1][openbsd-tar.1]],        |
+| *Man*            | [[http://man7.org/linux/man-pages/man1/tar.1.html][gnu-tar.1]]             |
+|                  | [[http://man.openbsd.org/OpenBSD-current/man1/tar.1][openbsd-tar.1]]         |
 |                  | [[https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1][freebsd-tar.1]]         |
 | *Info*           | [[https://www.gnu.org/software/tar/][gnu-tar.web]]           |
 |------------------+-----------------------|
@@ -30,14 +30,8 @@ The =mt= tape drive control program is in the GNU =cpio= distribution.
 * Receipts
 ** GNU tar
 *** gnu-tar::options
-| OPT  | TYPE | ++V | --V | DESC                                                           |
-|------+------+-----+-----+----------------------------------------------------------------|
-| =-x= |      |     |     | Extract files                                                  |
-| =-v= |      |     |     | verbose, print the file names as they are extracted one by one |
-| =-c= |      |     |     | commpress                                                      |
-| =-z= |      |     |     | The file is a "gzipped" file                                   |
-| =-f= |      |     |     | Use the following tar archive for the operation                |
-|------+------+-----+-----+----------------------------------------------------------------|
+| OPT | TYPE | =++V= | =--V= | DESC |
+|-----+------+-------+-------+------|
 
 *** gnu-tar::examples
 **** tar-170117214147
@@ -48,5 +42,9 @@ creat a tarball of current working directory:
 extart *.tar.gz, *.tar.bz2 files:
 :    ~$ tar -xzvf tarball_file.tar.gz
 :    ~$ tar -xjvf tarball_file.tar.bz2
+
+**** tar-170927225754 
+copy via tar pipe while preserving file permissions:
+:    ~$ tar -C source_path -cpf - . | tar -C target_path -xf -
 
 # End of cix-tar.org
