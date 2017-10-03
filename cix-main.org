@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-9-25 Mon 23:22:40 BST> sharlatan
+# Modified   : <2017-10-03 Tue 21:56:58 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -87,7 +87,7 @@ on *GNU/Linux*
 - *File* /everything is a file/
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a GNU collection of diff utilities
   + [[./spices/cix-emacs.org][emacs]] :: GNU emacs text editor
-  + [[./spices/cix-file.org][file]] :: a utility for determining file types: =GNU/Linux= =NetBSD= =FreeBSD= =OS/2= =DOS= =Windows=
+  + [[./spices/cix-file.org][file]] :: a utility for determining file types: =GNU/Linux= =NetBSD= =FreeBSD= =OS/2= =OS-X= =DOS= =Windows=
   + [[./spices/cix-gawk.org][gawk]] :: the GNU version of the AWK text processing utility: =GNU/Linux=
   + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better: =GNU/Linux= =UNIX= =OS-X=
   + [[./spices/cix-lsof.org][lsof]] :: a utility which lists open files on *nix systems: =GNU/Linux= =FreeBSD= =OS-X= =Solaris=
@@ -102,16 +102,16 @@ on *GNU/Linux*
   + [[file:./spices/cix-rsync.org][rsync]] :: a program for synchronizing files over a network: =FreeBSD= =GNU/Linux= =Windows=
   + [[./spices/cix-vsftpd.org][vsftpd]] :: very secure ftp daemon: =GNU/Linux=
   + [[file:./spices/cix-wget.org][wget]] :: a utility for retrieving files using the http or ftp protocols: =GNU/Linux= =Windows= =OS-X= =OpenVMS= =HP-UX= =MorphOS= =AmigaOS=
-  + [[file:./spices/cix-tym.org][tym]] :: Time rSync Machine
+  + [[file:./spices/cix-tym.org][tym]] :: Time rSync Machine: =OS-X=
 
 - *Filesystem* /partitions, filesystem craft and check/
-  + [[./spices/cix-acl.org][acl]] :: access control list utilities
+  + [[./spices/cix-acl.org][acl]] :: access control list utilities:
   + [[./spices/cix-autofs.org][autofs]] :: a tool for automatically mounting and unmounting filesystems
   + [[file:./spices/cix-bindfs.org][bindfs]] :: fuse filesystem to mirror a directory
   + [[./spices/cix-btrfs-progs.org][btrfs-progs]] :: userspace programs for btrfs.
   + [[./spices/cix-curlftpfs.org][curlftpfs]] :: is a fs for accessing ftp hosts based on fuse and libcurl
   + [[./spices/cix-e2fsprogs.org][e2fsprogs]] :: filesystem utilities for use with ext2/3/4
-  + [[file:./spices/cix-glusterfs.org][glusterfs]] :: distributed file system: =GNU/Linux FreeBSD NetBSD OpenSolaris OS-X=
+  + [[file:./spices/cix-glusterfs.org][glusterfs]] :: distributed file system: =GNU/Linux= =FreeBSD= =NetBSD= =OpenSolaris= =OS-X=
   + [[./spices/cix-lvm2.org][lvm2]] :: userland logical volume management tools
   + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share 
   + [[file:./spices/cix-gnu-parted.org][parted]] :: the GNU disk partition manipulation program: =GNU/Linux=
@@ -140,6 +140,7 @@ on *GNU/Linux*
   + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =GNU/Linux= =Gentoo= =OpenBSD= =FreeBSD=
   + [[file:./spices/cix-stress-ng.org][stress-ng]] :: stress test a computer system in various ways: =GNU/Linux= =GNU/Hurd= =FreeBSD= =OpenBSD= =NetBSD= =FreeBSD= =MINIX= =OpenIndiana=
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities: =GNU/Linux=
+  + [[file:./spices/cix-flashrom.org][flashrom]] :: simple program for reading/writing flash chips content: =GNU/Linux= =DOS= =Linux= =FreeBSD= =NetBSD= =OpenBSD= =DragonFlyBSD= =Solarise= =OS-X=  =GNU/Hurd=
 
 - *Searching* /loosing my religion/
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder
@@ -204,7 +205,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
   + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
   + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
-  + [apparmor] :: 
+  + [apparmor] ::
 
 - *Boot-Init-systems* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
@@ -216,16 +217,19 @@ on *GNU/Linux*
   + [[./spices/cix-autoconf.org][autoconf]] :: a GNU tool for automatically configuring source code
   + [[file:./spices/cix-automake.org][automake]] :: A GNU tool for automatically creating Makefiles
   + [[file:./spices/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
+  + [[file:./spices/cix-cmake.org][cmake]] :: Cross-platform make system
   + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool
   + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
   + [[./spices/cix-gdb.org][gdb]] :: a GNU source-level debugger for C, C++, Fortran, Go and other languages
   + [[file:./spices/cix-git.org][git]] :: Fast Version Control System
   + [[./spices/cix-glibc.org][glibc]] :: common binaries and locale data for glibc
   + [[file:./spices/cix-global.org][global]] :: Source code tag system
+  + [[file:./spices/cix-gnu-libtool.org][libtool]] :: The GNU Portable Library Tool: =GNU/Linux= =Solaris=
+  + [[file:./spices/cix-gnu-lightning.org][lightning]] :: library for generating assembly code on run time: =GNU/Linux=
+  + [[file:./spices/cix-llvm.org][llvm]] :: The Low Level Virtual Machine: =OS-X= =GNU/Linux=
   + [[file:./spices/cix-make.org][make]] :: A tool which simplifies the build process for users
   + [[file:./spices/cix-valgrind.org][valgrind]] :: Tool for finding memory management bugs in programs
-  + [[file:./spices/cix-cmake.org][cmake]] :: Cross-platform make system
-  + [[file:./spices/cix-gnu-libtool.org][libtool]] :: The GNU Portable Library Tool: =GNU/Linux= =Solaris=
+  + [[file:./spices/cix-jemalloc.org][jemalloc]] :: General-purpose scalable concurrent malloc implementation: =GNU/Linux= =FreeBSD=
 
 - *Packaging* /pack me up, pack me down/
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
@@ -236,8 +240,9 @@ on *GNU/Linux*
   + [[file:./spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD: =FreeBSD=
   + [[file:./spices/cix-rpm.org][rpm]] :: package manager is a command line driven package management system
 
-- *Research* /I've got a clue!/
+- *Research-reverse-engineering* /i've got a clue/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
+  + [[file:./spices/cix-binwalk.org][binwalk]] :: Firmware analysis tool
 
 - *Kernel-traces* /Go to basic/
   + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities

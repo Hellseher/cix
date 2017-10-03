@@ -1,0 +1,30 @@
+# File           : cix-flashrom.org
+# Created        : <2017-10-03 Tue 21:26:59 BST>
+# Modified       : <2017-10-03 Tue 21:56:19 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Simple program for reading/writing flash chips content.
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: flashrom
+|-----------------+-----------------|
+| *Author*        | Ollie Lho,      |
+|                 | Stefan Reinauer |
+| *Maintainer(s)* |                 |
+| *Released*      | 1999            |
+| *Source*        | [[https://review.coreboot.org/cgit/flashrom.git][flashrom.git]]    |
+| *Homepage*      | [[https://www.flashrom.org/Flashrom][flashrom.web]]    |
+|-----------------+-----------------|
+
+=flashrom= is a utility for identifying, reading, writing, verifying and erasing
+flash chips. It is designed to flash BIOS/EFI/coreboot/firmware/optionROM images
+on mainboards, network/graphics/storage controller cards, and various other
+programmer devices.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-flashrom.org

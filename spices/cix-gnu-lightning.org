@@ -1,0 +1,26 @@
+# File           : cix-gnu-lightning.org
+# Created        : <2017-10-01 Sun 21:06:14 BST>
+# Modified       : <2017-10-01 Sun 23:31:57 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gnu-lightning
+|------------------+----------------------------------------|
+| *Author*         | Paulo Cesar Pereira de Andrade [[http://git.savannah.gnu.org/cgit/lightning.git/tree/AUTHORS][(all..)]] |
+| *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/lightning.git/tree/THANKS][(all...)]]                               |
+| *Released*       | 2001                                   |
+| *Source*         |                                        |
+| *Info*           |                                        |
+|------------------+----------------------------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-gnu-lightning.org
