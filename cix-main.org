@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-10-03 Tue 21:56:58 BST> sharlatan
+# Modified   : <2017-10-04 Wed 21:55:35 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -323,6 +323,8 @@ grep "+conf" ./conf/cix-vsftpd.conf
   http://man7.org/linux/man-pages/index.html
 - Commanline fu
   http://www.commandlinefu.com/commands/browse/sort-by-votes
+- BashGuide 
+  http://mywiki.wooledge.org/BashGuide
 - http://everythingsysadmin.com/
 
 ** Wikis

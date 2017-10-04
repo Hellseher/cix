@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-9-17 Sun 21:32:19 BST> sharlatan
+# Modified   : <2017-10-04 Wed 21:54:28 BST> sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -246,13 +246,13 @@ exist on every operating system. This package is the union of the GNU
 #+END_SRC
 
 * Receipts
-** arch                                                                         :cmd:
+** arch                                                                         
 [[Index][⬆]]
 *** arch::options
 *** arch::examples
 *** arch::files
 *** arch::see-also
-** base64                                                                       :cmd:
+** base64                                                                       
 [[Index][⬆]] /base64 encode/decode data and print to standard output/
 /Written by Simon Josefsson/
 *** base64::options
@@ -283,31 +283,31 @@ create a *C* chars by *L* lines file of a random ASCII characters:
 
 *** base64::files
 *** base64::see-also
-** basename                                                                     :cmd:
+** basename                                                                     
 [[Index][⬆]]
 *** basename::options
 *** basename::examples
 *** basename::files
 *** basename::see-also
-** cat                                                                          :cmd:
+** cat                                                                          
 [[Index][⬆]]
 *** cat::options
 *** cat::examples
 *** cat::files
 *** cat::see-also
-** chcon                                                                        :cmd:
+** chcon                                                                        
 [[Index][⬆]]
 *** chcon::options
 *** chcon::examples
 *** chcon::files
 *** chcon::see-also
-** chgrp                                                                        :cmd:
+** chgrp                                                                        
 [[Index][⬆]]
 *** chgrp::options
 *** chgrp::examples
 *** chgrp::files
 *** chgrp::see-also
-** chmod                                                                        :cmd:
+** chmod                                                                        
 [[Index][⬆]] /change file mode bits/
 /Written by David MacKenzie and Jim Meyering/
 
@@ -318,25 +318,25 @@ create a *C* chars by *L* lines file of a random ASCII characters:
 *** chmod::examples
 *** chmod::files
 *** chmod::see-also
-** chown                                                                        :cmd:
+** chown                                                                        
 [[Index][⬆]]
 *** chown::options
 *** chown::examples
 *** chown::files
 *** chown::see-also
-** chroot                                                                       :cmd:
+** chroot                                                                       
 [[Index][⬆]]
 *** chroot::options
 *** chroot::examples
 *** chroot::files
 *** chroot::see-also
-** cksum                                                                        :cmd:
+** cksum                                                                        
 [[Index][⬆]]
 *** cksum::options
 *** cksum::examples
 *** cksum::files
 *** cksum::see-also
-** comm                                                                         :cmd:
+** comm                                                                         
 [[Index][⬆]] /compare two sorted files line by line/.
 /Written by Richard M. Stallman and David MacKenzie/
 *** comm::options
@@ -344,31 +344,70 @@ create a *C* chars by *L* lines file of a random ASCII characters:
 *** comm::files
 *** comm::see-also
   [[file:./cix-gnu-core-utilities.org::*join][join(1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq(1)]]
-** cp                                                                           :cmd:
-[[Index][⬆]]
+** cp                                                                           
+[[Index][⬆]] /copy files and directories/
+/Written by Torbjorn Granlund, David MacKenzie, and Jim Meyering/
 *** cp::options
+| OPT                                | TYPE | =++V= | =--V= | DESC                                                                                  |
+|------------------------------------+------+-------+-------+---------------------------------------------------------------------------------------|
+| =--attributes-only=                |      |       |       | copy just the attributes                                                              |
+| =--backup[=CONTROL]=               |      |       |       | make a backup of each existing destination file                                       |
+| =--context[=CTX]=                  |      |       |       | like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX |
+| =--copy-contents=                  |      |       |       | copy contents of special files when recursive                                         |
+| =--help=                           |      |       |       | display this help and exit                                                            |
+| =--no-preserve=ATTR_LIST=          |      |       |       | don't preserve the specified attributes                                               |
+| =--parents=                        |      |       |       | use full source file name under DIRECTORY                                             |
+| =--preserve[=ATTR_LIST]=           |      |       |       | preserve the  specified  attributes                                                   |
+| =--reflink[=WHEN]=                 |      |       |       | control clone/CoW copies. See below                                                   |
+| =--remove-destination=             |      |       |       | remove each existing destination file before attempting to open it                    |
+| =--sparse=WHEN=                    |      |       |       | control creation of sparse files. See below                                           |
+| =--strip-trailing-slashes=         |      |       |       | remove any trailing slashes from each SOURCE argument                                 |
+| =--version=                        |      |       |       | output version information and exit                                                   |
+| =-H=                               |      |       |       | follow command-line symbolic links in SOURCE                                          |
+| =-L, --dereference=                |      |       |       | always follow symbolic links in SOURCE                                                |
+| =-P, --no-dereference=             |      |       |       | never follow symbolic links in SOURCE                                                 |
+| =-R, -r, --recursive=              |      |       |       | copy directories recursively                                                          |
+| =-S, --suffix=SUFFIX=              |      |       |       | override the usual backup suffix                                                      |
+| =-T, --no-target-directory=        |      |       |       | treat DEST as a normal file                                                           |
+| =-Z=                               |      |       |       | set SELinux security context of destination file to default type                      |
+| =-a, --archive=                    |      |       |       | same as -dR --preserve=all                                                            |
+| =-b=                               |      |       |       | like --backup but does not accept an argument                                         |
+| =-c=                               |      |       |       | deprecated, same as --preserve=context                                                |
+| =-d=                               |      |       |       | same as --no-dereference --preserve=links                                             |
+| =-f, --force=                      |      |       |       | if  an  existing  destination  file cannot be opened, remove it and try again         |
+| =-i, --interactive=                |      |       |       | prompt before overwrite                                                               |
+| =-l, --link=                       |      |       |       | hard link files instead of copying                                                    |
+| =-n, --no-clobber=                 |      |       |       | do not overwrite an existing file                                                     |
+| =-p=                               |      |       |       | same as --preserve=mode,ownership,timestamps                                          |
+| =-s, --symbolic-link=              |      |       |       | make symbolic links instead of copying                                                |
+| =-t, --target-directory=DIRECTORY= |      |       |       | copy all SOURCE arguments into DIRECTORY                                              |
+| =-u, --update=                     |      |       |       | copy  newer and missing files only                                                    |
+| =-v, --verbose=                    |      |       |       | explain what is being done                                                            |
+| =-x, --one-file-system=            |      |       |       | stay on this file system                                                              |
+|------------------------------------+------+-------+-------+---------------------------------------------------------------------------------------|
+
 *** cp::examples
 *** cp::files
 *** cp::see-also
-** csplit                                                                       :cmd:
+** csplit                                                                       
 [[Index][⬆]]
 *** csplit::options
 *** csplit::examples
 *** csplit::files
 *** csplit::see-also
-** cut                                                                          :cmd:
+** cut                                                                          
 [[Index][⬆]]
 *** cut::options
 *** cut::examples
 *** cut::files
 *** cut::see-also
-** date                                                                         :cmd:
+** date                                                                         
 [[Index][⬆]]
 *** date::options
 *** date::examples
 *** date::files
 *** date::see-also
-** dd                                                                           :cmd:
+** dd                                                                           
 [[Index][⬆]] /convert and copy a file/
 /Written by Paul Rubin, David MacKenzie, and Stuart Kemp./
 
@@ -501,31 +540,31 @@ null bytes:
 :    ~# dd if=/dev/sda1 of=output_file.img conv=notrunc,noerror,sync
 *** dd::files
 *** dd::see-also
-** df                                                                           :cmd:
+** df                                                                           
 [[Index][⬆]]
 *** df::options
 *** df::examples
 *** df::files
 *** df::see-also
-** dir                                                                          :cmd:
+** dir                                                                          
 [[Index][⬆]]
 *** dir::options
 *** dir::examples
 *** dir::files
 *** dir::see-also
-** dircolors                                                                    :cmd:
+** dircolors                                                                    
 [[Index][⬆]]
 *** dircolors::options
 *** dircolors::examples
 *** dircolors::files
 *** dircolors::see-also
-** dirname                                                                      :cmd:
+** dirname                                                                      
 [[Index][⬆]]
 *** dirname::options
 *** dirname::examples
 *** dirname::files
 *** dirname::see-also
-** du                                                                           :cmd:
+** du                                                                           
 [[Index][⬆]] /estimate file space usage/
 /Written by Torbjorn Granlund, David MacKenzie, Paul Eggert, and Jim Meyering./
 *** du::options
@@ -537,25 +576,25 @@ Show size of hiden and normal dirrectores of the current location:
 
 *** du::files
 *** du::see-also
-** echo                                                                         :cmd:
+** echo                                                                         
 [[Index][⬆]]
 *** echo::options
 *** echo::examples
 *** echo::files
 *** echo::see-also
-** env                                                                          :cmd:
+** env                                                                          
 [[Index][⬆]]
 *** env::options
 *** env::examples
 *** env::files
 *** env::see-also
-** expand                                                                       :cmd:
+** expand                                                                       
 [[Index][⬆]]
 *** expand::options
 *** expand::examples
 *** expand::files
 *** expand::see-also
-** expr                                                                         :cmd:
+** expr                                                                         
 [[Index][⬆]] /evaluate expressions/
 /Written by Mike Parker, James Youngman, and Paul Eggert./
 *** expr::options
@@ -576,73 +615,73 @@ Show size of hiden and normal dirrectores of the current location:
 #+END_SRC
 *** expr::files
 *** expr::see-also
-** factor                                                                       :cmd:
+** factor                                                                       
 [[Index][⬆]]
 *** factor::options
 *** factor::examples
 *** factor::files
 *** factor::see-also
-** false                                                                        :cmd:
+** false                                                                        
 [[Index][⬆]]
 *** false::options
 *** false::examples
 *** false::files
 *** false::see-also
-** fmt                                                                          :cmd:
+** fmt                                                                          
 [[Index][⬆]]
 *** fmt::options
 *** fmt::examples
 *** fmt::files
 *** fmt::see-also
-** fold                                                                         :cmd:
+** fold                                                                         
 [[Index][⬆]]
 *** fold::options
 *** fold::examples
 *** fold::files
 *** fold::see-also
-** groups                                                                       :cmd:
+** groups                                                                       
 [[Index][⬆]]
 *** groups::options
 *** groups::examples
 *** groups::files
 *** groups::see-also
-** head                                                                         :cmd:
+** head                                                                         
 [[Index][⬆]]
 *** head::options
 *** head::examples
 *** head::files
 *** head::see-also
-** hostid                                                                       :cmd:
+** hostid                                                                       
 [[Index][⬆]]
 *** hostid::options
 *** hostid::examples
 *** hostid::files
 *** hostid::see-also
-** id                                                                           :cmd:
+** id                                                                           
 [[Index][⬆]]
 *** id::options
 *** id::examples
 *** id::files
 *** id::see-also
-** install                                                                      :cmd:
+** install                                                                      
 [[Index][⬆]]
 *** install::options
 *** install::examples
 *** install::files
 *** install::see-also
-** join                                                                         :cmd:
+** join                                                                         
 [[Index][⬆]]
 *** join::options
 *** join::examples
 *** join::files
 *** join::see-also
-** link                                                                         :cmd:
+** link                                                                         
 [[Index][⬆]]
 *** link::options
 *** link::examples
 *** link::files
 *** link::see-also
-** ln                                                                           :cmd:
+** ln                                                                           
 [[Index][⬆]] /make links between files/
 /Written by Mike Parker and David MacKenzie./
 
@@ -656,13 +695,13 @@ repoint symlink to another file:
 *** ln::see-also
     [[file:./cix-gnu-core-utilities.org::*link][link (2)]]
 
-** logname                                                                      :cmd:
+** logname                                                                      
 [[Index][⬆]]
 *** logname::options
 *** logname::examples
 *** logname::files
 *** logname::see-also
-** ls                                                                           :cmd:
+** ls                                                                           
 [[Index][⬆]] /list directory contents/.
 /Written by Richard M. Stallman and David MacKenzie./
 *** ls::options
@@ -725,13 +764,13 @@ aliases best practice:
 #+END_EXAMPLE
 *** ls::see-also
   [[file:./cix-gnu-core-utilities.org::*dir][dir (1)]]
-** md5sum                                                                       :cmd:
+** md5sum                                                                       
 [[Index][⬆]]
 *** md5sum::options
 *** md5sum::examples
 *** md5sum::files
 *** md5sum::see-also
-** mkdir                                                                        :cmd:
+** mkdir                                                                        
 [[Index][⬆]] /make directories/
 /Written by David MacKenzie/
 *** mkdir::options
@@ -745,19 +784,19 @@ create a directory tree with one line:
 :    ~$ mkdir -p project/{lib/ext,bin,src,doc/{html,info,pdf},demo/stat/a}
 *** mkdir::files
 *** mkdir::see-also
-** mkfifo                                                                       :cmd:
+** mkfifo                                                                       
 [[Index][⬆]]
 *** mkfifo::options
 *** mkfifo::examples
 *** mkfifo::files
 *** mkfifo::see-also
-** mknod                                                                        :cmd:
+** mknod                                                                        
 [[Index][⬆]]
 *** mknod::options
 *** mknod::examples
 *** mknod::files
 *** mknod::see-also
-** mktemp                                                                       :cmd:
+** mktemp                                                                       
 [[Index][⬆]] /create a temporary file or directory/
 /Written by Jim Meyering and Eric Blake./
 *** mktemp::options
@@ -779,7 +818,7 @@ Create a temporary dirrectory in =/tmp=:
 
 *** mktemp::files
 *** mktemp::see-also
-** mv                                                                           :cmd:
+** mv                                                                           
 [[Index][⬆]] /move (rename) files/
 /Written by Mike Parker, David MacKenzie, and Jim Meyering./
 *** mv::options
@@ -814,19 +853,19 @@ replace spaces in file/dir name with underscore "_":
 *** mv::files
 *** mv::see-also
   [[file:./cix-util-linux.org::*rename][rename(2)]]
-** nice                                                                         :cmd:
+** nice                                                                         
 [[Index][⬆]]
 *** nice::options
 *** nice::examples
 *** nice::files
 *** nice::see-also
-** nl                                                                           :cmd:
+** nl                                                                           
 [[Index][⬆]]
 *** nl::options
 *** nl::examples
 *** nl::files
 *** nl::see-also
-** nohup                                                                        :cmd:
+** nohup                                                                        
 [[Index][⬆]] /run a command immune to hangups, with output to a non-tty/
 /Written by Jim Meyering./
 
@@ -849,13 +888,13 @@ Run a process as background process:
 It omits bouth stdin and stdout from script and =nohup=.
 *** nohup::files
 *** nohup::see-also
-** nproc                                                                        :cmd:
+** nproc                                                                        
 [[Index][⬆]]
 *** nproc::options
 *** nproc::examples
 *** nproc::files
 *** nproc::see-also
-** numfmt                                                                       :cmd:
+** numfmt                                                                       
 [[Index][⬆]] /Convert numbers from/to human-readable strings/
 /Writen by Assaf Gordon/
 
@@ -863,93 +902,106 @@ It omits bouth stdin and stdout from script and =nohup=.
 *** numfmt::examples
 *** numfmt::files
 *** numfmt::see-also
-** od                                                                           :cmd:
+** od                                                                           
 [[Index][⬆]]
 *** od::options
 *** od::examples
 *** od::files
 *** od::see-also
-** paste                                                                        :cmd:
+** paste                                                                        
 [[Index][⬆]] /merge lines of files/
 /Written by David M. Ihnat and David MacKenzie/
 
 *** paste::options
-| OPT                     | TYPE   | ++V | --V | DESC |
-|-------------------------+--------+-----+-----+------|
-| =-s, --serial=          | switch |     |     |      |
-| =-d, --delimiters=      | str    |     |     |      |
-| =-z, --zero-terminated= | switch |     |     |      |
-|-------------------------+--------+-----+-----+------|
+| OPT                     | TYPE   | V++ | V-- | DESC                                            |
+|-------------------------+--------+-----+-----+-------------------------------------------------|
+| =-s, --serial=          | switch |     |     | paste one file at a time instead of in parallel |
+| =-d, --delimiters=LIST= | str    |     |     | reuse characters from LIST instead of TABs      |
+| =-z, --zero-terminated= | switch |     |     | line delimiter is NUL, not newline              |
+|-------------------------+--------+-----+-----+-------------------------------------------------|
 
 *** paste::examples
 **** paste-170808223506
-Sumirize the size of git directores using =Bash= $[...] $((...)):
+sumirize the size of git directores using =Bash= $[...] $((...)):
 :    ~$ echo $[$(find ~/ -type d -name ".git" -print0 | xargs -0 du -s | cut -f1 | paste -sd+)] 
 [[file:./cix-gnu-coreutils.org::*echo][echo]] [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*du][du]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
 
+**** paste-171004214104 
+join all lines lines of the file with a SPACE delimiter:
+:    ~$ paste -sd" " input_f
+
+**** paste-171004214345
+merge a list to 2-n columns (=-= is a column placeholder):
+:    ~$ paste - - < file_name
+:    ~$ paste -d":" - - < file_name
+
+**** paste-171004214930
+list files with specified number of columns:
+:    ~$ ls -a | paste -d: - - - - | column -t -s:
+
 *** paste::files
 *** paste::see-also
-** pathchk                                                                      :cmd:
+** pathchk                                                                      
 [[Index][⬆]]
 *** pathchk::options
 *** pathchk::examples
 *** pathchk::files
 *** pathchk::see-also
-** pinky                                                                        :cmd:
+** pinky                                                                        
 [[Index][⬆]]
 *** pinky::options
 *** pinky::examples
 *** pinky::files
 *** pinky::see-also
-** pr                                                                           :cmd:
+** pr                                                                           
 [[Index][⬆]]
 *** pr::options
 *** pr::examples
 *** pr::files
 *** pr::see-also
-** printenv                                                                     :cmd:
+** printenv                                                                     
 [[Index][⬆]]
 *** printenv::options
 *** printenv::examples
 *** printenv::files
 *** printenv::see-also
-** printf                                                                       :cmd:
+** printf                                                                       
 [[Index][⬆]]
 *** printf::options
 *** printf::examples
 *** printf::files
 *** printf::see-also
-** ptx                                                                          :cmd:
+** ptx                                                                          
 [[Index][⬆]]
 *** ptx::options
 *** ptx::examples
 *** ptx::files
 *** ptx::see-also
-** pwd                                                                          :cmd:
+** pwd                                                                          
 [[Index][⬆]]
 *** pwd::options
 *** pwd::examples
 *** pwd::files
 *** pwd::see-also
-** readlink                                                                     :cmd:
+** readlink                                                                     
 [[Index][⬆]]
 *** readlink::options
 *** readlink::examples
 *** readlink::files
 *** readlink::see-also
-** realpath                                                                     :cmd:
+** realpath                                                                     
 [[Index][⬆]]
 *** realpath::options
 *** realpath::examples
 *** realpath::files
 *** realpath::see-also
-** realpath                                                                     :cmd:
+** realpath                                                                     
 [[Index][⬆]]
 *** realpath::options
 *** realpath::examples
 *** realpath::files
 *** realpath::see-also
-** rm                                                                           :cmd:
+** rm                                                                           
 [[Index][⬆]] /remove files or directories
 Written by Paul Rubin, David MacKenzie, Richard M. Stallman, and Jim Meyering/
 *** rm::options
@@ -962,116 +1014,116 @@ remove all but specific file(s):
 *** rm::files
 *** rm::see-also
   unlink (1), unlink(2), chattr(1), [[file:./cix-gnu-core-utilities.org::*shred][shred]](1)
-** rmdir                                                                        :cmd:
+** rmdir                                                                        
 [[Index][⬆]]
 *** rmdir::options
 *** rmdir::examples
 *** rmdir::files
 *** rmdir::see-also
-** runcon                                                                       :cmd:
+** runcon                                                                       
 [[Index][⬆]]
 *** runcon::options
 *** runcon::examples
 *** runcon::files
 *** runcon::see-also
-** seq                                                                          :cmd:
+** seq                                                                          
 [[Index][⬆]]
 *** seq::options
 *** seq::examples
 *** seq::files
 *** seq::see-also
-** sha1sum                                                                      :cmd:
+** sha1sum                                                                      
 [[Index][⬆]]
 *** sha1sum::options
 *** sha1sum::examples
 *** sha1sum::files
 *** sha1sum::see-also
-** sha224sum                                                                    :cmd:
+** sha224sum                                                                    
 [[Index][⬆]]
 *** sha224sum::options
 *** sha224sum::examples
 *** sha224sum::files
 *** sha224sum::see-also
-** sha256sum                                                                    :cmd:
+** sha256sum                                                                    
 [[Index][⬆]]
 *** sha256sum::options
 *** sha256sum::examples
 *** sha256sum::files
 *** sha256sum::see-also
-** sha384sum                                                                    :cmd:
+** sha384sum                                                                    
 [[Index][⬆]]
 *** sha384sum::options
 *** sha384sum::examples
 *** sha384sum::files
 *** sha384sum::see-also
-** sha512sum                                                                    :cmd:
+** sha512sum                                                                    
 [[Index][⬆]]
 *** sha512sum::options
 *** sha512sum::examples
 *** sha512sum::files
 *** sha512sum::see-also
 
-** shred                                                                        :cmd:
+** shred                                                                        
 [[Index][⬆]]
 *** shred::options
 *** shred::examples
 *** shred::files
 *** shred::see-also
-** shuf                                                                         :cmd:
+** shuf                                                                         
 [[Index][⬆]]
 *** shuf::options
 *** shuf::examples
 *** shuf::files
 *** shuf::see-also
-** sleep                                                                        :cmd:
+** sleep                                                                        
 [[Index][⬆]]
 *** sleep::options
 *** sleep::examples
 *** sleep::files
 *** sleep::see-also
-** sort                                                                         :cmd:
+** sort                                                                         
 [[Index][⬆]]
 *** sort::options
 *** sort::examples
 *** sort::files
 *** sort::see-also
-** split                                                                        :cmd:
+** split                                                                        
 [[Index][⬆]]
 *** split::options
 *** split::examples
 *** split::files
 *** split::see-also
-** stat                                                                         :cmd:
+** stat                                                                         
 [[Index][⬆]]
 *** stat::options
 *** stat::examples
 *** stat::files
 *** stat::see-also
-** stdbuf                                                                       :cmd:
+** stdbuf                                                                       
 [[Index][⬆]]
 *** stdbuf::options
 *** stdbuf::examples
 *** stdbuf::files
 *** stdbuf::see-also
-** stty                                                                         :cmd:
+** stty                                                                         
 [[Index][⬆]]
 *** stty::options
 *** stty::examples
 *** stty::files
 *** stty::see-also
-** sum                                                                          :cmd:
+** sum                                                                          
 [[Index][⬆]]
 *** sum::options
 *** sum::examples
 *** sum::files
 *** sum::see-also
-** sync                                                                         :cmd:
+** sync                                                                         
 [[Index][⬆]]
 *** sync::options
 *** sync::examples
 *** sync::files
 *** sync::see-also
-** tac                                                                          :cmd:
+** tac                                                                          
 [[Index][⬆]] /concatenate and print files in reverse/
 /Written by Jay Lepreau and David MacKenzie./
 *** tac::options
@@ -1081,7 +1133,7 @@ remove all but specific file(s):
 *** tac::see-also
     [[file:./cix-util-linux.org::*rev][rev (1)]]
     tail
-** tail                                                                         :cmd:
+** tail                                                                         
 [[Index][⬆]] /output the last part of file/
 /Written by Paul Rubin, David MacKenzie, Ian Lance Taylor, and Jim Meyering./
 
@@ -1092,7 +1144,7 @@ A *tail* command appeared in Version 7 AT&T UNIX.
 *** tail::see-also
     [[file:./cix-gnu-core-utilities.org::*cat][cat (1)]] [[file:./cix-gnu-core-utilities.org::*tac][tac (1)]] [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
 
-** tee                                                                          :cmd:
+** tee                                                                          
 [[Index][⬆]] /read from standard input and write to standard output and files/
 /Written by Mike Parker, Richard M. Stallman, and David MacKenzie./
 
@@ -1131,25 +1183,25 @@ download a file and validate it on the "fly":
 [[file:./cix-wget.org::*wget][wget]]
 *** tee::files
 *** tee::see-also
-** test                                                                         :cmd:
+** test                                                                         
 [[Index][⬆]]
 *** test::options
 *** test::examples
 *** test::files
 *** test::see-also
-** timeout                                                                      :cmd:
+** timeout                                                                      
 [[Index][⬆]]
 *** timeout::options
 *** timeout::examples
 *** timeout::files
 *** timeout::see-also
-** touch                                                                        :cmd:
+** touch                                                                        
 [[Index][⬆]]
 *** touch::options
 *** touch::examples
 *** touch::files
 *** touch::see-also
-** tr                                                                           :cmd:
+** tr                                                                           
 [[Index][⬆]] /translate or delete characters/
 /Written by Jim Meyering./
 *** tr::options
@@ -1173,92 +1225,92 @@ Windows files to UNIX format:
 :    ~$ tr -d '\15\32' < input_win_file.txt > output_unix_file
 *** tr::files
 *** tr::see-also
-** true                                                                         :cmd:
+** true                                                                         
 [[Index][⬆]]
 *** true::options
 *** true::examples
 *** true::files
 *** true::see-also
-** truncate                                                                     :cmd:
+** truncate                                                                     
 [[Index][⬆]]
 *** truncate::options
 *** truncate::examples
 *** truncate::files
 *** truncate::see-also
-** tsort                                                                        :cmd:
+** tsort                                                                        
 [[Index][⬆]]
 *** tsort::options
 *** tsort::examples
 *** tsort::files
 *** tsort::see-also
-** tty                                                                          :cmd:
+** tty                                                                          
 [[Index][⬆]]
 *** tty::options
 *** tty::examples
 *** tty::files
 *** tty::see-also
-** uname                                                                        :cmd:
+** uname                                                                        
 [[Index][⬆]]
 *** uname::options
 *** uname::examples
 *** uname::files
 *** uname::see-also
-** unexpand                                                                     :cmd:
+** unexpand                                                                     
 [[Index][⬆]]
 *** unexpand::options
 *** unexpand::examples
 *** unexpand::files
 *** unexpand::see-also
-** uniq                                                                         :cmd:
+** uniq                                                                         
 [[Index][⬆]]
 *** uniq::options
 *** uniq::examples
 *** uniq::files
 *** uniq::see-also
-** unlink                                                                       :cmd:
+** unlink                                                                       
 [[Index][⬆]]
 *** unlink::options
 *** unlink::examples
 *** unlink::files
 *** unlink::see-also
-** uptime                                                                       :cmd:
+** uptime                                                                       
 [[Index][⬆]]
 *** uptime::options
 *** uptime::examples
 *** uptime::files
 *** uptime::see-also
-** users                                                                        :cmd:
+** users                                                                        
 [[Index][⬆]]
 *** users::options
 *** users::examples
 *** users::files
 *** users::see-also
-** vdir                                                                         :cmd:
+** vdir                                                                         
 [[Index][⬆]]
 *** vdir::options
 *** vdir::examples
 *** vdir::files
 *** vdir::see-also
-** wc                                                                           :cmd:
+** wc                                                                           
 [[Index][⬆]]
 *** wc::options
 *** wc::examples
 *** wc::files
 *** wc::see-also
-** who                                                                          :cmd:
+** who                                                                          
 [[Index][⬆]]
 *** who::options
 *** who::examples
 *** who::files
 *** who::see-also
-** whoami                                                                       :cmd:
+** whoami                                                                       
 [[Index][⬆]]
 *** whoami::options
 *** whoami::examples
 *** whoami::files
 *** whoami::see-also
 [[Index][⬆]]
-** yes                                                                          :cmd:
+** yes                                                                          
 [[Index][⬆]]
 *** yes::options
 *** yes::examples
