@@ -1,6 +1,6 @@
 # File          : cix-hall-of-fame.org
 # Created       : <2016-11-06 Sun 22:27:11 GMT>
-# Modified      : <2017-9-02 Sat 09:55:50 BST> sharlatan
+# Modified      : <2017-10-07 Sat 23:07:37 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Main figures of UNIX world.
@@ -10,14 +10,16 @@
 [[file:../cix-main.org][|≣|]]
 #+TITLE: Hall of Fame
 
-- (1928-1977 48) Joe Ossanna  ::
+- (1928-1977 48 US) Joe Ossanna  :: (co) designer of: =Multics= =UNIX= =nroff=
 - (1931-1989 58 US) Lee E. McMahon :: Designer of: [[file:./cix-sed.org][sed]] =comm= =qsort= =grep= =index= =cref= =cu=
-- (1932) Douglas McIlroy  ::
-- (1941-2011 70 US) Dennis Ritchie  :: (co) Designer of UNIX, C-lang,
-- (1942) Brian Kernighan  ::
-- (1943 US) Ken Thompson :: (co) Designer of UNIX, utf-8, Go-lang
-- (1953 US) Richard Stallman :: (co) Designer of GNU Project, Emacs, gcc, gdb
+- (1932 US) Douglas McIlroy  :: (co) designer of: =UNIX= pipeline, =spell= =diff= =sort= =join= =graph= =speak= =tr=
+- (1940 US) Rudd Canaday :: (co) designer of: =UNIX= 
+- (1941-2011 70 US) Dennis Ritchie  :: (co) Designer of: =UNIX= =C=
+- (1942 US) Brian Wilson Kernighan :: (co) designer of: =UNIX= =AWK= =AMPL= =C= =UTF-8=
+- (1943 US) Ken Thompson :: (co) Designer of: =UNIX= =UTF-8= =Go-lang=
+- (1953 US) Richard Stallman :: (co) Designerl of: GNU Project, Emacs, gcc, gdb
 - (1954 US) Bill Joy :: (co) Designer of Sun Microsystems, Java, NFS, BSD, vi, csh, chroot, TCP/IP
+- (1956 CA) Rob Pike :: (co) designer of: =UNIX= =Plan-9= =Blit= =UTF-8= =Go-land=
 - (1959 US) Brian Fox :: Author of: =bash=
 - (1969 FI) Linus Torvalds :: Author of: =Linux= kernel, 
 # End of cix-hall-of-fame.org
