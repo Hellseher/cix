@@ -1,0 +1,27 @@
+# File           : cix-pcre-tools.org
+# Created        : <2017-10-05 Thu 21:13:04 BST>
+# Modified       : <2017-10-05 Thu 21:19:06 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: pcre-tools
+|-----------------+--------------|
+| *Author*        | Philip Hazel |
+| *Maintainer(s)* |              |
+| *Released*      |              |
+| *Source*        | [[https://vcs.pcre.org/pcre/][pcre.vcs]]     |
+|                 | [[https://vcs.pcre.org/pcre2/][pcre2.vcs]]    |
+| *Homepage*      | [[https://www.pcre.org/][pcre.weg]]     |
+|-----------------+--------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-pcre-tools.org

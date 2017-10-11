@@ -1,0 +1,26 @@
+# File           : cix-ksh.org
+# Created        : <2017-10-07 Sat 23:17:24 BST>
+# Modified       : <2017-10-07 Sat 23:19:41 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ksh
+|-----------------+------------|
+| *Author*        | David Korn |
+| *Maintainer(s)* |            |
+| *Released*      | 1983       |
+| *Source*        |            |
+| *Homepage*      |            |
+|-----------------+------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-ksh.org

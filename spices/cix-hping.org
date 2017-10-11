@@ -1,0 +1,26 @@
+# File           : cix-hping.org
+# Created        : <2017-10-08 Sun 23:10:00 BST>
+# Modified       : <2017-10-08 Sun 23:13:02 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: hping
+|-----------------+------------------------|
+| *Author*        | 	Salvatore Sanfilippo |
+| *Maintainer(s)* |                        |
+| *Released*      | 2012                   |
+| *Source*        | [[https://github.com/antirez/hping][hping.git]]              |
+| *Homepage*      | [[http://www.hping.org/][hping.web]]              |
+|-----------------+------------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-hping.org

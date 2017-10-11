@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-10-04 Wed 21:55:35 BST> sharlatan
+# Modified   : <2017-10-08 Sun 23:09:53 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -118,7 +118,7 @@ on *GNU/Linux*
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /be silent and help ppls/
-  + [[./spices/cix-gnu-binutils.org][GNU-binutils]] :: collection of binary tools
+  + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
@@ -146,9 +146,10 @@ on *GNU/Linux*
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder
   + [[./spices/cix-ag.org][ag]] :: super-fast text searching tool - The Silver Searcher
   + [[./spices/cix-fdupes.org][fdupes]] :: finds duplicate files in a given set of directories
-  + [[./spices/cix-gnu-findutils.org][GNU-findutils]] :: the GNU versions of find utilities (find and xargs)
-  + [[./spices/cix-gnu-grep.org][GNU-grep]] :: pattern matching utilities
+  + [[./spices/cix-gnu-findutils.org][findutils]] :: the GNU versions of find utilities (find and xargs)
+  + [[./spices/cix-gnu-grep.org][grep]] :: pattern matching utilities
   + [[file:./spices/cix-jq.org][jq]] :: command-line json processor: =OS-X= =FreeBSD= =Solaris= =GNU/Linux= =Windows=
+  + [[file:./spices/cix-pcre-tools.org][pcre-tools]] :: auxiliary utilities for pcre: =GNU/Linux=
   + [[file:./spices/cix-ripgrep.org][ripgrep]] :: rg combines the usability of The Silver Searcher with the raw speed of grep.
   + [[file:./spices/cix-sift.org][sift]] :: A fast and powerful alternative to grep: =OS-X= =GNU/Linux=
   + [[file:./spices/cix-ucg.org][ucg]] :: extremely fast grep-like tool specialized for searching large bodies of source code.
@@ -176,18 +177,21 @@ on *GNU/Linux*
   + [[./spices/cix-openssh.org][OpenSSH]] :: an open source implementation of ssh protocol: =AIX= =HP-UX= =IRIX= =GNU/Linux= =Next= =Sco= =Sni/Reliant= =Unix= =Solaris= =Digital= =Unix/Tru64/Osf= =Mac= =Os-X= =Cygwin=
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =GNU/Linux= =FreeBSD=
   + [[file:./spices/cix-netperf.org][netperf]] :: TCP/UDP/sockets/etc performance benchmark: =FreeBSD= =AIX= =Solaris= =GNU/Linux= =HP-UX= =IRIX=
-  + [[file:./spices/cix-nmap-ncat.org][nmap-ncat]] :: Nmap's Netcat replacement
-  + [[file:./spices/cix-netcat.org][netcat]] :: a simple Unix utility which reads and writes data across network connections, using TCP or UDP protocol: =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
+  + [[file:./spices/cix-nmap-ncat.org][nmap-ncat]] :: Nmap's Netcat replacement:
+  + [[file:./spices/cix-netcat.org][netcat]] :: a tcp/ip swiss army knife for networking:  =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
+  + [[file:./spices/cix-scapy.org][scapy]] :: Interactive packet manipulation tool and network scanner: =GNU/Linux=
+  + [[file:./spices/cix-hping.org][hping]] :: a command-line oriented TCP/IP packet assembler/analyzer: =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS-X= =Windows=
 
 - *Shell* /not just sand.../
-  + [[./spices/cix-gnu-bash.org][GNU-bash]] :: GNU bash shell built in commands
+  + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD
+  + [[./spices/cix-gnu-bash.org][bash]] :: GNU bash shell built in commands
+  + [[file:./spices/cix-dash.org][dash]] :: Small and fast POSIX-compliant shell
   + [[./spices/cix-fish-shell.org][fish-shell]] ::  a friendly interactive shell
+  + [[file:./spices/cix-ksh.org][ksh]] :: KornShell
   + [[./spices/cix-screen.org][screen]] :: a screen manager that supports multiple logins on one terminal
+  + [[./spices/cix-tcsh.org][tcsh]] :: An enhanced version of csh, the C shell: =FreeBSD=
   + [[./spices/cix-tmux.org][tmux]] :: a terminal multiplexer
   + [[./spices/cix-zsh.org][zsh]] ::  powerful interactive shell
-  + [[./spices/cix-tcsh.org][tcsh]] :: An enhanced version of csh, the C shell: =FreeBSD=
-  + [[file:./spices/cix-dash.org][dash]] :: Small and fast POSIX-compliant shell
-  + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD
 
 - *Scheduling* /world is spinning around/
   + [[./spices/cix-at.org][at]] :: job spooling tools
@@ -256,7 +260,8 @@ on *GNU/Linux*
   + ProbeVue :: 
 
 - *Cryptograpy* /Who breaks Enigma code?/
-  + [[./spices/cix-gnu-pg.org][GNUpg]] :: A GNU utility for secure communication and data storage
+  + [[./spices/cix-gnu-pg.org][gnupg]] :: A GNU utility for secure communication and data storage
+  + [[file:./spices/cix-luks.org][luks]] :: Linux Unifed Key Setup 
 
 * Configuration
 Header example of configuration file:
@@ -278,20 +283,58 @@ grep "+conf" ./conf/cix-vsftpd.conf
 - [[file:./conf/cix-vsftpd.conf][vsftpd.conf]]
 - [[file:conf/cix-grub.cfg][grub.cfg]]
 
+* Libraries
+Distribution of most commonly used libraries
+** Fedora GNU/Linux
+#+BEGIN_EXAMPLE
+     1     2937 libc
+     2     1574 libm
+     3     1556 libpthread
+     4     1546 libdl
+     5     1036 libz
+     6      993 librt
+     7      919 libpcre
+     8      915 libgcc_s
+     9      778 libselinux
+    10      685 libresolv
+    11      631 liblzma
+    12      551 libcap
+    13      507 libgpg-error
+    14      505 libgcrypt
+    15      495 libffi
+    16      490 libglib-2
+    17      488 libuuid
+    18      479 liblz4
+    19      465 libsystemd
+    20      458 libstdc++
+#+END_EXAMPLE
+
+** FreeBSD
+#+BEGIN_EXAMPLE
+
+#+END_EXAMPLE
 * Glosary
-- SUS :: Single UNIX Specitication
 - discriptor ::
 - DMI ::
-- sticky bit ::
+- GID :: 
 - GUI :: Graphical User Interface
+- CLI ::
+- GNU :: GNU is Not a Unix, it is a collection of many programs: applications,
+         libraries, developer tools, even games. The development of GNU, started
+         in January 1984. https://www.gnu.org
+- inode ::
+- magic number :: 
+- MBR ::
+- BIOS :: 
+- nice ::
+- PID ::
 - restricted delition flag :: prevents unprivileged users from removing or
      renaming a file in the directory unless they own the file or the directory
-- inode ::
 - RFC :: [[https://www.rfc-editor.org/retrieve/][Request for Comment]] - official standards in the internet community.
-- nice ::
+- sticky bit ::
+- SUS :: Single UNIX Specitication
 - UID ::
-- PID ::
-- MBR ::
+- UUID :: 
 * References
 ** Books
 - Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbinsp
@@ -311,6 +354,8 @@ grep "+conf" ./conf/cix-vsftpd.conf
 - M. Douglas McIlroy;
   *A Research UNIX Reader: Annotated Excerpts from the Programmer’s Manual, 1971-1986*;
 ** Links
+- THE UNIX ORAL HISTORY PROJECT
+  http://www.princeton.edu/~hos/Mahoney/expotape.htm
 - GNU Coreutils
   http://www.gnu.org/software/coreutils/manual/coreutils.html
 - Basics of the Unix Philosophy
