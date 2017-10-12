@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-10-04 Wed 21:54:28 BST> sharlatan
+# Modified   : <2017-10-12 Thu 22:54:13 BST> sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -1082,11 +1082,59 @@ remove all but specific file(s):
 *** sleep::files
 *** sleep::see-also
 ** sort                                                                         
-[[Index][⬆]]
+[[Index][⬆]] /sort lines of text files/
+/Written by Mike Haertel and Paul Eggert/
 *** sort::options
+
+| OPT                                   | TYPE | V++ | V-- | DESC                                                                                                                 |
+|---------------------------------------+------+-----+-----+----------------------------------------------------------------------------------------------------------------------|
+| =--batch-size=NMERGE=                 |      |     |     | merge at most NMERGE inputs at once; for more use temp files                                                         |
+| =--compress-program=PROG=             |      |     |     | compress temporaries with PROG; decompress them with PROG -d                                                         |
+| =--debug=                             |      |     |     | annotate the part of the line used to sort, and warn about questionable usage to stderr                              |
+| =--files0-from=F=                     |      |     |     | read input from the files specified by NUL-terminated names in file F; If F is - then read names from standard input |
+| =--help=                              |      |     |     | display this help and exit                                                                                           |
+| =--parallel=N=                        |      |     |     | change the number of sorts run concurrently to N                                                                     |
+| =--random-source=FILE=                |      |     |     | get random bytes from FILE                                                                                           |
+| =--sort=WORD=                         |      |     |     | sort according to WORD: general-numeric -g, human-numeric -h, month -M, numeric -n, random -R, version -V            |
+| =--version=                           |      |     |     | output version information and exi                                                                                   |
+| =-C, --check=quiet, --check=silent=   |      |     |     | like -c, but do not report first bad line                                                                            |
+| =-M, --month-sort=                    |      |     |     | compare (unknown) < 'JAN' < ... < 'DEC'                                                                              |
+| =-R, --random-sort=                   |      |     |     | shuffle, but group identical keys.  See shuf(1)                                                                      |
+| =-S, --buffer-size=SIZE=              |      |     |     | use SIZE for main memory buffer                                                                                      |
+| =-T, --temporary-directory=DIR=       |      |     |     | use DIR for temporaries, not $TMPDIR or /tmp; multiple options specify multiple directories                          |
+| =-V, --version-sort=                  |      |     |     | natural sort of (version) numbers within text                                                                        |
+| =-b, --ignore-leading-blanks=         |      |     |     | ignore leading blanks                                                                                                |
+| =-c, --check, --check=diagnose-first= |      |     |     | check for sorted input; do not sort                                                                                  |
+| =-d, --dictionary-order=              |      |     |     | consider only blanks and alphanumeric characters                                                                     |
+| =-f, --ignore-case=                   |      |     |     | fold lower case to upper case characters                                                                             |
+| =-g, --general-numeric-sort=          |      |     |     | compare according to general numerical value                                                                         |
+| =-h, --human-numeric-sort=            |      |     |     | compare human readable numbers (e.g., 2K 1G)                                                                         |
+| =-i, --ignore-nonprinting=            |      |     |     | consider only printable characters                                                                                   |
+| =-k, --key=KEYDEF=                    |      |     |     | sort via a key; KEYDEF gives location and type                                                                       |
+| =-m, --merge=                         |      |     |     | merge already sorted files; do not sort                                                                              |
+| =-n, --numeric-sort=                  |      |     |     | compare according to string numerical value                                                                          |
+| =-o, --output=FILE=                   |      |     |     | write result to FILE instead of standard output                                                                      |
+| =-r, --reverse=                       |      |     |     | reverse the result of comparisons                                                                                    |
+| =-s, --stable=                        |      |     |     | stabilize sort by disabling last-resort comparison                                                                   |
+| =-t, --field-separator=SEP=           |      |     |     | use SEP instead of non-blank to blank transition                                                                     |
+| =-u, --unique=                        |      |     |     | with -c, check for strict ordering; without -c, output only the first of an equal run                                |
+| =-z, --zero-terminated=               |      |     |     | line delimiter is NUL, not newline                                                                                   |
+|---------------------------------------+------+-----+-----+----------------------------------------------------------------------------------------------------------------------|
+
 *** sort::examples
+
+**** sort-171012222046
+list block devices (all, min, max):
+:    ~$ egrep -o "[0-9]* [sv]d[a-z]$" /proc/partitions | sort -k2 -u
+:    ~$ egrep -o "[0-9]* [sv}d[a-z]$" /proc/partitions | sort | head -n1
+:    ~$ egrep -o "[0-9]* [sv}d[a-z]$" /proc/partitions | sort -r | head -n1
+[[file::*egrep][egrep]] [[file:./cix-gnu-coreutils.org::*head][head]]
+
+- https://github.com/torvalds/linux/blob/master/Documentation/admin-guide/devices.txtcase
+
 *** sort::files
 *** sort::see-also
+[[file:./cix-gnu-coreutils.org::*shuf][shuf]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]]
 ** split                                                                        
 [[Index][⬆]]
 *** split::options
