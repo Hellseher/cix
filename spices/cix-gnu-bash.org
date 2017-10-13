@@ -1,6 +1,6 @@
 # File          : cix-gnu-bash-builtin.org
 # Created       : <2015-11-07 Mon 00:07:40 GMT>
-# Modified      : <2017-8-26 Sat 00:26:04 BST> sharlatan
+# Modified      : <2017-10-13 Fri 18:51:17 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : The GNU Bourne Again shell
@@ -237,6 +237,27 @@ list of all environment varialbes used in current session:
 ulimit [OPTION] [SHabcdefilmnpqrstuvxT] [LIMIT]
 
 ** while                                                                        :cmd:
+*** while::examples
+**** while-171013184352
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  _while_read()
+  { # Read from a file or stdin 
+
+      while IFS= read -r line; do
+          printf "%s\n" "$line"
+      done < "${1:-/dev/stdin}"
+  }
+
+  main()
+  {
+     _while_read "$@" 
+  }
+
+  main "$@"
+  # End of script
+#+END_SRC
 * Receipts::variables
 ** PIPESTATUS
 
