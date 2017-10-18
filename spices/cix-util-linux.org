@@ -1,6 +1,6 @@
 # File          : cix-util-linux.org
 # Created       : <2016-10-14 Wed 23:08:36 GMT>
-# Modified      : <2017-9-17 Sun 21:22:32 BST> sharlatan
+# Modified      : <2017-10-18 Wed 22:41:42 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : is a standard package of the Linux operating system: =Linux=
@@ -802,17 +802,17 @@ display sertain part of the path:
   # Default action
   GET_PATH="$(pwd)"
 
-  DEPTH="$2"
+  DEPTH="2"
 
   echo "$GET_PATH" \
       | rev \
-      | cut -d"/" -f1-"$DEPTH" \
+      | cut -d"/" -f"$DEPTH" \
       | rev
 
+  # End of script
 #+END_SRC
+[[file:./cix-gnu-coreutils.org::*cut][cut]]
 
-#+RESULTS:
-: /home/sharlatan/Projects/my-GitHub/cix/spices
 
 *** rev::files
 *** rev::see-also

@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-10-12 Thu 22:54:13 BST> sharlatan
+# Modified   : <2017-10-18 Wed 22:41:26 BST> sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -978,9 +978,15 @@ list files with specified number of columns:
 *** ptx::files
 *** ptx::see-also
 ** pwd                                                                          
-[[Index][⬆]]
+[[Index][⬆]] /print name of current/working directory/
+/Written by Jim Meyering/
 *** pwd::options
 *** pwd::examples
+**** pwd-171018223906
+print relative path to the curent directory:
+:    ~$ pwd | rev | cut -d'/' -f1 | rev
+[[file:./cix-util-linux.org::*rev][rev]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
+
 *** pwd::files
 *** pwd::see-also
 ** readlink                                                                     
