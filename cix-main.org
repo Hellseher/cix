@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-10-08 Sun 23:09:53 BST> sharlatan
+# Modified   : <2017-10-18 Wed 21:21:14 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -252,6 +252,8 @@ on *GNU/Linux*
   + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
   + [[file:./spices/cix-dtrace.org][dtrace]] :: comprehensive dynamic tracing framework: =Solaris= =FreeBSD= =NetBSD= =OS-X=
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
+  + [[file:./spices/cix-kernel-devel.org][kernel-devel]] :: Development package for building kernel modules to match the kernel
+  + [[file:./spices/cix-dkms.org][dkms]] :: Dynamic Kernel Module Support Framework
   + ftrace ::
   + ktrace ::
   + ltrace ::

@@ -1,0 +1,26 @@
+# File           : cix-kernel-devel.org
+# Created        : <2017-10-18 Wed 20:52:17 BST>
+# Modified       : <2017-10-18 Wed 21:07:12 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: kernel-devel
+|-----------------+----------------|
+| *Author*        | Linus Torvalds |
+| *Maintainer(s)* |                |
+| *Released*      |                |
+| *Source*        | [[https://git.kernel.org/][kernel.git]]     |
+| *Homepage*      | [[https://www.kernel.org/][kernel.web]]     |
+|-----------------+----------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-kernel-devel.org

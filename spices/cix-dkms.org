@@ -1,0 +1,26 @@
+# File           : cix-dkms.org
+# Created        : <2017-10-18 Wed 21:09:51 BST>
+# Modified       : <2017-10-18 Wed 21:21:14 BST> sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: dkms
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        | [[https://github.com/dell/dkms][dkms.git]] |
+| *Homepage*      |   |
+|-----------------+---|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-dkms.org
