@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-10-18 Wed 22:42:23 BST> sharlatan
+# Last Modified  : <2017-10-21 Sat 01:57:44 BST> sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -98,6 +98,7 @@ QTY  CMD       PKG
 1    lsblk     util-linux
 1    ln        gnu-coreutils
 1    ldd       glibc
+1    jq        jq
 1    gpg       gnu-pg
 1    gpasswd   shadow-utils
 1    git       git
@@ -111,6 +112,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  194
-Scripts:   105
+Onliners:  195
+Scripts:   107
 #+END_SRC

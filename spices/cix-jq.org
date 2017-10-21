@@ -1,6 +1,6 @@
 # File           : cix-jq.org
 # Created        : <2017-08-04 Fri 23:19:38 BST>
-# Modified       : <2017-9-03 Sun 21:03:14 BST> sharlatan
+# Modified       : <2017-10-21 Sat 01:57:05 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : lightweight and flexible command-line JSON processor.
@@ -31,6 +31,18 @@ you'd expect.
 -----
 * Index
 * Receipts
+** jq
+*** jq::options
+| keys      |
+| length    |
+| type      |
+| has(keys) |
+
+*** jq::examples
+**** jq-171021015458
+list all Ansible variables from =setup= module:
+:    ~$ ansible -m setup localhost |sed "1c {" | jq ".ansible_facts|keys"
+
 * Refreances
 
 # End of cix-jq.org
