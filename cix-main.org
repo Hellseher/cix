@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-10-18 Wed 21:21:14 BST> sharlatan
+# Modified   : <2017-10-25 Wed 01:41:55 BST> sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -128,6 +128,9 @@ on *GNU/Linux*
   + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
   + [[file:./spices/cix-vmtouch.org][vmtouch]] :: Portable file system cache diagnostics and control
   + [likwid]  ::
+  + [facter] ::
+  + [ohai] ::
+  + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
 
 - *Hardware* /hard as a rock!/
   + [[file:./spices/cix-iw.org][iw]] :: A nl80211 based wireless configuration tool: =GNU/Linux=
@@ -135,7 +138,6 @@ on *GNU/Linux*
   + [[./spices/cix-lshw.org][lshw]] :: hardware lister: =GNU/Linux=
   + [[file:./spices/cix-oprofile.org][OProfile]] :: System wide profiler: =GNU/Linux=
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =FreeBSD= =NetBSD= =OpenBSD= =GNU/Linux= =FreeBSD= =Solaris/i386= =AIX= =GNU/Hurdd= =Windows= =Cygwin= =BeOS= =Haiku= =Darwin=
-  + [[./spices/cix-perf.org][perf]] :: Performance monitoring for the Linux kerne: =GNU/Linux=
   + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks: =OS-X= =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS/2= =Cygwin= =QNX= =eComStation= =Windows=
   + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =GNU/Linux= =Gentoo= =OpenBSD= =FreeBSD=
   + [[file:./spices/cix-stress-ng.org][stress-ng]] :: stress test a computer system in various ways: =GNU/Linux= =GNU/Hurd= =FreeBSD= =OpenBSD= =NetBSD= =FreeBSD= =MINIX= =OpenIndiana=
@@ -252,8 +254,9 @@ on *GNU/Linux*
   + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
   + [[file:./spices/cix-dtrace.org][dtrace]] :: comprehensive dynamic tracing framework: =Solaris= =FreeBSD= =NetBSD= =OS-X=
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
-  + [[file:./spices/cix-kernel-devel.org][kernel-devel]] :: Development package for building kernel modules to match the kernel
-  + [[file:./spices/cix-dkms.org][dkms]] :: Dynamic Kernel Module Support Framework
+  + [[file:./spices/cix-kernel-devel.org][kernel-devel]] :: development package for building kernel modules to match the kernel
+  + [[file:./spices/cix-dkms.org][dkms]] :: dynamic kernel module support framework
+  + [[./spices/cix-perf.org][perf]] :: performance monitoring for the Linux kernel: =GNU/Linux=
   + ftrace ::
   + ktrace ::
   + ltrace ::
@@ -264,6 +267,9 @@ on *GNU/Linux*
 - *Cryptograpy* /Who breaks Enigma code?/
   + [[./spices/cix-gnu-pg.org][gnupg]] :: A GNU utility for secure communication and data storage
   + [[file:./spices/cix-luks.org][luks]] :: Linux Unifed Key Setup 
+      
+- *Web* /Are you a spiderman?/
+  + [[file:./spices/cix-haproxy.org][haproxy]] ::
 
 * Configuration
 Header example of configuration file:
@@ -373,6 +379,8 @@ Distribution of most commonly used libraries
 - BashGuide 
   http://mywiki.wooledge.org/BashGuide
 - http://everythingsysadmin.com/
+- Linux Performance 
+  http://www.brendangregg.com/linuxperf.html
 
 ** Wikis
 - http://wiki.bash-hackers.org/
@@ -382,6 +390,8 @@ Distribution of most commonly used libraries
 - https://wiki.ubuntu.com/
 
 ** Hubs
+- perf-tools
+  https://github.com/brendangregg/perf-tools
 - Bioinformatics one-liners
   https://github.com/stephenturner/oneliners
 - Awesome Shell
