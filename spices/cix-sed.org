@@ -1,6 +1,6 @@
 # File          : cix-sed.org
 # Created       : <2016-11-04 Fri 22:49:14 GMT>
-# Modified      : <2017-10-04 Wed 11:56:30 BST> hellseher
+# Modified      : <2017-10-28 Sat 12:36:11 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU stream text editor
@@ -9,19 +9,19 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: sed
-|---------------+-----------------|
+|-----------------+-----------------|
 | *Author(s)*     | Lee E. McMahon, |
-|               | Jay Fenlason,   |
-|               | Tom Lord        |
+|                 | Jay Fenlason,   |
+|                 | Tom Lord        |
 | *Maintainer(s)* | Ken Pizzini,    |
-|               | Paolo Bozini,   |
-|               | Jim Meyering,   |
-|               | Assaf Gordon    |
+|                 | Paolo Bozini,   |
+|                 | Jim Meyering,   |
+|                 | Assaf Gordon    |
 | *Released*      | 1974            |
-|               | gnu-1989        |
+|                 | gnu-1989        |
 | *Source*        | [[http://git.savannah.gnu.org/gitweb/?p%3Dsed.git][sed.git]]         |
-| *Info*          |                 |
-|---------------+-----------------|
+| *Homepage*      |                 |
+|-----------------+-----------------|
 
 The =sed= (Stream EDitor) editor is a stream or batch (non-interactive) editor.
 Sed takes text as input, performs an operation or set of operations on the text
@@ -33,7 +33,7 @@ command line.
 ** GNU sed                                                                      :cmd:
 
 *** sed::options
-| OPT                               | TYPE | ++V | --V | DESC                                                  |
+| OPT                               | TYPE | V++ | V-- | DESC                                                  |
 |-----------------------------------+------+-----+-----+-------------------------------------------------------|
 | =-i[SUFFIX], --in-place[=SUFFIX]= |      |     |     | edit files in place (makes backup if SUFFIX supplied) |
 | =-e script, --expression=script=  |      |     |     | add the script to the commands to be execute          |
@@ -55,7 +55,6 @@ command line.
 | =&=     | Matched string                             |
 | =\n=    | Group number where n is any integer number |
 |---------+--------------------------------------------|
-
 
 *** sed::examples
 **** sed-161122223125
@@ -137,6 +136,10 @@ display the last line of the file:
 coment out line with sertain PATERN:
 :    ~$ sed -i -e '/PATERN/ s/^#*/#/' input_f
 
+**** sed-171028123303
+replace a newline (\n\r) to a STRING:
+:     ~$ sed ':a;N;$!ba;s/\n/STRING/g' input_f
+:     ~$ sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/STRING/g' infput_f
 *** sed::files
 *** sed::see-also
     [[file:./cix-gawk.org::*awk][awk (1)]], ed, [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],perlre(1)
