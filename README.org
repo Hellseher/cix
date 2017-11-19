@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-11-04 Sat 12:28:00 GMT> Sharlatan
+# Last Modified  : <2017-11-19 Sun 22:12:06 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -16,7 +16,7 @@ You can start from here > [[./cix-main.org][cix-main]]
 
 #+BEGIN_SRC sh :results value org :results output replace :exports results
 pwd | rev | cut -d"/" -f1 | rev
-tree -L 1
+tree -L 2
 #+END_SRC
 
 #+RESULTS:
@@ -61,6 +61,7 @@ QTY  CMD       PKG
 5    ls        gnu-coreutils
 5    grep      gnu-grep
 4    paste     gnu-coreutils
+4    lspci     pciutils
 4    lsof      lsof
 4    curl      curl
 4    column    util-linux
@@ -68,6 +69,7 @@ QTY  CMD       PKG
 3    tr        gnu-coreutils
 3    tar       tar
 3    nc        nmap-ncat
+3    dpkg      dpkg
 2    wget      wget
 2    tee       gnu-coreutils
 2    ss        iproute2
@@ -113,6 +115,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  198
+Onliners:  208
 Scripts:   107
 #+END_SRC

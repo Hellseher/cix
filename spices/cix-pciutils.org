@@ -1,6 +1,6 @@
 # File           : cix-pciutils.org
 # Created        : <2016-11-08 Tue 23:15:13 GMT>
-# Modified  : <2017-9-03 Sun 22:35:34 BST> sharlatan
+# Modified  : <2017-11-19 Sun 22:11:28 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis : PCI bus related utilities
@@ -9,13 +9,13 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: pciutils
-|----------+-----------------|
+|------------+-----------------|
 | *Author*   | Martin Mareš CZ |
 | *Released* | 1997            |
 | *Source*   | [[http://git.kernel.org/cgit/utils/pciutils/pciutils.git/][pciutils.git]]    |
-|----------+-----------------|
+|------------+-----------------|
 
-The PCI  Utilities package  contains a  library for portable  access to  PCI bus
+The PCI Utilities package contains a library for portable access to PCI bus
 configuration registers and several utilities based on this library.
 -----
 
@@ -25,5 +25,28 @@ configuration registers and several utilities based on this library.
     setpci (8)           - configure PCI devices
     update-pciids (8)    - download new version of the PCI ID list
 #+END_EXAMPLE
+* Receipts
+** lspci
+:  <domain>:<bus>:<slot>.<func> <class>: <description>
+*** lspci::options
+*** lspci::examples
+**** lspci-171119213908 
+list active PCI slots know for kernel on runtime:
+:    ~# lspci | grep -oP "[0-9a-f]{1,4}:[0-9a-f]{1,2}\.[0-7]"
+:    ~# lspci | egrep -o "[0-9a-f]{1,4}:[0-9a-f]{1,2}\.[0-7]"
+[[file:./cix-gnu-grep.org::*grep][grep]] [[file::*egrep][egrep]]
+
+**** lspci-171119215303 
+list avialable classes:
+:    ~# lspci | grep -oP "(?<=\.[0-7]\s).*(?=:)" | sort | uniq -c | sort -rn
+[[file:./cix-gnu-grep.org::*grep][grep]] [[file:./cix-gnu-coreutils.org::*sort][sort]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]]
+
+**** lspci-171119215346  
+show device in the specific slot:
+:    ~# lspci -s <slot>
+
+**** lspci-171119221047 
+display tag:value pair info for a pci device:
+:    ~# lspci -vmms <slot>
 
 # End of cix-pciutils.org
