@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-11-19 Sun 22:12:06 GMT> Sharlatan
+# Last Modified  : <2017-11-22 Wed 22:11:01 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -66,6 +66,7 @@ QTY  CMD       PKG
 4    curl      curl
 4    column    util-linux
 3    xargs     gnu-findutils
+3    udevadm   systemd
 3    tr        gnu-coreutils
 3    tar       tar
 3    nc        nmap-ncat
@@ -81,7 +82,6 @@ QTY  CMD       PKG
 1    while     gnu-bash
 1    whatis    man-db
 1    usermod   shadow-utils
-1    udevadm   systemd
 1    strings   gnu-binutils
 1    sort      gnu-coreutils
 1    smem      smem
@@ -105,6 +105,7 @@ QTY  CMD       PKG
 1    gpasswd   shadow-utils
 1    git       git
 1    flock     util-linux
+1    file      file
 1    expr      gnu-coreutils
 1    du        gnu-coreutils
 1    dnf       dnf
@@ -115,6 +116,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  208
+Onliners:  211
 Scripts:   107
 #+END_SRC

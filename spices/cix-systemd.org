@@ -1,6 +1,6 @@
 # File           : cix-systemd.org
 # Created        : <2016-12-17 Sat 20:57:29 GMT>
-# Modified  : <2017-9-03 Sun 22:35:33 BST> sharlatan
+# Modified  : <2017-11-22 Wed 22:10:48 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis : System and Service Manager.
@@ -166,21 +166,33 @@ implements an elaborate transactional dependency-based service control logic.
 ** udevadm
 /Send control commands or test the device manager/
 *** udevadm::options
-| OPT          | TYPE | ++V | --V | DESC                             |
-|--------------+------+-----+-----+----------------------------------|
-| info         |      |     |     | Query sysfs or the udev database |
-| trigger      |      |     |     | Request events from the kernel   |
-| settle       |      |     |     | Wait for pending udev events     |
-| control      |      |     |     | Control the udev daemon          |
-| monitor      |      |     |     | Listen to kernel and udev events |
-| test         |      |     |     | Test an event run                |
-| test-builtin |      |     |     | Test a built-in command          |
-|--------------+------+-----+-----+----------------------------------|
+| OPT            | TYPE | ++V | --V | DESC                             |
+|----------------+------+-----+-----+----------------------------------|
+| =info=         |      |     |     | Query sysfs or the udev database |
+| =trigger=      |      |     |     | Request events from the kernel   |
+| =settle=       |      |     |     | Wait for pending udev events     |
+| =control=      |      |     |     | Control the udev daemon          |
+| =monitor=      |      |     |     | Listen to kernel and udev events |
+| =test=         |      |     |     | Test an event run                |
+| =test-builtin= |      |     |     | Test a built-in command          |
+|----------------+------+-----+-----+----------------------------------|
 
 *** udevadm::examples
 **** udevadm-170808190519
-Update/reload udev rules without system reboot:
+update/reload udev rules without system reboot:
 :    ~# udevadm control --reload-rules && udevvadm trigger
-* References
 
+**** udevadm-171122220540 
+get full udev attribute list for a DEVICE:
+:    ~# udevadm info -a -p $(udevadm info -q path -n /dev/DEVICE)
+
+**** udevadm-171122220727 
+testing rules before loading:
+:    ~# udevadm test $(udevadm info -q path -n DEVICE)
+
+* References
+- Writing udev rules
+  http://www.reactivated.net/writing_udev_rules.html
+** Wiki
+- https://wiki.archlinux.org/index.php/udev
 # End of cix-systemd.org
