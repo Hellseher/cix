@@ -1,6 +1,6 @@
 # File          : cix-sed.org
 # Created       : <2016-11-04 Fri 22:49:14 GMT>
-# Modified      : <2017-10-28 Sat 12:36:11 BST> Sharlatan
+# Modified      : <2017-12-02 Sat 23:57:21 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU stream text editor
@@ -58,58 +58,58 @@ command line.
 
 *** sed::examples
 **** sed-161122223125
-Remove leading white spaces and tabs from a file:
+remove leading white spaces and tabs from a file:
 :    ~$ sed -i -e 's/^[ \t]*//g' input_f
 :    ~$ sed 's/^ *//g' input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-170304154248
-Remove trailing white spaces from a file:
+remove trailing white spaces from a file:
 :    ~$ sed -i -e 's/[\t ]*$//g' input_f
 :    ~$ sed -e 's/ *$//g' input_f > tmp_f && mv tm_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-170718230254
-Remove blank lines from a file:
+remove blank lines from a file:
 :    ~$ sed -i -e '/^$/' input_f
 
 **** sed-170718231048
-Remove leading, trailing whitespaces, tabs and blank lines in one run:
+remove leading, trailing whitespaces, tabs and blank lines in one run:
 :    ~$ sed -i -e 's/^[\t ]*//;s/[\t ]*$//;s/^$/' input_f
 
 **** sed-170718231657
-To remove everything except the 1st n characters in every line:
+to remove everything except the 1st n characters in every line:
 :    ~$ sed -r 's/(.{3}).*/\1/' input_f
 
 **** sed-170718231934
-To remove everything except the last n characters in a file:
+to remove everything except the last n characters in a file:
 :    ~$ sed -r 's/.*(.{3})/\1/' input_f
 
 **** sed-161122224710
-Remove lines between 2 patterns exluding and including:
+remove lines between 2 patterns exluding and including:
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/{//!d}" input_f > tmp_f && mv tmp_f input_f
 :    ~$ sed "/BEGIN_PAT/,/END_PAT/d" input_f > tmp_f && mv tmp_f input_f
 [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 
 **** sed-170106224318
-Output text betwin BEGIN_PAT and END_PAT:
+output text betwin BEGIN_PAT and END_PAT:
 :    ~$ sed -n '/BEGIN_PAT/,/END_PAT/p' input_f
 
 **** sed-170106225346
-Wrap each line of a file in quotes:
+wrap each line of a file in quotes:
 :    ~$ sed -e 's/\(.*\)/"\1"/' input_f
 
 **** sed-170203214632
-Split camelcase with spaces:
+split camelcase with spaces:
 :    ~$ sed 's/\([A-Z]\)/ \1/g'
 
 **** sed-170718233452
-Insert line after or before PATTERN:
+insert line after or before PATTERN:
 :    ~$ sed -i '/PATTERN/a NEW_LINE_STRING' input_f
 :    ~$ sed 's/\(PATERN\)/NEW_LINE_STRING\1/g' input_f
 
 **** sed-161209234700
-Insert spaces every n character in a file or string:
+insert spaces every n character in a file or string:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -140,6 +140,54 @@ coment out line with sertain PATERN:
 replace a newline (\n\r) to a STRING:
 :     ~$ sed ':a;N;$!ba;s/\n/STRING/g' input_f
 :     ~$ sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/STRING/g' infput_f
+
+**** sed-171202235149
+convert ini config file to JSON:
+#+BEGIN_SRC sh
+  #!/usr/bin/env bash
+
+  ini2json()
+  { # Converting ini to JSON hacker's way!
+
+      local input_f="$1"
+
+      # Replace section with JSON object name 1st stage
+      grep -v "\;\|^$" "$input_f" | while read -r line; do
+          echo "$line" | sed -e 's/^ *//' \
+                             -e 's/ *$//' \
+                             -e 's/^/"/' \
+                             -e 's/\(= *[0-9]\+$\)/=NUM\1NUM/' \
+                             -e 's/\=/": "/' \
+                             -e 's/^\"\[/},"/' \
+                             -e 's/\]$/": {/' \
+                             -e 's/$/"/' \
+                             -e 's/ {\"/{/'
+      done > /tmp/input_ini
+
+      sed -i -e '1 s/\}\,//' \
+          -e '$ s/$/}/' \
+          -e 's/:{/: {/g' \
+          /tmp/input_ini
+
+      sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/ /g' \
+          -e 's/\" \"/", "/g' \
+          -e 's/\"False\"/false/g' \
+          -e 's/\"True\"/true/g' \
+          -e 's/\"NUM\=//g' \
+          -e 's/NUM\"//g' \
+          /tmp/input_ini
+  }
+
+  main()
+  {
+      ini2json "$1"
+  }
+
+  main "$@"
+  # End of script.
+#+END_SRC
+[[file:./cix-gnu-grep.org::*grep][grep]]
+
 *** sed::files
 *** sed::see-also
     [[file:./cix-gawk.org::*awk][awk (1)]], ed, [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],perlre(1)
