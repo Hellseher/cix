@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-12-02 Sat 23:57:22 GMT> Sharlatan
+# Last Modified  : <2017-12-04 Mon 23:09:42 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -41,7 +41,7 @@ cix
 #+END_SRC
 
 ** Statistic
-#+BEGIN_SRC sh :results value org output replace :exports results
+#+BEGIN_SRC sh :results value org replace :exports results
 ./cix-stat.sh stat
 #+END_SRC
 
@@ -75,6 +75,7 @@ QTY  CMD       PKG
 2    tee       gnu-coreutils
 2    ss        iproute2
 2    ssh       openssh
+2    sort      gnu-coreutils
 2    rsync     rsync
 2    objdump   gnu-binutils
 2    nohup     gnu-coreutils
@@ -83,7 +84,6 @@ QTY  CMD       PKG
 1    whatis    man-db
 1    usermod   shadow-utils
 1    strings   gnu-binutils
-1    sort      gnu-coreutils
 1    smem      smem
 1    set       gnu-bash
 1    rm        gnu-coreutils
@@ -116,6 +116,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  211
+Onliners:  213
 Scripts:   108
 #+END_SRC

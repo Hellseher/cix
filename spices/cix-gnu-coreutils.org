@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-10-18 Wed 22:41:26 BST> sharlatan
+# Modified   : <2017-12-04 Mon 23:09:08 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -1137,6 +1137,15 @@ list block devices (all, min, max):
 [[file::*egrep][egrep]] [[file:./cix-gnu-coreutils.org::*head][head]]
 
 - https://github.com/torvalds/linux/blob/master/Documentation/admin-guide/devices.txtcase
+
+**** sort-171204230219
+sort only by the first letter of each line:
+:    ~$ sort -k1.1,1.1 input_f
+
+**** sort171204230821
+list files and sort them by specific field (column):
+:    ~$ ls -l | sed -n '1!P' | sort -k5 -rn
+
 
 *** sort::files
 *** sort::see-also
