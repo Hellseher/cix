@@ -1,6 +1,6 @@
 # File       : cix-awk.org
 # Created    : <2016-11-04 Fri 22:15:18 GMT>
-# Modified   : <2017-9-17 Sun 21:32:18 BST> sharlatan
+# Modified   : <2017-12-11 Mon 22:18:24 GMT> Sharlatan
 # Author     : sharlatan
 # Maintainer :
 # Sinopsis   : The GNU version of the AWK text processing utility
@@ -127,6 +127,11 @@ print file name and the last line for the list of files:
 :    ~$ find ./ -type f -name "PATERN" -print0 | xargs -0 -n1 awk '{s=$0};END{if(s)print FILENAME,s}'
 :    ~$ find ./ -type f -name "PATERN" -print0 | xargs -0 -n1 awk 'END{if ($0) print FILENAME,$0}'
 [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-findutils.org::*find][find]]
+
+**** awk-171211191635
+remove n-th (2nd in this example) field from the end of the each line of input_f:
+:    ~$ awk 'NF>1{$(NF-1)=""};1' input_f
+
 *** awk::files
 *** awk::see-also
     egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
