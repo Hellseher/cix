@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-12-04 Mon 23:09:08 GMT> Sharlatan
+# Modified   : <2017-12-18 Mon 01:20:57 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -312,10 +312,45 @@ create a *C* chars by *L* lines file of a random ASCII characters:
 /Written by David MacKenzie and Jim Meyering/
 
 *** chmod::options
-/[ugoa+-=rwxXstA]/
-/[{1,7}{1,7}{1,7}]/
-
 *** chmod::examples
+**** chmod-171218004822
+grant read access (r) to a file to all members of your group (g):
+:    ~$ chmod g+r file_name
+:    ~$ chmod 0040 file_name
+
+**** chmod-171218004901
+grant read access to a directory to all members your group:
+:    ~$ chmod g+rx dir_name
+:    ~$ chmod 0050 dir_name
+
+Note: "execute" permission is required in order to read a directory.
+
+**** chmod-171218004946
+grant read permissions to everyone on the system: 
+:    ~$ chmod ugo+r file_name
+:    ~$ chmod 0444 file_name
+
+**** chmod-171218005155
+grant read permissions on a directory to everyone on the system:
+:    ~$ chmod ugo+rx dir_name
+:    ~$ chmod 0555 dir_name
+
+**** chmod-171218005249
+grant modify or delete permissions to a file which you own for everyone in the group:
+:    ~$ chmod ugo+rw file_name
+:    ~$ chmod 0666 file_name
+
+Note: In order for modify and delete permissions to be useful, one must be able
+to modify the directory in which the file is located: chmod ugo+rwx ./
+
+**** chmod-171218005605
+deny read access to a file by everyone except yourself:
+:    ~$ chmod go-r file_name
+
+**** chmod-171218005657
+allow everyone in your group to be able to modify the file:
+:    ~$ chmod 660 file-name
+
 *** chmod::files
 *** chmod::see-also
 ** chown                                                                        

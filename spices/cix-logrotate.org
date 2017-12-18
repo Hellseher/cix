@@ -1,0 +1,19 @@
+# File          : cix-logrotate.org
+# Created       : <2017-12-15 Fri 00:13:26 GMT>
+# Modified      : <2017-12-15 Fri 00:58:29 GMT> Sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : rotates, compresses, removes and mails system log files
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: logrotate
+|-----------------+---------------|
+| *Author*        |               |
+| *Maintainer(s)* |               |
+| *Released*      |               |
+| *Source*        | [[https://github.com/logrotate/logrotate][logrotate.git]] |
+| *Man*           |               |
+| *Homepage*      |               |
+|-----------------+---------------|

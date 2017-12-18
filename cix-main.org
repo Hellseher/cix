@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-10-25 Wed 01:41:55 BST> sharlatan
+# Modified   : <2017-12-15 Fri 00:10:59 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -198,6 +198,7 @@ on *GNU/Linux*
 - *Scheduling* /world is spinning around/
   + [[./spices/cix-at.org][at]] :: job spooling tools
   + [[./spices/cix-cronie.org][cronie]]  :: cron daemon for executing programs at set times
+  + [[./spices/cix-logrotate.org][logrotate]] :: rotates, compresses, removes and mails system log files
 
 - *Media* /please your eyes and ears/
   + [[file:./spices/cix-alsa.org][alsa]] :: advanced Linux sound architecture (alsa) utilities: =GNU/Linux=
