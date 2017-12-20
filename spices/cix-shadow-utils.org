@@ -1,6 +1,6 @@
 # File          : cix-shadow-utils.org
 # Created       : <2016-05-03 Tue 00:09:23 GMT>
-# Modified      : <2017-8-20 Sun 23:41:03 BST> sharlatan
+# Modified      : <2017-9-21 Thu 00:33:28 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Utilities for managing accounts and shadow password files
@@ -8,24 +8,18 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Shadow utils
+#+TITLE: shadow-utils
 |-----------------+------------------|
 | *Author(s)*     | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git/tree/README][(all...)]]         |
 | *Maintainer(s)* | Tomasz Kłoczko,  |
 |                 | Nicolas François |
 | *Released*      | 2005             |
 | *Source*        | [[https://anonscm.debian.org/git/pkg-shadow/shadow.git][shadow.git]]       |
+| *Homepage*      | [[http://pkg-shadow.alioth.debian.org/][shadow-utils.web]] |
 |-----------------+------------------|
 
 The shadow-utils package includes the necessary programs for converting UNIX
 password files to the shadow password format, plus programs for managing user
-and group accounts. The pwconv command converts passwords to the shadow password
-format. The pwunconv command unconverts shadow passwords and generates a passwd
-file (a standard UNIX password file). The pwck command checks the integrity of
-password and shadow files. The lastlog command prints out the last login times
-for all users. The useradd, userdel, and usermod commands are used for managing
-user accounts. The groupadd, groupdel, and groupmod commands are used for
-managing group accounts.
 -----
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
@@ -70,5 +64,11 @@ managing group accounts.
 **** gpasswd-170111224028
 add current user to a "docker" group:
 :    ~# gpasswd - ${USER} docker
-
+** usermod
+*** usermod::options
+*** usermod::examples
+**** usermod-170920230059
+generate a hashed password in format $<ID>$<SALT>$<HASH>:
+:    ~# usermod -p $(echo PASSWORD | openssl passwd -1 -stdin) username
+[[file::*openssl][openssl]]
 # End of cix-shadow-utils.org

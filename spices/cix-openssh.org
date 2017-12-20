@@ -1,6 +1,6 @@
 # File          : cix-openssh.org
 # Created       : <2016-11-13 Sun 19:25:52 GMT>
-# Modified      : <2017-8-28 Mon 23:01:42 BST> sharlatan
+# Modified      : <2017-12-14 Thu 23:03:45 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : An open source implementation of SSH protocol versions 1 and 2.
@@ -20,7 +20,7 @@
 | *Contributor(s)* | [[https://anongit.mindrot.org/openssh.git/tree/CREDITS][(all...)]]        |
 | *Released*       | 1999            |
 | *Source*         | [[https://anongit.mindrot.org/openssh.git][openssh.git]]     |
-| *Info*           |                 |
+| *Homepage*       | [[https://www.openssh.com/][openssh.web]]     |
 |------------------+-----------------|
 
 SSH (Secure  SHell) is a  program for logging into  and executing commands  on a
@@ -131,5 +131,6 @@ compare remote file and with local one without copying:
 *** ssh-keyscan::see-also
 
 * References
-
+** RFC
+- https://www.openssh.com/specs.html
 # End of cix-openssh.org

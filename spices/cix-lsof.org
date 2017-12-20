@@ -1,6 +1,6 @@
 # File          : cix-lsof.org
 # Created       : <2016-11-05 Sat 23:22:08 GMT>
-# Modified      : <2017-9-03 Sun 22:54:45 BST> sharlatan
+# Modified      : <2017-9-25 Mon 22:00:21 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A utility which lists open files on a Linux/UNIX system.
@@ -10,13 +10,13 @@
 [[file:../cix-main.org][|≣|]]
 #+TITLE: lsof
 
-|----------------+-----------|
-| *Author*       | Vic Abell |
-| *Contributors* |           |
-| *Released*     | 1994      |
-| *Source*       | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/][lsof.ftp]]  |
-| *Info*         | [[https://people.freebsd.org/~abe/][lsof.web]]  |
-|----------------+-----------|
+|----------------+--------------|
+| *Author*       | Victor Abell |
+| *Contributors* |              |
+| *Released*     | 1994         |
+| *Source*       | [[ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/][lsof.ftp]]     |
+| *Info*         | [[https://people.freebsd.org/~abe/][lsof.web]]     |
+|----------------+--------------|
 
 Lists information about files that are open by the processes running on a UNIX
 system.

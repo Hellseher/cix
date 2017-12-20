@@ -1,6 +1,6 @@
 # File           : cix-gcc.org
 # Created        : <2017-08-05 Sat 00:38:47 BST>
-# Modified       : <2017-9-03 Sun 08:34:09 BST> sharlatan
+# Modified       : <2017-10-07 Sat 23:07:42 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Various compilers (C, C++, Objective-C, Java, ...)
@@ -17,8 +17,22 @@
 | *Info*          |                  |
 |-----------------+------------------|
 
+The GNU Compiler Collection includes front ends for C, C++, Objective-C,
+Fortran, Ada, and Go, as well as libraries for these languages (libstdc++,...).
+GCC was originally written as the compiler for the GNU operating system. The GNU
+system was developed to be 100% free software, free in the sense that it
+respects the user's freedom.
+
+** Packages
+| PKG     | RPM | DEB | BSD |
+|---------+-----+-----+-----|
+| gcc     | +   |     |     |
+| gcc-c++ | +   |     |     |
+|---------+-----+-----+-----|
+
 
 -----
+
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc gcc

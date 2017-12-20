@@ -20,6 +20,12 @@
 | *Info*          | [[http://www.kbd-project.org/][kbd.web]]          |
 |-----------------+------------------|
 
+This package contains tools for managing Linux console (Linux console, virtual
+terminals, keyboard, etc.) – mainly, what they do is loading console fonts and
+keyboard maps.
+
+This distribution contains no binaries - the sources depend on the kernel
+version - compile them yourself.
 -----
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results

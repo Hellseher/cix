@@ -1,6 +1,6 @@
 # File           : cix-vim.org
 # Created        : <2017-08-07 Mon 00:28:12 BST>
-# Modified       : <2017-8-20 Sun 12:33:49 BST> sharlatan
+# Modified       : <2017-12-18 Mon 01:21:40 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Vim is a greatly improved version of the good old UNIX editor Vi
@@ -14,7 +14,7 @@
 | *Contibutors* |                |
 | *Released*    | 1991           |
 | *Source*      | [[https://github.com/vim/vim][vim.git]]        |
-| *Info*        | [[http://www.vim.org/vim.web][vim.web]]        |
+| *Homepage*    | [[http://www.vim.org/vim.web][vim.web]]        |
 |---------------+----------------|
 VIM (VIsual editor iMproved) is an updated and improved version of the vi
 editor. Vi was the first real screen-based editor for UNIX, and is still very
@@ -33,5 +33,6 @@ vim-enhanced
 * Index
 * Receipts
 * Refreances
-
-  # End of cix-vim.org
+- Best of Vim Tips
+  https://www.zinkwazi.com/unix/notes/vimtips.html
+# End of cix-vim.org

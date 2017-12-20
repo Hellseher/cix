@@ -1,6 +1,6 @@
 # File           : cix-the-heirloom-project.org
 # Created        : <2017-09-09 Sat 00:49:21 BST>
-# Modified       : <2017-9-09 Sat 00:49:27 BST> sharlatan
+# Modified       : <2017-9-25 Mon 21:10:24 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       :
@@ -9,17 +9,148 @@
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: the-heirloom-project
-|-----------------+---|
-| *Author*        |   |
-| *Maintainer(s)* |   |
-| *Released*      |   |
-| *Source*        |   |
-| *Info*          |   |
-|-----------------+---|
+|-----------------+---------------|
+| *Author*        | Gunnar Ritter |
+| *Maintainer(s)* |               |
+| *Released*      |               |
+| *Source*        | [[http://heirloom.cvs.sourceforge.net/heirloom/][heirloom.cvs]]  |
+| *Homepage*      | [[http://heirloom.cvs.sourceforge.net/heirloom/][heirloom.web]]  |
+|-----------------+---------------|
 
-
+The Heirloom Project provides traditional implementations of standard Unix
+utilities. In many cases, they have been derived from original Unix material
+released as Open Source by Caldera and Sun.
 -----
 * Index
+#+BEGIN_EXAMPLE
+banner 	  	  	  	 
+basename 	  	  	  	 
+bc 	  	  	  	 
+bdiff 	  	  	  	 
+bfs 	  	  	  	 
+build 	  	  	  	 
+cal 	  	  	  	 
+calendar 	  	  	  	 
+cat 	  	  	  	 
+chmod 	  	  	  	 
+chown 	  	  	  	 
+cksum 	  	  	  	 
+cmp 	  	  	  	 
+col 	  	  	  	 
+comm 	  	  	  	 
+copy 	  	  	  	 
+cp 	  	  	  	 
+cpio 	  	  	  	 
+csplit 	  	  	  	 
+cut 	  	  	  	 
+date 	  	  	  	 
+dc 	  	  	  	 
+dd 	  	  	  	 
+deroff 	  	  	  	 
+df 	  	  	  	 
+diff 	  	  	  	 
+diff3 	  	  	  	 
+dircmp 	  	  	  	 
+dirname 	  	  	  	 
+du 	  	  	  	 
+echo 	  	  	  	 
+ed 	  	  	  	 
+env 	  	  	  	 
+expand 	  	  	  	 
+expr 	  	  	  	 
+factor 	  	  	  	 
+file 	  	  	  	 
+find 	  	  	  	 
+fmt 	  	  	  	 
+fmtmsg 	  	  	  	 
+fold 	  	  	  	 
+getconf 	  	  	  	 
+getopt 	  	  	  	 
+grep 	  	  	  	 
+groups 	  	  	  	 
+hd 	  	  	  	 
+head 	  	  	  	 
+hostname 	  	  	  	 
+id 	  	  	  	 
+join 	  	  	  	 
+kill 	  	  	  	 
+libcommon 	  	  	  	 
+libuxre 	  	  	  	 
+libwchar 	  	  	  	 
+line 	  	  	  	 
+listusers 	  	  	  	 
+ln 	  	  	  	 
+logins 	  	  	  	 
+logname 	  	  	  	 
+ls 	  	  	  	 
+mail 	  	  	  	 
+man 	  	  	  	 
+mesg 	  	  	  	 
+mkdir 	  	  	  	 
+mkfifo 	  	  	  	 
+mknod 	  	  	  	 
+more 	  	  	  	 
+mvdir 	  	  	  	 
+nawk 	  	  	  	 
+news 	  	  	  	 
+nice 	  	  	  	 
+nl 	  	  	  	 
+nohup 	  	  	  	 
+oawk 	  	  	  	 
+od 	  	  	  	 
+paste 	  	  	  	 
+pathchk 	  	  	  	 
+pg 	  	  	  	 
+pgrep 	  	  	  	 
+pr 	  	  	  	 
+printenv 	  	  	  	 
+printf 	  	  	  	 
+priocntl 	  	  	  	 
+ps 	  	  	  	 
+psrinfo 	  	  	  	 
+pwd 	  	  	  	 
+random 	  	  	  	 
+renice 	  	  	  	 
+rm 	  	  	  	 
+rmdir 	  	  	  	 
+sdiff 	  	  	  	 
+sed 	  	  	  	 
+setpgrp 	  	  	  	 
+shl 	  	  	  	 
+sleep 	  	  	  	 
+sort 	  	  	  	 
+spell 	  	  	  	 
+split 	  	  	  	 
+stty 	  	  	  	 
+su 	  	  	  	 
+sum 	  	  	  	 
+sync 	  	  	  	 
+tabs 	  	  	  	 
+tail 	  	  	  	 
+tapecntl 	  	  	  	 
+tar 	  	  	  	 
+tcopy 	  	  	  	 
+tee 	  	  	  	 
+test 	  	  	  	 
+time 	  	  	  	 
+touch 	  	  	  	 
+tr 	  	  	  	 
+true 	  	  	  	 
+tsort 	  	  	  	 
+tty 	  	  	  	 
+ul 	  	  	  	 
+uname 	  	  	  	 
+uniq 	  	  	  	 
+units 	  	  	  	 
+users 	  	  	  	 
+wc 	  	  	  	 
+what 	  	  	  	 
+who 	  	  	  	 
+whoami 	  	  	  	 
+whodo 	  	  	  	 
+xargs 	  	  	  	 
+yes 	  	 
+#+END_EXAMPLE
 * Receipts
 * Refreances
 

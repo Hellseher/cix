@@ -1,6 +1,6 @@
 # File          : cix-dmidecode.org
 # Created       : <2016-11-13 Sun 19:49:01 GMT>
-# Modified      : <2017-9-01 Fri 23:07:29 BST> sharlatan
+# Modified      : <2017-10-03 Tue 21:24:35 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Tool to analyse BIOS DMI data.
@@ -16,7 +16,7 @@
 | *Maintainer* |                        |
 | *Released*   | 2001                   |
 | *Source*     | [[http://git.savannah.gnu.org/cgit/dmidecode.git][dmidecode.git]]          |
-| *Info*       | [[http://www.nongnu.org/dmidecode/][dmidecode.web]]          |
+| *Homepage*   | [[http://www.nongnu.org/dmidecode/][dmidecode.web]]          |
 |--------------+------------------------|
 
 =dmidecode= reports information about x86 & ia64 hardware as described in the
@@ -30,11 +30,34 @@ AGP, PCI, ISA) and memory module slots, and the list of I/O ports (e.g. serial,
 parallel, USB).-
 -----
 * Index
-#+BEGIN_EXAMPLE
-    biosdecode (8)       - BIOS information decoder
-    dmidecode (8)        - DMI table decoder
-    ownership (8)        - Compaq ownership tag retriever
-    vpddecode (8)        - VPD structure decoder
-#+END_EXAMPLE
+#+BEGIN_SRC sh  :results output org replace :exports results
+../cix-stat.sh mandoc dmidecode
+#+END_SRC
 
-# End of cix-dmidecode.org
+#+RESULTS:
+#+BEGIN_SRC org
+| CMD        | MAN | DESCRIPTION                    |
+| biosdecode | (8) | BIOS information decoder       |
+| dmidecode  | (8) | DMI table decoder              |
+| ownership  | (8) | Compaq ownership tag retriever |
+| vpddecode  | (8) | VPD structure decoder          |
+#+END_SRC
+* Receipts
+** dmidecode
+*** dmidecode::options
+| OPT                    | TYPE | V++ | V-- | DESC                                             |
+|------------------------+------+-----+-----+--------------------------------------------------|
+| =--dump-bin FILE=      |      |     |     | Dump the DMI data to a binary file               |
+| =--from-dump FILE=     |      |     |     | Read the DMI data from a binary file             |
+| =--no-sysfs=           |      |     |     | Do not attempt to read DMI data from sysfs files |
+| =--oem-string N=       |      |     |     | Only display the value of the given OEM string   |
+| =-V, --version=        |      |     |     | Display the version and exit                     |
+| =-d, --dev-mem FILE=   |      |     |     | Read memory from device FILE (default: /dev/mem) |
+| =-h, --help=           |      |     |     | Display this help text and exit                  |
+| =-q, --quiet=          |      |     |     | Less verbose output                              |
+| =-s, --string KEYWORD= |      |     |     | Only display the value of the given DMI string   |
+| =-t, --type TYPE=      |      |     |     | Only display the entries of given type           |
+| =-u, --dump=           |      |     |     | Do not decode the entries                        |
+|------------------------+------+-----+-----+--------------------------------------------------|
+
+ # End of cix-dmidecode.org

@@ -1,6 +1,6 @@
 # File          : cix-ncurses.org
 # Created       : <2017-02-05 Sun 13:35:46 GMT>
-# Modified      : <2017-8-24 Thu 23:40:38 BST> sharlatan
+# Modified      : <2017-9-21 Thu 00:33:28 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Ncurses support utilities
@@ -11,7 +11,7 @@
 #+TITLE: ncurses
 |-----------------+-----------------------|
 | *Author*        | Thomas E. Dickey,     |
-|                 | Juergen Pfeifer ,     |
+|                 | Juergen Pfeifer,      |
 |                 | Eric S Raymond,       |
 |                 | Alexander V Lukyanov, |
 |                 | Philippe Blain,       |

@@ -1,6 +1,6 @@
 # File          : cix-psmisc.org
 # Created       : <2016-01-25 Mon 22:28:37 GMT>
-# Modified      : <2017-8-25 Fri 00:39:09 BST> sharlatan
+# Modified      : <2017-12-20 Wed 23:05:59 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Utilities for managing processes on your system
@@ -8,7 +8,7 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: PSmisc
+#+TITLE: psmisc
 |-----------------+---------------------|
 | *Author*        | Werner Almesberger, |
 |                 | Craig Small,        |
@@ -18,10 +18,18 @@
 | *Released*      | 2001                |
 | *Source*        | [[https://gitlab.com/psmisc/psmisc][psmisc.git]]          |
 | *Man*           |                     |
-| *Info*          |                     |
+| *Homepage*      |                     |
 |-----------------+---------------------|
 
+ The psmisc package contains utilities for managing processes on your system:
+ pstree, killall, fuser and pslog. The pstree command displays a tree structure
+ of all of the running processes on your system. The killall command sends a
+ specified signal (SIGTERM if nothing is specified) to processes identified by
+ name. The fuser command identifies the PIDs of processes that are using
+ specified files or filesystems. The pslog command shows the path of log files
+ owned by a given process.
 -----
+
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc psmisc
@@ -37,5 +45,28 @@
 | fuser   | (1)  | identify processes using files or sockets                 |
 | fuser   | (1p) | list process IDs of all processes that have one or mor... |
 #+END_SRC
+* Receipts
+** killall
+*** killall::options
+| OPTIONS               | TYPE | V++ | V-- | DESCRIPTION                                                                       |
+|-----------------------+------+-----+-----+-----------------------------------------------------------------------------------|
+| =-I,--ignore-case=    |      |     |     | case insensitive process name match                                               |
+| =-V,--version=        |      |     |     | display version information                                                       |
+| =-Z,--context REGEXP= |      |     |     | kill only process(es) having context (must precede other arguments)               |
+| =-e,--exact=          |      |     |     | require exact match for very long names                                           |
+| =-g,--process-group=  |      |     |     | kill process group instead of process                                             |
+| =-i,--interactive=    |      |     |     | ask for confirmation before killing                                               |
+| =-l,--list=           |      |     |     | list all known signal names                                                       |
+| =-n,--ns PID=         |      |     |     | match processes that belong to the same namespaces as PID or 0 for all namespaces |
+| =-o,--older-than=     |      |     |     | kill processes older than TIME                                                    |
+| =-q,--quiet=          |      |     |     | don't print complaints                                                            |
+| =-r,--regexp=         |      |     |     | interpret NAME as an extended regular expression                                  |
+| =-s,--signal SIGNAL=  |      |     |     | send this signal instead of SIGTERM                                               |
+| =-u,--user USER=      |      |     |     | kill only process(es) running as USER                                             |
+| =-v,--verbose=        |      |     |     | report if the signal was successfully sent                                        |
+| =-w,--wait=           |      |     |     | wait for processes to die                                                         |
+| =-y,--younger-than=   |      |     |     | kill processes younger than TIME                                                  |
+|-----------------------+------+-----+-----+-----------------------------------------------------------------------------------|
+*** killall::examples
 
 # End of cix-psmisc.org

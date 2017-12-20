@@ -1,6 +1,6 @@
 # File          : cix-toybox.org
 # Created       : <2017-04-16 Sun 12:50:35 BST>
-# Modified      : <2017-8-26 Sat 11:54:35 BST> sharlatan
+# Modified      : <2017-9-25 Mon 21:30:47 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : All-in-one Linux command line.
@@ -9,18 +9,17 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: toybox
-|------------------+------------------|
-| *Author*         | 	Robert Landley |
-| *Contributor(s)* | [[https://github.com/landley/toybox/graphs/contributors][(all...)]]         |
-| *Released*       | 2006             |
-| *Source*         | [[https://github.com/landley/toybox][toybox.git]]       |
-| *Man*            |                  |
-| *Info*           | [[http://landley.net/toybox/][toybox.web]]       |
-|------------------+------------------|
+|------------------+----------------|
+| *Author*         | Robert Landley |
+| *Contributor(s)* | [[https://github.com/landley/toybox/graphs/contributors][(all...)]]       |
+| *Released*       | 2006           |
+| *Source*         | [[https://github.com/landley/toybox][toybox.git]]     |
+| *Man*            |                |
+| *Homepage*       | [[http://landley.net/toybox/][toybox.web]]     |
+|------------------+----------------|
 
 Free and open source software implementation of some Linux command line
 utilities. These include ls, cp, mv, and about 150 others.
 -----
-# End cix-toybox.org
 
 # End of cix-toybox.org

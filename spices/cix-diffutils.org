@@ -1,6 +1,6 @@
 # File          : cix-diffutils.org
 # Created       : <2016-11-20 Sun 23:05:57 GMT>
-# Modified      : <2017-9-03 Sun 22:36:27 BST> sharlatan
+# Modified      : <2017-9-25 Mon 22:00:26 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU collection of diff utilities.
@@ -9,20 +9,28 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: diffutils
-|-----------------+---------------------|
-| *Author*        | Paul Eggert,        |
-|                 | Mike Haertel,       |
-|                 | David Hayes,        |
-|                 | Richard Stallman,   |
-|                 | Len Tower[[http://git.savannah.gnu.org/cgit/diffutils.git/tree/AUTHORS][ (all...)]]. |
-| *Maintainer(s)* |                     |
-| *Released*      | 1970, gnu-1988      |
-| *Source*        | [[http://git.savannah.gnu.org/cgit/diffutils.git/tree/AUTHORS][diffutils.git]]       |
-| *Man*           |                     |
-| *Info*          | [[https://www.gnu.org/software/diffutils/][diffutils.web]]       |
-|-----------------+---------------------|
+|-----------------+--------------------|
+| *Author*        | Paul Eggert,       |
+|                 | Mike Haertel,      |
+|                 | David Hayes,       |
+|                 | Richard Stallman,  |
+|                 | Len Tower [[http://git.savannah.gnu.org/cgit/diffutils.git/tree/AUTHORS][(all...)]] |
+| *Maintainer(s)* |                    |
+| *Released*      | 1970, gnu-1988     |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/diffutils.git/][diffutils.git]]      |
+| *Man*           |                    |
+| *Homepage*      | [[https://www.gnu.org/software/diffutils/][diffutils.web]]      |
+|-----------------+--------------------|
+
+GNU Diffutils is a package of several programs related to finding differences
+between files.
+
+Computer users often find occasion to ask how two files differ. Perhaps one file
+is a newer version of the other file. Or maybe the two files started out as
+identical copies but were changed by different people.
+-----
 * Index
-#+BEGIN_SRC sh  :results value org output replace :exports results
+#+BEGIN_SRC sh  :results value org replace :exports results
 ../cix-stat.sh mandoc diffutils
 #+END_SRC
 

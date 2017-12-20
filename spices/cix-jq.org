@@ -1,6 +1,6 @@
 # File           : cix-jq.org
 # Created        : <2017-08-04 Fri 23:19:38 BST>
-# Modified       : <2017-10-21 Sat 01:57:05 BST> sharlatan
+# Modified       : <2017-11-16 Thu 21:00:44 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : lightweight and flexible command-line JSON processor.
@@ -14,7 +14,7 @@
 | *Maintainer(s)* |               |
 | *Released*      | 2012          |
 | *Source*        | [[https://github.com/stedolan/jq][jq.git]]        |
-| *Info*          | [[https://stedolan.github.io/jq/][jq.web]]        |
+| *Homepage*      | [[https://stedolan.github.io/jq/][jq.web]]        |
 |-----------------+---------------|
 
 lightweight and flexible command-line JSON processor
@@ -43,6 +43,6 @@ you'd expect.
 list all Ansible variables from =setup= module:
 :    ~$ ansible -m setup localhost |sed "1c {" | jq ".ansible_facts|keys"
 
-* Refreances
+* References
 
 # End of cix-jq.org

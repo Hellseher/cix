@@ -1,6 +1,6 @@
 # File           : cix-lsyncd.org
 # Created        : <2017-08-04 Fri 23:01:05 BST>
-# Modified       : <2017-8-21 Mon 21:28:57 BST> sharlatan
+# Modified       : <2017-9-25 Mon 23:00:00 BST> sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Synchronizes local directories with remote targets 
