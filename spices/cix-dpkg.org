@@ -1,6 +1,6 @@
 # File           : cix-dpkg.org
 # Created        : <2017-08-05 Sat 00:44:11 BST>
-# Modified       : <2017-8-22 Tue 22:58:36 BST> sharlatan
+# Modified       : <2017-11-15 Wed 23:18:56 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Debian's package maintenance system
@@ -25,9 +25,28 @@ The primary interface for the dpkg suite is the ‘dselect’ program; a more
 low-level and less user-friendly interface is available in the form of the
 ‘dpkg’ command.
 -----
-* Index
 * Receipts
-* Refreances
+** dpkg
+*** dpkg::options
+*** dpkg::examples
+**** dpkg-171115225216 
+list all installed packages:
+:    ~# dpkg -l
+
+**** dpkg-171115225312 
+install/remove *.deb package:
+:    ~# dpkg -i package_name.deb # install package
+:    ~# dpkg -r package_name.deb # remove package
+:    ~# dpkg -p package_name.deb # remove package with configuration
+
+**** dpkg-171115231448 
+reconfigure all packages but kipping old config files:
+:    ~# dpkg --configure -a --force-confold
+
+Its very helpful with some DevOps tools like Ansible or Pupet, when execution of
+the =apt= module is friezed, the only way to proceed is to reconfigure all
+packages (Debian/Ubuntu distributions)
+* References
 ** Links
 - Job scheduling with cron and at
   https://www.ibm.com/developerworks/library/l-job-scheduling/index.html

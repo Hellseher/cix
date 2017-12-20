@@ -1,6 +1,6 @@
 # File          : cix-file.org
 # Created       : <2017-07-12 Wed 00:22:46 BST>
-# Modified      : <2017-10-01 Sun 22:34:51 BST> sharlatan
+# Modified      : <2017-11-21 Tue 00:24:57 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A utility for determining file types.
@@ -64,6 +64,8 @@ formats.
 |-----------------------------+------+-----+-----+-------------------------------------------------------------|
 
 *** file ::examples
+**** file-171120192156 
+check explicit information of block devices:
+:    ~# file -sL /dev/sd*
 
-
-# End of cix-file.org
+ # End of cix-file.org

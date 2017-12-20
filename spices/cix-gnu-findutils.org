@@ -1,6 +1,6 @@
 # File          : cix-gnu-findutils.org
 # Created       : <2015-11-17 Tue 22:54:30 GMT>
-# Modified      : <2017-9-03 Sun 23:01:43 BST> sharlatan
+# Modified      : <2017-9-23 Sat 22:00:25 BST> sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : The GNU versions of find utilities (find and xargs).
@@ -37,6 +37,9 @@ capabilities to other commands.
 
 * Receipts
 ** find                                                                         :cmd:
+
+A =find= command appeared in Version 1 AT&T UNIX
+
 *** find::options
 
 | OPTIONS | FROM V. | DISCRIPTION |
