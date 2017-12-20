@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2017-12-18 Mon 01:22:15 GMT> Sharlatan
+# Last Modified  : <2017-12-20 Wed 23:06:34 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -91,6 +91,7 @@ QTY  CMD       PKG
 1    rev       util-linux
 1    pwd       gnu-coreutils
 1    printf    gnu-bash
+1    pkill     procps-ng
 1    ping      iputils
 1    perf      perf
 1    pacman    pacman
@@ -117,6 +118,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  228
+Onliners:  229
 Scripts:   108
 #+END_SRC
