@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-12-18 Mon 01:20:57 GMT> Sharlatan
+# Modified   : <2017-12-26 Tue 01:48:34 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -1291,6 +1291,10 @@ download a file and validate it on the "fly":
 [[Index][⬆]]
 *** timeout::options
 *** timeout::examples
+**** timeout-171226013623
+test from shell script if remote TCP port is open:
+:    ~$ timeout $TIMEOUT_SECONDS bash -c "</dev/tcp/${HOST}/${PORT}"; echo $?
+:    ~$ timeout $TIMEOUT_SECONDS bash -c 'cat < /dev/null > /dev/tcp/${HOST}/${PORT}'; echo $?
 *** timeout::files
 *** timeout::see-also
 ** touch                                                                        
