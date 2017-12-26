@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-12-15 Fri 00:10:59 GMT> Sharlatan
+# Modified   : <2017-12-25 Mon 22:48:50 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -170,19 +170,19 @@ on *GNU/Linux*
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
   + [[file:./spices/cix-bridge-utils.org][bridge-utils]] :: utilities for configuring the Linux ethernet bridge
   + [[./spices/cix-gnu-inetutils.org][GNU-inetutils]] :: a collection of common network programs
+  + [[file:./spices/cix-hping.org][hping]] :: a command-line oriented TCP/IP packet assembler/analyzer: =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS-X= =Windows=
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: =GNU/Linux=
   + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: =GNU/Linux= 
+  + [[file:./spices/cix-ncat.org][ncat]] :: general-purpose network connector (nmap's project netcat replacement:
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries: =GNU/Linux= =FreeBSD= =OpenBSD= =Solaris/SPARC= =OS-X= =AIX= =HP-UX= =NetBSD= =OSF= =SunOS= =Ultrix= =QNX= =Dynix= =IRIX= =Windows=
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
+  + [[file:./spices/cix-netcat.org][netcat]] :: a tcp/ip swiss army knife for networking:  =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
+  + [[file:./spices/cix-netperf.org][netperf]] :: TCP/UDP/sockets/etc performance benchmark: =FreeBSD= =AIX= =Solaris= =GNU/Linux= =HP-UX= =IRIX=
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
   + [[./spices/cix-openssh.org][OpenSSH]] :: an open source implementation of ssh protocol: =AIX= =HP-UX= =IRIX= =GNU/Linux= =Next= =Sco= =Sni/Reliant= =Unix= =Solaris= =Digital= =Unix/Tru64/Osf= =Mac= =Os-X= =Cygwin=
-  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =GNU/Linux= =FreeBSD=
-  + [[file:./spices/cix-netperf.org][netperf]] :: TCP/UDP/sockets/etc performance benchmark: =FreeBSD= =AIX= =Solaris= =GNU/Linux= =HP-UX= =IRIX=
-  + [[file:./spices/cix-nmap-ncat.org][nmap-ncat]] :: Nmap's Netcat replacement:
-  + [[file:./spices/cix-netcat.org][netcat]] :: a tcp/ip swiss army knife for networking:  =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
   + [[file:./spices/cix-scapy.org][scapy]] :: Interactive packet manipulation tool and network scanner: =GNU/Linux=
-  + [[file:./spices/cix-hping.org][hping]] :: a command-line oriented TCP/IP packet assembler/analyzer: =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS-X= =Windows=
+  + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =GNU/Linux= =FreeBSD=
 
 - *Shell* /not just sand.../
   + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD

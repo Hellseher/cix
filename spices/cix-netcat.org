@@ -1,6 +1,6 @@
 # File          : cix-netcat.org
 # Created       : <2016-11-04 Fri 22:44:54 GMT>
-# Modified      : <2017-9-23 Sat 22:43:55 BST> sharlatan
+# Modified      : <2017-12-25 Mon 23:48:07 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A utility which r/w data across network connections, using TCP/UDP
@@ -8,25 +8,62 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Netcat
+#+TITLE: nc (netcat)
 |-----------------+-----------|
 | *Author*        | *Hobbit*  |
 | *Maintainer(s)* |           |
-| *Released*      | 2007      |
+| *Released*      | 1996      |
 | *Source*        | [[http://svn.code.sf.net/p/nc110/code/nc110.svn][nc110.svn]] |
 | *Man*           |           |
-| *Info*          | [[http://nc110.sourceforge.net/][nc110.web]] |
+| *Homepage*      | [[http://nc110.sourceforge.net/][nc110.web]] |
 |-----------------+-----------|
 
-* Receipts
-** netcat
-*** netcat::options
-| OPT  | TYPE | ++V | --V | DISC              |
-|------+------+-----+-----+-------------------|
-| =-l= |      |     |     | listen for a port |
-|------+------+-----+-----+-------------------|
+The =nc= (or =netcat=) utility is used for just about anything under the sun
+involving TCP, UDP, or UNIX-domain sockets. It can open TCP connections, send
+UDP packets, listen on arbitrary TCP and UDP ports, do port scanning, and deal
+with both IPv4 and IPv6. Unlike telnet(1), =nc= scripts nicely, and separates
+error messages onto standard error instead of sending them to standard output,
+as telnet(1) does with some. 
+----
 
-*** netcat::examples
+* Receipts
+** nc
+*** nc::options
+| OPTIONS                     | TYPE | V++ | V-- | DESCRIPTION                                                                                                          |
+|-----------------------------+------+-----+-----+----------------------------------------------------------------------------------------------------------------------|
+| =-4=                        |      |     |     | Forces nc to use IPv4 addresses only.                                                                                |
+| =-6=                        |      |     |     | Forces nc to use IPv6 addresses only.                                                                                |
+| =-C=                        |      |     |     | Send CRLF as line-ending.                                                                                            |
+| =-D=                        |      |     |     | Enable debugging on the socket.                                                                                      |
+| =-I <length>=               |      |     |     | Specifies the size of the TCP receive buffer.                                                                        |
+| =-O <length>=               |      |     |     | Specifies the size of the TCP send buffer.                                                                           |
+| =-P <proxy_username>=       |      |     |     | Specifies a username to present to a proxy server that requires authentication.                                      |
+| =-S=                        |      |     |     | Enables the RFC 2385 TCP MD5 signature option.                                                                       |
+| =-T <toskeyword>=           |      |     |     | Change IPv4 TOS value.                                                                                               |
+| =-U=                        |      |     |     | Specifies to use UNIX-domain sockets.                                                                                |
+| =-V <rtable>=               |      |     |     | Set the routing table to be used.  The default is 0.                                                                 |
+| =-X <proxy_protocol>=       |      |     |     | Requests that nc should use the specified protocol when talking to the proxy server.                                 |
+| =-Z=                        |      |     |     | DCCP mode.                                                                                                           |
+| =-b=                        |      |     |     | Allow broadcast.                                                                                                     |
+| =-d=                        |      |     |     | Do not attempt to read from stdin.                                                                                   |
+| =-h=                        |      |     |     | Prints out nc help.                                                                                                  |
+| =-i <interval>=             |      |     |     | Specifies a delay time interval between lines of text sent and received.                                             |
+| =-k=                        |      |     |     | Forces nc to stay listening for another connection after its current connection is completed.                        |
+| =-l=                        |      |     |     | Used to specify that nc should listen for an incoming connection rather than initiate a connection to a remote host. |
+| =-n=                        |      |     |     | Do not do any DNS or service lookups on any specified addresses, hostnames or ports.                                 |
+| =-p <source_port>=          |      |     |     | Specifies the source port nc should use, subject to privilege restrictions and availability.                         |
+| =-q <seconds>=              |      |     |     | after EOF on stdin, wait the specified number of seconds and then quit. If seconds is negative, wait forever.        |
+| =-r=                        |      |     |     | Specifies that source and/or destination ports should be chosen randomly.                                            |
+| =-s <source>=               |      |     |     | Specifies the IP of the interface which is used to send the packets.                                                 |
+| =-t=                        |      |     |     | Causes nc to send RFC 854 DON'T and WON'T responses to RFC 854 DO and WILL requests.                                 |
+| =-u=                        |      |     |     | Use UDP instead of the default option of TCP.                                                                        |
+| =-v=                        |      |     |     | Have nc give more verbose output.                                                                                    |
+| =-w <timeout>=              |      |     |     | Connections which cannot be established or are idle timeout after timeout seconds.                                   |
+| =-x <proxy_address[:port]>= |      |     |     | Requests that nc should connect to destination using a proxy at proxy_address and port.                              |
+| =-z=                        |      |     |     | Specifies that nc should just scan for listening daemons, without sending any data to them.                          |
+|-----------------------------+------+-----+-----+----------------------------------------------------------------------------------------------------------------------|
+
+*** nc::examples
 **** nc-170109001313
 setting up a one-shot webserver on port 8080 to present the content of a file:
 :    ~$ { echo -ne "HTTP/1.0 200 OK\r\nContent-Length: $(wc -c < input_f)\r\n\r\n" cat input_f; } | nc -l -p8080
@@ -38,5 +75,18 @@ setting up a one-shot webserver on port 8080 to present the content of a file:
 **** nc- 170824224751 
 opening a raw connection to port 25 (like SMTP):
 :    ~$ nc mail.server.net 25
+
+**** nc-170924214013
+connect TCP port 80 on host example.com:
+:    ~$ nc -v example.com 80
+
+**** nc-170924215315
+keep listen for inbound connections on TCP port 1234:
+:    ~$ nc -vv -l 1234
+
+**** nc-170927230540
+transfare file/dirrectory from one machine to other, both need nc avaialable:
+:    ~# nc -l 7000 | tar -xzvpf -      # reciver
+:    ~# tar -czf - * | nc reciver 7000 # transmiter
 
 # End of cix-netcat.org

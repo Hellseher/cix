@@ -1,0 +1,94 @@
+# File           : cix-ncat.org<2>
+# Created        : <2017-09-23 Sat 22:44:24 BST>
+# Modified       : <2017-12-26 Tue 00:03:27 GMT> Sharlatan
+# Author         : sharlatan
+# Maintainer(s)  :
+# Sinopsis       : Nmap's Netcat replacement
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: ncat
+|-----------------+------------------|
+| *Author*        | Chris Gibson,    |
+|                 | Kris Katterjohn, |
+|                 | Mixter,          |
+|                 | Fyodor           |
+| *Maintainer(s)* |                  |
+| *Released*      |                  |
+| *Source*        | [[https://nmap.org/mailman/listinfo/svn][nmap.svn]]         |
+| *Homepage*      | [[https://nmap.org/ncat/][ncat.web]]         |
+|-----------------+------------------|
+
+=ncat= is a feature-packed networking utility which reads and writes data across
+networks from the command line. =ncat= was written for the Nmap Project as a
+much-improved reimplementation of the venerable Netcat .  It uses both TCP and UDP
+for communication and is designed to be a reliable back-end tool to instantly
+provide network connectivity to other applications and users. =ncat= will not
+only work with IPv4 and IPv6 but provides the user with a virtually limitless
+number of potential uses.
+-----
+* Index
+* Receipts
+** ncat
+*** ncat::options
+| OPTIONS                     | TYPE   | V++ | V-- | DESCRIPTION                                         |
+|-----------------------------+--------+-----+-----+-----------------------------------------------------|
+| =--allow=                   | switch |     |     | Allow only given hosts to connect to Ncat           |
+| =--allowfile=               | switch |     |     | A file of hosts allowed to connect to Ncat          |
+| =--append-output=           | switch |     |     | Append rather than clobber specified output files   |
+| =--broker=                  | switch |     |     | Enable Ncat's connection brokering mode             |
+| =--chat=                    | switch |     |     | Start a simple Ncat chat server                     |
+| =--deny=                    | switch |     |     | Deny given hosts from connecting to Ncat            |
+| =--denyfile=                | switch |     |     | A file of hosts denied from connecting to Ncat      |
+| =--lua-exec <filename>=     | string |     |     | Executes the given Lua script                       |
+| =--proxy <addr[:port]>=     | string |     |     | Specify address of host to proxy through            |
+| =--proxy-auth <auth>=       | string |     |     | Authenticate with HTTP or SOCKS proxy server        |
+| =--proxy-type <type>=       | string |     |     | Specify proxy type ("http" or "socks4" or "socks5") |
+| =--recv-only=               | switch |     |     | Only receive data, never send anything              |
+| =--sctp=                    | switch |     |     | Use SCTP instead of default TCP                     |
+| =--send-only=               | switch |     |     | Only send data, ignoring received; quit on EOF      |
+| =--ssl=                     | switch |     |     | Connect or listen with SSL                          |
+| =--ssl-cert=                | switch |     |     | Specify SSL certificate file (PEM) for listening    |
+| =--ssl-ciphers=             | switch |     |     | Cipherlist containing SSL ciphers to use            |
+| =--ssl-key=                 | switch |     |     | Specify SSL private key (PEM) for listening         |
+| =--ssl-trustfile=           | switch |     |     | PEM file containing trusted SSL certificates        |
+| =--ssl-verify=              | switch |     |     | Verify trust and domain name of certificates        |
+| =--version=                 | switch |     |     | Display Ncat's version information and exit         |
+| =-4=                        | switch |     |     | Use IPv4 only                                       |
+| =-6=                        | switch |     |     | Use IPv6 only                                       |
+| =-C, --crlf=                | switch |     |     | Use CRLF for EOL sequence                           |
+| =-G <n>=                    | int    |     |     | Loose source routing hop pointer (4, 8, 12, ...)    |
+| =-U, --unixsock=            | switch |     |     | Use Unix domain sockets only                        |
+| =-c, --sh-exec <command>=   | string |     |     | Executes the given command via /bin/sh              |
+| =-d, --delay <time>=        | int    |     |     | Wait between read/writes                            |
+| =-e, --exec <command>=      | string |     |     | Executes the given command                          |
+| =-g hop1[,hop2,...]=        | string |     |     | Loose source routing hop points (8 max)             |
+| =-h, --help=                | switch |     |     | Display this help screen                            |
+| =-i, --idle-timeout <time>= | int    |     |     | Idle read/write timeout                             |
+| =-k, --keep-open=           | switch |     |     | Accept multiple connections in listen mode          |
+| =-l, --listen=              | switch |     |     | Bind and listen for incoming connections            |
+| =-m, --max-conns <n>=       | int    |     |     | Maximum <n> simultaneous connections                |
+| =-n, --nodns=               | switch |     |     | Do not resolve hostnames via DNS                    |
+| =-o, --output <filename>=   | string |     |     | Dump session data to a file                         |
+| =-p, --source-port port=    | int    |     |     | Specify source port to use                          |
+| =-s, --source addr=         | string |     |     | Specify source address to use (doesn't affect -l)   |
+| =-t, --telnet=              | switch |     |     | Answer Telnet negotiations                          |
+| =-u, --udp=                 | switch |     |     | Use UDP instead of default TCP                      |
+| =-v, --verbose=             | switch |     |     | Set verbosity level (can be used several times)     |
+| =-w, --wait <time>=         | int    |     |     | Connect timeout                                     |
+| =-x, --hex-dump <filename>= | string |     |     | Dump session data as hex to a file                  |
+| =-z=                        | switch |     |     | Zero-I/O mode, report connection status only        |
+|-----------------------------+--------+-----+-----+-----------------------------------------------------|
+
+*** ncat::examples
+**** 171225235543
+connect mode as a web browser:
+:    ~$ ncat -C scanme.nmap.org 80
+
+*** ncat::files
+/usr/share/ncat/ca-bundle.crt.
+* Refreances
+** RFC
+- RFC 2616
+# End of cix-ncat.org
