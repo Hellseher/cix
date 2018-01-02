@@ -1,6 +1,6 @@
 # File       : cix-awk.org
 # Created    : <2016-11-04 Fri 22:15:18 GMT>
-# Modified   : <2017-12-11 Mon 22:18:24 GMT> Sharlatan
+# Modified   : <2018-1-02 Tue 23:10:14 GMT> Sharlatan
 # Author     : sharlatan
 # Maintainer :
 # Sinopsis   : The GNU version of the AWK text processing utility
@@ -8,7 +8,7 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: gawk
+#+TITLE: awk
 |--------------+--------------------|
 | *Author*     | Paul Rubin,        |
 |              | Paul Finlason,     |
@@ -18,7 +18,7 @@
 | *Released*   | 1994               |
 | *Source*     | [[http://git.savannah.gnu.org/cgit/gawk.git][gawk.git]]           |
 | *Man*        | [[http://man7.org/linux/man-pages/man1/gawk.1.html][gawk.1]]             |
-| *Info*       |                    |
+| *Homepage*   |                    |
 |--------------+--------------------|
 
 The =gawk= package contains the GNU version of AWK text processing utility. AWK is
@@ -132,6 +132,16 @@ print file name and the last line for the list of files:
 remove n-th (2nd in this example) field from the end of the each line of input_f:
 :    ~$ awk 'NF>1{$(NF-1)=""};1' input_f
 
+**** awk-180102230353
+print form line number to end of file:
+:    ~$ awk 'NR>=5' input_f
+**** awk-180102230535
+print from line number 4 to 9 or print lines between linen number 3 and 10:
+:    ~$ awk 'NR>=4 && NR<=9' input_f
+**** awk-180102230659
+print all even or odd lines numbers:
+:    ~$ awk '{if (NR%2 == 0) {print $1}}' input_f
+:    ~$ awk '{if (NR%s != 0) {print $1}}' input_f
 *** awk::files
 *** awk::see-also
     egrep(1), sed(1), getpid(2), getppid(2), getpgrp(2), getuid(2), geteuid(2),
