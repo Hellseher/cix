@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-1-02 Tue 23:11:04 GMT> Sharlatan
+# Last Modified  : <2018-1-08 Mon 22:28:23 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -16,7 +16,7 @@ You can start from here > [[./cix-main.org][cix-main]]
 
 #+BEGIN_SRC sh :results value org :results output replace :exports results
 pwd | rev | cut -d"/" -f1 | rev
-tree -L 2
+tree -L 1
 #+END_SRC
 
 #+RESULTS:
@@ -84,6 +84,7 @@ QTY  CMD       PKG
 1    while     gnu-bash
 1    whatis    man-db
 1    usermod   shadow-utils
+1    uniq      gnu-coreutils
 1    timeout   gnu-coreutils
 1    strings   gnu-binutils
 1    smem      smem
@@ -119,6 +120,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  237
+Onliners:  238
 Scripts:   108
 #+END_SRC

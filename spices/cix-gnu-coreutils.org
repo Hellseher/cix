@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2017-12-26 Tue 01:48:34 GMT> Sharlatan
+# Modified   : <2018-1-08 Mon 22:26:26 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : A set of basic GNU tools commonly used in shell scripts
 
@@ -1366,7 +1366,26 @@ Windows files to UNIX format:
 ** uniq                                                                         
 [[Index][⬆]]
 *** uniq::options
+| OPTION                    | TYPE | V++ | V-- | DESCRIPTION                                           |
+|---------------------------+------+-----+-----+-------------------------------------------------------|
+| =--all-repeated[=METHOD]= |      |     |     | like -D, but allow separating groups                  |
+| =--group[=METHOD]=        |      |     |     | show all items, separating groups with an empty line; |
+| =--help=                  |      |     |     | display this help and exit                            |
+| =--version=               |      |     |     | output version information and exit                   |
+| =-D=                      |      |     |     | print all duplicate lines                             |
+| =-c, --count=             |      |     |     | prefix lines by the number of occurrences             |
+| =-d, --repeated=          |      |     |     | only print duplicate lines, one for each group        |
+| =-f, --skip-fields=N=     |      |     |     | avoid comparing the first N fields                    |
+| =-i, --ignore-case=       |      |     |     | ignore differences in case when comparing             |
+| =-s, --skip-chars=N=      |      |     |     | avoid comparing the first N characters                |
+| =-u, --unique=            |      |     |     | only print unique lines                               |
+| =-w, --check-chars=N=     |      |     |     | compare no more than N characters in lines            |
+| =-z, --zero-terminated=   |      |     |     | line delimiter is NUL, not newline                    |
+|---------------------------+------+-----+-----+-------------------------------------------------------|
 *** uniq::examples
+**** uniq-180108221925
+remove all dublicated lines from a input_f:
+:    ~$ sort input_f | uniq -u
 *** uniq::files
 *** uniq::see-also
 ** unlink                                                                       
