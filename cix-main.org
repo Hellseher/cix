@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2017-12-25 Mon 22:48:50 GMT> Sharlatan
+# Modified   : <2018-1-08 Mon 22:34:40 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -76,7 +76,7 @@ on *GNU/Linux*
 - *Core* /usually it contains on the most distributions/
   + bsd :: list of common bsd commands
   + [[./spices/cix-busybox.org][BusyBox]] :: the swiss army knife of embedded Linux: =GNU/Linux= =FreeBSD=
-  + [[./spices/cix-gnu-coreutils.org][GNU-coreutis]] :: basic file, shell and text manipulation utilities: =GNU/Linux= =FreeBSD= =HP-UX= =AUX=
+  + [[./spices/cix-gnu-coreutils.org][coreutis]] :: basic file, shell and text manipulation utilities: =GNU/Linux= =FreeBSD= =HP-UX= =AUX=
   + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console: =GNU/Linux=
   + [[./spices/cix-man-db.org][man-db]] :: tools for searching and reading man pages: =GNU/Linux=
   + [[file:spices/cix-ncurses.org][ncurses]] :: terminal-independent method of updating character screens: =GNU/Linux= =FreeBSD= =UNIX= =OS-X= =NetBSD=
@@ -169,8 +169,8 @@ on *GNU/Linux*
 - *Networking* /we all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
   + [[file:./spices/cix-bridge-utils.org][bridge-utils]] :: utilities for configuring the Linux ethernet bridge
-  + [[./spices/cix-gnu-inetutils.org][GNU-inetutils]] :: a collection of common network programs
   + [[file:./spices/cix-hping.org][hping]] :: a command-line oriented TCP/IP packet assembler/analyzer: =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS-X= =Windows=
+  + [[./spices/cix-gnu-inetutils.org][inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: =GNU/Linux=
   + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: =GNU/Linux= 
@@ -212,7 +212,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
   + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
   + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
-  + [apparmor] ::
+  + [apparmor] :: is a Mandatory Access Control (MAC)
 
 - *Boot-Init-systems* /let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
@@ -230,11 +230,12 @@ on *GNU/Linux*
   + [[./spices/cix-gdb.org][gdb]] :: a GNU source-level debugger for C, C++, Fortran, Go and other languages
   + [[file:./spices/cix-git.org][git]] :: Fast Version Control System
   + [[./spices/cix-glibc.org][glibc]] :: common binaries and locale data for glibc
+  + [[file:./spices/cix-musl.org][musl]] :: 
   + [[file:./spices/cix-global.org][global]] :: Source code tag system
   + [[file:./spices/cix-gnu-libtool.org][libtool]] :: The GNU Portable Library Tool: =GNU/Linux= =Solaris=
   + [[file:./spices/cix-gnu-lightning.org][lightning]] :: library for generating assembly code on run time: =GNU/Linux=
   + [[file:./spices/cix-llvm.org][llvm]] :: The Low Level Virtual Machine: =OS-X= =GNU/Linux=
-  + [[file:./spices/cix-make.org][make]] :: A tool which simplifies the build process for users
+  + [[file:./spices/cix-gnu-make.org][make]] :: a tool which simplifies the build process for users: =GNU/Linux=
   + [[file:./spices/cix-valgrind.org][valgrind]] :: Tool for finding memory management bugs in programs
   + [[file:./spices/cix-jemalloc.org][jemalloc]] :: General-purpose scalable concurrent malloc implementation: =GNU/Linux= =FreeBSD=
 
@@ -247,23 +248,23 @@ on *GNU/Linux*
   + [[file:./spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD: =FreeBSD=
   + [[file:./spices/cix-rpm.org][rpm]] :: package manager is a command line driven package management system
 
-- *Research-reverse-engineering* /i've got a clue/
+- *Research-reverse-engineering* /I've got a clue/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
   + [[file:./spices/cix-binwalk.org][binwalk]] :: Firmware analysis tool
 
 - *Kernel-traces* /Go to basic/
-  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities
+  + [[./spices/cix-kmod.org][kmod]] :: Linux kernel module management utilities:
   + [[file:./spices/cix-dtrace.org][dtrace]] :: comprehensive dynamic tracing framework: =Solaris= =FreeBSD= =NetBSD= =OS-X=
   + [[./spices/cix-strace.org][strace]] :: tracks and displays system calls associated with a running process
   + [[file:./spices/cix-kernel-devel.org][kernel-devel]] :: development package for building kernel modules to match the kernel
   + [[file:./spices/cix-dkms.org][dkms]] :: dynamic kernel module support framework
   + [[./spices/cix-perf.org][perf]] :: performance monitoring for the Linux kernel: =GNU/Linux=
-  + ftrace ::
-  + ktrace ::
-  + ltrace ::
-  + SystemTap ::
-  + LTTng ::
-  + ProbeVue :: 
+  + [ftrace] ::
+  + [ktrace] ::
+  + [ltrace] ::
+  + [SystemTap] ::
+  + [LTTng] ::
+  + [ProbeVue] :: 
 
 - *Cryptograpy* /Who breaks Enigma code?/
   + [[./spices/cix-gnu-pg.org][gnupg]] :: A GNU utility for secure communication and data storage
