@@ -1,6 +1,6 @@
 # File       : iproute2.md
 # Created    : Wed 17 Feb 2016 02:44:12
-# Modified   : <2018-1-15 Mon 00:49:56 GMT> Sharlatan
+# Modified   : <2018-1-15 Mon 20:42:44 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : Advanced IP routing and network device configuration tools
 
@@ -8,14 +8,16 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: iproute2
-|----------------+----------------------------------------------------|
-| *Author*       | Alexey Kuznetsovd                                  |
-| *Contributors* | Nikolay Aleksandrov, Daniel Borkmann, Roopa Prabhu |
-|                | Gustavo Zacarias, Nicolas Dichtel, Paolo Abeni     |
-|                | Stephen Hemminger, Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]             |
-| *Released*     | 2007                                               |
-| *Source*       | [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/][iproute2]]                                           |
-|----------------+----------------------------------------------------|
+|----------------+----------------------|
+| *Author*       | Alexey Kuznetsovd    |
+| *Contributors* | Nikolay Aleksandrov, |
+|                | Stephen Hemminger,   |
+|                | Daniel Borkmann,     |
+|                | Roopa Prabhu,        |
+|                | Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]  |
+| *Released*     | 2007                 |
+| *Source*       | [[https://git.kernel.org/pub/scm/network/iproute2/iproute2.git][iproute2]]             |
+|----------------+----------------------|
 The iproute package contains networking utilities (ip and rtmon, for example)
 which are designed to use the advanced networking capabilities of the Linux
 2.4.x and 2.6.x kernel.
@@ -70,7 +72,6 @@ ${NM} - netmask
 *** ip::files
 
 *** ip::see-also
------
 ** ss                                                                           :cmd:
 [[Index][⬆]]
 : ss [ OPTIONS ] [ STATE-FILTER ] [ ADDRESS-FILTER ]
@@ -161,13 +162,15 @@ dump TCP, UDP, RAW or UNIX sockets:
 
 *** ss::files
 - /proc/net/tcp
-- 
+- /etc/services
+- /etc/protocols
+- /etc/iproute2/nl_protos
+
 *** ss::see-also
 
-** Referance
+** Referances
 *** Links
 - http://baturin.org/docs/iproute2/
-- https://wiki.linuxfoundation.org/networking/iproute2
 - http://lartc.org/lartc.html
 - IPROUTE2 Utility Suite Howto http://www.policyrouting.org/iproute2-toc.html
 *** RFC
