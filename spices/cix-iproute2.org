@@ -1,6 +1,6 @@
 # File       : iproute2.md
 # Created    : Wed 17 Feb 2016 02:44:12
-# Modified   : <2017-8-19 Sat 13:24:55 BST> sharlatan
+# Modified   : <2018-1-15 Mon 00:49:56 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : Advanced IP routing and network device configuration tools
 
@@ -73,13 +73,70 @@ ${NM} - netmask
 -----
 ** ss                                                                           :cmd:
 [[Index][⬆]]
+: ss [ OPTIONS ] [ STATE-FILTER ] [ ADDRESS-FILTER ]
+
+: <Netid> <State> <Recv-Q> <Send-Q> <address> <port>
 *** ss::options
-| OPT               | TYPE | ++V | --V | DESC                                     |
-|-------------------+------+-----+-----+------------------------------------------|
-| =-p, --processes= |      |     |     | Show process using socket.               |
-| =-n, --numeric=   |      |     |     | Do not try to resolve service names.     |
-| =-a, --all=       |      |     |     | Display both listening and non-listening |
-|-------------------+------+-----+-----+------------------------------------------|
+| OPTIONS                             | TYPE | V++ | V-- | DESCRIPTION                                          |
+|-------------------------------------+------+-----+-----+------------------------------------------------------|
+| =-0, --packet=                      |      |     |     | display PACKET sockets                               |
+| =-4, --ipv4=                        |      |     |     | display only IP version 4 sockets                    |
+| =-6, --ipv6=                        |      |     |     | display only IP version 6 sockets                    |
+| =-A, --query=QUERY, --socket=QUERY= |      |     |     |                                                      |
+| =-D, --diag=FILE=                   |      |     |     | Dump raw information about TCP sockets to FILE       |
+| =-E, --events=                      |      |     |     | continually display sockets as they are destroyed    |
+| =-F, --filter=FILE=                 |      |     |     | read filter information from FILE                    |
+| =-H, --no-header=                   |      |     |     | Suppress header line                                 |
+| =-K, --kill=                        |      |     |     | forcibly close sockets, display what was closed      |
+| =-N, --net=                         |      |     |     | switch to the specified network namespace name       |
+| =-S, --sctp=                        |      |     |     | display only SCTP sockets                            |
+| =-V, --version=                     |      |     |     | output version information                           |
+| =-Z, --context=                     |      |     |     | display process SELinux security contexts            |
+| =-a, --all=                         |      |     |     | display all sockets                                  |
+| =-b, --bpf=                         |      |     |     | show bpf filter socket information                   |
+| =-d, --dccp=                        |      |     |     | display only DCCP sockets                            |
+| =-e, --extended=                    |      |     |     | show detailed socket information                     |
+| =-f, --family=FAMILY=               |      |     |     | display sockets of type FAMILY                       |
+| =-h, --help=                        |      |     |     | this message                                         |
+| =-i, --info=                        |      |     |     | show internal TCP information                        |
+| =-l, --listening=                   |      |     |     | display listening sockets                            |
+| =-m, --memory=                      |      |     |     | show socket memory usage                             |
+| =-n, --numeric=                     |      |     |     | don't resolve service names                          |
+| =-o, --options=                     |      |     |     | show timer information                               |
+| =-p, --processes=                   |      |     |     | show process using socket                            |
+| =-r, --resolve=                     |      |     |     | resolve host names                                   |
+| =-s, --summary=                     |      |     |     | show socket usage summary                            |
+| =-t, --tcp=                         |      |     |     | display only TCP sockets                             |
+| =-u, --udp=                         |      |     |     | display only UDP sockets                             |
+| =-w, --raw=                         |      |     |     | display only RAW sockets                             |
+| =-x, --unix=                        |      |     |     | display only Unix domain sockets                     |
+| =-z, --contexts=                    |      |     |     | display process and socket SELinux security contexts |
+|-------------------------------------+------+-----+-----+------------------------------------------------------|
+
+- FAMILY :: {inet|inet6|link|unix|netlink|help}
+- QUERY :: {all|inet|tcp|udp|raw|unix|unix_dgram|unix_stream|unix_seqpacket|packet|netlink}[,QUERY]
+
+**** STATE-FILTER
+- {established|syn-sent|syn-recv|fin-wait-1|fin-wait-2|time-wait|closed|close-wait|last-ack|listen|closing}
+- *all*: for all the states
+- *connected*: all the states except for listen and closed
+- *synchronized*:  all the connected states except for syn-sent
+- *bucket*: states, which are maintained as minisockets, i.e. time-wait and syn-recv.
+- *big*: opposite to bucket
+
+**** ADDRESS-FILTER
+Is boolean expression with operations and, or and not, which can be abbreviated
+in C style f.e. as &, &&.
+
+Predicates check socket addresses, both local and remote. There are the
+following kinds of predicates:
+
+- *dst* ADDRESS_PATTERN - matches remote address and port
+- *src* ADDRESS_PATTERN - matches local address and port
+- *dport* RELOP PORT - compares remote port to a number
+- *sport* RELOP PORT - compares local port to a number
+- *autobound* - checks that socket is bound to an ephemeral port
+
 *** ss::examples
 
 **** ss-161116231307 
@@ -95,7 +152,16 @@ list top 10 PIDs wich has most of all connections:
 :    ~# ss -nap | grep -P "(?<=pid\=)[0-9]+" -o | sort | uniq -c | sort -rn | head
 [[file:./cix-gnu-coreutils.org::*sort][sort]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]] [[file:./cix-gnu-coreutils.org::*head][head]] [[file:./cix-gnu-grep.org::*grep][grep]]
 
+**** ss-180114231711
+dump TCP, UDP, RAW or UNIX sockets:
+:    ~# ss -t -a
+:    ~# ss -u -a
+:    ~# ss -w -a
+:    ~# ss -x -a
+
 *** ss::files
+- /proc/net/tcp
+- 
 *** ss::see-also
 
 ** Referance
@@ -104,5 +170,7 @@ list top 10 PIDs wich has most of all connections:
 - https://wiki.linuxfoundation.org/networking/iproute2
 - http://lartc.org/lartc.html
 - IPROUTE2 Utility Suite Howto http://www.policyrouting.org/iproute2-toc.html
+*** RFC
+- RFC-793 :: TRANSMISSION CONTROL PROTOCOL https://tools.ietf.org/rfc/rfc793.txt
 
 # End of cix-iproute2.org

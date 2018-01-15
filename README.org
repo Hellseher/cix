@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-1-08 Mon 22:28:23 GMT> Sharlatan
+# Last Modified  : <2018-1-15 Mon 00:50:08 GMT> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -71,10 +71,10 @@ QTY  CMD       PKG
 3    xargs     gnu-findutils
 3    udevadm   systemd
 3    tr        gnu-coreutils
+3    ss        iproute2
 3    dpkg      dpkg
 2    wget      wget
 2    tee       gnu-coreutils
-2    ss        iproute2
 2    ssh       openssh
 2    sort      gnu-coreutils
 2    rsync     rsync
@@ -120,6 +120,6 @@ QTY  CMD       PKG
 
 Distribution per example:
 
-Onliners:  238
+Onliners:  242
 Scripts:   108
 #+END_SRC
