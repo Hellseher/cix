@@ -1,0 +1,21 @@
+# File       : cix-supervisor.org
+# Created    : <2018-1-28 Sun 01:16:38 GMT>
+# Modified   : <2018-1-28 Sun 01:23:53 GMT> Sharlatan
+# Maintainer : sharlatan
+# Sinopsis   : A System for Allowing the Control of Process State on UNIX
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: Supervisor
+|---------------+-----------------|
+| *Author*      |                 |
+| *Maintainers* | Mike Naberezny, |
+|               | Chris McDonough |
+| *Released*    | 2006            |
+| *Source*      | [[https://github.com/Supervisor/supervisor][supervisor.git]]  |
+| *Homepage*    | [[http://supervisord.org/][supervisord.web]] |
+|---------------+-----------------|
+
+-----
+# End of cix-supervisor.org

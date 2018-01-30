@@ -1,0 +1,25 @@
+# File          : cix-elfutils.org
+# Created       : <2015-11-02 Mon 22:18:23 GMT>
+# Modified      : <2018-1-30 Tue 22:45:09 GMT> Sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : collection of utilities and DSOs to handle ELF files and DWARF data
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+
+#+TITLE: elfutils
+|-----------------+-----------------|
+| *Author*        | Ulrich Drepper, |
+|                 | Roland McGrath, |
+|                 | Petr Machata    |
+| *Maintainer(s)* |                 |
+| *Released*      | 2000            |
+| *Source*        | [[https://github.com/threatstack/elfutils][elfutils.git]],   |
+|                 |                 |
+| *Homepage*      | [[https://sourceware.org/elfutils/][elfutils.web]]    |
+|-----------------+-----------------|
+
+---
+# End of cix-elfutils.org

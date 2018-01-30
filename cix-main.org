@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-1-08 Mon 22:40:09 GMT> Sharlatan
+# Modified   : <2018-1-30 Tue 22:49:50 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -74,7 +74,7 @@ on *GNU/Linux*
   + [[./spices/cix-unix-land.org][unix land]] :: common unix commands.
 
 - *Core* /Usually it contains on the most distributions/
-  + bsd :: list of common BSD commands:
+  + [bsd] :: list of common BSD commands:
   + [[./spices/cix-busybox.org][busybox]] :: the swiss army knife of embedded Linux: =GNU/Linux= =FreeBSD=
   + [[./spices/cix-gnu-coreutils.org][coreutis]] :: basic file, shell and text manipulation utilities: =GNU/Linux= =FreeBSD= =HP-UX= =AUX=
   + [[./spices/cix-kbd.org][kbd]] :: tools for configuring the console: =GNU/Linux=
@@ -86,7 +86,7 @@ on *GNU/Linux*
 
 - *File* /Everything is a file/
   + [[file:./spices/cix-diffutils.org][diffutils]] :: a GNU collection of diff utilities
-  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacstext editor
+  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
   + [[./spices/cix-file.org][file]] :: a utility for determining file types: =GNU/Linux= =NetBSD= =FreeBSD= =OS/2= =OS-X= =DOS= =Windows=
   + [[./spices/cix-gawk.org][gawk]] :: the GNU version of the AWK text processing utility: =GNU/Linux=
   + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better: =GNU/Linux= =UNIX= =OS-X=
@@ -118,19 +118,25 @@ on *GNU/Linux*
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /Be silent and help ppls/
+  + [facter] ::
+  + [likwid] ::
+  + [ohai] ::
+  + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
   + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools
+  + [[./spices/cix-elfutils.org][elfutils]] :: collection of utilities and DSOs to handle ELF files and DWARF data
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
+  + [[./spices/cix-pax-utils.org][pax-utils]] :: ELF utils that can check files for security relevant properties
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
   + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
   + [[file:./spices/cix-vmtouch.org][vmtouch]] :: Portable file system cache diagnostics and control
-  + [likwid]  ::
-  + [facter] ::
-  + [ohai] ::
-  + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
+
+- *System-monitoring* /Keep an Eye on Me/
+  + [[./spices/cix-supervisor.org][supervisor]] :: A System for Allowing the Control of Process State on UNIX: =GNU/Linux= =OS-X= =Solaris= =FreeBSD=
+  + [[./spices/cix-circus.org][circus]] :: A Process & Socket Manager built with zmq
 
 - *Hardware* /Hard as a rock!/
   + [[file:./spices/cix-iw.org][iw]] :: A nl80211 based wireless configuration tool: =GNU/Linux=
