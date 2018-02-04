@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-1-30 Tue 22:49:50 GMT> Sharlatan
+# Modified   : <2018-2-04 Sun 23:06:04 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -298,6 +298,7 @@ grep "+conf" ./conf/cix-vsftpd.conf
 
 - [[file:./conf/cix-vsftpd.conf][vsftpd.conf]]
 - [[file:conf/cix-grub.cfg][grub.cfg]]
+- [[./conf/cix-journald.conf][journald.conf]]
 
 * Libraries
 Distribution of most commonly used libraries
