@@ -1,6 +1,6 @@
 # File           : cix-systemd.org
 # Created        : <2016-12-17 Sat 20:57:29 GMT>
-# Modified  : <2017-11-22 Wed 22:10:48 GMT> Sharlatan
+# Modified  : <2018-2-08 Thu 23:10:34 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis : System and Service Manager.
@@ -128,6 +128,11 @@ implements an elaborate transactional dependency-based service control logic.
 ** coredumpctl                                                                  :cmd:
 ** hostnamectl                                                                  :cmd:
 ** journalctl                                                                   :cmd:
+*** journalctl::options
+*** journalctl::examples
+**** journalctl-180208230457
+dumb full log history of a SERVICE as JSON file:
+:    ~# journalctl --output=json --no-pager -u SERVICE > SERVICE_dump.json
 ** kernel-install                                                               :cmd:
 ** localectl                                                                    :cmd:
 ** loginctl                                                                     :cmd:
@@ -156,10 +161,7 @@ implements an elaborate transactional dependency-based service control logic.
 ** init                                                                         :cmd:
 ** poweroff                                                                     :cmd:
 ** reboot                                                                       :cmd:
-** reboot                                                                       :cmd:
 ** runlevel                                                                     :cmd:
-** shutdown                                                                     :cmd:
-** shutdown                                                                     :cmd:
 ** shutdown                                                                     :cmd:
 ** telinit                                                              :cmd:
 
