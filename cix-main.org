@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-2-04 Sun 23:06:04 GMT> Sharlatan
+# Modified   : <2018-3-07 Wed 23:26:31 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -118,7 +118,7 @@ on *GNU/Linux*
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /Be silent and help ppls/
-  + [facter] ::
+   + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
   + [likwid] ::
   + [ohai] ::
   + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=

@@ -1,6 +1,6 @@
 # File           : cix-emacs.org
 # Created        : <2017-08-07 Mon 00:31:31 BST>
-# Modified       : <2017-8-21 Mon 21:26:17 BST> sharlatan
+# Modified       : <2018-3-07 Wed 22:59:37 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : GNU Emacs text editor
@@ -19,6 +19,10 @@
 | *Info*          | [[https://www.gnu.org/software/emacs/][emacs.web]]         |
 |-----------------+-------------------|
 
+=emacs= is a powerful, customizable, self-documenting, modeless text editor. =emacs=
+contains special code editing features, a scripting language (elisp), and the
+capability to read mail, news, and more without leaving the editor. This package
+provides an emacs binary with support for X windows.
 -----
 * Index
 * Receipts

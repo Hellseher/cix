@@ -1,6 +1,6 @@
 # File          : cix-acl.org
 # Created       : <2016-11-07 Mon 19:54:33 GMT>
-# Modified      : <2017-8-28 Mon 22:39:29 BST> sharlatan
+# Modified      : <2018-3-07 Wed 23:08:33 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Access control list utilities. 
@@ -23,7 +23,8 @@
 | *Info*          |                      |
 |-----------------+----------------------|
 
-
+=acl= Extended Atribute Library, package contains the getfacl and setfacl
+utilities needed for manipulating access control lists. ---
 * Index
 #+BEGIN_EXAMPLE
     chacl (1)            - change the access control list of a file or directory

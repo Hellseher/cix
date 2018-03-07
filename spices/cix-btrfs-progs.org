@@ -1,6 +1,6 @@
 # File          : cix-btrfs-progs.org
 # Created       : <2016-11-07 Mon 21:47:58 GMT>
-# Modified      : <2017-8-26 Sat 11:42:40 BST> sharlatan
+# Modified      : <2018-3-07 Wed 23:10:39 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Userspace programs for btrfs
@@ -9,15 +9,20 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: btrfs-progs
+|                 |                 |
 |-----------------+-----------------|
 | *Author*        | [[https://github.com/kdave/btrfs-progs/graphs/contributors][(all...)]]        |
 | *Maintainer(s)* |                 |
 | *Released*      | 2009            |
 | *Source*        | [[https://github.com/kdave/btrfs-progs][btrfs-progs.git]] |
 | *Man*           |                 |
-| *Info*          | [[https://btrfs.wiki.kernel.org/index.php/Main_Page][btrfs.wiki]]      |
+| *Homepage*      | [[https://btrfs.wiki.kernel.org/index.php/Main_Page][btrfs.wiki]]      |
 |-----------------+-----------------|
 
+The =btrfs-progs= package provides all the userspace programs needed to create,
+check, modify and correct any inconsistencies in the btrfs filesystem.
+
+---
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc btrfs-progs

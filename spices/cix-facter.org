@@ -1,0 +1,36 @@
+# File           : cix-facter.org
+# Created        : <2018-03-07 Wed 23:15:51 GMT>
+# Modified       : <2018-3-07 Wed 23:26:32 GMT> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: facter
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Homepage*      |   |
+|-----------------+---|
+
+=facter= is a lightweight program that gathers basic node information about the
+hardware and operating system. =facter= is especially useful for retrieving things
+like operating system names, hardware characteristics, IP addresses, MAC
+addresses, and SSH keys.
+
+=facter= is extensible and allows gathering of node information that may be custom
+or site specific. It is easy to extend by including your own custom facts.
+=facter= can also be used to create conditional expressions in Puppet that key off
+the values returned by facts.
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-facter.org
+
