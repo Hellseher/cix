@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-3-07 Wed 23:26:31 GMT> Sharlatan
+# Modified   : <2018-6-28 Thu 23:19:55 BST> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -118,11 +118,10 @@ on *GNU/Linux*
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /Be silent and help ppls/
-   + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
-  + [likwid] ::
+  + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
+- [likwid] ::
   + [ohai] ::
   + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
-  + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools
   + [[./spices/cix-elfutils.org][elfutils]] :: collection of utilities and DSOs to handle ELF files and DWARF data
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
@@ -229,21 +228,22 @@ on *GNU/Linux*
 - *Development* /In the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-autoconf.org][autoconf]] :: a GNU tool for automatically configuring source code
   + [[file:./spices/cix-automake.org][automake]] :: A GNU tool for automatically creating Makefiles
+  + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools
   + [[file:./spices/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
   + [[file:./spices/cix-cmake.org][cmake]] :: Cross-platform make system
   + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool
-  + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...)
+  + [[./spices/cix-gcc.org][gcc]] :: various compilers (c, c++, objective-c, java, ...): =GNU/Linux=
   + [[./spices/cix-gdb.org][gdb]] :: a GNU source-level debugger for C, C++, Fortran, Go and other languages
   + [[file:./spices/cix-git.org][git]] :: Fast Version Control System
-  + [[./spices/cix-glibc.org][glibc]] :: common binaries and locale data for glibc
-  + [[file:./spices/cix-musl.org][musl]] :: 
+  + [[./spices/cix-glibc.org][glibc]] :: common binaries and locale data containing the main C library: =GNU/Linux=
   + [[file:./spices/cix-global.org][global]] :: Source code tag system
+  + [[file:./spices/cix-jemalloc.org][jemalloc]] :: General-purpose scalable concurrent malloc implementation: =GNU/Linux= =FreeBSD=
   + [[file:./spices/cix-gnu-libtool.org][libtool]] :: The GNU Portable Library Tool: =GNU/Linux= =Solaris=
   + [[file:./spices/cix-gnu-lightning.org][lightning]] :: library for generating assembly code on run time: =GNU/Linux=
   + [[file:./spices/cix-llvm.org][llvm]] :: The Low Level Virtual Machine: =OS-X= =GNU/Linux=
   + [[file:./spices/cix-gnu-make.org][make]] :: a tool which simplifies the build process for users: =GNU/Linux=
+  + [[file:./spices/cix-musl.org][musl]] :: 
   + [[file:./spices/cix-valgrind.org][valgrind]] :: Tool for finding memory management bugs in programs
-  + [[file:./spices/cix-jemalloc.org][jemalloc]] :: General-purpose scalable concurrent malloc implementation: =GNU/Linux= =FreeBSD=
 
 - *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
@@ -253,6 +253,8 @@ on *GNU/Linux*
   + [[file:spices/cix-pacman.org][pacman]] :: is one of the major distinguishing features of Arch Linux
   + [[file:./spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD: =FreeBSD=
   + [[file:./spices/cix-rpm.org][rpm]] :: package manager is a command line driven package management system
+  + [guix] ::
+  + [nix] :: 
 
 - *Research-reverse-engineering* /I've got a clue/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
