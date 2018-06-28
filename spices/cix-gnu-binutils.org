@@ -1,6 +1,6 @@
 # File          : cix-gnu-binutils.org
 # Created       : <2015-11-02 Mon 22:18:23 GMT>
-# Modified      : <2017-9-27 Wed 00:21:37 BST> sharlatan
+# Modified      : <2018-6-28 Thu 23:23:45 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU collection of binary utilities
@@ -9,13 +9,13 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Bin Utils
-|----------------+------------------|
-| *Author*       | Alan Modra       |
-| *Maintainer(s) |                  |
-| *Released*     | 1991             |
-| *Source*       | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
-| *Info*         |                  |
-|----------------+------------------|
+|-----------------+------------------|
+| *Author*        | Alan Modra       |
+| *Maintainer(s)* |                  |
+| *Released*      | 1991             |
+| *Source*        | [[https://sourceware.org/git/gitweb.cgi?p=binutils-gdb.git][binutils-gdb.git]] |
+| *Homepage*      | [[https://www.gnu.org/software/binutils/][binutils.web]]     |
+|-----------------+------------------|
 
 A set of programming tools for creating and managing binary programs, object
 files, libraries, profile data, and assembly source code.
