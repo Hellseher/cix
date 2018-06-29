@@ -1,6 +1,6 @@
 # File           : cix-automake.org<spices>
 # Created        : <2017-08-25 Fri 00:23:18 BST>
-# Modified       : <2017-8-28 Mon 22:36:08 BST> sharlatan
+# Modified       : <2018-1-02 Tue 23:03:02 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : A GNU tool for automatically creating Makefiles
@@ -14,7 +14,7 @@
 | *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/automake.git/tree/THANKS][(all...)]]                 |
 | *Released*       | 1996                     |
 | *Source*         | [[http://git.savannah.gnu.org/cgit/automake.git][automake.git]]             |
-| *Info*           |                          |
+| *Homepage*       |                          |
 |------------------+--------------------------|
 
 

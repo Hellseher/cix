@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-6-28 Thu 23:19:55 BST> Sharlatan
+# Modified   : <2018-6-30 Sat 00:03:18 BST> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -226,9 +226,9 @@ on *GNU/Linux*
   + [[file:./spices/cix-gnu-grub2.org][grub2]] :: Bootloader with support multiboot and more: =GNU/Linux= 
 
 - *Development* /In the fields of observation chance favors only the prepared mind./
-  + [[./spices/cix-autoconf.org][autoconf]] :: a GNU tool for automatically configuring source code
-  + [[file:./spices/cix-automake.org][automake]] :: A GNU tool for automatically creating Makefiles
-  + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools
+  + [[./spices/cix-gnu-autoconf.org][autoconf]] :: a GNU tool for automatically configuring source code: =GNU/Linux=
+  + [[file:./spices/cix-gnu-automake.org][automake]] :: A GNU tool for automatically creating Makefiles: =GNU/Linux=
+  + [[./spices/cix-gnu-binutils.org][binutils]] :: collection of binary tools: =GNU/Linux=
   + [[file:./spices/cix-gnu-bison.org][bison]] ::  A GNU general-purpose parser generator
   + [[file:./spices/cix-cmake.org][cmake]] :: Cross-platform make system
   + [[file:./spices/cix-ctags.org][ctags]] :: A C programming language indexing and/or cross-reference tool

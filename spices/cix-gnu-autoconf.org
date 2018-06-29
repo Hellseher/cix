@@ -1,6 +1,6 @@
-# File          : cix-autoconf.org
+# File          : cix-gnu-autoconf.org
 # Created       : <2017-01-22 Sun 23:40:29 GMT>
-# Modified      : <2017-8-25 Fri 00:21:06 BST> sharlatan
+# Modified      : <2018-6-30 Sat 00:02:07 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU tool for automatically configuring source code
