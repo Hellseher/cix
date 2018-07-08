@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-6-30 Sat 00:03:18 BST> Sharlatan
+# Modified   : <2018-7-07 Sat 10:21:27 BST> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -118,11 +118,11 @@ on *GNU/Linux*
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
 
 - *Utillities* /Be silent and help ppls/
-  + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
-- [likwid] ::
+  + [likwid] ::
   + [ohai] ::
   + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
   + [[./spices/cix-elfutils.org][elfutils]] :: collection of utilities and DSOs to handle ELF files and DWARF data
+  + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
   + [[./spices/cix-pax-utils.org][pax-utils]] :: ELF utils that can check files for security relevant properties
@@ -182,12 +182,13 @@ on *GNU/Linux*
   + [[file:./spices/cix-ncat.org][ncat]] :: general-purpose network connector (nmap's project netcat replacement:
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries: =GNU/Linux= =FreeBSD= =OpenBSD= =Solaris/SPARC= =OS-X= =AIX= =HP-UX= =NetBSD= =OSF= =SunOS= =Ultrix= =QNX= =Dynix= =IRIX= =Windows=
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
-  + [[file:./spices/cix-netcat.org][netcat]] :: a tcp/ip swiss army knife for networking:  =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
+  + [[file:./spices/cix-netcat.org][netcat]] :: a TCP/IP swiss army knife for networking:  =DOS= =ULTRIX= =SunOS= =Solaris= =AIX= =GNU/Linux= =IRIX= =OSF= =NetBSD= =HP-UX= =AUX= =NeXT=
   + [[file:./spices/cix-netperf.org][netperf]] :: TCP/UDP/sockets/etc performance benchmark: =FreeBSD= =AIX= =Solaris= =GNU/Linux= =HP-UX= =IRIX=
   + [[./spices/cix-nmap.org][nmap]] :: network exploration tool and security scanner
   + [[./spices/cix-openssh.org][OpenSSH]] :: an open source implementation of ssh protocol: =AIX= =HP-UX= =IRIX= =GNU/Linux= =Next= =Sco= =Sni/Reliant= =Unix= =Solaris= =Digital= =Unix/Tru64/Osf= =Mac= =Os-X= =Cygwin=
   + [[file:./spices/cix-scapy.org][scapy]] :: Interactive packet manipulation tool and network scanner: =GNU/Linux=
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =GNU/Linux= =FreeBSD=
+  + [[./spices/cix-dsniff.org][dsniff]] :: tools for network auditing and penetration testing: =GNU/Linux= =OpenBSD= =Solaris=
 
 - *Shell* /Not just sand.../
   + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD
@@ -368,10 +369,14 @@ Distribution of most commonly used libraries
 - Richard Blum;
   *Linux Command Line and Shell Scripting Bible*;
   Wiley  Publishing Inc., 2008;
-
+- Ben Clark;
+  *RTFM: Red Team Field Manual*;
+  Ben Clark, 2013;
+  
 ** Articles
 - M. Douglas McIlroy;
   *A Research UNIX Reader: Annotated Excerpts from the Programmer’s Manual, 1971-1986*;
+
 ** Links
 - THE UNIX ORAL HISTORY PROJECT
   http://www.princeton.edu/~hos/Mahoney/expotape.htm
@@ -409,6 +414,8 @@ Distribution of most commonly used libraries
   https://github.com/alebcay/awesome-shell
 - Awesome Bash
   https://github.com/awesome-lists/awesome-bash
+- Single-file source libraries
+  https://github.com/nothings/single_file_libs
 
 ** IRC
 - *irc.freenode.org*

@@ -1,0 +1,27 @@
+# File          : cix-dsniff.org
+# Created       : <2018-7-07 Sat 09:58:48 BST>
+# Modified      : <2018-7-07 Sat 10:17:31 BST> Sharlatan
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : 
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: dsniff
+|-----------------+------------|
+| *Author*        | Dug Song   |
+| *Maintainer(s)* |            |
+| *Released*      | 2000       |
+| *Source*        |            |
+| *Homepage*      | [[https://www.monkey.org/~dugsong/dsniff/][dsniff.web]] |
+|-----------------+------------|
+
+# End of cix-dsniff.org
+* Index
+* Receipts
+* Referances
+** Links
+- And away we spoof!!!
+  http://www.linuxsecurity.com/docs/PDF/dsniff-n-mirror.pdf
+** RFC
