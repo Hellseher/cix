@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-1-30 Tue 22:23:11 GMT> Sharlatan
+# Last Modified  : <2018-7-08 Sun 01:07:29 BST> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -49,77 +49,78 @@ cix
 #+BEGIN_SRC org
 Distribution per subjest:
 
-QTY  CMD       PKG
----  ---       ---
-33   tcpdump   tcpdump
-18   awk       gawk
-17   sed       sed
-10   find      gnu-findutils
-10   dd        gnu-coreutils
-7    chmod     gnu-coreutils
-5    strace    strace
-5    nc        netcat
-5    mount     util-linux
-5    ls        gnu-coreutils
-5    grep      gnu-grep
-4    tar       tar
-4    paste     gnu-coreutils
-4    lspci     pciutils
-4    lsof      lsof
-4    curl      curl
-4    column    util-linux
-3    xargs     gnu-findutils
-3    udevadm   systemd
-3    tr        gnu-coreutils
-3    ss        iproute2
-3    dpkg      dpkg
-2    wget      wget
-2    tee       gnu-coreutils
-2    ssh       openssh
-2    sort      gnu-coreutils
-2    rsync     rsync
-2    objdump   gnu-binutils
-2    nohup     gnu-coreutils
-2    ncat      ncat
-1    while     gnu-bash
-1    whatis    man-db
-1    usermod   shadow-utils
-1    uniq      gnu-coreutils
-1    timeout   gnu-coreutils
-1    strings   gnu-binutils
-1    smem      smem
-1    set       gnu-bash
-1    rm        gnu-coreutils
-1    rev       util-linux
-1    pwd       gnu-coreutils
-1    printf    gnu-bash
-1    pkill     procps-ng
-1    ping      iputils
-1    perf      perf
-1    pacman    pacman
-1    nm        gnu-binutils
-1    mv        gnu-coreutils
-1    mktemp    gnu-coreutils
-1    mkdir     gnu-coreutils
-1    lsblk     util-linux
-1    ln        gnu-coreutils
-1    ldd       glibc
-1    jq        jq
-1    gpg       gnu-pg
-1    gpasswd   shadow-utils
-1    git       git
-1    flock     util-linux
-1    file      file
-1    expr      gnu-coreutils
-1    du        gnu-coreutils
-1    dnf       dnf
-1    command   gnu-bash
-1    base64    gnu-coreutils
-1    aptitude  aptitude
-1    aprping   iputils
+QTY  CMD         PKG
+---  ---         ---
+33   tcpdump     tcpdump
+18   awk         gawk
+17   sed         sed
+10   find        gnu-findutils
+10   dd          gnu-coreutils
+7    chmod       gnu-coreutils
+6    ls          gnu-coreutils
+5    strace      strace
+5    nc          netcat
+5    mount       util-linux
+5    grep        gnu-grep
+4    tar         tar
+4    ss          iproute2
+4    paste       gnu-coreutils
+4    lspci       pciutils
+4    lsof        lsof
+4    curl        curl
+4    column      util-linux
+3    xargs       gnu-findutils
+3    udevadm     systemd
+3    tr          gnu-coreutils
+3    dpkg        dpkg
+2    wget        wget
+2    tee         gnu-coreutils
+2    ssh         openssh
+2    sort        gnu-coreutils
+2    rsync       rsync
+2    objdump     gnu-binutils
+2    nohup       gnu-coreutils
+2    ncat        ncat
+2    git         git
+1    while       gnu-bash
+1    whatis      man-db
+1    usermod     shadow-utils
+1    uniq        gnu-coreutils
+1    timeout     gnu-coreutils
+1    strings     gnu-binutils
+1    smem        smem
+1    set         gnu-bash
+1    rm          gnu-coreutils
+1    rev         util-linux
+1    pwd         gnu-coreutils
+1    printf      gnu-bash
+1    pkill       procps-ng
+1    ping        iputils
+1    perf        perf
+1    pacman      pacman
+1    nm          gnu-binutils
+1    mv          gnu-coreutils
+1    mktemp      gnu-coreutils
+1    mkdir       gnu-coreutils
+1    lsblk       util-linux
+1    ln          gnu-coreutils
+1    ldd         glibc
+1    jq          jq
+1    journalctl  systemd
+1    gpg         gnu-pg
+1    gpasswd     shadow-utils
+1    flock       util-linux
+1    file        file
+1    expr        gnu-coreutils
+1    du          gnu-coreutils
+1    dnf         dnf
+1    command     gnu-bash
+1    base64      gnu-coreutils
+1    aptitude    aptitude
+1    aprping     iputils
 
 Distribution per example:
 
-Onliners:  242
+Onliners:  249
 Scripts:   108
 #+END_SRC

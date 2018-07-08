@@ -1,13 +1,14 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2018-1-08 Mon 22:26:26 GMT> Sharlatan
+# Modified   : <2018-7-08 Sun 01:05:28 BST> Sharlatan
 # Maintainer : sharlatan
-# Sinopsis   : A set of basic GNU tools commonly used in shell scripts
+# Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: GNU Core Utilities
+#+TITLE: GNU Coreutils
+|               |               |
 |---------------+---------------|
 | *Author*      | [[http://git.savannah.gnu.org/cgit/coreutils.git/tree/AUTHORS][(all..)]]       |
 | *Maintainers* | Jim Meyering, |
@@ -15,7 +16,7 @@
 |               | Pádraig Brady |
 | *Released*    | 2003          |
 | *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
-| *Info*        | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
+| *Homepage*    | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
 |---------------+---------------|
 
 The GNU Core Utilities are the basic file, shell and text manipulation utilities
@@ -745,12 +746,12 @@ repoint symlink to another file:
 *** ls::examples
 
 **** ls-161226204717
-List block devices:
+list block devices:
 :    ~$ ls -l /dev /dev/mapper | grep '^b'
 [[file:./cix-gnu-grep.org::*grep][grep (1)]]
 
 **** ls-161118234510
-Tree view of all sub directories:
+tree view of all sub directories:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -764,13 +765,12 @@ Tree view of all sub directories:
 [[file:./cix-gnu-grep.org::*grep][grep (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
 
 **** ls-161107232103
-Sweet memorising examples of using *ls*:
+sweet memorising examples of using *ls*:
 :    ~$ ls -Rotti
 :    ~$ ls -Ham
 :    ~$ ls -and
 :    ~$ ls -laSh
 :    ~$ ls -Qam
-
 
 **** ls-161107232114
 List only - dir, files, links, hidden dirs, hidden files hidden links, exec
@@ -797,6 +797,13 @@ aliases best practice:
     alias ltail="ls -lhGgo | tail"
     alias lmore='ls -lhGgo | more'
 #+END_EXAMPLE
+
+**** ls-180708004207
+sort files and directories in current working directory by size:
+:    ~$ ls -lS ./                 # bigest first
+:    ~$ ls -lSr ./                # smallest first
+:    ~$ ls -lSh                   # with human readable file size
+:    ~$ ls -lS ./  | grep -v "^d" # just files, ignore directory
 *** ls::see-also
   [[file:./cix-gnu-core-utilities.org::*dir][dir (1)]]
 ** md5sum                                                                       
