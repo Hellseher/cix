@@ -1,6 +1,6 @@
 # File          : cix-gnu-grep.org
 # Created       : <2016-11-18 Fri 23:49:59 GMT>
-# Modified      : <2017-8-21 Mon 23:12:11 BST> sharlatan
+# Modified      : <2018-7-14 Sat 21:41:10 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Pattern matching utilities
@@ -9,21 +9,21 @@
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: GNU Grep
-|-----------------+---------------------|
-| *Author*        | Ken Thompson,       |
-|                 | Mike Haertel,       |
-|                 | Arthur David Olson, |
-|                 | Richard Stallman,   |
-|                 | Karl Berry,         |
-|                 | Henry Spencer,      |
-|                 | Scott Anderson,     |
-|                 | David MacKenzie     |
-| *Maintainer(s)* |                     |
-| *Released*      | 1974, 1993          |
-| *Source*        | [[http://git.savannah.gnu.org/cgit/grep.git][grep.git]]            |
-| *Man*           | [[http://man7.org/linux/man-pages/man1/grep.1.html][grep.1]]              |
-| *Info*          | [[https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html][grep.web]]            |
-|-----------------+---------------------|
+|-----------------+--------------------|
+| *Author*        | Ken Thompson       |
+|                 | Mike Haertel       |
+|                 | Arthur David Olson |
+|                 | Richard Stallman   |
+|                 | Karl Berry         |
+|                 | Henry Spencer      |
+|                 | Scott Anderson     |
+|                 | David MacKenzie    |
+| *Maintainer(s)* |                    |
+| *Released*      | 1974, 1993         |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/grep.git][grep.git]]           |
+| *Man*           | [[http://man7.org/linux/man-pages/man1/grep.1.html][grep.1]]             |
+| *Homepage*      | [[https://www.gnu.org/savannah-checkouts/gnu/grep/manual/grep.html][grep.web]]           |
+|-----------------+--------------------|
 
 The GNU versions of commonly used grep utilities. Grep searches through textual
 input for lines which contain a match to a specified pattern and then prints the
@@ -62,11 +62,6 @@ split line of text into character array:
 :    ~$ char_array="$(echo $input_line | grep -o .)"
 [[file:./cix-gnu-coreutils.org::*echo][echo]]
 
-**** grep-170807000616
-find all files wich has not matched PATERN:
-:    ~$ find ./ -type f -print0 | xargs -0 grep -L "PATERN"
-[[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-findutils.org::*find][find]]
-
 **** grep-170821224051
 find files that do not contain matching PATERN:
 :    ~$ find ./ -type f -print0 | xargs -0 grep -H -c "PATERN" | grep "0$" | cut -d":" -f1
@@ -75,6 +70,14 @@ find files that do not contain matching PATERN:
 :    ~$ find ./ -type f -prnt0 | xargs -0 grep -L "PATERN" 
 :    ~$ grep -rL "PATERN" ./
 [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
+
+**** grep-180714120535
+cut string from the begining, the end or both sides by N=10 characters:
+:    ~$ grep -Eo '^.{10}' ./input_f                  # from the begining
+:    ~$ grep -Eo '.{10}$' ./input_f                  # from the end
+:    ~$ grep -Eo '(?<=^.{10}).*(?=.{10}$)' ./input_f # from both sids
+
+You can you =-E= option or =egrep=
 
 *** grep1::files
 *** grep::vars
