@@ -1,9 +1,9 @@
 # File          : cix-kmod.org
 # Created       : <2016-06-19 Tue 23:54:09 GMT>
-# Modified      : <2017-8-20 Sun 11:54:47 BST> sharlatan
+# Modified      : <2018-7-14 Sat 22:27:34 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      : Linux kernel module management utilities
+# Sinopsis      : <Linux kernel module management utilities>
 
 #+OPTIONS: num:nil
 
@@ -12,7 +12,6 @@
 
 |----------------+-----------------|
 | *Author*       | Lucas De Marchi |
-| *Contributors* |                 |
 | *Source*       | [[https://git.kernel.org/pub/scm/utils/kernel/kmod][kmod.git]]        |
 | *Man*          | [[http://man7.org/linux/man-pages/man8/kmod.8.html][kmod.8]]          |
 | *Released*     | 2001            |
@@ -41,6 +40,14 @@ and unloaded modules.
 #+END_SRC
 
 * Receipts
+** kmod
+** depmod
+** insmod
+** lsmod
+** modinfo                                                              :cmd:
+
+** modprobe
+** rmmod
 * References
 
 # End of cix-kmod.org

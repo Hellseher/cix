@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-7-14 Sat 21:43:09 BST> Sharlatan
+# Last Modified  : <2018-7-14 Sat 22:29:26 BST> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -61,11 +61,11 @@ QTY  CMD         PKG
 5    strace      strace
 5    nc          netcat
 5    mount       util-linux
+5    lspci       pciutils
 5    grep        gnu-grep
 4    tar         tar
 4    ss          iproute2
 4    paste       gnu-coreutils
-4    lspci       pciutils
 4    lsof        lsof
 4    curl        curl
 4    column      util-linux
@@ -121,6 +121,6 @@ QTY  CMD         PKG
 
 Distribution per example:
 
-Onliners:  252
+Onliners:  254
 Scripts:   108
 #+END_SRC

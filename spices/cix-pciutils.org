@@ -1,9 +1,8 @@
-# File           : cix-pciutils.org
-# Created        : <2016-11-08 Tue 23:15:13 GMT>
-# Modified  : <2017-11-19 Sun 22:11:28 GMT> Sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis : PCI bus related utilities
+# File     : cix-pciutils.org
+# Created  : <2016-11-08 Tue 23 :15 :13 GMT>
+# Modified : <2018-7-14 Sat 22:28:51 BST> Sharlatan
+# Author   : sharlatan
+# Sinopsis : <PCI bus related utilities>
 
 #+OPTIONS: num:nil
 
@@ -37,7 +36,8 @@ list active PCI slots know for kernel on runtime:
 [[file:./cix-gnu-grep.org::*grep][grep]] [[file::*egrep][egrep]]
 
 **** lspci-171119215303 
-list avialable classes:
+list avialable classes, and show quantity:
+:    ~# lspci | grep -oP "(?<=\.[0-7]\s).*(?=:)"
 :    ~# lspci | grep -oP "(?<=\.[0-7]\s).*(?=:)" | sort | uniq -c | sort -rn
 [[file:./cix-gnu-grep.org::*grep][grep]] [[file:./cix-gnu-coreutils.org::*sort][sort]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]]
 
@@ -49,4 +49,8 @@ show device in the specific slot:
 display tag:value pair info for a pci device:
 :    ~# lspci -vmms <slot>
 
+**** lspci-180714221618
+list a driver info used for a PCI device in a slot:
+:    ~# lspci -v -s 02:00.0 | grep -i "kernel driver" | grep -Po "(?<=\: ).*" | xargs modinfo
+[[file:./cix-gnu-grep.org::*grep][grep]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-kmod.org::*modinfo][modinfo]]
 # End of cix-pciutils.org
