@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-7-14 Sat 22:29:26 BST> Sharlatan
+# Last Modified  : <2018-8-05 Sun 23:05:50 BST> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -86,6 +86,7 @@ QTY  CMD         PKG
 1    whatis      man-db
 1    usermod     shadow-utils
 1    uniq        gnu-coreutils
+1    top         procps-ng
 1    timeout     gnu-coreutils
 1    strings     gnu-binutils
 1    smem        smem
@@ -114,6 +115,7 @@ QTY  CMD         PKG
 1    expr        gnu-coreutils
 1    du          gnu-coreutils
 1    dnf         dnf
+1    comm        gnu-coreutils
 1    command     gnu-bash
 1    base64      gnu-coreutils
 1    aptitude    aptitude
@@ -121,6 +123,6 @@ QTY  CMD         PKG
 
 Distribution per example:
 
-Onliners:  254
+Onliners:  257
 Scripts:   108
 #+END_SRC

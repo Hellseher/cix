@@ -1,18 +1,18 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2018-7-08 Sun 01:05:28 BST> Sharlatan
+# Modified   : <2018-8-02 Thu 23:24:41 BST> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: GNU Coreutils
+#+TITLE: coreutils
 |               |               |
 |---------------+---------------|
 | *Author*      | [[http://git.savannah.gnu.org/cgit/coreutils.git/tree/AUTHORS][(all..)]]       |
-| *Maintainers* | Jim Meyering, |
-|               | Paul Eggert,  |
+| *Maintainers* | Jim Meyering  |
+|               | Paul Eggert   |
 |               | Pádraig Brady |
 | *Released*    | 2003          |
 | *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
@@ -22,7 +22,7 @@
 The GNU Core Utilities are the basic file, shell and text manipulation utilities
 of the GNU operating system. These are the core utilities which are expected to
 exist on every operating system. This package is the union of the GNU
-=fileutils=, =shellutils=, and =textutils= packages.
+~fileutils~, ~shellutils~, and ~textutils~ packages.
 -----
 
 * Index
@@ -377,6 +377,10 @@ allow everyone in your group to be able to modify the file:
 /Written by Richard M. Stallman and David MacKenzie/
 *** comm::options
 *** comm::examples
+**** comm-180802202649
+find lines only in file_1:
+:    ~$ comm -23 file_1 file_2                       # if both file sorted
+:    ~$ comm -23 <(sort -u file_1) <(sort -u file_2) # if both file sorted
 *** comm::files
 *** comm::see-also
   [[file:./cix-gnu-core-utilities.org::*join][join(1)]], [[file:./cix-gnu-core-utilities.org::*uniq][uniq(1)]]

@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-7-07 Sat 10:21:27 BST> Sharlatan
+# Modified   : <2018-7-28 Sat 09:44:47 BST> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -189,6 +189,8 @@ on *GNU/Linux*
   + [[file:./spices/cix-scapy.org][scapy]] :: Interactive packet manipulation tool and network scanner: =GNU/Linux=
   + [[./spices/cix-tcpdump.org][tcpdump]] :: dump traffic on a network: =GNU/Linux= =FreeBSD=
   + [[./spices/cix-dsniff.org][dsniff]] :: tools for network auditing and penetration testing: =GNU/Linux= =OpenBSD= =Solaris=
+  + [[./spices/cix-ipset.org][ipset]] :: Manage Linux IP sets: =GNU/Linux=
+  + [[./spices/cix-iptraf-ng.org][iptraf-ng]] :: a console-based network monitoring utility: =GNU/Linux=
 
 - *Shell* /Not just sand.../
   + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD

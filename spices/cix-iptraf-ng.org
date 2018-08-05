@@ -1,0 +1,28 @@
+# File       : cix-iptraf-ng.org
+# Created    : Wed 14 Oct 2015 23:07:41
+# Modified   : <2018-7-29 Sun 00:28:18 BST> Sharlatan
+# Maintainer : sharlatan
+# Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: iptraf-ng
+|               |               |
+|---------------+---------------|
+| *Author*      | [[http://git.savannah.gnu.org/cgit/coreutils.git/tree/AUTHORS][(all..)]]       |
+| *Maintainers* | Jim Meyering, |
+|               | Paul Eggert,  |
+|               | Pádraig Brady |
+| *Released*    | 2003          |
+| *Source*      | [[http://git.savannah.gnu.org/cgit/coreutils.git][coreutils.git]] |
+| *Homepage*    | [[http://www.gnu.org/software/coreutils/manual/coreutils.html][GNU Coreutils]] |
+|---------------+---------------|
+~iptraf-ng~ is a console based network statistic monitoring utility. ~iptraf-ng~
+is a fork of ~iptraf~ and are hosted and developed by many other linux
+distributions. The ~ncurses~ text based user interface makes it very easy to
+configure and to use this tool. There is no need to write extensive commands on
+the commandline.
+
+-----
+# cix-iptraf-ng.org
