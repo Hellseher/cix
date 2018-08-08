@@ -1,6 +1,6 @@
 # File           : cix-git.org
 # Created        : <2017-08-28 Mon 22:17:29 BST>
-# Modified       : <2017-8-28 Mon 22:22:57 BST> sharlatan
+# Modified       : <2018-8-09 Thu 00:11:40 BST> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Fast Version Control System
@@ -9,15 +9,17 @@
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: git
+|                 |                  |
 |-----------------+------------------|
 | *Author*        | 	Linus Torvalds |
 | *Maintainer(s)* |                  |
 | *Released*      | 2005             |
 | *Source*        | [[https://github.com/git/git][git.git]]          |
-| *Info*          | [[https://git-scm.com/about][git.web]]          |
+| *Homepage*      | [[https://git-scm.com/about][git.web]]          |
 |-----------------+------------------|
 
-
+Git is a free and open source distributed version control system designed to
+handle everything from small to very large projects with speed and efficiency.
 -----
 * Index
 * Receipts
@@ -26,6 +28,69 @@
 **** git-170828222035 
 list top 10 contributers to the project:
 :    ~$ git log --format='%aN' | sort | uniq -c | sort -rn | head
+
+**** git-180628235119 
+list top 10 version tags:
+:    ~$ git tag | sort -Vr | head 
+
+**** git-180808223805
+list files are being tracked:
+:    ~$ git ls-tree -r master --name-only
+
+**** git-180808223944
+list files that ever existed including deleted files:
+:    ~$ git log --pretty=format: --name-only --diff-filter=A | sort - | sed '/^$/d'
+
+**** git-180808234518
+completely remove tracked files from git history:
+#+BEGIN_SRC sh :results value org replace :exports results
+  #!/usr/bin/env bash
+
+  # Wild card, regex list of files to be removed from git tracking
+  RM_LST=(
+      "cache"
+      "host_vars/.*yml"
+      "generated/.*yml"
+  )
+
+  get_rm_lst()
+  {
+      local rm_file="$1"
+
+      git log \
+          --pretty=format: \
+          --name-only \
+          --diff-filter=A \
+          | grep "${rm_file}"
+  }
+
+  flush_git()
+  {
+      local rm_file="$1"
+
+      git filter-branch \
+          --force \
+          --index-filter \
+          "git rm --cached --ignore-unmatch ${rm_file}" \
+          --prune-empty \
+          --tag-name-filter \
+          cat -- \
+          --all
+  }
+
+  main()
+  {
+      for ff in ${RM_LST[@]}; do
+          for f in $(get_rm_lst ${ff}); do
+              echo "$f"
+              flush_git $f
+          done
+      done
+  }
+
+  main "$@"
+  # End of script
+#+END_SRC
 * Refreances
 
 # End of cix-git.org
