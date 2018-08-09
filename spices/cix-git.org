@@ -1,6 +1,6 @@
 # File           : cix-git.org
 # Created        : <2017-08-28 Mon 22:17:29 BST>
-# Modified       : <2018-8-09 Thu 00:11:40 BST> Sharlatan
+# Modified       : <2018-8-09 Thu 18:56:23 BST> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Fast Version Control System
@@ -43,7 +43,7 @@ list files that ever existed including deleted files:
 
 **** git-180808234518
 completely remove tracked files from git history:
-#+BEGIN_SRC sh :results value org replace :exports results
+#+BEGIN_SRC sh
   #!/usr/bin/env bash
 
   # Wild card, regex list of files to be removed from git tracking
