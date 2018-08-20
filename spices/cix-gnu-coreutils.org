@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2018-8-02 Thu 23:24:41 BST> Sharlatan
+# Modified   : <2018-8-20 Mon 21:01:20 BST> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
@@ -373,7 +373,7 @@ allow everyone in your group to be able to modify the file:
 *** cksum::files
 *** cksum::see-also
 ** comm                                                                         
-[[Index][⬆]] /compare two sorted files line by line/.
+[[Index][⬆]] /compare two sorted files line by line/
 /Written by Richard M. Stallman and David MacKenzie/
 *** comm::options
 *** comm::examples
@@ -436,9 +436,31 @@ find lines only in file_1:
 *** csplit::files
 *** csplit::see-also
 ** cut                                                                          
-[[Index][⬆]]
+[[Index][⬆]] /remove sections from each line of files/
+/Written by David M. Ihnat, David MacKenzie, and Jim Meyering/
 *** cut::options
+| OPT                         | TYPE | V++ | V-- | DESC                                             |
+|-----------------------------+------+-----+-----+--------------------------------------------------|
+| ~-b, --bytes=LIST~          |      |     |     | select only these bytes                          |
+| ~-c, --characters=LIST~     |      |     |     | select only these characters                     |
+| ~-d, --delimiter=DELIM~     |      |     |     | use DELIM instead of TAB for field delimiter     |
+| ~-f, --fields=LIST~         |      |     |     | select only these fields                         |
+| ~-n~                        |      |     |     | with -b: don't split multibyte characters        |
+| ~--complement~              |      |     |     | complement the set of selected bytes, characters |
+| ~-s, --only-delimited~      |      |     |     | do not print lines not containing delimiters     |
+| ~--output-delimiter=STRING~ |      |     |     | use STRING as the output delimiter               |
+| ~-z, --zero-terminated~     |      |     |     | line delimiter is NUL, not newline               |
+| ~--help~                    |      |     |     | display this help and exit                       |
+| ~--version~                 |      |     |     | output version information and exit              |
+|-----------------------------+------+-----+-----+--------------------------------------------------|
+
 *** cut::examples
+**** cut-180820204538
+slice off lines from left, right, both sides by N chars:
+:    ~$ cut -c-N input_f                        # trim from left by N
+:    ~$ rev input_f | cut -c-N | rev            # trim from rigth by N
+:    ~$ cut -c-N input_f | rev | cut -c-N | rev # trim from both sides by N
+[[file:./cix-util-linux.org::*rev][rev]]
 *** cut::files
 *** cut::see-also
 ** date                                                                         
@@ -453,7 +475,7 @@ find lines only in file_1:
 
 *** dd::options
 
-| OPT            |                  |
+| OPT            |                   |
 |----------------+-------------------|
 | =bs=BYTES=     | c w b K MB M GB G |
 | =cbs=BYTES=    |                   |
@@ -610,10 +632,10 @@ null bytes:
 *** du::options
 *** du::examples
 **** du-170721002845
-Show size of hiden and normal dirrectores of the current location:
+show size of hiden and normal dirrectores of the current location:
 :   ~$ du -sch .[!.]* * | sort -h
-=.[!.]*= It's a glob that lists all the files that start with a single =.=
-
+~.[!.]*~ It's a glob that lists all the files that start with a single ~.~
+[[file:./cix-gnu-coreutils.org::*sort][sort]]
 *** du::files
 *** du::see-also
 ** echo                                                                         

@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-8-09 Thu 00:11:54 BST> Sharlatan
+# Last Modified  : <2018-8-20 Mon 21:04:44 BST> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -115,6 +115,7 @@ QTY  CMD         PKG
 1    expr        gnu-coreutils
 1    du          gnu-coreutils
 1    dnf         dnf
+1    cut         gnu-coreutils
 1    comm        gnu-coreutils
 1    command     gnu-bash
 1    base64      gnu-coreutils
@@ -123,6 +124,6 @@ QTY  CMD         PKG
 
 Distribution per example:
 
-Onliners:  259
+Onliners:  262
 Scripts:   109
 #+END_SRC
