@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-7-28 Sat 09:44:47 BST> Sharlatan
+# Modified   : <2018-8-30 Thu 22:17:57 BST> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -55,7 +55,7 @@ on *BSD*
 
 And oposite situation, you want to find out what commands are in the package
 
-/get list of commands belong to a $PACK/
+/get a list of commands belong to a $PACK/
 
 on *GNU/Linux*
 #+BEGIN_EXAMPLE
@@ -85,8 +85,8 @@ on *GNU/Linux*
   + [[./spices/cix-util-linux.org][util-linux]] :: is a standard package of the Linux operating system: =GNU/Linux=
 
 - *File* /Everything is a file/
-  + [[file:./spices/cix-diffutils.org][diffutils]] :: a GNU collection of diff utilities
-  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor
+  + [[file:./spices/cix-diffutils.org][diffutils]] :: a GNU collection of diff utilities: =GNU/Linux=
+  + [[./spices/cix-emacs.org][emacs]] :: GNU Emacs text editor: =GNU/Linux=
   + [[./spices/cix-file.org][file]] :: a utility for determining file types: =GNU/Linux= =NetBSD= =FreeBSD= =OS/2= =OS-X= =DOS= =Windows=
   + [[./spices/cix-gawk.org][gawk]] :: the GNU version of the AWK text processing utility: =GNU/Linux=
   + [[./spices/cix-less.org][less]] :: a text file browser similar to more, but better: =GNU/Linux= =UNIX= =OS-X=
@@ -153,9 +153,10 @@ on *GNU/Linux*
   + [[./spices/cix-ack.org][ack]] :: grep-like text finder
   + [[./spices/cix-ag.org][ag]] :: super-fast text searching tool - The Silver Searcher
   + [[./spices/cix-fdupes.org][fdupes]] :: finds duplicate files in a given set of directories
-  + [[./spices/cix-gnu-findutils.org][findutils]] :: the GNU versions of find utilities (find and xargs)
-  + [[./spices/cix-gnu-grep.org][grep]] :: pattern matching utilities
+  + [[./spices/cix-gnu-findutils.org][findutils]] :: the GNU versions of find utilities (find and xargs): =GNU/Linux=
+  + [[./spices/cix-gnu-grep.org][grep]] :: pattern matching utilities: =GNU/Linux=
   + [[file:./spices/cix-jq.org][jq]] :: command-line json processor: =OS-X= =FreeBSD= =Solaris= =GNU/Linux= =Windows=
+  + [[file:./spices/cix-mlocate.org][mlocate]] :: an utility for finding files by name: =GNU/Linux=
   + [[file:./spices/cix-pcre-tools.org][pcre-tools]] :: auxiliary utilities for pcre: =GNU/Linux=
   + [[file:./spices/cix-ripgrep.org][ripgrep]] :: rg combines the usability of The Silver Searcher with the raw speed of grep.
   + [[file:./spices/cix-sift.org][sift]] :: A fast and powerful alternative to grep: =OS-X= =GNU/Linux=
@@ -191,6 +192,7 @@ on *GNU/Linux*
   + [[./spices/cix-dsniff.org][dsniff]] :: tools for network auditing and penetration testing: =GNU/Linux= =OpenBSD= =Solaris=
   + [[./spices/cix-ipset.org][ipset]] :: Manage Linux IP sets: =GNU/Linux=
   + [[./spices/cix-iptraf-ng.org][iptraf-ng]] :: a console-based network monitoring utility: =GNU/Linux=
+  + [[./spices/cix-socat.org][socat]] :: bidirectional data relay between two data channels ('netcat++'): =GNU/Linux=
 
 - *Shell* /Not just sand.../
   + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD

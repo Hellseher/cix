@@ -1,6 +1,6 @@
 # File           : README.org
 # Created        : <2016-11-16 Wed 00:51:06 GMT>
-# Last Modified  : <2018-8-20 Mon 21:04:44 BST> Sharlatan
+# Last Modified  : <2018-8-30 Thu 22:59:30 BST> Sharlatan
 # Author         : sharlatan
 # Short          : README-en
 
@@ -47,13 +47,13 @@ cix
 
 #+RESULTS:
 #+BEGIN_SRC org
-Distribution per subjest:
+Distribution per command:
 
 QTY  CMD         PKG
 ---  ---         ---
 33   tcpdump     tcpdump
+18   sed         sed
 18   awk         gawk
-17   sed         sed
 10   find        gnu-findutils
 10   dd          gnu-coreutils
 7    chmod       gnu-coreutils
@@ -104,6 +104,7 @@ QTY  CMD         PKG
 1    mktemp      gnu-coreutils
 1    mkdir       gnu-coreutils
 1    lsblk       util-linux
+1    locate      mlocate
 1    ln          gnu-coreutils
 1    ldd         glibc
 1    jq          jq
@@ -122,8 +123,50 @@ QTY  CMD         PKG
 1    aptitude    aptitude
 1    aprping     iputils
 
+Distribution per package:
+
+QTY  PKG
+---  ---
+49   gnu-coreutils
+33   tcpdump
+18   sed
+18   gawk
+13   gnu-findutils
+12   util-linux
+5    strace
+5    pciutils
+5    netcat
+5    gnu-grep
+5    git
+4    tar
+4    systemd
+4    lsof
+4    iproute2
+4    gnu-binutils
+4    gnu-bash
+4    curl
+3    openssh
+3    dpkg
+2    wget
+2    shadow-utils
+2    rsync
+2    procps-ng
+2    ncat
+2    iputils
+1    smem
+1    perf
+1    pacman
+1    mlocate
+1    man-db
+1    jq
+1    gnu-pg
+1    glibc
+1    file
+1    dnf
+1    aptitude
+
 Distribution per example:
 
-Onliners:  262
+Onliners:  264
 Scripts:   109
 #+END_SRC

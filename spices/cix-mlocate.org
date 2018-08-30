@@ -1,0 +1,42 @@
+# File           : cix-mlocate.org
+# Created        : <2018-08-30 Thu 22:18:40 BST>
+# Modified       : <2018-8-30 Thu 22:54:25 BST> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       : <An utility for finding files by name>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: mlocate
+|-----------------+----------------|
+| *Author*        | Miloslav Trmac |
+| *Maintainer(s)* |                |
+| *Released*      | 2005           |
+| *Source*        | [[https://pagure.io/mlocate][mlocate.git]]    |
+| *Homepage*      |                |
+|-----------------+----------------|
+
+*mlocate* is a ~locate~ and ~updatedb~ implementation. The 'm' stands for
+"merging": updatedb reuses the existing database to avoid rereading most of the
+file system, which makes updatedb faster and does not trash the system caches as
+much.
+-----
+
+* Index
+* Receipts
+** locate
+*** locate::examples
+**** locate-180830223238
+locate exact path to directory from a =dir_list=:
+:    ~$ xargs -P8 -I{} sh -c "locate {} | grep /{}$" < dir_list
+[[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-grep.org::*grep][grep]]
+*** locate::see-also
+
+** updatedb
+*** updatedb::files
+- /etc/updatedb.conf :: A configuration file.  See updatedb.conf(5).
+- /var/lib/mlocate/mlocate.db :: The database updated by default.
+* Refreances
+
+# End of cix-mlocate.org

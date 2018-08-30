@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # File     : cix-stat.sh
 # Created  : <2016-11-20 Sun 21:59:18 GMT> sharlatan
-# Modified : <2017-9-04 Mon 23:00:33 BST> sharlatan
+# Modified : <2018-8-30 Thu 22:57:49 BST> Sharlatan
 # Author   : sharlatan <sharlatanus@gmail.com>
 # Short    : Show statistic of examples.
 
@@ -18,6 +18,22 @@ ls_cmd_distribution()
               | sed -e 's/^\/.*cix-//g' \
               | awk -F":" '{print $2," ",$1}' \
               | sed -e 's/\.org//g' \
+              | sort \
+              | uniq -c \
+              | sort -nr;
+    } | column -t
+}
+
+ls_pkg_distribution()
+{ # Count examples per packge
+    { echo "QTY PKG" ;
+      echo --- ---;
+      [ -e "$ABS_PATH"/spices ] &&
+          find "$ABS_PATH"/spices -type f -name "*org"  \
+               -exec  grep -oHP "(?<=\*\*\*\*\s).+(?=-[0-9]{12})" {} \; \
+              | sed -e 's/^\/.*cix-//g' \
+                    -e 's/:.*$//g' \
+                    -e 's/\.org//g' \
               | sort \
               | uniq -c \
               | sort -nr;
@@ -73,8 +89,10 @@ main()
 
     case "$opt" in
         stat)
-            printf "Distribution per subjest:\n\n"
+            printf "Distribution per command:\n\n"
             ls_cmd_distribution
+            printf "\nDistribution per package:\n\n"
+            ls_pkg_distribution
             printf "\nDistribution per example:\n\n"
             oneliner_or_script
             ;;
