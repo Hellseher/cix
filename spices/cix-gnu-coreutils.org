@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2018-8-20 Mon 21:01:20 BST> Sharlatan
+# Modified   : <2018-10-30 Tue 21:48:05 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
@@ -457,9 +457,9 @@ find lines only in file_1:
 *** cut::examples
 **** cut-180820204538
 slice off lines from left, right, both sides by N chars:
-:    ~$ cut -c-N input_f                        # trim from left by N
-:    ~$ rev input_f | cut -c-N | rev            # trim from rigth by N
-:    ~$ cut -c-N input_f | rev | cut -c-N | rev # trim from both sides by N
+:    ~$ cut -c-N input_f                        # slice off from left by N
+:    ~$ rev input_f | cut -c-N | rev            # slice off from rigth by N
+:    ~$ cut -c-N input_f | rev | cut -c-N | rev # slice off from both sides by N
 [[file:./cix-util-linux.org::*rev][rev]]
 *** cut::files
 *** cut::see-also
@@ -917,10 +917,14 @@ replace spaces in file/dir name with underscore "_":
       mv "$file" "$new_file"
   done
 #+END_SRC
-  [[file:./cix-gnu-bash-builtin.org::*while][while]], [[file:./cix-gnu-bash-builtin.org::*read][read]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]], [[file:./cix-gnu-findutils.org::*find][find (1)]]
-*** mv::files
+[[file:./cix-gnu-bash-builtin.org::*while][while]], [[file:./cix-gnu-bash-builtin.org::*read][read]], [[file:./cix-gnu-core-utilities.org::*echo][echo (1)]], [[file:./cix-sed.org::*sed][sed (1)]], [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]], [[file:./cix-gnu-findutils.org::*find][find (1)]]
+
+**** mv-180905203651
+move multiple files or directories to the one target location:
+:    ~$ mv -t target_dir /path/to/file-1 /path/to/file-2 /path/to/dir-1
+
 *** mv::see-also
-  [[file:./cix-util-linux.org::*rename][rename(2)]]
+[[file:./cix-util-linux.org::*rename][rename(2)]]
 ** nice                                                                         
 [[Index][⬆]]
 *** nice::options
@@ -983,9 +987,9 @@ It omits bouth stdin and stdout from script and =nohup=.
 *** paste::options
 | OPT                     | TYPE   | V++ | V-- | DESC                                            |
 |-------------------------+--------+-----+-----+-------------------------------------------------|
-| =-s, --serial=          | switch |     |     | paste one file at a time instead of in parallel |
-| =-d, --delimiters=LIST= | str    |     |     | reuse characters from LIST instead of TABs      |
-| =-z, --zero-terminated= | switch |     |     | line delimiter is NUL, not newline              |
+| ~-s, --serial~          | switch |     |     | paste one file at a time instead of in parallel |
+| ~-d, --delimiters=LIST~ | str    |     |     | reuse characters from LIST instead of TABs      |
+| ~-z, --zero-terminated~ | switch |     |     | line delimiter is NUL, not newline              |
 |-------------------------+--------+-----+-----+-------------------------------------------------|
 
 *** paste::examples
@@ -995,11 +999,11 @@ sumirize the size of git directores using =Bash= $[...] $((...)):
 [[file:./cix-gnu-coreutils.org::*echo][echo]] [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*du][du]] [[file:./cix-gnu-coreutils.org::*cut][cut]]
 
 **** paste-171004214104 
-join all lines lines of the file with a SPACE delimiter:
+join all lines of the file with a SPACE delimiter:
 :    ~$ paste -sd" " input_f
 
 **** paste-171004214345
-merge a list to 2-n columns (=-= is a column placeholder):
+merge a list to 2-n columns (~-~ is a column placeholder):
 :    ~$ paste - - < file_name
 :    ~$ paste -d":" - - < file_name
 
@@ -1104,6 +1108,9 @@ remove all but specific file(s):
 [[Index][⬆]]
 *** seq::options
 *** seq::examples
+**** seq-181009221931
+print a list of years +5 (N) from current:
+:    ~$ seq "$(date +%Y)" "$(( $(date +%Y) + 5))"
 *** seq::files
 *** seq::see-also
 ** sha1sum                                                                      
@@ -1342,7 +1349,7 @@ test from shell script if remote TCP port is open:
 *** tr::options
 *** tr::examples
 **** tr-161120163854
-Rename files in cwd from lower to UPPER case:
+rename files in cwd from lower to UPPER case:
 #+BEGIN_SRC sh
   #!/usr/bin/env bash
 
@@ -1352,12 +1359,15 @@ Rename files in cwd from lower to UPPER case:
 #+END_SRC
 [[file:./cix-gnu-bash-builtin.org::for][for]] [[file:./cix-gnu-bash-builtin.org::*echo][echo]] [[file:./cix-gnu-core-utilities.org::*mv][mv (1)]]
 **** tr-161209233045
-Remove new lines from a file:
+remove new lines from a file:
 :    ~$ tr -d '\n' < input_file > input_file_tm && mv input_file_tm input_file
-
+[[file:./cix-gnu-coreutils.org::*mv][mv]]
 **** tr-170104001918
-Windows files to UNIX format:
+windows files to UNIX format:
 :    ~$ tr -d '\15\32' < input_win_file.txt > output_unix_file
+**** tr-181030214129
+replace multiple characters sequence with a single one:
+:    ~$ tr -s \| = input_f
 *** tr::files
 *** tr::see-also
 ** true                                                                         

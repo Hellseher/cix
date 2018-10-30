@@ -1,6 +1,6 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2018-8-31 Fri 12:06:27 BST> Sharlatan
+# Modified : <2018-10-30 Tue 21:48:28 GMT> Sharlatan
 # Author   : sharlatan
 # Short    : README-en
 
@@ -41,7 +41,8 @@ cix
 #+END_SRC
 
 ** Statistic
-#+BEGIN_SRC sh :results value org replace :exports results
+#+HEADERS: :results value org replace :exports results
+#+BEGIN_SRC sh 
 ./cix-stat.sh stat
 #+END_SRC
 
@@ -64,6 +65,7 @@ QTY  CMD         PKG
 5    lspci       pciutils
 5    grep        gnu-grep
 5    git         git
+4    tr          gnu-coreutils
 4    tar         tar
 4    ss          iproute2
 4    paste       gnu-coreutils
@@ -72,7 +74,6 @@ QTY  CMD         PKG
 4    column      util-linux
 3    xargs       gnu-findutils
 3    udevadm     systemd
-3    tr          gnu-coreutils
 3    ssh         openssh
 3    dpkg        dpkg
 2    wget        wget
@@ -82,6 +83,8 @@ QTY  CMD         PKG
 2    objdump     gnu-binutils
 2    nohup       gnu-coreutils
 2    ncat        ncat
+2    mv          gnu-coreutils
+2    gpg         gnu-pg
 1    while       gnu-bash
 1    whatis      man-db
 1    usermod     shadow-utils
@@ -89,18 +92,20 @@ QTY  CMD         PKG
 1    top         procps-ng
 1    timeout     gnu-coreutils
 1    strings     gnu-binutils
+1    ssh-keygen  openssh
 1    smem        smem
 1    set         gnu-bash
+1    seq         gnu-coreutils
 1    rm          gnu-coreutils
 1    rev         util-linux
 1    pwd         gnu-coreutils
+1    ps          procps-ng
 1    printf      gnu-bash
 1    pkill       procps-ng
 1    ping        iputils
 1    perf        perf
 1    pacman      pacman
 1    nm          gnu-binutils
-1    mv          gnu-coreutils
 1    mktemp      gnu-coreutils
 1    mkdir       gnu-coreutils
 1    lsblk       util-linux
@@ -109,7 +114,6 @@ QTY  CMD         PKG
 1    ldd         glibc
 1    jq          jq
 1    journalctl  systemd
-1    gpg         gnu-pg
 1    gpasswd     shadow-utils
 1    flock       util-linux
 1    file        file
@@ -127,7 +131,7 @@ Distribution per package:
 
 QTY  PKG
 ---  ---
-49   gnu-coreutils
+52   gnu-coreutils
 33   tcpdump
 18   sed
 18   gawk
@@ -140,26 +144,26 @@ QTY  PKG
 5    git
 4    tar
 4    systemd
+4    openssh
 4    lsof
 4    iproute2
 4    gnu-binutils
 4    gnu-bash
 4    curl
-3    openssh
+3    procps-ng
 3    dpkg
 2    wget
 2    shadow-utils
 2    rsync
-2    procps-ng
 2    ncat
 2    iputils
+2    gnu-pg
 1    smem
 1    perf
 1    pacman
 1    mlocate
 1    man-db
 1    jq
-1    gnu-pg
 1    glibc
 1    file
 1    dnf
@@ -167,6 +171,6 @@ QTY  PKG
 
 Distribution per example:
 
-Onliners:  265
+Onliners:  271
 Scripts:   109
 #+END_SRC
