@@ -1,6 +1,6 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2018-10-30 Tue 21:48:28 GMT> Sharlatan
+# Modified : <2018-11-05 Mon 22:11:31 GMT> Sharlatan
 # Author   : sharlatan
 # Short    : README-en
 
@@ -114,10 +114,12 @@ QTY  CMD         PKG
 1    ldd         glibc
 1    jq          jq
 1    journalctl  systemd
+1    ip          iproute2
 1    gpasswd     shadow-utils
 1    flock       util-linux
 1    file        file
 1    expr        gnu-coreutils
+1    exportfs    nfs
 1    du          gnu-coreutils
 1    dnf         dnf
 1    cut         gnu-coreutils
@@ -140,13 +142,13 @@ QTY  PKG
 5    strace
 5    pciutils
 5    netcat
+5    iproute2
 5    gnu-grep
 5    git
 4    tar
 4    systemd
 4    openssh
 4    lsof
-4    iproute2
 4    gnu-binutils
 4    gnu-bash
 4    curl
@@ -161,6 +163,7 @@ QTY  PKG
 1    smem
 1    perf
 1    pacman
+1    nfs
 1    mlocate
 1    man-db
 1    jq
@@ -171,6 +174,6 @@ QTY  PKG
 
 Distribution per example:
 
-Onliners:  271
-Scripts:   109
+Onliners:  273
+Scripts:   108
 #+END_SRC

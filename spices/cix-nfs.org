@@ -1,6 +1,6 @@
 # File          : cix-nfs.org
 # Created       : <2016-11-07 Mon 22:11:39 GMT>
-# Modified      : <2017-9-03 Sun 23:41:15 BST> sharlatan
+# Modified      : <2018-11-05 Mon 20:40:24 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : List of common NFS packages.
@@ -18,7 +18,7 @@
 | *Contributors* |                  |
 | *Realiesed*    | 1989             |
 | *Source*       | [[http://git.linux-nfs.org/][linux-nfs.git]]    |
-| *Info*         |                  |
+| *Homepage*     |                  |
 |----------------+------------------|
 
 ** Packages
@@ -77,9 +77,24 @@
 ***  blkmapd::files
 ***  blkmapd::see-also
 ** exportfs
+[[Index][⬆]] /maintain table of exported NFS file systems/
+/Written by Olaf Kirch <okir@monad.swb.de> Neil Brown <neilb@cse.unsw.edu.au>/
 ***  exportfs::options
 ***  exportfs::examples
+**** exportfs-181105202926
+flush from kernel and reexport all filesystems being verbose:
+:    ~# exportfs -rafv
+
 ***  exportfs::files
+- =/etc/epxortfs= :: input file listing exports, export options, and access
+     control lists
+- =/etc/exports.d= :: directory where extra input files are stored. :NOTE: only
+     files that end with =.exports= are used.
+- =/etc/nfs.conf=
+- =/proc/fs/nfs=
+- =/proc/fs/nfsd=
+- =/var/lib/nfs/etab= :: master table of exports
+- =/var/lib/nfs/rntab= :: table of clients accessing server's exports
 ***  exportfs::see-also
 ** mountstats
 ***  mountstats::options
