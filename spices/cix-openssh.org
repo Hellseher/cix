@@ -1,9 +1,9 @@
 # File          : cix-openssh.org
 # Created       : <2016-11-13 Sun 19:25:52 GMT>
-# Modified      : <2017-12-14 Thu 23:03:45 GMT> Sharlatan
+# Modified      : <2018-12-27 Thu 08:48:54 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      : An open source implementation of SSH protocol versions 1 and 2.
+# Sinopsis      : <An open source implementation of SSH protocol versions 1 and 2.>
 
 #+OPTIONS: num:nil
 
@@ -104,10 +104,16 @@ openssh-server, or both.
 **** ssh-161211224536
 revers-SOCKS-proxy:
 :    ~$ ssh -D 8080 -R 8080:127.0.0.1:8080 usr@1.2.3.4 ssh -R 8080:172.0.0.1:8080 user@2.3.4.5
+
 **** ssh-170418221026
 compare remote file and with local one without copying:
 :    ~$ ssh user@host cat /path/to/remote/file | diff /path/to/local/file
-*** ssh::files
+
+**** ssh-180708224137
+to establish an SSH connection on different port:
+:    ~$ ssh user@host -p 822
+
+*** Ssh::files
 *** ssh::see-also
 ** ssh-add                                                                      :cmd:
 *** ssh-add::options
@@ -122,6 +128,9 @@ compare remote file and with local one without copying:
 ** ssh-copy-id                                                                  :cmd:
 *** ssh-copy-id::options
 *** ssh-copy-id::examples
+**** ssh-copy-id-181227084754
+upload public key to remote host:
+:    ~$ ssh-copy-id -i ~/.ssh/your_key.pub user@hostname
 *** ssh-copy-id::files
 *** ssh-copy-id::see-also
 ** ssh-keyscan                                                                  :cmd:
@@ -130,6 +139,13 @@ compare remote file and with local one without copying:
 *** ssh-keyscan::files
 *** ssh-keyscan::see-also
 
+** ssh-keygen
+*** ssh-keygen::examples
+**** ssh-keygen-181017005336
+:    ~$ ssh-keygen -l -f ~/.ssh/id_rsa.pub
+**** ssh-keygen-181227084529
+generate long RSA key with specified email address:
+:    ~$ ssh-keygen -t rsa -b 4096 -C "user@host.com"
 * References
 ** RFC
 - https://www.openssh.com/specs.html

@@ -1,6 +1,6 @@
 # File          : cix-gnu-findutils.org
 # Created       : <2015-11-17 Tue 22:54:30 GMT>
-# Modified      : <2017-9-23 Sat 22:00:25 BST> sharlatan
+# Modified      : <2018-8-30 Thu 22:47:11 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : The GNU versions of find utilities (find and xargs).
@@ -8,15 +8,16 @@
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: GNU Findutils
+#+TITLE: GNU findutils
+|                |                    |
 |----------------+--------------------|
 | *Author*       | Kevin Dalley       |
-| *Contributors* | Eric B. Decker,    |
-|                | Michael Rendell,   |
+| *Contributors* | Eric B. Decker     |
+|                | Michael Rendell    |
 |                | David J. MacKenzie |
 | *Released*     | 2000               |
 | *Source*       | [[http://git.savannah.gnu.org/cgit/findutils.git][findutils.git]]      |
-| *Info*         | [[https://www.gnu.org/software/findutils/][findutils.web]]      |
+| *Homepage*     | [[https://www.gnu.org/software/findutils/][findutils.web]]      |
 |----------------+--------------------|
 
 The GNU Find Utilities are the basic directory searching utilities of the GNU
@@ -38,7 +39,7 @@ capabilities to other commands.
 * Receipts
 ** find                                                                         :cmd:
 
-A =find= command appeared in Version 1 AT&T UNIX
+A ~find~ command appeared in Version 1 AT&T UNIX
 
 *** find::options
 

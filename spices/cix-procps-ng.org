@@ -1,6 +1,6 @@
 # File          : cix-procps-ng.org
 # Created       : <2015-11-02 Tue 01:14:54 GMT>
-# Modified      : <2017-12-20 Wed 23:05:59 GMT> Sharlatan
+# Modified      : <2018-9-30 Sun 21:06:34 BST> Sharlatan
 # Author        : sharlatan
 # Sinopsis      : System and process monitoring utilities.
 
@@ -117,6 +117,9 @@ kill all process of the USER and remove it from the system:
  [[Index][⬆]] /process status/
 *** ps::options
 *** ps::exapmles
+**** ps-180930203726
+list top 10 most memory hungry processes:
+:    ~$ ps axo rss,pid | sort -k1rn | head
 *** ps::files
 *** ps::see-also
     kill(1), pgrep(1), pkill(1), procstat(1), w(1), kvm(3), libxo(3), strftime(3),
@@ -155,6 +158,9 @@ kill all process of the USER and remove it from the system:
 [[Index][⬆]]
 *** top::options
 *** top::exapmles
+**** top-180726224216
+filter processes listed based on processname:
+:    ~$ top -c -p $(pgrep -d',' -f matched_string_of_cmdline)
 *** top::files
 *** top::see-also
 ** uptime                                                                       

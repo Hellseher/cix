@@ -1,9 +1,9 @@
 # File          : cix-tar.org
 # Created       : <2016-11-04 Fri 22:42:50 GMT>
-# Modified      : <2017-12-14 Thu 01:28:16 GMT> Sharlatan
+# Modified      : <2018-7-08 Sun 01:07:29 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      : File archiving program
+# Sinopsis      : <File archiving program>
 
 #+OPTIONS: num:nil
 
@@ -17,7 +17,7 @@
 | *Man*            | [[http://man7.org/linux/man-pages/man1/tar.1.html][gnu-tar.1]]             |
 |                  | [[http://man.openbsd.org/OpenBSD-current/man1/tar.1][openbsd-tar.1]]         |
 |                  | [[https://www.freebsd.org/cgi/man.cgi?query=tar&sektion=1][freebsd-tar.1]]         |
-| *Info*           | [[https://www.gnu.org/software/tar/][gnu-tar.web]]           |
+| *Homepage*       | [[https://www.gnu.org/software/tar/][gnu-tar.web]]           |
 |------------------+-----------------------|
 
 GNU =tar= saves many files together into a single tape or disk archive, and can

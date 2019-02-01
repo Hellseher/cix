@@ -1,6 +1,6 @@
 # File          : cix-gnu-grep.org
 # Created       : <2016-11-18 Fri 23:49:59 GMT>
-# Modified      : <2018-7-14 Sat 21:41:10 BST> Sharlatan
+# Modified      : <2018-8-30 Thu 22:47:11 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : Pattern matching utilities
@@ -79,7 +79,7 @@ cut string from the begining, the end or both sides by N=10 characters:
 
 You can you =-E= option or =egrep=
 
-*** grep1::files
+*** grep::files
 *** grep::vars
 #+BEGIN_EXAMPLE
 GREP_OPTIONS

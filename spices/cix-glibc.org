@@ -1,20 +1,21 @@
 # File          : cix-glibc-common.org
 # Created       : <2016-11-14 Mon 21:40:36 GMT>
-# Modified      : <2017-8-20 Sun 23:47:54 BST> sharlatan
+# Modified      : <2018-7-05 Thu 21:59:55 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      : The GNU libc libraries
+# Sinopsis      : <The GNU C library>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: Glibc
+#+TITLE: GNU C Library
+|                |                |
 |----------------+----------------|
 | *Author*       | Roland McGrath |
 | *Contributors* | [[https://sourceware.org/glibc/wiki/MAINTAINERS][(all...)]]       |
 | *Released*     | 1987           |
-| *Source*       | [[https://sourceware.org/git/?p=glibc.git][glibc.git]]      |
-| *Info*         | [[https://www.gnu.org/software/libc/][glibc.web]]      |
+| *Source*       | [[git://sourceware.org/git/glibc.git][glibc.git]]      |
+| *Homepage*     | [[https://www.gnu.org/software/libc/][glibc.web]]      |
 |----------------+----------------|
 
 The glibc package contains standard libraries which are used by multiple

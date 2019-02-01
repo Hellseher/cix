@@ -1,6 +1,6 @@
 # File          : cix-sed.org
 # Created       : <2016-11-04 Fri 22:49:14 GMT>
-# Modified      : <2017-12-02 Sat 23:57:21 GMT> Sharlatan
+# Modified      : <2018-8-26 Sun 13:26:54 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : A GNU stream text editor
@@ -71,11 +71,11 @@ remove trailing white spaces from a file:
 
 **** sed-170718230254
 remove blank lines from a file:
-:    ~$ sed -i -e '/^$/' input_f
+:    ~$ sed -i -e '/^$/d' input_f
 
 **** sed-170718231048
 remove leading, trailing whitespaces, tabs and blank lines in one run:
-:    ~$ sed -i -e 's/^[\t ]*//;s/[\t ]*$//;s/^$/' input_f
+:    ~$ sed -i -e 's/^[\t ]*//;s/[\t ]*$//;/^$/d' input_f
 
 **** sed-170718231657
 to remove everything except the 1st n characters in every line:
@@ -188,6 +188,9 @@ convert ini config file to JSON:
 #+END_SRC
 [[file:./cix-gnu-grep.org::*grep][grep]]
 
+**** sed-180826132502
+merging every two lines into one:
+:    ~$ sed 'N;s/\n/ /' input_f
 *** sed::files
 *** sed::see-also
     [[file:./cix-gawk.org::*awk][awk (1)]], ed, [[file:./cix-gnu-grep.org::*grep][grep (1)]], [[file:./cix-gnu-core-utilities.org::*tr][tr (1)]],perlre(1)

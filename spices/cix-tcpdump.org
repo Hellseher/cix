@@ -1,26 +1,28 @@
 # File          : cix-tcpdump.org
 # Created       : <2016-11-07 Mon 23:06:06 GMT>
-# Modified      : <2017-9-03 Sun 22:35:33 BST> sharlatan
+# Modified      : <2018-7-08 Sun 22:56:19 BST> Sharlatan
 # Author        : sharlatan
-# Sinopsis : A network traffic monitoring tool.
+# Sinopsis : <A network traffic monitoring tool.>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
 #+TITLE: tcpdump
 
-|------------+-------------------------------------------|
-| *Authors*  | Van Jacobson, Craig Leres, Steven McCanne |
-| *Released* | 1987                                      |
-| *Source*   | [[https://github.com/the-tcpdump-group/tcpdump][tcpdump.git]]                               |
-|------------+-------------------------------------------|
+|------------+----------------|
+| *Authors*  | Van Jacobson   |
+|            | Craig Leres    |
+|            | Steven McCanne |
+| *Released* | 1987           |
+| *Source*   | [[https://github.com/the-tcpdump-group/tcpdump][tcpdump.git]]    |
+| *Homepage* | [[https://www.tcpdump.org/][tcpdump.web]]    |
+|------------+----------------|
 
-Tcpdump  is a  command-line tool  for monitoring  network traffic.   Tcpdump can
-capture and display  the packet headers on a particular  network interface or on
-all interfaces.  Tcpdump can display all of the packet headers, or just the ones
+Tcpdump is a command-line tool for monitoring network traffic. Tcpdump can
+capture and display the packet headers on a particular network interface or on
+all interfaces. Tcpdump can display all of the packet headers, or just the ones
 that match particular criteria.
 
-Install tcpdump if you need a program to monitor network traffic.
 ----
 
 * Index
@@ -206,4 +208,8 @@ Capture 500 bytes of data for each packet rather than the default of 68 bytes:
 Capture all bytes of data within the packet:
 :    ~# tcpdump -s 0 -i any
 
+# End of cix-tcpdump.org
+* Reference
+** Books
+** Links
 # End of cix-tcpdump.org

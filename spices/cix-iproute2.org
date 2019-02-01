@@ -1,6 +1,6 @@
 # File       : iproute2.md
 # Created    : Wed 17 Feb 2016 02:44:12
-# Modified   : <2018-1-15 Mon 20:42:44 GMT> Sharlatan
+# Modified   : <2019-1-09 Wed 00:39:41 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : Advanced IP routing and network device configuration tools
 
@@ -14,9 +14,9 @@
 |                | Stephen Hemminger,   |
 |                | Daniel Borkmann,     |
 |                | Roopa Prabhu,        |
-|                | Zhang Sheng [[http://git.kernel.org/cgit/linux/kernel/git/shemminger/iproute2.git/stats/?period=q&ofs=-1][(all..)]]  |
+|                | Zhang Sheng [[https://git.kernel.org/pub/scm/network/iproute2/iproute2.git/stats/?period=q&ofs=10][(all..)]]  |
 | *Released*     | 2007                 |
-| *Source*       | [[https://git.kernel.org/pub/scm/network/iproute2/iproute2.git][iproute2]]             |
+| *Source*       | [[https://git.kernel.org/pub/scm/network/iproute2/iproute2.git][iproute2.git]]         |
 |----------------+----------------------|
 The iproute package contains networking utilities (ip and rtmon, for example)
 which are designed to use the advanced networking capabilities of the Linux
@@ -64,13 +64,15 @@ ${NM} - netmask
 | address | a ad add addr addres address |
 
 *** ip::examples
-
-- ip-161108233852 :: Watch trafic statistics on interface *enp2s0*
-#+BEGIN_SRC sh
-    $: watch ip -s link show enp2s0
-#+END_SRC
+**** ip-161108233852 
+watch trafic statistics on interface *enp2s0*:
+:    ~$ watch ip -s link show enp2s0
+**** ip-190109003612
+list status as structured and colored output:
+:    ~$ ip -c address
+:    ~$ ip -c link
+:    ~$ ip -c route
 *** ip::files
-
 *** ip::see-also
 ** ss                                                                           :cmd:
 [[Index][⬆]]
@@ -159,6 +161,10 @@ dump TCP, UDP, RAW or UNIX sockets:
 :    ~# ss -u -a
 :    ~# ss -w -a
 :    ~# ss -x -a
+
+**** ss-180707091236
+realtime TCP network connections:
+:    ~$ watch ss -sp
 
 *** ss::files
 - /proc/net/tcp

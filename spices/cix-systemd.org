@@ -1,9 +1,9 @@
 # File           : cix-systemd.org
 # Created        : <2016-12-17 Sat 20:57:29 GMT>
-# Modified  : <2018-2-08 Thu 23:10:34 GMT> Sharlatan
+# Modified       : <2018-10-11 Thu 00:50:31 BST> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
-# Sinopsis : System and Service Manager.
+# Sinopsis       : System and Service Manager.
 
 #+OPTIONS: num:nil
 
@@ -16,7 +16,7 @@
 | *Contibutors* |                                  |
 | *Released*    | 2010                             |
 | *Source*      | [[https://github.com/systemd/systemd][systemd.git]]                      |
-| *Info*        |                                  |
+| *Homepage*    |                                  |
 |---------------+----------------------------------|
 
 =systemd= is a system and service manager for Linux, compatible with SysV and

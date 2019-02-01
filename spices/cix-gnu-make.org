@@ -1,6 +1,6 @@
 # File           : cix-gnu-make.org
 # Created        : <2017-08-23 Wed 22:42:09 BST>
-# Modified       : <2017-12-26 Tue 02:27:39 GMT> Sharlatan
+# Modified       : <2018-1-30 Tue 19:36:35 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : A tool which simplifies the build process for users
@@ -16,7 +16,7 @@
 |                 | Paul D. Smith     |
 | *Released*      | 1976, gnu-1988    |
 | *Source*        | [[http://git.savannah.gnu.org/cgit/make.git/][gnu-make.git]]      |
-| *Info*          | [[http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html][maike.web]],        |
+| *Info*          | [[http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html][make.web]],         |
 |                 | [[https://www.gnu.org/software/make/][gnu-make.web]]      |
 |-----------------+-------------------|
 

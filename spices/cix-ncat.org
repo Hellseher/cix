@@ -1,6 +1,6 @@
 # File           : cix-ncat.org<2>
 # Created        : <2017-09-23 Sat 22:44:24 BST>
-# Modified       : <2017-12-26 Tue 00:03:27 GMT> Sharlatan
+# Modified       : <2017-12-26 Tue 01:54:05 GMT> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Nmap's Netcat replacement
@@ -82,10 +82,13 @@ number of potential uses.
 |-----------------------------+--------+-----+-----+-----------------------------------------------------|
 
 *** ncat::examples
-**** 171225235543
+**** ncat-171225235543
 connect mode as a web browser:
-:    ~$ ncat -C scanme.nmap.org 80
+:    ~$ ncat -C scanme.nmap.org 80 </dev/null
 
+**** ncat-171226015404
+connect to an HTTPS server:
+:    ~$ ncat -C --ssl <server> 443
 *** ncat::files
 /usr/share/ncat/ca-bundle.crt.
 * Refreances

@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2018-8-30 Thu 22:17:57 BST> Sharlatan
+# Modified   : <2019-1-13 Sun 21:51:50 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -116,26 +116,30 @@ on *GNU/Linux*
   + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share 
   + [[file:./spices/cix-gnu-parted.org][parted]] :: the GNU disk partition manipulation program: =GNU/Linux=
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
+  + [xfs] :: 
+  + [zfs] :: 
 
 - *Utillities* /Be silent and help ppls/
   + [likwid] ::
   + [ohai] ::
-  + [sysstat] :: collection of performance monitoring tools: =GNU/Linux=
+  + [psacct] :: 
   + [[./spices/cix-elfutils.org][elfutils]] :: collection of utilities and DSOs to handle ELF files and DWARF data
   + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
-  + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young
+  + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young:
   + [[file:./spices/cix-parallel.org][parallel]] :: shell tool for executing jobs in parallel
   + [[./spices/cix-pax-utils.org][pax-utils]] :: ELF utils that can check files for security relevant properties
   + [[./spices/cix-pm-utils.org][pm-utils]] :: suspend and powerstate setting framework
   + [[./spices/cix-procps-ng.org][procps-ng]] :: utilities for monitoring your system and its processes
   + [[./spices/cix-psmisc.org][psmisc]] :: is a set of small utilities that use the proc filesystem.
   + [[./spices/cix-shadow-utils.org][shadow-utils]] :: utilities for managing accounts and shadow password files
-  + [[file:./spices/cix-smem.org][smem]] :: Report application memory usage in a meaningful way
   + [[file:./spices/cix-vmtouch.org][vmtouch]] :: Portable file system cache diagnostics and control
 
-- *System-monitoring* /Keep an Eye on Me/
+- *System-stats-monitoring* /Keep an Eye on Me/
+  + [[./spices/cix-blktrace.org][blktrace]] :: utilities for performing block layer io tracing in the linux: =GNU/linux=
+  + [[./spices/cix-circus.org][circus]] :: a process & socket manager built with zmq:
   + [[./spices/cix-supervisor.org][supervisor]] :: A System for Allowing the Control of Process State on UNIX: =GNU/Linux= =OS-X= =Solaris= =FreeBSD=
-  + [[./spices/cix-circus.org][circus]] :: A Process & Socket Manager built with zmq
+  + [[./spices/cix-sysstat.org][sysstat]] :: collection of performance monitoring tools: =GNU/Linux=
+  + [[file:./spices/cix-smem.org][smem]] :: report application memory usage in a meaningful way:
 
 - *Hardware* /Hard as a rock!/
   + [[file:./spices/cix-iw.org][iw]] :: A nl80211 based wireless configuration tool: =GNU/Linux=
@@ -143,7 +147,7 @@ on *GNU/Linux*
   + [[./spices/cix-lshw.org][lshw]] :: hardware lister: =GNU/Linux=
   + [[file:./spices/cix-oprofile.org][OProfile]] :: System wide profiler: =GNU/Linux=
   + [[./spices/cix-pciutils.org][pciutils]] :: pci bus related utilities: =FreeBSD= =NetBSD= =OpenBSD= =GNU/Linux= =FreeBSD= =Solaris/i386= =AIX= =GNU/Hurdd= =Windows= =Cygwin= =BeOS= =Haiku= =Darwin=
-  + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks: =OS-X= =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS/2= =Cygwin= =QNX= =eComStation= =Windows=
+  + [[./spices/cix-smartmontools.org][smartmontools]] :: tools for monitoring smart capable hard disks: =OS-X= =GNU/Linux= =FreeBSD= =NetBSD= =OpenBSD= =Solaris= =OS/2= =Cygwin= =QNX= =eCmStation= =Windows=
   + [[./spices/cix-stress.org][stress]] :: A tool to put given subsystems under a specified load: =GNU/Linux= =Gentoo= =OpenBSD= =FreeBSD=
   + [[file:./spices/cix-stress-ng.org][stress-ng]] :: stress test a computer system in various ways: =GNU/Linux= =GNU/Hurd= =FreeBSD= =OpenBSD= =NetBSD= =FreeBSD= =MINIX= =OpenIndiana=
   + [[./spices/cix-usbutils.org][usbutils]] :: Linux usb utilities: =GNU/Linux=
@@ -171,6 +175,7 @@ on *GNU/Linux*
   + [[./spices/cix-lrzip.org][lrzip]] :: compression program optimized for large files
   + [[./spices/cix-pax.org][pax]] :: POSIX file system archiver
   + [[./spices/cix-xz.org][xz]] :: lzma compression utilities: =GNU/Linux= =FreeBSD=
+  + [[./spices/cix-gnu-sharutils.org][sharutils]] :: shar utilities for packaging and unpackaging shell archives:  =GNU/Linux=
 
 - *Networking* /We all live in the someone's subnet in/
   + [[./spices/cix-bind-utils.org][bind-utils]] :: utilities for querying dns name server
@@ -205,7 +210,7 @@ on *GNU/Linux*
   + [[./spices/cix-tmux.org][tmux]] :: a terminal multiplexer
   + [[./spices/cix-zsh.org][zsh]] ::  powerful interactive shell
 
-- *Scheduling* /World is spinning around/
+- *Scheduling-logging* /World is spinning around/
   + [[./spices/cix-at.org][at]] :: job spooling tools
   + [[./spices/cix-cronie.org][cronie]]  :: cron daemon for executing programs at set times
   + [[./spices/cix-logrotate.org][logrotate]] :: rotates, compresses, removes and mails system log files
@@ -219,10 +224,14 @@ on *GNU/Linux*
   + [[file:./spices/cix-imagemagick.org][ImageMagick]] :: An X application for displaying and manipulating images
 
 - *Security* /It's never be save/
-  + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX DragonFly-BSD FreeBSD HP-UX Linux OS-X NetBSD Solaris=
-  + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
-  + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
   + [apparmor] :: is a Mandatory Access Control (MAC)
+  + [rkhunter] ::
+  + [yara] ::
+  + [seccomp] :: 
+  + [[file:./spices/cix-lynis.org][lynis]] :: security and system auditing tool: =GNU/Linux= =OS-X= =FreeBSD= =OpenBSD= =Solaris= =AIX= =HP-UX= =NetBSD=
+  + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX= =DragonFly-BSD= =FreeBSD= =HP-UX= =GNU/Linux= =OS-X= =NetBSD= =Solaris=
+  + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
+  + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
 
 - *Boot-Init-systems* /Let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
@@ -248,7 +257,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-llvm.org][llvm]] :: The Low Level Virtual Machine: =OS-X= =GNU/Linux=
   + [[file:./spices/cix-gnu-make.org][make]] :: a tool which simplifies the build process for users: =GNU/Linux=
   + [[file:./spices/cix-musl.org][musl]] :: 
-  + [[file:./spices/cix-valgrind.org][valgrind]] :: Tool for finding memory management bugs in programs
+  + [[file:./spices/cix-valgrind.org][valgrind]] :: tool for finding memory management bugs in programs: =GNU/Linux= =Solaris= =Android= =Darvin=
 
 - *Packaging* /Pack me up, pack me down/
   + [[./spices/cix-apt.org][apt]] :: Debian/Ubuntu commandline package panager.
@@ -284,7 +293,16 @@ on *GNU/Linux*
   + [[file:./spices/cix-luks.org][luks]] :: Linux Unifed Key Setup 
       
 - *Web* /Are you a spiderman?/
+  + [apache] ::
   + [[file:./spices/cix-haproxy.org][haproxy]] ::
+  + [nginx] ::
+
+- *Databases*
+  + [postgresql] :: is an advanced Object-Relational database management system: =GNU/Linux= =Win= =FreeBSD= =OpenBSD= =NetBSD= =OS-X= =AIX= =HP-UX= =Solaris=
+  + [pgcli] ::
+
+- *Virtualisation*
+
 
 * Configuration
 Header example of configuration file:
@@ -339,10 +357,12 @@ Distribution of most commonly used libraries
 #+END_EXAMPLE
 * Glosary
 - discriptor ::
-- DMI ::
-- GID :: 
+- DMI :: Desktop Management Interface
+- HIDS :: Host-based intrusion detection system
+- GID :: Globally unique identifier
 - GUI :: Graphical User Interface
-- CLI ::
+- CLI :: Command Line Interface
+- TUI :: Text-based user interface
 - GNU :: GNU is Not a Unix, it is a collection of many programs: applications,
          libraries, developer tools, even games. The development of GNU, started
          in January 1984. https://www.gnu.org
@@ -356,9 +376,10 @@ Distribution of most commonly used libraries
      renaming a file in the directory unless they own the file or the directory
 - RFC :: [[https://www.rfc-editor.org/retrieve/][Request for Comment]] - official standards in the internet community.
 - sticky bit ::
-- SUS :: Single UNIX Specitication
-- UID ::
-- UUID :: 
+- SUS :: /Single UNIX Specitication/
+- UID :: /User IDentifier/
+- UUID :: /Universally Unique Identifier/
+- WWN :: /World Wide Name/ - is a unique identifier used in storage technologies.
 * References
 ** Books
 - Ellen Sieve, Stephen Figgins, Robert Love & Arnold Robbinsp
@@ -408,7 +429,11 @@ Distribution of most commonly used libraries
 - https://wiki.archLinux.org/
 - https://wiki.FreeBSD.org/
 - https://wiki.ubuntu.com/
-
+** Organisations
+- Distributed Management Task Force
+  https://www.dmtf.org/standards/dmi
+- The Internet Engineering Task Force
+  https://www.ietf.org/
 ** Hubs
 - perf-tools
   https://github.com/brendangregg/perf-tools

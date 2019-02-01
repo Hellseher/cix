@@ -1,23 +1,28 @@
 # File          : cix-iptables.org
 # Created       : <2016-11-07 Mon 23:05:04 GMT>
-# Modified      : <2017-8-28 Mon 21:43:22 BST> sharlatan
+# Modified      : <2018-7-29 Sun 00:28:18 BST> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      :Tools for managing Linux kernel packet filtering capabilities
+# Sinopsis      : <Tools for managing Linux kernel packet filtering capabilities>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: IP talbes
+#+TITLE: iptables
 |-----------------+---------------|
 | *Author*        | Rusty Russell |
 | *Maintainer(s)* |               |
 | *Released*      | 1998          |
 | *Source*        | [[http://git.netfilter.org/iptables/][iptables.git]]  |
-| *Man*           |               |
-| *Info*          |               |
+| *Homepage*      | [[https://www.netfilter.org/projects/iptables/index.html][iptables.web]]  |
 |-----------------+---------------|
-
+~iptables~ is the userspace command line program used to configure the Linux
+2.4.x and later packet filtering ruleset. It is targeted towards system
+administrators. Since Network Address Translation is also configured from the
+packet filter ruleset, ~iptables~ is used for this, too. The i ~ptables p~
+ackage also includes ~ip6tables~. ~ip6tables~ is used for configuring the IPv6
+packet filter.
+-----
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc iptables

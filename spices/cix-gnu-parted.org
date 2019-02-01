@@ -1,6 +1,6 @@
 # File          : cix-parted.org
 # Created       : <2016-11-12 Sat 10:01:15 GMT>
-# Modified      : <2017-9-17 Sun 21:32:20 BST> sharlatan
+# Modified      : <2017-11-21 Tue 00:24:57 GMT> Sharlatan
 # Author        : sharlatan
 # Maintainer(s) :
 # Sinopsis      : The GNU disk partition manipulation program.
@@ -40,6 +40,8 @@ systems, reorganizing disk usage, and copying data to new hard disks.
 | OPT | ++V | --V | DESC |
 |-----+-----+-----+------|
 |     |     |     |      |
+*** parted::examples
+**** parted- 171120202142
 
 * References
 *** Links

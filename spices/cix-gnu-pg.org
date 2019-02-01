@@ -1,6 +1,6 @@
 # File           : cix-gpg.org
 # Created        : <2017-08-07 Mon 00:14:36 BST>
-# Modified       : <2017-9-17 Sun 21:32:21 BST> sharlatan
+# Modified       : <2018-10-16 Tue 23:20:00 BST> Sharlatan
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : A GNU utility for secure communication and data storage
@@ -16,6 +16,7 @@
 | *Released*       | 1999                   |
 | *Source*         | [[https://git.gnupg.org/cgi-bin/gitweb.cgi][gnupg.git]]              |
 | *Info*           | [[https://gnupg.org/index.html][gnupg.web]]              |
+|------------------+------------------------|
 
 GnuPG (GNU Privacy Guard) is a GNU utility for encrypting data and creating
 digital signatures. GnuPG has advanced key management capabilities and is
@@ -38,6 +39,10 @@ patented worldwide).
 **** gpg-170819010727
 encrypt file with the symetric cipher AES256:
 :   ~$ gpg -v -c --cipher-algo AES256 input_file
+
+**** gpg-181016231906
+decript file:
+:   ~$ gpg -o file file.gpg
 * Refreances
 ** RFC
 - RFC4880

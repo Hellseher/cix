@@ -1,9 +1,8 @@
-# File           : cix-strace.org
-# Created        : <2016-11-18 Fri 23:35:13 GMT>
-# Modified  : <2017-9-03 Sun 22:41:38 BST> sharlatan
-# Author         : sharlatan
-# Maintainer(s)  :
-# Sinopsis : Tracks and displays system calls associated with a running.
+# File     : cix-strace.org
+# Created  : <2016-11-18 Fri 23:35:13 GMT>
+# Modified : <2018-8-20 Mon 19:50:40 BST> Sharlatan
+# Author   : sharlatan
+# Sinopsis : <Tracks and displays system calls associated with a running.>
 
 #+OPTIONS: num:nil
 
@@ -15,7 +14,7 @@
 | *Released*     | 1991           |
 | *Source*       | [[https://github.com/strace/strace][strace.git]]     |
 | *Man*          | [[http://man7.org/linux/man-pages/man1/strace.1.html][strace.man]]     |
-| *Info*         | [[https://strace.io/][strace.io]]      |
+| *Homepage*     | [[https://strace.io/][strace.io]]      |
 |----------------+----------------|
 
 The strace program  intercepts and records the system calls  called and received
