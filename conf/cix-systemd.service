@@ -1,0 +1,10 @@
+#+conf_url: https://www.freedesktop.org/software/systemd/man/systemd.service.html
+#+conf_synopsis: systemd service unit configuration
+#+conf_man: systemd.service
+#+conf_path: /etc/systemd/system/, /libr/systemd/system, /var/lib/systemd
+#+conf_frmt: ini format
+#+conf_re: ^[^#][Aa-Zz]+=.*
+#+conf_total: 
+
+[Service]
+Type=

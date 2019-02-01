@@ -1,0 +1,45 @@
+#+conf_url: http:
+#+conf_man: exports(5)
+#+conf_cmd: /usr/sbin/exportfs
+#+conf_path: /etc/exports
+#+conf_frmt: <export_path> <host1>(<options>) <hostN>(<options>)...
+#+conf_re:
+#+conf_total:
+
+# <options>
+# Read/Write export
+rw
+
+# Read-Only export
+ro
+
+# Delay writing to the disk, could improve performance
+wdelay
+
+no_wdelay
+no_acl
+sync
+async
+nohide
+no_auth_nlm
+auth_nlm
+secure_locks
+hide
+insecure
+secure
+crossmnt
+mp
+mountpoint=path
+no_subtree_check
+fsid=num|root|uuid
+refer=path@host[+host][:path@host[+host]] 
+replicas=path@host[+host][:path@host[+host]] 
+
+# ------------------------------------------------------------------------------
+#+USER_ID_MAPPING
+
+root_squash
+no_root_squash
+all_squash
+anonuid=<uid-value>
+anongid=<gid-value>

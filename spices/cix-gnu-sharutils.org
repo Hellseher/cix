@@ -1,0 +1,26 @@
+# File           : cix-gnu-sharutils.org
+# Created        : <2018-10-11 Thu 01:00:37 BST>
+# Modified       : <2018-10-11 Thu 21:05:58 BST> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       : <shar utilities for packaging and unpackaging shell archives>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: gnu-sharutils
+|-----------------+---------------|
+| *Author*        |               |
+| *Maintainer(s)* |               |
+| *Released*      |               |
+| *Source*        | [[http://git.savannah.gnu.org/cgit/sharutils.git][sharutils.git]] |
+| *Homepage*      |               |
+|-----------------+---------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+  # End of cix-gnu-sharutils.org

@@ -1,0 +1,26 @@
+# File           : cix-socat.org
+# Created        : <2018-08-28 Tue 21:51:25 BST>
+# Modified       : <2018-8-28 Tue 21:55:03 BST> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       :
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: socat
+|-----------------+---|
+| *Author*        |   |
+| *Maintainer(s)* |   |
+| *Released*      |   |
+| *Source*        |   |
+| *Homepage*      |   |
+|-----------------+---|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-socat.org

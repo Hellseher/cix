@@ -1,0 +1,26 @@
+# File           : cix-sysstat.org
+# Created        : <2019-01-12 Sat 22:47:32 GMT>
+# Modified       : <2019-1-12 Sat 22:59:01 GMT> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       : <collection of performance monitoring tools:>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: sysstat
+|-----------------+------------------|
+| *Author*        | Sebastien Godard |
+| *Maintainer(s)* |                  |
+| *Released*      | 1999             |
+| *Source*        | [[https://github.com/sysstat/sysstat][sysstat.git]]      |
+| *Homepage*      | [[http://sebastien.godard.pagesperso-orange.fr][sysstat.web]]      |
+|-----------------+------------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-sysstat.org

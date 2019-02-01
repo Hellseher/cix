@@ -1,0 +1,29 @@
+# File           : cix-lynis.org
+# Created        : <2018-11-25 Sun 11:53:27 GMT>
+# Modified       : <2018-11-25 Sun 23:27:35 GMT> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       : <Security and system auditing tool.>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: lynis
+|-----------------+----------------|
+| *Author*        | Michael Boelen |
+| *Maintainer(s)* |                |
+| *Released*      | 2007           |
+| *Source*        | [[https://github.com/CISOfy/lynis][lynis.git]]      |
+| *Homepage*      | [[https://cisofy.com/lynis/][lynis.web]]      |
+|-----------------+----------------|
+Lynis is an auditing and hardening tool for Unix/Linux and you might even call
+it a compliance tool. It scans the system and installed software. Then it
+performs many individual security control checks. It determines the hardening
+state of the machine, detects security issues and provides suggestions to
+improve the security defense of the system.
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-lynis.org

@@ -1,0 +1,34 @@
+# File           : cix-blktrace.org
+# Created        : <2019-01-12 Sat 22:59:13 GMT>
+# Modified       : <2019-1-13 Sun 21:51:28 GMT> Sharlatan
+# Author         : Sharlatan
+# Maintainer(s)  :
+# Sinopsis       : <utilities for performing block layer io tracing in the linux:>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: blktrace
+|-----------------+--------------|
+| *Author*        | Jens Axboe   |
+| *Maintainer(s)* |              |
+| *Released*      | 2006         |
+| *Source*        | [[https://git.kernel.org/pub/scm/linux/kernel/git/axboe/blktrace.git/][blktrace.git]] |
+| *Homepage*      |              |
+|-----------------+--------------|
+
+
+-----
+* Index
+* Receipts
+** blkparce
+** blktrace
+*** blktrace::examples
+**** blktrace-190112230731
+capture i/o for period of 30s from /dev/sda, logs will be saved in binary files with sda prefix:
+:    ~# blktrace -w 30 -d /dev/sda -o sda
+** btt
+* References
+- http://www.fis.unipr.it/doc/blktrace-1.0.1/btt.pdf
+- https://brooker.co.za/blog/2013/07/14/io-performance.html
+# End of cix-blktrace.org
