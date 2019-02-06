@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2018-12-24 Mon 11:29:50 GMT> Sharlatan
+# Modified   : <2019-2-06 Wed 20:51:19 GMT> Sharlatan
 # Maintainer : sharlatan
 # Sinopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
@@ -378,7 +378,7 @@ allow everyone in your group to be able to modify the file:
 *** comm::options
 *** comm::examples
 **** comm-180802202649
-find lines only in file_1:
+find lines existing only in file_1 against file_2::
 :    ~$ comm -23 file_1 file_2                       # if both file sorted
 :    ~$ comm -23 <(sort -u file_1) <(sort -u file_2) # if both file sorted
 *** comm::files

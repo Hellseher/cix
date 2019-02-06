@@ -1,6 +1,6 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2019-2-01 Fri 23:21:49 GMT> Sharlatan
+# Modified : <2019-2-06 Wed 20:53:16 GMT> Sharlatan
 # Author   : sharlatan
 # Short    : README-en
 
@@ -41,8 +41,7 @@ cix
 #+END_SRC
 
 ** Statistic
-#+HEADERS: :results value org replace :exports results
-#+BEGIN_SRC sh 
+#+BEGIN_SRC sh :results value org replace :exports results 
 ./cix-stat.sh stat
 #+END_SRC
 
