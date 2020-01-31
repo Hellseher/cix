@@ -1,9 +1,9 @@
 # File         : cix-xz.org
 # Created      : <2016-11-04 Fri 22:44:50 GMT>
-# Modified     : <2017-8-28 Mon 00:48:10 BST> sharlatan
+# Modified     : <2020-01-31 Fri 22:11:21 GMT>
 # Author       : sharlatan
 # Maintainer(s :
-# Sinopsis     : LZMA compression utilities.
+# Synopsis     : <LZMA compression utilities.>
 
 #+OPTIONS: num:nil
 
@@ -15,7 +15,7 @@
 | *Released*       | 2008                  |
 | *Source*         | [[https://git.tukaani.org/?p=xz.git][xz.git]]                |
 | *Man*            |                       |
-| *Info*           | [[https://tukaani.org/xz/][xz.web]]                |
+| *Homepage*       | [[https://tukaani.org/xz/][xz.web]]                |
 |------------------+-----------------------|
 
 XZ Utils are an attempt to make LZMA compression easy to use on free (as in
@@ -27,6 +27,7 @@ LZMA is a general purpose compression algorithm designed by Igor Pavlov as part
 of 7-Zip. It provides high compression ratio while keeping the decompression
 speed fast.
 -----
+
 * Index
 #+BEGIN_SRC sh  :results value org output replace :exports results
 ../cix-stat.sh mandoc xz
@@ -48,3 +49,10 @@ speed fast.
 | xzmore  | (1) | view xz or lzma compressed (text) files          |
 #+END_SRC
 # End of cix-xz.org
+* Receipts
+** xz
+*** xz::examples
+**** xz-200131213333
+create a maximized compressed archive with using as much threads as available:
+:    ~$ xz -9 --extreme --verbose --threads=0 file
+:    ~$ xz -9evT 0 file

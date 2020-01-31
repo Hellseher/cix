@@ -1,6 +1,6 @@
 # File           : cix-blktrace.org
 # Created        : <2019-01-12 Sat 22:59:13 GMT>
-# Modified       : <2019-1-13 Sun 21:51:28 GMT> Sharlatan
+# Modified       : <2019-2-24 Sun 21:23:04 GMT> Sharlatan
 # Author         : Sharlatan
 # Maintainer(s)  :
 # Sinopsis       : <utilities for performing block layer io tracing in the linux:>
@@ -17,6 +17,13 @@
 | *Homepage*      |              |
 |-----------------+--------------|
 
+=blktrace= is a block layer IO tracing mechanism which provides detailed
+information about request queue operations to user space. This package includes
+both =blktrace=, a utility which gathers event traces from the kernel; and
+blkparse, a utility which formats trace data collected by blktrace.
+
+You should install the blktrace package if you need to gather detailed
+information about IO patterns.
 
 -----
 * Index

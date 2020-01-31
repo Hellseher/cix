@@ -1,6 +1,6 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2019-2-06 Wed 20:53:16 GMT> Sharlatan
+# Modified : <2020-01-31 Fri 22:31:46 GMT> Sharlatan
 # Author   : sharlatan
 # Short    : README-en
 
@@ -20,7 +20,7 @@ tree -L 1
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_SRC org
+#+begin_src org
 cix
 .
 ├── cix-convension.org
@@ -38,15 +38,16 @@ cix
 └── tutors
 
 6 directories, 7 files
-#+END_SRC
+#+end_src
+
 
 ** Statistic
-#+BEGIN_SRC sh :results value org replace :exports results 
+#+BEGIN_SRC sh :results value org replace :exports results
 ./cix-stat.sh stat
 #+END_SRC
 
 #+RESULTS:
-#+begin_src org
+#+BEGIN_SRC org
 Distribution per command:
 
 QTY  CMD          PKG
@@ -54,10 +55,11 @@ QTY  CMD          PKG
 33   tcpdump      tcpdump
 19   awk          gawk
 18   sed          sed
+12   dd           gnu-coreutils
 10   find         gnu-findutils
-10   dd           gnu-coreutils
 7    chmod        gnu-coreutils
 6    ls           gnu-coreutils
+5    tar          gnu-tar
 5    strace       strace
 5    nc           netcat
 5    mount        util-linux
@@ -65,7 +67,6 @@ QTY  CMD          PKG
 5    grep         gnu-grep
 5    git          git
 4    tr           gnu-coreutils
-4    tar          tar
 4    ss           iproute2
 4    paste        gnu-coreutils
 4    lsof         lsof
@@ -86,6 +87,7 @@ QTY  CMD          PKG
 2    mv           gnu-coreutils
 2    ip           iproute2
 2    gpg          gnu-pg
+1    xz           xz
 1    while        gnu-bash
 1    whatis       man-db
 1    usermod      shadow-utils
@@ -123,6 +125,7 @@ QTY  CMD          PKG
 1    du           gnu-coreutils
 1    dnf          dnf
 1    cut          gnu-coreutils
+1    cp           gnu-coreutils
 1    comm         gnu-coreutils
 1    command      gnu-bash
 1    blktrace     blktrace
@@ -134,7 +137,7 @@ Distribution per package:
 
 QTY  PKG
 ---  ---
-52   gnu-coreutils
+55   gnu-coreutils
 33   tcpdump
 19   gawk
 18   sed
@@ -145,9 +148,9 @@ QTY  PKG
 5    strace
 5    pciutils
 5    netcat
+5    gnu-tar
 5    gnu-grep
 5    git
-4    tar
 4    systemd
 4    lsof
 4    gnu-binutils
@@ -161,6 +164,7 @@ QTY  PKG
 2    ncat
 2    iputils
 2    gnu-pg
+1    xz
 1    smem
 1    perf
 1    pacman
@@ -176,6 +180,6 @@ QTY  PKG
 
 Distribution per example:
 
-Onliners:  280
+Onliners:  288
 Scripts:   108
-#+end_src
+#+END_SRC

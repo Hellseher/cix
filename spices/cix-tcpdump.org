@@ -1,6 +1,6 @@
 # File          : cix-tcpdump.org
 # Created       : <2016-11-07 Mon 23:06:06 GMT>
-# Modified      : <2018-7-08 Sun 22:56:19 BST> Sharlatan
+# Modified      : <2020-1-23 Thu 21:43:55 GMT> Sharlatan
 # Author        : sharlatan
 # Sinopsis : <A network traffic monitoring tool.>
 
@@ -23,7 +23,7 @@ capture and display the packet headers on a particular network interface or on
 all interfaces. Tcpdump can display all of the packet headers, or just the ones
 that match particular criteria.
 
-----
+
 
 * Index
 #+BEGIN_EXAMPLE
@@ -45,8 +45,8 @@ that match particular criteria.
 
 *** tcpdump::examples
 **** tcpdump-161126180824
-cpapture active hosts on any interfaces for 10s on the:
-#+BEGIN_SRC sh
+Capture active hosts on any interfaces for 10s on the:
+#+BEGIN_SRC sh :tangle ../scripts/tcpdump-161126180824.sh
     #!/usr/bin/env bash
 
     IPV4_RE="((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"

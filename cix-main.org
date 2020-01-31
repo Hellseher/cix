@@ -1,6 +1,6 @@
 # File       : cix-main.org
 # Created    : Sat 07 Nov 2015 22:58:38
-# Modified   : <2019-1-13 Sun 21:51:50 GMT> Sharlatan
+# Modified   : <2020-01-31 Fri 22:11:59 GMT> Sharlatan
 # Maintainer : sharlatan <sharlatanus@gmail.com>
 # Sinopsis   : Index of of all files.
 
@@ -113,16 +113,16 @@ on *GNU/Linux*
   + [[./spices/cix-e2fsprogs.org][e2fsprogs]] :: filesystem utilities for use with ext2/3/4
   + [[file:./spices/cix-glusterfs.org][glusterfs]] :: distributed file system: =GNU/Linux= =FreeBSD= =NetBSD= =OpenSolaris= =OS-X=
   + [[./spices/cix-lvm2.org][lvm2]] :: userland logical volume management tools
-  + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share 
+  + [[./spices/cix-nfs.org][nfs]] :: utilities for rall out NFS share
   + [[file:./spices/cix-gnu-parted.org][parted]] :: the GNU disk partition manipulation program: =GNU/Linux=
   + [[./spices/cix-quota.org][quota]] :: system tools for monitoring users disk usage
-  + [xfs] :: 
-  + [zfs] :: 
+  + [xfs] ::
+  + [zfs] ::
 
 - *Utillities* /Be silent and help ppls/
   + [likwid] ::
   + [ohai] ::
-  + [psacct] :: 
+  + [psacct] ::
   + [[./spices/cix-elfutils.org][elfutils]] :: collection of utilities and DSOs to handle ELF files and DWARF data
   + [[./spices/cix-facter.org][facter]] :: Command and ruby library for gathering system information:
   + [[./spices/cix-moreutils.org][moreutils]] :: tools that nobody thought to write when unix was young:
@@ -169,7 +169,7 @@ on *GNU/Linux*
 - *Compress-archive* /I'm a pac man/
   + [[./spices/cix-bzip2.org][bzip2]] :: a file compression utility
   + [[./spices/cix-cpio.org][cpio]] :: a GNU archiving program
-  + [[./spices/cix-tar.org][tar]] :: a file archiving program
+  + [[./spices/cix-gnu-tar.org][tar]] :: a file archiving program: =GNU/Linux=
   + [[./spices/cix-gzip.org][gzip]] :: the GNU data compression program
   + [[./spices/cix-unizp.org][unzip]] :: a utility for unpacking zip files
   + [[./spices/cix-lrzip.org][lrzip]] :: compression program optimized for large files
@@ -184,7 +184,7 @@ on *GNU/Linux*
   + [[./spices/cix-gnu-inetutils.org][inetutils]] :: a collection of common network programs
   + [[./spices/cix-iproute2.org][iproute2]] :: routing commands and utilities
   + [[./spices/cix-iptables.org][iptables]] :: Linux kernel packet filtering capabilities: =GNU/Linux=
-  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: =GNU/Linux= 
+  + [[./spices/cix-iputils.org][iputils]] :: network monitoring tools including ping: =GNU/Linux=
   + [[file:./spices/cix-ncat.org][ncat]] :: general-purpose network connector (nmap's project netcat replacement:
   + [[./spices/cix-net-snmp.org][net-snmp]] :: a collection of snmp protocol tools and libraries: =GNU/Linux= =FreeBSD= =OpenBSD= =Solaris/SPARC= =OS-X= =AIX= =HP-UX= =NetBSD= =OSF= =SunOS= =Ultrix= =QNX= =Dynix= =IRIX= =Windows=
   + [[./spices/cix-net-tools.org][net-tools]] :: collection of base networking utilities
@@ -198,6 +198,7 @@ on *GNU/Linux*
   + [[./spices/cix-ipset.org][ipset]] :: Manage Linux IP sets: =GNU/Linux=
   + [[./spices/cix-iptraf-ng.org][iptraf-ng]] :: a console-based network monitoring utility: =GNU/Linux=
   + [[./spices/cix-socat.org][socat]] :: bidirectional data relay between two data channels ('netcat++'): =GNU/Linux=
+  + [tshark] ::
 
 - *Shell* /Not just sand.../
   + [[file:./spices/cix-ash.org][ash]] :: Almquist SHell in NetBSD
@@ -227,7 +228,7 @@ on *GNU/Linux*
   + [apparmor] :: is a Mandatory Access Control (MAC)
   + [rkhunter] ::
   + [yara] ::
-  + [seccomp] :: 
+  + [seccomp] ::
   + [[file:./spices/cix-lynis.org][lynis]] :: security and system auditing tool: =GNU/Linux= =OS-X= =FreeBSD= =OpenBSD= =Solaris= =AIX= =HP-UX= =NetBSD=
   + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX= =DragonFly-BSD= =FreeBSD= =HP-UX= =GNU/Linux= =OS-X= =NetBSD= =Solaris=
   + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
@@ -237,7 +238,7 @@ on *GNU/Linux*
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager
   + [[./spices/cix-upstart.org][upstart]] :: event-based init daemo
   + [[file:./spices/cix-syslinux.org][syslinux]] :: Simple kernel loader which boots from a FAT filesystem: =GNU/Linux=
-  + [[file:./spices/cix-gnu-grub2.org][grub2]] :: Bootloader with support multiboot and more: =GNU/Linux= 
+  + [[file:./spices/cix-gnu-grub2.org][grub2]] :: Bootloader with support multiboot and more: =GNU/Linux=
 
 - *Development* /In the fields of observation chance favors only the prepared mind./
   + [[./spices/cix-gnu-autoconf.org][autoconf]] :: a GNU tool for automatically configuring source code: =GNU/Linux=
@@ -256,7 +257,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-gnu-lightning.org][lightning]] :: library for generating assembly code on run time: =GNU/Linux=
   + [[file:./spices/cix-llvm.org][llvm]] :: The Low Level Virtual Machine: =OS-X= =GNU/Linux=
   + [[file:./spices/cix-gnu-make.org][make]] :: a tool which simplifies the build process for users: =GNU/Linux=
-  + [[file:./spices/cix-musl.org][musl]] :: 
+  + [[file:./spices/cix-musl.org][musl]] ::
   + [[file:./spices/cix-valgrind.org][valgrind]] :: tool for finding memory management bugs in programs: =GNU/Linux= =Solaris= =Android= =Darvin=
 
 - *Packaging* /Pack me up, pack me down/
@@ -268,7 +269,7 @@ on *GNU/Linux*
   + [[file:./spices/cix-pkg-pkgng.org][pkg/pkgng]] :: is the Next Generation package management tool for FreeBSD: =FreeBSD=
   + [[file:./spices/cix-rpm.org][rpm]] :: package manager is a command line driven package management system
   + [guix] ::
-  + [nix] :: 
+  + [nix] ::
 
 - *Research-reverse-engineering* /I've got a clue/
   + [[./spices/cix-netkit.org][Linux Netkit]] :: Utilities for managing processes on your system
@@ -286,12 +287,12 @@ on *GNU/Linux*
   + [ltrace] ::
   + [SystemTap] ::
   + [LTTng] ::
-  + [ProbeVue] :: 
+  + [ProbeVue] ::
 
 - *Cryptograpy* /Who breaks Enigma code?/
   + [[./spices/cix-gnu-pg.org][gnupg]] :: A GNU utility for secure communication and data storage
-  + [[file:./spices/cix-luks.org][luks]] :: Linux Unifed Key Setup 
-      
+  + [[file:./spices/cix-luks.org][luks]] :: Linux Unifed Key Setup
+
 - *Web* /Are you a spiderman?/
   + [apache] ::
   + [[file:./spices/cix-haproxy.org][haproxy]] ::
@@ -302,7 +303,6 @@ on *GNU/Linux*
   + [pgcli] ::
 
 - *Virtualisation*
-
 
 * Configuration
 Header example of configuration file:
@@ -317,7 +317,7 @@ grep "+conf" ./conf/cix-vsftpd.conf
 ,#+conf_cmd: /usr/bin/vsftpd
 ,#+conf_path: /etc/vsftpd/vsftpd.conf
 ,#+conf_frmt: option=value
-,#+conf_re: ^[^#][a-z_]+=(YES|NO|[0-9]*|.*)$ 
+,#+conf_re: ^[^#][a-z_]+=(YES|NO|[0-9]*|.*)$
 ,#+conf_total: 125
 #+END_SRC
 
@@ -367,9 +367,9 @@ Distribution of most commonly used libraries
          libraries, developer tools, even games. The development of GNU, started
          in January 1984. https://www.gnu.org
 - inode ::
-- magic number :: 
+- magic number ::
 - MBR ::
-- BIOS :: 
+- BIOS ::
 - nice ::
 - PID ::
 - restricted delition flag :: prevents unprivileged users from removing or
@@ -397,7 +397,7 @@ Distribution of most commonly used libraries
 - Ben Clark;
   *RTFM: Red Team Field Manual*;
   Ben Clark, 2013;
-  
+
 ** Articles
 - M. Douglas McIlroy;
   *A Research UNIX Reader: Annotated Excerpts from the Programmer’s Manual, 1971-1986*;
@@ -417,10 +417,10 @@ Distribution of most commonly used libraries
   http://man7.org/linux/man-pages/index.html
 - Commanline fu
   http://www.commandlinefu.com/commands/browse/sort-by-votes
-- BashGuide 
+- BashGuide
   http://mywiki.wooledge.org/BashGuide
 - http://everythingsysadmin.com/
-- Linux Performance 
+- Linux Performance
   http://www.brendangregg.com/linuxperf.html
 
 ** Wikis

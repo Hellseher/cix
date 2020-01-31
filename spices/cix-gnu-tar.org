@@ -1,14 +1,14 @@
-# File          : cix-tar.org
+# File          : cix-gnu-tar.org
 # Created       : <2016-11-04 Fri 22:42:50 GMT>
-# Modified      : <2018-7-08 Sun 01:07:29 BST> Sharlatan
+# Modified      : <2020-01-31 Fri 21:31:48 GMT>
 # Author        : sharlatan
 # Maintainer(s) :
-# Sinopsis      : <File archiving program>
+# Sinopsis      : <GNU File archiving program>
 
 #+OPTIONS: num:nil
 
 [[file:../cix-main.org][|≣|]]
-#+TITLE: tar
+#+TITLE: GNU tar
 |------------------+-----------------------|
 | *Author*         | John Gilmore [[http://git.savannah.gnu.org/cgit/tar.git/tree/AUTHORS][(all...)]] |
 | *Contributor(s)* | [[http://git.savannah.gnu.org/cgit/tar.git/tree/THANKS][(all...)]]              |
@@ -27,11 +27,14 @@ remote archives and special features that allow =tar= to be used for incremental
 and full backups. This distribution also includes =rmt=, the remote tape server.
 The =mt= tape drive control program is in the GNU =cpio= distribution.
 -----
+* Index
 * Receipts
 ** GNU tar
 *** gnu-tar::options
-| OPT | TYPE | =++V= | =--V= | DESC |
-|-----+------+-------+-------+------|
+| OPT              | TYPE | =++V= | =--V= | DESC                                                    |
+|------------------+------+-------+-------+---------------------------------------------------------|
+| =--remove-files= |      |       |       | Remove files from disk after adding them to the archive |
+|                  |      |       |       |                                                         |
 
 *** gnu-tar::examples
 **** tar-170117214147
@@ -43,13 +46,17 @@ extart *.tar.gz, *.tar.bz2 files:
 :    ~$ tar -xzvf tarball_file.tar.gz
 :    ~$ tar -xjvf tarball_file.tar.bz2
 
-**** tar-170927225754 
+**** tar-170927225754
 copy via tar pipe while preserving file permissions:
 :    ~$ tar -C source_path -cpf - . | tar -C target_path -xf -
 
 **** tar-171214012632
 maximized compression with xz archiver:
 :    ~$ XZ_OPT=-9e tar cJf tarfile.tar.xz directory
-:    ~$ tar -cf - directory/ | xz -9 -c - > tarfie.tar.xz 
+:    ~$ tar -cf - directory/ | xz -9 -c - > tarfie.tar.xz
 [[file::*xz][xz]]
+**** tar-200131212206
+pack all files within current directory with further their clean up:
+:    ~$ tar --create --verbose --remove-files --file tarfile.tar file1 file2 file3 ... fileN
+:    ~$ tar -cvf tarfile.tar file1 file2 file3 ... fileN --remove-files
 # End of cix-tar.org
