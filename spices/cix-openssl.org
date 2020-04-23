@@ -1,0 +1,28 @@
+# File          : cix-openssl.org
+# Created       : <2020-3-24 Tue 11:31:34 GMT>
+# Modified      : <2020-3-24 Tue 11:33:27 GMT>
+# Author        : sharlatan
+# Maintainer(s) :
+# Sinopsis      : <>
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: OpenSSL
+|------------------+---|
+| *Author*         |   |
+|                  |   |
+|                  |   |
+|                  |   |
+|                  |   |
+|                  |   |
+|                  |   |
+| *Contributor(s)* |   |
+| *Released*       |   |
+| *Source*         |   |
+| *Homepage*       |   |
+|------------------+---|
+
+-----
+* Index
+* Receipts

@@ -1,6 +1,6 @@
 # File           : cix-git.org
 # Created        : <2017-08-28 Mon 22:17:29 BST>
-# Modified       : <2018-8-09 Thu 18:56:23 BST> Sharlatan
+# Modified       : <2020-02-11 Tue 21:39:35 GMT>
 # Author         : sharlatan
 # Maintainer(s)  :
 # Sinopsis       : Fast Version Control System
@@ -9,14 +9,14 @@
 
 [[file:../README.org*Index][|≣|]]
 #+TITLE: git
-|                 |                  |
-|-----------------+------------------|
-| *Author*        | 	Linus Torvalds |
-| *Maintainer(s)* |                  |
-| *Released*      | 2005             |
-| *Source*        | [[https://github.com/git/git][git.git]]          |
-| *Homepage*      | [[https://git-scm.com/about][git.web]]          |
-|-----------------+------------------|
+|                 |                    |
+|-----------------+--------------------|
+| *Author*        |     Linus Torvalds |
+| *Maintainer(s)* |                    |
+| *Released*      | 2005               |
+| *Source*        | [[https://github.com/git/git][git.git]]            |
+| *Homepage*      | [[https://git-scm.com/about][git.web]]            |
+|-----------------+--------------------|
 
 Git is a free and open source distributed version control system designed to
 handle everything from small to very large projects with speed and efficiency.
@@ -25,13 +25,13 @@ handle everything from small to very large projects with speed and efficiency.
 * Receipts
 ** git
 *** git::examples
-**** git-170828222035 
+**** git-170828222035
 list top 10 contributers to the project:
 :    ~$ git log --format='%aN' | sort | uniq -c | sort -rn | head
 
-**** git-180628235119 
+**** git-180628235119
 list top 10 version tags:
-:    ~$ git tag | sort -Vr | head 
+:    ~$ git tag | sort -Vr | head
 
 **** git-180808223805
 list files are being tracked:

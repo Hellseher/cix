@@ -16,7 +16,7 @@
 | *Maintainer(s)* |                   |
 | *Released*      | 2003              |
 | *Source*        | [[https://github.com/secdev/scapy][scapy.git]]         |
-| *Homepage*      | [[http://www.secdev.org/projects/scapy/][scapy.weg]]         |
+| *Homepage*      | [[http://www.secdev.org/projects/scapy/][scapy.web]]         |
 |-----------------+-------------------|
 Scapy is a powerful Python-based interactive packet manipulation program and
 library.

@@ -1,7 +1,7 @@
 # File     : cix-busybox.org • spices
 # Created  : <2016-11-07 Mon 21:06:33 GMT>
 # Modified : <2017-9-03 Sun 21:50:16 BST> sharlatan
-# Author   : sharlatan <sharlatanus@gmail.com>
+# Author   : #Rλatan
 # Sinopsis : Statically linked binary providing simplified versions of system commands.
 
 #+OPTIONS: num:nil

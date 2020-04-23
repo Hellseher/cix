@@ -1,7 +1,7 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2020-01-31 Fri 22:31:46 GMT> Sharlatan
-# Author   : sharlatan
+# Modified : <2020-4-23 Thu 10:04:14 BST>
+# Author   : #Rλatan
 # Short    : README-en
 
 #+OPTIONS: num:nil
@@ -33,21 +33,22 @@ cix
 ├── org
 ├── README.org
 ├── README-ru.md
+├── scripts
 ├── spices
 ├── tests
 └── tutors
 
-6 directories, 7 files
+7 directories, 7 files
 #+end_src
 
 
 ** Statistic
-#+BEGIN_SRC sh :results value org replace :exports results
+#+BEGIN_SRC sh :results value org :results output replace :exports results
 ./cix-stat.sh stat
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_SRC org
+#+begin_src org
 Distribution per command:
 
 QTY  CMD          PKG
@@ -75,10 +76,11 @@ QTY  CMD          PKG
 3    xargs        gnu-findutils
 3    udevadm      systemd
 3    ssh          openssh
+3    ssh-keygen   openssh
+3    ps           procps-ng
 3    dpkg         dpkg
 2    wget         wget
 2    tee          gnu-coreutils
-2    ssh-keygen   openssh
 2    sort         gnu-coreutils
 2    rsync        rsync
 2    objdump      gnu-binutils
@@ -102,7 +104,6 @@ QTY  CMD          PKG
 1    rm           gnu-coreutils
 1    rev          util-linux
 1    pwd          gnu-coreutils
-1    ps           procps-ng
 1    printf       gnu-bash
 1    pkill        procps-ng
 1    ping         iputils
@@ -143,9 +144,10 @@ QTY  PKG
 18   sed
 13   gnu-findutils
 12   util-linux
-6    openssh
+7    openssh
 6    iproute2
 5    strace
+5    procps-ng
 5    pciutils
 5    netcat
 5    gnu-tar
@@ -156,7 +158,6 @@ QTY  PKG
 4    gnu-binutils
 4    gnu-bash
 4    curl
-3    procps-ng
 3    dpkg
 2    wget
 2    shadow-utils
@@ -180,6 +181,6 @@ QTY  PKG
 
 Distribution per example:
 
-Onliners:  288
-Scripts:   108
-#+END_SRC
+Onliners:  292
+Scripts:   107
+#+end_src

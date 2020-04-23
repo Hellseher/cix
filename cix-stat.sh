@@ -2,7 +2,7 @@
 # File     : cix-stat.sh
 # Created  : <2016-11-20 Sun 21:59:18 GMT> sharlatan
 # Modified : <2018-8-30 Thu 22:57:49 BST> Sharlatan
-# Author   : sharlatan <sharlatanus@gmail.com>
+# Author   : #Rλatan
 # Short    : Show statistic of examples.
 
 

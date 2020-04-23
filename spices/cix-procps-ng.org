@@ -1,7 +1,7 @@
 # File          : cix-procps-ng.org
 # Created       : <2015-11-02 Tue 01:14:54 GMT>
-# Modified      : <2018-9-30 Sun 21:06:34 BST> Sharlatan
-# Author        : sharlatan
+# Modified      : <2020-4-23 Thu 09:36:52 BST>
+# Author        : #Rλatan
 # Sinopsis      : System and process monitoring utilities.
 
 #+OPTIONS: num:nil
@@ -28,7 +28,7 @@ status of entries in its process table.
 #+END_SRC
 
 #+RESULTS:
-#+BEGIN_SRC org
+#+begin_src org
 | CMD     | MAN  | DESCRIPTION                                               |
 | free    | (3)  | allocate and free dynamic memory                          |
 | free    | (1)  | Display amount of free and used memory in the system      |
@@ -50,9 +50,9 @@ status of entries in its process table.
 | w       | (1)  | Show who is logged on and what they are doing.            |
 | watch   | (1)  | execute a program periodically, showing output fullscreen |
 | pidof   | (1)  | find the process ID of a running program.                 |
-| sysctl  | (8)  | configure kernel parameters at runtime                    |
 | sysctl  | (2)  | read/write system parameters                              |
-#+END_SRC
+| sysctl  | (8)  | configure kernel parameters at runtime                    |
+#+end_src
 
 * Receipts
 ** free                                                                         
@@ -120,6 +120,16 @@ kill all process of the USER and remove it from the system:
 **** ps-180930203726
 list top 10 most memory hungry processes:
 :    ~$ ps axo rss,pid | sort -k1rn | head
+
+**** ps-200423091940
+list top 10 most CPU hungry processes:
+:    ~$ ps aux | sort -nrk 3,3 | head
+:    ~$ ps axo %cpu,user,pid,command | sort -r | head
+
+**** ps-200423092739
+list sorted list of users with number of running processes:
+:    ~$ ps axo user | sort | uniq -c | sort -rn
+
 *** ps::files
 *** ps::see-also
     kill(1), pgrep(1), pkill(1), procstat(1), w(1), kvm(3), libxo(3), strftime(3),

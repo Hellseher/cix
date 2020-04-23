@@ -140,12 +140,16 @@ upload public key to remote host:
 *** ssh-keyscan::see-also
 
 ** ssh-keygen
+*** ssh-keygen::options
 *** ssh-keygen::examples
 **** ssh-keygen-181017005336
 :    ~$ ssh-keygen -l -f ~/.ssh/id_rsa.pub
 **** ssh-keygen-181227084529
 generate long RSA key with specified email address:
-:    ~$ ssh-keygen -t rsa -b 4096 -C "user@host.com"
+:    ~$ ssh-keygen -t rsa -b 4092 -C "user@host.com"
+**** ssh-keygen-200318002105
+more specific and automated key generation
+:    ~$ ssh-keygen -t rsa -b 4092 -f ~/.ssh/key-name-rsa -C "some comments"
 * References
 ** RFC
 - https://www.openssh.com/specs.html

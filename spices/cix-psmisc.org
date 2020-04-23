@@ -1,7 +1,7 @@
 # File          : cix-psmisc.org
 # Created       : <2016-01-25 Mon 22:28:37 GMT>
-# Modified      : <2017-12-20 Wed 23:05:59 GMT> Sharlatan
-# Author        : sharlatan
+# Modified      : <2020-4-23 Thu 09:17:22 BST>
+# Author        : #Rλatan
 # Maintainer(s) :
 # Sinopsis      : Utilities for managing processes on your system
 
