@@ -197,7 +197,7 @@ on *GNU/Linux*
   + [[./spices/cix-dsniff.org][dsniff]] :: tools for network auditing and penetration testing: =GNU/Linux= =OpenBSD= =Solaris=
   + [[./spices/cix-ipset.org][ipset]] :: Manage Linux IP sets: =GNU/Linux=
   + [[./spices/cix-iptraf-ng.org][iptraf-ng]] :: a console-based network monitoring utility: =GNU/Linux=
- : + [[./spices/cix-socat.org][socat]] :: bidirectional data relay between two data channels ('netcat++'): =GNU/Linux=
+  : + [[./spices/cix-socat.org][socat]] :: bidirectional data relay between two data channels ('netcat++'): =GNU/Linux=
   + [tshark] ::
   + [[./spices/cix-snort.org][snort]] ::
   + [suricata] ::
@@ -229,14 +229,19 @@ on *GNU/Linux*
 
 - *Security* /It's never be save/
   + [apparmor] :: is a Mandatory Access Control (MAC)
+  + [kismet] :: WLAN detector, sniffer and IDS:
+  + [[file:./spices/cix-lynis.org][lynis]] :: security and system auditing tool: =GNU/Linux= =OS-X= =FreeBSD=
+    =OpenBSD= =Solaris= =AIX= =HP-UX= =NetBSD=
+  + [[file:./spices/cix-openssl.org][openssl]] :: Utilities from the general purpose cryptography library with TLS
+    implementation
+  + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications:
+    =AIX= =DragonFly-BSD= =FreeBSD= =HP-UX= =GNU/Linux= =OS-X= =NetBSD=
+    =Solaris=
   + [rkhunter] ::
-  + [yara] ::
-  + [[file:./spices/cix-openssl.org][openssl]] :: Utilities from the general purpose cryptography library with TLS implementation
   + [seccomp] ::
-  + [[file:./spices/cix-lynis.org][lynis]] :: security and system auditing tool: =GNU/Linux= =OS-X= =FreeBSD= =OpenBSD= =Solaris= =AIX= =HP-UX= =NetBSD=
-  + [[file:./spices/cix-pam.org][pam]] :: an extensible library which provides authentication for applications: =AIX= =DragonFly-BSD= =FreeBSD= =HP-UX= =GNU/Linux= =OS-X= =NetBSD= =Solaris=
   + [[file:./spices/cix-selinux.org][SElinux]] :: Security-Enhanced Linux: =GNU/Linux=
   + [[file:./spices/cix-sudo.org][sudo]] :: allows restricted root access for specified users
+  + [yara] :: The pattern matching swiss knife
 
 - *Boot-Init-systems* /Let's party started!/
   + [[./spices/cix-systemd.org][systemd]] ::  a system and service manager

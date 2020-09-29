@@ -1,7 +1,7 @@
 # File           : cix-nmap.org
 # Created        : <2017-08-07 Mon 00:29:30 BST>
-# Modified       : <2017-9-17 Sun 21:32:21 BST> sharlatan
-# Author         : sharlatan
+# Modified       : <2020-5-20 Wed 09:41:48 BST>
+# Author         : #Rλatan
 # Maintainer(s)  :
 # Sinopsis       : Network exploration tool and security scanner
 
@@ -15,7 +15,7 @@
 | *Released*       | 1997          |
 | *Source*         | [[https://github.com/nmap/nmap][nmap.git]]      |
 |                  | [[https://svn.nmap.org/nmap/][nmap.svn]]      |
-| *Info*           | [[https://svn.nmap.org/nmap/][nmap.web]]      |
+| *Homepage*       | [[https://svn.nmap.org/nmap/][nmap.web]]      |
 |------------------+---------------|
 
 =nmap= is a utility for network exploration or security auditing. It supports

@@ -1,9 +1,9 @@
 # File           : cix-git.org
 # Created        : <2017-08-28 Mon 22:17:29 BST>
-# Modified       : <2020-02-11 Tue 21:39:35 GMT>
-# Author         : sharlatan
+# Modified       : <2020-7-02 Thu 11:15:51 BST>
+# Author         : Rλatan <abc@incerto.xyz>
 # Maintainer(s)  :
-# Sinopsis       : Fast Version Control System
+# Synopsis       : Distributed fast Version Control System
 
 #+OPTIONS: num:nil
 
@@ -34,7 +34,7 @@ list top 10 version tags:
 :    ~$ git tag | sort -Vr | head
 
 **** git-180808223805
-list files are being tracked:
+list files are being tracked on master branch:
 :    ~$ git ls-tree -r master --name-only
 
 **** git-180808223944
@@ -91,6 +91,13 @@ completely remove tracked files from git history:
   main "$@"
   # End of script
 #+END_SRC
-* Refreances
+
+**** git-200702111041
+restore accidentally changed files to latest commit:
+:    ~$ git status | awk '/modified/{print $2}' | xargs -I{} git restore {}
+
+aws
+xargs
+* References
 
 # End of cix-git.org

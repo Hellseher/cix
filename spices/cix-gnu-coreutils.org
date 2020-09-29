@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2020-01-31 Fri 22:11:39 GMT>
+# Modified   : <2020-5-06 Wed 14:43:49 BST>
 # Maintainer : sharlatan
 # Synopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
@@ -1234,11 +1234,15 @@ list block devices (all, min, max):
 sort only by the first letter of each line:
 :    ~$ sort -k1.1,1.1 input_f
 
-**** sort171204230821
+**** sort-171204230821
 list files and sort them by specific field (column):
 :    ~$ ls -l | sed -n '1!P' | sort -k5 -rn
 
-
+**** sort-200506144052
+sort IPv4 incrementally, extract only 10.20.30.0-255 IPs:
+:    ~$  zcat /var/log/syslog*gz | grep -oP "10\.20\.30\.[0-9]{1,3}"| sort | uniq | sort -t . -k 3,3n -k 4,4n
+zcat
+uniq
 *** sort::files
 *** sort::see-also
 [[file:./cix-gnu-coreutils.org::*shuf][shuf]] [[file:./cix-gnu-coreutils.org::*uniq][uniq]]
