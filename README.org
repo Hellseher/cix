@@ -1,6 +1,6 @@
 # File     : README.org
 # Created  : <2016-11-16 Wed 00:51:06 GMT>
-# Modified : <2020-4-23 Thu 10:04:14 BST>
+# Modified : <2020-12-31 Thu 14:18:44 GMT>
 # Author   : #Rλatan
 # Short    : README-en
 
@@ -60,15 +60,16 @@ QTY  CMD          PKG
 10   find         gnu-findutils
 7    chmod        gnu-coreutils
 6    ls           gnu-coreutils
+6    git          git
 5    tar          gnu-tar
 5    strace       strace
 5    nc           netcat
 5    mount        util-linux
 5    lspci        pciutils
 5    grep         gnu-grep
-5    git          git
 4    tr           gnu-coreutils
 4    ss           iproute2
+4    sort         gnu-coreutils
 4    paste        gnu-coreutils
 4    lsof         lsof
 4    curl         curl
@@ -81,7 +82,7 @@ QTY  CMD          PKG
 3    dpkg         dpkg
 2    wget         wget
 2    tee          gnu-coreutils
-2    sort         gnu-coreutils
+2    tail         gnu-coreutils
 2    rsync        rsync
 2    objdump      gnu-binutils
 2    nohup        gnu-coreutils
@@ -138,7 +139,7 @@ Distribution per package:
 
 QTY  PKG
 ---  ---
-55   gnu-coreutils
+59   gnu-coreutils
 33   tcpdump
 19   gawk
 18   sed
@@ -146,13 +147,13 @@ QTY  PKG
 12   util-linux
 7    openssh
 6    iproute2
+6    git
 5    strace
 5    procps-ng
 5    pciutils
 5    netcat
 5    gnu-tar
 5    gnu-grep
-5    git
 4    systemd
 4    lsof
 4    gnu-binutils
@@ -181,6 +182,6 @@ QTY  PKG
 
 Distribution per example:
 
-Onliners:  292
+Onliners:  301
 Scripts:   107
 #+end_src

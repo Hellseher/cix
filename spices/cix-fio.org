@@ -1,0 +1,26 @@
+# File           : cix-fio.org
+# Created        : <2020-11-18 Wed 14:33:54 GMT>
+# Modified       : <2020-11-18 Wed 14:35:47 GMT>
+# Author         : s
+# Maintainer(s)  :
+# Sinopsis       : <>
+
+#+OPTIONS: num:nil
+
+[[file:../cix-main.org][|≣|]]
+#+TITLE: fio
+|--------+-|
+|*Author*||
+|*Maintainer(s)*||
+|*Released*||
+|*Source*||
+|*Homepage*||
+|------+-|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-fio.org

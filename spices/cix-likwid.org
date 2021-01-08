@@ -1,0 +1,26 @@
+# File           : cix-likwid.org
+# Created        : <2020-11-18 Wed 14:38:16 GMT>
+# Modified       : <2020-11-18 Wed 14:42:52 GMT>
+# Author         : s
+# Maintainer(s)  :
+# Sinopsis       : <>
+
+#+OPTIONS: num:nil
+
+[[file:../README.org*Index][|≣|]]
+#+TITLE: likwid
+|-----------------+------------|
+| *Author*        |            |
+| *Maintainer(s)* |            |
+| *Released*      |            |
+| *Source*        | [[https://github.com/RRZE-HPC/likwid][likwid.git]] |
+| *Homepage*      |            |
+|-----------------+------------|
+
+
+-----
+* Index
+* Receipts
+* Refreances
+
+# End of cix-likwid.org

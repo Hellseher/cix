@@ -114,6 +114,7 @@ list all lines longer than 50 characters:
 **** awk-170822230017 
 calculate total size of files in directory including sub directories in Mb:
 :    ~$ find ./ -type f -print0 | xargs -0 ls -l | awk '{total += $5} END {print "subtotal: "total/1024/1024"Mb"}'
+:    ~$ find ./ -type f -printf "%s\n" | awk '{ total += $1 } END { print "total: "total/1024/1024"Mb" }'
 [[file:./cix-gnu-findutils.org::*find][find]] [[file:./cix-gnu-findutils.org::*xargs][xargs]] [[file:./cix-gnu-coreutils.org::*ls][ls]]
 
 **** awk-170904001614 

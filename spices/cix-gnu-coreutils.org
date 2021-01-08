@@ -1,6 +1,6 @@
 # File       : cix-gnu-coreutils.org
 # Created    : Wed 14 Oct 2015 23:07:41
-# Modified   : <2020-5-06 Wed 14:43:49 BST>
+# Modified   : <2020-12-01 Tue 22:28:53 GMT>
 # Maintainer : sharlatan
 # Synopsis   : <A set of basic GNU tools commonly used in shell scripts>
 
@@ -1299,6 +1299,19 @@ uniq
 A *tail* command appeared in Version 7 AT&T UNIX.
 *** tail::options
 *** tail::examples
+**** tail-201201213814
+delete all files except the newest N=4:
+:    ~$ ls -t <some-pattern> | tail -n +${N} | xargs -I {} rm {}
+:    ~$ ls -At <some-pattern> | tail -n +${N} | xargs -I {} rm {}
+
+**** tail-201201214038
+list all files except the newest N=4:
+:    ~$ ls -t | tail -n +4
+:    ~$ ls -At | tail -n +4
+:    ~$ ls -t <some-pattern> | tail -n +${N}
+:    ~$ ls -At <some-pattern> | tail -n +${N}
+ls
+xargs
 *** tail::files
 *** tail::see-also
     [[file:./cix-gnu-core-utilities.org::*cat][cat (1)]] [[file:./cix-gnu-core-utilities.org::*tac][tac (1)]] [[file:./cix-gnu-core-utilities.org::*head][head (1)]] [[file:./cix-sed.org::*sed][sed (1)]]
